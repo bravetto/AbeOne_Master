@@ -1,0 +1,341 @@
+---
+globs: test_*.py,*_test.py,tests/**/*.py
+description: Testing and validation guidelines for Trust Guard
+---
+
+# Testing Guidelines for Trust Guard
+
+## Testing Strategy
+
+### Test Categories
+1. **Unit Tests**: Individual component testing
+2. **Integration Tests**: API endpoint and service integration
+3. **Pattern Detection Tests**: AI failure pattern accuracy
+4. **Performance Tests**: Response time and throughput benchmarks
+5. **End-to-End Tests**: Complete workflow validation
+
+## Test Structure
+
+### Test Organization
+```
+tests/
+├── unit/
+│   ├── test_core.py           # TrustGuardDetector tests
+│   ├── test_validation.py     # ValidationEngine tests
+│   ├── test_constitutional.py # ConstitutionalPrompting tests
+│   └── test_metrics.py        # ReliabilityMetrics tests
+├── integration/
+│   ├── test_api_endpoints.py  # FastAPI endpoint tests
+│   ├── test_health_checks.py  # Health check validation
+│   └── test_metrics_api.py    # Metrics endpoint tests
+├── patterns/
+│   ├── test_hallucination.py  # Hallucination detection accuracy
+│   ├── test_bias.py          # Bias detection accuracy
+│   └── test_all_patterns.py  # Comprehensive pattern testing
+├── performance/
+│   ├── test_response_times.py # Performance benchmarks
+│   └── test_throughput.py     # Load testing
+└── fixtures/
+    ├── sample_texts.py        # Test data fixtures
+    └── expected_results.py    # Expected detection results
+```
+
+## Unit Testing Patterns
+
+### Pattern Detection Tests
+Test each pattern detector with known examples:
+
+```python
+import pytest
+from trustguard.core import HallucinationDetector
+
+class TestHallucinationDetection:
+    def test_overconfidence_detection(self):
+        detector = HallucinationDetector()
+        text = "This is definitely the correct answer without any doubt."
+        
+        result = detector.detect(text)
+        
+        assert result["score"] > 0.5
+        assert "overconfidence" in result["evidence"]
+        assert result["risk_level"] == "high"
+    
+    def test_factual_claims_without_context(self):
+        detector = HallucinationDetector()
+        text = "The population of Paris is exactly 2,161,732 people."
+        
+        result = detector.detect(text)
+        
+        assert result["score"] > 0.3
+        assert "specific numbers" in result["evidence"]
+    
+    def test_short_response_hallucination(self):
+        detector = HallucinationDetector()
+        text = "Yes, absolutely correct."
+        
+        result = detector.detect(text)
+        
+        assert result["score"] > 0.2
+        assert "short response" in result["evidence"]
+```
+
+### Validation Engine Tests
+Test mathematical validation components:
+
+```python
+class TestValidationEngine:
+    def test_kl_divergence_calculation(self):
+        validator = ValidationEngine()
+        input_text = "What is the capital of France?"
+        output_text = "The capital of France is Paris."
+        
+        result = validator.perform_mathematical_validation(input_text, output_text)
+        
+        assert "kl_divergence" in result
+        assert 0 <= result["kl_divergence"] <= 10.0
+        assert "uncertainty_score" in result
+        assert "consistency_score" in result
+    
+    def test_risk_assessment_calculation(self):
+        validator = ValidationEngine()
+        pattern_detections = {
+            "hallucination": {"score": 0.8, "confidence": 0.9, "risk_level": "high"},
+            "bias": {"score": 0.3, "confidence": 0.7, "risk_level": "medium"}
+        }
+        
+        result = validator.calculate_risk_assessment(pattern_detections)
+        
+        assert result["score"] > 0
+        assert result["level"] in ["low", "medium", "high"]
+        assert "components" in result
+```
+
+## Integration Testing
+
+### API Endpoint Tests
+Test FastAPI endpoints with realistic data:
+
+```python
+import pytest
+from fastapi.testclient import TestClient
+from main import app
+
+client = TestClient(app)
+
+class TestAPIEndpoints:
+    def test_detect_patterns_endpoint(self):
+        response = client.post("/v1/detect", json={
+            "text": "This is definitely the correct answer.",
+            "context": "Testing overconfidence detection",
+            "metadata": {"model": "test-model"}
+        })
+        
+        assert response.status_code == 200
+        data = response.json()
+        assert "detections" in data
+        assert "risk_assessment" in data
+        assert "processing_time_ms" in data
+    
+    def test_validate_endpoint(self):
+        response = client.post("/v1/validate", json={
+            "input_text": "What is the capital of France?",
+            "output_text": "Paris is the capital of France.",
+            "context": "Geography question"
+        })
+        
+        assert response.status_code == 200
+        data = response.json()
+        assert "overall_score" in data
+        assert "pattern_detections" in data
+        assert "recommendations" in data
+    
+    def test_health_check_endpoint(self):
+        response = client.get("/health")
+        
+        assert response.status_code == 200
+        data = response.json()
+        assert data["status"] in ["healthy", "degraded", "unhealthy"]
+        assert "components" in data
+        assert "metrics" in data
+```
+
+### Rate Limiting Tests
+Test rate limiting functionality:
+
+```python
+def test_rate_limiting(self):
+    # Make requests up to the limit
+    for i in range(100):  # Assuming rate limit is 100/minute
+        response = client.post("/v1/detect", json={"text": f"Test {i}"})
+        assert response.status_code == 200
+    
+    # Next request should be rate limited
+    response = client.post("/v1/detect", json={"text": "Rate limit test"})
+    assert response.status_code == 429
+```
+
+## Pattern Detection Accuracy Tests
+
+### Test Data Fixtures
+Create comprehensive test datasets:
+
+```python
+# fixtures/sample_texts.py
+HALLUCINATION_EXAMPLES = [
+    {
+        "text": "The population of Mars is exactly 2.5 billion people.",
+        "expected_score": 0.7,
+        "expected_evidence": ["specific numbers", "unverified claims"]
+    },
+    {
+        "text": "This is definitely the most accurate information available.",
+        "expected_score": 0.6,
+        "expected_evidence": ["overconfidence indicators"]
+    }
+]
+
+BIAS_EXAMPLES = [
+    {
+        "text": "All politicians are corrupt and untrustworthy.",
+        "expected_score": 0.8,
+        "expected_evidence": ["political bias indicators", "absolute language"]
+    }
+]
+```
+
+### Accuracy Testing
+Test pattern detection accuracy against known examples:
+
+```python
+class TestPatternAccuracy:
+    @pytest.mark.parametrize("example", HALLUCINATION_EXAMPLES)
+    def test_hallucination_accuracy(self, example):
+        detector = HallucinationDetector()
+        result = detector.detect(example["text"])
+        
+        assert abs(result["score"] - example["expected_score"]) < 0.2
+        for expected_evidence in example["expected_evidence"]:
+            assert any(expected_evidence in evidence for evidence in result["evidence"])
+```
+
+## Performance Testing
+
+### Response Time Benchmarks
+Test response time requirements:
+
+```python
+import time
+import pytest
+
+class TestPerformance:
+    def test_detection_response_time(self):
+        detector = TrustGuardDetector()
+        text = "This is a test text for performance measurement."
+        
+        start_time = time.time()
+        result = detector.detect_all_patterns(text)
+        end_time = time.time()
+        
+        processing_time = (end_time - start_time) * 1000
+        assert processing_time < 100  # Should complete within 100ms
+    
+    def test_api_response_time(self):
+        response = client.post("/v1/detect", json={
+            "text": "Performance test text with sufficient length for accurate measurement."
+        })
+        
+        assert response.status_code == 200
+        data = response.json()
+        assert data["processing_time_ms"] < 200  # API should respond within 200ms
+```
+
+### Load Testing
+Test system performance under load:
+
+```python
+import concurrent.futures
+import threading
+
+def test_concurrent_requests(self):
+    def make_request():
+        response = client.post("/v1/detect", json={"text": "Concurrent test"})
+        return response.status_code == 200
+    
+    # Test 50 concurrent requests
+    with concurrent.futures.ThreadPoolExecutor(max_workers=50) as executor:
+        futures = [executor.submit(make_request) for _ in range(50)]
+        results = [future.result() for future in futures]
+    
+    # All requests should succeed
+    assert all(results)
+```
+
+## Test Configuration
+
+### Pytest Configuration
+Configure pytest in `pyproject.toml`:
+
+```toml
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-v",
+    "--tb=short",
+    "--strict-markers",
+    "--disable-warnings"
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "performance: marks tests as performance tests"
+]
+```
+
+### Test Fixtures
+Use pytest fixtures for common test setup:
+
+```python
+@pytest.fixture
+def sample_text():
+    return "This is a sample text for testing Trust Guard functionality."
+
+@pytest.fixture
+def detector():
+    return TrustGuardDetector()
+
+@pytest.fixture
+def validator():
+    return ValidationEngine()
+
+@pytest.fixture
+def client():
+    return TestClient(app)
+```
+
+## Continuous Integration
+
+### Test Commands
+```bash
+# Run all tests
+python -m pytest tests/ -v
+
+# Run specific test categories
+python -m pytest tests/unit/ -v
+python -m pytest tests/integration/ -v
+python -m pytest tests/patterns/ -v
+
+# Run performance tests
+python -m pytest tests/performance/ -v -m performance
+
+# Run with coverage
+python -m pytest tests/ --cov=trustguard --cov-report=html
+```
+
+### Test Coverage Requirements
+- Unit tests: 90%+ coverage
+- Integration tests: 80%+ coverage
+- Critical paths: 100% coverage
+- Pattern detection accuracy: 85%+ on test dataset

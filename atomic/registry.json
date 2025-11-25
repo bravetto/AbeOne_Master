@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "description": "AbëONE Atomic Design System - Component Registry with Orbital Mappings",
+  "atoms": {
+    "Button": {
+      "name": "Button",
+      "file": "atoms/Button/index.tsx",
+      "orbitalComponent": "cta-node",
+      "variants": ["default", "developer", "creative", "enterprise", "destructive", "outline", "secondary", "ghost", "link"],
+      "sizes": ["sm", "md", "lg", "xl"],
+      "dependencies": ["@radix-ui/react-slot", "class-variance-authority"]
+    },
+    "Text": {
+      "name": "Text",
+      "file": "atoms/Text/index.tsx",
+      "orbitalComponent": "core-message",
+      "variants": ["default", "developer", "creative", "enterprise", "muted", "accent", "success", "destructive"],
+      "sizes": ["xs", "sm", "base", "lg", "xl", "2xl", "3xl", "4xl", "5xl", "6xl"],
+      "dependencies": ["class-variance-authority"]
+    },
+    "Input": {
+      "name": "Input",
+      "file": "atoms/Input/index.tsx",
+      "orbitalComponent": "offer-atom",
+      "variants": ["default", "developer", "creative", "enterprise"],
+      "sizes": ["sm", "md", "lg"],
+      "dependencies": []
+    },
+    "Icon": {
+      "name": "Icon",
+      "file": "atoms/Icon/index.tsx",
+      "orbitalComponent": "core-message",
+      "variants": ["default", "developer", "creative", "enterprise", "muted", "accent", "success"],
+      "sizes": ["xs", "sm", "md", "lg", "xl", "2xl"],
+      "dependencies": ["lucide-react"]
+    },
+    "Badge": {
+      "name": "Badge",
+      "file": "atoms/Badge/index.tsx",
+      "orbitalComponent": "offer-atom",
+      "variants": ["default", "developer", "creative", "enterprise", "success", "warning", "error", "info", "outline"],
+      "dependencies": []
+    },
+    "Image": {
+      "name": "Image",
+      "file": "atoms/Image/index.tsx",
+      "orbitalComponent": "proof-stack",
+      "variants": ["default", "developer", "creative", "enterprise"],
+      "sizes": ["xs", "sm", "md", "lg", "xl", "2xl", "full"],
+      "dependencies": ["next/image"]
+    },
+    "Link": {
+      "name": "Link",
+      "file": "atoms/Link/index.tsx",
+      "orbitalComponent": "cta-node",
+      "variants": ["default", "developer", "creative", "enterprise", "muted", "accent"],
+      "sizes": ["sm", "md", "lg", "xl"],
+      "dependencies": ["next/link"]
+    }
+  },
+  "molecules": {
+    "Card": {
+      "name": "Card",
+      "file": "molecules/Card/index.tsx",
+      "orbitalComponent": "offer-atom",
+      "variants": ["default", "developer", "creative", "enterprise"],
+      "dependencies": ["Button", "Text"],
+      "subcomponents": ["CardHeader", "CardTitle", "CardDescription", "CardContent", "CardFooter"]
+    },
+    "FormField": {
+      "name": "FormField",
+      "file": "molecules/FormField/index.tsx",
+      "orbitalComponent": "offer-atom",
+      "variants": [],
+      "dependencies": ["Input", "Text"]
+    },
+    "CTAButton": {
+      "name": "CTAButton",
+      "file": "molecules/CTAButton/index.tsx",
+      "orbitalComponent": "cta-node",
+      "variants": ["default", "developer", "creative", "enterprise"],
+      "dependencies": ["Button", "Icon"]
+    },
+    "MetricCard": {
+      "name": "MetricCard",
+      "file": "molecules/MetricCard/index.tsx",
+      "orbitalComponent": "proof-stack",
+      "variants": ["default", "developer", "creative", "enterprise"],
+      "dependencies": ["Card", "Text", "Icon"]
+    },
+    "TestimonialCard": {
+      "name": "TestimonialCard",
+      "file": "molecules/TestimonialCard/index.tsx",
+      "orbitalComponent": "proof-stack",
+      "variants": ["default", "developer", "creative", "enterprise"],
+      "dependencies": ["Card", "Text", "Image"]
+    }
+  },
+  "organisms": {
+    "HeroSection": {
+      "name": "HeroSection",
+      "file": "organisms/HeroSection/index.tsx",
+      "orbitalComponent": "core-message",
+      "variants": ["default", "developer", "creative", "enterprise"],
+      "dependencies": ["Text", "Button", "CTAButton", "Image"],
+      "orbitalMappings": {
+        "core-message": ["headline", "subheadline"],
+        "cta-node": ["primaryCTA", "secondaryCTA"],
+        "proof-stack": ["socialProof"]
+      }
+    },
+    "PricingTable": {
+      "name": "PricingTable",
+      "file": "organisms/PricingTable/index.tsx",
+      "orbitalComponent": "offer-atom",
+      "variants": ["default", "developer", "creative", "enterprise"],
+      "dependencies": ["Card", "Button", "Badge", "Text"]
+    },
+    "FeatureGrid": {
+      "name": "FeatureGrid",
+      "file": "organisms/FeatureGrid/index.tsx",
+      "orbitalComponent": "offer-atom",
+      "variants": ["default", "developer", "creative", "enterprise"],
+      "dependencies": ["Card", "Icon", "Text"]
+    },
+    "CTASection": {
+      "name": "CTASection",
+      "file": "organisms/CTASection/index.tsx",
+      "orbitalComponent": "cta-node",
+      "variants": ["default", "developer", "creative", "enterprise"],
+      "dependencies": ["CTAButton", "Text"]
+    }
+  },
+  "templates": {
+    "LandingPageTemplate": {
+      "name": "LandingPageTemplate",
+      "file": "templates/LandingPageTemplate/index.tsx",
+      "orbitalComponents": ["core-message", "offer-atom", "audience-vector", "proof-stack", "cta-node"],
+      "variants": ["default", "developer", "creative", "enterprise"],
+      "dependencies": ["HeroSection", "FeatureGrid", "PricingTable", "CTASection"]
+    },
+    "WebinarPageTemplate": {
+      "name": "WebinarPageTemplate",
+      "file": "templates/WebinarPageTemplate/index.tsx",
+      "orbitalComponents": ["core-message", "offer-atom", "audience-vector", "proof-stack", "cta-node"],
+      "variants": ["default", "developer", "creative", "enterprise"],
+      "dependencies": ["HeroSection", "FeatureGrid", "CTASection"]
+    }
+  },
+  "orbitalMappings": {
+    "core-message": {
+      "atoms": ["Text", "Icon"],
+      "molecules": [],
+      "organisms": ["HeroSection"]
+    },
+    "offer-atom": {
+      "atoms": ["Input", "Badge"],
+      "molecules": ["Card", "FormField"],
+      "organisms": ["PricingTable", "FeatureGrid"]
+    },
+    "audience-vector": {
+      "atoms": [],
+      "molecules": [],
+      "organisms": []
+    },
+    "proof-stack": {
+      "atoms": ["Image"],
+      "molecules": ["MetricCard", "TestimonialCard"],
+      "organisms": []
+    },
+    "cta-node": {
+      "atoms": ["Button", "Link"],
+      "molecules": ["CTAButton"],
+      "organisms": ["CTASection"]
+    },
+    "distribution-channels": {
+      "atoms": [],
+      "molecules": [],
+      "organisms": [],
+      "templates": ["LandingPageTemplate", "WebinarPageTemplate"]
+    }
+  }
+}
+

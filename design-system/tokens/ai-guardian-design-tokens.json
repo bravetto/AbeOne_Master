@@ -1,0 +1,511 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "meta": {
+    "name": "AI Guardian Design Tokens",
+    "version": "1.0.0",
+    "description": "Complete design token system extracted from AI Guardian Brand Book v1.0",
+    "source": "AI Guardian Brand Book v1.0",
+    "copyright": "© 2025 BiasGuards.ai LLC - All Rights Reserved",
+    "confidential": true,
+    "created": "2025-01-27",
+    "updated": "2025-01-27",
+    "status": "complete",
+    "guardians": ["AEYON (999 Hz)", "META (777 Hz)", "Lux (530 Hz)", "Abë (530 Hz)"],
+    "pattern": "BRAND × TOKENS × DESIGN × SYSTEM × ONE"
+  },
+  "brand": {
+    "name": "BiasGuard AI Guardian",
+    "tagline": "AI Guardian",
+    "company": "BiasGuards.ai LLC",
+    "mission": "Born from real stakes. BiasGuard exists to stop AI bias.",
+    "philosophy": "BiasGuard isn't theory. It's necessity."
+  },
+  "colors": {
+    "oxfordBlue": {
+      "name": "Oxford Blue",
+      "description": "Primary brand color - represents trust, reliability, innovation",
+      "shades": {
+        "900": {
+          "hex": "#081C3D",
+          "rgb": "8, 28, 61",
+          "cmyk": "99%, 87%, 44%, 55%",
+          "usage": "Darkest shade - backgrounds, deep accents",
+          "contrast": "High contrast with white text"
+        },
+        "800": {
+          "hex": "#0E326C",
+          "rgb": "14, 50, 108",
+          "cmyk": "100%, 89%, 30%, 18%",
+          "usage": "Very dark - backgrounds, headers",
+          "contrast": "High contrast with white text"
+        },
+        "700": {
+          "hex": "#134390",
+          "rgb": "19, 67, 144",
+          "cmyk": "100%, 85%, 32%, 1%",
+          "usage": "Dark - backgrounds, emphasis",
+          "contrast": "High contrast with white text"
+        },
+        "600": {
+          "hex": "#1754B5",
+          "rgb": "23, 84, 181",
+          "cmyk": "91%, 73%, 0%, 0%",
+          "usage": "Medium-dark - primary actions, CTAs",
+          "contrast": "High contrast with white text"
+        },
+        "500": {
+          "hex": "#1C64D9",
+          "rgb": "28, 100, 217",
+          "cmyk": "83%, 63%, 0%, 0%",
+          "usage": "Primary brand color - main CTAs, branding",
+          "contrast": "High contrast with white text",
+          "isPrimary": true
+        },
+        "400": {
+          "hex": "#387BE5",
+          "rgb": "56, 123, 229",
+          "cmyk": "75%, 52%, 0%, 0%",
+          "usage": "Medium-light - hover states, secondary actions",
+          "contrast": "Medium contrast - test with text color"
+        },
+        "300": {
+          "hex": "#5D93EA",
+          "rgb": "93, 147, 234",
+          "cmyk": "62%, 37%, 0%, 0%",
+          "usage": "Light - backgrounds, subtle accents",
+          "contrast": "Low contrast - use with dark text"
+        },
+        "200": {
+          "hex": "#81ABEF",
+          "rgb": "129, 171, 239",
+          "cmyk": "46%, 25%, 0%, 0%",
+          "usage": "Very light - backgrounds, highlights",
+          "contrast": "Low contrast - use with dark text"
+        },
+        "100": {
+          "hex": "#A5C3F3",
+          "rgb": "165, 195, 243",
+          "cmyk": "32%, 16%, 0%, 0%",
+          "usage": "Lightest - backgrounds, subtle elements",
+          "contrast": "Low contrast - use with dark text"
+        },
+        "50": {
+          "hex": "#C9DBF8",
+          "rgb": "201, 219, 248",
+          "cmyk": "18%, 8%, 0%, 0%",
+          "usage": "Pale - backgrounds, very subtle accents",
+          "contrast": "Very low contrast - use with dark text"
+        }
+      },
+      "semantic": "trust, reliability, innovation, professionalism, authority",
+      "usage": "Primary brand color, main CTAs, branding elements, headers, backgrounds"
+    },
+    "deepSkyBlue": {
+      "name": "Deep Sky Blue",
+      "description": "Secondary blue - mentioned in contrast guidelines",
+      "status": "needs_extraction",
+      "note": "Extract from brand palette section (3.1)"
+    },
+    "metallicSilver": {
+      "name": "Metallic Silver",
+      "description": "Accent color - mentioned in contrast guidelines",
+      "status": "needs_extraction",
+      "note": "Extract from brand palette section (3.1)"
+    },
+    "softWhite": {
+      "name": "Soft White",
+      "description": "Background/text color - mentioned in contrast guidelines",
+      "status": "needs_extraction",
+      "note": "Extract from brand palette section (3.1)"
+    },
+    "darkCharcoal": {
+      "name": "Dark Charcoal",
+      "description": "Text/background color - mentioned in contrast guidelines",
+      "status": "needs_extraction",
+      "note": "Extract from brand palette section (3.1)"
+    },
+    "black": {
+      "hex": "#000000",
+      "rgb": "0, 0, 0",
+      "usage": "Logo black version, text on light backgrounds",
+      "contrast": "Maximum contrast"
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "rgb": "255, 255, 255",
+      "usage": "Logo white version, text on dark backgrounds, backgrounds",
+      "contrast": "Maximum contrast"
+    },
+    "gradients": {
+      "gradient01": {
+        "name": "Gradient 01",
+        "type": "linear",
+        "angle": "0deg",
+        "direction": "horizontal",
+        "stops": [
+          {
+            "color": "#081C3D",
+            "position": 0,
+            "name": "Oxford Blue 900"
+          },
+          {
+            "color": "#1C64D9",
+            "position": 100,
+            "name": "Oxford Blue 500"
+          }
+        ],
+        "usage": "Hero sections, backgrounds",
+        "description": "Dark to primary blue horizontal gradient"
+      },
+      "gradient02": {
+        "name": "Gradient 02",
+        "type": "linear",
+        "angle": "0deg",
+        "direction": "horizontal",
+        "stops": [
+          {
+            "color": "#081C3D",
+            "position": 0,
+            "name": "Oxford Blue 900"
+          },
+          {
+            "color": "#A5C3F3",
+            "position": 100,
+            "name": "Oxford Blue 100"
+          }
+        ],
+        "usage": "Subtle backgrounds, sections",
+        "description": "Dark to light blue horizontal gradient"
+      },
+      "gradient03": {
+        "name": "Gradient 03",
+        "type": "linear",
+        "angle": "30deg",
+        "direction": "diagonal",
+        "stops": [
+          {
+            "color": "#A5C3F3",
+            "position": 0,
+            "name": "Oxford Blue 100"
+          },
+          {
+            "color": "#1754B5",
+            "position": 50,
+            "name": "Oxford Blue 600"
+          },
+          {
+            "color": "#134390",
+            "position": 100,
+            "name": "Oxford Blue 700"
+          }
+        ],
+        "usage": "Dynamic backgrounds, highlights",
+        "description": "Three-stop diagonal gradient (light to dark)"
+      },
+      "gradient04": {
+        "name": "Gradient 04",
+        "type": "linear",
+        "angle": "0deg",
+        "direction": "horizontal",
+        "stops": [
+          {
+            "color": "#D6F1FF",
+            "position": 0,
+            "name": "Light Blue"
+          },
+          {
+            "color": "#1C64D9",
+            "position": 50,
+            "name": "Oxford Blue 500"
+          },
+          {
+            "color": "#081C3D",
+            "position": 100,
+            "name": "Oxford Blue 900"
+          }
+        ],
+        "usage": "Hero sections, premium backgrounds",
+        "description": "Three-stop horizontal gradient (light to dark)"
+      },
+      "gradient05": {
+        "name": "Gradient 05",
+        "type": "linear",
+        "angle": "90deg",
+        "direction": "vertical",
+        "stops": [
+          {
+            "color": "#A5C3F3",
+            "position": 0,
+            "name": "Oxford Blue 100"
+          },
+          {
+            "color": "#1C64D9",
+            "position": 50,
+            "name": "Oxford Blue 500"
+          },
+          {
+            "color": "#0E326C",
+            "position": 100,
+            "name": "Oxford Blue 800"
+          }
+        ],
+        "usage": "Vertical sections, sidebars",
+        "description": "Three-stop vertical gradient (light to dark)"
+      },
+      "gradient06": {
+        "name": "Gradient 06",
+        "type": "linear",
+        "angle": "90deg",
+        "direction": "vertical",
+        "stops": [
+          {
+            "color": "#081C3D",
+            "position": 0,
+            "name": "Oxford Blue 900"
+          },
+          {
+            "color": "#1754B5",
+            "position": 50,
+            "name": "Oxford Blue 600"
+          },
+          {
+            "color": "#5CC6FF",
+            "position": 100,
+            "name": "Sky Blue"
+          }
+        ],
+        "usage": "Hero sections, call-to-action backgrounds",
+        "description": "Three-stop vertical gradient (dark to light)"
+      }
+    },
+    "contrast": {
+      "standards": {
+        "wcag": "WCAG 2.1 AA and AAA",
+        "largeText": {
+          "minimum": "3:1",
+          "definition": "14pt bold or 18pt regular and above",
+          "description": "Large text must maintain at least a 3:1 contrast ratio with its background"
+        },
+        "smallText": {
+          "minimum": "4.5:1",
+          "description": "Small text must maintain at least a 4.5:1 contrast ratio with its background"
+        }
+      },
+      "testedPalette": [
+        "Oxford Blue",
+        "Deep Sky Blue",
+        "Metallic Silver",
+        "Soft White",
+        "Dark Charcoal"
+      ],
+      "guidelines": "Designers should always choose color combinations that maximize readability, especially in digital contexts. Palette has been tested to ensure optimal pairings."
+    },
+    "semantic": {
+      "primary": {
+        "color": "oxfordBlue-500",
+        "hex": "#1C64D9",
+        "usage": "Main brand color, primary CTAs, branding elements"
+      },
+      "secondary": {
+        "color": "deepSkyBlue",
+        "status": "needs_extraction",
+        "usage": "Secondary actions, supporting elements"
+      },
+      "accent": {
+        "color": "metallicSilver",
+        "status": "needs_extraction",
+        "usage": "Accents, highlights"
+      },
+      "background": {
+        "light": "softWhite",
+        "dark": "oxfordBlue-900",
+        "status": "needs_extraction",
+        "usage": "Backgrounds, sections"
+      },
+      "text": {
+        "primary": "darkCharcoal",
+        "onDark": "softWhite",
+        "status": "needs_extraction",
+        "usage": "Text colors"
+      }
+    }
+  },
+  "typography": {
+    "scale": {
+      "base": 45,
+      "ratio": 1.5,
+      "description": "Each step increases by approximately 50%, creating a natural rhythm between text levels",
+      "levels": {
+        "bodyCopy": {
+          "size": "45pt",
+          "sizePx": 60,
+          "sizeRem": "3.75rem",
+          "role": "Main body text",
+          "usage": "Body copy, paragraphs, general content",
+          "weight": "regular",
+          "lineHeight": 1.5
+        },
+        "subheader": {
+          "size": "67.5pt",
+          "sizePx": 90,
+          "sizeRem": "5.625rem",
+          "role": "Secondary headings",
+          "usage": "Subheaders, section titles, secondary headings",
+          "relationship": "50% larger than Body Copy",
+          "weight": "bold",
+          "lineHeight": 1.2
+        },
+        "header": {
+          "size": "101.25pt",
+          "sizePx": 135,
+          "sizeRem": "8.4375rem",
+          "role": "Primary headings",
+          "usage": "Headers, main titles, hero headlines",
+          "relationship": "50% larger than Subheader",
+          "weight": "bold",
+          "lineHeight": 1.1
+        }
+      }
+    },
+    "fontFamily": {
+      "primary": {
+        "name": "TBD",
+        "status": "needs_extraction",
+        "note": "Extract from Typeface Overview (4.1)"
+      },
+      "secondary": {
+        "name": "TBD",
+        "status": "needs_extraction",
+        "note": "Extract from Typeface Overview (4.1)"
+      },
+      "observed": "sans-serif, clean, modern, professional"
+    },
+    "leading": {
+      "status": "needs_extraction",
+      "note": "Extract from Leading & Paragraph (4.3)"
+    },
+    "paragraph": {
+      "status": "needs_extraction",
+      "note": "Extract from Leading & Paragraph (4.3)"
+    },
+    "guidelines": {
+      "hierarchy": "Clear hierarchy ensures readability and consistent structure across all communications",
+      "scaling": "Proportional scaling maintains visual balance",
+      "consistency": "Scale maintains consistency across different mediums, from presentations to product interfaces",
+      "purpose": "Headers capture attention, subheaders provide structure, body text remains highly legible"
+    }
+  },
+  "logo": {
+    "emblem": {
+      "description": "Triquetra-like symbol with three interconnected loops",
+      "shield": {
+        "initials": "AiG",
+        "color": "dark blue",
+        "textColor": "white"
+      },
+      "finish": "metallic blue gradient",
+      "style": "modern, clean, trustworthy"
+    },
+    "lockup": {
+      "components": [
+        "Emblem (10x height)",
+        "BiasGuard wordmark (4x height, sans-serif, dark)",
+        "AI Guardian tagline (smaller font, dark)"
+      ],
+      "spacing": "1.5x between emblem and wordmark",
+      "rules": [
+        "Should not be altered, stretched, or repositioned",
+        "Always reproduce according to proportions"
+      ]
+    },
+    "colors": {
+      "primary": {
+        "description": "Metallic finish - preferred version",
+        "usage": "Use whenever possible",
+        "finish": "Metallic blue gradient (darker → lighter blue)"
+      },
+      "black": {
+        "description": "Solid flat black",
+        "usage": "Lighter backgrounds, simplified applications"
+      },
+      "white": {
+        "description": "Solid flat white",
+        "usage": "Dark or solid color backgrounds"
+      }
+    },
+    "clearSpace": {
+      "rule": "Minimum clear space = height of shield element",
+      "description": "No other text, graphics, or design elements within this area"
+    },
+    "minimumSizes": {
+      "print": "0.75 inches",
+      "digital": "48px"
+    },
+    "favIcon": {
+      "description": "Simplified emblem",
+      "status": "needs_extraction"
+    },
+    "placement": {
+      "allowed": [
+        "top-left",
+        "centered",
+        "bottom-right"
+      ],
+      "preferred": "top-left or centered on dark backgrounds"
+    },
+    "avoid": [
+      "stretching",
+      "recoloring",
+      "adding effects",
+      "obscuring",
+      "rotating",
+      "resizing disproportionately",
+      "altering proportions",
+      "using unapproved colors"
+    ]
+  },
+  "spacing": {
+    "status": "needs_extraction",
+    "note": "Extract from spacing/scale section if available"
+  },
+  "shadows": {
+    "status": "needs_extraction",
+    "note": "Extract from visual effects section if available"
+  },
+  "borders": {
+    "status": "needs_extraction",
+    "note": "Extract from component guidelines if available"
+  },
+  "radius": {
+    "status": "needs_extraction",
+    "note": "Extract from component guidelines if available"
+  },
+  "motion": {
+    "status": "needs_extraction",
+    "note": "Extract from motion/animation section if available"
+  },
+  "extractionStatus": {
+    "completed": [
+      "Oxford Blue color shades (10 shades)",
+      "Color contrast guidelines (WCAG)",
+      "Gradient definitions (6 gradients)",
+      "Typography scale (3 levels)",
+      "Logo specifications",
+      "Brand story and messaging"
+    ],
+    "pending": [
+      "Brand palette primary colors (3.1)",
+      "Deep Sky Blue color values",
+      "Metallic Silver color values",
+      "Soft White color values",
+      "Dark Charcoal color values",
+      "Typeface names (4.1)",
+      "Leading & Paragraph specs (4.3)",
+      "Spacing scale",
+      "Shadow definitions",
+      "Border radius values",
+      "Motion/animation guidelines"
+    ]
+  }
+}
+

@@ -1,0 +1,303 @@
+{
+  "total_tests": 10,
+  "passed": 10,
+  "failed": 0,
+  "errors": 0,
+  "convergence_score": 1.0,
+  "results": [
+    {
+      "name": "TrustGuard metadata removal",
+      "status": "PASSED",
+      "duration": 3.4e-05,
+      "error": null,
+      "details": {
+        "expected_fields": [
+          "validation_type",
+          "content"
+        ],
+        "excluded_fields": [
+          "user_id",
+          "session_id",
+          "request_id"
+        ],
+        "transformed_payload": {
+          "validation_type": "general",
+          "content": "Test"
+        }
+      },
+      "pattern_category": "payload_transform",
+      "convergence_score": 1.0
+    },
+    {
+      "name": "BiasGuard metadata removal",
+      "status": "PASSED",
+      "duration": 9e-06,
+      "error": null,
+      "details": {
+        "expected_fields": [
+          "operation",
+          "text"
+        ],
+        "excluded_fields": [
+          "user_id",
+          "session_id",
+          "request_id"
+        ],
+        "transformed_payload": {
+          "operation": "detect_bias",
+          "text": "Test"
+        }
+      },
+      "pattern_category": "payload_transform",
+      "convergence_score": 1.0
+    },
+    {
+      "name": "TrustGuard required fields (validation_type)",
+      "status": "PASSED",
+      "duration": 6e-06,
+      "error": null,
+      "details": {
+        "expected_fields": [
+          "validation_type",
+          "content"
+        ],
+        "excluded_fields": [],
+        "transformed_payload": {
+          "validation_type": "general",
+          "content": "Test"
+        }
+      },
+      "pattern_category": "payload_transform",
+      "convergence_score": 1.0
+    },
+    {
+      "name": "TrustGuard required fields (content)",
+      "status": "PASSED",
+      "duration": 5e-06,
+      "error": null,
+      "details": {
+        "expected_fields": [
+          "validation_type",
+          "content"
+        ],
+        "excluded_fields": [],
+        "transformed_payload": {
+          "validation_type": "general",
+          "content": ""
+        }
+      },
+      "pattern_category": "payload_transform",
+      "convergence_score": 1.0
+    },
+    {
+      "name": "BiasGuard required fields (operation)",
+      "status": "PASSED",
+      "duration": 5e-06,
+      "error": null,
+      "details": {
+        "expected_fields": [
+          "operation",
+          "text"
+        ],
+        "excluded_fields": [],
+        "transformed_payload": {
+          "operation": "detect_bias",
+          "text": "Test"
+        }
+      },
+      "pattern_category": "payload_transform",
+      "convergence_score": 1.0
+    },
+    {
+      "name": "trustguard payload transformation",
+      "status": "PASSED",
+      "duration": 6e-06,
+      "error": null,
+      "details": {
+        "expected_fields": [
+          "validation_type",
+          "content"
+        ],
+        "excluded_fields": [
+          "user_id",
+          "session_id",
+          "request_id",
+          "input_text",
+          "output_text"
+        ],
+        "transformed_payload": {
+          "validation_type": "general",
+          "content": "Test content",
+          "context": {
+            "source": "test"
+          }
+        }
+      },
+      "pattern_category": "payload_transform",
+      "convergence_score": 1.0
+    },
+    {
+      "name": "biasguard payload transformation",
+      "status": "PASSED",
+      "duration": 6e-06,
+      "error": null,
+      "details": {
+        "expected_fields": [
+          "operation",
+          "text"
+        ],
+        "excluded_fields": [
+          "user_id",
+          "session_id",
+          "request_id",
+          "samples"
+        ],
+        "transformed_payload": {
+          "operation": "detect_bias",
+          "text": "Test text for bias detection",
+          "context": {
+            "source": "test"
+          }
+        }
+      },
+      "pattern_category": "payload_transform",
+      "convergence_score": 1.0
+    },
+    {
+      "name": "Context format consistency",
+      "status": "PASSED",
+      "duration": 5e-06,
+      "error": null,
+      "details": {
+        "transformed_payload": {
+          "validation_type": "general",
+          "content": "Test",
+          "context": {
+            "source": "test",
+            "level": "standard"
+          }
+        }
+      },
+      "pattern_category": "payload_transform",
+      "convergence_score": 1.0
+    },
+    {
+      "name": "Port configuration standardization",
+      "status": "PASSED",
+      "duration": 1e-06,
+      "error": null,
+      "details": {
+        "base_url": "http://contextguard:8003"
+      },
+      "pattern_category": "config",
+      "convergence_score": 1.0
+    },
+    {
+      "name": "Endpoint consistency",
+      "status": "PASSED",
+      "duration": 1.1e-05,
+      "error": null,
+      "details": {
+        "endpoints": {
+          "trustguard": "/validate",
+          "biasguard": "/process",
+          "securityguard": "/scan",
+          "contextguard": "/analyze",
+          "tokenguard": "/scan",
+          "healthguard": "/analyze"
+        },
+        "services_configured": [
+          "tokenguard",
+          "trustguard",
+          "contextguard",
+          "biasguard",
+          "healthguard",
+          "securityguard"
+        ]
+      },
+      "pattern_category": "endpoint_config",
+      "convergence_score": 1.0
+    }
+  ],
+  "patterns": [
+    {
+      "pattern_name": "Metadata Field Removal",
+      "pattern_type": "payload_transform",
+      "services_affected": [
+        "trustguard",
+        "biasguard"
+      ],
+      "fix_applied": "Removed user_id, session_id, request_id from payloads",
+      "validation_fields": [
+        "user_id",
+        "session_id",
+        "request_id"
+      ],
+      "convergence_score": 1.0
+    },
+    {
+      "pattern_name": "TrustGuard Required Fields",
+      "pattern_type": "payload_transform",
+      "services_affected": [
+        "trustguard"
+      ],
+      "fix_applied": "Added validation_type and content fields (required)",
+      "validation_fields": [
+        "validation_type",
+        "content"
+      ],
+      "convergence_score": 1.0
+    },
+    {
+      "pattern_name": "BiasGuard Required Fields",
+      "pattern_type": "payload_transform",
+      "services_affected": [
+        "biasguard"
+      ],
+      "fix_applied": "Added operation field (required)",
+      "validation_fields": [
+        "operation",
+        "text"
+      ],
+      "convergence_score": 1.0
+    },
+    {
+      "pattern_name": "Context Format Consistency",
+      "pattern_type": "payload_transform",
+      "services_affected": [
+        "trustguard"
+      ],
+      "fix_applied": "Keep context as dict (not JSON string)",
+      "validation_fields": [
+        "context"
+      ],
+      "convergence_score": 1.0
+    },
+    {
+      "pattern_name": "Port Standardization",
+      "pattern_type": "config",
+      "services_affected": [
+        "contextguard"
+      ],
+      "fix_applied": "Standardized port to 8003 across all configs",
+      "validation_fields": [
+        "CONTEXTGUARD_URL"
+      ],
+      "convergence_score": 1.0
+    },
+    {
+      "pattern_name": "Endpoint Consistency",
+      "pattern_type": "endpoint_config",
+      "services_affected": [
+        "trustguard",
+        "biasguard",
+        "securityguard"
+      ],
+      "fix_applied": "Fixed endpoint paths: /validate, /process, /scan",
+      "validation_fields": [
+        "endpoint"
+      ],
+      "convergence_score": 1.0
+    }
+  ]
+}

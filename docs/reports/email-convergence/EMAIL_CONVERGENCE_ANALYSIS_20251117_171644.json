@@ -1,0 +1,98 @@
+{
+  "analysis_date": "2025-11-17T17:16:44.415178",
+  "period_days": 3,
+  "total_newsletters": 2,
+  "total_opportunities": 1,
+  "convergence_opportunities": 0,
+  "emergence_opportunities": 1,
+  "key_themes": {
+    "emergence": 1,
+    "ai_safety": 1,
+    "atomic": 1
+  },
+  "top_newsletters": [
+    {
+      "sender": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=cw0MYVcM05thdE8XbosYGcnCLrByOV7fAWghOIlGhFc=;\n b=RirzrP3XqWs481w4TamyZrlx49EiVN2lejfFMf98wuaBHOfRFEITHlgorwbZfBmDiB/ciN2YiOLTPtYctqMjHvQ+EvCbLzYo/vyi/2VklKdBT7S7lH/kabVd8njOGo4AkqrPSTyI7AD+sMyP9ZySQFCqD/ulEvlOUKrA62Y9u+8=",
+      "subject": "At least five interesting things: edition (#71)",
+      "date": "2025-11-08T01:52:30+00:00",
+      "ai_score": 0.4,
+      "convergence_score": 1.0,
+      "emergence_score": 1.0,
+      "themes": [
+        "emergence",
+        "ai_safety",
+        "atomic"
+      ],
+      "opportunities_count": 1
+    },
+    {
+      "sender": "\"Tim Shields\"",
+      "subject": "your phone camera cannot do this",
+      "date": "2025-11-03T08:04:46-06:00",
+      "ai_score": 0.4,
+      "convergence_score": 0.0,
+      "emergence_score": 0.0,
+      "themes": [],
+      "opportunities_count": 0
+    }
+  ],
+  "top_convergence_opportunities": [],
+  "top_emergence_opportunities": [
+    {
+      "type": "emergence",
+      "title": "At least five interesting things: edition (#71)",
+      "description": "View this post on the web at https://www.noahpinion.blog/p/at-least-five-interesting-things-824\n\nHi, everyone! I\u2019m overdue for a roundup post.\nFirst, I have a lot of podcasts for you! Here\u2019s me arguing with the noted right-wing Frenchman Pascal-Emmanuel Gobry about high-skilled immigration:\nAnd here\u2019s Razib Khan interviewing me about Japanese politics:\nHere\u2019s an interview I did with the Media Summit podcast, about various media-related topics:\nAnd here is an episode of Econ 102, discussing the f",
+      "source": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=cw0MYVcM05thdE8XbosYGcnCLrByOV7fAWghOIlGhFc=;\n b=RirzrP3XqWs481w4TamyZrlx49EiVN2lejfFMf98wuaBHOfRFEITHlgorwbZfBmDiB/ciN2YiOLTPtYctqMjHvQ+EvCbLzYo/vyi/2VklKdBT7S7lH/kabVd8njOGo4AkqrPSTyI7AD+sMyP9ZySQFCqD/ulEvlOUKrA62Y9u+8=",
+      "date": "2025-11-08T01:52:30+00:00",
+      "themes": [
+        "atomic",
+        "ai_safety",
+        "emergence"
+      ],
+      "relevance": 0.4,
+      "action_items": [],
+      "patterns": [
+        "network",
+        "one",
+        "breakthrough",
+        "innovation",
+        "new",
+        "shift",
+        "opportunity",
+        "potential",
+        "future",
+        "next",
+        "beta"
+      ]
+    }
+  ],
+  "all_opportunities": [
+    {
+      "type": "emergence",
+      "title": "At least five interesting things: edition (#71)",
+      "description": "View this post on the web at https://www.noahpinion.blog/p/at-least-five-interesting-things-824\n\nHi, everyone! I\u2019m overdue for a roundup post.\nFirst, I have a lot of podcasts for you! Here\u2019s me arguing with the noted right-wing Frenchman Pascal-Emmanuel Gobry about high-skilled immigration:\nAnd here\u2019s Razib Khan interviewing me about Japanese politics:\nHere\u2019s an interview I did with the Media Summit podcast, about various media-related topics:\nAnd here is an episode of Econ 102, discussing the f",
+      "source": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=cw0MYVcM05thdE8XbosYGcnCLrByOV7fAWghOIlGhFc=;\n b=RirzrP3XqWs481w4TamyZrlx49EiVN2lejfFMf98wuaBHOfRFEITHlgorwbZfBmDiB/ciN2YiOLTPtYctqMjHvQ+EvCbLzYo/vyi/2VklKdBT7S7lH/kabVd8njOGo4AkqrPSTyI7AD+sMyP9ZySQFCqD/ulEvlOUKrA62Y9u+8=",
+      "date": "2025-11-08T01:52:30+00:00",
+      "themes": [
+        "atomic",
+        "ai_safety",
+        "emergence"
+      ],
+      "relevance": 0.4,
+      "action_items": [],
+      "patterns": [
+        "network",
+        "one",
+        "breakthrough",
+        "innovation",
+        "new",
+        "shift",
+        "opportunity",
+        "potential",
+        "future",
+        "next",
+        "beta"
+      ]
+    }
+  ]
+}

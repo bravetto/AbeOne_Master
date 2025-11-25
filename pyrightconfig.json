@@ -1,0 +1,44 @@
+{
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    "**/.venv",
+    "**/venv",
+    "**/env",
+    "**/.pytest_cache",
+    "**/dist",
+    "**/build",
+    "**/.next",
+    ".venv/**",
+    ".venv/lib/**",
+    ".venv/lib/python3.13/**",
+    ".venv/lib/python3.13/site-packages/**",
+    "orbital/**",
+    "temp_repos/**",
+    "repositories/**",
+    "satellites/**",
+    "archive/**",
+    "**/.git/**",
+    "**/node_modules/**"
+  ],
+  "ignore": [
+    ".venv",
+    ".venv/**",
+    ".venv/lib",
+    ".venv/lib/**",
+    ".venv/lib/python3.13",
+    ".venv/lib/python3.13/**",
+    ".venv/lib/python3.13/site-packages",
+    ".venv/lib/python3.13/site-packages/**"
+  ],
+  "reportMissingImports": false,
+  "reportMissingTypeStubs": false,
+  "pythonVersion": "3.13",
+  "typeCheckingMode": "basic",
+  "executionEnvironments": [
+    {
+      "root": "."
+    }
+  ]
+}
+

@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.git/
+.husky/
+*.log
+*.lock
+.env*
+coverage/
+.nyc_output/
+drizzle

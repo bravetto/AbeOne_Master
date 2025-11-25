@@ -1,0 +1,20 @@
+# Social Media Automation - Better Than Sintra
+# Requirements for unified Facebook, Instagram, LinkedIn scheduler
+
+# Facebook/Instagram API
+facebook-business==19.0.0
+
+# LinkedIn API (official)
+linkedin-api==2.0.0
+requests==2.31.0
+
+# Scheduling
+APScheduler==3.10.4
+
+# Async support
+aiohttp==3.9.1
+
+# Utilities
+python-dotenv==1.0.0
+pydantic==2.5.0
+

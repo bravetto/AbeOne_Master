@@ -1,0 +1,7 @@
+#!/bin/bash
+# Simple AEYON wrapper - just run: ./scripts/aeon
+# Or even simpler: python3 scripts/aeon.py
+
+cd "$(dirname "$0")/.."
+python3 scripts/aeon.py "$@"
+

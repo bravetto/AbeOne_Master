@@ -1,0 +1,141 @@
+{
+  "timestamp": 1760329420.1204655,
+  "single_endpoint_results": [
+    {
+      "url": "http://localhost:8000/health",
+      "method": "GET",
+      "iterations": 5,
+      "successful_requests": 5,
+      "failed_requests": 0,
+      "avg_response_time_ms": 2162.5786781311035,
+      "min_response_time_ms": 2137.3307704925537,
+      "max_response_time_ms": 2185.443162918091,
+      "median_response_time_ms": 2166.5971279144287,
+      "p95_response_time_ms": 2185.443162918091,
+      "p99_response_time_ms": 2185.443162918091,
+      "status_codes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    {
+      "url": "http://localhost:8000/health/live",
+      "method": "GET",
+      "iterations": 5,
+      "successful_requests": 5,
+      "failed_requests": 0,
+      "avg_response_time_ms": 2041.6644096374512,
+      "min_response_time_ms": 2034.243106842041,
+      "max_response_time_ms": 2052.0057678222656,
+      "median_response_time_ms": 2041.175127029419,
+      "p95_response_time_ms": 2052.0057678222656,
+      "p99_response_time_ms": 2052.0057678222656,
+      "status_codes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    {
+      "url": "http://localhost:8000/health/ready",
+      "method": "GET",
+      "iterations": 5,
+      "successful_requests": 5,
+      "failed_requests": 0,
+      "avg_response_time_ms": 2041.1449432373047,
+      "min_response_time_ms": 2032.5281620025635,
+      "max_response_time_ms": 2065.919876098633,
+      "median_response_time_ms": 2034.8145961761475,
+      "p95_response_time_ms": 2065.919876098633,
+      "p99_response_time_ms": 2065.919876098633,
+      "status_codes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    {
+      "url": "http://localhost:8000/health/detailed",
+      "method": "GET",
+      "iterations": 5,
+      "successful_requests": 5,
+      "failed_requests": 0,
+      "avg_response_time_ms": 2046.9104290008545,
+      "min_response_time_ms": 2034.984827041626,
+      "max_response_time_ms": 2069.4334506988525,
+      "median_response_time_ms": 2044.839859008789,
+      "p95_response_time_ms": 2069.4334506988525,
+      "p99_response_time_ms": 2069.4334506988525,
+      "status_codes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    {
+      "url": "http://localhost:8000/metrics",
+      "method": "GET",
+      "iterations": 5,
+      "successful_requests": 5,
+      "failed_requests": 0,
+      "avg_response_time_ms": 2046.246862411499,
+      "min_response_time_ms": 2039.9420261383057,
+      "max_response_time_ms": 2052.7212619781494,
+      "median_response_time_ms": 2043.6906814575195,
+      "p95_response_time_ms": 2052.7212619781494,
+      "p99_response_time_ms": 2052.7212619781494,
+      "status_codes": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    {
+      "url": "http://localhost:8000/v1/detect",
+      "method": "POST",
+      "iterations": 5,
+      "successful_requests": 5,
+      "failed_requests": 0,
+      "avg_response_time_ms": 2042.2970294952393,
+      "min_response_time_ms": 2032.2265625,
+      "max_response_time_ms": 2049.718141555786,
+      "median_response_time_ms": 2044.856071472168,
+      "p95_response_time_ms": 2049.718141555786,
+      "p99_response_time_ms": 2049.718141555786,
+      "status_codes": [
+        500,
+        500,
+        500,
+        500,
+        500
+      ]
+    }
+  ],
+  "load_test_result": {
+    "url": "http://localhost:8000/health",
+    "concurrent_users": 5,
+    "requests_per_user": 3,
+    "total_requests": 15,
+    "successful_requests": 15,
+    "failed_requests": 0,
+    "total_time_ms": 7351.281404495239,
+    "avg_response_time_ms": 2387.858772277832,
+    "min_response_time_ms": 2143.0160999298096,
+    "max_response_time_ms": 2560.6327056884766,
+    "median_response_time_ms": 2438.192367553711,
+    "p95_response_time_ms": 2560.6327056884766,
+    "p99_response_time_ms": 2560.6327056884766,
+    "requests_per_second": 2.0404605911056053
+  }
+}

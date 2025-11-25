@@ -1,0 +1,54 @@
+{
+  "index_version": "1.0",
+  "created_at": "2025-11-19T04:52:19.546673",
+  "documents": [
+    {
+      "cdf_id": "example_technical_20251119_045219",
+      "path": "CDF/examples/example_technical.cdf",
+      "metadata": {
+        "title": "CDF Technical Documentation Example",
+        "created": "2025-11-19T12:00:00Z",
+        "author": "CDF Team",
+        "tags": "technical, documentation, api",
+        "genius_index": "",
+        "technical": "0.9",
+        "creative": "0.3",
+        "strategic": "0.5"
+      },
+      "genius_index": {
+        "technical": 0.3,
+        "creative": 0.1,
+        "strategic": 0.0
+      },
+      "patterns": [
+        "code",
+        "lists",
+        "linked"
+      ],
+      "indexed_at": "2025-11-19T04:52:19.547113"
+    },
+    {
+      "cdf_id": "example_creative_20251119_045219",
+      "path": "CDF/examples/example_creative.cdf",
+      "metadata": {
+        "title": "The Art of Beautiful Documents",
+        "created": "2025-11-19T12:00:00Z",
+        "author": "Creative Writer",
+        "tags": "creative, writing, design",
+        "genius_index": "",
+        "technical": "0.2",
+        "creative": "0.9",
+        "strategic": "0.4"
+      },
+      "genius_index": {
+        "technical": 0.2,
+        "creative": 0.5,
+        "strategic": 0.1
+      },
+      "patterns": [
+        "lists"
+      ],
+      "indexed_at": "2025-11-19T04:52:19.547278"
+    }
+  ]
+}

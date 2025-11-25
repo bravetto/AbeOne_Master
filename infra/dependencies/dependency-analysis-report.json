@@ -1,0 +1,1502 @@
+{
+  "total_files": 57,
+  "total_packages": 110,
+  "conflicts": {
+    "fastapi": {
+      "versions": [
+        "==0.104.1",
+        ">=0.104.0",
+        ">=0.120.0"
+      ],
+      "files": [
+        "abe_beats_core/phantom_hunter_creator/requirements.txt",
+        "_extract_abebeats/support/requirements.txt",
+        "AbeBEATs_Clean/support/requirements.txt",
+        "Ab-BEATs/phantom_hunter_creator/requirements.txt",
+        "hypervector-system/requirements.txt",
+        "EMERGENT_OS/server/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-john-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/mock-services/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/contextguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-john-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/mock-services/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/contextguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 35
+    },
+    "python-multipart": {
+      "versions": [
+        ">=0.0.20",
+        "==0.0.6",
+        ">=0.0.6"
+      ],
+      "files": [
+        "abe_beats_core/phantom_hunter_creator/requirements.txt",
+        "_extract_abebeats/support/requirements.txt",
+        "AbeBEATs_Clean/support/requirements.txt",
+        "Ab-BEATs/phantom_hunter_creator/requirements.txt",
+        "EMERGENT_OS/server/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/contextguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-john-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/contextguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 22
+    },
+    "pydantic": {
+      "versions": [
+        "==2.5.0",
+        ">=2.0.0",
+        ">=2.5.0",
+        ">=2.5.0,<3.0.0",
+        ">=2.12.0"
+      ],
+      "files": [
+        "abe_beats_core/phantom_hunter_creator/requirements.txt",
+        "_extract_abebeats/support/requirements.txt",
+        "AbeBEATs_Clean/support/requirements.txt",
+        "Ab-BEATs/phantom_hunter_creator/requirements.txt",
+        "hypervector-system/requirements.txt",
+        "EMERGENT_OS/server/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "scripts/social_media_automation/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-john-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/mock-services/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/contextguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "TemplateHeavenSatellite/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-john-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/mock-services/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/contextguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "WebIDESatellite/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 36
+    },
+    "pytest": {
+      "versions": [
+        ">=7.0.0",
+        ">=7.4.0  # Testing framework",
+        "==7.4.3",
+        ">=8.0.0",
+        ">=7.4.0"
+      ],
+      "files": [
+        "AbeBEATs_Clean/support/requirements.txt",
+        "hypervector-system/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "TemplateHeavenSatellite/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "WebIDESatellite/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 11
+    },
+    "pytest-asyncio": {
+      "versions": [
+        ">=0.25.0",
+        ">=0.21.0  # Async testing",
+        ">=0.21.0",
+        "==0.21.1"
+      ],
+      "files": [
+        "AbeBEATs_Clean/support/requirements.txt",
+        "hypervector-system/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "TemplateHeavenSatellite/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 8
+    },
+    "opencv-python": {
+      "versions": [
+        ">=4.8.0",
+        "==4.8.1.78",
+        ">=4.8.0  # Computer vision"
+      ],
+      "files": [
+        "_extract_truice/requirements.txt",
+        "Ab-BEATs/variants/abebeats_tru/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt"
+      ],
+      "count": 4
+    },
+    "pillow": {
+      "versions": [
+        ">=8.0.0  # Image manipulation",
+        "==10.1.0",
+        ">=10.0.0"
+      ],
+      "files": [
+        "_extract_truice/requirements.txt",
+        "Ab-BEATs/variants/abebeats_tru/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt"
+      ],
+      "count": 4
+    },
+    "numpy": {
+      "versions": [
+        ">=1.21.0  # Numerical operations",
+        ">=1.24.0",
+        "==1.24.3"
+      ],
+      "files": [
+        "_extract_truice/requirements.txt",
+        "Ab-BEATs/variants/abebeats_tru/requirements.txt",
+        "hypervector-system/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/guardians/validation-framework/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guardians/validation-framework/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 11
+    },
+    "librosa": {
+      "versions": [
+        "==0.10.1",
+        ">=0.9.0  # Audio analysis",
+        ">=0.10.0"
+      ],
+      "files": [
+        "_extract_truice/requirements.txt",
+        "Ab-BEATs/variants/abebeats_tru/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt"
+      ],
+      "count": 4
+    },
+    "httpx": {
+      "versions": [
+        ">=0.24.0  # Async HTTP client",
+        "==0.25.2",
+        ">=0.24.0",
+        ">=0.27.0",
+        ">=0.28.0"
+      ],
+      "files": [
+        "_extract_truice/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-john-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/contextguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guard-mesh-client/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/contextguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "advanced-knock/backend/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 21
+    },
+    "requests": {
+      "versions": [
+        ">=2.31.0",
+        ">=2.31.0  # HTTP library",
+        "==2.31.0"
+      ],
+      "files": [
+        "hypervector-system/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "scripts/requirements.txt",
+        "scripts/social_media_automation/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-john-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "WebIDESatellite/requirements.txt"
+      ],
+      "count": 17
+    },
+    "black": {
+      "versions": [
+        ">=23.0.0  # Code formatting",
+        ">=23.0.0",
+        "==23.11.0",
+        ">=25.0.0"
+      ],
+      "files": [
+        "hypervector-system/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "TemplateHeavenSatellite/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt"
+      ],
+      "count": 6
+    },
+    "mypy": {
+      "versions": [
+        ">=1.5.0",
+        ">=1.14.0"
+      ],
+      "files": [
+        "hypervector-system/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "TemplateHeavenSatellite/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt"
+      ],
+      "count": 6
+    },
+    "python-dotenv": {
+      "versions": [
+        ">=1.0.0  # Environment variables",
+        ">=1.2.0",
+        "==1.0.0",
+        ">=1.0.0"
+      ],
+      "files": [
+        "EMERGENT_OS/server/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "scripts/webinar/requirements.txt",
+        "scripts/social_media_automation/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "WebIDESatellite/requirements.txt",
+        "DiscordOnboarding/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 14
+    },
+    "stripe": {
+      "versions": [
+        ">=13.0.0",
+        ">=7.0.0  # Payment processing",
+        ">=7.0.0"
+      ],
+      "files": [
+        "EMERGENT_OS/server/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt"
+      ],
+      "count": 4
+    },
+    "soundfile": {
+      "versions": [
+        ">=0.10.0  # Audio I/O (required by librosa)",
+        "==0.12.1"
+      ],
+      "files": [
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt"
+      ],
+      "count": 2
+    },
+    "scipy": {
+      "versions": [
+        ">=1.11.0",
+        "==1.11.4",
+        ">=1.9.0  # Scientific computing"
+      ],
+      "files": [
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/guardians/validation-framework/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guardians/validation-framework/requirements.txt"
+      ],
+      "count": 4
+    },
+    "pytest-cov": {
+      "versions": [
+        "==4.1.0",
+        ">=4.0.0"
+      ],
+      "files": [
+        "AbeTRUICE/support/requirements.txt",
+        "WebIDESatellite/requirements.txt"
+      ],
+      "count": 2
+    },
+    "asyncpg": {
+      "versions": [
+        ">=0.29.0  # PostgreSQL async driver",
+        ">=0.30.0",
+        "==0.29.0"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 4
+    },
+    "redis": {
+      "versions": [
+        ">=5.0.0  # Redis client",
+        "==5.0.1",
+        ">=7.0.0"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/contextguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/contextguard/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 6
+    },
+    "sqlalchemy": {
+      "versions": [
+        "==2.0.23",
+        ">=2.0.44",
+        ">=2.0.0  # SQL toolkit"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 4
+    },
+    "pyjwt": {
+      "versions": [
+        ">=2.10.0",
+        ">=2.8.0  # JWT tokens"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 5
+    },
+    "cryptography": {
+      "versions": [
+        ">=41.0.0  # Encryption",
+        ">=44.0.0"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 3
+    },
+    "openai": {
+      "versions": [
+        "==1.3.7",
+        ">=1.60.0",
+        ">=1.0.0  # OpenAI API (for embeddings & research)",
+        ">=1.0.0"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "scripts/webinar/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 5
+    },
+    "torch": {
+      "versions": [
+        "==2.1.1",
+        ">=2.0.0  # PyTorch (neuromorphic computing)"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 2
+    },
+    "scikit-learn": {
+      "versions": [
+        ">=1.2.0  # ML utilities",
+        ">=1.3.0"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/guardians/validation-framework/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guardians/validation-framework/requirements.txt"
+      ],
+      "count": 3
+    },
+    "aiohttp": {
+      "versions": [
+        "==3.9.1",
+        ">=3.9.0  # Async HTTP",
+        ">=3.11.0"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "scripts/social_media_automation/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 5
+    },
+    "pyyaml": {
+      "versions": [
+        ">=6.0.3",
+        ">=6.0  # YAML parsing",
+        ">=6.0"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "TemplateHeavenSatellite/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt"
+      ],
+      "count": 4
+    },
+    "python-json-logger": {
+      "versions": [
+        ">=2.0.0",
+        ">=2.0.7  # JSON logging",
+        "==2.0.7"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-john-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 13
+    },
+    "pydantic-settings": {
+      "versions": [
+        ">=2.11.0",
+        ">=2.0.0",
+        ">=2.1.0,<3.0.0",
+        "==2.1.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-john-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/contextguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/contextguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 17
+    },
+    "alembic": {
+      "versions": [
+        "==1.12.1",
+        ">=1.17.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 3
+    },
+    "psycopg2-binary": {
+      "versions": [
+        ">=2.9.10",
+        "==2.9.9"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 3
+    },
+    "prometheus-client": {
+      "versions": [
+        ">=0.19.0",
+        ">=0.23.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/contextguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/contextguard/requirements.txt"
+      ],
+      "count": 4
+    },
+    "boto3": {
+      "versions": [
+        ">=1.40.0",
+        "==1.29.7"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 3
+    },
+    "structlog": {
+      "versions": [
+        "==23.2.0",
+        ">=25.0.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 7
+    },
+    "psutil": {
+      "versions": [
+        ">=7.0.0",
+        "==5.9.6",
+        ">=5.9.0",
+        ">=6.0.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guardians/validation-framework/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guardians/validation-framework/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 9
+    },
+    "websockets": {
+      "versions": [
+        "==12.0",
+        ">=11.0"
+      ],
+      "files": [
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-john-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 9
+    }
+  },
+  "common_packages": {
+    "fastapi": {
+      "versions": [
+        "==0.104.1",
+        ">=0.104.0",
+        ">=0.120.0"
+      ],
+      "files": [
+        "abe_beats_core/phantom_hunter_creator/requirements.txt",
+        "_extract_abebeats/support/requirements.txt",
+        "AbeBEATs_Clean/support/requirements.txt",
+        "Ab-BEATs/phantom_hunter_creator/requirements.txt",
+        "hypervector-system/requirements.txt",
+        "EMERGENT_OS/server/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-john-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/mock-services/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/contextguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-john-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/mock-services/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/contextguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 35
+    },
+    "python-multipart": {
+      "versions": [
+        ">=0.0.20",
+        "==0.0.6",
+        ">=0.0.6"
+      ],
+      "files": [
+        "abe_beats_core/phantom_hunter_creator/requirements.txt",
+        "_extract_abebeats/support/requirements.txt",
+        "AbeBEATs_Clean/support/requirements.txt",
+        "Ab-BEATs/phantom_hunter_creator/requirements.txt",
+        "EMERGENT_OS/server/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/contextguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-john-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/contextguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 22
+    },
+    "pydantic": {
+      "versions": [
+        "==2.5.0",
+        ">=2.0.0",
+        ">=2.5.0",
+        ">=2.5.0,<3.0.0",
+        ">=2.12.0"
+      ],
+      "files": [
+        "abe_beats_core/phantom_hunter_creator/requirements.txt",
+        "_extract_abebeats/support/requirements.txt",
+        "AbeBEATs_Clean/support/requirements.txt",
+        "Ab-BEATs/phantom_hunter_creator/requirements.txt",
+        "hypervector-system/requirements.txt",
+        "EMERGENT_OS/server/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "scripts/social_media_automation/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-john-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/mock-services/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/contextguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "TemplateHeavenSatellite/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-john-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/mock-services/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/contextguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "WebIDESatellite/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 36
+    },
+    "python-cors": {
+      "versions": [
+        ">=1.0.0"
+      ],
+      "files": [
+        "abe_beats_core/phantom_hunter_creator/requirements.txt",
+        "_extract_abebeats/support/requirements.txt",
+        "AbeBEATs_Clean/support/requirements.txt",
+        "Ab-BEATs/phantom_hunter_creator/requirements.txt"
+      ],
+      "count": 4
+    },
+    "pytest": {
+      "versions": [
+        ">=7.0.0",
+        ">=7.4.0  # Testing framework",
+        "==7.4.3",
+        ">=8.0.0",
+        ">=7.4.0"
+      ],
+      "files": [
+        "AbeBEATs_Clean/support/requirements.txt",
+        "hypervector-system/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "TemplateHeavenSatellite/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "WebIDESatellite/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 11
+    },
+    "pytest-asyncio": {
+      "versions": [
+        ">=0.25.0",
+        "==0.21.1",
+        ">=0.21.0  # Async testing",
+        ">=0.21.0"
+      ],
+      "files": [
+        "AbeBEATs_Clean/support/requirements.txt",
+        "hypervector-system/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "TemplateHeavenSatellite/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 8
+    },
+    "opencv-python": {
+      "versions": [
+        ">=4.8.0",
+        "==4.8.1.78",
+        ">=4.8.0  # Computer vision"
+      ],
+      "files": [
+        "_extract_truice/requirements.txt",
+        "Ab-BEATs/variants/abebeats_tru/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt"
+      ],
+      "count": 4
+    },
+    "pillow": {
+      "versions": [
+        ">=8.0.0  # Image manipulation",
+        "==10.1.0",
+        ">=10.0.0"
+      ],
+      "files": [
+        "_extract_truice/requirements.txt",
+        "Ab-BEATs/variants/abebeats_tru/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt"
+      ],
+      "count": 4
+    },
+    "numpy": {
+      "versions": [
+        ">=1.21.0  # Numerical operations",
+        ">=1.24.0",
+        "==1.24.3"
+      ],
+      "files": [
+        "_extract_truice/requirements.txt",
+        "Ab-BEATs/variants/abebeats_tru/requirements.txt",
+        "hypervector-system/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/guardians/validation-framework/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guardians/validation-framework/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 11
+    },
+    "librosa": {
+      "versions": [
+        "==0.10.1",
+        ">=0.9.0  # Audio analysis",
+        ">=0.10.0"
+      ],
+      "files": [
+        "_extract_truice/requirements.txt",
+        "Ab-BEATs/variants/abebeats_tru/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt"
+      ],
+      "count": 4
+    },
+    "httpx": {
+      "versions": [
+        ">=0.24.0  # Async HTTP client",
+        "==0.25.2",
+        ">=0.24.0",
+        ">=0.27.0",
+        ">=0.28.0"
+      ],
+      "files": [
+        "_extract_truice/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-john-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/contextguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guard-mesh-client/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/contextguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "advanced-knock/backend/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 21
+    },
+    "requests": {
+      "versions": [
+        ">=2.31.0",
+        ">=2.31.0  # HTTP library",
+        "==2.31.0"
+      ],
+      "files": [
+        "hypervector-system/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "scripts/requirements.txt",
+        "scripts/social_media_automation/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-john-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "WebIDESatellite/requirements.txt"
+      ],
+      "count": 17
+    },
+    "black": {
+      "versions": [
+        ">=23.0.0  # Code formatting",
+        "==23.11.0",
+        ">=23.0.0",
+        ">=25.0.0"
+      ],
+      "files": [
+        "hypervector-system/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "TemplateHeavenSatellite/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt"
+      ],
+      "count": 6
+    },
+    "mypy": {
+      "versions": [
+        ">=1.5.0",
+        ">=1.14.0"
+      ],
+      "files": [
+        "hypervector-system/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "TemplateHeavenSatellite/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt"
+      ],
+      "count": 6
+    },
+    "python-dotenv": {
+      "versions": [
+        ">=1.2.0",
+        "==1.0.0",
+        ">=1.0.0  # Environment variables",
+        ">=1.0.0"
+      ],
+      "files": [
+        "EMERGENT_OS/server/requirements.txt",
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "scripts/webinar/requirements.txt",
+        "scripts/social_media_automation/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "WebIDESatellite/requirements.txt",
+        "DiscordOnboarding/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 14
+    },
+    "stripe": {
+      "versions": [
+        ">=13.0.0",
+        ">=7.0.0  # Payment processing",
+        ">=7.0.0"
+      ],
+      "files": [
+        "EMERGENT_OS/server/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt"
+      ],
+      "count": 4
+    },
+    "scipy": {
+      "versions": [
+        ">=1.11.0",
+        ">=1.9.0  # Scientific computing",
+        "==1.11.4"
+      ],
+      "files": [
+        "AbeTRUICE/support/requirements.txt",
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/guardians/validation-framework/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guardians/validation-framework/requirements.txt"
+      ],
+      "count": 4
+    },
+    "asyncpg": {
+      "versions": [
+        ">=0.29.0  # PostgreSQL async driver",
+        ">=0.30.0",
+        "==0.29.0"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 4
+    },
+    "redis": {
+      "versions": [
+        "==5.0.1",
+        ">=5.0.0  # Redis client",
+        ">=7.0.0"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/contextguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/contextguard/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 6
+    },
+    "sqlalchemy": {
+      "versions": [
+        "==2.0.23",
+        ">=2.0.44",
+        ">=2.0.0  # SQL toolkit"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 4
+    },
+    "pyjwt": {
+      "versions": [
+        ">=2.10.0",
+        ">=2.8.0  # JWT tokens"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 5
+    },
+    "cryptography": {
+      "versions": [
+        ">=41.0.0  # Encryption",
+        ">=44.0.0"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 3
+    },
+    "openai": {
+      "versions": [
+        "==1.3.7",
+        ">=1.60.0",
+        ">=1.0.0  # OpenAI API (for embeddings & research)",
+        ">=1.0.0"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "scripts/webinar/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 5
+    },
+    "scikit-learn": {
+      "versions": [
+        ">=1.2.0  # ML utilities",
+        ">=1.3.0"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/guardians/validation-framework/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guardians/validation-framework/requirements.txt"
+      ],
+      "count": 3
+    },
+    "aiohttp": {
+      "versions": [
+        "==3.9.1",
+        ">=3.9.0  # Async HTTP",
+        ">=3.11.0"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "scripts/social_media_automation/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 5
+    },
+    "pyyaml": {
+      "versions": [
+        ">=6.0.3",
+        ">=6.0",
+        ">=6.0  # YAML parsing"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "TemplateHeavenSatellite/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt"
+      ],
+      "count": 4
+    },
+    "python-json-logger": {
+      "versions": [
+        ">=2.0.0",
+        ">=2.0.7  # JSON logging",
+        "==2.0.7"
+      ],
+      "files": [
+        "Abeflows-orbital/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-john-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 13
+    },
+    "pydantic-settings": {
+      "versions": [
+        ">=2.11.0",
+        ">=2.0.0",
+        ">=2.1.0,<3.0.0",
+        "==2.1.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-john-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "AIGuards-Backend-orbital/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/contextguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/contextguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 17
+    },
+    "alembic": {
+      "versions": [
+        "==1.12.1",
+        ">=1.17.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 3
+    },
+    "psycopg2-binary": {
+      "versions": [
+        ">=2.9.10",
+        "==2.9.9"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 3
+    },
+    "prometheus-client": {
+      "versions": [
+        ">=0.19.0",
+        ">=0.23.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/contextguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/contextguard/requirements.txt"
+      ],
+      "count": 4
+    },
+    "boto3": {
+      "versions": [
+        ">=1.40.0",
+        "==1.29.7"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 3
+    },
+    "structlog": {
+      "versions": [
+        "==23.2.0",
+        ">=25.0.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 7
+    },
+    "aiofiles": {
+      "versions": [
+        ">=24.0.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 6
+    },
+    "psutil": {
+      "versions": [
+        "==5.9.6",
+        ">=5.9.0",
+        ">=7.0.0",
+        ">=6.0.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guardians/validation-framework/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guardians/validation-framework/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 9
+    },
+    "REPLACE_ME": {
+      "versions": [
+        ">=7.0.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 6
+    },
+    "slowapi": {
+      "versions": [
+        ">=0.1.9"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/contextguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/contextguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 8
+    },
+    "opentelemetry-api": {
+      "versions": [
+        ">=1.30.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 4
+    },
+    "opentelemetry-sdk": {
+      "versions": [
+        ">=1.30.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 4
+    },
+    "REPLACE_ME": {
+      "versions": [
+        ">=0.51b0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 4
+    },
+    "REPLACE_ME": {
+      "versions": [
+        ">=0.59b0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 4
+    },
+    "opentelemetry-exporter-otlp": {
+      "versions": [
+        ">=1.30.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 4
+    },
+    "ddtrace": {
+      "versions": [
+        ">=2.0.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 6
+    },
+    "datadog": {
+      "versions": [
+        ">=0.47.0"
+      ],
+      "files": [
+        "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+        "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/tokenguard/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/guards/trust-guard/requirements.txt"
+      ],
+      "count": 6
+    },
+    "websockets": {
+      "versions": [
+        "==12.0",
+        ">=11.0"
+      ],
+      "files": [
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-lux-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-john-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-aurion-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-yagni-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-zero-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-neuro-service/requirements.txt",
+        "_ARCHIVE/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-abe-service/requirements.txt",
+        "advanced-knock/backend/requirements.txt"
+      ],
+      "count": 9
+    }
+  },
+  "summary": {
+    "conflict_count": 37,
+    "common_package_count": 45,
+    "files_with_conflicts": 46
+  }
+}

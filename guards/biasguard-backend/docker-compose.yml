@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  poisonguard:
+    build: .
+    container_name: poisonguard
+    volumes:
+      - .:/usr/src/app
+    command: tail -f /dev/null # Keep the container running for development
+networks:
+  default:
+    name: poisonguard_network

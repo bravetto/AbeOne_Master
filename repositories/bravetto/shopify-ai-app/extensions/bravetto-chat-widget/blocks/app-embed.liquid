@@ -1,0 +1,662 @@
+{% comment %}
+  Bravetto AI Chat Widget - App Embed
+  This app embed allows the chat widget to be enabled globally across the entire store
+{% endcomment %}
+
+{% if block.settings.enable_widget %}
+  {% assign widget_id = 'bravetto-chat-app-embed' %}
+
+  <div id="{{ widget_id }}" class="bravetto-chat-widget" data-shop="{{ shop.domain }}" data-widget-position="{{ block.settings.position }}">
+    <!-- Chat Widget Container -->
+    <div class="bravetto-chat-container" style="display: none;">
+      <div class="bravetto-chat-header">
+        <h3 class="bravetto-chat-title">{{ block.settings.title }}</h3>
+        <button class="bravetto-chat-close" aria-label="Close chat">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="bravetto-chat-messages" id="{{ widget_id }}-messages">
+        <div class="bravetto-chat-welcome">
+          <p>{{ block.settings.welcome_message }}</p>
+        </div>
+      </div>
+      <form class="bravetto-chat-input-form" id="{{ widget_id }}-form">
+        <div class="bravetto-chat-input-container">
+          <input 
+            type="text" 
+            class="bravetto-chat-input" 
+            placeholder="{{ block.settings.placeholder_text }}"
+            aria-label="Chat message input"
+          />
+          <button type="submit" class="bravetto-chat-send" aria-label="Send message">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 10L2 2L6 10L2 18L18 10Z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+    
+    <!-- Chat Toggle Button -->
+    <button class="bravetto-chat-toggle" aria-label="Open chat" style="background-color: {{ block.settings.button_color }};">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z" fill="white"/>
+        <path d="M7 9H17M7 13H13" stroke="{{ block.settings.button_color }}" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <style>
+    #{{ widget_id }} {
+      position: fixed;
+      {{ block.settings.position }}: 20px;
+      bottom: 20px;
+      z-index: 999999;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    #{{ widget_id }} .bravetto-chat-toggle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #{{ widget_id }} .bravetto-chat-toggle:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    #{{ widget_id }} .bravetto-chat-container {
+      position: absolute;
+      {{ block.settings.position }}: 0;
+      bottom: 80px;
+      width: 450px;
+      height: 500px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    #{{ widget_id }} .bravetto-chat-header {
+      background: {{ block.settings.header_color }};
+      color: white;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #{{ widget_id }} .bravetto-chat-title {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    #{{ widget_id }} .bravetto-chat-close {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    #{{ widget_id }} .bravetto-chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      background: #f9fafb;
+    }
+
+    #{{ widget_id }} .bravetto-chat-welcome {
+      text-align: center;
+      color: #666;
+      padding: 20px;
+      font-size: 13px;
+    }
+
+    #{{ widget_id }} .bravetto-chat-message {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    #{{ widget_id }} .bravetto-chat-message.user {
+      justify-content: flex-end;
+    }
+
+    #{{ widget_id }} .bravetto-chat-message-content {
+      max-width: 70%;
+      padding: 10px 14px;
+      border-radius: 18px;
+      word-wrap: break-word;
+      font-size: 13px;
+    }
+
+    #{{ widget_id }} .bravetto-chat-message.user .bravetto-chat-message-content {
+      background: {{ block.settings.user_message_color }};
+      color: white;
+    }
+
+    #{{ widget_id }} .bravetto-chat-message.assistant .bravetto-chat-message-content {
+      background: white;
+      color: #333;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    #{{ widget_id }} .bravetto-chat-input-form {
+      padding: 16px;
+      background: white;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    #{{ widget_id }} .bravetto-chat-input-container {
+      display: flex;
+      gap: 8px;
+    }
+
+    #{{ widget_id }} .bravetto-chat-input {
+      flex: 1;
+      padding: 10px 14px;
+      border: 1px solid #e5e7eb;
+      border-radius: 24px;
+      outline: none;
+      font-size: 12px;
+    }
+
+    #{{ widget_id }} .bravetto-chat-input:focus {
+      border-color: {{ block.settings.header_color }};
+    }
+
+    #{{ widget_id }} .bravetto-chat-send {
+      background: {{ block.settings.header_color }};
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    #{{ widget_id }} .bravetto-chat-send:hover {
+      opacity: 0.9;
+    }
+
+    #{{ widget_id }} .bravetto-chat-typing {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 10px 14px;
+      background: white;
+      border-radius: 18px;
+      width: fit-content;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    #{{ widget_id }} .bravetto-chat-typing span {
+      width: 8px;
+      height: 8px;
+      background: #999;
+      border-radius: 50%;
+      animation: typing-{{ widget_id }} 1.4s infinite;
+    }
+
+    #{{ widget_id }} .bravetto-chat-typing span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    #{{ widget_id }} .bravetto-chat-typing span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes typing-{{ widget_id }} {
+      0%, 60%, 100% {
+        transform: translateY(0);
+      }
+      30% {
+        transform: translateY(-10px);
+      }
+    }
+
+    #{{ widget_id }} .streaming-cursor {
+      animation: blink-{{ widget_id }} 1s infinite;
+      color: #666;
+    }
+
+    @keyframes blink-{{ widget_id }} {
+      0%, 50% {
+        opacity: 1;
+      }
+      51%, 100% {
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #{{ widget_id }} .bravetto-chat-container {
+        width: calc(100vw - 40px);
+        height: calc(100vh - 100px);
+        {{ block.settings.position }}: 20px;
+      }
+    }
+
+    /* Hide widget on specific pages if needed */
+    {% if block.settings.hide_on_pages != blank %}
+      {% assign hide_pages = block.settings.hide_on_pages | split: ',' %}
+      {% for page in hide_pages %}
+        body.template-{{ page | strip }} #{{ widget_id }} {
+          display: none !important;
+        }
+      {% endfor %}
+    {% endif %}
+  </style>
+
+  <script>
+    (function() {
+      const widgetId = '{{ widget_id }}';
+      const appProxyPath = '/apps/chat';
+      const shopDomain = (window.location && window.location.hostname && window.location.hostname.endsWith('.myshopify.com')) ? window.location.hostname : '{{ shop.domain }}';
+      const systemPromptId = '{{ block.settings.system_prompt_id }}';
+      // If the theme setting is hidden or left at default, do not override dashboard setting
+      const effectiveSystemPromptId = (
+        systemPromptId &&
+        systemPromptId !== 'shopify_assistant' &&
+        systemPromptId !== 'null'
+      ) ? systemPromptId : null;
+      
+      // Initialize widget
+      document.addEventListener('DOMContentLoaded', function() {
+        const widget = document.getElementById(widgetId);
+        if (!widget) return;
+        
+        const toggle = widget.querySelector('.bravetto-chat-toggle');
+        const container = widget.querySelector('.bravetto-chat-container');
+        const closeBtn = widget.querySelector('.bravetto-chat-close');
+        const form = widget.querySelector('.bravetto-chat-input-form');
+        const input = widget.querySelector('.bravetto-chat-input');
+        const messagesDiv = widget.querySelector('.bravetto-chat-messages');
+
+        let isOpen = false;
+        let messageHistory = [];
+
+        // Toggle chat
+        toggle.addEventListener('click', () => {
+          isOpen = !isOpen;
+          container.style.display = isOpen ? 'flex' : 'none';
+          if (isOpen) {
+            input.focus();
+          }
+        });
+
+        closeBtn.addEventListener('click', () => {
+          isOpen = false;
+          container.style.display = 'none';
+        });
+
+        // Handle form submission
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          
+          const message = input.value.trim();
+          if (!message) return;
+
+          // Add user message to chat
+          addMessage(message, 'user');
+          input.value = '';
+
+          // Show typing indicator
+          const typingDiv = showTypingIndicator();
+          let streamingMessageDiv = null;
+
+          try {
+            // Send message to Bravetto AI with streaming enabled
+            const response = await fetch(appProxyPath, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                message: message,
+                systemPromptId: effectiveSystemPromptId,
+                streaming: true,
+                context: {
+                  platform: 'shopify_storefront',
+                  page: window.location.pathname,
+                  customer: getCustomerContext(),
+                  cart: getCartContext(),
+                },
+                history: messageHistory
+              })
+            });
+
+            // Remove typing indicator and add streaming message
+            typingDiv.remove();
+            streamingMessageDiv = addStreamingMessage('assistant');
+
+            // If backend returned non-streaming, handle JSON and text explicitly
+            const contentType = response.headers.get('content-type') || '';
+            const isJson = contentType.includes('application/json') || contentType.includes('application/problem+json');
+            if (isJson) {
+              try {
+                const json = await response.clone().json();
+                const text = (json && (json.message || json.content || json.text)) || '';
+                finalizeStreamingMessage(
+                  streamingMessageDiv,
+                  (text && String(text).trim()) ? text : 'Sorry, I encountered an error. Please try again.'
+                );
+              } catch (_) {
+                try {
+                  const fallbackText = await response.clone().text();
+                  finalizeStreamingMessage(
+                    streamingMessageDiv,
+                    (fallbackText && fallbackText.trim()) ? fallbackText : 'Sorry, I encountered an error. Please try again.'
+                  );
+                } catch (__) {
+                  finalizeStreamingMessage(streamingMessageDiv, 'Sorry, I encountered an error. Please try again.');
+                }
+              }
+              return;
+            } else if (!response.body) {
+              try {
+                const text = await response.clone().text();
+                finalizeStreamingMessage(
+                  streamingMessageDiv,
+                  (text && text.trim()) ? text : 'Sorry, I encountered an error. Please try again.'
+                );
+              } catch (_) {
+                finalizeStreamingMessage(streamingMessageDiv, 'Sorry, I encountered an error. Please try again.');
+              }
+              return;
+            }
+
+            // Handle streaming SSE response
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder();
+            let buffer = '';
+            let accumulatedText = '';
+            let streamEnded = false;
+            let streamError = null;
+
+            while (true) {
+              const { done, value } = await reader.read();
+              if (done) break;
+
+              buffer += decoder.decode(value, { stream: true });
+              const lines = buffer.split('\n');
+              buffer = lines.pop(); // Keep incomplete line in buffer
+
+              for (const line of lines) {
+                if (line.startsWith('data: ')) {
+                  try {
+                    const data = JSON.parse(line.slice(6));
+
+                    if (data.type === 'text-delta') {
+                      accumulatedText += data.textDelta;
+                      updateStreamingMessage(streamingMessageDiv, accumulatedText);
+                    } else if (data.type === 'finish') {
+                      streamEnded = true;
+                      break;
+                    } else if (data.type === 'error') {
+                      console.error('Streaming error:', data.error);
+                      streamError = data.error || 'Stream error';
+                      streamEnded = true;
+                      break;
+                    }
+                  } catch (e) {
+                    console.error('Error parsing stream data:', e);
+                  }
+                }
+              }
+
+              if (streamEnded) {
+                break;
+              }
+            }
+            
+            // Finalize the streaming message
+            if (streamError) {
+              finalizeStreamingMessage(streamingMessageDiv, 'Sorry, I encountered an error. Please try again.');
+            } else {
+              finalizeStreamingMessage(streamingMessageDiv, accumulatedText);
+            }
+
+          } catch (error) {
+            console.error('Chat error:', error);
+            if (typingDiv && typingDiv.parentNode) {
+              typingDiv.remove();
+            }
+            if (streamingMessageDiv && streamingMessageDiv.contentDiv) {
+              finalizeStreamingMessage(streamingMessageDiv, 'Sorry, I encountered an error. Please try again.');
+            } else {
+              addMessage('Sorry, I encountered an error. Please try again.', 'assistant');
+            }
+          }
+        });
+
+        function addMessage(content, role) {
+          const messageDiv = document.createElement('div');
+          messageDiv.className = `bravetto-chat-message ${role}`;
+          
+          const contentDiv = document.createElement('div');
+          contentDiv.className = 'bravetto-chat-message-content';
+          contentDiv.textContent = content;
+          
+          messageDiv.appendChild(contentDiv);
+          messagesDiv.appendChild(messageDiv);
+          
+          // Scroll to bottom
+          messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+          // Add to history
+          messageHistory.push({ role, content });
+          
+          // Limit history to last 10 messages
+          if (messageHistory.length > 10) {
+            messageHistory = messageHistory.slice(-10);
+          }
+        }
+
+        function addStreamingMessage(role) {
+          const messageDiv = document.createElement('div');
+          messageDiv.className = `bravetto-chat-message ${role}`;
+          
+          const contentDiv = document.createElement('div');
+          contentDiv.className = 'bravetto-chat-message-content';
+          const cursor = document.createElement('span');
+          cursor.className = 'streaming-cursor';
+          cursor.textContent = '|';
+          contentDiv.appendChild(cursor);
+          
+          messageDiv.appendChild(contentDiv);
+          messagesDiv.appendChild(messageDiv);
+          
+          // Scroll to bottom
+          messagesDiv.scrollTop = messagesDiv.scrollHeight;
+          
+          return { messageDiv, contentDiv };
+        }
+
+        function updateStreamingMessage(streamingMessage, content) {
+          const contentDiv = streamingMessage.contentDiv;
+          const existingCursor = contentDiv.querySelector('.streaming-cursor');
+          if (existingCursor) existingCursor.remove();
+          contentDiv.textContent = content;
+          const cursor = document.createElement('span');
+          cursor.className = 'streaming-cursor';
+          cursor.textContent = '|';
+          contentDiv.appendChild(cursor);
+          messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function finalizeStreamingMessage(streamingMessage, content) {
+          streamingMessage.contentDiv.textContent = content;
+          
+          // Add to history
+          messageHistory.push({ role: 'assistant', content });
+          
+          // Limit history to last 10 messages
+          if (messageHistory.length > 10) {
+            messageHistory = messageHistory.slice(-10);
+          }
+        }
+
+        function showTypingIndicator() {
+          const typingDiv = document.createElement('div');
+          typingDiv.className = 'bravetto-chat-message assistant';
+          typingDiv.innerHTML = `
+            <div class="bravetto-chat-typing">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          `;
+          messagesDiv.appendChild(typingDiv);
+          messagesDiv.scrollTop = messagesDiv.scrollHeight;
+          return typingDiv;
+        }
+
+        function getCustomerContext() {
+          // Get customer context if available
+          if (window.ShopifyAnalytics && window.ShopifyAnalytics.meta) {
+            const meta = window.ShopifyAnalytics.meta;
+            return {
+              id: meta.page?.customerId || null,
+              logged_in: !!meta.page?.customerId
+            };
+          }
+          return {
+            id: null,
+            logged_in: false
+          };
+        }
+
+        function getCartContext() {
+          // Try to get cart info if available
+          if (window.Shopify && window.Shopify.cart) {
+            return {
+              item_count: window.Shopify.cart.item_count || 0
+            };
+          }
+          return null;
+        }
+      });
+    })();
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Bravetto AI Chat",
+  "target": "body",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_widget",
+      "label": "Enable Chat Widget",
+      "default": true,
+      "info": "Enable or disable the chat widget globally"
+    },
+    {
+      "type": "header",
+      "content": "Widget Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Chat Title",
+      "default": "Chat with AI Assistant"
+    },
+    {
+      "type": "textarea",
+      "id": "welcome_message",
+      "label": "Welcome Message",
+      "default": "Hi! I'm here to help you with any questions about our products or services. How can I assist you today?"
+    },
+    {
+      "type": "text",
+      "id": "placeholder_text",
+      "label": "Input Placeholder",
+      "default": "Type your message..."
+    },
+    {
+      "type": "select",
+      "id": "position",
+      "label": "Widget Position",
+      "options": [
+        {
+          "value": "right",
+          "label": "Bottom Right"
+        },
+        {
+          "value": "left",
+          "label": "Bottom Left"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "header_color",
+      "label": "Header Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "user_message_color",
+      "label": "User Message Color",
+      "default": "#0066ff"
+    },
+    {
+      "type": "header",
+      "content": "Advanced Settings"
+    },
+    {
+      "type": "text",
+      "id": "api_url",
+      "label": "API URL",
+      "default": "https://www.bravetto.ai",
+      "info": "This setting is managed automatically",
+      "visible_if": false
+    },
+    {
+      "type": "text",
+      "id": "system_prompt_id",
+      "label": "System Prompt ID",
+      "default": "shopify_assistant",
+      "info": "This setting is managed automatically via your dashboard",
+      "visible_if": false
+    },
+    {
+      "type": "text",
+      "id": "hide_on_pages",
+      "label": "Hide on Pages",
+      "info": "Comma-separated list of page templates to hide the widget (e.g., cart,checkout)",
+      "placeholder": "cart,checkout"
+    }
+  ]
+}
+{% endschema %} 

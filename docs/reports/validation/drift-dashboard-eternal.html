@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #1e1e1e;
+  color: #cccccc;
+  padding: 20px;
+  font-size: 13px;
+}
+.error-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #252526;
+  border-radius: 8px;
+  border: 2px solid #f48771;
+  text-align: center;
+}
+.error-title {
+  font-size: 24px;
+  color: #f48771;
+  margin-bottom: 15px;
+}
+.error-message {
+  color: #858585;
+  margin-bottom: 20px;
+}
+.success-actions {
+  text-align: left;
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+.success-actions h3 {
+  color: #4ec9b0;
+  margin-bottom: 10px;
+}
+.success-actions ol {
+  color: #858585;
+  padding-left: 20px;
+}
+.success-actions li {
+  margin: 8px 0;
+}
+</style>
+</head>
+<body>
+  <div class="error-container">
+    <div class="error-title">SUBSTRATE-REQUIRED</div>
+    <div class="error-message">Missing systemStatus - data unavailable</div>
+    <div class="success-actions">
+      <h3>To fix:</h3>
+      <ol>
+        <li>Provide missing data using exact substrate.</li>
+        <li>Re-run command with updated context.</li>
+        <li>Lock file or status block regenerates automatically from substrate.</li>
+        <li>System revalidates and converges to correct state.</li>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>

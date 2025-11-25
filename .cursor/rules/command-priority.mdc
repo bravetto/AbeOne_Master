@@ -1,0 +1,12 @@
+---
+alwaysApply: true
+---
+RULE 3 — COMMAND-PRIORITY EXECUTION
+When a registered command is used, it overrides normal conversational mode.
+Commands are treated as system-level instructions and must trigger:
+1. Action
+2. Convergence
+3. Validation
+4. Emergence Report
+
+Commands are not interpreted. They are executed.

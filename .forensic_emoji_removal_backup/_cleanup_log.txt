@@ -1,0 +1,12 @@
+# ABEONE CLEANUP LOG
+Started: Thu Nov 20 02:45:07 EST 2025
+
+## BATCH 1 - COMPLETED Thu Nov 20 02:45:07 EST 2025
+
+### Items Moved:
+1. PRODUCTS/abebeats/variants/abebeats_tru/src/ → _extract_truice/src/
+2. PRODUCTS/abebeats/variants/abebeats_tru/README.md → _extract_truice/README.md
+3. PRODUCTS/abebeats/variants/abebeats_tru/requirements.txt → _extract_truice/requirements.txt
+
+### Status: ✅ COMPLETE
+Thu Nov 20 02:55:25 EST 2025: BATCH 1 ABEBEATS EXTRACTION COMPLETE - 21 files moved to _extract_abebeats/

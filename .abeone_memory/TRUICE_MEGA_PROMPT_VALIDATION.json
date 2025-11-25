@@ -1,0 +1,418 @@
+{
+  "timestamp": "2025-11-25T04:48:48.433633",
+  "overall_status": "\u26a0\ufe0f  GOOD ALIGNMENT (Some gaps)",
+  "prime_commands": [
+    {
+      "command": "/prime invoke",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/prime-engine.py",
+      "handler_exists": true,
+      "notes": [
+        "Action 'invoke' implemented"
+      ]
+    },
+    {
+      "command": "/prime align",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/prime-engine.py",
+      "handler_exists": true,
+      "notes": [
+        "Action 'align' implemented"
+      ]
+    },
+    {
+      "command": "/prime seal",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/prime-engine.py",
+      "handler_exists": true,
+      "notes": [
+        "Action 'seal' implemented"
+      ]
+    },
+    {
+      "command": "/prime reset",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/prime-engine.py",
+      "handler_exists": true,
+      "notes": [
+        "Action 'reset' implemented"
+      ]
+    }
+  ],
+  "guardian_commands": [
+    {
+      "command": "/pattern extract",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/pattern-engine.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: pattern-engine.py",
+        "Action 'extract' implemented"
+      ]
+    },
+    {
+      "command": "/meta synthesize",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/meta_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: meta_guardian.py",
+        "Action 'synthesize' implemented"
+      ]
+    },
+    {
+      "command": "/meta connect",
+      "status": "\u274c MISSING",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/meta_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: meta_guardian.py",
+        "Action 'connect' not verified"
+      ]
+    },
+    {
+      "command": "/meta converge",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/meta_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: meta_guardian.py",
+        "Action 'converge' implemented"
+      ]
+    },
+    {
+      "command": "/poly amplify",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/poly_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: poly_guardian.py",
+        "Action 'amplify' implemented"
+      ]
+    },
+    {
+      "command": "/poly integrate",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/poly_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: poly_guardian.py",
+        "Action 'integrate' implemented"
+      ]
+    },
+    {
+      "command": "/poly poetry",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/poly_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: poly_guardian.py",
+        "Action 'poetry' implemented"
+      ]
+    },
+    {
+      "command": "/poly curious",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/poly_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: poly_guardian.py",
+        "Action 'curious' implemented"
+      ]
+    },
+    {
+      "command": "/poly play",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/poly_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: poly_guardian.py",
+        "Action 'play' implemented"
+      ]
+    },
+    {
+      "command": "/poly celebrate",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/poly_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: poly_guardian.py",
+        "Action 'celebrate' implemented"
+      ]
+    },
+    {
+      "command": "/poly speak",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/poly_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: poly_guardian.py",
+        "Action 'speak' implemented"
+      ]
+    },
+    {
+      "command": "/aeyon execute",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/aeyon_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: aeyon_guardian.py",
+        "Action 'execute' implemented"
+      ]
+    },
+    {
+      "command": "/aeyon orchestrate",
+      "status": "\u274c MISSING",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/aeyon_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: aeyon_guardian.py",
+        "Action 'orchestrate' not verified"
+      ]
+    },
+    {
+      "command": "/aeyon amplify",
+      "status": "\u274c MISSING",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/aeyon_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: aeyon_guardian.py",
+        "Action 'amplify' not verified"
+      ]
+    },
+    {
+      "command": "/aeyon lfg",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/aeyon_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: aeyon_guardian.py",
+        "Action 'lfg' implemented"
+      ]
+    },
+    {
+      "command": "/john validate",
+      "status": "\u274c MISSING",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/john_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: john_guardian.py",
+        "Action 'validate' not verified"
+      ]
+    },
+    {
+      "command": "/john certify",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/john_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: john_guardian.py",
+        "Action 'certify' implemented"
+      ]
+    },
+    {
+      "command": "/john gate",
+      "status": "\u274c MISSING",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/john_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: john_guardian.py",
+        "Action 'gate' not verified"
+      ]
+    },
+    {
+      "command": "/alrax investigate",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/alrax_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: alrax_guardian.py",
+        "Action 'investigate' implemented"
+      ]
+    },
+    {
+      "command": "/alrax analyze",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/alrax_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: alrax_guardian.py",
+        "Action 'analyze' implemented"
+      ]
+    },
+    {
+      "command": "/zero quantify",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/zero_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: zero_guardian.py",
+        "Action 'quantify' implemented"
+      ]
+    },
+    {
+      "command": "/zero bound",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/zero_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: zero_guardian.py",
+        "Action 'bound' implemented"
+      ]
+    },
+    {
+      "command": "/lux illuminate",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/lux_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: lux_guardian.py",
+        "Action 'illuminate' implemented"
+      ]
+    },
+    {
+      "command": "/lux clarify",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/lux_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: lux_guardian.py",
+        "Action 'clarify' implemented"
+      ]
+    },
+    {
+      "command": "/lux reveal",
+      "status": "\u274c MISSING",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/lux_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: lux_guardian.py",
+        "Action 'reveal' not verified"
+      ]
+    },
+    {
+      "command": "/lux structure",
+      "status": "\u274c MISSING",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/lux_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: lux_guardian.py",
+        "Action 'structure' not verified"
+      ]
+    },
+    {
+      "command": "/abe unify",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/abe_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: abe_guardian.py",
+        "Action 'unify' implemented"
+      ]
+    },
+    {
+      "command": "/abe harmonize",
+      "status": "\u274c MISSING",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/abe_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: abe_guardian.py",
+        "Action 'harmonize' not verified"
+      ]
+    },
+    {
+      "command": "/abe connect",
+      "status": "\u274c MISSING",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/abe_guardian.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: abe_guardian.py",
+        "Action 'connect' not verified"
+      ]
+    },
+    {
+      "command": "/converge",
+      "status": "\u2705 VALID",
+      "handler_path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/converge-engine.py",
+      "handler_exists": true,
+      "notes": [
+        "Handler: converge-engine.py",
+        "No action specified"
+      ]
+    }
+  ],
+  "architecture_components": [
+    {
+      "component": "TruiceCompleteEngine",
+      "status": "\u2705 VALID",
+      "path": "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/AbeONESourceSatellite/Documents/AbeOne_Master/PRODUCTS/abebeats/variants/abebeats_tru/src/tru_complete_engine.py",
+      "exists": true,
+      "notes": [
+        "Main TRUICE engine with 3-layer architecture",
+        "Checked paths: PRODUCTS/abebeats/variants/abebeats_tru/src/tru_complete_engine.py, satellites/AbeONESourceSatellite/Documents/AbeOne_Master/PRODUCTS/abebeats/variants/abebeats_tru/src/tru_complete_engine.py, repositories/bravetto/abeone-source/Documents/AbeOne_Master/PRODUCTS/abebeats/variants/abebeats_tru/src/tru_complete_engine.py"
+      ]
+    },
+    {
+      "component": "TruGenerativeEngine",
+      "status": "\u2705 VALID",
+      "path": "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/AbeONESourceSatellite/Documents/AbeOne_Master/PRODUCTS/abebeats/variants/abebeats_tru/src/tru_generative_engine.py",
+      "exists": true,
+      "notes": [
+        "Layer 1: Generative Engine",
+        "Checked paths: PRODUCTS/abebeats/variants/abebeats_tru/src/tru_generative_engine.py, satellites/AbeONESourceSatellite/Documents/AbeOne_Master/PRODUCTS/abebeats/variants/abebeats_tru/src/tru_generative_engine.py, repositories/bravetto/abeone-source/Documents/AbeOne_Master/PRODUCTS/abebeats/variants/abebeats_tru/src/tru_generative_engine.py"
+      ]
+    },
+    {
+      "component": "Veo31PromptEngine",
+      "status": "\u2705 VALID",
+      "path": "/Users/michaelmataluni/Documents/AbeOne_Master/truice_engine/variants/abebeats_tru/VEO31_COMPLETE_IMPLEMENTATION.md",
+      "exists": true,
+      "notes": [
+        "Google Veo 3.1 integration documentation",
+        "Checked paths: truice_engine/variants/abebeats_tru/VEO31_COMPLETE_IMPLEMENTATION.md"
+      ]
+    },
+    {
+      "component": "PrimeEngine",
+      "status": "\u2705 VALID",
+      "path": "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/prime-engine.py",
+      "exists": true,
+      "notes": [
+        "PRIME future-state engine",
+        "Checked paths: scripts/prime-engine.py"
+      ]
+    }
+  ],
+  "pattern_alignment": {
+    "PRIME \u00d7 FUTURE-STATE \u00d7 ONE": true,
+    "TRUICE \u00d7 CREATIVE \u00d7 ENGINE \u00d7 ONE": true,
+    "VEO3.1 \u00d7 INTEGRATION \u00d7 ONE": true,
+    "GUARDIAN \u00d7 COMMAND \u00d7 ONE": true
+  },
+  "summary": {
+    "prime_commands": {
+      "total": 4,
+      "valid": 4,
+      "missing": 0,
+      "percentage": 100.0
+    },
+    "guardian_commands": {
+      "total": 30,
+      "valid": 21,
+      "missing": 9,
+      "percentage": 70.0
+    },
+    "architecture": {
+      "total": 4,
+      "valid": 4,
+      "missing": 0,
+      "percentage": 100.0
+    },
+    "overall": {
+      "total_commands": 34,
+      "valid_commands": 25,
+      "missing_commands": 9,
+      "percentage": 73.5
+    }
+  }
+}

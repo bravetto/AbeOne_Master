@@ -1,0 +1,275 @@
+---
+description: Deployment and infrastructure guidelines for Trust Guard
+---
+
+# Deployment and Infrastructure Guidelines
+
+## Deployment Environments
+
+### Local Development
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run with hot reload
+python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+# Access API documentation
+open http://localhost:8000/docs
+```
+
+### Docker Development
+```bash
+# Build image
+docker build -t trust-guard:latest .
+
+# Run container
+docker run -p 8000:8000 trust-guard:latest
+
+# Use docker-compose for development
+docker-compose up --build
+```
+
+### AWS Production Deployment
+```bash
+# One-command deployment
+cd aws && ./deploy.sh
+
+# Deploy specific components
+./deploy.sh infrastructure  # Only AWS infrastructure
+./deploy.sh image          # Only build and push Docker image
+```
+
+## Infrastructure Components
+
+### AWS Architecture
+Trust Guard uses AWS ECS Fargate with the following components:
+
+#### Core Infrastructure ([aws/infrastructure.yml](mdc:aws/infrastructure.yml))
+- **ECS Cluster**: Fargate cluster for containerized services
+- **Application Load Balancer**: HTTP/HTTPS traffic distribution
+- **ECR Repository**: Container image storage
+- **CloudWatch Logs**: Centralized logging
+- **Auto Scaling**: Automatic scaling based on CPU/memory usage
+- **Security Groups**: Network security configuration
+
+#### Deployment Script ([aws/deploy.sh](mdc:aws/deploy.sh))
+Automated deployment process:
+1. Build and push Docker image to ECR
+2. Deploy CloudFormation infrastructure
+3. Update ECS service with new image
+4. Verify deployment health
+
+### Container Configuration
+
+#### Dockerfile
+Multi-stage build for production optimization:
+```dockerfile
+FROM python:3.11-slim as builder
+# Build stage with dependencies
+
+FROM python:3.11-slim as runtime
+# Runtime stage with minimal footprint
+COPY --from=builder /app /app
+WORKDIR /app
+EXPOSE 8000
+CMD ["python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+```
+
+#### Docker Compose ([docker-compose.aws.yml](mdc:docker-compose.aws.yml))
+Development and testing environment:
+```yaml
+version: '3.8'
+services:
+  trust-guard:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - TRUSTGUARD_LOG_LEVEL=INFO
+      - TRUSTGUARD_ENABLE_METRICS=true
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+```
+
+## Environment Configuration
+
+### Environment Variables
+Production environment variables:
+```bash
+# Service Configuration
+TRUSTGUARD_HOST=0.0.0.0
+TRUSTGUARD_PORT=8000
+TRUSTGUARD_LOG_LEVEL=INFO
+TRUSTGUARD_ENABLE_METRICS=true
+
+# Performance Settings
+TRUSTGUARD_RATE_LIMIT=100
+TRUSTGUARD_MAX_LENGTH=8000
+TRUSTGUARD_MIN_LENGTH=10
+
+# Security
+TRUSTGUARD_API_KEY=your-secure-api-key  # Optional
+TRUSTGUARD_CORS_ORIGINS=https://yourdomain.com
+
+# AWS Configuration
+AWS_REGION=us-east-1
+AWS_DEFAULT_REGION=us-east-1
+```
+
+### Configuration Management
+Use [trustguard/config.py](mdc:trustguard/config.py) for centralized configuration:
+- Pydantic BaseSettings for validation
+- Environment variable prefix: `TRUSTGUARD_`
+- Sensible defaults for all settings
+- Type validation and constraints
+
+## Monitoring and Observability
+
+### Health Checks
+Comprehensive health monitoring:
+- **Liveness Probe**: `/health` endpoint
+- **Readiness Probe**: Component status validation
+- **Component Health**: Individual service health checks
+- **System Metrics**: CPU, memory, disk usage
+
+### Metrics Collection
+Prometheus-compatible metrics:
+- Request processing times
+- Pattern detection rates
+- Risk score distributions
+- Error rates and types
+- System resource utilization
+
+### Logging Strategy
+Structured JSON logging:
+```python
+logger.info("Request processed", 
+           extra={
+               "method": request.method,
+               "url": str(request.url),
+               "status_code": response.status_code,
+               "process_time_ms": processing_time,
+               "client_ip": client_ip
+           })
+```
+
+### CloudWatch Integration
+- **Log Groups**: `/ecs/prod/trust-guard`
+- **Metrics**: Custom Trust Guard metrics
+- **Alarms**: CPU/Memory utilization alerts
+- **Dashboards**: Service performance visualization
+
+## Security Configuration
+
+### Network Security
+- **Security Groups**: Restrictive inbound/outbound rules
+- **VPC Configuration**: Private subnets for ECS tasks
+- **Load Balancer**: HTTPS termination with SSL certificates
+- **WAF**: Web Application Firewall for additional protection
+
+### Container Security
+- **Non-root User**: Run containers as non-root
+- **Resource Limits**: CPU and memory constraints
+- **Image Scanning**: Vulnerability scanning in CI/CD
+- **Secrets Management**: Use AWS Secrets Manager for sensitive data
+
+### API Security
+- **Rate Limiting**: Request throttling per client
+- **Input Validation**: Comprehensive input sanitization
+- **CORS Configuration**: Restrictive cross-origin policies
+- **API Key Authentication**: Optional API key validation
+
+## Scaling and Performance
+
+### Auto Scaling Configuration
+```yaml
+AutoScalingGroup:
+  MinSize: 2
+  MaxSize: 10
+  DesiredCapacity: 3
+  TargetTrackingPolicies:
+    - TargetValue: 70.0
+      MetricType: CPUUtilization
+    - TargetValue: 80.0
+      MetricType: MemoryUtilization
+```
+
+### Performance Targets
+- **Response Time**: < 200ms for 95th percentile
+- **Throughput**: 1000+ requests/minute
+- **Availability**: 99.9% uptime
+- **Error Rate**: < 0.1% error rate
+
+### Resource Allocation
+- **CPU**: 512 CPU units (0.5 vCPU)
+- **Memory**: 1024 MB
+- **Storage**: 20 GB EBS volume
+- **Network**: Enhanced networking enabled
+
+## CI/CD Pipeline
+
+### GitHub Actions Workflow
+```yaml
+name: Deploy to AWS
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run tests
+        run: python -m pytest tests/ -v
+  
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Deploy to AWS
+        run: cd aws && ./deploy.sh
+```
+
+### Deployment Process
+1. **Code Push**: Trigger on main branch push
+2. **Testing**: Run comprehensive test suite
+3. **Build**: Create Docker image
+4. **Push**: Upload to ECR repository
+5. **Deploy**: Update ECS service
+6. **Verify**: Health check validation
+
+## Disaster Recovery
+
+### Backup Strategy
+- **Code**: Git repository with multiple remotes
+- **Configuration**: Infrastructure as Code in Git
+- **Data**: No persistent data (stateless service)
+- **Logs**: CloudWatch Logs retention (30 days)
+
+### Recovery Procedures
+1. **Service Failure**: Auto-scaling group replacement
+2. **Region Failure**: Multi-region deployment capability
+3. **Data Loss**: Stateless design minimizes impact
+4. **Rollback**: Previous image deployment via ECS
+
+## Cost Optimization
+
+### Resource Optimization
+- **Fargate Spot**: Use spot instances for non-critical workloads
+- **Right-sizing**: Monitor and adjust resource allocation
+- **Auto Scaling**: Scale down during low usage periods
+- **Reserved Capacity**: Consider reserved instances for predictable workloads
+
+### Monitoring Costs
+- **CloudWatch**: Monitor service costs and usage
+- **Cost Alerts**: Set up billing alerts
+- **Resource Tagging**: Tag resources for cost allocation
+- **Regular Review**: Monthly cost optimization reviews

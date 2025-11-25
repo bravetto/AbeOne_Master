@@ -1,0 +1,11 @@
+# Python dependencies for Cloudflare Pages deployment scripts
+# Install with: pip install -r scripts/requirements.txt
+
+# DNS monitoring
+dnspython>=2.4.0
+
+# HTTP requests and testing
+requests>=2.31.0
+
+# SSL certificate validation (built-in, no extra package needed)
+

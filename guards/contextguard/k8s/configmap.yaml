@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: contextguard-config
+  namespace: default
+data:
+  CONTEXTGUARD_HOST: "0.0.0.0"
+  CONTEXTGUARD_PORT: "8000"
+  CONTEXTGUARD_LOG_LEVEL: "INFO"
+  CONTEXTGUARD_LOG_FORMAT: "json"
+  CONTEXTGUARD_ENABLE_METRICS: "true"
+  CONTEXTGUARD_RATE_LIMIT_REQUESTS: "100"
+  CONTEXTGUARD_RATE_LIMIT_WINDOW: "60"
+

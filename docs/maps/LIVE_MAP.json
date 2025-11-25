@@ -1,0 +1,28 @@
+{
+  "generated": "2025-11-23T20:28:36.687262",
+  "type": "LIVE",
+  "description": "What IS ACTIVE at runtime",
+  "services": {
+    "guards": {
+      "status": "unknown",
+      "running": false
+    },
+    "guardians": {
+      "status": "unknown",
+      "running": false
+    },
+    "gateway": {
+      "status": "unknown",
+      "running": false
+    }
+  },
+  "state": {},
+  "boot_system": {
+    "exists": true,
+    "active": true
+  },
+  "memory_system": {
+    "exists": true,
+    "active": true
+  }
+}

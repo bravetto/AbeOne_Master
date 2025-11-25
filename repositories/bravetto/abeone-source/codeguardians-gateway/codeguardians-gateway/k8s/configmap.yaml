@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gateway-config
+  namespace: default
+data:
+  ENVIRONMENT: "production"
+  DEBUG: "false"
+  LOG_LEVEL: "INFO"
+  LOG_FORMAT: "json"
+  ENABLE_METRICS: "true"
+  METRICS_PORT: "9090"
+  ALLOWED_HOSTS: "aiguardian.ai,api.aiguardian.ai,dashboard.aiguardian.ai"
+  ALLOWED_ORIGINS: "https://aiguardian.ai,https://dashboard.aiguardian.ai,https://api.aiguardian.ai"
+  # Guard service URLs (K8s service DNS names)
+  TOKENGUARD_URL: "http://tokenguard.default.svc.cluster.local:80"
+  TRUSTGUARD_URL: "http://trustguard.default.svc.cluster.local:80"
+  CONTEXTGUARD_URL: "http://contextguard.default.svc.cluster.local:80"
+  BIASGUARD_URL: "http://biasguard.default.svc.cluster.local:80"
+  HEALTHGUARD_URL: "http://healthguard.default.svc.cluster.local:80"
+  # AWS Configuration
+  AWS_REGION: "us-east-1"
+  AWS_SECRETS_ENABLED: "true"
+  AWS_SECRETS_NAME: "codeguardians-gateway/production"
+  # Rate Limiting
+  RATE_LIMIT_PROCESSING: "100"
+  RATE_LIMIT_ADMIN: "5"
+  RATE_LIMIT_READ: "200"
+

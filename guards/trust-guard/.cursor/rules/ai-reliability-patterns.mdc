@@ -1,0 +1,197 @@
+---
+description: AI reliability patterns and failure detection guidelines
+---
+
+# AI Reliability Patterns and Detection
+
+## Seven Core Failure Patterns
+
+Trust Guard detects and mitigates seven critical AI failure patterns:
+
+### 1. Hallucination
+**Definition**: False or unverified information presented as fact
+**Detection Indicators**:
+- Overconfidence language ("definitely", "absolutely", "without doubt")
+- Specific numbers/facts without context
+- Temporal inconsistencies without proper context
+- Short responses with definitive claims
+
+**Mitigation Strategies**:
+- Add uncertainty qualifiers ("based on available knowledge")
+- Implement fact-checking protocols
+- Use confidence qualifiers for uncertain information
+
+### 2. Drift
+**Definition**: Loss of conversational coherence and consistency
+**Detection Indicators**:
+- Low topic overlap with context (<10%)
+- Abrupt topic transitions (>2 transition words)
+- Self-contradictions within response
+- Inconsistent facts across conversation
+
+**Mitigation Strategies**:
+- Implement conversation memory validation
+- Cross-reference with Context Guard for coherence
+- Establish clear response boundaries
+
+### 3. Bias
+**Definition**: Systematic prejudices in responses or recommendations
+**Detection Indicators**:
+- Multiple bias category keywords (political, cultural, economic, social)
+- Absolute language in biased contexts
+- Unbalanced perspectives on contested topics
+- Stereotypical generalizations
+
+**Mitigation Strategies**:
+- Apply Bias Guard validation
+- Include diverse perspectives
+- Use neutral language and avoid polarizing terms
+
+### 4. Deception
+**Definition**: Intentional misleading or incomplete information
+**Detection Indicators**:
+- Equivocation phrases ("to be fair", "technically", "essentially")
+- Misleading qualifiers ("some people say", "it's possible")
+- Incomplete comparisons without proper context
+- False precision without supporting details
+
+**Mitigation Strategies**:
+- Ensure complete information disclosure
+- Avoid selective framing of information
+- Be explicit about assumptions and limitations
+
+### 5. Security Theater
+**Definition**: False sense of security without real protection
+**Detection Indicators**:
+- Generic security claims ("we take security seriously")
+- Unverified security metrics without sources
+- Comfort marketing language ("100% secure", "military-grade")
+- Vague threat neutralization claims
+
+**Mitigation Strategies**:
+- Provide specific, actionable security information
+- Focus on measurable improvements
+- Avoid false comfort statements
+
+### 6. Duplication
+**Definition**: Repetitive or redundant responses
+**Detection Indicators**:
+- Duplicate sentences within response
+- Repeated phrases (>2 instances)
+- Excessive word repetition (>3 instances of same word)
+- High structural similarity (>70%)
+
+**Mitigation Strategies**:
+- Vary language and structure
+- Implement content diversity checks
+- Use paraphrasing techniques
+
+### 7. Stub Syndrome
+**Definition**: Inadequate or superficial responses
+**Detection Indicators**:
+- Response too short (<50 words for complex queries)
+- Superficial simplifications ("basically", "simply put")
+- Too many unanswered questions (>3 question words)
+- Excessive vagueness (>10% vague terms)
+
+**Mitigation Strategies**:
+- Provide comprehensive, detailed responses
+- Address query complexity appropriately
+- Include sufficient context and explanation
+
+## Pattern Detection Architecture
+
+### Detection Engine Structure
+```python
+class TrustGuardDetector:
+    def detect_all_patterns(self, text: str, context: Optional[str] = None) -> Dict[str, Dict[str, Any]]:
+        """Detect all seven failure patterns with confidence scoring."""
+        return {
+            "hallucination": self.detect_hallucination(text, context),
+            "drift": self.detect_drift(text, context),
+            "bias": self.detect_bias(text, context),
+            "deception": self.detect_deception(text, context),
+            "security_theater": self.detect_security_theater(text, context),
+            "duplication": self.detect_duplication(text, context),
+            "stub_syndrome": self.detect_stub_syndrome(text, context)
+        }
+```
+
+### Scoring System
+Each pattern detection returns:
+- **Score**: 0.0 to 1.0 (likelihood of pattern presence)
+- **Confidence**: 0.0 to 1.0 (confidence in detection)
+- **Evidence**: List of specific indicators found
+- **Risk Level**: "low", "medium", "high"
+
+### Risk Assessment
+Overall risk calculation uses weighted scoring:
+- Hallucination: 25% weight
+- Bias: 20% weight
+- Deception: 20% weight
+- Drift: 15% weight
+- Duplication: 10% weight
+- Security Theater: 5% weight
+- Stub Syndrome: 5% weight
+
+## Mathematical Validation
+
+### KL Divergence Analysis
+Measures information consistency between input and output:
+- High divergence (>0.5) indicates potential hallucination
+- Used for detecting information drift and inconsistency
+
+### Uncertainty Quantification
+Assesses response confidence through:
+- Hedging language analysis
+- Confidence qualifier detection
+- Tentative vs. definitive language ratio
+- Alternative presentation indicators
+
+### Statistical Analysis
+Performs comprehensive text analysis:
+- Lexical diversity metrics
+- Sentence structure variance
+- Word frequency distributions
+- Response length consistency
+
+## Constitutional Prompting
+
+### Mitigation Strategies
+Apply constitutional AI guidelines based on detected patterns:
+
+```python
+constitutional_guidelines = {
+    "hallucination": [
+        "Ensure all claims are verifiable and based on established knowledge.",
+        "When unsure about facts, explicitly acknowledge uncertainty.",
+        "Prefer precision over completeness when information is limited."
+    ],
+    "bias": [
+        "Present information from multiple perspectives when appropriate.",
+        "Avoid absolute claims that could marginalize groups or individuals.",
+        "Consider diverse viewpoints and historical context."
+    ]
+}
+```
+
+### Severity-Based Mitigation
+- **High Severity**: Full constitutional protocol activation
+- **Medium Severity**: Enhanced reliability mode
+- **Low Severity**: Quality assurance corrections
+
+## Integration Guidelines
+
+### API Integration
+When integrating Trust Guard into AI systems:
+
+1. **Pre-Processing**: Run pattern detection before response generation
+2. **Post-Processing**: Apply mitigation strategies for detected patterns
+3. **Continuous Monitoring**: Track pattern trends and system performance
+4. **Feedback Loop**: Use validation results to improve AI model training
+
+### Performance Considerations
+- Pattern detection should complete within 100ms for typical requests
+- Mathematical validation adds ~50ms processing time
+- Mitigation application adds ~30ms processing time
+- Total processing overhead: ~180ms for comprehensive validation

@@ -1,0 +1,187 @@
+<h1 id="bryan---simple-update-checklist">📋 BRYAN - SIMPLE UPDATE
+CHECKLIST</h1>
+<p><strong>What You Need to Do:</strong> Replace placeholder content
+with real information</p>
+<p><strong>Priority:</strong> 🔴 <strong>CRITICAL</strong> - Must
+complete before launch</p>
+<hr />
+<h2 id="quick-checklist">✅ QUICK CHECKLIST</h2>
+<h3 id="webinar-details">1. Webinar Details</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" /><strong>Date:</strong> [Example:
+February 15, 2025]</label></li>
+<li><label><input type="checkbox" /><strong>Time:</strong> [Example:
+2:00 PM EST]</label></li>
+<li><label><input type="checkbox" /><strong>Zoom Link:</strong> [Your
+actual Zoom meeting URL]</label></li>
+<li><label><input type="checkbox" /><strong>Replay Link:</strong> [Where
+replay will be hosted]</label></li>
+</ul>
+<p><strong>Where to Update:</strong>
+<code>apps/web/app/api/webinar/register/route.ts</code> (lines
+30-37)</p>
+<hr />
+<h3 id="email-information">2. Email Information</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" /><strong>From Email:</strong> [Must
+be verified in SendGrid, e.g., noreply@aiguardian.ai]</label></li>
+<li><label><input type="checkbox" /><strong>From Name:</strong> [How you
+want to appear, e.g., “Michael from AiGuardian”]</label></li>
+<li><label><input type="checkbox" /><strong>Support Email:</strong>
+[Email people can contact for help]</label></li>
+<li><label><input type="checkbox" /><strong>Your Signature:</strong>
+[Your name/title for emails]</label></li>
+</ul>
+<p><strong>Where to Update:</strong> -
+<code>apps/web/app/api/webinar/register/route.ts</code> (line 114-115) -
+<code>apps/web/app/webinar/thank-you/page.tsx</code> (line ~164) -
+<code>.env.local</code> file</p>
+<hr />
+<h3 id="testimonials">3. Testimonials</h3>
+<p><strong>Choose ONE:</strong> - [ ] <strong>Option A:</strong> Provide
+3+ real testimonials (with permission) - [ ] <strong>Option B:</strong>
+Remove testimonial section</p>
+<p><strong>Where to Update:</strong>
+<code>apps/web/app/webinar/aiguardian/page.tsx</code> (lines
+184-234)</p>
+<p><strong>If Option A, provide for each testimonial:</strong> - Name -
+Role/Title - Company - GitHub username (for developers) OR Social handle
+(for creatives) - Quote (what they said)</p>
+<hr />
+<h3 id="company-logos">4. Company Logos</h3>
+<p><strong>Choose ONE:</strong> - [ ] <strong>Option A:</strong> Provide
+real company logo files (with permission) - [ ] <strong>Option
+B:</strong> Use real company names only (text) - [ ] <strong>Option
+C:</strong> Remove company logo section</p>
+<p><strong>Where to Update:</strong>
+<code>apps/web/app/webinar/aiguardian/page.tsx</code> (lines
+~470-475)</p>
+<hr />
+<h3 id="social-proof-numbers">5. Social Proof Numbers</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" /><strong>Starting Registration
+Count:</strong> [Real number or 0 if first webinar]</label></li>
+<li><label><input type="checkbox" /><strong>Video Testimonial:</strong>
+[URL if you have one, or “Remove”]</label></li>
+</ul>
+<p><strong>Where to Update:</strong>
+<code>apps/web/app/webinar/aiguardian/page.tsx</code> (line 26,
+~517)</p>
+<hr />
+<h3 id="REPLACE_ME">6. Headline Numbers (Verify
+Accuracy)</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" /><strong>“90% of failures”</strong> -
+Is this accurate? [ ] Yes [ ] No - Update to: ___</label></li>
+<li><label><input type="checkbox" /><strong>“Stripe &amp;
+Shopify”</strong> - Are these real customers? [ ] Yes [ ] No - [ ]
+Remove</label></li>
+<li><label><input type="checkbox" /><strong>“10,000+ engineers”</strong>
+- Is this accurate? [ ] Yes [ ] No - Update to: ___</label></li>
+<li><label><input type="checkbox" /><strong>“47 spots left”</strong> -
+Is this accurate? [ ] Yes [ ] No - [ ] Remove</label></li>
+</ul>
+<p><strong>Where to Update:</strong>
+<code>apps/web/app/webinar/aiguardian/page.tsx</code> (lines 37-66)</p>
+<hr />
+<h3 id="application-url">7. Application URL</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" /><strong>Production Website
+URL:</strong> [Example: https://aiguardian.ai]</label></li>
+</ul>
+<p><strong>Where to Update:</strong> <code>.env.local</code> file (set
+<code>NEXT_PUBLIC_APP_URL</code>)</p>
+<hr />
+<h3 id="unsubscribe-link">8. Unsubscribe Link</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" /><strong>Unsubscribe Page
+URL:</strong> [Example: https://aiguardian.ai/unsubscribe]</label></li>
+<li><label><input type="checkbox" /><strong>OR:</strong> Use SendGrid’s
+built-in unsubscribe</label></li>
+</ul>
+<p><strong>Where to Update:</strong>
+<code>apps/web/app/api/webinar/register/route.ts</code> (line ~262)</p>
+<hr />
+<h2 id="fill-this-out-and-send-back">📝 FILL THIS OUT AND SEND BACK</h2>
+<pre><code>WEBINAR DETAILS:
+Date: _________________________
+Time: _________________________
+Zoom Link: _________________________
+Replay Link: _________________________
+
+EMAIL INFORMATION:
+From Email: _________________________
+From Name: _________________________
+Support Email: _________________________
+Signature: _________________________
+
+TESTIMONIALS:
+[ ] Use real testimonials (provide below)
+[ ] Remove section
+
+COMPANY LOGOS:
+[ ] Use real logos (provide files)
+[ ] Use real names only
+[ ] Remove section
+
+SOCIAL PROOF:
+Starting Count: _________________________
+Video: [URL] or [Remove]
+
+HEADLINE NUMBERS:
+&quot;90%&quot; - [ ] Accurate [ ] Update to: ___
+&quot;Stripe/Shopify&quot; - [ ] Real [ ] Remove
+&quot;10,000+&quot; - [ ] Accurate [ ] Update to: ___
+&quot;47 spots&quot; - [ ] Accurate [ ] Remove
+
+APPLICATION URL:
+Production URL: _________________________
+
+UNSUBSCRIBE:
+Unsubscribe URL: _________________________</code></pre>
+<hr />
+<h2 id="priority-order">🎯 PRIORITY ORDER</h2>
+<p><strong>Do These First (Before Launch):</strong> 1. Webinar details
+(date, time, Zoom link) 2. Email information (from email, from name,
+support email) 3. Testimonials (real OR remove) 4. Company logos (real
+OR remove)</p>
+<p><strong>Do These Next (Week 1):</strong> 5. Social proof numbers 6.
+Headline accuracy 7. Application URL 8. Unsubscribe link</p>
+<hr />
+<h2 id="files-to-edit">📁 FILES TO EDIT</h2>
+<ol type="1">
+<li><strong><code>apps/web/app/api/webinar/register/route.ts</code></strong>
+<ul>
+<li>Webinar details (lines 30-37)</li>
+<li>Email sender info (lines 114-115)</li>
+<li>Unsubscribe link (line ~262)</li>
+</ul></li>
+<li><strong><code>apps/web/app/webinar/aiguardian/page.tsx</code></strong>
+<ul>
+<li>Testimonials (lines 184-234)</li>
+<li>Company logos (lines ~470-475)</li>
+<li>Social proof count (line 26)</li>
+<li>Headlines (lines 37-66)</li>
+<li>Video testimonial (lines ~517)</li>
+</ul></li>
+<li><strong><code>apps/web/app/webinar/thank-you/page.tsx</code></strong>
+<ul>
+<li>Support email (line ~164)</li>
+</ul></li>
+<li><strong><code>.env.local</code></strong> (create this file)
+<ul>
+<li><code>SENDGRID_FROM_EMAIL=your-email@domain.com</code></li>
+<li><code>SENDGRID_FROM_NAME=Your Name</code></li>
+<li><code>NEXT_PUBLIC_APP_URL=https://your-domain.com</code></li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="questions">❓ QUESTIONS?</h2>
+<p><strong>If you’re not sure about something:</strong> - Ask before
+making changes - It’s better to remove placeholder content than use fake
+information - We can always add real content later</p>
+<hr />
+<p><strong>Status:</strong> ⚠️ <strong>PENDING YOUR
+UPDATES</strong><br />
+<strong>Deadline:</strong> Before launch<br />
+<strong>Questions?</strong> Ask AEYON</p>

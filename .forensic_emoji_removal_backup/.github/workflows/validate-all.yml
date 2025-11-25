@@ -1,0 +1,87 @@
+name: Validate All Systems
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [ main, dev, master ]
+    types: [opened, synchronize, reopened, closed]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-all:
+    name: Master Validation System
+    runs-on: ubuntu-latest  # Note: Validation workflow - doesn't need arc-runner-set
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          # Add any required dependencies here
+      
+      - name: Run AbëONE Preflight ΩMega
+        run: |
+          echo "🌞 ABËONE PREFLIGHT ΩMEGA - COMPLETE SOLAR SYSTEM VALIDATION"
+          echo "============================================================"
+          python3 scripts/abeone_preflight_omega.py --workspace . > preflight-output.txt 2>&1 || true
+          # Extract readiness score from output
+          python3 -c "
+          import re
+          with open('preflight-output.txt', 'r') as f:
+              content = f.read()
+          score_match = re.search(r'Score: ([\d.]+)%', content)
+          if score_match:
+              score = float(score_match.group(1))
+              print(f'Readiness Score: {score:.1f}%')
+              if score < 60:
+                  print('❌ Readiness score below 60%')
+                  exit(2)
+              elif score < 75:
+                  print('⚠️  Readiness score 60-74%')
+                  exit(1)
+              else:
+                  print('✅ Readiness score acceptable')
+                  exit(0)
+          else:
+              print('⚠️  Could not extract readiness score')
+              exit(1)
+          "
+      
+      - name: Upload validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-report
+          path: validation-report.json
+          retention-days: 30
+      
+      - name: Check validation results
+        run: |
+          if [ -f validation-report.json ]; then
+            python3 -c "
+            import json
+            with open('validation-report.json') as f:
+                report = json.load(f)
+            health = report.get('overall_health_score', 0)
+            print(f'Overall Health Score: {health:.1f}%')
+            if health < 80:
+                print('⚠️  Health score below 80%')
+                exit(1)
+            else:
+                print('✅ Health score acceptable')
+            "
+          else
+            echo "❌ Validation report not found"
+            exit 1
+          fi
+

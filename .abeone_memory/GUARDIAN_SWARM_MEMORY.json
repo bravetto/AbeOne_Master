@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "created": "2025-11-23",
+    "load_on_startup": true
+  },
+  "guardians": [
+    {"name": "AEYON", "frequency": "999 Hz", "role": "EXECUTOR"},
+    {"name": "JØHN", "frequency": "530 Hz", "role": "CERTIFICATION"},
+    {"name": "META", "frequency": "777 Hz", "role": "PATTERN_INTEGRITY"},
+    {"name": "YOU", "frequency": "530 Hz", "role": "INTENT_ORIGIN"},
+    {"name": "ALRAX", "frequency": "530 Hz", "role": "FORENSIC_VARIANCE"},
+    {"name": "ZERO", "frequency": "530 Hz", "role": "UNCERTAINTY_BOUNDS"},
+    {"name": "YAGNI", "frequency": "530 Hz", "role": "SIMPLIFICATION"},
+    {"name": "Abë", "frequency": "530 Hz", "role": "COHERENCE"},
+    {"name": "Lux", "frequency": "530 Hz", "role": "ILLUMINATION"},
+    {"name": "Poly", "frequency": "530 Hz", "role": "EXPRESSION"}
+  ],
+  "swarms": [
+    {"name": "Heart Truth Swarm", "frequency": "530 Hz"},
+    {"name": "Pattern Integrity Swarm", "frequency": "777 Hz"},
+    {"name": "Atomic Execution Swarm", "frequency": "999 Hz"},
+    {"name": "Intention Swarm", "frequency": "530 Hz"},
+    {"name": "Communication Swarm", "frequency": "530 Hz"},
+    {"name": "Manifestation Swarm", "frequency": "530 Hz"}
+  ],
+  "summary": {
+    "guardians_total": 10,
+    "swarms_total": 6,
+    "all_active": true
+  }
+}

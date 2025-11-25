@@ -1,0 +1,534 @@
+{
+  "total_services": 16,
+  "compliant_services": 0,
+  "results": [
+    {
+      "service": "api",
+      "path": "hypervector-system/api",
+      "files": {
+        "main.py": true,
+        "requirements.txt": false,
+        "Dockerfile": false,
+        "README.md": false,
+        "core/config.py": false,
+        "core/logging.py": false,
+        "core/metrics.py": false,
+        "core/security.py": false,
+        "core/exceptions.py": false,
+        "api/v1/router.py": false,
+        "api/v1/endpoints/health.py": false,
+        "models/requests.py": false,
+        "models/responses.py": false,
+        "services/": false,
+        "tests/conftest.py": false
+      },
+      "patterns": {
+        "create_app": false,
+        "lifespan": false,
+        "FastAPI": true
+      },
+      "compliance": {
+        "files_passed": 1,
+        "files_total": 15,
+        "patterns_passed": 1,
+        "patterns_total": 3,
+        "is_compliant": false
+      }
+    },
+    {
+      "service": "server",
+      "path": "EMERGENT_OS/server",
+      "files": {
+        "main.py": true,
+        "requirements.txt": true,
+        "Dockerfile": true,
+        "README.md": true,
+        "core/config.py": false,
+        "core/logging.py": false,
+        "core/metrics.py": false,
+        "core/security.py": false,
+        "core/exceptions.py": false,
+        "api/v1/router.py": false,
+        "api/v1/endpoints/health.py": false,
+        "models/requests.py": false,
+        "models/responses.py": false,
+        "services/": false,
+        "tests/conftest.py": false
+      },
+      "patterns": {
+        "create_app": false,
+        "lifespan": true,
+        "FastAPI": true
+      },
+      "compliance": {
+        "files_passed": 4,
+        "files_total": 15,
+        "patterns_passed": 2,
+        "patterns_total": 3,
+        "is_compliant": false
+      }
+    },
+    {
+      "service": "guardian-lux-service",
+      "path": "AIGuards-Backend-orbital/aiguardian-repos/guardian-lux-service",
+      "files": {
+        "main.py": true,
+        "requirements.txt": true,
+        "Dockerfile": true,
+        "README.md": false,
+        "core/config.py": false,
+        "core/logging.py": false,
+        "core/metrics.py": false,
+        "core/security.py": false,
+        "core/exceptions.py": false,
+        "api/v1/router.py": false,
+        "api/v1/endpoints/health.py": false,
+        "models/requests.py": false,
+        "models/responses.py": false,
+        "services/": true,
+        "tests/conftest.py": false
+      },
+      "patterns": {
+        "create_app": false,
+        "lifespan": true,
+        "FastAPI": true
+      },
+      "compliance": {
+        "files_passed": 4,
+        "files_total": 15,
+        "patterns_passed": 2,
+        "patterns_total": 3,
+        "is_compliant": false
+      }
+    },
+    {
+      "service": "guardian-aeyon-service",
+      "path": "AIGuards-Backend-orbital/aiguardian-repos/guardian-aeyon-service",
+      "files": {
+        "main.py": true,
+        "requirements.txt": true,
+        "Dockerfile": true,
+        "README.md": false,
+        "core/config.py": false,
+        "core/logging.py": false,
+        "core/metrics.py": false,
+        "core/security.py": false,
+        "core/exceptions.py": false,
+        "api/v1/router.py": false,
+        "api/v1/endpoints/health.py": false,
+        "models/requests.py": false,
+        "models/responses.py": false,
+        "services/": true,
+        "tests/conftest.py": false
+      },
+      "patterns": {
+        "create_app": false,
+        "lifespan": true,
+        "FastAPI": true
+      },
+      "compliance": {
+        "files_passed": 4,
+        "files_total": 15,
+        "patterns_passed": 2,
+        "patterns_total": 3,
+        "is_compliant": false
+      }
+    },
+    {
+      "service": "guardian-john-service",
+      "path": "AIGuards-Backend-orbital/aiguardian-repos/guardian-john-service",
+      "files": {
+        "main.py": true,
+        "requirements.txt": true,
+        "Dockerfile": true,
+        "README.md": false,
+        "core/config.py": false,
+        "core/logging.py": false,
+        "core/metrics.py": false,
+        "core/security.py": false,
+        "core/exceptions.py": false,
+        "api/v1/router.py": false,
+        "api/v1/endpoints/health.py": false,
+        "models/requests.py": false,
+        "models/responses.py": false,
+        "services/": true,
+        "tests/conftest.py": false
+      },
+      "patterns": {
+        "create_app": false,
+        "lifespan": true,
+        "FastAPI": true
+      },
+      "compliance": {
+        "files_passed": 4,
+        "files_total": 15,
+        "patterns_passed": 2,
+        "patterns_total": 3,
+        "is_compliant": false
+      }
+    },
+    {
+      "service": "guardian-aurion-service",
+      "path": "AIGuards-Backend-orbital/aiguardian-repos/guardian-aurion-service",
+      "files": {
+        "main.py": true,
+        "requirements.txt": true,
+        "Dockerfile": true,
+        "README.md": false,
+        "core/config.py": false,
+        "core/logging.py": false,
+        "core/metrics.py": false,
+        "core/security.py": false,
+        "core/exceptions.py": false,
+        "api/v1/router.py": false,
+        "api/v1/endpoints/health.py": false,
+        "models/requests.py": false,
+        "models/responses.py": false,
+        "services/": true,
+        "tests/conftest.py": false
+      },
+      "patterns": {
+        "create_app": false,
+        "lifespan": true,
+        "FastAPI": true
+      },
+      "compliance": {
+        "files_passed": 4,
+        "files_total": 15,
+        "patterns_passed": 2,
+        "patterns_total": 3,
+        "is_compliant": false
+      }
+    },
+    {
+      "service": "guardian-yagni-service",
+      "path": "AIGuards-Backend-orbital/aiguardian-repos/guardian-yagni-service",
+      "files": {
+        "main.py": true,
+        "requirements.txt": true,
+        "Dockerfile": true,
+        "README.md": false,
+        "core/config.py": false,
+        "core/logging.py": false,
+        "core/metrics.py": false,
+        "core/security.py": false,
+        "core/exceptions.py": false,
+        "api/v1/router.py": false,
+        "api/v1/endpoints/health.py": false,
+        "models/requests.py": false,
+        "models/responses.py": false,
+        "services/": true,
+        "tests/conftest.py": false
+      },
+      "patterns": {
+        "create_app": false,
+        "lifespan": true,
+        "FastAPI": true
+      },
+      "compliance": {
+        "files_passed": 4,
+        "files_total": 15,
+        "patterns_passed": 2,
+        "patterns_total": 3,
+        "is_compliant": false
+      }
+    },
+    {
+      "service": "guardian-zero-service",
+      "path": "AIGuards-Backend-orbital/aiguardian-repos/guardian-zero-service",
+      "files": {
+        "main.py": true,
+        "requirements.txt": true,
+        "Dockerfile": true,
+        "README.md": false,
+        "core/config.py": false,
+        "core/logging.py": false,
+        "core/metrics.py": false,
+        "core/security.py": false,
+        "core/exceptions.py": false,
+        "api/v1/router.py": false,
+        "api/v1/endpoints/health.py": false,
+        "models/requests.py": false,
+        "models/responses.py": false,
+        "services/": true,
+        "tests/conftest.py": false
+      },
+      "patterns": {
+        "create_app": false,
+        "lifespan": true,
+        "FastAPI": true
+      },
+      "compliance": {
+        "files_passed": 4,
+        "files_total": 15,
+        "patterns_passed": 2,
+        "patterns_total": 3,
+        "is_compliant": false
+      }
+    },
+    {
+      "service": "guardian-neuro-service",
+      "path": "AIGuards-Backend-orbital/aiguardian-repos/guardian-neuro-service",
+      "files": {
+        "main.py": true,
+        "requirements.txt": true,
+        "Dockerfile": true,
+        "README.md": false,
+        "core/config.py": false,
+        "core/logging.py": false,
+        "core/metrics.py": false,
+        "core/security.py": false,
+        "core/exceptions.py": false,
+        "api/v1/router.py": false,
+        "api/v1/endpoints/health.py": false,
+        "models/requests.py": false,
+        "models/responses.py": false,
+        "services/": true,
+        "tests/conftest.py": false
+      },
+      "patterns": {
+        "create_app": false,
+        "lifespan": true,
+        "FastAPI": true
+      },
+      "compliance": {
+        "files_passed": 4,
+        "files_total": 15,
+        "patterns_passed": 2,
+        "patterns_total": 3,
+        "is_compliant": false
+      }
+    },
+    {
+      "service": "guardian-abe-service",
+      "path": "AIGuards-Backend-orbital/aiguardian-repos/guardian-abe-service",
+      "files": {
+        "main.py": true,
+        "requirements.txt": true,
+        "Dockerfile": true,
+        "README.md": false,
+        "core/config.py": false,
+        "core/logging.py": false,
+        "core/metrics.py": false,
+        "core/security.py": false,
+        "core/exceptions.py": false,
+        "api/v1/router.py": false,
+        "api/v1/endpoints/health.py": false,
+        "models/requests.py": false,
+        "models/responses.py": false,
+        "services/": true,
+        "tests/conftest.py": false
+      },
+      "patterns": {
+        "create_app": false,
+        "lifespan": true,
+        "FastAPI": true
+      },
+      "compliance": {
+        "files_passed": 4,
+        "files_total": 15,
+        "patterns_passed": 2,
+        "patterns_total": 3,
+        "is_compliant": false
+      }
+    },
+    {
+      "service": "app",
+      "path": "AIGuards-Backend-orbital/codeguardians-gateway/guardian-backend-v1.1/app",
+      "files": {
+        "main.py": true,
+        "requirements.txt": false,
+        "Dockerfile": false,
+        "README.md": false,
+        "core/config.py": false,
+        "core/logging.py": false,
+        "core/metrics.py": false,
+        "core/security.py": false,
+        "core/exceptions.py": false,
+        "api/v1/router.py": false,
+        "api/v1/endpoints/health.py": false,
+        "models/requests.py": false,
+        "models/responses.py": false,
+        "services/": true,
+        "tests/conftest.py": false
+      },
+      "patterns": {
+        "create_app": false,
+        "lifespan": false,
+        "FastAPI": true
+      },
+      "compliance": {
+        "files_passed": 2,
+        "files_total": 15,
+        "patterns_passed": 1,
+        "patterns_total": 3,
+        "is_compliant": false
+      }
+    },
+    {
+      "service": "app",
+      "path": "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/app",
+      "files": {
+        "main.py": true,
+        "requirements.txt": false,
+        "Dockerfile": false,
+        "README.md": false,
+        "core/config.py": true,
+        "core/logging.py": false,
+        "core/metrics.py": false,
+        "core/security.py": true,
+        "core/exceptions.py": true,
+        "api/v1/router.py": false,
+        "api/v1/endpoints/health.py": false,
+        "models/requests.py": false,
+        "models/responses.py": false,
+        "services/": true,
+        "tests/conftest.py": false
+      },
+      "patterns": {
+        "create_app": true,
+        "lifespan": true,
+        "FastAPI": true
+      },
+      "compliance": {
+        "files_passed": 5,
+        "files_total": 15,
+        "patterns_passed": 3,
+        "patterns_total": 3,
+        "is_compliant": false
+      }
+    },
+    {
+      "service": "tokenguard",
+      "path": "AIGuards-Backend-orbital/guards/tokenguard",
+      "files": {
+        "main.py": true,
+        "requirements.txt": true,
+        "Dockerfile": true,
+        "README.md": true,
+        "core/config.py": false,
+        "core/logging.py": false,
+        "core/metrics.py": false,
+        "core/security.py": false,
+        "core/exceptions.py": false,
+        "api/v1/router.py": false,
+        "api/v1/endpoints/health.py": false,
+        "models/requests.py": false,
+        "models/responses.py": false,
+        "services/": false,
+        "tests/conftest.py": false
+      },
+      "patterns": {
+        "create_app": false,
+        "lifespan": false,
+        "FastAPI": true
+      },
+      "compliance": {
+        "files_passed": 4,
+        "files_total": 15,
+        "patterns_passed": 1,
+        "patterns_total": 3,
+        "is_compliant": false
+      }
+    },
+    {
+      "service": "contextguard",
+      "path": "AIGuards-Backend-orbital/guards/contextguard",
+      "files": {
+        "main.py": true,
+        "requirements.txt": true,
+        "Dockerfile": true,
+        "README.md": false,
+        "core/config.py": false,
+        "core/logging.py": false,
+        "core/metrics.py": false,
+        "core/security.py": false,
+        "core/exceptions.py": false,
+        "api/v1/router.py": false,
+        "api/v1/endpoints/health.py": false,
+        "models/requests.py": false,
+        "models/responses.py": false,
+        "services/": false,
+        "tests/conftest.py": false
+      },
+      "patterns": {
+        "create_app": false,
+        "lifespan": true,
+        "FastAPI": true
+      },
+      "compliance": {
+        "files_passed": 3,
+        "files_total": 15,
+        "patterns_passed": 2,
+        "patterns_total": 3,
+        "is_compliant": false
+      }
+    },
+    {
+      "service": "trust-guard",
+      "path": "AIGuards-Backend-orbital/guards/trust-guard",
+      "files": {
+        "main.py": true,
+        "requirements.txt": true,
+        "Dockerfile": true,
+        "README.md": true,
+        "core/config.py": false,
+        "core/logging.py": false,
+        "core/metrics.py": false,
+        "core/security.py": false,
+        "core/exceptions.py": false,
+        "api/v1/router.py": false,
+        "api/v1/endpoints/health.py": false,
+        "models/requests.py": false,
+        "models/responses.py": false,
+        "services/": false,
+        "tests/conftest.py": false
+      },
+      "patterns": {
+        "create_app": false,
+        "lifespan": false,
+        "FastAPI": true
+      },
+      "compliance": {
+        "files_passed": 4,
+        "files_total": 15,
+        "patterns_passed": 1,
+        "patterns_total": 3,
+        "is_compliant": false
+      }
+    },
+    {
+      "service": "app",
+      "path": "advanced-knock/backend/app",
+      "files": {
+        "main.py": true,
+        "requirements.txt": false,
+        "Dockerfile": false,
+        "README.md": false,
+        "core/config.py": true,
+        "core/logging.py": false,
+        "core/metrics.py": false,
+        "core/security.py": false,
+        "core/exceptions.py": true,
+        "api/v1/router.py": false,
+        "api/v1/endpoints/health.py": false,
+        "models/requests.py": false,
+        "models/responses.py": false,
+        "services/": true,
+        "tests/conftest.py": false
+      },
+      "patterns": {
+        "create_app": false,
+        "lifespan": true,
+        "FastAPI": true
+      },
+      "compliance": {
+        "files_passed": 4,
+        "files_total": 15,
+        "patterns_passed": 2,
+        "patterns_total": 3,
+        "is_compliant": false
+      }
+    }
+  ]
+}

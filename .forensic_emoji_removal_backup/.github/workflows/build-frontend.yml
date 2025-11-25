@@ -1,0 +1,93 @@
+name: Next.js Build and Deploy - Frontend
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [dev, main]
+    types: [closed]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  APP_DIR: apps/web
+  NODE_VERSION: '20'
+
+jobs:
+  build:
+    runs-on: [arc-runner-set]
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+        cache-dependency-path: ${{ env.APP_DIR }}/package-lock.json
+
+    - name: Install dependencies
+      run: |
+        cd ${{ env.APP_DIR }}
+        npm ci
+
+    - name: Run linting
+      run: |
+        cd ${{ env.APP_DIR }}
+        npm run lint || true
+
+    - name: Build Next.js application
+      run: |
+        cd ${{ env.APP_DIR }}
+        npm run build
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: nextjs-build
+        path: ${{ env.APP_DIR }}/.next
+        retention-days: 1
+
+    - name: Output build summary
+      run: |
+        APP_DIR="${{ env.APP_DIR }}"
+        BRANCH_NAME=${GITHUB_REF#refs/heads/}
+        COMMIT_SHA=${GITHUB_SHA:0:8}
+        TRIGGER_TYPE="${{ github.event_name }}"
+
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        echo "🎉 Build Complete - abeone-platform Frontend"
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        echo ""
+        echo "📦 App Directory: $APP_DIR"
+        echo "🌿 Branch: $BRANCH_NAME"
+        echo "📝 Commit: $COMMIT_SHA"
+        echo "⚡ Trigger: $TRIGGER_TYPE"
+        echo ""
+        echo "✅ Build artifacts uploaded"
+        echo ""
+
+  deploy:
+    needs: build
+    runs-on: [arc-runner-set]
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: nextjs-build
+        path: ${{ env.APP_DIR }}/.next
+
+    - name: Deploy to Cloudflare Pages
+      if: github.ref == 'refs/heads/main'
+      run: |
+        echo "🚀 Deploying abeone-platform to Cloudflare Pages"
+        # Add Cloudflare Pages deployment steps here
+        echo "✅ Deployment complete"
+

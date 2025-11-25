@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" class="%sveltekit.theme%">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- BiasGuards.AI Meta Information -->
+		<meta
+			name="description"
+			content="AI bias detection tool born from JAHmere Webb's legal crisis - Justice-driven mission to reform criminal justice system"
+		/>
+		<meta
+			name="keywords"
+			content="AI bias detection, criminal justice reform, JAHmere Webb, bias guards, AI ethics, justice technology"
+		/>
+		<meta name="author" content="BiasGuards.AI" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://biasguards.ai/" />
+		<meta property="og:title" content="BiasGuards.AI - Justice-Driven AI Bias Detection" />
+		<meta
+			property="og:description"
+			content="Born from JAHmere Webb's $26,500 legal crisis. 15% of revenue goes to criminal justice reform. Court date: August 25, 2025."
+		/>
+		<meta property="og:image" content="https://biasguards.ai/og-image.jpg" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://biasguards.ai/" />
+		<meta property="twitter:title" content="BiasGuards.AI - Justice-Driven AI Bias Detection" />
+		<meta
+			property="twitter:description"
+			content="Born from JAHmere Webb's $26,500 legal crisis. 15% of revenue goes to criminal justice reform."
+		/>
+		<meta property="twitter:image" content="https://biasguards.ai/og-image.jpg" />
+
+		<!-- Performance optimizations -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Critical CSS will be inlined by Vite -->
+		%sveltekit.head%
+	</head>
+	<body
+		data-sveltekit-preload-data="hover"
+		data-theme="biasguards"
+		class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-sans antialiased"
+	>
+		<div style="display: contents" class="h-full">%sveltekit.body%</div>
+
+		<!-- Mission context for analytics -->
+		<script>
+			// BiasGuards mission constants
+			window.__BIASGUARDS_MISSION__ = {
+				courtDate: 'August 25, 2025',
+				mission: 'JAHmere Webb Freedom Mission',
+				revenueToJustice: '15%',
+				legalCrisis: '$26,500',
+				buildTime: '%sveltekit.env.VITE_BUILD_TIME%'
+			};
+		</script>
+	</body>
+</html>

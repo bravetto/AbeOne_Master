@@ -1,0 +1,292 @@
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: codeguardians-postgres
+    environment:
+      POSTGRES_USER: codeguardians-gateway
+      POSTGRES_REPLACE_ME
+      POSTGRES_DB: codeguardians-gateway_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U codeguardians-gateway"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - codeguardians-network
+    restart: unless-stopped
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: codeguardians-redis
+    command: redis-server --requirepass codeguardians-dev-redis-password
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    networks:
+      - codeguardians-network
+    restart: unless-stopped
+
+  # TokenGuard Service (Port 8000)
+  tokenguard:
+    build:
+      context: ./mock-services
+      dockerfile: Dockerfile.guard-service
+    container_name: codeguardians-tokenguard
+    environment:
+      SERVICE_NAME: TokenGuard
+      SERVICE_PORT: 8000
+      SERVICE_ENDPOINT: /optimize
+      HEALTH_ENDPOINT: /health
+    # No external port mapping - accessed via Docker network by Gateway
+    networks:
+      - codeguardians-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # TrustGuard Service (Port 8000, requires X-API-Key)
+  trustguard:
+    build:
+      context: ./mock-services
+      dockerfile: Dockerfile.guard-service
+    container_name: codeguardians-trustguard
+    environment:
+      SERVICE_NAME: TrustGuard
+      SERVICE_PORT: 8000
+      SERVICE_ENDPOINT: /validate
+      HEALTH_ENDPOINT: /health
+      API_KEY_REQUIRED: "true"
+      API_KEY: trustguard-dev-api-key
+    ports:
+      - "8001:8000"
+    networks:
+      - codeguardians-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "-H", "X-API-Key: trustguard-dev-api-key", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # ContextGuard Service (Port 8003)
+  contextguard:
+    build:
+      context: ./mock-services
+      dockerfile: Dockerfile.guard-service
+    container_name: codeguardians-contextguard
+    environment:
+      SERVICE_NAME: ContextGuard
+      SERVICE_PORT: 8003
+      SERVICE_ENDPOINT: /analyze
+      HEALTH_ENDPOINT: /health
+    ports:
+      - "8003:8003"
+    networks:
+      - codeguardians-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8003/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # BiasGuard Service (Port 8000)
+  biasguard:
+    build:
+      context: ./mock-services
+      dockerfile: Dockerfile.guard-service
+    container_name: codeguardians-biasguard
+    environment:
+      SERVICE_NAME: BiasGuard
+      SERVICE_PORT: 8000
+      SERVICE_ENDPOINT: /process
+      HEALTH_ENDPOINT: /health
+    ports:
+      - "8002:8000"
+    networks:
+      - codeguardians-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # HealthGuard Service (Port 8000)
+  healthguard:
+    build:
+      context: ./mock-services
+      dockerfile: Dockerfile.guard-service
+    container_name: codeguardians-healthguard
+    environment:
+      SERVICE_NAME: HealthGuard
+      SERVICE_PORT: 8000
+      SERVICE_ENDPOINT: /analyze
+      HEALTH_ENDPOINT: /health
+    ports:
+      - "8004:8000"
+    networks:
+      - codeguardians-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # SecurityGuard Service (Port 8103)
+  securityguard:
+    build:
+      context: ./mock-services
+      dockerfile: Dockerfile.guard-service
+    container_name: codeguardians-securityguard
+    environment:
+      SERVICE_NAME: SecurityGuard
+      SERVICE_PORT: 8103
+      SERVICE_ENDPOINT: /scan
+      HEALTH_ENDPOINT: /health
+    ports:
+      - "8103:8103"
+    networks:
+      - codeguardians-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8103/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # Gateway Service
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: codeguardians-gateway
+    environment:
+      # Database
+      DATABASE_URL: REPLACE_MEpostgres:5432/codeguardians-gateway_db
+      POSTGRES_USER: codeguardians-gateway
+      POSTGRES_REPLACE_ME
+      POSTGRES_DB: codeguardians-gateway_db
+      
+      # Redis
+      REDIS_REPLACE_ME
+      REDIS_URL: REPLACE_MEredis:6379/0
+      CONTEXTGUARD_REDIS_URL: REPLACE_MEredis:6379/0
+      
+      # Guard Service URLs
+      TOKENGUARD_URL: http://tokenguard:8000
+      TRUSTGUARD_URL: http://trustguard:8000
+      CONTEXTGUARD_URL: http://contextguard:8003
+      BIASGUARD_URL: http://biasguard:8000
+      HEALTHGUARD_URL: http://healthguard:8000
+      SECURITYGUARD_URL: http://securityguard:8103
+      
+      # API Keys
+      TRUSTGUARD_API_KEY: trustguard-dev-api-key
+      UNIFIED_API_KEY: gateway-dev-unified-api-key
+      
+      # Application
+      PYTHONUNBUFFERED: 1
+      ENVIRONMENT: development
+      DEBUG: "true"
+      LOG_LEVEL: INFO
+      SECRET_KEY: dev-secret-key-minimum-32-characters-long-change-in-production
+      JWT_SECRET_KEY: dev-jwt-secret-key-minimum-32-characters-long-change-in-production
+      
+      # Optional Services
+      CLERK_ENABLED: "false"
+      S3_ENABLED: "false"
+      INTERNAL_TESTING_ENABLED: "true"
+      
+      # CORS
+      ALLOWED_HOSTS: localhost,127.0.0.1
+      
+      # Prometheus
+      PROMETHEUS_ENABLED: "true"
+      PROMETHEUS_PORT: 9090
+    ports:
+      - "8000:8000"
+      - "9090:9090"
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - codeguardians-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health/live"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      # Guard services can start independently - gateway will retry connections
+      tokenguard:
+        condition: service_started
+      trustguard:
+        condition: service_started
+      contextguard:
+        condition: service_started
+      biasguard:
+        condition: service_started
+      healthguard:
+        condition: service_started
+      securityguard:
+        condition: service_started
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  codeguardians-network:
+    driver: bridge
+    name: codeguardians-network
+

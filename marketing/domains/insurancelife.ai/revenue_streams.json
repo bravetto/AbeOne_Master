@@ -1,0 +1,11 @@
+{
+  "revenue_streams": [
+    "Lead gen",
+    "Affiliate",
+    "Ads"
+  ],
+  "recurring_revenue": "Lead gen ($50-500 per lead)",
+  "high_ticket": "Insurance affiliate ($1,000+ commissions)",
+  "launched_at": "2025-11-19T16:52:06.202919",
+  "status": "ACTIVE"
+}

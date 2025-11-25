@@ -1,0 +1,147 @@
+/**
+ * AbëONE Design System - CSS Variables
+ * Generated from design-system/tokens/abeone-design-tokens.json
+ * DO NOT EDIT MANUALLY - Run: node design-system/generators/generate-css-vars.js
+ * Generated: 2025-11-17T16:14:16.253Z
+ */
+
+:root {
+  /* Colors - Heart (Red) */
+  --heart-50: #fef2f2;
+  --heart-100: #fee2e2;
+  --heart-200: #fecaca;
+  --heart-300: #fca5a5;
+  --heart-400: #f87171;
+  --heart-500: #ef4444;
+  --heart-600: #dc2626;
+  --heart-700: #b91c1c;
+  --heart-800: #991b1b;
+  --heart-900: #7f1d1d;
+
+  /* Colors - Lux (Purple) */
+  --lux-50: #faf5ff;
+  --lux-100: #f3e8ff;
+  --lux-200: #e9d5ff;
+  --lux-300: #d8b4fe;
+  --lux-400: #c084fc;
+  --lux-500: #a855f7;
+  --lux-600: #9333ea;
+  --lux-700: #7e22ce;
+  --lux-800: #6b21a8;
+  --lux-900: #581c87;
+
+  /* Colors - Warm (Orange) */
+  --warm-50: #fff7ed;
+  --warm-100: #ffedd5;
+  --warm-200: #fed7aa;
+  --warm-300: #fdba74;
+  --warm-400: #fb923c;
+  --warm-500: #f97316;
+  --warm-600: #ea580c;
+  --warm-700: #c2410c;
+  --warm-800: #9a3412;
+  --warm-900: #7c2d12;
+
+  /* Colors - Peace (Green) */
+  --peace-50: #f0fdf4;
+  --peace-100: #dcfce7;
+  --peace-200: #bbf7d0;
+  --peace-300: #86efac;
+  --peace-400: #4ade80;
+  --peace-500: #22c55e;
+  --peace-600: #16a34a;
+  --peace-700: #15803d;
+  --peace-800: #166534;
+  --peace-900: #14532d;
+
+  /* Colors - Neutral */
+  --neutral-50: #f9fafb;
+  --neutral-100: #f3f4f6;
+  --neutral-200: #e5e7eb;
+  --neutral-300: #d1d5db;
+  --neutral-400: #9ca3af;
+  --neutral-500: #6b7280;
+  --neutral-600: #4b5563;
+  --neutral-700: #374151;
+  --neutral-800: #1f2937;
+  --neutral-900: #111827;
+
+  /* Typography - Font Families */
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-serif: Merriweather, Georgia, serif;
+  --font-display: Playfair Display, serif;
+
+  /* Typography - Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  /* Typography - Line Heights */
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+
+  /* Spacing */
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-32: 8rem;
+
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 0.125rem;
+  --radius-base: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-lux: 0 8px 32px rgba(0,0,0,0.1);
+
+  /* Gradients */
+  --gradient-healing: linear-gradient(135deg, #fff7ed 0%, #fef2f2 50%, #faf5ff 100%);
+  --gradient-lux: linear-gradient(135deg, #a855f7 0%, #f97316 50%, #ef4444 100%);
+  --gradient-sidebar: linear-gradient(to bottom, #1e1b4b, #312e81, #1e1b4b);
+  --gradient-text-healing: linear-gradient(135deg, #f97316 0%, #a855f7 50%, #ef4444 100%);
+
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+/* Utility Classes */
+.bg-gradient-healing { background: var(--gradient-healing); }
+.bg-gradient-lux { background: var(--gradient-lux); }
+.bg-gradient-sidebar { background: var(--gradient-sidebar); }
+.text-gradient-healing { background: var(--gradient-text-healing); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }

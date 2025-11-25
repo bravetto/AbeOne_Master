@@ -1,0 +1,23 @@
+# AWS MCP Configuration - Git Ignore
+
+# Never commit AWS credentials
+.aws-env
+.aws-env.ps1
+*.pem
+*.key
+
+# Temporary files
+*.log
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Keep configuration and documentation
+!mcp-config.json
+!*.md
+!*.sh
+!*.ps1
+
+

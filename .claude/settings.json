@@ -1,0 +1,51 @@
+{
+  "model": "claude-opus-4-1-20250805",
+  "theme": "dark",
+  "permissions": {
+    "allow": [
+      "Read(/**)",
+      "Bash(git:*)",
+      "Bash(npm:*)",
+      "Bash(python:*)",
+      "Bash(docker:*)",
+      "Bash(aws:*)",
+      "Bash(uvicorn:*)",
+      "Bash(node:*)"
+    ],
+    "deny": [],
+    "ask": [
+      "Bash(rm -rf:*)",
+      "Bash(sudo:*)",
+      "Bash(chmod +x:*)"
+    ]
+  },
+  "hooks": {
+    "preToolUse": {
+      "enabled": true,
+      "script": ".claude/hooks/pre-tool-use.sh"
+    },
+    "postToolUse": {
+      "enabled": true,
+      "script": ".claude/hooks/post-tool-use.sh"
+    },
+    "sessionStart": {
+      "enabled": true,
+      "script": ".claude/hooks/session-start.sh"
+    },
+    "sessionEnd": {
+      "enabled": true,
+      "script": ".claude/hooks/session-end.sh"
+    }
+  },
+  "project": {
+    "name": "AbeOne_Master",
+    "type": "monorepo",
+    "workspaces": [
+      "EMERGENT_OS",
+      "AIGuards-Backend",
+      "apps",
+      "design-system"
+    ]
+  }
+}
+

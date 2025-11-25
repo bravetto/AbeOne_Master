@@ -1,0 +1,161 @@
+{
+  "timestamp": "2025-11-24T12:57:13.190250",
+  "steps": {
+    "abekeys_bridge": {
+      "status": "complete",
+      "services_bound": 19,
+      "credentials_available": 5,
+      "available_services": [
+        "github",
+        "fireflies",
+        "stripe",
+        "clerk",
+        "redis"
+      ]
+    },
+    "epistemic_engine": {
+      "status": "complete",
+      "engine_loaded": false,
+      "web_search_linked": false
+    },
+    "guardian_swarm": {
+      "timestamp": "2025-11-24T12:57:13.190589",
+      "guardians": {
+        "AEYON": {
+          "name": "AEYON",
+          "frequency": 999,
+          "capability": "atomic_execution",
+          "status": "activated",
+          "success": true
+        },
+        "META": {
+          "name": "META",
+          "frequency": 777,
+          "capability": "pattern_integrity",
+          "status": "activated",
+          "success": true
+        },
+        "YOU": {
+          "name": "YOU",
+          "frequency": 530,
+          "capability": "intent_origin",
+          "status": "activated",
+          "success": true
+        },
+        "J\u00d8HN": {
+          "name": "J\u00d8HN",
+          "frequency": 530,
+          "capability": "certification",
+          "status": "activated",
+          "success": true
+        },
+        "ALRAX": {
+          "name": "ALRAX",
+          "frequency": 530,
+          "capability": "forensic_investigation",
+          "status": "activated",
+          "success": true
+        },
+        "ZERO": {
+          "name": "ZERO",
+          "frequency": 530,
+          "capability": "uncertainty_quantification",
+          "status": "activated",
+          "success": true
+        },
+        "YAGNI": {
+          "name": "YAGNI",
+          "frequency": 530,
+          "capability": "simplification",
+          "status": "activated",
+          "success": true
+        },
+        "Ab\u00eb": {
+          "name": "Ab\u00eb",
+          "frequency": 530,
+          "capability": "coherence_validation",
+          "status": "activated",
+          "success": true
+        }
+      },
+      "activated_count": 8,
+      "total_count": 8,
+      "swarm_status": "active",
+      "resonance": 1.0,
+      "frequency_alignment": 1.0
+    },
+    "disk_integration": {
+      "disk_name": "Elements",
+      "mount_point": "/Volumes/Elements",
+      "status": "onboarded",
+      "satellite_created": false,
+      "orbital_evaluated": false,
+      "data_storage_created": true
+    },
+    "intention_chain": {
+      "status": "complete",
+      "test_intention": "Create a task in ClickUp",
+      "chain_registered": true,
+      "capabilities_found": 1,
+      "apps_found": 1
+    },
+    "one_graf_update": {
+      "status": "complete",
+      "convergence_score": 100.0,
+      "snapshot_created": true
+    }
+  },
+  "integrations": {
+    "abekeys": {
+      "status": "active",
+      "vault_path": "/Users/michaelmataluni/.abekeys/credentials",
+      "services_registered": 19,
+      "credentials_available": 5
+    },
+    "epistemic": {
+      "status": "pending",
+      "web_search_available": false
+    },
+    "disks": {
+      "Elements": {
+        "disk_name": "Elements",
+        "mount_point": "/Volumes/Elements",
+        "status": "onboarded",
+        "satellite_created": false,
+        "orbital_evaluated": false,
+        "data_storage_created": true
+      },
+      "total_onboarded": 1
+    },
+    "intention_chain": {
+      "status": "active",
+      "chains_registered": 4
+    }
+  },
+  "closures": [],
+  "activation_states": {
+    "guardians": {
+      "activated": 8,
+      "total": 8,
+      "swarm_status": "active",
+      "resonance": 1.0
+    }
+  },
+  "readiness": {
+    "abekeys": true,
+    "epistemic": true,
+    "guardians": true,
+    "disks": true,
+    "intention_chain": true,
+    "one_graf": true
+  },
+  "gaps": [
+    "Epistemic engine not fully loaded"
+  ],
+  "warnings": [],
+  "next_steps": [
+    "Load epistemic engine from orbital"
+  ],
+  "convergence_score": 100.0,
+  "success": true
+}

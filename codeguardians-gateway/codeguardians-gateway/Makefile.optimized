@@ -1,0 +1,250 @@
+# Optimized Makefile for CodeGuardians Gateway
+# Supports development, production, and AWS testing environments
+
+.PHONY: help build dev prod test clean logs shell aws-test deploy
+
+# Default target
+help:
+	@echo "CodeGuardians Gateway - Available Commands:"
+	@echo ""
+	@echo "Development:"
+	@echo "  dev              Start development environment"
+	@echo "  dev-build        Build development images"
+	@echo "  dev-logs         View development logs"
+	@echo "  dev-shell        Open shell in development container"
+	@echo "  dev-test          Run tests in development environment"
+	@echo ""
+	@echo "Production:"
+	@echo "  prod             Start production environment"
+	@echo "  prod-build       Build production images"
+	@echo "  prod-logs        View production logs"
+	@echo "  prod-shell       Open shell in production container"
+	@echo ""
+	@echo "AWS Testing:"
+	@echo "  aws-test         Run AWS deployment tests"
+	@echo "  aws-shell        Open shell with AWS CLI"
+	@echo "  aws-configure    Configure AWS credentials"
+	@echo ""
+	@echo "Configuration:"
+	@echo "  config-reload    Reload dynamic configuration"
+	@echo "  config-export    Export current configuration"
+	@echo "  config-status    Check configuration status"
+	@echo ""
+	@echo "Utilities:"
+	@echo "  clean            Clean up containers and volumes"
+	@echo "  logs             View all logs"
+	@echo "  shell            Open shell in main container"
+	@echo "  health           Check service health"
+	@echo "  metrics          View metrics"
+
+# Development Environment
+dev:
+	@echo "Starting development environment..."
+	docker-compose -f docker-compose.dev.yml up -d
+	@echo "Development environment started!"
+	@echo "Gateway: http://localhost:8001"
+	@echo "Flower: http://localhost:5556"
+	@echo "Mailhog: http://localhost:8025"
+
+dev-build:
+	@echo "Building development images..."
+	docker-compose -f docker-compose.dev.yml build --no-cache
+	@echo "Development images built!"
+
+dev-logs:
+	@echo "Viewing development logs..."
+	docker-compose -f docker-compose.dev.yml logs -f
+
+dev-shell:
+	@echo "Opening development shell..."
+	docker-compose -f docker-compose.dev.yml exec codeguardians-gateway-dev bash
+
+dev-test:
+	@echo "Running development tests..."
+	docker-compose -f docker-compose.dev.yml run --rm test-runner
+
+# Production Environment
+prod:
+	@echo "Starting production environment..."
+	docker-compose -f docker-compose.prod.yml up -d
+	@echo "Production environment started!"
+	@echo "Gateway: http://localhost:8000"
+	@echo "Flower: http://localhost:5555"
+
+prod-build:
+	@echo "Building production images..."
+	docker-compose -f docker-compose.prod.yml build --no-cache
+	@echo "Production images built!"
+
+prod-logs:
+	@echo "Viewing production logs..."
+	docker-compose -f docker-compose.prod.yml logs -f
+
+prod-shell:
+	@echo "Opening production shell..."
+	docker-compose -f docker-compose.prod.yml exec codeguardians-gateway-prod bash
+
+# AWS Testing
+aws-test:
+	@echo "Running AWS deployment tests..."
+	docker-compose -f docker-compose.dev.yml run --rm aws-cli /scripts/test-aws-deployment.sh
+
+aws-shell:
+	@echo "Opening AWS CLI shell..."
+	docker-compose -f docker-compose.dev.yml run --rm aws-cli bash
+
+aws-configure:
+	@echo "Configuring AWS credentials..."
+	@read -p "AWS Access Key ID: " access_key; \
+	read -p "AWS Secret Access Key: " secret_key; \
+	read -p "AWS Region [us-east-1]: " region; \
+	region=$${region:-us-east-1}; \
+	echo "AWS_ACCESS_KEY_ID=$$access_key" > .env.aws; \
+	echo "AWS_SECRET_ACCESS_KEY=$$secret_key" >> .env.aws; \
+	echo "AWS_REGION=$$region" >> .env.aws; \
+	echo "AWS credentials configured!"
+
+# Configuration Management
+config-reload:
+	@echo "Reloading dynamic configuration..."
+	curl -X POST http://localhost:8000/api/v1/config/reload \
+		-H "Authorization: Bearer $(shell cat .env | grep ADMIN_TOKEN | cut -d'=' -f2)"
+
+config-export:
+	@echo "Exporting configuration..."
+	curl -X GET http://localhost:8000/api/v1/config/export \
+		-H "Authorization: Bearer $(shell cat .env | grep ADMIN_TOKEN | cut -d'=' -f2)" \
+		-o config-export.json
+
+config-status:
+	@echo "Checking configuration status..."
+	curl -X GET http://localhost:8000/api/v1/config/status \
+		-H "Authorization: Bearer $(shell cat .env | grep ADMIN_TOKEN | cut -d'=' -f2)"
+
+# Rate Limiting Management
+rate-limits-get:
+	@echo "Getting current rate limits..."
+	curl -X GET http://localhost:8000/api/v1/config/rate-limits \
+		-H "Authorization: Bearer $(shell cat .env | grep ADMIN_TOKEN | cut -d'=' -f2)"
+
+rate-limits-update:
+	@echo "Updating rate limits..."
+	@read -p "Requests per minute [100]: " rpm; \
+	rpm=$${rpm:-100}; \
+	read -p "Requests per hour [1000]: " rph; \
+	rph=$${rph:-1000}; \
+	curl -X PUT http://localhost:8000/api/v1/config/rate-limits \
+		-H "Content-Type: application/json" \
+		-H "Authorization: Bearer $(shell cat .env | grep ADMIN_TOKEN | cut -d'=' -f2)" \
+		-d "{\"requests_per_minute\": $$rpm, \"requests_per_hour\": $$rph}"
+
+# Feature Flags
+feature-flags-get:
+	@echo "Getting feature flags..."
+	curl -X GET http://localhost:8000/api/v1/config/feature-flags \
+		-H "Authorization: Bearer $(shell cat .env | grep ADMIN_TOKEN | cut -d'=' -f2)"
+
+feature-flags-update:
+	@echo "Updating feature flag..."
+	@read -p "Feature name: " feature; \
+	read -p "Enable (true/false): " enabled; \
+	curl -X PUT http://localhost:8000/api/v1/config/feature-flags \
+		-H "Content-Type: application/json" \
+		-H "Authorization: Bearer $(shell cat .env | grep ADMIN_TOKEN | cut -d'=' -f2)" \
+		-d "{\"feature\": \"$$feature\", \"enabled\": $$enabled}"
+
+# Utilities
+clean:
+	@echo "Cleaning up containers and volumes..."
+	docker-compose -f docker-compose.dev.yml down -v --remove-orphans
+	docker-compose -f docker-compose.prod.yml down -v --remove-orphans
+	docker system prune -f
+	@echo "Cleanup complete!"
+
+logs:
+	@echo "Viewing all logs..."
+	docker-compose -f docker-compose.dev.yml logs -f codeguardians-gateway-dev
+
+shell:
+	@echo "Opening main container shell..."
+	docker-compose -f docker-compose.dev.yml exec codeguardians-gateway-dev bash
+
+health:
+	@echo "Checking service health..."
+	@echo "Gateway Health:"
+	curl -f http://localhost:8000/health/live || echo "Gateway not responding"
+	@echo ""
+	@echo "Database Health:"
+	docker-compose -f docker-compose.dev.yml exec postgres-dev pg_isready -U codeguardians-gateway || echo "Database not responding"
+	@echo ""
+	@echo "Redis Health:"
+	docker-compose -f docker-compose.dev.yml exec redis-dev redis-cli ping || echo "Redis not responding"
+
+metrics:
+	@echo "Viewing metrics..."
+	curl http://localhost:8000/metrics
+
+# Monitoring
+monitoring:
+	@echo "Starting monitoring stack..."
+	docker-compose -f docker-compose.prod.yml --profile monitoring up -d
+	@echo "Monitoring started!"
+	@echo "Prometheus: http://localhost:9090"
+	@echo "Grafana: http://localhost:3000"
+
+# Database Management
+db-migrate:
+	@echo "Running database migrations..."
+	docker-compose -f docker-compose.dev.yml exec codeguardians-gateway-dev alembic upgrade head
+
+db-reset:
+	@echo "Resetting database..."
+	docker-compose -f docker-compose.dev.yml down postgres-dev
+	docker volume rm codeguardians-gateway_postgres_dev_data || true
+	docker-compose -f docker-compose.dev.yml up -d postgres-dev
+	@echo "Database reset complete!"
+
+# Security
+security-scan:
+	@echo "Running security scan..."
+	docker run --rm -v $(PWD):/app securecodewarrior/docker-security-scan:latest /app
+
+# Backup
+backup:
+	@echo "Creating backup..."
+	docker-compose -f docker-compose.prod.yml exec postgres pg_dump -U codeguardians-gateway codeguardians-gateway_db > backup-$(shell date +%Y%m%d-%H%M%S).sql
+	@echo "Backup created!"
+
+# Restore
+restore:
+	@echo "Restoring from backup..."
+	@read -p "Backup file: " backup_file; \
+	docker-compose -f docker-compose.prod.yml exec -T postgres psql -U codeguardians-gateway codeguardians-gateway_db < $$backup_file
+	@echo "Restore complete!"
+
+# Environment Setup
+setup-dev:
+	@echo "Setting up development environment..."
+	@if [ ! -f .env ]; then \
+		echo "Creating .env file..."; \
+		cp .env.example .env; \
+	fi
+	@if [ ! -f .env.aws ]; then \
+		echo "Creating .env.aws file..."; \
+		touch .env.aws; \
+	fi
+	@echo "Development environment setup complete!"
+
+setup-prod:
+	@echo "Setting up production environment..."
+	@if [ ! -f .env.prod ]; then \
+		echo "Creating .env.prod file..."; \
+		cp .env.example .env.prod; \
+	fi
+	@echo "Production environment setup complete!"
+
+# Quick Commands
+up: dev
+down: clean
+restart: down up
+status: health

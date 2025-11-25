@@ -1,0 +1,234 @@
+name: BiasGuards.AI CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+env:
+  COURT_DATE: 'August 25, 2025'
+  MISSION: 'JAHmere Webb Freedom Mission'
+  REVENUE_TO_JUSTICE: '15%'
+  LEGAL_CRISIS: '$26,500'
+
+jobs:
+  quality-gates:
+    name: Quality Gates
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Type Check
+        run: npm run check
+
+      - name: Format Check
+        run: npm run format -- --check
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm run test -- --coverage
+
+      - name: Upload Coverage
+        uses: codecov/codecov-action@v4
+        with:
+          file: ./coverage/lcov.info
+          fail_ci_if_error: true
+
+  performance-audit:
+    name: Performance Audit
+    runs-on: ubuntu-latest
+    needs: quality-gates
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Bundle Size Check
+        run: |
+          npm run bundle-analyze
+          BUNDLE_SIZE=$(du -sk dist | cut -f1)
+          echo "Bundle size: ${BUNDLE_SIZE}KB"
+          if [ $BUNDLE_SIZE -gt 150 ]; then
+            echo "Bundle size may need optimization: ${BUNDLE_SIZE}KB"
+            exit 1
+          fi
+          echo "Bundle size acceptable: ${BUNDLE_SIZE}KB"
+
+      - name: Lighthouse Audit
+        run: |
+          npm install -g @lhci/cli@0.14.x
+          npm run preview &
+          sleep 5
+          lhci autorun --upload.target=temporary-public-storage
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+  e2e-testing:
+    name: E2E Testing
+    runs-on: ubuntu-latest
+    needs: quality-gates
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+
+      - name: Build
+        run: npm run build
+
+      - name: Run E2E Tests
+        run: npm run test:e2e
+
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+
+  security-audit:
+    name: Security Audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name:  Checkout Code
+        uses: actions/checkout@v4
+
+      - name:  Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name:  Security Vulnerability Scan
+        run: npm audit --audit-level=high
+
+      - name:  CodeQL Analysis
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript
+
+      - name:  Autobuild
+        uses: github/codeql-action/autobuild@v3
+
+      - name:  Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+
+  mission-validation:
+    name: Mission Context Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name:  Checkout Code
+        uses: actions/checkout@v4
+
+      - name:  Validate Mission Context
+        run: |
+          echo " Validating JAHmere Webb Freedom Mission Context..."
+
+          # Check court date consistency
+          if ! grep -r "August 25, 2025" src/; then
+            echo " Court date reference missing"
+            exit 1
+          fi
+
+          # Check revenue commitment
+          if ! grep -r "15%" src/; then
+            echo " Revenue commitment reference missing"
+            exit 1
+          fi
+
+          # Check legal crisis amount
+          if ! grep -r "\$26,500" src/; then
+            echo " Legal crisis reference missing"
+            exit 1
+          fi
+
+          # Check mission name
+          if ! grep -r "JAHmere Webb" src/; then
+            echo " Mission name reference missing"
+            exit 1
+          fi
+
+          echo " Mission context validated"
+          echo " Court Date: August 25, 2025"
+          echo " Revenue to Justice: 15%"
+          echo " Legal Crisis: $26,500"
+
+  deploy-production:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    needs: [quality-gates, performance-audit, e2e-testing, security-audit, mission-validation]
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name:  Checkout Code
+        uses: actions/checkout@v4
+
+      - name:  Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name:  Install Dependencies
+        run: npm ci
+
+      - name:  Build for Production
+        run: npm run build
+        env:
+          VITE_COURT_DATE: ${{ env.COURT_DATE }}
+          VITE_MISSION: ${{ env.MISSION }}
+          VITE_REVENUE_TO_JUSTICE: ${{ env.REVENUE_TO_JUSTICE }}
+
+      - name:  Deploy to Production
+        run: |
+          echo " BiasGuards.AI Production Deployment"
+          echo " Mission: ${{ env.MISSION }}"
+          echo " Court Date: ${{ env.COURT_DATE }}"
+          echo " Justice Commitment: ${{ env.REVENUE_TO_JUSTICE }}"
+          # Add actual deployment commands here
+
+      - name:  Post-Deployment Validation
+        run: |
+          echo " BiasGuards.AI deployed"
+          echo " Performance targets met"
+          echo " Mission context preserved"

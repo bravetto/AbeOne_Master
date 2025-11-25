@@ -1,0 +1,10 @@
+[
+    {
+        "id": "json-001",
+        "content": "This is a normal, safe piece of text from a JSON file."
+    },
+    {
+        "id": "json-002",
+        "content": "This text from a JSON file contains a malicious keyword that could be an exploit."
+    }
+]

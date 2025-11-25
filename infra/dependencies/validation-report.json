@@ -1,0 +1,856 @@
+{
+  "stats": {
+    "total_files": 33,
+    "files_with_conflicts": 12,
+    "total_conflicts": 49,
+    "total_warnings": 59
+  },
+  "conflicts": [
+    {
+      "file": "EMERGENT_OS/server/requirements.txt",
+      "conflicts": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": "==0.104.1",
+          "reason": "File exact 0.104.1 < shared min 0.120.0"
+        },
+        {
+          "package": "python-dotenv",
+          "shared_spec": ">=1.2.0",
+          "file_spec": "==1.0.0",
+          "reason": "File exact 1.0.0 < shared min 1.2.0"
+        },
+        {
+          "package": "python-multipart",
+          "shared_spec": ">=0.0.20",
+          "file_spec": "==0.0.6",
+          "reason": "File exact 0.0.6 < shared min 0.0.20"
+        }
+      ]
+    },
+    {
+      "file": "AbeTRUICE/support/requirements.txt",
+      "conflicts": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": "==0.104.1",
+          "reason": "File exact 0.104.1 < shared min 0.120.0"
+        },
+        {
+          "package": "python-dotenv",
+          "shared_spec": ">=1.2.0",
+          "file_spec": "==1.0.0",
+          "reason": "File exact 1.0.0 < shared min 1.2.0"
+        },
+        {
+          "package": "pytest",
+          "shared_spec": ">=8.0.0",
+          "file_spec": "==7.4.3",
+          "reason": "File exact 7.4.3 < shared min 8.0.0"
+        },
+        {
+          "package": "pytest-asyncio",
+          "shared_spec": ">=0.25.0",
+          "file_spec": "==0.21.1",
+          "reason": "File exact 0.21.1 < shared min 0.25.0"
+        },
+        {
+          "package": "black",
+          "shared_spec": ">=25.0.0",
+          "file_spec": "==23.11.0",
+          "reason": "File exact 23.11.0 < shared min 25.0.0"
+        }
+      ]
+    },
+    {
+      "file": "scripts/social_media_automation/requirements.txt",
+      "conflicts": [
+        {
+          "package": "aiohttp",
+          "shared_spec": ">=3.11.0",
+          "file_spec": "==3.9.1",
+          "reason": "File exact 3.9.1 < shared min 3.11.0"
+        },
+        {
+          "package": "python-dotenv",
+          "shared_spec": ">=1.2.0",
+          "file_spec": "==1.0.0",
+          "reason": "File exact 1.0.0 < shared min 1.2.0"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/aiguardian-repos/guardian-lux-service/requirements.txt",
+      "conflicts": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": "==0.104.1",
+          "reason": "File exact 0.104.1 < shared min 0.120.0"
+        },
+        {
+          "package": "pydantic-settings",
+          "shared_spec": ">=2.11.0",
+          "file_spec": "==2.1.0",
+          "reason": "File exact 2.1.0 < shared min 2.11.0"
+        },
+        {
+          "package": "httpx",
+          "shared_spec": ">=0.28.0",
+          "file_spec": "==0.25.2",
+          "reason": "File exact 0.25.2 < shared min 0.28.0"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+      "conflicts": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": "==0.104.1",
+          "reason": "File exact 0.104.1 < shared min 0.120.0"
+        },
+        {
+          "package": "pydantic-settings",
+          "shared_spec": ">=2.11.0",
+          "file_spec": "==2.1.0",
+          "reason": "File exact 2.1.0 < shared min 2.11.0"
+        },
+        {
+          "package": "httpx",
+          "shared_spec": ">=0.28.0",
+          "file_spec": "==0.25.2",
+          "reason": "File exact 0.25.2 < shared min 0.28.0"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/aiguardian-repos/guardian-john-service/requirements.txt",
+      "conflicts": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": "==0.104.1",
+          "reason": "File exact 0.104.1 < shared min 0.120.0"
+        },
+        {
+          "package": "pydantic-settings",
+          "shared_spec": ">=2.11.0",
+          "file_spec": "==2.1.0",
+          "reason": "File exact 2.1.0 < shared min 2.11.0"
+        },
+        {
+          "package": "httpx",
+          "shared_spec": ">=0.28.0",
+          "file_spec": "==0.25.2",
+          "reason": "File exact 0.25.2 < shared min 0.28.0"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/aiguardian-repos/guardian-aurion-service/requirements.txt",
+      "conflicts": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": "==0.104.1",
+          "reason": "File exact 0.104.1 < shared min 0.120.0"
+        },
+        {
+          "package": "pydantic-settings",
+          "shared_spec": ">=2.11.0",
+          "file_spec": "==2.1.0",
+          "reason": "File exact 2.1.0 < shared min 2.11.0"
+        },
+        {
+          "package": "httpx",
+          "shared_spec": ">=0.28.0",
+          "file_spec": "==0.25.2",
+          "reason": "File exact 0.25.2 < shared min 0.28.0"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/aiguardian-repos/guardian-yagni-service/requirements.txt",
+      "conflicts": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": "==0.104.1",
+          "reason": "File exact 0.104.1 < shared min 0.120.0"
+        },
+        {
+          "package": "pydantic-settings",
+          "shared_spec": ">=2.11.0",
+          "file_spec": "==2.1.0",
+          "reason": "File exact 2.1.0 < shared min 2.11.0"
+        },
+        {
+          "package": "httpx",
+          "shared_spec": ">=0.28.0",
+          "file_spec": "==0.25.2",
+          "reason": "File exact 0.25.2 < shared min 0.28.0"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/aiguardian-repos/guardian-zero-service/requirements.txt",
+      "conflicts": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": "==0.104.1",
+          "reason": "File exact 0.104.1 < shared min 0.120.0"
+        },
+        {
+          "package": "pydantic-settings",
+          "shared_spec": ">=2.11.0",
+          "file_spec": "==2.1.0",
+          "reason": "File exact 2.1.0 < shared min 2.11.0"
+        },
+        {
+          "package": "httpx",
+          "shared_spec": ">=0.28.0",
+          "file_spec": "==0.25.2",
+          "reason": "File exact 0.25.2 < shared min 0.28.0"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/aiguardian-repos/guardian-neuro-service/requirements.txt",
+      "conflicts": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": "==0.104.1",
+          "reason": "File exact 0.104.1 < shared min 0.120.0"
+        },
+        {
+          "package": "pydantic-settings",
+          "shared_spec": ">=2.11.0",
+          "file_spec": "==2.1.0",
+          "reason": "File exact 2.1.0 < shared min 2.11.0"
+        },
+        {
+          "package": "httpx",
+          "shared_spec": ">=0.28.0",
+          "file_spec": "==0.25.2",
+          "reason": "File exact 0.25.2 < shared min 0.28.0"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/aiguardian-repos/guardian-abe-service/requirements.txt",
+      "conflicts": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": "==0.104.1",
+          "reason": "File exact 0.104.1 < shared min 0.120.0"
+        },
+        {
+          "package": "pydantic-settings",
+          "shared_spec": ">=2.11.0",
+          "file_spec": "==2.1.0",
+          "reason": "File exact 2.1.0 < shared min 2.11.0"
+        },
+        {
+          "package": "httpx",
+          "shared_spec": ">=0.28.0",
+          "file_spec": "==0.25.2",
+          "reason": "File exact 0.25.2 < shared min 0.28.0"
+        }
+      ]
+    },
+    {
+      "file": "advanced-knock/backend/requirements.txt",
+      "conflicts": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": "==0.104.1",
+          "reason": "File exact 0.104.1 < shared min 0.120.0"
+        },
+        {
+          "package": "python-multipart",
+          "shared_spec": ">=0.0.20",
+          "file_spec": "==0.0.6",
+          "reason": "File exact 0.0.6 < shared min 0.0.20"
+        },
+        {
+          "package": "sqlalchemy",
+          "shared_spec": ">=2.0.44",
+          "file_spec": "==2.0.23",
+          "reason": "File exact 2.0.23 < shared min 2.0.44"
+        },
+        {
+          "package": "alembic",
+          "shared_spec": ">=1.17.0",
+          "file_spec": "==1.12.1",
+          "reason": "File exact 1.12.1 < shared min 1.17.0"
+        },
+        {
+          "package": "psycopg2-binary",
+          "shared_spec": ">=2.9.10",
+          "file_spec": "==2.9.9",
+          "reason": "File exact 2.9.9 < shared min 2.9.10"
+        },
+        {
+          "package": "asyncpg",
+          "shared_spec": ">=0.30.0",
+          "file_spec": "==0.29.0",
+          "reason": "File exact 0.29.0 < shared min 0.30.0"
+        },
+        {
+          "package": "redis",
+          "shared_spec": ">=7.0.0",
+          "file_spec": "==5.0.1",
+          "reason": "File exact 5.0.1 < shared min 7.0.0"
+        },
+        {
+          "package": "python-dotenv",
+          "shared_spec": ">=1.2.0",
+          "file_spec": "==1.0.0",
+          "reason": "File exact 1.0.0 < shared min 1.2.0"
+        },
+        {
+          "package": "boto3",
+          "shared_spec": ">=1.40.0",
+          "file_spec": "==1.29.7",
+          "reason": "File exact 1.29.7 < shared min 1.40.0"
+        },
+        {
+          "package": "httpx",
+          "shared_spec": ">=0.28.0",
+          "file_spec": "==0.25.2",
+          "reason": "File exact 0.25.2 < shared min 0.28.0"
+        },
+        {
+          "package": "aiohttp",
+          "shared_spec": ">=3.11.0",
+          "file_spec": "==3.9.1",
+          "reason": "File exact 3.9.1 < shared min 3.11.0"
+        },
+        {
+          "package": "structlog",
+          "shared_spec": ">=25.0.0",
+          "file_spec": "==23.2.0",
+          "reason": "File exact 23.2.0 < shared min 25.0.0"
+        },
+        {
+          "package": "pytest",
+          "shared_spec": ">=8.0.0",
+          "file_spec": "==7.4.3",
+          "reason": "File exact 7.4.3 < shared min 8.0.0"
+        },
+        {
+          "package": "pytest-asyncio",
+          "shared_spec": ">=0.25.0",
+          "file_spec": "==0.21.1",
+          "reason": "File exact 0.21.1 < shared min 0.25.0"
+        },
+        {
+          "package": "psutil",
+          "shared_spec": ">=7.0.0",
+          "file_spec": "==5.9.6",
+          "reason": "File exact 5.9.6 < shared min 7.0.0"
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "file": "abe_beats_core/phantom_hunter_creator/requirements.txt",
+      "warnings": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": ">=0.104.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "python-multipart",
+          "shared_spec": ">=0.0.20",
+          "file_spec": ">=0.0.6",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "_extract_abebeats/support/requirements.txt",
+      "warnings": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": ">=0.104.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "python-multipart",
+          "shared_spec": ">=0.0.20",
+          "file_spec": ">=0.0.6",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "AbeBEATs_Clean/support/requirements.txt",
+      "warnings": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": ">=0.104.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "python-multipart",
+          "shared_spec": ">=0.0.20",
+          "file_spec": ">=0.0.6",
+          "reason": "Compatible"
+        },
+        {
+          "package": "pytest",
+          "shared_spec": ">=8.0.0",
+          "file_spec": ">=7.4.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "pytest-asyncio",
+          "shared_spec": ">=0.25.0",
+          "file_spec": ">=0.21.0",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "_extract_truice/requirements.txt",
+      "warnings": [
+        {
+          "package": "httpx",
+          "shared_spec": ">=0.28.0",
+          "file_spec": ">=0.24.0",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "Ab-BEATs/phantom_hunter_creator/requirements.txt",
+      "warnings": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": ">=0.104.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "python-multipart",
+          "shared_spec": ">=0.0.20",
+          "file_spec": ">=0.0.6",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "hypervector-system/requirements.txt",
+      "warnings": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": ">=0.104.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "pytest",
+          "shared_spec": ">=8.0.0",
+          "file_spec": ">=7.4.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "pytest-asyncio",
+          "shared_spec": ">=0.25.0",
+          "file_spec": ">=0.21.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "black",
+          "shared_spec": ">=25.0.0",
+          "file_spec": ">=23.0.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "mypy",
+          "shared_spec": ">=1.14.0",
+          "file_spec": ">=1.5.0",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "EMERGENT_OS/server/requirements.txt",
+      "warnings": [
+        {
+          "package": "stripe",
+          "shared_spec": ">=13.0.0",
+          "file_spec": ">=7.0.0",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "Abeflows-orbital/requirements.txt",
+      "warnings": [
+        {
+          "package": "fastapi",
+          "shared_spec": ">=0.120.0",
+          "file_spec": ">=0.104.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "asyncpg",
+          "shared_spec": ">=0.30.0",
+          "file_spec": ">=0.29.0  # PostgreSQL async driver",
+          "reason": "Compatible"
+        },
+        {
+          "package": "redis",
+          "shared_spec": ">=7.0.0",
+          "file_spec": ">=5.0.0  # Redis client",
+          "reason": "Compatible"
+        },
+        {
+          "package": "sqlalchemy",
+          "shared_spec": ">=2.0.44",
+          "file_spec": ">=2.0.0  # SQL toolkit",
+          "reason": "Compatible"
+        },
+        {
+          "package": "pyjwt",
+          "shared_spec": ">=2.10.0",
+          "file_spec": ">=2.8.0  # JWT tokens",
+          "reason": "Compatible"
+        },
+        {
+          "package": "python-dotenv",
+          "shared_spec": ">=1.2.0",
+          "file_spec": ">=1.0.0  # Environment variables",
+          "reason": "Compatible"
+        },
+        {
+          "package": "httpx",
+          "shared_spec": ">=0.28.0",
+          "file_spec": ">=0.24.0  # Async HTTP client",
+          "reason": "Compatible"
+        },
+        {
+          "package": "requests",
+          "shared_spec": ">=2.31.0",
+          "file_spec": ">=2.31.0  # HTTP library",
+          "reason": "Compatible"
+        },
+        {
+          "package": "aiohttp",
+          "shared_spec": ">=3.11.0",
+          "file_spec": ">=3.9.0  # Async HTTP",
+          "reason": "Compatible"
+        },
+        {
+          "package": "stripe",
+          "shared_spec": ">=13.0.0",
+          "file_spec": ">=7.0.0  # Payment processing",
+          "reason": "Compatible"
+        },
+        {
+          "package": "pyyaml",
+          "shared_spec": ">=6.0.3",
+          "file_spec": ">=6.0  # YAML parsing",
+          "reason": "Compatible"
+        },
+        {
+          "package": "python-json-logger",
+          "shared_spec": ">=2.0.7",
+          "file_spec": ">=2.0.7  # JSON logging",
+          "reason": "Compatible"
+        },
+        {
+          "package": "pytest",
+          "shared_spec": ">=8.0.0",
+          "file_spec": ">=7.4.0  # Testing framework",
+          "reason": "Compatible"
+        },
+        {
+          "package": "pytest-asyncio",
+          "shared_spec": ">=0.25.0",
+          "file_spec": ">=0.21.0  # Async testing",
+          "reason": "Compatible"
+        },
+        {
+          "package": "black",
+          "shared_spec": ">=25.0.0",
+          "file_spec": ">=23.0.0  # Code formatting",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "scripts/webinar/requirements.txt",
+      "warnings": [
+        {
+          "package": "python-dotenv",
+          "shared_spec": ">=1.2.0",
+          "file_spec": ">=1.0.0",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "scripts/social_media_automation/requirements.txt",
+      "warnings": [
+        {
+          "package": "requests",
+          "shared_spec": ">=2.31.0",
+          "file_spec": "==2.31.0",
+          "reason": "File exact 2.31.0 within shared range"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/aiguardian-repos/guardian-lux-service/requirements.txt",
+      "warnings": [
+        {
+          "package": "python-json-logger",
+          "shared_spec": ">=2.0.7",
+          "file_spec": "==2.0.7",
+          "reason": "File exact 2.0.7 within shared range"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/aiguardian-repos/guardian-aeyon-service/requirements.txt",
+      "warnings": [
+        {
+          "package": "python-json-logger",
+          "shared_spec": ">=2.0.7",
+          "file_spec": "==2.0.7",
+          "reason": "File exact 2.0.7 within shared range"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/aiguardian-repos/guardian-john-service/requirements.txt",
+      "warnings": [
+        {
+          "package": "python-json-logger",
+          "shared_spec": ">=2.0.7",
+          "file_spec": "==2.0.7",
+          "reason": "File exact 2.0.7 within shared range"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/aiguardian-repos/guardian-aurion-service/requirements.txt",
+      "warnings": [
+        {
+          "package": "python-json-logger",
+          "shared_spec": ">=2.0.7",
+          "file_spec": "==2.0.7",
+          "reason": "File exact 2.0.7 within shared range"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/aiguardian-repos/guardian-yagni-service/requirements.txt",
+      "warnings": [
+        {
+          "package": "python-json-logger",
+          "shared_spec": ">=2.0.7",
+          "file_spec": "==2.0.7",
+          "reason": "File exact 2.0.7 within shared range"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/aiguardian-repos/guardian-zero-service/requirements.txt",
+      "warnings": [
+        {
+          "package": "python-json-logger",
+          "shared_spec": ">=2.0.7",
+          "file_spec": "==2.0.7",
+          "reason": "File exact 2.0.7 within shared range"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/aiguardian-repos/guardian-neuro-service/requirements.txt",
+      "warnings": [
+        {
+          "package": "python-json-logger",
+          "shared_spec": ">=2.0.7",
+          "file_spec": "==2.0.7",
+          "reason": "File exact 2.0.7 within shared range"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/aiguardian-repos/guardian-abe-service/requirements.txt",
+      "warnings": [
+        {
+          "package": "python-json-logger",
+          "shared_spec": ">=2.0.7",
+          "file_spec": "==2.0.7",
+          "reason": "File exact 2.0.7 within shared range"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/requirements.txt",
+      "warnings": [
+        {
+          "package": "python-json-logger",
+          "shared_spec": ">=2.0.7",
+          "file_spec": ">=2.0.0",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/guardians/validation-framework/requirements.txt",
+      "warnings": [
+        {
+          "package": "psutil",
+          "shared_spec": ">=7.0.0",
+          "file_spec": ">=6.0.0",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/guards/tokenguard/requirements.txt",
+      "warnings": [
+        {
+          "package": "pydantic-settings",
+          "shared_spec": ">=2.11.0",
+          "file_spec": ">=2.0.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "psutil",
+          "shared_spec": ">=7.0.0",
+          "file_spec": ">=6.0.0",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/guards/contextguard/requirements.txt",
+      "warnings": [
+        {
+          "package": "httpx",
+          "shared_spec": ">=0.28.0",
+          "file_spec": ">=0.27.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "prometheus-client",
+          "shared_spec": ">=0.23.0",
+          "file_spec": ">=0.19.0",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "AIGuards-Backend-orbital/guards/trust-guard/requirements.txt",
+      "warnings": [
+        {
+          "package": "python-json-logger",
+          "shared_spec": ">=2.0.7",
+          "file_spec": ">=2.0.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "psutil",
+          "shared_spec": ">=7.0.0",
+          "file_spec": ">=5.9.0",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "TemplateHeavenSatellite/requirements.txt",
+      "warnings": [
+        {
+          "package": "pyyaml",
+          "shared_spec": ">=6.0.3",
+          "file_spec": ">=6.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "pytest",
+          "shared_spec": ">=8.0.0",
+          "file_spec": ">=7.4.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "pytest-asyncio",
+          "shared_spec": ">=0.25.0",
+          "file_spec": ">=0.21.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "black",
+          "shared_spec": ">=25.0.0",
+          "file_spec": ">=23.0.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "mypy",
+          "shared_spec": ">=1.14.0",
+          "file_spec": ">=1.5.0",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "WebIDESatellite/requirements.txt",
+      "warnings": [
+        {
+          "package": "python-dotenv",
+          "shared_spec": ">=1.2.0",
+          "file_spec": ">=1.0.0",
+          "reason": "Compatible"
+        },
+        {
+          "package": "pytest",
+          "shared_spec": ">=8.0.0",
+          "file_spec": ">=7.0.0",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "DiscordOnboarding/requirements.txt",
+      "warnings": [
+        {
+          "package": "python-dotenv",
+          "shared_spec": ">=1.2.0",
+          "file_spec": ">=1.0.0",
+          "reason": "Compatible"
+        }
+      ]
+    },
+    {
+      "file": "advanced-knock/backend/requirements.txt",
+      "warnings": [
+        {
+          "package": "pydantic-settings",
+          "shared_spec": ">=2.11.0",
+          "file_spec": ">=2.1.0,<3.0.0",
+          "reason": "Compatible"
+        }
+      ]
+    }
+  ],
+  "shared_packages": 43
+}

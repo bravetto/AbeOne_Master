@@ -1,0 +1,81 @@
+---
+alwaysApply: true
+description: Trust Guard project structure and architecture guidelines
+---
+
+# Trust Guard Project Structure
+
+## Core Architecture
+
+Trust Guard is an AI reliability service that detects and mitigates seven failure patterns:
+- **Hallucination**: False information presented as fact
+- **Drift**: Loss of conversational coherence
+- **Bias**: Systematic prejudices in responses
+- **Deception**: Intentional misleading information
+- **Security Theater**: False security assurances
+- **Duplication**: Repetitive or redundant responses
+- **Stub Syndrome**: Inadequate or superficial responses
+
+## Project Structure
+
+```
+trust-guard/
+ main.py                    # FastAPI application entry point
+ trustguard/               # Core package
+    __init__.py
+    core.py              # TrustGuardDetector - main detection engine
+    validation.py        # ValidationEngine - mathematical validation
+    constitutional.py    # ConstitutionalPrompting - mitigation strategies
+    metrics.py           # ReliabilityMetrics - performance tracking
+    config.py            # Configuration management
+    logging.py           # Structured logging setup
+ aws/                     # AWS deployment infrastructure
+    infrastructure.yml   # CloudFormation template
+    deploy.sh           # Deployment automation
+ docker-compose.aws.yml   # AWS-specific compose file
+ Dockerfile              # Production container
+ pyproject.toml          # Python project configuration
+ requirements.txt        # Dependencies
+```
+
+## Key Components
+
+### Main Application ([main.py](mdc:main.py))
+- FastAPI application with comprehensive API endpoints
+- Rate limiting, CORS, and middleware configuration
+- Health checks with component status monitoring
+- Prometheus metrics integration
+
+### Core Detection Engine ([trustguard/core.py](mdc:trustguard/core.py))
+- `TrustGuardDetector`: Main detection orchestrator
+- Individual pattern detectors for each failure type
+- Advanced pattern recognition and statistical analysis
+
+### Validation Engine ([trustguard/validation.py](mdc:trustguard/validation.py))
+- Mathematical validation using KL divergence
+- Uncertainty quantification and risk assessment
+- Evidence-based validation with confidence scoring
+
+### Constitutional Prompting ([trustguard/constitutional.py](mdc:trustguard/constitutional.py))
+- Mitigation strategies for detected patterns
+- Constitutional AI guidelines injection
+- Advanced reasoning enhancement protocols
+
+## API Endpoints
+
+- `POST /v1/detect` - Pattern detection
+- `POST /v1/validate` - Comprehensive validation
+- `POST /v1/mitigate` - Apply mitigation strategies
+- `POST /v1/constitutional` - Generate constitutional prompts
+- `GET /v1/metrics` - Service metrics and statistics
+- `GET /health` - Health check with component status
+
+## Configuration
+
+Environment variables are managed through [trustguard/config.py](mdc:trustguard/config.py) using Pydantic settings with `TRUSTGUARD_` prefix.
+
+## Deployment
+
+- **Local**: `python -m uvicorn main:app --reload`
+- **Docker**: `docker-compose up`
+- **AWS**: `cd aws && ./deploy.sh` for full infrastructure deployment

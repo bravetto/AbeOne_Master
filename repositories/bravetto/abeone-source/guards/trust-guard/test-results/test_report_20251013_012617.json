@@ -1,0 +1,347 @@
+{
+  "timestamp": "2025-10-13T01:26:17.758480",
+  "test_results": {
+    "unit_tests": {
+      "suites": {
+        "tests/unit/test_comprehensive_core.py": {
+          "passed": 0,
+          "failed": 0,
+          "skipped": 0,
+          "return_code": 0,
+          "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.8, pytest-8.4.2, pluggy-1.6.0\nrootdir: C:\\Users\\jimmy\\.cursor\\trust-guard\nconfigfile: pyproject.toml\nplugins: anyio-4.11.0, asyncio-1.2.0, cov-7.0.0, json-report-1.5.0, metadata-3.1.1\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 61 items\n\ntests\\unit\\test_comprehensive_core.py .................................. [ 55%]\n...........................                                              [100%]\n\n============================== warnings summary ===============================\n..\\..\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11\n  C:\\Users\\jimmy\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11: DeprecationWarning: pythonjsonlogger.jsonlogger has been moved to pythonjsonlogger.json\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: /tmp/pytest_report.json\n======================== 61 passed, 1 warning in 0.84s ========================\n",
+          "stderr": ""
+        },
+        "tests/unit/test_comprehensive_validation.py": {
+          "passed": 0,
+          "failed": 0,
+          "skipped": 0,
+          "return_code": 0,
+          "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.8, pytest-8.4.2, pluggy-1.6.0\nrootdir: C:\\Users\\jimmy\\.cursor\\trust-guard\nconfigfile: pyproject.toml\nplugins: anyio-4.11.0, asyncio-1.2.0, cov-7.0.0, json-report-1.5.0, metadata-3.1.1\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 41 items\n\ntests\\unit\\test_comprehensive_validation.py ............................ [ 68%]\n.............                                                            [100%]\n\n============================== warnings summary ===============================\n..\\..\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11\n  C:\\Users\\jimmy\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11: DeprecationWarning: pythonjsonlogger.jsonlogger has been moved to pythonjsonlogger.json\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: /tmp/pytest_report.json\n======================== 41 passed, 1 warning in 0.50s ========================\n",
+          "stderr": ""
+        },
+        "tests/unit/test_comprehensive_constitutional.py": {
+          "passed": 0,
+          "failed": 0,
+          "skipped": 0,
+          "return_code": 0,
+          "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.8, pytest-8.4.2, pluggy-1.6.0\nrootdir: C:\\Users\\jimmy\\.cursor\\trust-guard\nconfigfile: pyproject.toml\nplugins: anyio-4.11.0, asyncio-1.2.0, cov-7.0.0, json-report-1.5.0, metadata-3.1.1\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 39 items\n\ntests\\unit\\test_comprehensive_constitutional.py ........................ [ 61%]\n...............                                                          [100%]\n\n============================== warnings summary ===============================\n..\\..\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11\n  C:\\Users\\jimmy\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11: DeprecationWarning: pythonjsonlogger.jsonlogger has been moved to pythonjsonlogger.json\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: /tmp/pytest_report.json\n======================== 39 passed, 1 warning in 0.45s ========================\n",
+          "stderr": ""
+        },
+        "tests/unit/test_comprehensive_metrics.py": {
+          "passed": 0,
+          "failed": 0,
+          "skipped": 0,
+          "return_code": 0,
+          "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.8, pytest-8.4.2, pluggy-1.6.0\nrootdir: C:\\Users\\jimmy\\.cursor\\trust-guard\nconfigfile: pyproject.toml\nplugins: anyio-4.11.0, asyncio-1.2.0, cov-7.0.0, json-report-1.5.0, metadata-3.1.1\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 43 items\n\ntests\\unit\\test_comprehensive_metrics.py ............................... [ 72%]\n............                                                             [100%]\n\n============================== warnings summary ===============================\n..\\..\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11\n  C:\\Users\\jimmy\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11: DeprecationWarning: pythonjsonlogger.jsonlogger has been moved to pythonjsonlogger.json\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: /tmp/pytest_report.json\n======================== 43 passed, 1 warning in 0.55s ========================\n",
+          "stderr": ""
+        },
+        "tests/unit/test_comprehensive_logging.py": {
+          "passed": 0,
+          "failed": 0,
+          "skipped": 0,
+          "return_code": 1,
+          "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.8, pytest-8.4.2, pluggy-1.6.0\nrootdir: C:\\Users\\jimmy\\.cursor\\trust-guard\nconfigfile: pyproject.toml\nplugins: anyio-4.11.0, asyncio-1.2.0, cov-7.0.0, json-report-1.5.0, metadata-3.1.1\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 36 items\n\ntests\\unit\\test_comprehensive_logging.py .....FF........................ [ 86%]\n.....                                                                    [100%]\n\n================================== FAILURES ===================================\n_______________ TestTraceContext.test_set_trace_context_partial _______________\ntests\\unit\\test_comprehensive_logging.py:98: in test_set_trace_context_partial\n    assert context[\"span_id\"] is None\nE   AssertionError: assert 'test-span-456' is None\n_____________ TestTraceContext.test_set_trace_context_none_values _____________\ntests\\unit\\test_comprehensive_logging.py:113: in test_set_trace_context_none_values\n    assert context[\"trace_id\"] is None\nE   AssertionError: assert 'test-trace-123' is None\n============================== warnings summary ===============================\n..\\..\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11\n  C:\\Users\\jimmy\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11: DeprecationWarning: pythonjsonlogger.jsonlogger has been moved to pythonjsonlogger.json\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: /tmp/pytest_report.json\n=========================== short test summary info ===========================\nFAILED tests/unit/test_comprehensive_logging.py::TestTraceContext::test_set_trace_context_partial\nFAILED tests/unit/test_comprehensive_logging.py::TestTraceContext::test_set_trace_context_none_values\n=================== 2 failed, 34 passed, 1 warning in 0.91s ===================\n",
+          "stderr": ""
+        },
+        "tests/unit/test_comprehensive_error_handling.py": {
+          "passed": 0,
+          "failed": 0,
+          "skipped": 0,
+          "return_code": 0,
+          "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.8, pytest-8.4.2, pluggy-1.6.0\nrootdir: C:\\Users\\jimmy\\.cursor\\trust-guard\nconfigfile: pyproject.toml\nplugins: anyio-4.11.0, asyncio-1.2.0, cov-7.0.0, json-report-1.5.0, metadata-3.1.1\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 31 items\n\ntests\\unit\\test_comprehensive_error_handling.py ........................ [ 77%]\n.......                                                                  [100%]\n\n============================== warnings summary ===============================\n..\\..\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11\n  C:\\Users\\jimmy\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11: DeprecationWarning: pythonjsonlogger.jsonlogger has been moved to pythonjsonlogger.json\n    warnings.warn(\n\ntests/unit/test_comprehensive_error_handling.py::TestAuthenticationErrorHandling::test_authentication_with_corrupted_api_key\ntests/unit/test_comprehensive_error_handling.py::TestAuthenticationErrorHandling::test_authentication_with_corrupted_jwt_token\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_graceful_degradation_with_multiple_failures\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_resource_exhaustion\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_network_failures\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_concurrent_failures\n  C:\\Users\\jimmy\\.cursor\\trust-guard\\trustguard\\config.py:69: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    self._secrets_rotation[\"secret_key\"] = datetime.utcnow()\n\ntests/unit/test_comprehensive_error_handling.py::TestAuthenticationErrorHandling::test_authentication_with_corrupted_api_key\ntests/unit/test_comprehensive_error_handling.py::TestAuthenticationErrorHandling::test_authentication_with_corrupted_jwt_token\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_graceful_degradation_with_multiple_failures\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_resource_exhaustion\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_network_failures\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_concurrent_failures\n  C:\\Users\\jimmy\\.cursor\\trust-guard\\trustguard\\config.py:75: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    self._secrets_rotation[\"jwt_secret\"] = datetime.utcnow()\n\ntests/unit/test_comprehensive_error_handling.py::TestAuthenticationErrorHandling::test_authentication_with_corrupted_api_key\ntests/unit/test_comprehensive_error_handling.py::TestAuthenticationErrorHandling::test_authentication_with_corrupted_jwt_token\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_graceful_degradation_with_multiple_failures\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_resource_exhaustion\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_network_failures\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_concurrent_failures\n  C:\\Users\\jimmy\\.cursor\\trust-guard\\trustguard\\config.py:81: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    self._secrets_rotation[\"encryption_key\"] = datetime.utcnow()\n\ntests/unit/test_comprehensive_error_handling.py::TestAuthenticationErrorHandling::test_authentication_with_corrupted_api_key\ntests/unit/test_comprehensive_error_handling.py::TestAuthenticationErrorHandling::test_authentication_with_corrupted_jwt_token\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_graceful_degradation_with_multiple_failures\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_resource_exhaustion\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_network_failures\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_concurrent_failures\n  C:\\Users\\jimmy\\.cursor\\trust-guard\\trustguard\\config.py:114: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    return datetime.utcnow() - last_rotation > rotation_interval\n\ntests/unit/test_comprehensive_error_handling.py::TestAuthenticationErrorHandling::test_authentication_with_corrupted_api_key\ntests/unit/test_comprehensive_error_handling.py::TestAuthenticationErrorHandling::test_authentication_with_corrupted_jwt_token\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_graceful_degradation_with_multiple_failures\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_resource_exhaustion\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_network_failures\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_concurrent_failures\n  C:\\Users\\jimmy\\.cursor\\trust-guard\\trustguard\\auth.py:146: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    expires_at = datetime.utcnow() + timedelta(days=expires_in_days)\n\ntests/unit/test_comprehensive_error_handling.py::TestAuthenticationErrorHandling::test_authentication_with_corrupted_api_key\ntests/unit/test_comprehensive_error_handling.py::TestAuthenticationErrorHandling::test_authentication_with_corrupted_jwt_token\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_graceful_degradation_with_multiple_failures\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_resource_exhaustion\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_network_failures\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_concurrent_failures\n  C:\\Users\\jimmy\\.cursor\\trust-guard\\trustguard\\auth.py:153: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    created_at=datetime.utcnow(),\n\ntests/unit/test_comprehensive_error_handling.py: 31 warnings\n  C:\\Users\\jimmy\\.cursor\\trust-guard\\trustguard\\health.py:39: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    self.timestamp = datetime.utcnow()\n\ntests/unit/test_comprehensive_error_handling.py::TestHealthCheckerErrorHandling::test_health_check_with_corrupted_components\ntests/unit/test_comprehensive_error_handling.py::TestHealthCheckerErrorHandling::test_health_check_with_corrupted_components\ntests/unit/test_comprehensive_error_handling.py::TestHealthCheckerErrorHandling::test_health_check_with_corrupted_components\ntests/unit/test_comprehensive_error_handling.py::TestHealthCheckerErrorHandling::test_health_check_with_corrupted_components\ntests/unit/test_comprehensive_error_handling.py::TestHealthCheckerErrorHandling::test_health_check_with_corrupted_components\ntests/unit/test_comprehensive_error_handling.py::TestHealthCheckerErrorHandling::test_health_check_with_missing_components\ntests/unit/test_comprehensive_error_handling.py::TestHealthCheckerErrorHandling::test_health_check_with_failing_components\ntests/unit/test_comprehensive_error_handling.py::TestSystemWideErrorHandling::test_system_with_network_failures\n  C:\\Users\\jimmy\\.cursor\\trust-guard\\trustguard\\health.py:245: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    \"timestamp\": datetime.utcnow().isoformat(),\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: /tmp/pytest_report.json\n======================= 31 passed, 76 warnings in 2.06s =======================\n",
+          "stderr": ""
+        }
+      },
+      "summary": {
+        "total_passed": 0,
+        "total_failed": 0,
+        "total_skipped": 0,
+        "total_tests": 0,
+        "success_rate": 0
+      }
+    },
+    "integration_tests": {
+      "health_endpoint": {
+        "status": "PASS",
+        "status_code": 200,
+        "response_time_ms": 2418.01,
+        "response_data": {
+          "status": "healthy",
+          "version": "1.0.0",
+          "components": {
+            "detector": true,
+            "validator": true,
+            "constitutional": true,
+            "metrics": true
+          },
+          "metrics": {
+            "uptime_seconds": 3714.9571969509125,
+            "cpu_usage": 59.0,
+            "memory_mb": 5377.0625,
+            "patterns_detected_today": 0,
+            "average_risk_score": 0.0
+          },
+          "system_memory": {
+            "used_mb": 5377.13,
+            "available_mb": 604.18,
+            "percentage": 89.9
+          }
+        }
+      },
+      "liveness_probe": {
+        "status": "PASS",
+        "status_code": 200,
+        "response_time_ms": 2043.0579999999998
+      },
+      "readiness_probe": {
+        "status": "PASS",
+        "status_code": 200,
+        "response_time_ms": 2058.0989999999997
+      },
+      "detailed_health": {
+        "status": "PASS",
+        "status_code": 200,
+        "response_time_ms": 2064.1859999999997,
+        "response_data": {
+          "status": "healthy",
+          "timestamp": "2025-10-13T05:26:42.510549",
+          "uptime_seconds": 3719.7013413906097,
+          "check_duration_ms": 5.226373672485352,
+          "components": [
+            {
+              "name": "system_resources",
+              "status": "healthy",
+              "message": "Resources within normal limits",
+              "details": {
+                "memory_usage_percent": 81.9,
+                "disk_usage_percent": 45.2,
+                "cpu_usage_percent": 58.1,
+                "memory_available_gb": 1.0555267333984375,
+                "disk_free_gb": 112.9664192199707
+              },
+              "timestamp": "2025-10-13T05:26:42.509927"
+            },
+            {
+              "name": "detector",
+              "status": "healthy",
+              "message": "Detector operational",
+              "details": {},
+              "timestamp": "2025-10-13T05:26:42.510273"
+            },
+            {
+              "name": "validator",
+              "status": "healthy",
+              "message": "Validator operational",
+              "details": {},
+              "timestamp": "2025-10-13T05:26:42.510292"
+            },
+            {
+              "name": "constitutional",
+              "status": "healthy",
+              "message": "Constitutional system operational",
+              "details": {},
+              "timestamp": "2025-10-13T05:26:42.510301"
+            },
+            {
+              "name": "metrics",
+              "status": "healthy",
+              "message": "Metrics system operational",
+              "details": {},
+              "timestamp": "2025-10-13T05:26:42.510318"
+            },
+            {
+              "name": "authentication",
+              "status": "healthy",
+              "message": "Authentication system operational",
+              "details": {},
+              "timestamp": "2025-10-13T05:26:42.510456"
+            },
+            {
+              "name": "database",
+              "status": "healthy",
+              "message": "No database dependencies",
+              "details": {},
+              "timestamp": "2025-10-13T05:26:42.510469"
+            },
+            {
+              "name": "external_dependencies",
+              "status": "healthy",
+              "message": "No external dependencies",
+              "details": {},
+              "timestamp": "2025-10-13T05:26:42.510477"
+            }
+          ],
+          "summary": {
+            "total_components": 8,
+            "healthy": 8,
+            "degraded": 0,
+            "unhealthy": 0,
+            "unknown": 0
+          },
+          "service_info": {
+            "name": "trust-guard",
+            "version": "1.0.0",
+            "environment": "production"
+          },
+          "kubernetes": {
+            "liveness_probe": "/health/live",
+            "readiness_probe": "/health/ready",
+            "startup_probe": "/health"
+          }
+        }
+      },
+      "metrics_endpoint": {
+        "status": "PASS",
+        "status_code": 200,
+        "response_time_ms": 2057.861,
+        "content_type": "text/plain; version=1.0.0; charset=utf-8"
+      },
+      "detect_endpoint": {
+        "status": "FAIL",
+        "status_code": 500,
+        "response_time_ms": 2071.0229999999997
+      }
+    }
+  },
+  "health_checks": {
+    "basic_health": {
+      "status": "PASS",
+      "overall_status": "healthy",
+      "uptime_seconds": 0,
+      "components": {
+        "detector": true,
+        "validator": true,
+        "constitutional": true,
+        "metrics": true
+      }
+    },
+    "detailed_health": {
+      "status": "PASS",
+      "overall_status": "healthy",
+      "summary": {
+        "total_components": 8,
+        "healthy": 8,
+        "degraded": 0,
+        "unhealthy": 0,
+        "unknown": 0
+      },
+      "components": [
+        {
+          "name": "system_resources",
+          "status": "healthy",
+          "message": "Resources within normal limits",
+          "details": {
+            "memory_usage_percent": 84.0,
+            "disk_usage_percent": 45.2,
+            "cpu_usage_percent": 46.8,
+            "memory_available_gb": 0.9336662292480469,
+            "disk_free_gb": 112.96640014648438
+          },
+          "timestamp": "2025-10-13T05:26:50.818113"
+        },
+        {
+          "name": "detector",
+          "status": "healthy",
+          "message": "Detector operational",
+          "details": {},
+          "timestamp": "2025-10-13T05:26:50.818137"
+        },
+        {
+          "name": "validator",
+          "status": "healthy",
+          "message": "Validator operational",
+          "details": {},
+          "timestamp": "2025-10-13T05:26:50.818147"
+        },
+        {
+          "name": "constitutional",
+          "status": "healthy",
+          "message": "Constitutional system operational",
+          "details": {},
+          "timestamp": "2025-10-13T05:26:50.818159"
+        },
+        {
+          "name": "metrics",
+          "status": "healthy",
+          "message": "Metrics system operational",
+          "details": {},
+          "timestamp": "2025-10-13T05:26:50.818169"
+        },
+        {
+          "name": "authentication",
+          "status": "healthy",
+          "message": "Authentication system operational",
+          "details": {},
+          "timestamp": "2025-10-13T05:26:50.818193"
+        },
+        {
+          "name": "database",
+          "status": "healthy",
+          "message": "No database dependencies",
+          "details": {},
+          "timestamp": "2025-10-13T05:26:50.818199"
+        },
+        {
+          "name": "external_dependencies",
+          "status": "healthy",
+          "message": "No external dependencies",
+          "details": {},
+          "timestamp": "2025-10-13T05:26:50.818204"
+        }
+      ]
+    },
+    "tracer_health": {
+      "status": "FAIL",
+      "status_code": 500
+    }
+  },
+  "log_analysis": {
+    "log_sources": [],
+    "error_patterns": [],
+    "performance_metrics": [],
+    "security_events": []
+  },
+  "performance_metrics": {
+    "/health": {
+      "status": "PASS",
+      "response_time_ms": 2153.7692546844482,
+      "status_code": 200,
+      "content_length": 343
+    },
+    "/health/live": {
+      "status": "PASS",
+      "response_time_ms": 2046.2214946746826,
+      "status_code": 200,
+      "content_length": 18
+    },
+    "/health/ready": {
+      "status": "PASS",
+      "response_time_ms": 2024.6036052703857,
+      "status_code": 200,
+      "content_length": 18
+    },
+    "/metrics": {
+      "status": "PASS",
+      "response_time_ms": 2054.271459579468,
+      "status_code": 200,
+      "content_length": 13838
+    },
+    "load_test": {
+      "status": "PASS",
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "total_time_seconds": 21.472737789154053,
+      "requests_per_second": 0.4657067998590767
+    }
+  },
+  "summary": {
+    "overall_status": "FAIL",
+    "total_tests": 6,
+    "passed_tests": 5,
+    "failed_tests": 1,
+    "success_rate": 83.33333333333334,
+    "health_status": "DEGRADED",
+    "performance_status": "GOOD"
+  }
+}

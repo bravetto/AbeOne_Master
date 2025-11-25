@@ -1,0 +1,258 @@
+name: BiasGuard Deploy Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+env:
+  NODE_VERSION: '18'
+  PNPM_VERSION: '8'
+
+jobs:
+  # =====================================
+  # QUALITY GATES
+  # =====================================
+  quality-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run linting
+        run: pnpm lint
+
+      - name: Run type checking
+        run: pnpm check
+
+      - name: Run unit tests
+        run: pnpm test:coverage
+
+      - name: Build application
+        run: pnpm build
+
+      - name: Bundle size check
+        run: |
+          BUNDLE_SIZE=$(du -sk build/client | cut -f1)
+          if [ $BUNDLE_SIZE -gt 150 ]; then
+            echo "Bundle size $BUNDLE_SIZE KB exceeds 150KB limit"
+            exit 1
+          fi
+          echo "Bundle size: $BUNDLE_SIZE KB "
+
+  # =====================================
+  # E2E TESTING
+  # =====================================
+  e2e-testing:
+    runs-on: ubuntu-latest
+    needs: quality-check
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps
+
+      - name: Build application
+        run: pnpm build
+
+      - name: Run E2E tests
+        run: pnpm test:e2e
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+
+  # =====================================
+  # LIGHTHOUSE PERFORMANCE AUDIT
+  # =====================================
+  lighthouse-audit:
+    runs-on: ubuntu-latest
+    needs: quality-check
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build application
+        run: pnpm build
+
+      - name: Serve application
+        run: pnpm preview &
+
+      - name: Wait for server
+        run: |
+          for i in {1..30}; do
+            if curl -f http://localhost:4173 > /dev/null 2>&1; then
+              echo "Server is ready"
+              break
+            fi
+            echo "Waiting for server... ($i/30)"
+            sleep 2
+          done
+
+      - name: Run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.12.x
+          lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+  # =====================================
+  # SECURITY SCANNING
+  # =====================================
+  security-scan:
+    runs-on: ubuntu-latest
+    needs: quality-check
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run dependency audit
+        run: npm audit --audit-level moderate
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: typescript, javascript
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+
+      - name: Run secrets scanning
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./
+          base: main
+          head: HEAD
+
+  # =====================================
+  # PREVIEW DEPLOYMENT (Vercel)
+  # =====================================
+  deploy-preview:
+    runs-on: ubuntu-latest
+    needs: [quality-check, e2e-testing]
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Vercel Preview
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.ORG_ID }}
+          vercel-project-id: ${{ secrets.PROJECT_ID }}
+          working-directory: ./
+
+  # =====================================
+  # PRODUCTION DEPLOYMENT
+  # =====================================
+  deploy-production:
+    runs-on: ubuntu-latest
+    needs: [quality-check, e2e-testing, lighthouse-audit, security-scan]
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Vercel Production
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.ORG_ID }}
+          vercel-project-id: ${{ secrets.PROJECT_ID }}
+          vercel-args: '--prod'
+          working-directory: ./
+
+      - name: Deploy to Netlify (Backup)
+        uses: nwtgck/actions-netlify@v3.0
+        with:
+          publish-dir: './build'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: 'Deploy from GitHub Actions'
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+      - name: Post-deployment health check
+        run: |
+          # Wait for deployment to be available
+          sleep 30
+
+          # Check primary deployment (Vercel)
+          if curl -f https://biasguard.ai/health > /dev/null 2>&1; then
+            echo " Primary deployment healthy"
+          else
+            echo " Primary deployment failed health check"
+            exit 1
+          fi
+
+      - name: Update deployment status
+        run: |
+          curl -X POST https://api.biasguard.ai/deployments \
+            -H "Authorization: Bearer ${{ secrets.API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "status": "success",
+              "commit": "${{ github.sha }}",
+              "branch": "${{ github.ref_name }}",
+              "timestamp": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"
+            }'
+
+      - name: Run post-deployment smoke tests
+        run: |
+          # Wait a bit more for full deployment
+          sleep 10
+
+          # Run critical path tests
+          curl -f https://biasguard.ai/ || exit 1
+          curl -f https://biasguard.ai/health || exit 1
+
+          echo " Smoke tests passed"

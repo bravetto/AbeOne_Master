@@ -1,0 +1,19 @@
+# Prometheus and Linkerd Annotations Example
+# Add these annotations to all deployment.yaml files
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tokenguard
+  namespace: default
+  annotations:
+    # Linkerd service mesh injection
+    linkerd.io/inject: enabled
+    
+    # Prometheus scraping annotations
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "80"
+    prometheus.io/path: "/metrics"
+spec:
+  # ... rest of deployment spec
+

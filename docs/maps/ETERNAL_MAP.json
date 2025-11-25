@@ -1,0 +1,35 @@
+{
+  "generated": "2025-11-23T20:28:36.687421",
+  "type": "ETERNAL",
+  "description": "What SHOULD exist (immutable ideal)",
+  "principles": {
+    "one_pattern": "VALIDATE \u2192 TRANSFORM \u2192 VALIDATE",
+    "three_layer_brain": "Command \u2192 Specialist \u2192 Memory",
+    "aquarian_protocol": "No conflicts, no drift, no hallucination"
+  },
+  "requirements": {
+    "guards": [
+      "tokenguard",
+      "biasguard",
+      "contextguard",
+      "trustguard",
+      "healthguard"
+    ],
+    "guardians": [
+      "zero",
+      "aeyon",
+      "abe",
+      "john",
+      "aurion",
+      "lux",
+      "neuro",
+      "yagni"
+    ],
+    "gateway": "codeguardians-gateway",
+    "memory": "ABEONE_CORE_MEMORY.json",
+    "boot": "boot_abeone.py",
+    "self_heal": "self_heal_abeone.py",
+    "harden": "harden_abeone.py",
+    "monitor": "monitor_abeone.py"
+  }
+}

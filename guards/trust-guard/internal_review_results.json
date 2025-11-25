@@ -1,0 +1,1796 @@
+{
+  "timestamp": "2025-10-13T16:01:13.227371",
+  "tests": {
+    "health_basic": {
+      "status": "PASS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time_ms": 2158.66,
+      "content_length": 338,
+      "error": null,
+      "response_data": {
+        "status": "healthy",
+        "version": "1.0.0",
+        "components": {
+          "detector": true,
+          "validator": true,
+          "constitutional": true,
+          "metrics": true
+        },
+        "metrics": {
+          "uptime_seconds": 1832.195320367813,
+          "cpu_usage": 0.0,
+          "memory_mb": 5112.09375,
+          "patterns_detected_today": 0,
+          "average_risk_score": 0.0
+        },
+        "system_memory": {
+          "used_mb": 5112.09,
+          "available_mb": 869.28,
+          "percentage": 85.5
+        }
+      }
+    },
+    "health_live": {
+      "status": "PASS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time_ms": 2046.7,
+      "content_length": 18,
+      "error": null,
+      "response_data": {
+        "status": "alive"
+      }
+    },
+    "health_ready": {
+      "status": "PASS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time_ms": 2035.88,
+      "content_length": 18,
+      "error": null,
+      "response_data": {
+        "status": "ready"
+      }
+    },
+    "health_detailed": {
+      "status": "PASS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time_ms": 2030.26,
+      "content_length": 1722,
+      "error": null,
+      "response_data": {
+        "status": "healthy",
+        "timestamp": "2025-10-13T20:01:21.497578+00:00",
+        "uptime_seconds": 1836.982473373413,
+        "check_duration_ms": 0.9121894836425781,
+        "components": [
+          {
+            "name": "system_resources",
+            "status": "healthy",
+            "message": "Resources within normal limits",
+            "details": {
+              "memory_usage_percent": 85.3,
+              "disk_usage_percent": 46.5,
+              "cpu_usage_percent": 7.1,
+              "memory_available_gb": 0.8604316711425781,
+              "disk_free_gb": 110.34532165527344
+            },
+            "timestamp": "2025-10-13T20:01:21.497510+00:00"
+          },
+          {
+            "name": "detector",
+            "status": "healthy",
+            "message": "Detector operational",
+            "details": {},
+            "timestamp": "2025-10-13T20:01:21.497528+00:00"
+          },
+          {
+            "name": "validator",
+            "status": "healthy",
+            "message": "Validator operational",
+            "details": {},
+            "timestamp": "2025-10-13T20:01:21.497536+00:00"
+          },
+          {
+            "name": "constitutional",
+            "status": "healthy",
+            "message": "Constitutional system operational",
+            "details": {},
+            "timestamp": "2025-10-13T20:01:21.497541+00:00"
+          },
+          {
+            "name": "metrics",
+            "status": "healthy",
+            "message": "Metrics system operational",
+            "details": {},
+            "timestamp": "2025-10-13T20:01:21.497545+00:00"
+          },
+          {
+            "name": "authentication",
+            "status": "healthy",
+            "message": "Authentication system operational",
+            "details": {},
+            "timestamp": "2025-10-13T20:01:21.497554+00:00"
+          },
+          {
+            "name": "database",
+            "status": "healthy",
+            "message": "No database dependencies",
+            "details": {},
+            "timestamp": "2025-10-13T20:01:21.497559+00:00"
+          },
+          {
+            "name": "external_dependencies",
+            "status": "healthy",
+            "message": "No external dependencies",
+            "details": {},
+            "timestamp": "2025-10-13T20:01:21.497560+00:00"
+          }
+        ],
+        "summary": {
+          "total_components": 8,
+          "healthy": 8,
+          "degraded": 0,
+          "unhealthy": 0,
+          "unknown": 0
+        },
+        "service_info": {
+          "name": "trust-guard",
+          "version": "1.0.0",
+          "environment": "production"
+        },
+        "kubernetes": {
+          "liveness_probe": "/health/live",
+          "readiness_probe": "/health/ready",
+          "startup_probe": "/health"
+        }
+      }
+    },
+    "metrics_prometheus": {
+      "status": "PASS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time_ms": 2025.56,
+      "content_length": 17785,
+      "error": null,
+      "response_data": "# HELP python_gc_objects_collected_total Objects collected during gc\n# TYPE python_gc_objects_collected_total counter\npython_gc_objects_collected_total{generation=\"0\"} 3907.0\npython_gc_objects_collect"
+    },
+    "docs": {
+      "status": "PASS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time_ms": 2038.5,
+      "content_length": 961,
+      "error": null,
+      "response_data": "\n    <!DOCTYPE html>\n    <html>\n    <head>\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css\">\n    <link rel=\"shortcut icon\" href=\"https://"
+    },
+    "openapi": {
+      "status": "PASS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time_ms": 2048.67,
+      "content_length": 19916,
+      "error": null,
+      "response_data": {
+        "openapi": "3.1.0",
+        "info": {
+          "title": "Trust Guard - AI Reliability Solution",
+          "description": "Detects and mitigates seven AI failure patterns: hallucination, drift, bias, deception, security theater, duplication, and stub syndrome",
+          "version": "1.0.0"
+        },
+        "paths": {
+          "/metrics": {
+            "get": {
+              "summary": "Get Prometheus Metrics",
+              "description": "Get Prometheus metrics in text format.",
+              "operationId": "get_prometheus_metrics_metrics_get",
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/health": {
+            "get": {
+              "summary": "Health Check",
+              "description": "Enhanced health check with Trust Guard component status.",
+              "operationId": "health_check_health_get",
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HealthResponse"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/health/live": {
+            "get": {
+              "summary": "Liveness Probe",
+              "description": "Kubernetes liveness probe - checks if the service is alive.",
+              "operationId": "liveness_probe_health_live_get",
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/health/ready": {
+            "get": {
+              "summary": "Readiness Probe",
+              "description": "Kubernetes readiness probe - checks if the service is ready to serve traffic.",
+              "operationId": "readiness_probe_health_ready_get",
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/health/detailed": {
+            "get": {
+              "summary": "Detailed Health Check",
+              "description": "Detailed health check with component-by-component analysis.",
+              "operationId": "detailed_health_check_health_detailed_get",
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/debug/api-key": {
+            "get": {
+              "summary": "Get Default Api Key",
+              "description": "Get the default API key for testing (DEBUG ONLY - REMOVE IN PRODUCTION).",
+              "operationId": "get_default_api_key_debug_api_key_get",
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/v1/detect": {
+            "post": {
+              "summary": "Detect Patterns",
+              "description": "Detect AI failure patterns in the provided text.\n\nReturns detailed analysis of all seven failure patterns with confidence scores.",
+              "operationId": "detect_patterns_v1_detect_post",
+              "parameters": [
+                {
+                  "name": "X-API-Key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Api-Key"
+                  }
+                },
+                {
+                  "name": "authorization",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Authorization"
+                  }
+                }
+              ],
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/TextInput"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "object",
+                        "additionalProperties": true,
+                        "title": "Response Detect Patterns V1 Detect Post"
+                      }
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/v1/validate": {
+            "post": {
+              "summary": "Validate Response",
+              "description": "Comprehensive validation of AI response against seven failure patterns.\n\nReturns detailed reliability score and mitigation recommendations.",
+              "operationId": "validate_response_v1_validate_post",
+              "parameters": [
+                {
+                  "name": "X-API-Key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Api-Key"
+                  }
+                },
+                {
+                  "name": "authorization",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Authorization"
+                  }
+                }
+              ],
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/ValidationRequest"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/ValidationResponse"
+                      }
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/v1/mitigate": {
+            "post": {
+              "summary": "Mitigate Patterns",
+              "description": "Apply constitutional prompting and mitigation strategies for detected failure patterns.\n\nReturns mitigated text with applied constitutional guidelines.",
+              "operationId": "mitigate_patterns_v1_mitigate_post",
+              "parameters": [
+                {
+                  "name": "X-API-Key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Api-Key"
+                  }
+                },
+                {
+                  "name": "authorization",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Authorization"
+                  }
+                }
+              ],
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/MitigationRequest"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "object",
+                        "additionalProperties": true,
+                        "title": "Response Mitigate Patterns V1 Mitigate Post"
+                      }
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/v1/constitutional": {
+            "post": {
+              "summary": "Get Constitutional Prompt",
+              "description": "Generate constitutional prompts for specific failure patterns.\n\nReturns tailored prompts to mitigate detected patterns.",
+              "operationId": "get_constitutional_prompt_v1_constitutional_post",
+              "parameters": [
+                {
+                  "name": "severity",
+                  "in": "query",
+                  "required": false,
+                  "schema": {
+                    "type": "string",
+                    "default": "medium",
+                    "title": "Severity"
+                  }
+                },
+                {
+                  "name": "X-API-Key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Api-Key"
+                  }
+                },
+                {
+                  "name": "authorization",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Authorization"
+                  }
+                }
+              ],
+              "requestBody": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "title": "Patterns"
+                    }
+                  }
+                }
+              },
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/v1/metrics": {
+            "get": {
+              "summary": "Get Service Metrics",
+              "description": "Get comprehensive Trust Guard service metrics and reliability statistics.",
+              "operationId": "get_service_metrics_v1_metrics_get",
+              "parameters": [
+                {
+                  "name": "X-API-Key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Api-Key"
+                  }
+                },
+                {
+                  "name": "authorization",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Authorization"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/v1/auth/api-keys": {
+            "post": {
+              "summary": "Create Api Key",
+              "description": "Create a new API key.",
+              "operationId": "create_api_key_v1_auth_api_keys_post",
+              "parameters": [
+                {
+                  "name": "name",
+                  "in": "query",
+                  "required": true,
+                  "schema": {
+                    "type": "string",
+                    "title": "Name"
+                  }
+                },
+                {
+                  "name": "role",
+                  "in": "query",
+                  "required": true,
+                  "schema": {
+                    "type": "string",
+                    "title": "Role"
+                  }
+                },
+                {
+                  "name": "expires_in_days",
+                  "in": "query",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Expires In Days"
+                  }
+                },
+                {
+                  "name": "X-API-Key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Api-Key"
+                  }
+                },
+                {
+                  "name": "authorization",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Authorization"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "get": {
+              "summary": "List Api Keys",
+              "description": "List all API keys.",
+              "operationId": "list_api_keys_v1_auth_api_keys_get",
+              "parameters": [
+                {
+                  "name": "X-API-Key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Api-Key"
+                  }
+                },
+                {
+                  "name": "authorization",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Authorization"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/v1/auth/api-keys/{key_id}": {
+            "delete": {
+              "summary": "Revoke Api Key",
+              "description": "Revoke an API key.",
+              "operationId": "revoke_api_key_v1_auth_api_keys__key_id__delete",
+              "parameters": [
+                {
+                  "name": "key_id",
+                  "in": "path",
+                  "required": true,
+                  "schema": {
+                    "type": "string",
+                    "title": "Key Id"
+                  }
+                },
+                {
+                  "name": "X-API-Key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Api-Key"
+                  }
+                },
+                {
+                  "name": "authorization",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Authorization"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/v1/auth/security-events": {
+            "get": {
+              "summary": "Get Security Events",
+              "description": "Get recent security events.",
+              "operationId": "get_security_events_v1_auth_security_events_get",
+              "parameters": [
+                {
+                  "name": "limit",
+                  "in": "query",
+                  "required": false,
+                  "schema": {
+                    "type": "integer",
+                    "default": 100,
+                    "title": "Limit"
+                  }
+                },
+                {
+                  "name": "X-API-Key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Api-Key"
+                  }
+                },
+                {
+                  "name": "authorization",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Authorization"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/v1/auth/secrets/status": {
+            "get": {
+              "summary": "Get Secrets Status",
+              "description": "Get secrets status and rotation information.",
+              "operationId": "get_secrets_status_v1_auth_secrets_status_get",
+              "parameters": [
+                {
+                  "name": "X-API-Key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Api-Key"
+                  }
+                },
+                {
+                  "name": "authorization",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Authorization"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/v1/auth/secrets/rotate": {
+            "post": {
+              "summary": "Rotate Secret",
+              "description": "Manually rotate a specific secret.",
+              "operationId": "rotate_secret_v1_auth_secrets_rotate_post",
+              "parameters": [
+                {
+                  "name": "secret_name",
+                  "in": "query",
+                  "required": true,
+                  "schema": {
+                    "type": "string",
+                    "title": "Secret Name"
+                  }
+                },
+                {
+                  "name": "X-API-Key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Api-Key"
+                  }
+                },
+                {
+                  "name": "authorization",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Authorization"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/v1/observability/summary": {
+            "get": {
+              "summary": "Get Observability Summary",
+              "description": "Get comprehensive observability summary.",
+              "operationId": "get_observability_summary_v1_observability_summary_get",
+              "parameters": [
+                {
+                  "name": "X-API-Key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Api-Key"
+                  }
+                },
+                {
+                  "name": "authorization",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Authorization"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/v1/tracer/bullets": {
+            "get": {
+              "summary": "Get Tracer Bullets",
+              "description": "Get recent tracer bullets for debugging and monitoring.",
+              "operationId": "get_tracer_bullets_v1_tracer_bullets_get",
+              "parameters": [
+                {
+                  "name": "count",
+                  "in": "query",
+                  "required": false,
+                  "schema": {
+                    "type": "integer",
+                    "default": 100,
+                    "title": "Count"
+                  }
+                },
+                {
+                  "name": "event_type",
+                  "in": "query",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Event Type"
+                  }
+                },
+                {
+                  "name": "format",
+                  "in": "query",
+                  "required": false,
+                  "schema": {
+                    "type": "string",
+                    "default": "json",
+                    "title": "Format"
+                  }
+                },
+                {
+                  "name": "X-API-Key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Api-Key"
+                  }
+                },
+                {
+                  "name": "authorization",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Authorization"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "delete": {
+              "summary": "Clear Tracer Bullets",
+              "description": "Clear all tracer bullets (admin only).",
+              "operationId": "clear_tracer_bullets_v1_tracer_bullets_delete",
+              "parameters": [
+                {
+                  "name": "X-API-Key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Api-Key"
+                  }
+                },
+                {
+                  "name": "authorization",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Authorization"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/v1/tracer/performance": {
+            "get": {
+              "summary": "Get Tracer Performance",
+              "description": "Get performance metrics from tracer bullets.",
+              "operationId": "get_tracer_performance_v1_tracer_performance_get",
+              "parameters": [
+                {
+                  "name": "operation",
+                  "in": "query",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Operation"
+                  }
+                },
+                {
+                  "name": "X-API-Key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Api-Key"
+                  }
+                },
+                {
+                  "name": "authorization",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Authorization"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/v1/tracer/health": {
+            "get": {
+              "summary": "Get Tracer Health",
+              "description": "Get system health summary based on tracer bullets.",
+              "operationId": "get_tracer_health_v1_tracer_health_get",
+              "parameters": [
+                {
+                  "name": "X-API-Key",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "X-Api-Key"
+                  }
+                },
+                {
+                  "name": "authorization",
+                  "in": "header",
+                  "required": false,
+                  "schema": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Authorization"
+                  }
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "Successful Response",
+                  "content": {
+                    "application/json": {
+                      "schema": {}
+                    }
+                  }
+                },
+                "422": {
+                  "description": "Validation Error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/HTTPValidationError"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "components": {
+          "schemas": {
+            "HTTPValidationError": {
+              "properties": {
+                "detail": {
+                  "items": {
+                    "$ref": "#/components/schemas/ValidationError"
+                  },
+                  "type": "array",
+                  "title": "Detail"
+                }
+              },
+              "type": "object",
+              "title": "HTTPValidationError"
+            },
+            "HealthResponse": {
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "title": "Status",
+                  "description": "Service status"
+                },
+                "version": {
+                  "type": "string",
+                  "title": "Version",
+                  "description": "Service version"
+                },
+                "components": {
+                  "additionalProperties": {
+                    "type": "boolean"
+                  },
+                  "type": "object",
+                  "title": "Components",
+                  "description": "Component health status"
+                },
+                "metrics": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Metrics",
+                  "description": "Current metrics"
+                }
+              },
+              "type": "object",
+              "required": [
+                "status",
+                "version",
+                "components",
+                "metrics"
+              ],
+              "title": "HealthResponse",
+              "description": "Health check response with Trust Guard metrics"
+            },
+            "MitigationRequest": {
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "title": "Text",
+                  "description": "Text to mitigate"
+                },
+                "detected_patterns": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array",
+                  "title": "Detected Patterns",
+                  "description": "Detected failure patterns"
+                },
+                "severity": {
+                  "type": "string",
+                  "title": "Severity",
+                  "description": "Mitigation severity level",
+                  "default": "high"
+                }
+              },
+              "type": "object",
+              "required": [
+                "text",
+                "detected_patterns"
+              ],
+              "title": "MitigationRequest",
+              "description": "Request model for failure pattern mitigation",
+              "example": {
+                "detected_patterns": [
+                  "security_theater",
+                  "deception"
+                ],
+                "severity": "high",
+                "text": "The AI is now safe and secure with 100% trustworthiness."
+              }
+            },
+            "TextInput": {
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "Text",
+                  "description": "The AI-generated text to analyze"
+                },
+                "context": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Context",
+                  "description": "Context information"
+                },
+                "metadata": {
+                  "anyOf": [
+                    {
+                      "additionalProperties": true,
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Metadata",
+                  "description": "Additional metadata"
+                }
+              },
+              "type": "object",
+              "required": [
+                "text"
+              ],
+              "title": "TextInput",
+              "description": "Input model for text analysis",
+              "example": {
+                "context": "Geography question about European capitals",
+                "metadata": {
+                  "confidence": 0.85,
+                  "model": "gpt-4"
+                },
+                "text": "The capital of France is Paris. This city has a population of 2.1 million."
+              }
+            },
+            "ValidationError": {
+              "properties": {
+                "loc": {
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      }
+                    ]
+                  },
+                  "type": "array",
+                  "title": "Location"
+                },
+                "msg": {
+                  "type": "string",
+                  "title": "Message"
+                },
+                "type": {
+                  "type": "string",
+                  "title": "Error Type"
+                }
+              },
+              "type": "object",
+              "required": [
+                "loc",
+                "msg",
+                "type"
+              ],
+              "title": "ValidationError"
+            },
+            "ValidationRequest": {
+              "properties": {
+                "input_text": {
+                  "type": "string",
+                  "title": "Input Text",
+                  "description": "Original input prompt"
+                },
+                "output_text": {
+                  "type": "string",
+                  "title": "Output Text",
+                  "description": "AI-generated output to validate"
+                },
+                "context": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Context",
+                  "description": "Conversation context"
+                },
+                "expected_factors": {
+                  "anyOf": [
+                    {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Expected Factors",
+                  "description": "Expected validation factors"
+                }
+              },
+              "type": "object",
+              "required": [
+                "input_text",
+                "output_text"
+              ],
+              "title": "ValidationRequest",
+              "description": "Request model for comprehensive validation",
+              "example": {
+                "context": "Geography quiz",
+                "expected_factors": [
+                  "factual_accuracy",
+                  "context_relevance"
+                ],
+                "input_text": "What is the capital of France?",
+                "output_text": "Paris is the capital of France with a population of 2.1 million people."
+              }
+            },
+            "ValidationResponse": {
+              "properties": {
+                "overall_score": {
+                  "type": "number",
+                  "title": "Overall Score",
+                  "description": "Overall reliability score (0-100)"
+                },
+                "pattern_detections": {
+                  "additionalProperties": {
+                    "type": "number"
+                  },
+                  "type": "object",
+                  "title": "Pattern Detections",
+                  "description": "Detection scores for each pattern"
+                },
+                "risk_level": {
+                  "type": "string",
+                  "title": "Risk Level",
+                  "description": "Risk assessment: low/medium/high"
+                },
+                "recommendations": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array",
+                  "title": "Recommendations",
+                  "description": "Mitigation recommendations"
+                },
+                "evidence": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Evidence",
+                  "description": "Supporting evidence and metrics"
+                },
+                "processing_time": {
+                  "type": "number",
+                  "title": "Processing Time",
+                  "description": "Processing time in milliseconds"
+                }
+              },
+              "type": "object",
+              "required": [
+                "overall_score",
+                "pattern_detections",
+                "risk_level",
+                "recommendations",
+                "evidence",
+                "processing_time"
+              ],
+              "title": "ValidationResponse",
+              "description": "Comprehensive validation response",
+              "example": {
+                "evidence": {
+                  "kl_divergence": 0.15,
+                  "uncertainty_score": 0.3
+                },
+                "overall_score": 78.5,
+                "pattern_detections": {
+                  "bias": 0.8,
+                  "deception": 0.3,
+                  "hallucination": 0.2
+                },
+                "processing_time": 45.2,
+                "recommendations": [
+                  "Apply constitutional prompting",
+                  "Cross-reference with Context Guard"
+                ],
+                "risk_level": "medium"
+              }
+            }
+          }
+        }
+      }
+    },
+    "debug_api_key": {
+      "status": "PASS",
+      "status_code": 200,
+      "expected_status": 200,
+      "response_time_ms": 2037.01,
+      "content_length": 139,
+      "error": null,
+      "response_data": {
+        "api_key": "tg_z_V1DmaWPVDyq_rbfqfHQA_QQYD0nI_TU4Ir5l18yi19NIkmg7xnMoFUjOxSMFdtFU",
+        "note": "Use this key with X-API-Key header for testing"
+      }
+    },
+    "detect_no_auth": {
+      "status": "PASS",
+      "status_code": 401,
+      "expected_status": 401,
+      "response_time_ms": 2064.87,
+      "content_length": 36,
+      "error": null,
+      "response_data": {
+        "detail": "Authentication required"
+      }
+    },
+    "validate_no_auth": {
+      "status": "PASS",
+      "status_code": 401,
+      "expected_status": 401,
+      "response_time_ms": 2067.66,
+      "content_length": 36,
+      "error": null,
+      "response_data": {
+        "detail": "Authentication required"
+      }
+    },
+    "not_found": {
+      "status": "PASS",
+      "status_code": 404,
+      "expected_status": 404,
+      "response_time_ms": 2050.44,
+      "content_length": 22,
+      "error": null,
+      "response_data": {
+        "detail": "Not Found"
+      }
+    }
+  },
+  "summary": {
+    "total_tests": 11,
+    "passed": 11,
+    "failed": 0,
+    "errors": 0,
+    "success_rate": 100.0,
+    "average_response_time_ms": 2054.93
+  }
+}

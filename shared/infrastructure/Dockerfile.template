@@ -1,0 +1,78 @@
+# Multi-stage Docker build template for AIGuardian guard services
+# Usage: Copy to service directory and customize ARG values
+
+# Arguments for customization
+ARG PYTHON_VERSION=3.11
+ARG SERVICE_NAME=guard-service
+ARG SERVICE_VERSION=0.3.0
+ARG MAINTAINER_EMAIL=contact@vibecoders.com
+
+# ========================================
+# Builder Stage: Install dependencies
+# ========================================
+FROM python:${PYTHON_VERSION}-slim AS builder
+
+WORKDIR /usr/src/app
+
+# Install system build dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy build configuration
+COPY pyproject.toml setup.py ./
+
+# Copy source code (customize this path based on service structure)
+COPY . /usr/src/app/src/
+
+# Install Python dependencies
+RUN pip install --upgrade pip && \
+    pip install .
+
+# ========================================
+# Runtime Stage: Production image
+# ========================================
+FROM python:${PYTHON_VERSION}-slim
+
+WORKDIR /usr/src/app
+
+# Install minimal runtime dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy installed packages from builder
+COPY --from=builder /usr/local/lib/python${PYTHON_VERSION}/site-packages /usr/local/lib/python${PYTHON_VERSION}/site-packages
+COPY --from=builder /usr/local/bin /usr/local/bin
+
+# Create non-root user for security
+RUN groupadd -r ${SERVICE_NAME} && \
+    useradd -r -g ${SERVICE_NAME} ${SERVICE_NAME} && \
+    mkdir -p /usr/src/app/logs /usr/src/app/data && \
+    chown -R ${SERVICE_NAME}:${SERVICE_NAME} /usr/src/app
+
+# Copy application code (customize paths as needed)
+COPY . /usr/src/app/
+
+# Set proper ownership
+RUN chown -R ${SERVICE_NAME}:${SERVICE_NAME} /usr/src/app
+
+# Switch to non-root user
+USER ${SERVICE_NAME}
+
+# Expose service port
+EXPOSE 8000
+
+# Health check configuration
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:8000/health || exit 1
+
+# Labels for better container management
+LABEL maintainer="${MAINTAINER_EMAIL}" \
+      version="${SERVICE_VERSION}" \
+      service="${SERVICE_NAME}" \
+      description="${SERVICE_NAME} - AIGuardian Security Service"
+
+# Default command (can be overridden)
+CMD ["python", "run_server.py"]

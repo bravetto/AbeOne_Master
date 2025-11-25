@@ -1,0 +1,102 @@
+{
+  "all_intentional": true,
+  "systems": {
+    "bootstrap": {
+      "intentional": true,
+      "indicators": 5,
+      "explicit_calls": [
+        "bootstrap_one_kernel()",
+        "organism.initialize()",
+        "organism.activate()",
+        "atomic_archistration integration"
+      ]
+    },
+    "atomic_archistration": {
+      "intentional": true,
+      "indicators": 3,
+      "bootstrap_integration": true,
+      "explicit_calls": [
+        "get_atomic_archistrator()",
+        "bootstrap integration"
+      ]
+    },
+    "convergence_system": {
+      "intentional": true,
+      "indicators": 3,
+      "scripts": {
+        "initialize": true,
+        "activate": true
+      },
+      "cicd_integration": true
+    },
+    "guardian_services": {
+      "intentional": true,
+      "indicators": 3,
+      "services_exist": 8,
+      "total_services": 8,
+      "cicd_integration": true
+    },
+    "cicd": {
+      "intentional": true,
+      "indicators": 5,
+      "explicit_jobs": [
+        "build_and_push",
+        "deployment"
+      ],
+      "explicit_checks": true
+    },
+    "epistemic_validation": {
+      "intentional": true,
+      "scripts_exist": 3,
+      "total_scripts": 3
+    },
+    "real_world_testing": {
+      "intentional": true,
+      "indicators": 2,
+      "test_files": 7,
+      "cicd_integration": true
+    },
+    "extensions": {
+      "intentional": true,
+      "indicators": 2,
+      "chrome_extension": true,
+      "vscode_extension": true
+    }
+  },
+  "activation_points": {
+    "bootstrap": {
+      "file": "/Users/michaelmataluni/Documents/AbeOne_Master/EMERGENT_OS/one_kernel/bootstrap.py",
+      "explicit_activation": true,
+      "phase": "Phase 9: Auto-initiate Atomic Archistration"
+    },
+    "atomic_archistration": {
+      "file": "/Users/michaelmataluni/Documents/AbeOne_Master/EMERGENT_OS/one_kernel/bootstrap.py",
+      "explicit_activation": true,
+      "location": "Phase 9: Auto-initiate Atomic Archistration",
+      "intentional": true
+    },
+    "convergence_system": {
+      "file": "/Users/michaelmataluni/Documents/AbeOne_Master/AIGuards-Backend/aiguardian-repos/.github/workflows/deploy-guardian-services.yml",
+      "explicit_activation": true,
+      "location": "CI/CD workflow: System Initialization Check",
+      "intentional": true
+    },
+    "guardian_services": {
+      "file": "/Users/michaelmataluni/Documents/AbeOne_Master/AIGuards-Backend/aiguardian-repos/.github/workflows/deploy-guardian-services.yml",
+      "explicit_activation": true,
+      "location": "CI/CD workflow: Build and Deploy",
+      "intentional": true
+    },
+    "cicd": {
+      "file": "/Users/michaelmataluni/Documents/AbeOne_Master/AIGuards-Backend/aiguardian-repos/.github/workflows/deploy-guardian-services.yml",
+      "explicit_activation": true,
+      "triggers": [
+        "workflow_dispatch",
+        "pull_request"
+      ],
+      "intentional": true
+    }
+  },
+  "missing_intentions": [],
+  "timestamp": null
+}

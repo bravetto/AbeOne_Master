@@ -1,0 +1,3584 @@
+openapi: 3.0.3
+info:
+  title: AI Guardians API - Unified Guard Processing
+  description: |
+    **Unified API specification for AI Guardians backend services.**
+    
+    This API provides comprehensive text analysis through a unified guard processing system.
+    All guard services (TokenGuard, TrustGuard, ContextGuard, BiasGuard, HealthGuard) are
+    processed through a single unified endpoint with intelligent routing and fallback mechanisms.
+    
+    ## Unified Architecture
+    -  **Unified Processing** - Single endpoint for all guard services
+    -  **Intelligent Routing** - Automatic service selection and load balancing
+    -  **Fallback Mechanisms** - Automatic failover and service recovery
+    -  **Real-time Monitoring** - Health checks and performance metrics
+    -  **Enterprise Security** - JWT auth, rate limiting, CORS
+    -  **Multi-Client Support** - Web, VS Code, Chrome, API clients
+    
+    ## Guard Services
+    - **TokenGuard** - Token optimization and cost analysis
+    - **TrustGuard** - Trust validation and reliability scoring
+    - **ContextGuard** - Context analysis and drift detection
+    - **BiasGuard** - Bias detection and mitigation
+    - **HealthGuard** - System monitoring and security scanning
+    
+    ## Authentication
+    All endpoints (except health) require JWT authentication via Bearer token in Authorization header.
+    
+    ## Rate Limiting
+    - Free Tier: 100 requests/hour
+    - Pro Tier: 1000 requests/hour
+    - Enterprise: Unlimited
+    
+  version: 1.0.0
+  contact:
+    name: AI Guardians Support
+    url: https://aiguardians.com/support
+    email: support@aiguardians.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: https://api.aiguardians.com/api/v1
+    description: Production server
+  - url: https://staging-api.aiguardians.com/api/v1
+    description: Staging server
+  - url: http://localhost:8000/api/v1
+    description: Local development server
+
+tags:
+  - name: Unified Guard Processing
+    description: Unified endpoint for all guard service operations
+  - name: Health & Monitoring
+    description: Health checks and system monitoring
+  - name: Service Discovery
+    description: Guard service discovery and management
+  - name: Authentication
+    description: User authentication and authorization endpoints
+  - name: Users
+    description: User management endpoints
+  - name: Posts
+    description: Content/blog post management
+  - name: Organizations
+    description: Organization and team management
+  - name: Subscriptions
+    description: Subscription and billing management
+  - name: Enterprise
+    description: Enterprise features and configuration
+  - name: Legal
+    description: Legal compliance and data privacy
+  - name: Configuration
+    description: User configuration management
+
+security:
+  - BearerAuth: []
+
+paths:
+  # ====================
+  # UNIFIED GUARD PROCESSING (Primary Endpoint)
+  # ====================
+  /guards/process:
+    post:
+      tags: [Unified Guard Processing]
+      summary: Process guard request (Unified Endpoint)
+      description: |
+        **Primary endpoint for all guard service operations.**
+        
+        This unified endpoint handles requests from all client types and automatically
+        routes them to the appropriate guard service with intelligent load balancing,
+        fallback mechanisms, and client-specific response formatting.
+        
+        **Supported Guard Services:**
+        - `tokenguard` - Token optimization and cost analysis
+        - `trustguard` - Trust validation and reliability scoring  
+        - `contextguard` - Context analysis and drift detection
+        - `biasguard` - Bias detection and mitigation
+        - `healthguard` - System monitoring and security scanning
+        
+        **Client Types:**
+        - `web` - Web applications with UI components
+        - `vscode` - VS Code extensions with diagnostics
+        - `chrome` - Chrome extensions with content highlighting
+        - `api` - API clients with structured data
+        
+        **Features:**
+        - Automatic service discovery and health checking
+        - Intelligent load balancing across service instances
+        - Fallback mechanisms for service failures
+        - Client-specific response formatting
+        - Real-time performance monitoring
+        - Request prioritization and timeout handling
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UnifiedGuardRequest'
+            examples:
+              tokenguard_example:
+                summary: TokenGuard Request
+                value:
+                  service_type: "tokenguard"
+                  payload:
+                    content: "Optimize this text for token usage and cost efficiency"
+                    content_type: "text"
+                    scan_level: "standard"
+                    context: "code_review"
+                    user_id: "user123"
+                  user_id: "user123"
+                  session_id: "session456"
+                  priority: 1
+                  timeout: 30
+                  fallback_enabled: true
+                  client_type: "vscode"
+                  client_version: "1.0.0"
+                  request_metadata:
+                    source: "vscode_extension"
+                    file_path: "/src/main.py"
+              trustguard_example:
+                summary: TrustGuard Request
+                value:
+                  service_type: "trustguard"
+                  payload:
+                    validation_type: "general"
+                    content: "This information is accurate and reliable"
+                    validation_level: "standard"
+                    context: "factual_verification"
+                    user_id: "user123"
+                  user_id: "user123"
+                  session_id: "session456"
+                  priority: 2
+                  client_type: "web"
+                  client_version: "1.2.0"
+              contextguard_example:
+                summary: ContextGuard Request
+                value:
+                  service_type: "contextguard"
+                  payload:
+                    operation: "set"
+                    data:
+                      context: "Current conversation context"
+                      conversation_history: ["Previous message 1", "Previous message 2"]
+                    consciousness_context: "maintain_context"
+                  user_id: "user123"
+                  session_id: "session456"
+                  priority: 1
+                  client_type: "api"
+              biasguard_example:
+                summary: BiasGuard Request
+                value:
+                  service_type: "biasguard"
+                  payload:
+                    operation: "detect_bias"
+                    data:
+                      text: "This text may contain bias that needs to be detected"
+                    context: "content_moderation"
+                  user_id: "user123"
+                  session_id: "session456"
+                  priority: 3
+                  client_type: "chrome"
+                  client_version: "2.0.0"
+              healthguard_example:
+                summary: HealthGuard Request
+                value:
+                  service_type: "healthguard"
+                  payload:
+                    content: "System health check and security scan"
+                    content_type: "system_log"
+                    scan_level: "comprehensive"
+                    context: "security_audit"
+                    user_id: "user123"
+                  user_id: "user123"
+                  session_id: "session456"
+                  priority: 1
+                  client_type: "api"
+      responses:
+        '200':
+          description: Guard processing completed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnifiedGuardResponse'
+              examples:
+                tokenguard_response:
+                  summary: TokenGuard Response
+                  value:
+                    request_id: "REPLACE_ME"
+                    service_type: "tokenguard"
+                    success: true
+                    data:
+                      optimized_tokens: 150
+                      original_tokens: 200
+                      cost_savings: 0.25
+                      confidence_score: 0.95
+                      optimization_techniques: ["chunking", "compression", "summarization"]
+                      recommendations: ["Consider using shorter sentences", "Remove redundant phrases"]
+                      warnings: []
+                    processing_time: 0.123
+                    service_used: "tokenguard-service-1"
+                    fallback_used: false
+                    client_type: "vscode"
+                    confidence_score: 0.95
+                    warnings: []
+                    recommendations: ["Consider using shorter sentences", "Remove redundant phrases"]
+                    metadata:
+                      vscode_compatible: true
+                      notifications: []
+                      quick_fixes: []
+                      diagnostics: []
+                trustguard_response:
+                  summary: TrustGuard Response
+                  value:
+                    request_id: "REPLACE_ME"
+                    service_type: "trustguard"
+                    success: true
+                    data:
+                      trust_score: 0.85
+                      reliability_indicators: ["consistent", "factual", "well_sourced"]
+                      risk_factors: []
+                      confidence_level: "high"
+                      validation_metrics:
+                        accuracy: 0.92
+                        consistency: 0.88
+                        completeness: 0.90
+                    processing_time: 0.156
+                    service_used: "trustguard-service-1"
+                    fallback_used: false
+                    client_type: "web"
+                    confidence_score: 0.85
+                    warnings: []
+                    recommendations: ["Add more source citations", "Verify recent data"]
+                    metadata:
+                      web_compatible: true
+                      ui_components: {}
+                      user_feedback: {}
+                contextguard_response:
+                  summary: ContextGuard Response
+                  value:
+                    request_id: "REPLACE_ME"
+                    service_type: "contextguard"
+                    success: true
+                    data:
+                      context_drift_detected: false
+                      memory_usage: 0.45
+                      context_stability: 0.92
+                      recommendations: ["maintain_context", "continue_conversation"]
+                      context_metrics:
+                        coherence: 0.88
+                        relevance: 0.91
+                        consistency: 0.89
+                    processing_time: 0.089
+                    service_used: "contextguard-service-1"
+                    fallback_used: false
+                    client_type: "api"
+                    confidence_score: 0.92
+                    warnings: []
+                    recommendations: ["maintain_context", "continue_conversation"]
+                    metadata:
+                      api_compatible: true
+                      raw_data: {}
+                      structured_output: {}
+                biasguard_response:
+                  summary: BiasGuard Response
+                  value:
+                    request_id: "REPLACE_ME"
+                    service_type: "biasguard"
+                    success: true
+                    data:
+                      bias_detected: false
+                      bias_score: 0.12
+                      bias_types: []
+                      mitigation_suggestions: []
+                      bias_analysis:
+                        gender_bias: 0.05
+                        racial_bias: 0.08
+                        age_bias: 0.02
+                        cultural_bias: 0.15
+                    processing_time: 0.134
+                    service_used: "biasguard-service-1"
+                    fallback_used: false
+                    client_type: "chrome"
+                    confidence_score: 0.88
+                    warnings: []
+                    recommendations: ["Content appears unbiased", "Continue current approach"]
+                    metadata:
+                      chrome_compatible: true
+                      badge_text: ""
+                      popup_data: {}
+                      content_script_data: {}
+                healthguard_response:
+                  summary: HealthGuard Response
+                  value:
+                    request_id: "REPLACE_ME"
+                    service_type: "healthguard"
+                    success: true
+                    data:
+                      threats_detected: []
+                      security_score: 0.95
+                      vulnerabilities: []
+                      recommendations: ["content_safe", "no_action_required"]
+                      health_metrics:
+                        system_health: 0.95
+                        security_status: "secure"
+                        performance_score: 0.88
+                    processing_time: 0.167
+                    service_used: "healthguard-service-1"
+                    fallback_used: false
+                    client_type: "api"
+                    confidence_score: 0.95
+                    warnings: []
+                    recommendations: ["content_safe", "no_action_required"]
+                    metadata:
+                      api_compatible: true
+                      raw_data: {}
+                      structured_output: {}
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '429':
+          $ref: '#/components/responses/RateLimitExceeded'
+        '502':
+          description: Bad Gateway - Guard service error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                error:
+                  code: guard_service_error
+                  message: Guard service encountered an error
+                  details:
+                    service: "tokenguard"
+                    error_type: "processing_error"
+        '503':
+          description: Service Unavailable - Guard service unavailable
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                error:
+                  code: service_unavailable
+                  message: Guard service is currently unavailable
+                  details:
+                    service: "trustguard"
+                    fallback_used: true
+
+  # ====================
+  # ALIAS ENDPOINTS (Backward Compatibility)
+  # ====================
+  /guards/scan:
+    post:
+      tags: [Unified Guard Processing]
+      summary: Scan text (Alias for /process)
+      description: |
+        **Alias endpoint for backward compatibility.**
+        
+        This endpoint is identical to `/guards/process` and provides
+        the same unified guard processing functionality.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UnifiedGuardRequest'
+      responses:
+        '200':
+          description: Scan completed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnifiedGuardResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '429':
+          $ref: '#/components/responses/RateLimitExceeded'
+        '502':
+          $ref: '#/components/responses/BadGateway'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+
+  /scan:
+    post:
+      tags: [Unified Guard Processing]
+      summary: Scan text (Short Alias)
+      description: |
+        **Short alias endpoint for convenience.**
+        
+        This endpoint is identical to `/guards/process` and provides
+        the same unified guard processing functionality.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UnifiedGuardRequest'
+      responses:
+        '200':
+          description: Scan completed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnifiedGuardResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '429':
+          $ref: '#/components/responses/RateLimitExceeded'
+        '502':
+          $ref: '#/components/responses/BadGateway'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+
+  # ====================
+  # HEALTH & MONITORING
+  # ====================
+  /guards/health:
+    get:
+      tags: [Health & Monitoring]
+      summary: Get all guard services health
+      description: |
+        **Get health status of all guard services.**
+        
+        Returns comprehensive health information for all registered
+        guard services including status, response times, and metadata.
+      responses:
+        '200':
+          description: Health status retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  $ref: '#/components/schemas/ServiceHealthStatus'
+              example:
+                tokenguard:
+                  service_name: "tokenguard"
+                  status: "healthy"
+                  last_check: "2025-01-23T12:00:00Z"
+                  response_time: 0.045
+                  error_message: null
+                  metadata:
+                    version: "1.0.0"
+                    uptime: 3600
+                    requests_processed: 1250
+                trustguard:
+                  service_name: "trustguard"
+                  status: "healthy"
+                  last_check: "2025-01-23T12:00:00Z"
+                  response_time: 0.052
+                  error_message: null
+                  metadata:
+                    version: "1.0.0"
+                    uptime: 3600
+                    requests_processed: 980
+                contextguard:
+                  service_name: "contextguard"
+                  status: "degraded"
+                  last_check: "2025-01-23T12:00:00Z"
+                  response_time: 0.089
+                  error_message: "High memory usage detected"
+                  metadata:
+                    version: "1.0.0"
+                    uptime: 3600
+                    requests_processed: 750
+                    memory_usage: 0.85
+
+  /guards/health/{service_name}:
+    get:
+      tags: [Health & Monitoring]
+      summary: Get specific guard service health
+      description: |
+        **Get health status of a specific guard service.**
+        
+        Returns detailed health information for the specified
+        guard service including status, response time, and metadata.
+      parameters:
+        - name: service_name
+          in: path
+          required: true
+          description: Name of the guard service
+          schema:
+            type: string
+            enum: [tokenguard, trustguard, contextguard, biasguard, healthguard]
+      responses:
+        '200':
+          description: Health status retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServiceHealthStatus'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /guards/health/refresh:
+    post:
+      tags: [Health & Monitoring]
+      summary: Refresh health checks
+      description: |
+        **Trigger immediate health check refresh for all guard services.**
+        
+        Forces an immediate health check for all registered services
+        and updates their status without waiting for the next scheduled check.
+      responses:
+        '202':
+          description: Health check refresh initiated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Health checks refresh initiated"
+                  timestamp:
+                    type: string
+                    format: date-time
+                    example: "2025-01-23T12:00:00Z"
+
+  /guards/status:
+    get:
+      tags: [Health & Monitoring]
+      summary: Get services status (Alias for /health)
+      description: |
+        **Alias endpoint for /guards/health.**
+        
+        Returns the same health information as the /health endpoint.
+      responses:
+        '200':
+          description: Status retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  $ref: '#/components/schemas/ServiceHealthStatus'
+
+  # ====================
+  # SERVICE DISCOVERY
+  # ====================
+  /guards/services:
+    get:
+      tags: [Service Discovery]
+      summary: List all guard services
+      description: |
+        **List all available guard services and their configurations.**
+        
+        Returns comprehensive information about all registered guard services
+        including their types, endpoints, status, and configuration details.
+      responses:
+        '200':
+          description: Services list retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServicesListResponse'
+              example:
+                services:
+                  tokenguard:
+                    name: "TokenGuard"
+                    service_type: "tokenguard"
+                    base_url: "http://tokenguard:8001"
+                    enabled: true
+                    priority: 1
+                    tags: ["token", "optimization", "cost"]
+                    status: "healthy"
+                    last_check: "2025-01-23T12:00:00Z"
+                  trustguard:
+                    name: "TrustGuard"
+                    service_type: "trustguard"
+                    base_url: "http://trustguard:8002"
+                    enabled: true
+                    priority: 1
+                    tags: ["trust", "validation", "reliability"]
+                    status: "healthy"
+                    last_check: "2025-01-23T12:00:00Z"
+                total_services: 5
+                healthy_services: 5
+
+  /guards/discovery/services:
+    get:
+      tags: [Service Discovery]
+      summary: Get discovered services
+      description: |
+        **Get information about all discovered guard services.**
+        
+        Returns detailed information about all services discovered
+        through auto-discovery or manual registration.
+      responses:
+        '200':
+          description: Discovered services retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiscoveredServicesResponse'
+
+  /guards/discovery/register:
+    post:
+      tags: [Service Discovery]
+      summary: Register guard service
+      description: |
+        **Manually register a guard service.**
+        
+        Allows manual registration of guard services that may not be
+        discovered automatically through the discovery mechanism.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ServiceRegistrationRequest'
+      responses:
+        '201':
+          description: Service registered successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Service tokenguard registered successfully"
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+  /guards/discovery/services/{service_name}:
+    delete:
+      tags: [Service Discovery]
+      summary: Unregister guard service
+      description: |
+        **Unregister a guard service.**
+        
+        Removes a service from the orchestrator and stops monitoring it.
+      parameters:
+        - name: service_name
+          in: path
+          required: true
+          description: Name of the service to unregister
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Service unregistered successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Service tokenguard unregistered successfully"
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /guards/discovery/refresh:
+    post:
+      tags: [Service Discovery]
+      summary: Refresh service discovery
+      description: |
+        **Trigger immediate service discovery.**
+        
+        Forces an immediate discovery scan for new services
+        without waiting for the next discovery interval.
+      responses:
+        '202':
+          description: Discovery refresh initiated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Service discovery refresh initiated"
+
+  # ====================
+  # AUTHENTICATION (9 endpoints)
+  # ====================
+  /auth/register:
+    post:
+      tags: [Authentication]
+      summary: Register new user
+      description: Create a new user account with email and password
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserRegister'
+      responses:
+        '201':
+          description: User registered successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user_id:
+                    type: string
+                    format: uuid
+                  email:
+                    type: string
+                  message:
+                    type: string
+                    example: "User registered successfully. Please verify your email."
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '409':
+          description: User already exists
+
+  /auth/login:
+    post:
+      tags: [Authentication]
+      summary: User login
+      description: Authenticate user and receive JWT access and refresh tokens
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLogin'
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Token'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /auth/refresh:
+    post:
+      tags: [Authentication]
+      summary: Refresh JWT token
+      description: Get a new access token using refresh token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [refresh_token]
+              properties:
+                refresh_token:
+                  type: string
+                  description: Valid refresh token
+      responses:
+        '200':
+          description: Token refreshed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenData'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /auth/logout:
+    post:
+      tags: [Authentication]
+      summary: User logout
+      description: Invalidate current access and refresh tokens
+      responses:
+        '200':
+          description: Logout successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Logged out successfully"
+
+  /auth/validate:
+    get:
+      tags: [Authentication]
+      summary: Validate token
+      description: Validate if current JWT token is valid
+      responses:
+        '200':
+          description: Token is valid
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  valid:
+                    type: boolean
+                  user_id:
+                    type: string
+                    format: uuid
+                  expires_at:
+                    type: string
+                    format: date-time
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /auth/reset-password:
+    post:
+      tags: [Authentication]
+      summary: Request password reset
+      description: Send password reset email to user
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PasswordReset'
+      responses:
+        '200':
+          description: Password reset email sent
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Password reset email sent"
+
+  /auth/reset-password/confirm:
+    post:
+      tags: [Authentication]
+      summary: Confirm password reset
+      description: Reset password using token from email
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PasswordResetConfirm'
+      responses:
+        '200':
+          description: Password reset successful
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+  /auth/change-password:
+    post:
+      tags: [Authentication]
+      summary: Change password
+      description: Change password for authenticated user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PasswordChange'
+      responses:
+        '200':
+          description: Password changed successfully
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /auth/verify-email:
+    post:
+      tags: [Authentication]
+      summary: Verify email address
+      description: Verify user email using token from verification email
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmailVerification'
+      responses:
+        '200':
+          description: Email verified successfully
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+  # ====================
+  # TEXT ANALYSIS (3 endpoints)
+  # ====================
+  /analyze/text:
+    post:
+      tags: [Text Analysis]
+      summary: Analyze text
+      description: Analyze text using specified guard services
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnalyzeTextRequest'
+      responses:
+        '200':
+          description: Analysis completed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalysisResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '429':
+          $ref: '#/components/responses/RateLimitExceeded'
+
+  /analyze/batch:
+    post:
+      tags: [Text Analysis]
+      summary: Batch analyze texts
+      description: Analyze multiple texts in a single request
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BatchAnalyzeRequest'
+      responses:
+        '200':
+          description: Batch analysis completed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BatchAnalysisResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+  /analyze/{analysis_id}:
+    get:
+      tags: [Text Analysis]
+      summary: Get analysis by ID
+      description: Retrieve a previous analysis result
+      parameters:
+        - name: analysis_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Analysis found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalysisResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  # ====================
+  # GUARD SERVICES (13 endpoints)
+  # ====================
+  /guards/process:
+    post:
+      tags: [Guard Services]
+      summary: Process guard request
+      description: Generic guard processing endpoint
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GuardRequest'
+      responses:
+        '200':
+          description: Guard processing completed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GuardResponse'
+
+  /guards/biasguard/detect:
+    post:
+      tags: [Guard Services]
+      summary: Detect bias
+      description: Detect bias in text using BiasGuard
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BiasGuardRequest'
+      responses:
+        '200':
+          description: Bias detection completed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BiasGuardResponse'
+
+  /guards/trustguard/validate:
+    post:
+      tags: [Guard Services]
+      summary: Validate trust
+      description: Validate trust and reliability using TrustGuard
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TrustGuardRequest'
+      responses:
+        '200':
+          description: Trust validation completed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrustGuardResponse'
+
+  /guards/contextguard/analyze:
+    post:
+      tags: [Guard Services]
+      summary: Analyze context
+      description: Analyze context and detect drift using ContextGuard
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ContextGuardRequest'
+      responses:
+        '200':
+          description: Context analysis completed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContextGuardResponse'
+
+  /guards/tokenguard/optimize:
+    post:
+      tags: [Guard Services]
+      summary: Optimize tokens
+      description: Optimize token usage and calculate costs using TokenGuard
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TokenGuardRequest'
+      responses:
+        '200':
+          description: Token optimization completed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenGuardResponse'
+
+  /guards:
+    get:
+      tags: [Guard Services]
+      summary: List all guards
+      description: Get list of all available guard services with status
+      responses:
+        '200':
+          description: List of guards
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  guards:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/GuardService'
+
+  /guards/{guard_name}:
+    get:
+      tags: [Guard Services]
+      summary: Get guard details
+      description: Get detailed information about a specific guard
+      parameters:
+        - $ref: '#/components/parameters/GuardName'
+      responses:
+        '200':
+          description: Guard details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GuardServiceDetailed'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /guards/health:
+    get:
+      tags: [Guard Services]
+      summary: Get all guard health status
+      description: Get health status of all guard services
+      responses:
+        '200':
+          description: Guard health status
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  $ref: '#/components/schemas/HealthStatus'
+
+  /guards/health/{service_name}:
+    get:
+      tags: [Guard Services]
+      summary: Get specific guard health
+      description: Get health status of a specific guard service
+      parameters:
+        - name: service_name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Guard health status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthStatus'
+
+  /guards/health/refresh:
+    post:
+      tags: [Guard Services]
+      summary: Refresh health checks
+      description: Trigger health check refresh for all guards
+      responses:
+        '202':
+          description: Health check refresh initiated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+
+  /guards/discovery/services:
+    get:
+      tags: [Guard Services]
+      summary: Discover services
+      description: Get list of discovered guard services
+      responses:
+        '200':
+          description: List of discovered services
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: object
+
+  /guards/discovery/register:
+    post:
+      tags: [Guard Services]
+      summary: Register service
+      description: Register a new guard service
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ServiceRegistration'
+      responses:
+        '201':
+          description: Service registered successfully
+
+  /guards/discovery/services/{service_name}:
+    delete:
+      tags: [Guard Services]
+      summary: Unregister service
+      description: Unregister a guard service
+      parameters:
+        - name: service_name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Service unregistered successfully
+
+  /guards/discovery/refresh:
+    post:
+      tags: [Guard Services]
+      summary: Refresh service discovery
+      description: Trigger service discovery refresh
+      responses:
+        '202':
+          description: Discovery refresh initiated
+
+  /guards/services:
+    get:
+      tags: [Guard Services]
+      summary: List services
+      description: List all guard services with details
+      responses:
+        '200':
+          description: List of services
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  services:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/GuardService'
+
+  # ====================
+  # USERS (10 endpoints)
+  # ====================
+  /users/me:
+    get:
+      tags: [Users]
+      summary: Get current user profile
+      description: Get profile of currently authenticated user
+      responses:
+        '200':
+          description: User profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+
+    put:
+      tags: [Users]
+      summary: Update current user profile
+      description: Update profile of currently authenticated user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserUpdate'
+      responses:
+        '200':
+          description: User updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+
+  /users:
+    get:
+      tags: [Users]
+      summary: List all users
+      description: List all users (Admin only)
+      parameters:
+        - name: skip
+          in: query
+          schema:
+            type: integer
+            default: 0
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 100
+        - name: search
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of users
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserListResponse'
+
+    post:
+      tags: [Users]
+      summary: Create new user
+      description: Create a new user (Admin only)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserCreate'
+      responses:
+        '201':
+          description: User created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+
+  /users/{user_id}:
+    get:
+      tags: [Users]
+      summary: Get user by ID
+      description: Get user details by ID (Admin only)
+      parameters:
+        - $ref: '#/components/parameters/UserId'
+      responses:
+        '200':
+          description: User details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    put:
+      tags: [Users]
+      summary: Update user
+      description: Update user details (Admin only)
+      parameters:
+        - $ref: '#/components/parameters/UserId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserUpdate'
+      responses:
+        '200':
+          description: User updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+
+    delete:
+      tags: [Users]
+      summary: Delete user
+      description: Delete user account (Admin only)
+      parameters:
+        - $ref: '#/components/parameters/UserId'
+      responses:
+        '204':
+          description: User deleted successfully
+
+  /users/bulk:
+    post:
+      tags: [Users]
+      summary: Bulk create users
+      description: Create multiple users at once (Admin only)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                users:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/UserCreate'
+      responses:
+        '201':
+          description: Users created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  created:
+                    type: integer
+                  users:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/UserResponse'
+
+  /users/search:
+    get:
+      tags: [Users]
+      summary: Search users
+      description: Search users by email, name, or other criteria
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Search results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserListResponse'
+
+  /users/{user_id}/roles:
+    post:
+      tags: [Users]
+      summary: Update user roles
+      description: Update roles for a specific user (Admin only)
+      parameters:
+        - $ref: '#/components/parameters/UserId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                roles:
+                  type: array
+                  items:
+                    type: string
+                    enum: [admin, user, moderator]
+      responses:
+        '200':
+          description: Roles updated successfully
+
+  # ====================
+  # POSTS/CONTENT (8 endpoints)
+  # ====================
+  /posts:
+    get:
+      tags: [Posts]
+      summary: List posts
+      description: Get list of blog posts or content
+      parameters:
+        - name: skip
+          in: query
+          schema:
+            type: integer
+            default: 0
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+        - name: status
+          in: query
+          schema:
+            type: string
+            enum: [draft, published, archived]
+      responses:
+        '200':
+          description: List of posts
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostListResponse'
+
+    post:
+      tags: [Posts]
+      summary: Create new post
+      description: Create a new blog post or content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostCreate'
+      responses:
+        '201':
+          description: Post created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostResponse'
+
+  /posts/{post_id}:
+    get:
+      tags: [Posts]
+      summary: Get post by ID
+      description: Get post details by ID
+      parameters:
+        - $ref: '#/components/parameters/PostId'
+      responses:
+        '200':
+          description: Post details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    put:
+      tags: [Posts]
+      summary: Update post
+      description: Update post content and metadata
+      parameters:
+        - $ref: '#/components/parameters/PostId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostUpdate'
+      responses:
+        '200':
+          description: Post updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostResponse'
+
+    delete:
+      tags: [Posts]
+      summary: Delete post
+      description: Delete a post
+      parameters:
+        - $ref: '#/components/parameters/PostId'
+      responses:
+        '204':
+          description: Post deleted successfully
+
+  /posts/slug/{slug}:
+    get:
+      tags: [Posts]
+      summary: Get post by slug
+      description: Get post by URL-friendly slug
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Post found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostResponse'
+
+  /posts/{post_id}/publish:
+    post:
+      tags: [Posts]
+      summary: Publish post
+      description: Publish a draft post
+      parameters:
+        - $ref: '#/components/parameters/PostId'
+      responses:
+        '200':
+          description: Post published successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostResponse'
+
+  /posts/bulk:
+    post:
+      tags: [Posts]
+      summary: Bulk create posts
+      description: Create multiple posts at once
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                posts:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/PostCreate'
+      responses:
+        '201':
+          description: Posts created successfully
+
+  # ====================
+  # ORGANIZATIONS (7 endpoints)
+  # ====================
+  /organizations/current:
+    get:
+      tags: [Organizations]
+      summary: Get current organization
+      description: Get details of user's organization
+      responses:
+        '200':
+          description: Organization details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrganizationResponse'
+
+  /organizations/members:
+    get:
+      tags: [Organizations]
+      summary: Get organization members
+      description: List all members of current organization
+      responses:
+        '200':
+          description: List of members
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  members:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/MemberResponse'
+
+  /organizations/members/invite:
+    post:
+      tags: [Organizations]
+      summary: Invite member
+      description: Invite a new member to organization
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MemberInvite'
+      responses:
+        '201':
+          description: Invitation sent successfully
+
+  /organizations/members/{member_id}:
+    put:
+      tags: [Organizations]
+      summary: Update member
+      description: Update member role or permissions
+      parameters:
+        - name: member_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MemberUpdate'
+      responses:
+        '200':
+          description: Member updated successfully
+
+    delete:
+      tags: [Organizations]
+      summary: Remove member
+      description: Remove member from organization
+      parameters:
+        - name: member_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '204':
+          description: Member removed successfully
+
+  /organizations/create:
+    post:
+      tags: [Organizations]
+      summary: Create organization
+      description: Create a new organization
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrganizationCreate'
+      responses:
+        '201':
+          description: Organization created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrganizationResponse'
+
+  /organizations/settings:
+    get:
+      tags: [Organizations]
+      summary: Get organization settings
+      description: Get configuration settings for organization
+      responses:
+        '200':
+          description: Organization settings
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+
+  # ====================
+  # SUBSCRIPTIONS (8 endpoints)
+  # ====================
+  /subscriptions/tiers:
+    get:
+      tags: [Subscriptions]
+      summary: Get subscription tiers
+      description: List all available subscription tiers
+      security: []
+      responses:
+        '200':
+          description: List of subscription tiers
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  tiers:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/SubscriptionTier'
+
+  /subscriptions/current:
+    get:
+      tags: [Subscriptions]
+      summary: Get current subscription
+      description: Get user's current subscription details
+      responses:
+        '200':
+          description: Current subscription
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubscriptionResponse'
+
+  /subscriptions/checkout:
+    post:
+      tags: [Subscriptions]
+      summary: Create checkout session
+      description: Create Stripe checkout session for subscription
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CheckoutRequest'
+      responses:
+        '200':
+          description: Checkout session created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckoutResponse'
+
+  /subscriptions/webhook:
+    post:
+      tags: [Subscriptions]
+      summary: Stripe webhook
+      description: Handle Stripe webhook events
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Webhook processed successfully
+
+  /subscriptions/cancel:
+    post:
+      tags: [Subscriptions]
+      summary: Cancel subscription
+      description: Cancel user's current subscription
+      responses:
+        '200':
+          description: Subscription cancelled successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  cancels_at:
+                    type: string
+                    format: date-time
+
+  /subscriptions/upgrade:
+    post:
+      tags: [Subscriptions]
+      summary: Upgrade subscription
+      description: Upgrade to a higher subscription tier
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tier_id:
+                  type: string
+      responses:
+        '200':
+          description: Subscription upgraded successfully
+
+  /subscriptions/usage:
+    get:
+      tags: [Subscriptions]
+      summary: Get usage statistics
+      description: Get current billing period usage statistics
+      responses:
+        '200':
+          description: Usage statistics
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UsageResponse'
+
+  /subscriptions/invoices:
+    get:
+      tags: [Subscriptions]
+      summary: Get invoices
+      description: List all invoices for current user
+      responses:
+        '200':
+          description: List of invoices
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  invoices:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Invoice'
+
+  # ====================
+  # ENTERPRISE (6 endpoints)
+  # ====================
+  /enterprise/setup:
+    post:
+      tags: [Enterprise]
+      summary: Enterprise setup
+      description: Set up enterprise features for organization
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EnterpriseSetup'
+      responses:
+        '201':
+          description: Enterprise setup completed
+
+  /enterprise/status:
+    get:
+      tags: [Enterprise]
+      summary: Get enterprise status
+      description: Get enterprise feature status and configuration
+      responses:
+        '200':
+          description: Enterprise status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EnterpriseStatusResponse'
+
+  /enterprise/sso/configure:
+    post:
+      tags: [Enterprise]
+      summary: Configure SSO
+      description: Configure Single Sign-On for organization
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SSOConfig'
+      responses:
+        '200':
+          description: SSO configured successfully
+
+  /enterprise/sso/metadata:
+    get:
+      tags: [Enterprise]
+      summary: Get SSO metadata
+      description: Get SAML metadata for SSO configuration
+      responses:
+        '200':
+          description: SSO metadata
+          content:
+            application/xml:
+              schema:
+                type: string
+
+  /enterprise/audit/export:
+    post:
+      tags: [Enterprise]
+      summary: Export audit logs
+      description: Export audit logs for compliance
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                start_date:
+                  type: string
+                  format: date-time
+                end_date:
+                  type: string
+                  format: date-time
+                format:
+                  type: string
+                  enum: [json, csv, pdf]
+      responses:
+        '200':
+          description: Audit log export URL
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  export_url:
+                    type: string
+                    format: uri
+
+  /enterprise/compliance/report:
+    get:
+      tags: [Enterprise]
+      summary: Get compliance report
+      description: Generate compliance report for enterprise
+      responses:
+        '200':
+          description: Compliance report
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ComplianceReport'
+
+  # ====================
+  # LEGAL/COMPLIANCE (9 endpoints)
+  # ====================
+  /legal/terms:
+    get:
+      tags: [Legal]
+      summary: Get terms of service
+      description: Get current terms of service
+      security: []
+      responses:
+        '200':
+          description: Terms of service
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LegalDocument'
+
+  /legal/privacy:
+    get:
+      tags: [Legal]
+      summary: Get privacy policy
+      description: Get current privacy policy
+      security: []
+      responses:
+        '200':
+          description: Privacy policy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LegalDocument'
+
+  /legal/cookies:
+    get:
+      tags: [Legal]
+      summary: Get cookie policy
+      description: Get current cookie policy
+      security: []
+      responses:
+        '200':
+          description: Cookie policy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LegalDocument'
+
+  /legal/consent:
+    post:
+      tags: [Legal]
+      summary: Record consent
+      description: Record user consent for data processing
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConsentRecord'
+      responses:
+        '201':
+          description: Consent recorded successfully
+
+  /legal/consent/status:
+    get:
+      tags: [Legal]
+      summary: Get consent status
+      description: Get user's current consent status
+      responses:
+        '200':
+          description: Consent status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConsentStatus'
+
+  /legal/data-request:
+    post:
+      tags: [Legal]
+      summary: Request user data
+      description: Request export of all user data (GDPR)
+      responses:
+        '202':
+          description: Data export request accepted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  request_id:
+                    type: string
+                    format: uuid
+                  estimated_completion:
+                    type: string
+                    format: date-time
+
+  /legal/data-deletion:
+    post:
+      tags: [Legal]
+      summary: Request data deletion
+      description: Request deletion of all user data (GDPR right to be forgotten)
+      responses:
+        '202':
+          description: Deletion request accepted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  request_id:
+                    type: string
+                    format: uuid
+                  scheduled_deletion:
+                    type: string
+                    format: date-time
+
+  /legal/compliance/gdpr:
+    get:
+      tags: [Legal]
+      summary: Get GDPR compliance status
+      description: Get GDPR compliance report
+      responses:
+        '200':
+          description: GDPR compliance status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ComplianceStatus'
+
+  /legal/compliance/ccpa:
+    get:
+      tags: [Legal]
+      summary: Get CCPA compliance status
+      description: Get CCPA compliance report
+      responses:
+        '200':
+          description: CCPA compliance status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ComplianceStatus'
+
+  # ====================
+  # CONFIGURATION (2 endpoints)
+  # ====================
+  /config/user:
+    get:
+      tags: [Configuration]
+      summary: Get user configuration
+      description: Get user's guard service configuration and preferences
+      responses:
+        '200':
+          description: User configuration
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserConfig'
+
+    put:
+      tags: [Configuration]
+      summary: Update user configuration
+      description: Update user's guard service configuration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserConfigUpdate'
+      responses:
+        '200':
+          description: Configuration updated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: updated
+                  config:
+                    $ref: '#/components/schemas/UserConfig'
+
+  # ====================
+  # HEALTH & MONITORING (7 endpoints)
+  # ====================
+  /health:
+    get:
+      tags: [Health]
+      summary: Basic health check
+      description: Check if API is responding
+      security: []
+      responses:
+        '200':
+          description: API is healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+
+  /health/ready:
+    get:
+      tags: [Health]
+      summary: Readiness check
+      description: Check if API is ready to serve requests
+      security: []
+      responses:
+        '200':
+          description: API is ready
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ready:
+                    type: boolean
+                  checks:
+                    type: object
+                    additionalProperties:
+                      type: string
+
+  /health/live:
+    get:
+      tags: [Health]
+      summary: Liveness check
+      description: Kubernetes liveness probe
+      security: []
+      responses:
+        '200':
+          description: API is alive
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: alive
+
+  /health/comprehensive:
+    get:
+      tags: [Health]
+      summary: Comprehensive health check
+      description: Detailed health check with all service statuses
+      responses:
+        '200':
+          description: Comprehensive health status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ComprehensiveHealth'
+
+  /health/circuit-breakers:
+    get:
+      tags: [Health]
+      summary: Circuit breaker status
+      description: Get circuit breaker status for all services
+      responses:
+        '200':
+          description: Circuit breaker status
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  $ref: '#/components/schemas/CircuitBreakerStatus'
+
+  /health/configuration:
+    get:
+      tags: [Health]
+      summary: Configuration health
+      description: Validate configuration health
+      responses:
+        '200':
+          description: Configuration status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  valid:
+                    type: boolean
+                  issues:
+                    type: array
+                    items:
+                      type: string
+
+  /metrics:
+    get:
+      tags: [Health]
+      summary: Prometheus metrics
+      description: Get Prometheus-format metrics
+      security: []
+      responses:
+        '200':
+          description: Prometheus metrics
+          content:
+            text/plain:
+              schema:
+                type: string
+
+# ====================
+# COMPONENTS
+# ====================
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT access token
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: API key for service-to-service authentication
+
+  parameters:
+    GuardName:
+      name: guard_name
+      in: path
+      required: true
+      description: Name of the guard service
+      schema:
+        type: string
+        enum: [biasguard, trustguard, contextguard, securityguard, tokenguard, healthguard]
+
+    UserId:
+      name: user_id
+      in: path
+      required: true
+      description: User ID
+      schema:
+        type: string
+        format: uuid
+
+    PostId:
+      name: post_id
+      in: path
+      required: true
+      description: Post ID
+      schema:
+        type: string
+        format: uuid
+
+  schemas:
+    # ====================
+    # AUTHENTICATION SCHEMAS
+    # ====================
+    UserLogin:
+      type: object
+      required: [email, password]
+      properties:
+        email:
+          type: string
+          format: email
+          example: user@example.com
+        password:
+          type: string
+          format: password
+          minLength: 8
+          example: SecurePass123!
+
+    UserRegister:
+      type: object
+      required: [email, password, full_name]
+      properties:
+        email:
+          type: string
+          format: email
+          example: user@example.com
+        password:
+          type: string
+          format: password
+          minLength: 8
+          example: SecurePass123!
+        full_name:
+          type: string
+          minLength: 1
+          maxLength: 255
+          example: John Doe
+
+    Token:
+      type: object
+      properties:
+        access_token:
+          type: string
+          description: JWT access token
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+        refresh_token:
+          type: string
+          description: JWT refresh token
+        token_type:
+          type: string
+          example: bearer
+          default: bearer
+        expires_in:
+          type: integer
+          description: Token expiry in seconds
+          example: 3600
+
+    TokenData:
+      type: object
+      properties:
+        access_token:
+          type: string
+        token_type:
+          type: string
+          default: bearer
+
+    PasswordReset:
+      type: object
+      required: [email]
+      properties:
+        email:
+          type: string
+          format: email
+
+    PasswordResetConfirm:
+      type: object
+      required: [token, new_password]
+      properties:
+        token:
+          type: string
+        new_password:
+          type: string
+          format: password
+          minLength: 8
+
+    PasswordChange:
+      type: object
+      required: [current_password, new_password]
+      properties:
+        current_password:
+          type: string
+        new_password:
+          type: string
+          minLength: 8
+
+    EmailVerification:
+      type: object
+      required: [token]
+      properties:
+        token:
+          type: string
+
+    # ====================
+    # ANALYSIS SCHEMAS
+    # ====================
+    AnalyzeTextRequest:
+      type: object
+      required: [text]
+      properties:
+        text:
+          type: string
+          maxLength: 10000
+          description: Text to analyze
+          example: "This is a test text that might contain bias"
+        guards:
+          type: array
+          items:
+            type: string
+            enum: [biasguard, trustguard, contextguard, securityguard]
+          default: [biasguard, trustguard]
+          description: List of guard services to use
+        options:
+          type: object
+          properties:
+            threshold:
+              type: number
+              minimum: 0
+              maximum: 1
+              default: 0.5
+              description: Detection threshold
+            language:
+              type: string
+              default: en
+              description: Text language code
+            context:
+              type: string
+              default: general
+              description: Analysis context
+        metadata:
+          type: object
+          properties:
+            source:
+              type: string
+              example: chrome-extension
+            url:
+              type: string
+              format: uri
+            timestamp:
+              type: string
+              format: date-time
+
+    AnalysisResponse:
+      type: object
+      properties:
+        analysis_id:
+          type: string
+          format: uuid
+          description: Unique analysis identifier
+        text:
+          type: string
+          description: Original text analyzed
+        timestamp:
+          type: string
+          format: date-time
+        overall_score:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: Overall quality/safety score
+        guards:
+          type: object
+          description: Results from each guard service
+          additionalProperties:
+            $ref: '#/components/schemas/GuardResult'
+        suggestions:
+          type: array
+          items:
+            type: string
+          description: Actionable suggestions for improvement
+        metadata:
+          $ref: '#/components/schemas/AnalysisMetadata'
+
+    BatchAnalyzeRequest:
+      type: object
+      required: [texts]
+      properties:
+        texts:
+          type: array
+          maxItems: 100
+          items:
+            type: object
+            required: [id, text]
+            properties:
+              id:
+                type: string
+                description: Client-provided ID for tracking
+              text:
+                type: string
+                maxLength: 10000
+              guards:
+                type: array
+                items:
+                  type: string
+        options:
+          type: object
+          properties:
+            parallel:
+              type: boolean
+              default: true
+              description: Process requests in parallel
+            max_concurrent:
+              type: integer
+              default: 5
+              description: Maximum concurrent requests
+
+    BatchAnalysisResponse:
+      type: object
+      properties:
+        batch_id:
+          type: string
+          format: uuid
+        results:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              analysis:
+                $ref: '#/components/schemas/AnalysisResponse'
+              status:
+                type: string
+                enum: [completed, failed, skipped]
+        summary:
+          type: object
+          properties:
+            total:
+              type: integer
+            completed:
+              type: integer
+            failed:
+              type: integer
+            processing_time_ms:
+              type: integer
+
+    # ====================
+    # GUARD SERVICE SCHEMAS
+    # ====================
+    GuardRequest:
+      type: object
+      required: [text, guard_type]
+      properties:
+        text:
+          type: string
+          maxLength: 10000
+        guard_type:
+          type: string
+          enum: [biasguard, trustguard, contextguard, securityguard, tokenguard]
+        options:
+          type: object
+          additionalProperties: true
+
+    GuardResponse:
+      type: object
+      properties:
+        guard_type:
+          type: string
+        score:
+          type: number
+          minimum: 0
+          maximum: 1
+        status:
+          type: string
+          enum: [completed, failed]
+        result:
+          type: object
+          additionalProperties: true
+        processing_time_ms:
+          type: integer
+
+    BiasGuardRequest:
+      type: object
+      required: [text]
+      properties:
+        text:
+          type: string
+          maxLength: 10000
+        threshold:
+          type: number
+          minimum: 0
+          maximum: 1
+          default: 0.5
+        bias_types:
+          type: array
+          items:
+            type: string
+            enum: [gender, racial, age, cultural, statistical]
+
+    BiasGuardResponse:
+      type: object
+      properties:
+        score:
+          type: number
+        detected_biases:
+          type: array
+          items:
+            $ref: '#/components/schemas/DetectedBias'
+        suggestions:
+          type: array
+          items:
+            type: string
+
+    TrustGuardRequest:
+      type: object
+      required: [text]
+      properties:
+        text:
+          type: string
+        source:
+          type: string
+        context:
+          type: object
+
+    TrustGuardResponse:
+      type: object
+      properties:
+        trust_score:
+          type: number
+        reliability:
+          type: number
+        accuracy:
+          type: number
+        failure_risk:
+          type: number
+
+    ContextGuardRequest:
+      type: object
+      required: [text]
+      properties:
+        text:
+          type: string
+        conversation_history:
+          type: array
+          items:
+            type: string
+
+    ContextGuardResponse:
+      type: object
+      properties:
+        context_score:
+          type: number
+        drift_detected:
+          type: boolean
+        drift_magnitude:
+          type: number
+        relevance:
+          type: number
+
+    TokenGuardRequest:
+      type: object
+      required: [text]
+      properties:
+        text:
+          type: string
+        max_tokens:
+          type: integer
+
+    TokenGuardResponse:
+      type: object
+      properties:
+        token_count:
+          type: integer
+        efficiency_score:
+          type: number
+        cost:
+          type: number
+        recommendations:
+          type: array
+          items:
+            type: string
+
+    GuardResult:
+      type: object
+      properties:
+        score:
+          type: number
+          minimum: 0
+          maximum: 1
+        status:
+          type: string
+          enum: [completed, failed, skipped]
+        detected_biases:
+          type: array
+          items:
+            $ref: '#/components/schemas/DetectedBias'
+        trust_metrics:
+          $ref: '#/components/schemas/TrustMetrics'
+        response_time_ms:
+          type: integer
+
+    DetectedBias:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: [gender_bias, racial_bias, age_bias, cultural_bias, statistical_bias, semantic_bias]
+        confidence:
+          type: number
+          minimum: 0
+          maximum: 1
+        location:
+          type: object
+          properties:
+            start:
+              type: integer
+            end:
+              type: integer
+        severity:
+          type: string
+          enum: [low, medium, high, critical]
+        suggestion:
+          type: string
+
+    TrustMetrics:
+      type: object
+      properties:
+        reliability:
+          type: number
+          minimum: 0
+          maximum: 1
+        accuracy:
+          type: number
+          minimum: 0
+          maximum: 1
+        consistency:
+          type: number
+          minimum: 0
+          maximum: 1
+
+    AnalysisMetadata:
+      type: object
+      properties:
+        processing_time_ms:
+          type: integer
+        guards_used:
+          type: integer
+        cache_hit:
+          type: boolean
+
+    GuardService:
+      type: object
+      properties:
+        name:
+          type: string
+          example: biasguard
+        enabled:
+          type: boolean
+        status:
+          type: string
+          enum: [healthy, degraded, unhealthy]
+        version:
+          type: string
+          example: 1.0.0
+        capabilities:
+          type: array
+          items:
+            type: string
+        threshold:
+          type: number
+        response_time_avg_ms:
+          type: integer
+
+    GuardServiceDetailed:
+      allOf:
+        - $ref: '#/components/schemas/GuardService'
+        - type: object
+          properties:
+            description:
+              type: string
+            configuration:
+              type: object
+              properties:
+                min_confidence:
+                  type: number
+                max_text_length:
+                  type: integer
+                supported_languages:
+                  type: array
+                  items:
+                    type: string
+            metrics:
+              type: object
+              properties:
+                requests_total:
+                  type: integer
+                requests_24h:
+                  type: integer
+                success_rate:
+                  type: number
+                avg_response_time_ms:
+                  type: integer
+
+    ServiceRegistration:
+      type: object
+      required: [service_name, service_url]
+      properties:
+        service_name:
+          type: string
+        service_url:
+          type: string
+          format: uri
+        service_type:
+          type: string
+        version:
+          type: string
+
+    HealthStatus:
+      type: object
+      properties:
+        name:
+          type: string
+        status:
+          type: string
+          enum: [healthy, degraded, unhealthy]
+        version:
+          type: string
+        uptime_seconds:
+          type: integer
+        last_check:
+          type: string
+          format: date-time
+        metrics:
+          type: object
+          properties:
+            cpu_usage:
+              type: number
+            memory_usage_mb:
+              type: integer
+            request_queue:
+              type: integer
+
+    # ====================
+    # USER SCHEMAS
+    # ====================
+    UserResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        email:
+          type: string
+          format: email
+        full_name:
+          type: string
+        is_active:
+          type: boolean
+        is_verified:
+          type: boolean
+        roles:
+          type: array
+          items:
+            type: string
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+
+    UserCreate:
+      type: object
+      required: [email, password, full_name]
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+          minLength: 8
+        full_name:
+          type: string
+
+    UserUpdate:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+        full_name:
+          type: string
+        is_active:
+          type: boolean
+
+    UserListResponse:
+      type: object
+      properties:
+        users:
+          type: array
+          items:
+            $ref: '#/components/schemas/UserResponse'
+        total:
+          type: integer
+        skip:
+          type: integer
+        limit:
+          type: integer
+
+    # ====================
+    # POST/CONTENT SCHEMAS
+    # ====================
+    PostResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+        slug:
+          type: string
+        content:
+          type: string
+        excerpt:
+          type: string
+        author_id:
+          type: string
+          format: uuid
+        status:
+          type: string
+          enum: [draft, published, archived]
+        published_at:
+          type: string
+          format: date-time
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+        tags:
+          type: array
+          items:
+            type: string
+        metadata:
+          type: object
+
+    PostCreate:
+      type: object
+      required: [title, content]
+      properties:
+        title:
+          type: string
+        content:
+          type: string
+        excerpt:
+          type: string
+        status:
+          type: string
+          enum: [draft, published]
+          default: draft
+        tags:
+          type: array
+          items:
+            type: string
+
+    PostUpdate:
+      type: object
+      properties:
+        title:
+          type: string
+        content:
+          type: string
+        excerpt:
+          type: string
+        status:
+          type: string
+          enum: [draft, published, archived]
+        tags:
+          type: array
+          items:
+            type: string
+
+    PostListResponse:
+      type: object
+      properties:
+        posts:
+          type: array
+          items:
+            $ref: '#/components/schemas/PostResponse'
+        total:
+          type: integer
+        skip:
+          type: integer
+        limit:
+          type: integer
+
+    # ====================
+    # ORGANIZATION SCHEMAS
+    # ====================
+    OrganizationResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        description:
+          type: string
+        website:
+          type: string
+          format: uri
+        industry:
+          type: string
+        member_count:
+          type: integer
+        subscription_tier:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+
+    OrganizationCreate:
+      type: object
+      required: [name]
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        website:
+          type: string
+          format: uri
+        industry:
+          type: string
+
+    MemberResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        user_id:
+          type: string
+          format: uuid
+        organization_id:
+          type: string
+          format: uuid
+        role:
+          type: string
+          enum: [owner, admin, member, guest]
+        permissions:
+          type: array
+          items:
+            type: string
+        joined_at:
+          type: string
+          format: date-time
+
+    MemberInvite:
+      type: object
+      required: [email]
+      properties:
+        email:
+          type: string
+          format: email
+        role:
+          type: string
+          enum: [admin, member, guest]
+          default: member
+
+    MemberUpdate:
+      type: object
+      properties:
+        role:
+          type: string
+          enum: [owner, admin, member, guest]
+        permissions:
+          type: array
+          items:
+            type: string
+
+    # ====================
+    # SUBSCRIPTION SCHEMAS
+    # ====================
+    SubscriptionTier:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+          example: Pro
+        description:
+          type: string
+        price_monthly:
+          type: number
+          format: float
+        price_yearly:
+          type: number
+          format: float
+        features:
+          type: array
+          items:
+            type: string
+        limits:
+          type: object
+          properties:
+            requests_per_hour:
+              type: integer
+            users:
+              type: integer
+            organizations:
+              type: integer
+
+    SubscriptionResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        user_id:
+          type: string
+          format: uuid
+        tier_id:
+          type: string
+        status:
+          type: string
+          enum: [active, cancelled, past_due, trialing]
+        current_period_start:
+          type: string
+          format: date-time
+        current_period_end:
+          type: string
+          format: date-time
+        cancel_at:
+          type: string
+          format: date-time
+
+    CheckoutRequest:
+      type: object
+      required: [tier_id]
+      properties:
+        tier_id:
+          type: string
+        billing_period:
+          type: string
+          enum: [monthly, yearly]
+          default: monthly
+        success_url:
+          type: string
+          format: uri
+        cancel_url:
+          type: string
+          format: uri
+
+    CheckoutResponse:
+      type: object
+      properties:
+        session_id:
+          type: string
+        checkout_url:
+          type: string
+          format: uri
+
+    UsageResponse:
+      type: object
+      properties:
+        period_start:
+          type: string
+          format: date-time
+        period_end:
+          type: string
+          format: date-time
+        requests_made:
+          type: integer
+        requests_limit:
+          type: integer
+        usage_percentage:
+          type: number
+        overage:
+          type: integer
+
+    Invoice:
+      type: object
+      properties:
+        id:
+          type: string
+        amount:
+          type: number
+        currency:
+          type: string
+        status:
+          type: string
+          enum: [paid, pending, failed]
+        created_at:
+          type: string
+          format: date-time
+        pdf_url:
+          type: string
+          format: uri
+
+    # ====================
+    # ENTERPRISE SCHEMAS
+    # ====================
+    EnterpriseSetup:
+      type: object
+      required: [organization_id]
+      properties:
+        organization_id:
+          type: string
+          format: uuid
+        features:
+          type: array
+          items:
+            type: string
+            enum: [sso, audit_logs, custom_integrations, dedicated_support]
+
+    EnterpriseStatusResponse:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+        features:
+          type: array
+          items:
+            type: string
+        sso_configured:
+          type: boolean
+        audit_logs_enabled:
+          type: boolean
+
+    SSOConfig:
+      type: object
+      required: [provider, metadata_url]
+      properties:
+        provider:
+          type: string
+          enum: [okta, azure_ad, google, generic_saml]
+        metadata_url:
+          type: string
+          format: uri
+        entity_id:
+          type: string
+        acs_url:
+          type: string
+          format: uri
+
+    ComplianceReport:
+      type: object
+      properties:
+        organization_id:
+          type: string
+          format: uuid
+        report_date:
+          type: string
+          format: date-time
+        compliance_status:
+          type: object
+          properties:
+            gdpr:
+              type: string
+              enum: [compliant, non_compliant, pending]
+            ccpa:
+              type: string
+              enum: [compliant, non_compliant, pending]
+            soc2:
+              type: string
+              enum: [compliant, non_compliant, pending]
+        audit_summary:
+          type: object
+
+    # ====================
+    # LEGAL SCHEMAS
+    # ====================
+    LegalDocument:
+      type: object
+      properties:
+        version:
+          type: string
+        effective_date:
+          type: string
+          format: date-time
+        content:
+          type: string
+        content_html:
+          type: string
+
+    ConsentRecord:
+      type: object
+      required: [consent_type, granted]
+      properties:
+        consent_type:
+          type: string
+          enum: [terms, privacy, cookies, marketing, data_processing]
+        granted:
+          type: boolean
+        timestamp:
+          type: string
+          format: date-time
+
+    ConsentStatus:
+      type: object
+      properties:
+        consents:
+          type: object
+          additionalProperties:
+            type: object
+            properties:
+              granted:
+                type: boolean
+              timestamp:
+                type: string
+                format: date-time
+
+    ComplianceStatus:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [compliant, non_compliant, pending]
+        last_audit:
+          type: string
+          format: date-time
+        issues:
+          type: array
+          items:
+            type: string
+        recommendations:
+          type: array
+          items:
+            type: string
+
+    # ====================
+    # CONFIGURATION SCHEMAS
+    # ====================
+    UserConfig:
+      type: object
+      properties:
+        user_id:
+          type: string
+          format: uuid
+        guards:
+          type: object
+          additionalProperties:
+            type: object
+            properties:
+              enabled:
+                type: boolean
+              threshold:
+                type: number
+        preferences:
+          type: object
+          properties:
+            auto_analyze:
+              type: boolean
+            show_suggestions:
+              type: boolean
+            language:
+              type: string
+
+    UserConfigUpdate:
+      type: object
+      properties:
+        guards:
+          type: object
+          additionalProperties:
+            type: object
+        preferences:
+          type: object
+
+    # ====================
+    # HEALTH & MONITORING SCHEMAS
+    # ====================
+    HealthResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [healthy, degraded, unhealthy]
+        version:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+        services:
+          type: object
+          properties:
+            database:
+              type: string
+            redis:
+              type: string
+            guards:
+              type: object
+              additionalProperties:
+                type: string
+
+    ComprehensiveHealth:
+      type: object
+      properties:
+        status:
+          type: string
+        version:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+        services:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/HealthStatus'
+        system_metrics:
+          type: object
+          properties:
+            cpu_usage:
+              type: number
+            memory_usage:
+              type: number
+            disk_usage:
+              type: number
+            uptime_seconds:
+              type: integer
+
+    CircuitBreakerStatus:
+      type: object
+      properties:
+        state:
+          type: string
+          enum: [closed, open, half_open]
+        failure_count:
+          type: integer
+        success_count:
+          type: integer
+        last_failure_time:
+          type: string
+          format: date-time
+
+    MetricsResponse:
+      type: object
+      properties:
+        requests:
+          type: object
+          properties:
+            total:
+              type: integer
+            last_hour:
+              type: integer
+            last_24h:
+              type: integer
+        performance:
+          type: object
+          properties:
+            avg_response_time_ms:
+              type: integer
+            p95_response_time_ms:
+              type: integer
+            p99_response_time_ms:
+              type: integer
+        errors:
+          type: object
+          properties:
+            total:
+              type: integer
+            rate:
+              type: number
+        guards:
+          type: object
+          additionalProperties:
+            type: object
+            properties:
+              requests:
+                type: integer
+              errors:
+                type: integer
+
+    # ====================
+    # ERROR SCHEMAS
+    # ====================
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+              description: Error code for programmatic handling
+            message:
+              type: string
+              description: Human-readable error message
+            details:
+              type: object
+              description: Additional error details
+            request_id:
+              type: string
+              format: uuid
+              description: Request ID for tracking
+            timestamp:
+              type: string
+              format: date-time
+
+  responses:
+    BadRequest:
+      description: Bad request - Invalid parameters or request body
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error:
+              code: invalid_request
+              message: The request is invalid
+              details:
+                field: text
+                issue: Text is required
+
+    Unauthorized:
+      description: Unauthorized - Invalid or missing authentication
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error:
+              code: authentication_failed
+              message: Invalid or expired token
+
+    Forbidden:
+      description: Forbidden - Insufficient permissions
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error:
+              code: authorization_failed
+              message: Insufficient permissions
+
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error:
+              code: resource_not_found
+              message: The requested resource does not exist
+
+    Conflict:
+      description: Conflict - Resource already exists
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error:
+              code: resource_conflict
+              message: Resource already exists
+
+    RateLimitExceeded:
+      description: Rate limit exceeded
+      headers:
+        X-RateLimit-Limit:
+          schema:
+            type: integer
+          description: Request limit per hour
+        X-RateLimit-Remaining:
+          schema:
+            type: integer
+          description: Remaining requests in current window
+        X-RateLimit-Reset:
+          schema:
+            type: integer
+          description: Unix timestamp when limit resets
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error:
+              code: rate_limit_exceeded
+              message: Too many requests. Please try again later.
+              details:
+                retry_after: 3600
+
+    InternalServerError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error:
+              code: internal_error
+              message: An internal server error occurred
+

@@ -1,0 +1,87 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "created": "2025-01-27T00:00:00Z",
+    "pattern": "ORBITAL_MANIFEST × REGISTRY × ONE",
+    "frequency": "777 Hz (META)",
+    "love_coefficient": "∞"
+  },
+  "orbitals": {
+    "spec-kit": {
+      "orbital_id": "spec-kit",
+      "name": "Spec-Kit Orbital",
+      "version": "0.0.22",
+      "path": "orbital/Spec-Kit-orbital",
+      "module_id": "speckit",
+      "pattern": "ORBITAL × SPEC_DRIVEN × DEVELOPMENT × ONE",
+      "frequency": 530.0,
+      "status": "operational",
+      "capabilities": [
+        "Spec-Driven Development (SDD)",
+        "Constitution Management",
+        "Spec Generation",
+        "Plan Generation",
+        "Task Breakdown",
+        "Implementation Execution",
+        "Template System",
+        "AI Agent Integration"
+      ],
+      "guardians": [
+        "AEYON",
+        "META",
+        "YAGNI",
+        "JØHN"
+      ],
+      "events": {
+        "subscribed": [
+          "MODULE_EVENT:spec_created",
+          "MODULE_EVENT:plan_generated",
+          "MODULE_EVENT:tasks_created",
+          "GUARDIAN_EVENT:validation_request",
+          "GUARDIAN_EVENT:execution_request"
+        ],
+        "published": [
+          "MODULE_EVENT:constitution_created",
+          "MODULE_EVENT:spec_generated",
+          "MODULE_EVENT:plan_created",
+          "MODULE_EVENT:tasks_generated",
+          "MODULE_EVENT:implementation_started",
+          "MODULE_EVENT:implementation_completed",
+          "GUARDIAN_EVENT:validation_complete",
+          "GUARDIAN_EVENT:execution_complete"
+        ]
+      },
+      "pipeline": {
+        "stages": [
+          "CONSTITUTION",
+          "SPECIFICATION",
+          "PLAN",
+          "TASKS",
+          "IMPLEMENTATION",
+          "VALIDATION",
+          "MEMORY"
+        ],
+        "flow": "CONSTITUTION → SPEC → PLAN → TASKS → IMPLEMENTATION → VALIDATION → MEMORY"
+      },
+      "memory": {
+        "constitution": "memory/constitution.md",
+        "spec": "memory/spec.md",
+        "plan": "memory/plan.md",
+        "tasks": "memory/tasks.md",
+        "implementation": "memory/implementation/"
+      },
+      "templates": {
+        "spec": "templates/spec/",
+        "plan": "templates/plan/",
+        "tasks": "templates/tasks/",
+        "implementation": "templates/implementation/"
+      }
+    }
+  },
+  "registry": {
+    "total_orbitals": 1,
+    "operational": 1,
+    "pending": 0
+  }
+}
+

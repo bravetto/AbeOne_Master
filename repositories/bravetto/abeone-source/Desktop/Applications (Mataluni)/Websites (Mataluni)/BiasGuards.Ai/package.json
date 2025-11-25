@@ -1,0 +1,88 @@
+{
+  "name": "biasguards-ai",
+  "version": "1.0.0",
+  "description": "AI bias detection tool born from JAHmere Webb's legal crisis - Justice-driven mission to reform criminal justice system",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "test:e2e": "playwright test",
+    "test:accessibility": "playwright test --config=playwright-a11y.config.ts",
+    "test:all": "npm run lint && npm run test:coverage && npm run test:accessibility && npm run test:e2e && npm run lighthouse",
+    "lint": "prettier --check . && eslint .",
+    "format": "prettier --write .",
+    "bundle-analyze": "vite-bundle-analyzer",
+    "lighthouse": "lhci autorun"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.49.0",
+    "@skeletonlabs/skeleton": "^2.10.2",
+    "@sveltejs/adapter-auto": "^3.3.1",
+    "@sveltejs/kit": "^2.9.0",
+    "@sveltejs/vite-plugin-svelte": "^3.1.2",
+    "@tailwindcss/typography": "^0.5.15",
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/svelte": "^5.2.8",
+    "@types/node": "^22.9.0",
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
+    "@vitest/coverage-v8": "^2.1.5",
+    "@vitest/ui": "^2.1.5",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-svelte": "^2.46.0",
+    "gsap": "^3.13.0",
+    "happy-dom": "^18.0.1",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.49",
+    "prettier": "^3.3.3",
+    "prettier-plugin-svelte": "^3.3.2",
+    "svelte": "^5.8.0",
+    "svelte-check": "^4.0.8",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "vite-bundle-analyzer": "^0.11.0",
+    "vitest": "^2.1.5"
+  },
+  "dependencies": {
+    "@lhci/cli": "^0.14.0",
+    "motion": "^12.23.12"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "keywords": [
+    "bias-detection",
+    "ai-ethics",
+    "criminal-justice-reform",
+    "svelte5",
+    "sveltekit",
+    "tailwind4",
+    "gsap",
+    "justice-mission"
+  ],
+  "author": {
+    "name": "Michael Mataluni",
+    "url": "https://biasguards.ai"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mataluni/biasguards-ai.git"
+  },
+  "homepage": "https://biasguards.ai",
+  "bugs": {
+    "url": "https://github.com/mataluni/biasguards-ai/issues"
+  }
+}

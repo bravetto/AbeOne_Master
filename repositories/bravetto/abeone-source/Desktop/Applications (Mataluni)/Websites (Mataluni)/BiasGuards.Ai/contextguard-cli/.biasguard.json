@@ -1,0 +1,14 @@
+{
+  "framework": "react",
+  "projectType": "saas",
+  "missionCompliant": true,
+  "createdAt": "2025-08-12T14:12:51.689Z",
+  "version": "1.0.0",
+  "jahmereWebbMission": {
+    "courtDate": "August 25, 2025",
+    "crisisAmount": "$26,500",
+    "revenueToJustice": "15%",
+    "crisisTime": "2:42:56 AM",
+    "crisisDate": "July 14, 2025"
+  }
+}

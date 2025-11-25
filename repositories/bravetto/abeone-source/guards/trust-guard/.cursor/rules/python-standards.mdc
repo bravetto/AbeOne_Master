@@ -1,0 +1,106 @@
+---
+globs: *.py
+description: Python coding standards and patterns for Trust Guard
+---
+
+# Python Coding Standards for Trust Guard
+
+## Code Style and Formatting
+
+- **Line Length**: 88 characters (Black default)
+- **Import Organization**: Use isort with Black profile
+- **Type Hints**: Always use type hints for function parameters and return values
+- **Docstrings**: Use Google-style docstrings for all public functions and classes
+
+## Trust Guard Specific Patterns
+
+### Pattern Detection Classes
+All pattern detector classes should follow this structure:
+
+```python
+class PatternDetector:
+    """Detects specific AI failure patterns."""
+    
+    def detect(self, text: str, context: Optional[str] = None) -> Dict[str, Any]:
+        """Detect pattern with confidence scoring and evidence."""
+        return {
+            "score": float,  # 0.0 to 1.0
+            "confidence": float,  # 0.0 to 1.0
+            "description": str,
+            "evidence": List[str],
+            "risk_level": str  # "low", "medium", "high"
+        }
+```
+
+### Validation Engine Patterns
+Mathematical validation functions should return structured results:
+
+```python
+def perform_validation(self, input_text: str, output_text: str) -> Dict[str, Any]:
+    """Perform mathematical validation with comprehensive metrics."""
+    return {
+        "kl_divergence": float,
+        "uncertainty_score": float,
+        "consistency_score": float,
+        "statistical_metrics": Dict[str, Any],
+        "confidence_intervals": Dict[str, Any]
+    }
+```
+
+### Error Handling
+- Use structured logging with `logger` from the module
+- Include processing time in error logs
+- Return meaningful error messages with context
+- Use HTTPException for API endpoints with appropriate status codes
+
+### Configuration Management
+- Use Pydantic BaseSettings for configuration
+- Environment variables should have `TRUSTGUARD_` prefix
+- Include validation and type checking
+- Provide sensible defaults
+
+### Metrics and Monitoring
+- Record all significant operations in metrics
+- Include processing time measurements
+- Use structured logging with extra fields
+- Track pattern detection rates and risk levels
+
+## Import Organization
+
+```python
+# Standard library imports
+import re
+import math
+import statistics
+from typing import Dict, List, Any, Optional
+from collections import Counter
+
+# Third-party imports
+import logging
+from pydantic import BaseModel, Field
+
+# Local imports
+from trustguard.core import TrustGuardDetector
+from trustguard.config import get_config
+```
+
+## Logging Standards
+
+Use structured logging with context:
+
+```python
+logger.info("Operation completed", 
+           extra={
+               "processing_time": processing_time,
+               "risk_level": risk_level,
+               "patterns_detected": len(patterns)
+           })
+```
+
+## Testing Patterns
+
+- Use pytest for all tests
+- Mock external dependencies
+- Test both success and failure scenarios
+- Include performance benchmarks for critical paths
+- Test pattern detection accuracy with known examples

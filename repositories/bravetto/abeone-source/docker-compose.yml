@@ -1,0 +1,242 @@
+# AIGuards Backend - Minimal Core Services Configuration
+# Focus: Core functionality only (Gateway + 5 Guards + Postgres + Redis)
+# Monitoring services (Elasticsearch, Kibana, Prometheus, Grafana) removed for minimal setup
+
+services:
+  # =============================================================================
+  # INFRASTRUCTURE SERVICES (Required for Core Functionality)
+  # =============================================================================
+  
+  postgres:
+    image: postgres:15-alpine
+    container_name: codeguardians-postgres
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB:-aiguardian_unified}
+      - POSTGRES_USER=${POSTGRES_USER:-aiguardian}
+      - POSTGRES_REPLACE_ME
+      # Single unified database for all services
+      # Pass DATABASE_PASSWORD to init script so it can create aiguardian user with matching password
+      - DATABASE_REPLACE_ME
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    networks:
+      - aiguards-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-aiguardian} -d ${POSTGRES_DB:-aiguardian_unified}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: codeguardians-redis
+    command: redis-server --requirepass ${REDIS_PASSWORD} --appendonly yes --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data:/data
+    ports:
+      - "127.0.0.1:${REDIS_PORT:-6380}:6379"
+    networks:
+      - aiguards-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD}", "--raw", "incr", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  # =============================================================================
+  # MAIN GATEWAY SERVICE
+  # =============================================================================
+  
+  codeguardians-gateway:
+    build:
+      context: ./codeguardians-gateway/codeguardians-gateway
+      dockerfile: Dockerfile
+    image: gateway:dev
+    container_name: codeguardians-gateway-dev
+    env_file:
+      - .env
+    environment:
+      - PYTHONUNBUFFERED=1
+      - ENVIRONMENT=development
+      - DEBUG=true
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - AWS_SECRETS_ENABLED=${AWS_SECRETS_ENABLED:-false}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS:-localhost,127.0.0.1,aiguardian.ai,api.aiguardian.ai}
+      - STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET}
+      - CLERK_WEBHOOK_SECRET=${CLERK_WEBHOOK_SECRET}
+      # Database configuration - using external Neon database
+      - DATABASE_ENABLED=true
+      - DATABASE_URL=${DATABASE_URL:-REPLACE_ME_WITH_DATABASE_URL}
+      - REDIS_HOST=${REDIS_HOST:-redis}
+      - REDIS_PORT=${REDIS_PORT:-6379}
+      - REDIS_DB=${REDIS_DB:-0}
+      - REDIS_REPLACE_ME
+      - REDIS_URL=REPLACE_ME${REDIS_HOST:-redis}:${REDIS_PORT:-6379}/${REDIS_DB:-0}
+      - CLERK_ENABLED=${CLERK_ENABLED:-false}
+      - STRIPE_ENABLED=${STRIPE_ENABLED:-true}
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY:-REPLACE_ME}
+      - STRIPE_PUBLISHABLE_KEY=${STRIPE_PUBLISHABLE_KEY:-REPLACE_ME}
+      - STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET:-whsec_test_webhook_secret_for_development_only}
+      - S3_ENABLED=${S3_ENABLED:-false}
+      - BIASGUARD_ENABLED=${BIASGUARD_ENABLED:-true}
+      - UNIFIED_API_KEY=${UNIFIED_API_KEY}
+      # Guard services run as separate containers
+      - TOKENGUARD_URL=http://tokenguard:8000
+      - TRUSTGUARD_URL=http://trustguard:8000
+      - CONTEXTGUARD_URL=http://contextguard:8000
+      - BIASGUARD_URL=http://biasguard:8000
+      - HEALTHGUARD_URL=http://healthguard:8000
+    ports:
+      - "${GATEWAY_PORT:-8000}:8000"
+    networks:
+      - aiguards-network
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health/live"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    # Volume mount disabled to avoid CRLF line ending issues with entrypoint.sh
+    # Uncomment for development hot-reload:
+    # volumes:
+    #   - ./codeguardians-gateway/codeguardians-gateway:/app
+    # Note: entrypoint.sh is in the image, not overwritten by volume
+
+  # =============================================================================
+  # =============================================================================
+  # GUARD SERVICES
+  # =============================================================================
+
+  tokenguard:
+    build:
+      context: ./guards/tokenguard
+      dockerfile: Dockerfile
+    image: aiguards-tokenguard:dev
+    container_name: codeguardians-tokenguard
+    environment:
+      - ENVIRONMENT=development
+      - REDIS_URL=redis://redis:6379/0
+      - REDIS_REPLACE_ME
+      - DATABASE_URL=postgresql://aiguardian:${DATABASE_REPLACE_ME
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    ports:
+      - "127.0.0.1:8001:8000"
+    networks:
+      - aiguards-network
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - redis
+
+  trustguard:
+    build:
+      context: ./guards/trust-guard
+      dockerfile: Dockerfile
+    image: aiguards-trustguard:dev
+    container_name: codeguardians-trustguard
+    environment:
+      - ENVIRONMENT=development
+      - REDIS_URL=redis://redis:6379/0
+      - REDIS_REPLACE_ME
+      - DATABASE_URL=postgresql://aiguardian:${DATABASE_REPLACE_ME
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    ports:
+      - "127.0.0.1:8002:8000"
+    networks:
+      - aiguards-network
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - redis
+
+  contextguard:
+    build:
+      context: ./guards/contextguard
+      dockerfile: Dockerfile
+    image: aiguards-contextguard:dev
+    container_name: codeguardians-contextguard
+    environment:
+      - ENVIRONMENT=development
+      - REDIS_URL=REPLACE_MEredis:6379/0
+      - REDIS_REPLACE_ME
+      - DATABASE_URL=postgresql://aiguardian:${DATABASE_REPLACE_ME
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    ports:
+      - "127.0.0.1:8003:8000"
+    networks:
+      - aiguards-network
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - redis
+
+  biasguard:
+    build:
+      context: ./guards/biasguard-backend
+      dockerfile: Dockerfile
+    image: aiguards-biasguard:dev
+    container_name: codeguardians-biasguard
+    environment:
+      - NODE_ENV=development
+      - REDIS_URL=redis://redis:6379/0
+      - REDIS_REPLACE_ME
+      - DATABASE_URL=postgresql://aiguardian:${DATABASE_REPLACE_ME
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    ports:
+      - "127.0.0.1:8004:8000"
+    networks:
+      - aiguards-network
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - redis
+
+  healthguard:
+    build:
+      context: ./guards/healthguard
+      dockerfile: Dockerfile
+    image: aiguards-healthguard:dev
+    container_name: codeguardians-healthguard
+    environment:
+      - ENVIRONMENT=development
+      - REDIS_URL=redis://redis:6379/0
+      - REDIS_REPLACE_ME
+      - DATABASE_URL=postgresql://aiguardian:${DATABASE_REPLACE_ME
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    ports:
+      - "127.0.0.1:8005:8000"
+    networks:
+      - aiguards-network
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - redis
+
+  # =============================================================================
+  # NETWORKS
+  # =============================================================================
+
+networks:
+  aiguards-network:
+    driver: bridge
+    name: aiguards-network
+
+# =============================================================================
+# VOLUMES
+# =============================================================================
+
+volumes:
+  postgres_data:
+    name: aiguards-postgres-data
+  redis_data:
+    name: aiguards-redis-data

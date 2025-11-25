@@ -1,0 +1,17 @@
+{
+  "reserved_ports": {
+    "22": "ssh",
+    "80": "http",
+    "443": "https",
+    "3306": "mysql",
+    "5432": "postgres",
+    "6379": "redis",
+    "9000": "dashboard"
+  },
+  "service_ports": {
+    "nextjs": 3000,
+    "python_api": 8000,
+    "dashboard": 9000
+  }
+}
+

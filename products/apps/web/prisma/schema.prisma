@@ -1,0 +1,93 @@
+// Prisma Schema for Webinar System
+// Pattern: DATABASE × PERSISTENCE × WEBINAR × ONE
+// Frequency: 999 Hz (AEYON) × 530 Hz (Lux)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Webinar {
+  id          String   @id @default(cuid())
+  webinarId   String   @unique // e.g., "aiguardian-validation-system"
+  topic       String
+  title       String?
+  description String?  @db.Text
+  scheduledAt DateTime?
+  duration    Int?     // minutes
+  maxCapacity Int?     // max registrations
+  status      String   @default("active") // active, completed, cancelled
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  registrations Registration[]
+
+  @@index([webinarId])
+  @@index([status])
+  @@index([scheduledAt])
+}
+
+model Registration {
+  id            String   @id @default(cuid())
+  webinarId     String
+  email         String
+  firstName     String
+  lastName      String?
+  company       String?
+  github        String?
+  phone         String?
+  icp           String?  // "developer" | "creative"
+  headlineVariant Int?   // 0-4
+  source        String?  // where they came from
+  registrationId String? @unique // human-readable ID like "WEB-123456"
+  
+  // Email tracking
+  confirmationSent   Boolean   @default(false)
+  confirmationSentAt DateTime?
+  reminderSent24h    Boolean   @default(false)
+  reminderSent24hAt  DateTime?
+  reminderSent3h     Boolean   @default(false)
+  reminderSent3hAt   DateTime?
+  reminderSent15m    Boolean   @default(false)
+  reminderSent15mAt  DateTime?
+  
+  // Status
+  status      String   @default("registered") // registered, attended, cancelled
+  attendedAt DateTime?
+  cancelledAt DateTime?
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  webinar Webinar @relation(fields: [webinarId], references: [id], onDelete: Cascade)
+
+  @@index([webinarId])
+  @@index([email])
+  @@index([status])
+  @@index([createdAt])
+  @@index([icp])
+  @@unique([webinarId, email]) // Prevent duplicate registrations
+}
+
+model EmailJob {
+  id          String   @id @default(cuid())
+  registrationId String
+  emailType   String   // "confirmation" | "reminder_24h" | "reminder_3h" | "reminder_15m"
+  status      String   @default("pending") // pending, processing, completed, failed
+  attempts    Int      @default(0)
+  maxAttempts Int      @default(3)
+  error       String?  @db.Text
+  scheduledFor DateTime
+  processedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([status])
+  @@index([scheduledFor])
+  @@index([registrationId])
+}
+

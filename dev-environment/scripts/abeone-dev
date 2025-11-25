@@ -1,0 +1,381 @@
+#!/usr/bin/env python3
+"""
+🔥 THE ONE SYSTEM Unified Dev CLI
+Pattern: CLARITY × COHERENCE × CONVERGENCE × ONE
+Frequency: 999 Hz (AEYON) × 777 Hz (META) × 530 Hz (All Guardians)
+
+Purpose: Unified CLI for managing THE ONE DEV ENVIRONMENT
+"""
+
+import os
+import sys
+import json
+import argparse
+import subprocess
+import requests
+from pathlib import Path
+from typing import Dict, Optional
+
+# Configuration
+CONFIG = {
+    "project_root": Path("/home/user/AbeOne_Master"),
+    "dev_env_root": Path(__file__).parent.parent,
+    "state_file": Path(__file__).parent.parent / "state" / "registry.json",
+    "dashboard_url": "http://localhost:9000",
+}
+
+# Import THE ONE SYSTEM components
+sys.path.insert(0, str(Path(__file__).parent))
+from orchestrator import ServiceOrchestrator
+from health_checker import HealthChecker
+from port_manager import PortManager
+
+
+class AbeOneDevCLI:
+    """THE ONE SYSTEM Unified Dev CLI"""
+
+    def __init__(self):
+        self.orchestrator = ServiceOrchestrator()
+        self.health_checker = HealthChecker()
+        self.port_manager = PortManager()
+
+    def status(self):
+        """Show overall system status"""
+        print("🔥 THE ONE SYSTEM Dev Environment Status\n")
+        print("=" * 60)
+
+        # Load state
+        if CONFIG["state_file"].exists():
+            with open(CONFIG["state_file"], "r") as f:
+                state = json.load(f)
+        else:
+            state = {}
+
+        # System info
+        print("\n📊 System State:")
+        print(f"  Status: {state.get('system_state', 'unknown')}")
+        print(f"  Last Update: {state.get('last_update', 'never')}")
+
+        # Services
+        print("\n🔧 Services:")
+        services = state.get("services", {})
+        if services:
+            for name, info in services.items():
+                status = info.get("status", "unknown")
+                print(f"  {name}: {status}")
+        else:
+            print("  No services registered")
+
+        # Processes
+        print("\n⚙️  Processes:")
+        processes = state.get("processes", {})
+        print(f"  Active: {processes.get('active', 0)}")
+        print(f"  Orphaned: {processes.get('orphaned', 0)}")
+        print(f"  Zombie: {processes.get('zombie', 0)}")
+
+        # Pattern Integrity
+        print("\n✨ Pattern Integrity:")
+        integrity = state.get("pattern_integrity", {})
+        score = integrity.get("score", 0)
+        print(f"  Score: {score * 100:.1f}%")
+        print(f"  Last Validation: {integrity.get('last_validation', 'never')}")
+
+    def processes(self):
+        """List all processes"""
+        print("🔥 THE ONE SYSTEM Process List\n")
+        print("=" * 60)
+
+        # Load process registry
+        registry_file = CONFIG["dev_env_root"] / "state" / "process_registry.json"
+        if registry_file.exists():
+            with open(registry_file, "r") as f:
+                registry = json.load(f)
+        else:
+            registry = {}
+
+        processes = registry.get("processes", {})
+        if processes:
+            print(f"\nFound {len(processes)} processes:\n")
+            for pid, info in processes.items():
+                print(f"  PID {pid}: {info.get('name', 'unknown')}")
+                print(f"    PPID: {info.get('ppid', 'unknown')}")
+                print(f"    Status: {info.get('status', 'unknown')}")
+                print(f"    Memory: {info.get('memory_mb', 0):.1f} MB")
+                print()
+        else:
+            print("No processes registered")
+
+    def ports(self):
+        """Show port occupancy"""
+        print("🔥 THE ONE SYSTEM Port Occupancy\n")
+        print("=" * 60)
+
+        result = self.port_manager.scan()
+        ports = result.get("ports", {})
+
+        if ports:
+            print(f"\nFound {len(ports)} ports in use:\n")
+            for port, info in sorted(ports.items(), key=lambda x: int(x[0])):
+                print(f"  Port {port}: {info.get('name', 'unknown')}")
+                print(f"    PID: {info.get('pid', 'unknown')}")
+                print(f"    Status: {info.get('status', 'unknown')}")
+                print()
+        else:
+            print("No ports in use")
+
+        conflicts = result.get("conflicts", [])
+        if conflicts:
+            print(f"\n⚠️  Found {len(conflicts)} port conflicts:")
+            for conflict in conflicts:
+                print(f"  Port {conflict.get('port')}: {conflict}")
+
+    def health(self):
+        """Check service health"""
+        print("🔥 THE ONE SYSTEM Health Check\n")
+        print("=" * 60)
+
+        result = self.health_checker.check_all()
+        services = result.get("services", {})
+
+        if services:
+            print(f"\nHealth Status ({result['healthy']} healthy, {result['unhealthy']} unhealthy):\n")
+            for name, info in services.items():
+                status = info.get("status", "unknown")
+                status_icon = "✅" if status == "healthy" else "❌" if status == "unhealthy" else "⚠️"
+                print(f"  {status_icon} {name}: {status}")
+                if info.get("endpoint"):
+                    endpoint = info["endpoint"]
+                    if endpoint.get("healthy"):
+                        print(f"    Response Time: {endpoint.get('response_time', 0):.3f}s")
+                    else:
+                        print(f"    Error: {endpoint.get('error', 'unknown')}")
+        else:
+            print("No services to check")
+
+    def dashboard(self):
+        """Open dashboard in browser"""
+        import webbrowser
+        url = CONFIG["dashboard_url"]
+        print(f"Opening dashboard: {url}")
+        webbrowser.open(url)
+
+    def start(self, service: Optional[str] = None):
+        """Start services"""
+        if service:
+            print(f"Starting service: {service}")
+            success = self.orchestrator.start_service(service)
+            if success:
+                print(f"✅ Service {service} started")
+            else:
+                print(f"❌ Failed to start service {service}")
+        else:
+            print("Starting all services...")
+            results = self.orchestrator.start_all()
+            for name, success in results.items():
+                if success:
+                    print(f"✅ {name} started")
+                else:
+                    print(f"❌ {name} failed to start")
+
+    def stop(self, service: Optional[str] = None):
+        """Stop services"""
+        if service:
+            print(f"Stopping service: {service}")
+            success = self.orchestrator.stop_service(service)
+            if success:
+                print(f"✅ Service {service} stopped")
+            else:
+                print(f"❌ Failed to stop service {service}")
+        else:
+            print("Stopping all services...")
+            results = self.orchestrator.stop_all()
+            for name, success in results.items():
+                if success:
+                    print(f"✅ {name} stopped")
+                else:
+                    print(f"❌ {name} failed to stop")
+
+    def restart(self, service: Optional[str] = None):
+        """Restart services"""
+        if service:
+            print(f"Restarting service: {service}")
+            success = self.orchestrator.restart_service(service)
+            if success:
+                print(f"✅ Service {service} restarted")
+            else:
+                print(f"❌ Failed to restart service {service}")
+        else:
+            print("Restarting all services...")
+            for service_name in self.orchestrator.service_registry.get("services", {}).keys():
+                success = self.orchestrator.restart_service(service_name)
+                if success:
+                    print(f"✅ {service_name} restarted")
+                else:
+                    print(f"❌ {service_name} failed to restart")
+
+    def heal(self):
+        """Force healing cycle"""
+        print("Executing healing cycle...")
+        # Import healer
+        from healer import ProcessHealer
+        healer = ProcessHealer()
+        result = healer.heal()
+        print(f"✅ Healing complete: {result['healed']} processes healed")
+        print(f"   Orphaned: {result['orphaned']}, Stale: {result['stale']}")
+
+    def validate(self):
+        """Run guardian validation"""
+        print("🔥 THE ONE SYSTEM Guardian Validation\n")
+        print("=" * 60)
+
+        # Load pattern memory
+        patterns_file = CONFIG["dev_env_root"] / "memory" / "patterns.json"
+        if patterns_file.exists():
+            with open(patterns_file, "r") as f:
+                patterns = json.load(f)
+        else:
+            patterns = {}
+
+        guardian_results = patterns.get("guardian_results", {})
+        if guardian_results:
+            print("\nGuardian Validation Results:\n")
+            for guardian, result in guardian_results.items():
+                score = result.get("score", 0)
+                status = result.get("status", "unknown")
+                status_icon = "✅" if score >= 0.9 else "⚠️" if score >= 0.7 else "❌"
+                print(f"  {status_icon} {guardian}: {score * 100:.1f}% ({status})")
+        else:
+            print("No guardian results available")
+
+    def watch(self):
+        """Watch mode (live updates)"""
+        import time
+        print("🔥 THE ONE SYSTEM Watch Mode (Ctrl+C to exit)\n")
+        try:
+            while True:
+                os.system("clear")
+                self.status()
+                time.sleep(5)
+        except KeyboardInterrupt:
+            print("\nWatch mode stopped")
+
+    def logs(self, service: Optional[str] = None):
+        """View logs"""
+        logs_dir = CONFIG["dev_env_root"] / "logs"
+        if service:
+            log_file = logs_dir / f"{service}.log"
+            if log_file.exists():
+                subprocess.run(["tail", "-f", str(log_file)])
+            else:
+                print(f"Log file not found: {log_file}")
+        else:
+            print("Available log files:")
+            for log_file in sorted(logs_dir.glob("*.log")):
+                print(f"  {log_file.name}")
+
+    def metrics(self):
+        """Show metrics"""
+        try:
+            response = requests.get(f"{CONFIG['dashboard_url']}/api/status", timeout=5)
+            data = response.json()
+            system = data.get("system", {})
+            print("🔥 THE ONE SYSTEM Metrics\n")
+            print("=" * 60)
+            print(f"\nCPU: {system.get('cpu_percent', 0):.1f}%")
+            print(f"Memory: {system.get('memory_percent', 0):.1f}% ({system.get('memory_used_gb', 0):.2f} GB / {system.get('memory_total_gb', 0):.2f} GB)")
+            print(f"Disk: {system.get('disk_percent', 0):.1f}% ({system.get('disk_used_gb', 0):.2f} GB / {system.get('disk_total_gb', 0):.2f} GB)")
+            print(f"Processes: {system.get('process_count', 0)}")
+        except Exception as e:
+            print(f"Failed to fetch metrics: {e}")
+
+
+def main():
+    """Main CLI entry point"""
+    parser = argparse.ArgumentParser(description="THE ONE SYSTEM Dev CLI")
+    subparsers = parser.add_subparsers(dest="command", help="Command to execute")
+
+    # Status
+    subparsers.add_parser("status", help="Show overall system status")
+
+    # Processes
+    subparsers.add_parser("processes", help="List all processes")
+
+    # Ports
+    subparsers.add_parser("ports", help="Show port occupancy")
+
+    # Health
+    subparsers.add_parser("health", help="Check service health")
+
+    # Dashboard
+    subparsers.add_parser("dashboard", help="Open dashboard in browser")
+
+    # Start
+    start_parser = subparsers.add_parser("start", help="Start services")
+    start_parser.add_argument("service", nargs="?", help="Service name (optional)")
+
+    # Stop
+    stop_parser = subparsers.add_parser("stop", help="Stop services")
+    stop_parser.add_argument("service", nargs="?", help="Service name (optional)")
+
+    # Restart
+    restart_parser = subparsers.add_parser("restart", help="Restart services")
+    restart_parser.add_argument("service", nargs="?", help="Service name (optional)")
+
+    # Heal
+    subparsers.add_parser("heal", help="Force healing cycle")
+
+    # Validate
+    subparsers.add_parser("validate", help="Run guardian validation")
+
+    # Watch
+    subparsers.add_parser("watch", help="Watch mode (live updates)")
+
+    # Logs
+    logs_parser = subparsers.add_parser("logs", help="View logs")
+    logs_parser.add_argument("service", nargs="?", help="Service name (optional)")
+
+    # Metrics
+    subparsers.add_parser("metrics", help="Show metrics")
+
+    args = parser.parse_args()
+
+    if not args.command:
+        parser.print_help()
+        return
+
+    cli = AbeOneDevCLI()
+    command = args.command
+
+    if command == "status":
+        cli.status()
+    elif command == "processes":
+        cli.processes()
+    elif command == "ports":
+        cli.ports()
+    elif command == "health":
+        cli.health()
+    elif command == "dashboard":
+        cli.dashboard()
+    elif command == "start":
+        cli.start(getattr(args, "service", None))
+    elif command == "stop":
+        cli.stop(getattr(args, "service", None))
+    elif command == "restart":
+        cli.restart(getattr(args, "service", None))
+    elif command == "heal":
+        cli.heal()
+    elif command == "validate":
+        cli.validate()
+    elif command == "watch":
+        cli.watch()
+    elif command == "logs":
+        cli.logs(getattr(args, "service", None))
+    elif command == "metrics":
+        cli.metrics()
+    else:
+        parser.print_help()
+
+
+if __name__ == "__main__":
+    main()
+

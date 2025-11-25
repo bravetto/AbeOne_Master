@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2025-10-22 02:05:47.373694",
+  "rate_limits": {
+    "enabled": true,
+    "requests_per_minute": 100,
+    "requests_per_hour": 1000,
+    "burst_limit": 20,
+    "window_size": 60,
+    "endpoint_limits": {},
+    "user_limits": {},
+    "ip_limits": {}
+  },
+  "cache_ttl": 3600,
+  "cache_enabled": true,
+  "security_headers": {
+    "X-Frame-Options": "DENY",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "metrics_enabled": true,
+  "health_check_interval": 30,
+  "features": {
+    "rate_limiting": true,
+    "caching": true,
+    "metrics": true,
+    "health_checks": true,
+    "security_headers": true
+  }
+}

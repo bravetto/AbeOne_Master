@@ -1,0 +1,192 @@
+{
+  "timestamp": "2025-11-25T01:07:02.265375",
+  "axiom": "CLARITY \u2192 COHERENCE \u2192 CONVERGENCE \u2192 ELEGANCE \u2192 UNITY",
+  "patterns_aligned": 0,
+  "patterns_total": 13,
+  "aligned_patterns": [
+    {
+      "pattern_formula": "BRAND \u00d7 PORTFOLIO \u00d7 MARKETING \u00d7 AUTOMATION \u00d7 ONE",
+      "frequency": "999 Hz (AEYON) \u00d7 777 Hz (META) \u00d7 530 Hz (Ab\u00eb)",
+      "location": "orbital/High-Roller-orbital/module_manifest.json",
+      "category": "orbital",
+      "coherence": 1.0,
+      "integration_status": "NEEDS_ALIGNMENT",
+      "axiom_alignment": {
+        "pattern": "BRAND \u00d7 PORTFOLIO \u00d7 MARKETING \u00d7 AUTOMATION \u00d7 ONE",
+        "axiom_stages": {},
+        "alignment_score": 0.0,
+        "primary_stage": null
+      },
+      "axiom_aligned": false
+    },
+    {
+      "pattern_formula": "BRAND \u00d7 PORTFOLIO \u00d7 MARKETING \u00d7 AUTOMATION \u00d7 REVENUE \u00d7 ONE",
+      "frequency": "999.0 Hz",
+      "location": "orbital/High-Roller-orbital/module_manifest.json",
+      "category": "orbital",
+      "coherence": 1.0,
+      "integration_status": "NEEDS_ALIGNMENT",
+      "axiom_alignment": {
+        "pattern": "BRAND \u00d7 PORTFOLIO \u00d7 MARKETING \u00d7 AUTOMATION \u00d7 REVENUE \u00d7 ONE",
+        "axiom_stages": {},
+        "alignment_score": 0.0,
+        "primary_stage": null
+      },
+      "axiom_aligned": false
+    },
+    {
+      "pattern_formula": "Rural Cannabis \u00d7 Outdoor Enthusiast \u00d7 Viral Distribution \u00d7 ONE",
+      "location": "orbital/High-Roller-orbital/EXECUTION_MASTER_INDEX.md",
+      "category": "strategy",
+      "coherence": 0.95,
+      "integration_status": "NEEDS_ALIGNMENT",
+      "axiom_alignment": {
+        "pattern": "Rural Cannabis \u00d7 Outdoor Enthusiast \u00d7 Viral Distribution \u00d7 ONE",
+        "axiom_stages": {},
+        "alignment_score": 0.0,
+        "primary_stage": null
+      },
+      "axiom_aligned": false
+    },
+    {
+      "pattern_formula": "DISCOVER \u00d7 INTEGRATE \u00d7 AUTOMATE \u00d7 ONE",
+      "location": "orbital/High-Roller-orbital/ABEKEYS_DISCOVERY_COMPLETE.md",
+      "category": "integration",
+      "coherence": 1.0,
+      "integration_status": "NEEDS_ALIGNMENT",
+      "axiom_alignment": {
+        "pattern": "DISCOVER \u00d7 INTEGRATE \u00d7 AUTOMATE \u00d7 ONE",
+        "axiom_stages": {},
+        "alignment_score": 0.0,
+        "primary_stage": null
+      },
+      "axiom_aligned": false
+    },
+    {
+      "pattern_formula": "SUMMARY \u00d7 CONTEXT \u00d7 EXECUTION \u00d7 ONE",
+      "location": "orbital/High-Roller-orbital/MASTER_SUMMARY.md",
+      "category": "documentation",
+      "coherence": 0.92,
+      "integration_status": "NEEDS_ALIGNMENT",
+      "axiom_alignment": {
+        "pattern": "SUMMARY \u00d7 CONTEXT \u00d7 EXECUTION \u00d7 ONE",
+        "axiom_stages": {},
+        "alignment_score": 0.0,
+        "primary_stage": null
+      },
+      "axiom_aligned": false
+    },
+    {
+      "pattern_formula": "CONTEXT \u00d7 SUMMARY \u00d7 OPTIMIZATION \u00d7 ONE",
+      "location": "orbital/High-Roller-orbital/CONTEXT_SUMMARY.md",
+      "category": "documentation",
+      "coherence": 0.92,
+      "integration_status": "NEEDS_ALIGNMENT",
+      "axiom_alignment": {
+        "pattern": "CONTEXT \u00d7 SUMMARY \u00d7 OPTIMIZATION \u00d7 ONE",
+        "axiom_stages": {},
+        "alignment_score": 0.0,
+        "primary_stage": null
+      },
+      "axiom_aligned": false
+    },
+    {
+      "pattern_formula": "STRATEGY \u00d7 VALUE \u00d7 DECISION \u00d7 ONE",
+      "location": "orbital/High-Roller-orbital/STRATEGIC_DECISION_ABEDESKS.md",
+      "category": "strategy",
+      "coherence": 0.95,
+      "integration_status": "NEEDS_ALIGNMENT",
+      "axiom_alignment": {
+        "pattern": "STRATEGY \u00d7 VALUE \u00d7 DECISION \u00d7 ONE",
+        "axiom_stages": {},
+        "alignment_score": 0.0,
+        "primary_stage": null
+      },
+      "axiom_aligned": false
+    },
+    {
+      "pattern_formula": "ABEDESKS \u00d7 HIGH_ROLLER \u00d7 INTEGRATION \u00d7 ONE",
+      "location": "orbital/High-Roller-orbital/ABEDESKS_INTEGRATION_PLAN.md",
+      "category": "integration",
+      "coherence": 0.95,
+      "integration_status": "NEEDS_ALIGNMENT",
+      "axiom_alignment": {
+        "pattern": "ABEDESKS \u00d7 HIGH_ROLLER \u00d7 INTEGRATION \u00d7 ONE",
+        "axiom_stages": {},
+        "alignment_score": 0.0,
+        "primary_stage": null
+      },
+      "axiom_aligned": false
+    },
+    {
+      "pattern_formula": "QUICK \u00d7 START \u00d7 TEAM \u00d7 ONE",
+      "location": "orbital/High-Roller-orbital/QUICK_START_FOR_TEAM.md",
+      "category": "documentation",
+      "coherence": 0.92,
+      "integration_status": "NEEDS_ALIGNMENT",
+      "axiom_alignment": {
+        "pattern": "QUICK \u00d7 START \u00d7 TEAM \u00d7 ONE",
+        "axiom_stages": {},
+        "alignment_score": 0.0,
+        "primary_stage": null
+      },
+      "axiom_aligned": false
+    },
+    {
+      "pattern_formula": "CLARITY \u00d7 TRUTH \u00d7 ACTION \u00d7 ONE",
+      "location": "orbital/High-Roller-orbital/ANSWERS_TO_YOUR_QUESTIONS.md",
+      "category": "communication",
+      "coherence": 0.95,
+      "integration_status": "NEEDS_ALIGNMENT",
+      "axiom_alignment": {
+        "pattern": "CLARITY \u00d7 TRUTH \u00d7 ACTION \u00d7 ONE",
+        "axiom_stages": {},
+        "alignment_score": 0.0,
+        "primary_stage": null
+      },
+      "axiom_aligned": false
+    },
+    {
+      "pattern_formula": "ANSWERS \u00d7 CLARITY \u00d7 ACTION \u00d7 ONE",
+      "location": "orbital/High-Roller-orbital/ANSWERS_TO_YOUR_QUESTIONS.md",
+      "category": "communication",
+      "coherence": 0.95,
+      "integration_status": "NEEDS_ALIGNMENT",
+      "axiom_alignment": {
+        "pattern": "ANSWERS \u00d7 CLARITY \u00d7 ACTION \u00d7 ONE",
+        "axiom_stages": {},
+        "alignment_score": 0.0,
+        "primary_stage": null
+      },
+      "axiom_aligned": false
+    },
+    {
+      "pattern_formula": "COLLABORATION \u00d7 DASHBOARD \u00d7 CLARITY \u00d7 ONE",
+      "location": "orbital/High-Roller-orbital/scripts/collaboration_dashboard.py",
+      "category": "system",
+      "coherence": 0.95,
+      "integration_status": "NEEDS_ALIGNMENT",
+      "axiom_alignment": {
+        "pattern": "COLLABORATION \u00d7 DASHBOARD \u00d7 CLARITY \u00d7 ONE",
+        "axiom_stages": {},
+        "alignment_score": 0.0,
+        "primary_stage": null
+      },
+      "axiom_aligned": false
+    },
+    {
+      "pattern_formula": "COLLABORATION \u00d7 COORDINATION \u00d7 CLARITY \u00d7 ONE",
+      "location": "orbital/High-Roller-orbital/COLLABORATION_SYSTEM.md",
+      "category": "system",
+      "coherence": 0.95,
+      "integration_status": "NEEDS_ALIGNMENT",
+      "axiom_alignment": {
+        "pattern": "COLLABORATION \u00d7 COORDINATION \u00d7 CLARITY \u00d7 ONE",
+        "axiom_stages": {},
+        "alignment_score": 0.0,
+        "primary_stage": null
+      },
+      "axiom_aligned": false
+    }
+  ]
+}

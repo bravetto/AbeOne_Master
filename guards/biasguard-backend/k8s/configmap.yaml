@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: biasguard-config
+  namespace: default
+data:
+  BIASGUARD_HOST: "0.0.0.0"
+  BIASGUARD_PORT: "8000"
+  BIASGUARD_LOG_LEVEL: "INFO"
+  BIASGUARD_LOG_FORMAT: "json"
+  BIASGUARD_ENABLE_METRICS: "true"
+  BIASGUARD_RATE_LIMIT_REQUESTS: "100"
+  ENVIRONMENT: "production"
+

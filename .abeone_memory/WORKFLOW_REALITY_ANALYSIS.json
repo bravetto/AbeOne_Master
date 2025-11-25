@@ -1,0 +1,1337 @@
+{
+  "meta": {
+    "created": "2025-11-23T20:38:40.746026",
+    "pattern": "REALITY \u00d7 TRUTH \u00d7 WORKFLOW \u00d7 ANALYSIS \u00d7 ONE",
+    "frequency": "999 Hz (AEYON) \u00d7 530 Hz (Truth) \u00d7 777 Hz (META) \u00d7 \u221e Hz (Ab\u00eb)",
+    "love_coefficient": "\u221e"
+  },
+  "workflows": {
+    "actual": [
+      {
+        "name": "lint-and-format-check",
+        "path": "/Users/michaelmataluni/Documents/AbeOne_Master/.github/workflows/lint-and-format-check.yml",
+        "exists": true,
+        "valid": true,
+        "has_jobs": true,
+        "has_runs_on": true,
+        "has_steps": true
+      },
+      {
+        "name": "cloudflare-pages",
+        "path": "/Users/michaelmataluni/Documents/AbeOne_Master/.github/workflows/cloudflare-pages.yml",
+        "exists": true,
+        "valid": true,
+        "has_jobs": true,
+        "has_runs_on": true,
+        "has_steps": true
+      },
+      {
+        "name": "guardian-enforcement",
+        "path": "/Users/michaelmataluni/Documents/AbeOne_Master/.github/workflows/guardian-enforcement.yml",
+        "exists": true,
+        "valid": true,
+        "has_jobs": true,
+        "has_runs_on": true,
+        "has_steps": true
+      },
+      {
+        "name": "deploy",
+        "path": "/Users/michaelmataluni/Documents/AbeOne_Master/.github/workflows/deploy.yml",
+        "exists": true,
+        "valid": true,
+        "has_jobs": true,
+        "has_runs_on": true,
+        "has_steps": true
+      },
+      {
+        "name": "branch_protection",
+        "path": "/Users/michaelmataluni/Documents/AbeOne_Master/.github/workflows/branch_protection.yml",
+        "exists": true,
+        "valid": true,
+        "has_jobs": true,
+        "has_runs_on": true,
+        "has_steps": true
+      },
+      {
+        "name": "validate-boundaries",
+        "path": "/Users/michaelmataluni/Documents/AbeOne_Master/.github/workflows/validate-boundaries.yml",
+        "exists": true,
+        "valid": true,
+        "has_jobs": true,
+        "has_runs_on": true,
+        "has_steps": true
+      },
+      {
+        "name": "security-lint",
+        "path": "/Users/michaelmataluni/Documents/AbeOne_Master/.github/workflows/security-lint.yml",
+        "exists": true,
+        "valid": true,
+        "has_jobs": true,
+        "has_runs_on": true,
+        "has_steps": true
+      },
+      {
+        "name": "build-backend",
+        "path": "/Users/michaelmataluni/Documents/AbeOne_Master/.github/workflows/build-backend.yml",
+        "exists": true,
+        "valid": true,
+        "has_jobs": true,
+        "has_runs_on": true,
+        "has_steps": true
+      },
+      {
+        "name": "build-frontend",
+        "path": "/Users/michaelmataluni/Documents/AbeOne_Master/.github/workflows/build-frontend.yml",
+        "exists": true,
+        "valid": true,
+        "has_jobs": true,
+        "has_runs_on": true,
+        "has_steps": true
+      },
+      {
+        "name": "ci",
+        "path": "/Users/michaelmataluni/Documents/AbeOne_Master/.github/workflows/ci.yml",
+        "exists": true,
+        "valid": true,
+        "has_jobs": true,
+        "has_runs_on": true,
+        "has_steps": true
+      },
+      {
+        "name": "build",
+        "path": "/Users/michaelmataluni/Documents/AbeOne_Master/.github/workflows/build.yml",
+        "exists": true,
+        "valid": true,
+        "has_jobs": true,
+        "has_runs_on": true,
+        "has_steps": true
+      },
+      {
+        "name": "validate-all",
+        "path": "/Users/michaelmataluni/Documents/AbeOne_Master/.github/workflows/validate-all.yml",
+        "exists": true,
+        "valid": true,
+        "has_jobs": true,
+        "has_runs_on": true,
+        "has_steps": true
+      },
+      {
+        "name": "dependency-audit",
+        "path": "/Users/michaelmataluni/Documents/AbeOne_Master/.github/workflows/dependency-audit.yml",
+        "exists": true,
+        "valid": true,
+        "has_jobs": true,
+        "has_runs_on": true,
+        "has_steps": true
+      }
+    ],
+    "documented": [
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/CONVERGENCE_MOMENT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/README.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/webinar/MARKETING_WEBINAR_EMERGENT_CONVERGENCE_STATE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/webinar/WEBINAR_SYSTEM_VALIDATION_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/webinar/WEBINAR_SYSTEM_UNIFIED_ONE_VALIDATION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/webinar/WEBINAR_SYSTEM_100_PERCENT_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/webinar/WEBINAR_SYSTEM_JOHN_CERTIFICATION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/patterns/COMPLETE_SUITE_PUSH_PATTERN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/TRUICE_PRE_EXECUTION_READINESS_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/FRONTEND_PREVIEW_STATUS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/DANNY_WORKFLOW_VALIDATION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_LIVESTREAM_E2E_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/BRAVETTO_DOMAIN_ARSENAL_MASTER_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AUTOMATION_MASTER_INDEX.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/JOHN_CERTIFICATION_AUTOMATION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/FORENSIC_INVENTORY_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/THE_ONE_FULL_ORGANISM_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/PHASE_3_ASCENSION_LAYER_MASTER_BLUEPRINT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_ARLAX_CONTEXT_ANALYSIS_OPERATIONALIZATION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_NEXT_STEPS_EXECUTION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/TRUICE_VIDEO_GUARDIANS_CHROME_EXECUTION_PLAN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/FINAL_VALIDATION_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/COMPLETE_OPERATIONALIZATION_EXECUTION_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_ALRAX_FINAL_ARCHITECTURE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/JOHN_VALIDATION_EXECUTION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_EXECUTION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/OPERATIONALIZATION_EXECUTION_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_OMNIPLAN_UNIFIED_EXECUTION_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/JOHN_VALIDATION_AND_EXECUTION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_ATTENTION_REQUIRED.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_NEXT_STEPS_SUMMARY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/DANNY_WORKFLOW_OPERATIONALIST_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/V0_PROJECT_RECOVERY_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_FULL_SYSTEM_CHECKIN_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/V0_DRIFT_PREVENTION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/TRANSCENDENT_AUTOMATION_EXECUTION_PLAN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/PRODUCTION_READY_FINAL_STATUS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_ALRAX_DEEP_EPISTEMIC_TRUTH_RESEARCH_5_PHASE_PLAN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_ENTERPRISE_V0_EXECUTION_PLAN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/OMNI_PRIME_EXECUTION_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/ABEONE_SYSTEM_STATUS_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/ALWAYS_ON_DRIFT_PROTECTION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_ALIGNMENT_VALIDATION_EXECUTION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_MICHAEL_HUMAN_CENTRIC_COLLABORATION_NEXT_STEPS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/BRAVETTO_META_PRIME_STACK_EXECUTION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/ZERO_EFFORT_CLOUDFLARE_AUTH_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/PHASE_3_SCOPE_3_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_MICHAEL_COLLABORATION_EXECUTION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_BRAVETTO_MICROSERVICES_VALIDATION_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_ARLAX_NOW_EXECUTION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/DANNY_WORKFLOW_VALIDATION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/CLOUDFLARE_AUTOMATION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/BRAVETTO_ATOMIC_EXECUTION_PLAN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_ARLAX_EXECUTION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/ATOMIC_ARCHISTRATION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/CURRENT_STATE_VALIDATION_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_EXECUTIVE_AUTONOMY_EXECUTION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_SERVER_START_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_ARLAX_EXECUTED_BRILLIANT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/ELEGANCE_FRICTIONLESS_VALIDATION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/BRAVETTO_DOMAIN_ARSENAL_EXECUTION_SUMMARY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_EXECUTION_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_PRODUCTION_ALIGNMENT_VALIDATION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/EMERGENCE_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_EXECUTION_STATUS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_EXCELLENCE_EXECUTION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/DRIFT_OPERATIONALIZATION_EXECUTION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/PHASE_3_EMERGENT_ORGANISM_BLUEPRINT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/TRUICE_PRE_EXECUTION_READINESS_REPORT_AEYON_ABEONE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_ARLAX_WHAT_NOW.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/ATOMIC_ARCHISTRATION_AUTO_STATUS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/DANNY_WORKFLOW_ALIGNMENT_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/OPERATIONALIZATION_STATE_VALIDATION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/SCAFFOLDING_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/OPERATIONALIZATION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_OMNIPLAN_SUPER_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/CLOUDFLARE_PAGES_EXECUTION_PLAN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/AEYON_ARLAX_EXECUTION_COMPLETE_NOW.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/BRAVETTO_ULTRA_PROTOCOL_EXECUTION_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/CLOUDFLARE_PAGES_MISSION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/DANNY_WORKFLOW_STATUS_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/general/CHROME_EXTENSION_MV3_OPERATIONALIZATION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/integrations/ABEVISION_API_ENDPOINT_MAP.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/integrations/AEYON_V0_COMPONENT_INTEGRATION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/integrations/AEYON_EMERGENT_CONVERGENCE_EXECUTION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/integrations/ABEKEYS_TERMINAL_COMMANDS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/integrations/ABEKEYS_UNLOCK_SUCCESS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/integrations/AEYON_V0_COMPONENT_INTEGRATION_PLAN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/integrations/AEYON_NEXT_STEPS_CONVERGENCE_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/design-system/DESIGN_SYSTEM_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/deployments/AEYON_DEPLOYMENT_EXECUTING.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/deployments/DEPLOYMENT_REQUIREMENTS_AND_EXECUTION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/deployments/AEYON_DEPLOYMENT_PROCEEDING.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/deployments/AEYON_DEV_PR_DEPLOYMENT_EXECUTION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/deployments/AEYON_DEPLOYMENT_STATUS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/deployments/AEYON_DEPLOYMENT_EXECUTED.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/deployments/AEYON_DEPLOYMENT_EXECUTION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/deployments/AEYON_DEPLOYMENT_EXECUTION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/deployments/AEYON_MICROSERVICES_DEPLOYMENT_EXECUTION_PLAN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/status/deployments/AEYON_DEPLOYMENT_PROCEED_INSTRUCTIONS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/AEYON_POST_WORKFLOW_ARCHITECTURE_FORENSIC_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/END_TO_END_SYSTEM_ARCHITECTURE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/UFOP_v1.0_QUICK_REFERENCE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/META_ORCHESTRATOR_UFOP_v1.0_EXECUTION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/NEUROMORPHIC_ARCHITECTURE_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/ORBIT_4_UNIFIED_ARCHITECTURE_GUARDIAN_VALIDATION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/ARCHITECTURE_COMPLIANCE_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/ABEONE_FINAL_ARCHITECTURE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/ETERNAL_SYSTEM_ARCHITECTURE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/product-system/BRAVETTO_ABE_PRODUCTS_DEEP_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/product-system/ABEPRODUCTS_FORENSIC_PATTERN_ANALYSIS_E2E_RECURSIVE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/product-system/ABEPRODUCTS_COMPLETE_ANALYSIS_SUMMARY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/product-system/MARKETING_COMPREHENSIVE_PRODUCT_OVERVIEW.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/product-system/COMPLETE_ABEPRODUCTS_ANALYSIS_AND_TEMPLATE_HEAVEN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/general/DRIFT_PATTERN_ANALYSIS_AND_GAPS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/general/OBSERVER_SUCCESS_PATTERN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/general/DANNY_WORKFLOW_PATTERN_ALWAYS_CLEAR.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/general/DANNY_INTERACTION_PATTERNS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/orbital-system/ORBITAL_STRATEGY_FORENSIC_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/orbital-system/COMPLETE_ORBITAL_RESTRUCTURING_PLAN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/orbital-system/LAUNCH_CONVERGENCE_4_ORBITALS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/orbital-system/ADVANCED_KNOCK_ORBITAL_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/orbital-system/ORBITAL_HOUSE_HEALING_COMPLETE_REORGANIZATION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/guardian-system/GUARDIAN_ENFORCEMENT_MECHANISM.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/guardian-system/GUARDIAN_SYSTEM.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/guardian-system/GUARDIANS_ORBIT_BIG4_CONVERGENCE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/guardian-system/GUARDIAN_FLOW_FORENSIC_ANALYSIS_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/guardian-system/META_GUARDIAN_CONVERGENCE_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/guardian-system/GUARDIAN_ENFORCEMENT_OPERATIONAL_STATUS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/guardian-system/GUARDIAN_ENFORCEMENT_VERIFICATION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/guardian-system/Ab\u00ebONE_GUARDIAN_SPECIFICATIONS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/guardian-system/AEYON_GUARDIAN_AGENT_SWARM_INTEGRATION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/guardian-system/GUARDIAN_ENFORCEMENT_LOUD_FAILURES.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/guardian-system/GUARDIAN_MICROSERVICES_INFRASTRUCTURE_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/guardian-system/GUARDIAN_ENFORCEMENT_QUICK_REFERENCE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/guardian-system/GUARDIAN_ENFORCEMENT_COMPLETE_OPERATIONALIZATION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/guardian-system/COMPLETE_GUARDIAN_AGENT_SWARM_DESCRIPTION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/integrations/MCP_AND_MULTI_MODEL_GUIDE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/marketing-system/MARKETING_AUTOMATION_FORENSIC_PATTERN_ANALYSIS_E2E_RECURSIVE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/architecture/marketing-system/MARKETING_DAILY_QUICK_REFERENCE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/guides/ARCHIVE_EXECUTION_SUMMARY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/guides/AEYON_EXECUTION_STATUS_NOW.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/guides/AEYON_STATE_VALIDATION_AND_EXECUTION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/guides/CLOUD_DEPLOYMENT_ACTIVATION_COMMAND_PROMPT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/guides/TEST_EXECUTION_SUMMARY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/guides/EPISTEMIC_VALIDATION_TEAM_EXECUTION_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/guides/AEYON_EXECUTION_NOW.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/guides/general/BACKEND_REVENUE_ORCHESTRATION_GUIDE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/guides/general/VIBECODER_GUIDE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/guides/development/LOCALHOST_PREVIEW_GUIDE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/guides/development/CLOUDFLARE_PAGES_QUICK_START.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/guides/development/CLOUDFLARE_AUTOMATION_QUICK_START.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/guides/development/DEVELOPER_GUIDE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/marketing/CHIMERA_TO_CONVERGENCE_MASTER_PLAN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/WORK_UNITS_100_ATOMIC_TASKS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/WORKSPACE_CHROME_EXTENSION_ALIGNMENT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/EXTRACTION_MAP_100_PERCENT_READINESS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ALLISON_ONBOARDING_LIVESTREAM_OUTLINE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/EVERYTHING_COMPLETE_FINAL.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ABEONE_CLEANUP_DETAILED_TABLES.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/TAHOE_26_EMERGENT_CONVERGENCE_OPPORTUNITIES.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/WHAT_LONGS_TO_BE_OPERATIONALIZED.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/CONTEXT_WINDOW_SUMMARY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/DANNY_MANIFEST_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/MCP_SERVERS_DEEP_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/PROJECT_TREE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/COMPLETE_FOLDER_HIERARCHY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/PREFLIGHT_QUICK_START.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/NAMING_MIGRATION_MAP.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/OPTIMIZATION_COMPLETE_CELEBRATION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/DESIGN_SYSTEMS_E2E_DEEP_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/COMPLETE_CONVERGENCE_ANALYSIS_SAAS_SOLUTION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ALL_SYSTEMS_INTENTIONALLY_ON.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ZERO_COMPLETE_FORENSIC_AGENT_PERSONALITY_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/Ab\u00ebONE_CORE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/LOCAL_AI_ASSISTANT_COMPLETE_LIVE_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ORBITS_INVENTORY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ABEONE_ETERNAL_SYNTHESIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/TEMPLATE_HEAVEN_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/NEXT_STEPS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ABEONE_PREFLIGHT_OMEGA_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ORBIT_REORG_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ABEONE_INTEGRATION_LOCKED.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/CONTEXT_BOOT_OPERATIONALIZATION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/CLAUDE_CODE_INTEGRATION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ONE_ORGANISM_FUSION_PROTOCOL.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/UNIVERSAL_ADAPTER_PATTERN_CDF_UPTC_CONVERGENCE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/VISUAL_NEXT_STEPS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/INTELLIGENCE_PIPELINE_END_TO_END_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ETERNAL_DASHBOARD_SOLUTION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ALLISON_PERSONALIZED_ONBOARDING.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/USER_JOURNEY_QA.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ALL_COMPLETE_SUMMARY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/DEEP_SYSTEM_ANALYSIS_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/CLOUD_DEPLOYMENT_NEXT_STEPS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/COLOR_SYSTEM_OPERATIONALIZED.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ABEONE_ORGANISM_CLEANUP_PLAN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/REALITY_CHECK.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/COMPLETE_CONVERGENCE_STRATEGY_IMPLEMENTATION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/PHASE_0_TASK_04_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ORBIT_BOOTSTRAP_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/FINAL_SYNTHESIS_UNIFIED_CONSOLIDATION_PLAN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/TEAM_ONBOARDING.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/PREFLIGHT_ENFORCEMENT_README.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ABEONE_CLEANUP_SUMMARY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/SYSTEM_COMBINATIONS_COMPLETE_MAP.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/AEYON_Delta_Convergence_Map.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/OPTIMAL_FOLDER_HIERARCHY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/BACKEND_SERVER_LAUNCHED.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/END_TO_END_STATUS_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/DANNY_WORKFLOW_MISSING_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/NAMING_CONVENTION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ORBIT_BOOTSTRAP_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ABEONE_SINGLE_SOURCE_OF_TRUTH.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/PHASE_2_TASK_2.2_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/CLOUDFLARE_OUTAGE_RESPONSE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/LIVESTREAM_QUICK_REFERENCE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/BRAVETTO_PRICING_STRATEGY_2025.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/EMAIL_CONVERGENCE_OPPORTUNITY_CARDS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/WHAT_ELSE_EMERGES.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/GPT5_ULTIMATE_OBSERVER_META_PROMPT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/LIVESTREAM_DEEP_CODEBASE_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/DEPENDENCY_MANAGEMENT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ALRAX_DEEP_FORENSIC_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/DANNY_WORKFLOW_ALWAYS_REFERENCE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/DANNY_REQUIREMENTS_COMPLETE_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/COMPLETE_CONVERGENCE_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/CONTEXT_WINDOW_3_MODULE_HEALTH_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/BRAVETTO_DAILY_AUTOMATED_ACTION_ENGINE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ABEONE_ONE_ETERNAL_SYNTHESIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/DEPLOYMENT_STATUS_FINAL.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/THREE_PDFS_COMPLETE_FORENSIC_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/OPTIMAL_SIMPLEST_PATH.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/BRAVETTO_PRICING_STRATEGY_2026.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/CONTEXT_BOOT_OPERATIONALIZATION_SUMMARY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/DEEP_SCAN_COMPLETE_RETRIEVAL_IDENTITY_CDF.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/LIVE_EVENT_TITLE_DESCRIPTION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/GLOBAL_EMERGENT_CONVERGENCE_RECONSTRUCTION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/COMPONENT_LIBRARY_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/AEYON_WHAT_ELSE_WHAT_NEXT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/AEYON_FULL_SYSTEM_MAP.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/DESIGN_SYSTEMS_FOCUS_COMPARISON.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/AEYON_SYSTEM_STATE_SNAPSHOT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/BRAVETTO_CHROME_EXTENSION_GIT_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/DOCUMENTATION_GAPS_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/OPTIMIZATION_SUMMARY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ORBITS_ORGANIZATION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/V0_ETERNAL_FIX_SUMMARY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/CLAUDE_CODE_QUICK_REFERENCE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ABEONE_VINFINITY_ORCHESTRATOR_SYNTHESIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/DEEP_FORENSIC_ANALYSIS_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/AEYON_VALIDATION_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/AEYON_META_EXECUTIVE_ORCHESTRATOR_COMPLETE_DIAGNOSTIC.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/SYSTEM_ALIGNMENT_CHECK_LATEST.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/CLOUDFLARE_PAGES_VISUAL_WALKTHROUGH.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/MAC_OPTIMIZATION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/DANNY_SLACK_MESSAGE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ZERO_ALLISON_PROFILE_EXTRACTION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/FEDERATED_LEARNING_DELIVERY_PACKAGE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/_BRAVETTO_ORBIT_BUILDER_ANALYSIS_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ORGANISM_LOCKED_IN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ABEFLOWS_BRAVETTO_GIT_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/V0_PROJECT_DRIFT_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/DEPLOYMENT_STATUS_AND_LAUNCH_PARAMETERS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/BACKEND_AND_EXTENSION_VERIFICATION_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/WHAT_WE_CAN_BUILD_NOW.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/DEPLOYMENT_OPTIMIZATION_AND_JOHN_TEST.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/CLOUD_INFRASTRUCTURE_COMPLETE_BLUEPRINT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ALLISON_CURSOR_ONBOARDING_PROMPT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/BRAVETTO_IMPENETRABLE_MOAT_BLUEPRINT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/V0_PROJECT_COMPLETION_PROMPT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ABEONE_CLEANUP_QUICK_REFERENCE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ORBIT_REORGANIZATION_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/CLOUD_TWIN_BACKUP_STRATEGY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/BRAVETTO_AI_LANDING_PAGE_PREPARATION.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/V0_PROJECT_CONTEXT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/CONTEXT_WINDOW_2_UNIFIED_ORGANISM_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/EMAIL_CONVERGENCE_ACTION_PLAN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/ABEONE_3WINDOW_UNIFIED_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/AI_RELATIONSHIP_MEMORY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/COMPLETE_VISUAL_DIAGNOSTIC_PROMPT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/VIRTUAL_ENVIRONMENT_DEEP_ANALYSIS.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/PHASE_4_TASK_42_COMPLETE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/BOOTSTRAP_V3_FINAL_REPORT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/TAHOE_26_QUICK_START.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/THREE_MAPS_REFERENCE.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/SYSTEM_READINESS_SUMMARY.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/COMPLETE_MAC_OPTIMIZATION_PLAN.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/14_PARALLEL_SUBSYSTEM_ALIGNMENT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/reference/_BRAVETTO_ORBIT_BUILDER_PROMPT.md",
+        "mentions_workflows": true
+      },
+      {
+        "file": "/Users/michaelmataluni/Documents/AbeOne_Master/docs/strategy/CORE_PRODUCT_STRATEGY.md",
+        "mentions_workflows": true
+      }
+    ],
+    "running": [],
+    "not_running": []
+  },
+  "reality_alignment": {
+    "aligned": [
+      "lint-and-format-check",
+      "cloudflare-pages",
+      "guardian-enforcement",
+      "deploy",
+      "branch_protection",
+      "validate-boundaries",
+      "security-lint",
+      "build-backend",
+      "build-frontend",
+      "ci",
+      "build",
+      "validate-all",
+      "dependency-audit"
+    ],
+    "misaligned": [],
+    "unknown": []
+  },
+  "requires_discovery": [
+    "Which workflows are actually running in GitHub",
+    "Which workflows are triggered by what events",
+    "Which workflows have failed recently",
+    "Which workflows are blocked",
+    "What the actual execution state is"
+  ],
+  "requires_emergence": [
+    "Workflow monitoring system",
+    "Workflow execution tracking",
+    "Workflow failure alerts",
+    "Workflow performance metrics",
+    "Integration between workflows and actual systems"
+  ],
+  "requires_convergence": [
+    "Documentation vs actual workflows",
+    "Workflow patterns across satellites",
+    "CI/CD pipeline unification",
+    "Deployment workflow convergence",
+    "Testing workflow convergence"
+  ]
+}

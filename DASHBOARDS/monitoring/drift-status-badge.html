@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Drift Protection Badge</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1e1e1e;
+            color: #cccccc;
+            padding: 15px;
+            font-size: 12px;
+        }
+        
+        .badge-container {
+            max-width: 350px;
+            margin: 0 auto;
+        }
+        
+        .status-badge {
+            background: #252526;
+            border: 2px solid #3e3e42;
+            border-radius: 8px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .status-badge.active {
+            border-color: #4ec9b0;
+            box-shadow: 0 0 10px rgba(78, 201, 176, 0.3);
+        }
+        
+        .status-badge.legacy {
+            border-color: #f48771;
+        }
+        
+        .status-badge.unknown {
+            border-color: #858585;
+        }
+        
+        .badge-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .badge-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #4ec9b0;
+        }
+        
+        .status-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #4ec9b0;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        
+        .project-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #cccccc;
+        }
+        
+        .project-status {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+        
+        .project-status.active {
+            background: #4ec9b0;
+            color: #1e1e1e;
+        }
+        
+        .project-status.legacy {
+            background: #f48771;
+            color: #1e1e1e;
+        }
+        
+        .project-status.unknown {
+            background: #858585;
+            color: #1e1e1e;
+        }
+        
+        .health-score {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: #858585;
+        }
+        
+        .score-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4ec9b0;
+        }
+        
+        .protection-bar {
+            margin-top: 10px;
+            height: 6px;
+            background: #3e3e42;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .protection-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4ec9b0, #569cd6);
+            transition: width 0.5s ease;
+            border-radius: 3px;
+        }
+        
+        .project-info {
+            margin-top: 10px;
+            font-size: 10px;
+            color: #858585;
+        }
+        
+        .last-updated {
+            margin-top: 10px;
+            font-size: 9px;
+            color: #858585;
+            text-align: center;
+            padding-top: 10px;
+            border-top: 1px solid #3e3e42;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #858585;
+        }
+        
+        .error {
+            padding: 15px;
+            background: #3a2e1e;
+            border-radius: 6px;
+            border-left: 4px solid #f48771;
+            color: #cccccc;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+    <div class="badge-container">
+        <div id="badge-content" class="loading">Loading...</div>
+    </div>
+    
+    <script>
+        let lastUpdateTime = null;
+        
+        async function loadBadgeData() {
+            try {
+                const response = await fetch('.ai-context-source-of-truth.json?t=' + Date.now());
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                const data = await response.json();
+                renderBadge(data);
+                lastUpdateTime = new Date(data._meta?.lastUpdated || Date.now());
+                updateLastUpdated();
+                return true;
+            } catch (error) {
+                showError(`Failed to load: ${error.message}`);
+                return false;
+            }
+        }
+        
+        function renderBadge(data) {
+            const container = document.getElementById('badge-content');
+            const workspace = data.workspace || {};
+            const systemStatus = data.systemStatus || {};
+            const projects = data.projects || {};
+            
+            const currentProject = workspace.currentProject || 'Workspace Root';
+            const healthScore = systemStatus.overallHealth || 0;
+            const status = workspace.currentProject ? 'active' : 'unknown';
+            
+            // Find current project details
+            let projectDetails = null;
+            if (projects.active) {
+                projectDetails = projects.active.find(p => 
+                    p.name === currentProject || 
+                    p.directory === workspace.currentDirectory
+                );
+            }
+            
+            const projectStatus = projectDetails?.operationalStatus?.status || 
+                                 (workspace.currentProject ? 'ACTIVE' : 'ROOT');
+            const projectScore = projectDetails?.operationalStatus?.score || healthScore;
+            
+            const statusClass = projectStatus.toLowerCase().includes('operational') ? 'active' :
+                              projectStatus.toLowerCase().includes('legacy') ? 'legacy' : 'unknown';
+            
+            const html = `
+                <div class="status-badge ${statusClass}">
+                    <div class="badge-header">
+                        <div class="badge-title"> Drift Protection</div>
+                        <div class="status-indicator"></div>
+                    </div>
+                    <div class="project-name">
+                        ${currentProject}
+                        <span class="project-status ${statusClass}">${projectStatus}</span>
+                    </div>
+                    <div class="health-score">
+                        <span>System Health</span>
+                        <span class="score-value">${healthScore}%</span>
+                    </div>
+                    <div class="protection-bar">
+                        <div class="protection-fill" style="width: ${healthScore}%"></div>
+                    </div>
+                    ${projectDetails ? `
+                        <div class="project-info">
+                            Directory: <code>${projectDetails.directory}</code><br>
+                            Score: ${projectScore}%
+                        </div>
+                    ` : ''}
+                    <div class="last-updated" id="last-updated">
+                        Updated: Just now
+                    </div>
+                </div>
+            `;
+            
+            container.innerHTML = html;
+        }
+        
+        function showError(message) {
+            const container = document.getElementById('badge-content');
+            container.innerHTML = `<div class="error">${message}</div>`;
+        }
+        
+        function updateLastUpdated() {
+            const element = document.getElementById('last-updated');
+            if (!element || !lastUpdateTime) return;
+            
+            const now = new Date();
+            const diff = Math.floor((now - lastUpdateTime) / 1000);
+            let timeStr;
+            
+            if (diff < 10) {
+                timeStr = 'Just now';
+            } else if (diff < 60) {
+                timeStr = `${diff}s ago`;
+            } else if (diff < 3600) {
+                timeStr = `${Math.floor(diff / 60)}m ago`;
+            } else {
+                timeStr = `${Math.floor(diff / 3600)}h ago`;
+            }
+            
+            element.textContent = `Updated: ${timeStr}`;
+        }
+        
+        // Initialize
+        loadBadgeData();
+        
+        // Auto-refresh every 3 seconds
+        setInterval(() => {
+            loadBadgeData();
+        }, 3000);
+        
+        // Update time display every second
+        setInterval(updateLastUpdated, 1000);
+        
+        // Watch for file changes
+        let lastModified = null;
+        setInterval(async () => {
+            try {
+                const response = await fetch('.ai-context-source-of-truth.json?t=' + Date.now(), { method: 'HEAD' });
+                const currentModified = response.headers.get('last-modified');
+                if (currentModified && currentModified !== lastModified) {
+                    lastModified = currentModified;
+                    await loadBadgeData();
+                }
+            } catch (error) {
+                // Silent fail
+            }
+        }, 2000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+{
+  "timestamp": "2025-10-12T23:31:40.590281",
+  "test_results": {
+    "core_components": {
+      "TrustGuardDetector": {
+        "status": "PASS",
+        "message": "Initialized successfully"
+      },
+      "ValidationEngine": {
+        "status": "PASS",
+        "message": "Initialized successfully"
+      },
+      "ConstitutionalPrompting": {
+        "status": "PASS",
+        "message": "Initialized successfully"
+      },
+      "ReliabilityMetrics": {
+        "status": "PASS",
+        "message": "Initialized successfully"
+      },
+      "AuthenticationSystem": {
+        "status": "PASS",
+        "message": "Initialized successfully"
+      },
+      "HealthChecker": {
+        "status": "PASS",
+        "message": "Initialized successfully"
+      },
+      "TracerManager": {
+        "status": "PASS",
+        "message": "Initialized successfully"
+      }
+    },
+    "functionality": {
+      "PatternDetection": {
+        "status": "PASS",
+        "message": "7 patterns detected successfully",
+        "patterns": [
+          "hallucination",
+          "drift",
+          "bias",
+          "deception",
+          "security_theater",
+          "duplication",
+          "stub_syndrome"
+        ]
+      },
+      "MathematicalValidation": {
+        "status": "PASS",
+        "message": "Validation completed successfully"
+      },
+      "MitigationApplication": {
+        "status": "PASS",
+        "message": "Mitigation applied successfully"
+      },
+      "MetricsRecording": {
+        "status": "PASS",
+        "message": "Metrics recorded successfully"
+      },
+      "TracerBullets": {
+        "status": "PASS",
+        "message": "Tracer bullets working correctly"
+      }
+    },
+    "error_handling": {
+      "None Input": {
+        "status": "PASS",
+        "message": "Handled gracefully"
+      },
+      "Integer Input": {
+        "status": "PASS",
+        "message": "Handled gracefully"
+      },
+      "List Input": {
+        "status": "PASS",
+        "message": "Handled gracefully"
+      },
+      "Dict Input": {
+        "status": "PASS",
+        "message": "Handled gracefully"
+      }
+    },
+    "performance": {
+      "DetectionPerformance": {
+        "status": "PASS",
+        "message": "100 detections in 0.00s",
+        "avg_time_ms": 0.030610561370849606
+      }
+    },
+    "health_checks": {
+      "ComprehensiveHealthCheck": {
+        "status": "PASS",
+        "message": "Health check completed with status: unhealthy",
+        "overall_status": "unhealthy"
+      },
+      "LivenessProbe": {
+        "status": "PASS",
+        "message": "Service is alive",
+        "is_alive": true
+      },
+      "ReadinessProbe": {
+        "status": "FAIL",
+        "message": "Service is not ready",
+        "is_ready": false
+      }
+    }
+  },
+  "summary": {
+    "total_tests": 20,
+    "passed_tests": 19,
+    "failed_tests": 1,
+    "success_rate": 95.0,
+    "overall_status": "FAIL"
+  }
+}

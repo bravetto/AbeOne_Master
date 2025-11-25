@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Run TypeScript check
+echo "Running TypeScript type check..."
+if npx tsc --noEmit; then
+  echo "  TypeScript check passed!"
+else
+  echo "  TypeScript check failed. Fix the errors before committing."
+  exit 1
+fi
+
+# Run ESLint + Prettier on staged files
+echo "Running ESLint + Prettier on staged files..."
+if npx lint-staged; then
+  echo "  Linting & formatting passed!"
+else
+  echo "  Linting or formatting failed. Fix the errors before committing."
+  exit 1
+fi
+
+echo "All checks passed! "

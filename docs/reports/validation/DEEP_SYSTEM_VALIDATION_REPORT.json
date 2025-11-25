@@ -1,0 +1,143 @@
+{
+  "timestamp": "2025-11-22T12:29:59.856892",
+  "validation_type": "DEEP_SYSTEM_ANALYSIS",
+  "components": {
+    "input_output_mapping": {
+      "input_hooks_count": 9,
+      "output_hooks_count": 9,
+      "sst_in_input": true,
+      "sst_in_output": true,
+      "status": "VALID"
+    },
+    "single_source_of_truth": {
+      "exists": true,
+      "last_updated": "2025-11-22T12:29:55.066221",
+      "current_project": "AIGuards-Backend-orbital",
+      "recent_context_count": 8,
+      "missing_fields": [],
+      "status": "VALID"
+    },
+    "enforcement": {
+      "pre_chat_hook": true,
+      "post_chat_hook": true,
+      "basic_enforcer": true,
+      "hardened_enforcer": true,
+      "status": "COMPLETE"
+    },
+    "threat_vectors": {
+      "total": 7,
+      "mitigated": 5,
+      "remaining": 2,
+      "mitigation_rate": "71.4%",
+      "threats": [
+        {
+          "name": "Config File Corruption",
+          "severity": "CRITICAL",
+          "mitigated": true
+        },
+        {
+          "name": "Single Source of Truth Corruption",
+          "severity": "CRITICAL",
+          "mitigated": true
+        },
+        {
+          "name": "Service Registry Corruption",
+          "severity": "HIGH",
+          "mitigated": true
+        },
+        {
+          "name": "Map File Missing",
+          "severity": "HIGH",
+          "mitigated": false
+        },
+        {
+          "name": "Hook Execution Failure",
+          "severity": "MEDIUM",
+          "mitigated": true
+        },
+        {
+          "name": "Resource Exhaustion",
+          "severity": "HIGH",
+          "mitigated": false
+        },
+        {
+          "name": "Race Condition",
+          "severity": "MEDIUM",
+          "mitigated": true
+        }
+      ]
+    },
+    "failure_points": {
+      "total": 5,
+      "hardened": 3,
+      "self_healing": 5,
+      "hardening_rate": "60.0%",
+      "self_healing_rate": "100.0%",
+      "failure_points": [
+        {
+          "name": "Config Loading",
+          "risk": "CRITICAL",
+          "hardened": true,
+          "self_healing": true
+        },
+        {
+          "name": "Single Source of Truth Update",
+          "risk": "CRITICAL",
+          "hardened": true,
+          "self_healing": true
+        },
+        {
+          "name": "Service Registry Access",
+          "risk": "HIGH",
+          "hardened": true,
+          "self_healing": true
+        },
+        {
+          "name": "Map Loading",
+          "risk": "MEDIUM",
+          "hardened": false,
+          "self_healing": true
+        },
+        {
+          "name": "Hook Execution",
+          "risk": "MEDIUM",
+          "hardened": false,
+          "self_healing": true
+        }
+      ]
+    },
+    "self_healing": {
+      "total_strategies": 5,
+      "implemented": 5,
+      "implementation_rate": "100.0%",
+      "strategies": [
+        {
+          "name": "RETRY",
+          "implemented": true,
+          "description": "Exponential backoff (max 3 attempts)"
+        },
+        {
+          "name": "FALLBACK",
+          "implemented": true,
+          "description": "Alternative execution path"
+        },
+        {
+          "name": "RECREATE",
+          "implemented": true,
+          "description": "Rebuild corrupted resources"
+        },
+        {
+          "name": "ESCALATE",
+          "implemented": true,
+          "description": "Human intervention required"
+        },
+        {
+          "name": "IGNORE",
+          "implemented": true,
+          "description": "Non-critical failures"
+        }
+      ]
+    }
+  },
+  "overall_status": "VALID"
+}

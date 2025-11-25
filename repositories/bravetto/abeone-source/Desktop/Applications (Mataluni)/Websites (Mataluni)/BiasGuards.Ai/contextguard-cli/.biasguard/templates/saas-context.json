@@ -1,0 +1,14 @@
+{
+  "projectType": "saas",
+  "missionAlignment": true,
+  "performanceTargets": {
+    "lighthouse": 98,
+    "accessibility": 100,
+    "seo": 95
+  },
+  "businessMetrics": {
+    "conversionRate": "TBD",
+    "userRetention": "TBD",
+    "revenueToJustice": "15%"
+  }
+}

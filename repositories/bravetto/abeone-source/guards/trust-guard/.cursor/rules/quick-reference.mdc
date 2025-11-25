@@ -1,0 +1,85 @@
+---
+alwaysApply: true
+description: Quick reference guide for Trust Guard development
+---
+
+# Trust Guard Quick Reference
+
+## Project Overview
+Trust Guard is an AI reliability service that detects and mitigates seven failure patterns: hallucination, drift, bias, deception, security theater, duplication, and stub syndrome.
+
+## Key Files
+- [main.py](mdc:main.py) - FastAPI application entry point
+- [trustguard/core.py](mdc:trustguard/core.py) - Main detection engine
+- [trustguard/validation.py](mdc:trustguard/validation.py) - Mathematical validation
+- [trustguard/constitutional.py](mdc:trustguard/constitutional.py) - Mitigation strategies
+- [trustguard/config.py](mdc:trustguard/config.py) - Configuration management
+- [aws/deploy.sh](mdc:aws/deploy.sh) - AWS deployment script
+
+## Common Commands
+
+### Development
+```bash
+# Start development server
+python -m uvicorn main:app --reload
+
+# Run tests
+python -m pytest tests/ -v
+
+# Format code
+black trustguard/ main.py
+isort trustguard/ main.py
+
+# Type checking
+mypy trustguard/ main.py
+```
+
+### Deployment
+```bash
+# Local Docker
+docker-compose up --build
+
+# AWS deployment
+cd aws && ./deploy.sh
+
+# Health check
+curl http://localhost:8000/health
+```
+
+## API Endpoints
+- `POST /v1/detect` - Pattern detection
+- `POST /v1/validate` - Comprehensive validation
+- `POST /v1/mitigate` - Apply mitigation
+- `GET /v1/metrics` - Service metrics
+- `GET /health` - Health check
+
+## Environment Variables
+- `TRUSTGUARD_HOST` - Service host (default: 0.0.0.0)
+- `TRUSTGUARD_PORT` - Service port (default: 8000)
+- `TRUSTGUARD_LOG_LEVEL` - Logging level (default: INFO)
+- `TRUSTGUARD_RATE_LIMIT` - Rate limit per minute (default: 100)
+
+## Pattern Detection
+Each pattern detector returns:
+```python
+{
+    "score": float,        # 0.0 to 1.0
+    "confidence": float,   # 0.0 to 1.0
+    "description": str,
+    "evidence": List[str],
+    "risk_level": str      # "low", "medium", "high"
+}
+```
+
+## Testing
+- Unit tests: `tests/unit/`
+- Integration tests: `tests/integration/`
+- Pattern tests: `tests/patterns/`
+- Performance tests: `tests/performance/`
+
+## Architecture
+- FastAPI web framework
+- Pydantic for data validation
+- Prometheus metrics
+- AWS ECS Fargate deployment
+- Docker containerization

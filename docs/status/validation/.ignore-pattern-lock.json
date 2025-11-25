@@ -1,0 +1,39 @@
+{
+  "GLOBAL_IGNORES": {
+    "items": [
+      "node_modules",
+      ".git",
+      "dist",
+      "build",
+      ".next",
+      "out",
+      ".vscode",
+      ".idea",
+      "__pycache__",
+      ".DS_Store",
+      "Thumbs.db"
+    ],
+    "digest": "REPLACE_ME"
+  },
+  "GLOBAL_IGNORES_CHOKIDAR": {
+    "items": [
+      "**/node_modules",
+      "**/.git",
+      "**/dist",
+      "**/build",
+      "**/.next",
+      "**/out",
+      "**/.vscode",
+      "**/.idea",
+      "**/__pycache__",
+      "**/.DS_Store",
+      "**/Thumbs.db",
+      "**/*.log",
+      ".ai-context-source-of-truth.json"
+    ],
+    "digest": "REPLACE_ME"
+  },
+  "build_id": "8d73156411faac12",
+  "timestamp": "2025-11-23T02:36:54.659Z",
+  "ignore_system_state": "SEALED"
+}

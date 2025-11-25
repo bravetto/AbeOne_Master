@@ -1,0 +1,103 @@
+# AbëONE Master - Minimal .gitignore (YAGNI Principles)
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+ENV/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.pnpm-debug.log*
+
+# Docker
+*.log
+.dockerignore
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Excluded Directories (Heavy/Deprecated)
+archive/
+temp_repos/
+satellites/
+orbital/
+Downloads/
+Documents/
+outputs/
+hidden_files_backup/
+
+# Memory System (exclude backups and logs)
+.abeone_memory/backups/
+.abeone_memory/logs/
+
+# Large Data
+data/external_disks/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+*.env
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Build Artifacts
+*.o
+*.a
+*.lib
+*.dll
+*.exe
+
+# Test Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# TypeScript
+*.tsbuildinfo
+
+# Compiled Files
+*.class
+*.jar
+*.war
+*.ear

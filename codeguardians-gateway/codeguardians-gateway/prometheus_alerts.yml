@@ -1,0 +1,185 @@
+# Prometheus Alerting Rules for CodeGuardians Gateway Orchestrator
+# 
+# Installation:
+# 1. Add to Prometheus config: alerting_rules_files: ['prometheus_alerts.yml']
+# 2. Reload Prometheus: curl -X POST http://prometheus:9090/-/reload
+# 3. Configure Alertmanager to route alerts to your notification system
+
+groups:
+  - name: orchestrator_circuit_breakers
+    interval: 30s
+    rules:
+      # Alert when any circuit breaker is OPEN (critical)
+      - alert: CircuitBreakerOpen
+        expr: circuit_breaker_state{service_name=~".+"} == 2
+        for: 1m
+        labels:
+          severity: critical
+          component: orchestrator
+        annotations:
+          summary: "Circuit breaker OPEN for {{ $labels.service_name }}"
+          description: |
+            Circuit breaker is OPEN for service {{ $labels.service_name }}.
+            This indicates repeated failures. Service is currently blocked.
+            Failure count: {{ $value }}
+
+      # Alert when circuit breaker failure count is high (warning)
+      - alert: HighCircuitBreakerFailures
+        expr: circuit_breaker_failure_count{service_name=~".+"} >= 3
+        for: 5m
+        labels:
+          severity: warning
+          component: orchestrator
+        annotations:
+          summary: "High failure count for {{ $labels.service_name }} circuit breaker"
+          description: |
+            Circuit breaker for {{ $labels.service_name }} has {{ $value }} failures.
+            Service may be experiencing issues. Monitor for circuit breaker opening.
+
+  - name: orchestrator_availability
+    interval: 30s
+    rules:
+      # Alert when service is unavailable (critical)
+      - alert: ServiceUnavailable
+        expr: service_availability{service_name=~".+"} == 0
+        for: 2m
+        labels:
+          severity: critical
+          component: orchestrator
+        annotations:
+          summary: "Service {{ $labels.service_name }} is unavailable"
+          description: |
+            Service {{ $labels.service_name }} has been unavailable for 2+ minutes.
+            Check service health and configuration.
+
+      # Alert when service health is unhealthy (warning)
+      - alert: ServiceUnhealthy
+        expr: service_health_status{service_name=~".+"} == 3
+        for: 5m
+        labels:
+          severity: warning
+          component: orchestrator
+        annotations:
+          summary: "Service {{ $labels.service_name }} is unhealthy"
+          description: |
+            Service {{ $labels.service_name }} has been unhealthy for 5+ minutes.
+            Current status: unhealthy. Investigate service issues.
+
+      # Alert when service is degraded (info)
+      - alert: ServiceDegraded
+        expr: service_health_status{service_name=~".+"} == 2
+        for: 10m
+        labels:
+          severity: info
+          component: orchestrator
+        annotations:
+          summary: "Service {{ $labels.service_name }} is degraded"
+          description: |
+            Service {{ $labels.service_name }} has been in degraded state for 10+ minutes.
+            Performance may be impacted.
+
+  - name: orchestrator_performance
+    interval: 30s
+    rules:
+      # Alert on high error rates (warning)
+      - alert: HighOrchestratorErrorRate
+        expr: |
+          rate(orchestrator_requests_total{status="error"}[5m]) 
+          / 
+          rate(orchestrator_requests_total[5m]) > 0.05
+        for: 5m
+        labels:
+          severity: warning
+          component: orchestrator
+        annotations:
+          summary: "High error rate for orchestrator requests"
+          description: |
+            Error rate exceeds 5% over the last 5 minutes.
+            {{ $value | humanizePercentage }} of requests are failing.
+            Investigate service connectivity and configuration.
+
+      # Alert on slow orchestrator requests (warning)
+      - alert: SlowOrchestratorRequests
+        expr: |
+          histogram_quantile(0.95, 
+            rate(orchestrator_request_duration_seconds_bucket[5m])
+          ) > 10
+        for: 5m
+        labels:
+          severity: warning
+          component: orchestrator
+        annotations:
+          summary: "Slow orchestrator requests (p95 > 10s)"
+          description: |
+            95th percentile request duration exceeds 10 seconds.
+            Current p95: {{ $value }}s
+            Investigate service response times.
+
+      # Alert on high service response times (info)
+      - alert: HighServiceResponseTime
+        expr: |
+          histogram_quantile(0.95,
+            rate(service_response_time_seconds_bucket[5m])
+          ) > 5
+        for: 10m
+        labels:
+          severity: info
+          component: orchestrator
+        annotations:
+          summary: "High response time for {{ $labels.service_name }}"
+          description: |
+            Service {{ $labels.service_name }} p95 response time is {{ $value }}s (threshold: 5s).
+            Monitor for potential performance issues.
+
+  - name: orchestrator_rate_limiting
+    interval: 30s
+    rules:
+      # Alert on high rate limit hits (info)
+      - alert: HighRateLimitHits
+        expr: rate(rate_limit_hits_total[5m]) > 10
+        for: 5m
+        labels:
+          severity: info
+          component: orchestrator
+        annotations:
+          summary: "High rate limit hits detected"
+          description: |
+            Rate limiting is being triggered frequently (>10 hits/min).
+            Endpoint: {{ $labels.endpoint }}
+            Limit type: {{ $labels.limit_type }}
+            May indicate legitimate high traffic or potential abuse.
+
+  - name: guardian_zero_integration
+    interval: 30s
+    rules:
+      # Alert when Guardian Zero is unavailable (warning)
+      - alert: GuardianZeroUnavailable
+        expr: |
+          rate(guardian_zero_requests_total{status="unavailable"}[5m]) > 0
+        for: 5m
+        labels:
+          severity: warning
+          component: guardian_zero
+        annotations:
+          summary: "Guardian Zero forensic analysis unavailable"
+          description: |
+            Guardian Zero forensic analysis requests are failing.
+            Forensic analysis may not be available for critical errors.
+            Check Guardian Zero service connectivity.
+
+      # Alert on Guardian Zero analysis duration (info)
+      - alert: SlowGuardianZeroAnalysis
+        expr: |
+          histogram_quantile(0.95,
+            rate(guardian_zero_analysis_duration_seconds_bucket[5m])
+          ) > 30
+        for: 5m
+        labels:
+          severity: info
+          component: guardian_zero
+        annotations:
+          summary: "Slow Guardian Zero forensic analysis"
+          description: |
+            Guardian Zero analysis p95 duration is {{ $value }}s (threshold: 30s).
+            May impact error analysis time.
+

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Real-Time Drift Monitor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --bg-tertiary: #252525;
+            --border-color: #333;
+            --text-primary: #e0e0e0;
+            --text-secondary: #888;
+            --accent-green: #00ff88;
+            --accent-yellow: #ffaa00;
+            --accent-blue: #00aaff;
+            --accent-red: #ff4444;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            padding: 15px;
+            font-size: 13px;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        
+        .header h1 {
+            font-size: 18px;
+            color: var(--accent-green);
+            font-weight: normal;
+        }
+        
+        .status-bar {
+            display: flex;
+            gap: 20px;
+            font-size: 11px;
+        }
+        
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .panel {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 15px;
+            font-size: 12px;
+        }
+        
+        .panel-title {
+            color: var(--accent-blue);
+            margin-bottom: 12px;
+            font-weight: bold;
+            font-size: 13px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+        }
+        
+        .project-item {
+            padding: 8px;
+            margin: 6px 0;
+            background: var(--bg-tertiary);
+            border-left: 3px solid;
+            border-radius: 2px;
+        }
+        
+        .project-item.active {
+            border-left-color: var(--accent-green);
+        }
+        
+        .project-item.legacy {
+            border-left-color: var(--accent-yellow);
+        }
+        
+        .project-item.needs-fixes {
+            border-left-color: var(--accent-red);
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        
+        .project-name {
+            font-weight: bold;
+            color: var(--text-primary);
+        }
+        
+        .project-status {
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 2px;
+            background: var(--bg-primary);
+        }
+        
+        .project-status.active {
+            color: var(--accent-green);
+            border: 1px solid var(--accent-green);
+        }
+        
+        .project-status.legacy {
+            color: var(--accent-yellow);
+            border: 1px solid var(--accent-yellow);
+        }
+        
+        .project-info {
+            font-size: 10px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+        
+        .score-bar {
+            margin-top: 6px;
+            height: 4px;
+            background: var(--bg-primary);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+        
+        .score-fill.high {
+            background: var(--accent-green);
+        }
+        
+        .score-fill.medium {
+            background: var(--accent-yellow);
+        }
+        
+        .score-fill.low {
+            background: var(--accent-red);
+        }
+        
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .metric-row:last-child {
+            border-bottom: none;
+        }
+        
+        .metric-label {
+            color: var(--text-secondary);
+        }
+        
+        .metric-value {
+            color: var(--accent-green);
+            font-weight: bold;
+        }
+        
+        .log {
+            max-height: 200px;
+            overflow-y: auto;
+            font-size: 10px;
+            font-family: 'Courier New', monospace;
+            background: var(--bg-primary);
+            padding: 8px;
+            border-radius: 2px;
+            margin-top: 8px;
+        }
+        
+        .log-entry {
+            padding: 2px 0;
+            color: var(--text-secondary);
+        }
+        
+        .log-entry.update {
+            color: var(--accent-blue);
+        }
+        
+        .log-entry.error {
+            color: var(--accent-red);
+        }
+        
+        .log-entry.success {
+            color: var(--accent-green);
+        }
+        
+        .timestamp {
+            color: var(--text-secondary);
+            font-size: 9px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 10px;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1> REAL-TIME DRIFT MONITOR</h1>
+        <div class="status-bar">
+            <div class="status-item">
+                <span class="status-dot" id="status-dot"></span>
+                <span id="connection-status">CONNECTED</span>
+            </div>
+            <div class="status-item">
+                <span>Last Update:</span>
+                <span id="last-update-time">--:--:--</span>
+            </div>
+            <div class="status-item">
+                <span>Updates:</span>
+                <span id="update-count">0</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="grid" id="dashboard-grid">
+        <div class="panel">
+            <div class="panel-title"> SYSTEM HEALTH</div>
+            <div id="system-health-content">Loading...</div>
+        </div>
+        
+        <div class="panel">
+            <div class="panel-title"> ACTIVE PROJECTS</div>
+            <div id="projects-content">Loading...</div>
+        </div>
+        
+        <div class="panel">
+            <div class="panel-title"> CRITICAL ISSUES</div>
+            <div id="issues-content">Loading...</div>
+        </div>
+        
+        <div class="panel">
+            <div class="panel-title"> METRICS</div>
+            <div id="metrics-content">Loading...</div>
+        </div>
+        
+        <div class="panel">
+            <div class="panel-title"> UPDATE LOG</div>
+            <div class="log" id="update-log">
+                <div class="log-entry">Initializing monitor...</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        Pattern: OBSERVER × TRUTH × ATOMIC × ONE | Auto-refresh: 2s | Real-time monitoring active
+    </div>
+    
+    <script>
+        let updateCount = 0;
+        let lastUpdateTime = null;
+        const logEntries = [];
+        const maxLogEntries = 50;
+        
+        function addLogEntry(message, type = 'update') {
+            const timestamp = new Date().toLocaleTimeString();
+            logEntries.push({ timestamp, message, type });
+            if (logEntries.length > maxLogEntries) {
+                logEntries.shift();
+            }
+            renderLog();
+        }
+        
+        function renderLog() {
+            const logContainer = document.getElementById('update-log');
+            logContainer.innerHTML = logEntries.map(entry => 
+                `<div class="log-entry ${entry.type}">
+                    <span class="timestamp">[${entry.timestamp}]</span> ${entry.message}
+                </div>`
+            ).join('');
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }
+        
+        function updateTime() {
+            if (lastUpdateTime) {
+                const now = new Date();
+                const diff = Math.floor((now - lastUpdateTime) / 1000);
+                document.getElementById('last-update-time').textContent = 
+                    diff < 60 ? `${diff}s ago` : `${Math.floor(diff / 60)}m ago`;
+            }
+        }
+        
+        async function loadData() {
+            try {
+                const response = await fetch('.ai-context-source-of-truth.json?t=' + Date.now());
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                
+                const data = await response.json();
+                renderDashboard(data);
+                
+                updateCount++;
+                lastUpdateTime = new Date();
+                document.getElementById('update-count').textContent = updateCount;
+                addLogEntry('Dashboard updated successfully', 'success');
+                
+                return true;
+            } catch (error) {
+                addLogEntry(`Update failed: ${error.message}`, 'error');
+                document.getElementById('connection-status').textContent = 'ERROR';
+                document.getElementById('status-dot').style.background = 'var(--accent-red)';
+                return false;
+            }
+        }
+        
+        function renderDashboard(data) {
+            const systemStatus = data.systemStatus || {};
+            const projects = data.projects || {};
+            const workspace = data.workspace || {};
+            
+            // System Health
+            const healthHtml = `
+                <div class="metric-row">
+                    <span class="metric-label">Overall Health</span>
+                    <span class="metric-value">${systemStatus.overallHealth || 0}%</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Critical Issues</span>
+                    <span class="metric-value" style="color: ${systemStatus.criticalIssues > 0 ? 'var(--accent-red)' : 'var(--accent-green)'}">${systemStatus.criticalIssues || 0}</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Warnings</span>
+                    <span class="metric-value" style="color: var(--accent-yellow)">${systemStatus.warnings || 0}</span>
+                </div>
+                <div class="score-bar" style="margin-top: 10px;">
+                    <div class="score-fill ${getScoreClass(systemStatus.overallHealth)}" style="width: ${systemStatus.overallHealth || 0}%"></div>
+                </div>
+            `;
+            document.getElementById('system-health-content').innerHTML = healthHtml;
+            
+            // Active Projects
+            let projectsHtml = '';
+            if (projects.active && projects.active.length > 0) {
+                projects.active.forEach(project => {
+                    const statusClass = getProjectStatusClass(project.operationalStatus?.status);
+                    const score = project.operationalStatus?.score || 0;
+                    projectsHtml += `
+                        <div class="project-item ${statusClass}">
+                            <div class="project-header">
+                                <span class="project-name">${project.name}</span>
+                                <span class="project-status ${statusClass}">${project.operationalStatus?.status || 'UNKNOWN'}</span>
+                            </div>
+                            <div class="project-info">${project.directory}</div>
+                            <div class="score-bar">
+                                <div class="score-fill ${getScoreClass(score)}" style="width: ${score}%"></div>
+                            </div>
+                        </div>
+                    `;
+                });
+            } else {
+                projectsHtml = '<div class="project-info">No active projects</div>';
+            }
+            document.getElementById('projects-content').innerHTML = projectsHtml;
+            
+            // Critical Issues
+            let issuesHtml = '';
+            if (systemStatus.criticalActions && systemStatus.criticalActions.length > 0) {
+                systemStatus.criticalActions.forEach(action => {
+                    issuesHtml += `
+                        <div class="project-item needs-fixes">
+                            <div class="project-header">
+                                <span class="project-name">${action.action}</span>
+                                <span class="project-status needs-fixes">${action.priority}</span>
+                            </div>
+                            <div class="project-info">${action.command || 'No command'}</div>
+                        </div>
+                    `;
+                });
+            } else {
+                issuesHtml = '<div class="project-info" style="color: var(--accent-green);">No critical issues</div>';
+            }
+            document.getElementById('issues-content').innerHTML = issuesHtml;
+            
+            // Metrics
+            const metrics = systemStatus.operationalMetrics || {};
+            const metricsHtml = `
+                <div class="metric-row">
+                    <span class="metric-label">Fully Operational</span>
+                    <span class="metric-value">${metrics.fullyOperational || '0%'}</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Convergence</span>
+                    <span class="metric-value">${metrics.convergence?.toFixed(1) || 0}%</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">AEYON Compliance</span>
+                    <span class="metric-value">${metrics.aeyonCompliance || 0}%</span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Guardian Swarm</span>
+                    <span class="metric-value">${metrics.guardianSwarmActivation || 0}%</span>
+                </div>
+            `;
+            document.getElementById('metrics-content').innerHTML = metricsHtml;
+        }
+        
+        function getProjectStatusClass(status) {
+            if (!status) return 'unknown';
+            const normalized = status.toLowerCase().replace(/_/g, '-');
+            if (normalized.includes('operational')) return 'active';
+            if (normalized.includes('needs-fixes') || normalized.includes('partial')) return 'needs-fixes';
+            return 'unknown';
+        }
+        
+        function getScoreClass(score) {
+            if (score >= 80) return 'high';
+            if (score >= 50) return 'medium';
+            return 'low';
+        }
+        
+        // Initialize
+        addLogEntry('Monitor initialized', 'success');
+        loadData();
+        
+        // Update every 2 seconds
+        setInterval(() => {
+            loadData();
+        }, 2000);
+        
+        // Update time display every second
+        setInterval(updateTime, 1000);
+        
+        // Watch for visibility changes
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) {
+                addLogEntry('Tab visible - refreshing', 'update');
+                loadData();
+            }
+        });
+    </script>
+</body>
+</html>
+

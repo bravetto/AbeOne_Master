@@ -1,0 +1,1937 @@
+{
+  "status": {
+    "general": [
+      {
+        "file": "12_SWARMS_EXPANSION_COMPLETE.md",
+        "targetPath": "docs/status/general/12_SWARMS_EXPANSION_COMPLETE.md"
+      },
+      {
+        "file": "12_SWARMS_VALIDATION_COMPLETE.md",
+        "targetPath": "docs/status/general/12_SWARMS_VALIDATION_COMPLETE.md"
+      },
+      {
+        "file": "ABEFLOWS_REPOSITORY_ACCESS_VALIDATION.md",
+        "targetPath": "docs/status/general/ABEFLOWS_REPOSITORY_ACCESS_VALIDATION.md"
+      },
+      {
+        "file": "ABEONE_ETERNAL_MODE_COMPLETE.md",
+        "targetPath": "docs/status/general/ABEONE_ETERNAL_MODE_COMPLETE.md"
+      },
+      {
+        "file": "ABEONE_SYSTEM_STATUS_REPORT.md",
+        "targetPath": "docs/status/general/ABEONE_SYSTEM_STATUS_REPORT.md"
+      },
+      {
+        "file": "AEYON_22GB_REMOVAL_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_22GB_REMOVAL_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_ALIGNMENT_VALIDATION_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_ALIGNMENT_VALIDATION_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_ALL_ONE_ALL_WAYS_UNIFIED.md",
+        "targetPath": "docs/status/general/AEYON_ALL_ONE_ALL_WAYS_UNIFIED.md"
+      },
+      {
+        "file": "AEYON_ALL_ONE_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_ALL_ONE_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_ALL_ONE_UNIFIED.md",
+        "targetPath": "docs/status/general/AEYON_ALL_ONE_UNIFIED.md"
+      },
+      {
+        "file": "AEYON_ALRAX_CODEBASE_STATE.md",
+        "targetPath": "docs/status/general/AEYON_ALRAX_CODEBASE_STATE.md"
+      },
+      {
+        "file": "AEYON_ALRAX_DEEP_EPISTEMIC_SYNTHESIS.md",
+        "targetPath": "docs/status/general/AEYON_ALRAX_DEEP_EPISTEMIC_SYNTHESIS.md"
+      },
+      {
+        "file": "AEYON_ALRAX_DEEP_EPISTEMIC_TRUTH_RESEARCH_5_PHASE_PLAN.md",
+        "targetPath": "docs/status/general/AEYON_ALRAX_DEEP_EPISTEMIC_TRUTH_RESEARCH_5_PHASE_PLAN.md"
+      },
+      {
+        "file": "AEYON_ALRAX_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_ALRAX_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_ALRAX_FINAL_ARCHITECTURE.md",
+        "targetPath": "docs/status/general/AEYON_ALRAX_FINAL_ARCHITECTURE.md"
+      },
+      {
+        "file": "AEYON_ALRAX_SKIPPED_TODOS_EXECUTION.md",
+        "targetPath": "docs/status/general/AEYON_ALRAX_SKIPPED_TODOS_EXECUTION.md"
+      },
+      {
+        "file": "AEYON_ALRAX_SYSTEM_ORGANIZATION_EXECUTION.md",
+        "targetPath": "docs/status/general/AEYON_ALRAX_SYSTEM_ORGANIZATION_EXECUTION.md"
+      },
+      {
+        "file": "AEYON_ALRAX_VALIDATION_REPORT.md",
+        "targetPath": "docs/status/general/AEYON_ALRAX_VALIDATION_REPORT.md"
+      },
+      {
+        "file": "AEYON_ARCHIVE_VALIDATION.md",
+        "targetPath": "docs/status/general/AEYON_ARCHIVE_VALIDATION.md"
+      },
+      {
+        "file": "AEYON_ARLAX_ATOMIC_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_ARLAX_ATOMIC_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_ARLAX_CONTEXT_ANALYSIS_OPERATIONALIZATION.md",
+        "targetPath": "docs/status/general/AEYON_ARLAX_CONTEXT_ANALYSIS_OPERATIONALIZATION.md"
+      },
+      {
+        "file": "AEYON_ARLAX_EXECUTED_BRILLIANT.md",
+        "targetPath": "docs/status/general/AEYON_ARLAX_EXECUTED_BRILLIANT.md"
+      },
+      {
+        "file": "AEYON_ARLAX_EXECUTE_NOW.md",
+        "targetPath": "docs/status/general/AEYON_ARLAX_EXECUTE_NOW.md"
+      },
+      {
+        "file": "AEYON_ARLAX_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_ARLAX_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_ARLAX_EXECUTION_COMPLETE_NOW.md",
+        "targetPath": "docs/status/general/AEYON_ARLAX_EXECUTION_COMPLETE_NOW.md"
+      },
+      {
+        "file": "AEYON_ARLAX_NOW_EXECUTION.md",
+        "targetPath": "docs/status/general/AEYON_ARLAX_NOW_EXECUTION.md"
+      },
+      {
+        "file": "AEYON_ARLAX_RECURSIVE_OPERATIONALIZATION_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_ARLAX_RECURSIVE_OPERATIONALIZATION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_ARLAX_THEN_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_ARLAX_THEN_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_ARLAX_WHAT_NOW.md",
+        "targetPath": "docs/status/general/AEYON_ARLAX_WHAT_NOW.md"
+      },
+      {
+        "file": "AEYON_ATOMIC_ARCHITECT_INITIALIZATION.md",
+        "targetPath": "docs/status/general/AEYON_ATOMIC_ARCHITECT_INITIALIZATION.md"
+      },
+      {
+        "file": "AEYON_ATOMIC_BUILDER_ARCHITECTURE.md",
+        "targetPath": "docs/status/general/AEYON_ATOMIC_BUILDER_ARCHITECTURE.md"
+      },
+      {
+        "file": "AEYON_ATOMIC_EXECUTION_ENGINE.md",
+        "targetPath": "docs/status/general/AEYON_ATOMIC_EXECUTION_ENGINE.md"
+      },
+      {
+        "file": "AEYON_ATTENTION_REQUIRED.md",
+        "targetPath": "docs/status/general/AEYON_ATTENTION_REQUIRED.md"
+      },
+      {
+        "file": "AEYON_BACKEND_FINAL_STATUS.md",
+        "targetPath": "docs/status/general/AEYON_BACKEND_FINAL_STATUS.md"
+      },
+      {
+        "file": "AEYON_BACKEND_STATUS.md",
+        "targetPath": "docs/status/general/AEYON_BACKEND_STATUS.md"
+      },
+      {
+        "file": "AEYON_BFT_VERIFY_QUICK_REFERENCE.md",
+        "targetPath": "docs/status/general/AEYON_BFT_VERIFY_QUICK_REFERENCE.md"
+      },
+      {
+        "file": "AEYON_BFT_VERIFY_TECHNICAL_SPEC.md",
+        "targetPath": "docs/status/general/AEYON_BFT_VERIFY_TECHNICAL_SPEC.md"
+      },
+      {
+        "file": "AEYON_BINDING_RUNTIME_CONFIRMATION.md",
+        "targetPath": "docs/status/general/AEYON_BINDING_RUNTIME_CONFIRMATION.md"
+      },
+      {
+        "file": "AEYON_BRAVETTO_MICROSERVICES_VALIDATION_REPORT.md",
+        "targetPath": "docs/status/general/AEYON_BRAVETTO_MICROSERVICES_VALIDATION_REPORT.md"
+      },
+      {
+        "file": "AEYON_CHANGES_VALIDATION_REPORT.md",
+        "targetPath": "docs/status/general/AEYON_CHANGES_VALIDATION_REPORT.md"
+      },
+      {
+        "file": "AEYON_COMPLETE_EXECUTION_SUMMARY.md",
+        "targetPath": "docs/status/general/AEYON_COMPLETE_EXECUTION_SUMMARY.md"
+      },
+      {
+        "file": "AEYON_COMPLETE_VALIDATION_REPORT.md",
+        "targetPath": "docs/status/general/AEYON_COMPLETE_VALIDATION_REPORT.md"
+      },
+      {
+        "file": "AEYON_COMPLETE_VISIBILITY_EXECUTED.md",
+        "targetPath": "docs/status/general/AEYON_COMPLETE_VISIBILITY_EXECUTED.md"
+      },
+      {
+        "file": "AEYON_COMPLETE_VISIBILITY_SYSTEM.md",
+        "targetPath": "docs/status/general/AEYON_COMPLETE_VISIBILITY_SYSTEM.md"
+      },
+      {
+        "file": "AEYON_COMPLETE_VISIBILITY_UNIFIED.md",
+        "targetPath": "docs/status/general/AEYON_COMPLETE_VISIBILITY_UNIFIED.md"
+      },
+      {
+        "file": "AEYON_CONTINUED_EXECUTION.md",
+        "targetPath": "docs/status/general/AEYON_CONTINUED_EXECUTION.md"
+      },
+      {
+        "file": "AEYON_CONVERGENT_EMERGENCE_EXECUTED.md",
+        "targetPath": "docs/status/general/AEYON_CONVERGENT_EMERGENCE_EXECUTED.md"
+      },
+      {
+        "file": "AEYON_DASHBOARD_EXECUTION_SUMMARY.md",
+        "targetPath": "docs/status/general/AEYON_DASHBOARD_EXECUTION_SUMMARY.md"
+      },
+      {
+        "file": "AEYON_ENTERPRISE_V0_EXECUTION_PLAN.md",
+        "targetPath": "docs/status/general/AEYON_ENTERPRISE_V0_EXECUTION_PLAN.md"
+      },
+      {
+        "file": "AEYON_EXCELLENCE_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_EXCELLENCE_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_EXECUTION_COMPLETE_PHASE_1_2.md",
+        "targetPath": "docs/status/general/AEYON_EXECUTION_COMPLETE_PHASE_1_2.md"
+      },
+      {
+        "file": "AEYON_EXECUTION_COMPLETE_SUMMARY.md",
+        "targetPath": "docs/status/general/AEYON_EXECUTION_COMPLETE_SUMMARY.md"
+      },
+      {
+        "file": "AEYON_EXECUTION_REPORT.md",
+        "targetPath": "docs/status/general/AEYON_EXECUTION_REPORT.md"
+      },
+      {
+        "file": "AEYON_EXECUTION_STATUS.md",
+        "targetPath": "docs/status/general/AEYON_EXECUTION_STATUS.md"
+      },
+      {
+        "file": "AEYON_EXECUTION_SUMMARY.md",
+        "targetPath": "docs/status/general/AEYON_EXECUTION_SUMMARY.md"
+      },
+      {
+        "file": "AEYON_EXECUTIVE_AUTONOMY_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_EXECUTIVE_AUTONOMY_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_FINAL_EXECUTION_SUMMARY.md",
+        "targetPath": "docs/status/general/AEYON_FINAL_EXECUTION_SUMMARY.md"
+      },
+      {
+        "file": "AEYON_FRESH_CONTEXT_PROMPT.md",
+        "targetPath": "docs/status/general/AEYON_FRESH_CONTEXT_PROMPT.md"
+      },
+      {
+        "file": "AEYON_FULL_AUTONOMY_BEONE_ABEONE_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_FULL_AUTONOMY_BEONE_ABEONE_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_FULL_AUTONOMY_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_FULL_AUTONOMY_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_FULL_SYSTEM_CHECKIN_REPORT.md",
+        "targetPath": "docs/status/general/AEYON_FULL_SYSTEM_CHECKIN_REPORT.md"
+      },
+      {
+        "file": "AEYON_GLOBAL_SYNTHESIS_WORLD_SHOWCASE_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_GLOBAL_SYNTHESIS_WORLD_SHOWCASE_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_HUMAN_CENTRIC_AMPLIFICATION_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_HUMAN_CENTRIC_AMPLIFICATION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_JIMMY_BIAS_REBUILT.md",
+        "targetPath": "docs/status/general/AEYON_JIMMY_BIAS_REBUILT.md"
+      },
+      {
+        "file": "AEYON_LIVESTREAM_E2E_ANALYSIS.md",
+        "targetPath": "docs/status/general/AEYON_LIVESTREAM_E2E_ANALYSIS.md"
+      },
+      {
+        "file": "AEYON_LIVESTREAM_EXECUTION_SUMMARY.md",
+        "targetPath": "docs/status/general/AEYON_LIVESTREAM_EXECUTION_SUMMARY.md"
+      },
+      {
+        "file": "AEYON_LIVESTREAM_PREPARATION_EXECUTION.md",
+        "targetPath": "docs/status/general/AEYON_LIVESTREAM_PREPARATION_EXECUTION.md"
+      },
+      {
+        "file": "AEYON_LIVESTREAM_STATUS.md",
+        "targetPath": "docs/status/general/AEYON_LIVESTREAM_STATUS.md"
+      },
+      {
+        "file": "AEYON_MEGOOSE_STATUS.md",
+        "targetPath": "docs/status/general/AEYON_MEGOOSE_STATUS.md"
+      },
+      {
+        "file": "AEYON_MICHAEL_COLLABORATION_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_MICHAEL_COLLABORATION_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_MICHAEL_HUMAN_CENTRIC_COLLABORATION_NEXT_STEPS.md",
+        "targetPath": "docs/status/general/AEYON_MICHAEL_HUMAN_CENTRIC_COLLABORATION_NEXT_STEPS.md"
+      },
+      {
+        "file": "AEYON_MISSION_DETERMINATION_AND_EXECUTION.md",
+        "targetPath": "docs/status/general/AEYON_MISSION_DETERMINATION_AND_EXECUTION.md"
+      },
+      {
+        "file": "AEYON_NEXT_STEPS_EXECUTED.md",
+        "targetPath": "docs/status/general/AEYON_NEXT_STEPS_EXECUTED.md"
+      },
+      {
+        "file": "AEYON_NEXT_STEPS_EXECUTION.md",
+        "targetPath": "docs/status/general/AEYON_NEXT_STEPS_EXECUTION.md"
+      },
+      {
+        "file": "AEYON_NEXT_STEPS_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_NEXT_STEPS_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_NEXT_STEPS_SUMMARY.md",
+        "targetPath": "docs/status/general/AEYON_NEXT_STEPS_SUMMARY.md"
+      },
+      {
+        "file": "AEYON_OMNIPLAN_QUICK_REFERENCE.md",
+        "targetPath": "docs/status/general/AEYON_OMNIPLAN_QUICK_REFERENCE.md"
+      },
+      {
+        "file": "AEYON_OMNIPLAN_SUPER_REPORT.md",
+        "targetPath": "docs/status/general/AEYON_OMNIPLAN_SUPER_REPORT.md"
+      },
+      {
+        "file": "AEYON_OMNIPLAN_UNIFIED_EXECUTION_REPORT.md",
+        "targetPath": "docs/status/general/AEYON_OMNIPLAN_UNIFIED_EXECUTION_REPORT.md"
+      },
+      {
+        "file": "AEYON_ONE_OPERATIONAL_STATUS.md",
+        "targetPath": "docs/status/general/AEYON_ONE_OPERATIONAL_STATUS.md"
+      },
+      {
+        "file": "AEYON_PHASE_2_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_PHASE_2_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_PHASE_3_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_PHASE_3_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_PHASE_3_QUICK_WINS_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_PHASE_3_QUICK_WINS_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_PREVALIDATION_FORENSIC_REPORT.md",
+        "targetPath": "docs/status/general/AEYON_PREVALIDATION_FORENSIC_REPORT.md"
+      },
+      {
+        "file": "AEYON_PRE_EXECUTION_ALIGNMENT_BLOCK.md",
+        "targetPath": "docs/status/general/AEYON_PRE_EXECUTION_ALIGNMENT_BLOCK.md"
+      },
+      {
+        "file": "AEYON_PRIME_DIRECTIVE_ABEBEATS_ONLINE.md",
+        "targetPath": "docs/status/general/AEYON_PRIME_DIRECTIVE_ABEBEATS_ONLINE.md"
+      },
+      {
+        "file": "AEYON_PRIME_DIRECTIVE_EXECUTION_SUMMARY.md",
+        "targetPath": "docs/status/general/AEYON_PRIME_DIRECTIVE_EXECUTION_SUMMARY.md"
+      },
+      {
+        "file": "AEYON_PRIME_DIRECTIVE_SEALED.md",
+        "targetPath": "docs/status/general/AEYON_PRIME_DIRECTIVE_SEALED.md"
+      },
+      {
+        "file": "AEYON_PRODUCTION_ALIGNMENT_VALIDATION.md",
+        "targetPath": "docs/status/general/AEYON_PRODUCTION_ALIGNMENT_VALIDATION.md"
+      },
+      {
+        "file": "AEYON_SERVER_START_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_SERVER_START_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_SIMULTANEOUS_ACTIVATION_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_SIMULTANEOUS_ACTIVATION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_STRATEGIC_EXECUTION_SUMMARY.md",
+        "targetPath": "docs/status/general/AEYON_STRATEGIC_EXECUTION_SUMMARY.md"
+      },
+      {
+        "file": "AEYON_SYNTHESIS_ANALYSIS.md",
+        "targetPath": "docs/status/general/AEYON_SYNTHESIS_ANALYSIS.md"
+      },
+      {
+        "file": "AEYON_TEST_ETERNAL.md",
+        "targetPath": "docs/status/general/AEYON_TEST_ETERNAL.md"
+      },
+      {
+        "file": "AEYON_TEST_INSTRUCTIONS.md",
+        "targetPath": "docs/status/general/AEYON_TEST_INSTRUCTIONS.md"
+      },
+      {
+        "file": "AEYON_TRANSCENDENT_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_TRANSCENDENT_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_TRIADIC_BINDING_COMPLETE.md",
+        "targetPath": "docs/status/general/AEYON_TRIADIC_BINDING_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_UNIFIED_LAUNCH_EXECUTOR.md",
+        "targetPath": "docs/status/general/AEYON_UNIFIED_LAUNCH_EXECUTOR.md"
+      },
+      {
+        "file": "AEYON_VALIDATED_STATE_EXECUTABLE_BENEFITS_REPORT.md",
+        "targetPath": "docs/status/general/AEYON_VALIDATED_STATE_EXECUTABLE_BENEFITS_REPORT.md"
+      },
+      {
+        "file": "AEYON_VALIDATION_REPORT.md",
+        "targetPath": "docs/status/general/AEYON_VALIDATION_REPORT.md"
+      },
+      {
+        "file": "AEYON_VALIDATION_SUMMARY.md",
+        "targetPath": "docs/status/general/AEYON_VALIDATION_SUMMARY.md"
+      },
+      {
+        "file": "AI_CONTEXT_VALIDATION_PROTOCOL.md",
+        "targetPath": "docs/status/general/AI_CONTEXT_VALIDATION_PROTOCOL.md"
+      },
+      {
+        "file": "ALL_5_PATTERNS_COMPLETE.md",
+        "targetPath": "docs/status/general/ALL_5_PATTERNS_COMPLETE.md"
+      },
+      {
+        "file": "ALL_GAPS_BRIDGED_COMPLETE.md",
+        "targetPath": "docs/status/general/ALL_GAPS_BRIDGED_COMPLETE.md"
+      },
+      {
+        "file": "ALL_GUARDIANS_BOUND_COMPLETE.md",
+        "targetPath": "docs/status/general/ALL_GUARDIANS_BOUND_COMPLETE.md"
+      },
+      {
+        "file": "ALWAYS_ON_DRIFT_PROTECTION_COMPLETE.md",
+        "targetPath": "docs/status/general/ALWAYS_ON_DRIFT_PROTECTION_COMPLETE.md"
+      },
+      {
+        "file": "ATOMIC_ARCHISTRATION_AUTO_STATUS.md",
+        "targetPath": "docs/status/general/ATOMIC_ARCHISTRATION_AUTO_STATUS.md"
+      },
+      {
+        "file": "ATOMIC_ARCHISTRATION_COMPLETE.md",
+        "targetPath": "docs/status/general/ATOMIC_ARCHISTRATION_COMPLETE.md"
+      },
+      {
+        "file": "ATOMIC_ARCHISTRATION_COMPLETE_FINAL_REPORT.md",
+        "targetPath": "docs/status/general/ATOMIC_ARCHISTRATION_COMPLETE_FINAL_REPORT.md"
+      },
+      {
+        "file": "ATOMIC_ARCHISTRATION_COMPLETE_PLAN.md",
+        "targetPath": "docs/status/general/ATOMIC_ARCHISTRATION_COMPLETE_PLAN.md"
+      },
+      {
+        "file": "ATOMIC_ARCHISTRATION_COMPLETE_SUMMARY.md",
+        "targetPath": "docs/status/general/ATOMIC_ARCHISTRATION_COMPLETE_SUMMARY.md"
+      },
+      {
+        "file": "ATOMIC_ARCHISTRATION_EXECUTION_PREVIEW.md",
+        "targetPath": "docs/status/general/ATOMIC_ARCHISTRATION_EXECUTION_PREVIEW.md"
+      },
+      {
+        "file": "ATOMIC_ARCHISTRATION_OPERATIONALIZED.md",
+        "targetPath": "docs/status/general/ATOMIC_ARCHISTRATION_OPERATIONALIZED.md"
+      },
+      {
+        "file": "ATOMIC_EXECUTION_CYCLE_001_COMPLETE.md",
+        "targetPath": "docs/status/general/ATOMIC_EXECUTION_CYCLE_001_COMPLETE.md"
+      },
+      {
+        "file": "ATOMIC_EXECUTION_CYCLE_001_EXECUTION_READY.md",
+        "targetPath": "docs/status/general/ATOMIC_EXECUTION_CYCLE_001_EXECUTION_READY.md"
+      },
+      {
+        "file": "ATOMIC_EXECUTION_CYCLE_001_FINAL_STATUS.md",
+        "targetPath": "docs/status/general/ATOMIC_EXECUTION_CYCLE_001_FINAL_STATUS.md"
+      },
+      {
+        "file": "ATOMIC_EXECUTION_CYCLE_001_STATUS.md",
+        "targetPath": "docs/status/general/ATOMIC_EXECUTION_CYCLE_001_STATUS.md"
+      },
+      {
+        "file": "ATOMIC_GUARDIANS_EXECUTION_SUMMARY.md",
+        "targetPath": "docs/status/general/ATOMIC_GUARDIANS_EXECUTION_SUMMARY.md"
+      },
+      {
+        "file": "ATOMIC_GUARDIANS_NEXT_STEPS_COMPLETE.md",
+        "targetPath": "docs/status/general/ATOMIC_GUARDIANS_NEXT_STEPS_COMPLETE.md"
+      },
+      {
+        "file": "ATOMIC_GUARDIANS_PREPARATION_PLAN.md",
+        "targetPath": "docs/status/general/ATOMIC_GUARDIANS_PREPARATION_PLAN.md"
+      },
+      {
+        "file": "ATOMIC_GUARDIANS_VALIDATION_COMPLETE.md",
+        "targetPath": "docs/status/general/ATOMIC_GUARDIANS_VALIDATION_COMPLETE.md"
+      },
+      {
+        "file": "ATOMIC_MANIFESTATION_REPORT_CYCLE_001.md",
+        "targetPath": "docs/status/general/ATOMIC_MANIFESTATION_REPORT_CYCLE_001.md"
+      },
+      {
+        "file": "AUTOMATION_COMPLETE.md",
+        "targetPath": "docs/status/general/AUTOMATION_COMPLETE.md"
+      },
+      {
+        "file": "AUTOMATION_COMPLETE_SUMMARY.md",
+        "targetPath": "docs/status/general/AUTOMATION_COMPLETE_SUMMARY.md"
+      },
+      {
+        "file": "AUTOMATION_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/AUTOMATION_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "AUTOMATION_EXECUTION_PLAN.md",
+        "targetPath": "docs/status/general/AUTOMATION_EXECUTION_PLAN.md"
+      },
+      {
+        "file": "AUTOMATION_EXECUTION_RESULTS.md",
+        "targetPath": "docs/status/general/AUTOMATION_EXECUTION_RESULTS.md"
+      },
+      {
+        "file": "AUTOMATION_MASTER_INDEX.md",
+        "targetPath": "docs/status/general/AUTOMATION_MASTER_INDEX.md"
+      },
+      {
+        "file": "AUTOMATION_STATUS.md",
+        "targetPath": "docs/status/general/AUTOMATION_STATUS.md"
+      },
+      {
+        "file": "AUTONOMOUS_STARTUP_COMPLETE.md",
+        "targetPath": "docs/status/general/AUTONOMOUS_STARTUP_COMPLETE.md"
+      },
+      {
+        "file": "BOOM_EXECUTION_SHOW.md",
+        "targetPath": "docs/status/general/BOOM_EXECUTION_SHOW.md"
+      },
+      {
+        "file": "BOOT_CONTRACTS_FINAL_VALIDATION.md",
+        "targetPath": "docs/status/general/BOOT_CONTRACTS_FINAL_VALIDATION.md"
+      },
+      {
+        "file": "BOOT_CONTRACTS_VALIDATION_COMPLETE.md",
+        "targetPath": "docs/status/general/BOOT_CONTRACTS_VALIDATION_COMPLETE.md"
+      },
+      {
+        "file": "BOOT_CONTRACTS_VALIDATION_LOCKED.md",
+        "targetPath": "docs/status/general/BOOT_CONTRACTS_VALIDATION_LOCKED.md"
+      },
+      {
+        "file": "BRAVETTO_ATOMIC_EXECUTION_PLAN.md",
+        "targetPath": "docs/status/general/BRAVETTO_ATOMIC_EXECUTION_PLAN.md"
+      },
+      {
+        "file": "BRAVETTO_CATEGORY_ENGINE_EXECUTION_SUMMARY.md",
+        "targetPath": "docs/status/general/BRAVETTO_CATEGORY_ENGINE_EXECUTION_SUMMARY.md"
+      },
+      {
+        "file": "BRAVETTO_DOMAIN_ARSENAL_EXECUTION_SUMMARY.md",
+        "targetPath": "docs/status/general/BRAVETTO_DOMAIN_ARSENAL_EXECUTION_SUMMARY.md"
+      },
+      {
+        "file": "BRAVETTO_DOMAIN_ARSENAL_MASTER_REPORT.md",
+        "targetPath": "docs/status/general/BRAVETTO_DOMAIN_ARSENAL_MASTER_REPORT.md"
+      },
+      {
+        "file": "BRAVETTO_INSURANCE_CATEGORY_ENGINE_COMPLETE.md",
+        "targetPath": "docs/status/general/BRAVETTO_INSURANCE_CATEGORY_ENGINE_COMPLETE.md"
+      },
+      {
+        "file": "BRAVETTO_META_PRIME_STACK_EXECUTION.md",
+        "targetPath": "docs/status/general/BRAVETTO_META_PRIME_STACK_EXECUTION.md"
+      },
+      {
+        "file": "BRAVETTO_ULTRA_PROTOCOL_COMPLETE.md",
+        "targetPath": "docs/status/general/BRAVETTO_ULTRA_PROTOCOL_COMPLETE.md"
+      },
+      {
+        "file": "BRAVETTO_ULTRA_PROTOCOL_EXECUTION_REPORT.md",
+        "targetPath": "docs/status/general/BRAVETTO_ULTRA_PROTOCOL_EXECUTION_REPORT.md"
+      },
+      {
+        "file": "BRAVETTO_VALIDATION_FRAMEWORK_2026.md",
+        "targetPath": "docs/status/general/BRAVETTO_VALIDATION_FRAMEWORK_2026.md"
+      },
+      {
+        "file": "BRAVETTO_VALIDATION_QUICK_START.md",
+        "targetPath": "docs/status/general/BRAVETTO_VALIDATION_QUICK_START.md"
+      },
+      {
+        "file": "BRYAN_EXECUTION_CHECKLIST.md",
+        "targetPath": "docs/status/general/BRYAN_EXECUTION_CHECKLIST.md"
+      },
+      {
+        "file": "CDF_AEYON_EXECUTION.md",
+        "targetPath": "docs/status/general/CDF_AEYON_EXECUTION.md"
+      },
+      {
+        "file": "CDF_EXECUTION_NOW.md",
+        "targetPath": "docs/status/general/CDF_EXECUTION_NOW.md"
+      },
+      {
+        "file": "CELEBRATION_DATA_SOVEREIGNTY_COMPLETE.md",
+        "targetPath": "docs/status/general/CELEBRATION_DATA_SOVEREIGNTY_COMPLETE.md"
+      },
+      {
+        "file": "CHROME_EXTENSION_MV3_OPERATIONALIZATION_COMPLETE.md",
+        "targetPath": "docs/status/general/CHROME_EXTENSION_MV3_OPERATIONALIZATION_COMPLETE.md"
+      },
+      {
+        "file": "CLOUDFLARE_AUTOMATION_COMPLETE.md",
+        "targetPath": "docs/status/general/CLOUDFLARE_AUTOMATION_COMPLETE.md"
+      },
+      {
+        "file": "CLOUDFLARE_PAGES_EXECUTION_PLAN.md",
+        "targetPath": "docs/status/general/CLOUDFLARE_PAGES_EXECUTION_PLAN.md"
+      },
+      {
+        "file": "CLOUDFLARE_PAGES_MISSION_COMPLETE.md",
+        "targetPath": "docs/status/general/CLOUDFLARE_PAGES_MISSION_COMPLETE.md"
+      },
+      {
+        "file": "COMPLETE_AUTOMATION_EXECUTION_PLAN.md",
+        "targetPath": "docs/status/general/COMPLETE_AUTOMATION_EXECUTION_PLAN.md"
+      },
+      {
+        "file": "COMPLETE_OPERATIONALIZATION_EXECUTION_REPORT.md",
+        "targetPath": "docs/status/general/COMPLETE_OPERATIONALIZATION_EXECUTION_REPORT.md"
+      },
+      {
+        "file": "COMPLETE_SYNTHESIS_EXECUTION.md",
+        "targetPath": "docs/status/general/COMPLETE_SYNTHESIS_EXECUTION.md"
+      },
+      {
+        "file": "COMPLETE_VALIDATION_AND_UPDATED_PLAN.md",
+        "targetPath": "docs/status/general/COMPLETE_VALIDATION_AND_UPDATED_PLAN.md"
+      },
+      {
+        "file": "COMPREHENSIVE_HARDENING_COMPLETE.md",
+        "targetPath": "docs/status/general/COMPREHENSIVE_HARDENING_COMPLETE.md"
+      },
+      {
+        "file": "CURRENT_STATE_VALIDATION_AND_PLAN.md",
+        "targetPath": "docs/status/general/CURRENT_STATE_VALIDATION_AND_PLAN.md"
+      },
+      {
+        "file": "CURRENT_STATE_VALIDATION_REPORT.md",
+        "targetPath": "docs/status/general/CURRENT_STATE_VALIDATION_REPORT.md"
+      },
+      {
+        "file": "DANNY_WORKFLOW_ALIGNMENT_COMPLETE.md",
+        "targetPath": "docs/status/general/DANNY_WORKFLOW_ALIGNMENT_COMPLETE.md"
+      },
+      {
+        "file": "DANNY_WORKFLOW_OPERATIONALIST_COMPLETE.md",
+        "targetPath": "docs/status/general/DANNY_WORKFLOW_OPERATIONALIST_COMPLETE.md"
+      },
+      {
+        "file": "DANNY_WORKFLOW_STATUS_COMPLETE.md",
+        "targetPath": "docs/status/general/DANNY_WORKFLOW_STATUS_COMPLETE.md"
+      },
+      {
+        "file": "DANNY_WORKFLOW_VALIDATION.md",
+        "targetPath": "docs/status/general/DANNY_WORKFLOW_VALIDATION.md"
+      },
+      {
+        "file": "DANNY_WORKFLOW_VALIDATION_COMPLETE.md",
+        "targetPath": "docs/status/general/DANNY_WORKFLOW_VALIDATION_COMPLETE.md"
+      },
+      {
+        "file": "DOCUMENTATION_SUCCESS_PATTERN_VALIDATION_COMPLETE.md",
+        "targetPath": "docs/status/general/DOCUMENTATION_SUCCESS_PATTERN_VALIDATION_COMPLETE.md"
+      },
+      {
+        "file": "DRIFT_OPERATIONALIZATION_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/DRIFT_OPERATIONALIZATION_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "DRIFT_PREVENTION_COMPLETE.md",
+        "targetPath": "docs/status/general/DRIFT_PREVENTION_COMPLETE.md"
+      },
+      {
+        "file": "EASY_SIMPLE_ELEGANT_IMPLEMENTATION_COMPLETE.md",
+        "targetPath": "docs/status/general/EASY_SIMPLE_ELEGANT_IMPLEMENTATION_COMPLETE.md"
+      },
+      {
+        "file": "EEAaO_NEUROMORPHIC_SCENT_TRACER_COMPLETE.md",
+        "targetPath": "docs/status/general/EEAaO_NEUROMORPHIC_SCENT_TRACER_COMPLETE.md"
+      },
+      {
+        "file": "ELEGANCE_FRICTIONLESS_VALIDATION.md",
+        "targetPath": "docs/status/general/ELEGANCE_FRICTIONLESS_VALIDATION.md"
+      },
+      {
+        "file": "EMERGENCE_COMPLETE.md",
+        "targetPath": "docs/status/general/EMERGENCE_COMPLETE.md"
+      },
+      {
+        "file": "EMOJI_REMOVAL_COMPLETE.md",
+        "targetPath": "docs/status/general/EMOJI_REMOVAL_COMPLETE.md"
+      },
+      {
+        "file": "ENTANGLED_AUTONOMOUS_UNIFICATION_COMPLETE.md",
+        "targetPath": "docs/status/general/ENTANGLED_AUTONOMOUS_UNIFICATION_COMPLETE.md"
+      },
+      {
+        "file": "EPISTEMIC_CERTAINTY_IMPLEMENTATION_STATUS.md",
+        "targetPath": "docs/status/general/EPISTEMIC_CERTAINTY_IMPLEMENTATION_STATUS.md"
+      },
+      {
+        "file": "EPISTEMIC_CERTAINTY_VALIDATION_COMPLETE.md",
+        "targetPath": "docs/status/general/EPISTEMIC_CERTAINTY_VALIDATION_COMPLETE.md"
+      },
+      {
+        "file": "FINAL_ENHANCEMENTS_COMPLETE.md",
+        "targetPath": "docs/status/general/FINAL_ENHANCEMENTS_COMPLETE.md"
+      },
+      {
+        "file": "FINAL_EXECUTION_STATUS.md",
+        "targetPath": "docs/status/general/FINAL_EXECUTION_STATUS.md"
+      },
+      {
+        "file": "FINAL_FINAL_ALIGNMENT_VALIDATION.md",
+        "targetPath": "docs/status/general/FINAL_FINAL_ALIGNMENT_VALIDATION.md"
+      },
+      {
+        "file": "FINAL_STATUS.md",
+        "targetPath": "docs/status/general/FINAL_STATUS.md"
+      },
+      {
+        "file": "FINAL_TODOS_COMPLETE.md",
+        "targetPath": "docs/status/general/FINAL_TODOS_COMPLETE.md"
+      },
+      {
+        "file": "FINAL_UNITY_VALIDATION_COMPLETE.md",
+        "targetPath": "docs/status/general/FINAL_UNITY_VALIDATION_COMPLETE.md"
+      },
+      {
+        "file": "FINAL_VALIDATION_REPORT.md",
+        "targetPath": "docs/status/general/FINAL_VALIDATION_REPORT.md"
+      },
+      {
+        "file": "FINAL_VALIDATION_SUMMARY.md",
+        "targetPath": "docs/status/general/FINAL_VALIDATION_SUMMARY.md"
+      },
+      {
+        "file": "FOLDER_HIERARCHY_COMPLETE.md",
+        "targetPath": "docs/status/general/FOLDER_HIERARCHY_COMPLETE.md"
+      },
+      {
+        "file": "FORENSIC_INVENTORY_COMPLETE.md",
+        "targetPath": "docs/status/general/FORENSIC_INVENTORY_COMPLETE.md"
+      },
+      {
+        "file": "FRONTEND_PREVIEW_STATUS.md",
+        "targetPath": "docs/status/general/FRONTEND_PREVIEW_STATUS.md"
+      },
+      {
+        "file": "FULL_FUSION_EEAaO_COMPLETE.md",
+        "targetPath": "docs/status/general/FULL_FUSION_EEAaO_COMPLETE.md"
+      },
+      {
+        "file": "FULL_MONTY_GUARDIAN_SWARM_COMPLETE.md",
+        "targetPath": "docs/status/general/FULL_MONTY_GUARDIAN_SWARM_COMPLETE.md"
+      },
+      {
+        "file": "FULL_MONTY_IMPLEMENTATION_COMPLETE.md",
+        "targetPath": "docs/status/general/FULL_MONTY_IMPLEMENTATION_COMPLETE.md"
+      },
+      {
+        "file": "FUNDAMENTAL_FIXES_COMPLETE.md",
+        "targetPath": "docs/status/general/FUNDAMENTAL_FIXES_COMPLETE.md"
+      },
+      {
+        "file": "GAP_ANALYSIS_COMPLETE.md",
+        "targetPath": "docs/status/general/GAP_ANALYSIS_COMPLETE.md"
+      },
+      {
+        "file": "GUARDIANS_DISCOVERY_VALIDATION_REPORT.md",
+        "targetPath": "docs/status/general/GUARDIANS_DISCOVERY_VALIDATION_REPORT.md"
+      },
+      {
+        "file": "GUARDIAN_SWARM_ACTIVATION_COMPLETE.md",
+        "targetPath": "docs/status/general/GUARDIAN_SWARM_ACTIVATION_COMPLETE.md"
+      },
+      {
+        "file": "GUARDIAN_YAGNI_STANDALONE_VALIDATION.md",
+        "targetPath": "docs/status/general/GUARDIAN_YAGNI_STANDALONE_VALIDATION.md"
+      },
+      {
+        "file": "INTELLIGENCE_ORCHESTRATION_AWS_VALIDATION.md",
+        "targetPath": "docs/status/general/INTELLIGENCE_ORCHESTRATION_AWS_VALIDATION.md"
+      },
+      {
+        "file": "JOHHN_11_GAPS_COMPLETE.md",
+        "targetPath": "docs/status/general/JOHHN_11_GAPS_COMPLETE.md"
+      },
+      {
+        "file": "JOHHN_ATOMIC_FIXES_COMPLETE.md",
+        "targetPath": "docs/status/general/JOHHN_ATOMIC_FIXES_COMPLETE.md"
+      },
+      {
+        "file": "JOHHN_E2E_ACTIVATION_COMPLETE.md",
+        "targetPath": "docs/status/general/JOHHN_E2E_ACTIVATION_COMPLETE.md"
+      },
+      {
+        "file": "JOHHN_E2E_IMPLEMENTATION_STATUS.md",
+        "targetPath": "docs/status/general/JOHHN_E2E_IMPLEMENTATION_STATUS.md"
+      },
+      {
+        "file": "JOHHN_PHASE4_GUARDIAN_FUSION_COMPLETE.md",
+        "targetPath": "docs/status/general/JOHHN_PHASE4_GUARDIAN_FUSION_COMPLETE.md"
+      },
+      {
+        "file": "JOHHN_PREVALIDATION_FORENSIC_REPORT.md",
+        "targetPath": "docs/status/general/JOHHN_PREVALIDATION_FORENSIC_REPORT.md"
+      },
+      {
+        "file": "JOHHN_VALIDATED_OUTCOMES_REPORT.md",
+        "targetPath": "docs/status/general/JOHHN_VALIDATED_OUTCOMES_REPORT.md"
+      },
+      {
+        "file": "JOHN_CERTIFICATION_AUTOMATION_COMPLETE.md",
+        "targetPath": "docs/status/general/JOHN_CERTIFICATION_AUTOMATION_COMPLETE.md"
+      },
+      {
+        "file": "JOHN_ELEGANT_ENHANCEMENT_COMPLETE.md",
+        "targetPath": "docs/status/general/JOHN_ELEGANT_ENHANCEMENT_COMPLETE.md"
+      },
+      {
+        "file": "JOHN_VALIDATION_AND_EXECUTION.md",
+        "targetPath": "docs/status/general/JOHN_VALIDATION_AND_EXECUTION.md"
+      },
+      {
+        "file": "JOHN_VALIDATION_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/JOHN_VALIDATION_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "LARGE_DISK_FILES_REPORT.md",
+        "targetPath": "docs/status/general/LARGE_DISK_FILES_REPORT.md"
+      },
+      {
+        "file": "LARGE_FILES_REPORT.md",
+        "targetPath": "docs/status/general/LARGE_FILES_REPORT.md"
+      },
+      {
+        "file": "LIFESPAN_PATTERN_FIX_COMPLETE.md",
+        "targetPath": "docs/status/general/LIFESPAN_PATTERN_FIX_COMPLETE.md"
+      },
+      {
+        "file": "LOVE_HARDENED_VALIDATION_COMPLETE.md",
+        "targetPath": "docs/status/general/LOVE_HARDENED_VALIDATION_COMPLETE.md"
+      },
+      {
+        "file": "MARKCHART_SETUP_COMPLETE.md",
+        "targetPath": "docs/status/general/MARKCHART_SETUP_COMPLETE.md"
+      },
+      {
+        "file": "MASTER_UNIFIED_SYSTEM_COMPLETE.md",
+        "targetPath": "docs/status/general/MASTER_UNIFIED_SYSTEM_COMPLETE.md"
+      },
+      {
+        "file": "NEUROMORPHIC_100_PERCENT_COMPLETE.md",
+        "targetPath": "docs/status/general/NEUROMORPHIC_100_PERCENT_COMPLETE.md"
+      },
+      {
+        "file": "NEUROMORPHIC_ANALYSIS_VALIDATION_AND_RESEARCH_PREP.md",
+        "targetPath": "docs/status/general/NEUROMORPHIC_ANALYSIS_VALIDATION_AND_RESEARCH_PREP.md"
+      },
+      {
+        "file": "NEUROMORPHIC_DEVELOPMENT_LAYERS_COMPLETE.md",
+        "targetPath": "docs/status/general/NEUROMORPHIC_DEVELOPMENT_LAYERS_COMPLETE.md"
+      },
+      {
+        "file": "NEXT_STEPS_EXECUTION_PLAN.md",
+        "targetPath": "docs/status/general/NEXT_STEPS_EXECUTION_PLAN.md"
+      },
+      {
+        "file": "NEXT_STEPS_EXECUTION_SUMMARY.md",
+        "targetPath": "docs/status/general/NEXT_STEPS_EXECUTION_SUMMARY.md"
+      },
+      {
+        "file": "NEXT_STEP_STATUS.md",
+        "targetPath": "docs/status/general/NEXT_STEP_STATUS.md"
+      },
+      {
+        "file": "OMNI_PRIME_EXECUTION_REPORT.md",
+        "targetPath": "docs/status/general/OMNI_PRIME_EXECUTION_REPORT.md"
+      },
+      {
+        "file": "ONE_ORGANISM_ACTIVATION_REPORT.md",
+        "targetPath": "docs/status/general/ONE_ORGANISM_ACTIVATION_REPORT.md"
+      },
+      {
+        "file": "OPERATIONALIZATION_COMPLETE.md",
+        "targetPath": "docs/status/general/OPERATIONALIZATION_COMPLETE.md"
+      },
+      {
+        "file": "OPERATIONALIZATION_EXECUTION_REPORT.md",
+        "targetPath": "docs/status/general/OPERATIONALIZATION_EXECUTION_REPORT.md"
+      },
+      {
+        "file": "OPERATIONALIZATION_STATE_VALIDATION.md",
+        "targetPath": "docs/status/general/OPERATIONALIZATION_STATE_VALIDATION.md"
+      },
+      {
+        "file": "OPERATIONALIZATION_VALIDATION_COMPLETE.md",
+        "targetPath": "docs/status/general/OPERATIONALIZATION_VALIDATION_COMPLETE.md"
+      },
+      {
+        "file": "OPERATIONS_COMPLETE.md",
+        "targetPath": "docs/status/general/OPERATIONS_COMPLETE.md"
+      },
+      {
+        "file": "ORGANISM_CREDENTIAL_AWARENESS_COMPLETE.md",
+        "targetPath": "docs/status/general/ORGANISM_CREDENTIAL_AWARENESS_COMPLETE.md"
+      },
+      {
+        "file": "ORGANIZATION_VALIDATION_COMPLETE.md",
+        "targetPath": "docs/status/general/ORGANIZATION_VALIDATION_COMPLETE.md"
+      },
+      {
+        "file": "ORGANIZATION_VALIDATION_REPORT.md",
+        "targetPath": "docs/status/general/ORGANIZATION_VALIDATION_REPORT.md"
+      },
+      {
+        "file": "PARALLEL_CONCURRENT_EXECUTION_VALIDATED.md",
+        "targetPath": "docs/status/general/PARALLEL_CONCURRENT_EXECUTION_VALIDATED.md"
+      },
+      {
+        "file": "PHASE_3_48_HOUR_EXECUTION_PLAN.md",
+        "targetPath": "docs/status/general/PHASE_3_48_HOUR_EXECUTION_PLAN.md"
+      },
+      {
+        "file": "PHASE_3_ASCENSION_LAYER_MASTER_BLUEPRINT.md",
+        "targetPath": "docs/status/general/PHASE_3_ASCENSION_LAYER_MASTER_BLUEPRINT.md"
+      },
+      {
+        "file": "PHASE_3_EMERGENT_ORGANISM_BLUEPRINT.md",
+        "targetPath": "docs/status/general/PHASE_3_EMERGENT_ORGANISM_BLUEPRINT.md"
+      },
+      {
+        "file": "PHASE_3_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/PHASE_3_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "PHASE_3_EXECUTION_STATUS.md",
+        "targetPath": "docs/status/general/PHASE_3_EXECUTION_STATUS.md"
+      },
+      {
+        "file": "PHASE_3_GUARDIAN_SYNC_PLAN.md",
+        "targetPath": "docs/status/general/PHASE_3_GUARDIAN_SYNC_PLAN.md"
+      },
+      {
+        "file": "PHASE_3_MASTER_SUMMARY.md",
+        "targetPath": "docs/status/general/PHASE_3_MASTER_SUMMARY.md"
+      },
+      {
+        "file": "PHASE_3_SCOPE_2_COMPLETE.md",
+        "targetPath": "docs/status/general/PHASE_3_SCOPE_2_COMPLETE.md"
+      },
+      {
+        "file": "PHASE_3_SCOPE_3_COMPLETE.md",
+        "targetPath": "docs/status/general/PHASE_3_SCOPE_3_COMPLETE.md"
+      },
+      {
+        "file": "PHASE_3_SUPRA_KERNEL_ACTIVATION.md",
+        "targetPath": "docs/status/general/PHASE_3_SUPRA_KERNEL_ACTIVATION.md"
+      },
+      {
+        "file": "PHASE_3_VICTORY_SUMMARY.md",
+        "targetPath": "docs/status/general/PHASE_3_VICTORY_SUMMARY.md"
+      },
+      {
+        "file": "PLAYWRIGHT_AUTOMATION_STATUS.md",
+        "targetPath": "docs/status/general/PLAYWRIGHT_AUTOMATION_STATUS.md"
+      },
+      {
+        "file": "PLAYWRIGHT_EXECUTION_GUIDE.md",
+        "targetPath": "docs/status/general/PLAYWRIGHT_EXECUTION_GUIDE.md"
+      },
+      {
+        "file": "PLAYWRIGHT_EXECUTION_STATUS.md",
+        "targetPath": "docs/status/general/PLAYWRIGHT_EXECUTION_STATUS.md"
+      },
+      {
+        "file": "POCKETPATTERN_IMPLEMENTATION_COMPLETE.md",
+        "targetPath": "docs/status/general/POCKETPATTERN_IMPLEMENTATION_COMPLETE.md"
+      },
+      {
+        "file": "PRIME_MOVE_EXECUTION_STATUS.md",
+        "targetPath": "docs/status/general/PRIME_MOVE_EXECUTION_STATUS.md"
+      },
+      {
+        "file": "PRODUCTION_READY_FINAL_STATUS.md",
+        "targetPath": "docs/status/general/PRODUCTION_READY_FINAL_STATUS.md"
+      },
+      {
+        "file": "README_VISUAL_STATUS.md",
+        "targetPath": "docs/status/general/README_VISUAL_STATUS.md"
+      },
+      {
+        "file": "ROUTE_FIX_STATUS.md",
+        "targetPath": "docs/status/general/ROUTE_FIX_STATUS.md"
+      },
+      {
+        "file": "SCAFFOLDING_COMPLETE.md",
+        "targetPath": "docs/status/general/SCAFFOLDING_COMPLETE.md"
+      },
+      {
+        "file": "SIMULTANEOUS_PARALLEL_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/SIMULTANEOUS_PARALLEL_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "SIMULTANEOUS_PARALLEL_EXECUTION_VALIDATION.md",
+        "targetPath": "docs/status/general/SIMULTANEOUS_PARALLEL_EXECUTION_VALIDATION.md"
+      },
+      {
+        "file": "STATE_VALIDATION_REPORT.md",
+        "targetPath": "docs/status/general/STATE_VALIDATION_REPORT.md"
+      },
+      {
+        "file": "SUCCESS_PATTERNS_GUARDIAN_VALIDATION_COMPLETE.md",
+        "targetPath": "docs/status/general/SUCCESS_PATTERNS_GUARDIAN_VALIDATION_COMPLETE.md"
+      },
+      {
+        "file": "SUCCESS_PATTERNS_ORGAN_VALIDATION_COMPLETE.md",
+        "targetPath": "docs/status/general/SUCCESS_PATTERNS_ORGAN_VALIDATION_COMPLETE.md"
+      },
+      {
+        "file": "SUCCESS_PATTERNS_ORGAN_VALIDATION_CONFIRMED.md",
+        "targetPath": "docs/status/general/SUCCESS_PATTERNS_ORGAN_VALIDATION_CONFIRMED.md"
+      },
+      {
+        "file": "SYSTEM_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/SYSTEM_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "SYSTEM_OPTIMIZATION_AND_VALIDATION_PLAN.md",
+        "targetPath": "docs/status/general/SYSTEM_OPTIMIZATION_AND_VALIDATION_PLAN.md"
+      },
+      {
+        "file": "SYSTEM_OPTIMIZATION_COMPLETE.md",
+        "targetPath": "docs/status/general/SYSTEM_OPTIMIZATION_COMPLETE.md"
+      },
+      {
+        "file": "SYSTEM_REVIEW_PROBLEM_REPORT.md",
+        "targetPath": "docs/status/general/SYSTEM_REVIEW_PROBLEM_REPORT.md"
+      },
+      {
+        "file": "SYSTEM_SNAPSHOT_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/SYSTEM_SNAPSHOT_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "THE_ONE_FULL_ORGANISM_REPORT.md",
+        "targetPath": "docs/status/general/THE_ONE_FULL_ORGANISM_REPORT.md"
+      },
+      {
+        "file": "TRANSCENDENT_AUTOMATION_EXECUTION_PLAN.md",
+        "targetPath": "docs/status/general/TRANSCENDENT_AUTOMATION_EXECUTION_PLAN.md"
+      },
+      {
+        "file": "TRANSPARENT_RETENTION_IMPLEMENTATION_COMPLETE.md",
+        "targetPath": "docs/status/general/TRANSPARENT_RETENTION_IMPLEMENTATION_COMPLETE.md"
+      },
+      {
+        "file": "TRIADIC_EXECUTION_HARNESS_INSTALLATION_COMPLETE.md",
+        "targetPath": "docs/status/general/TRIADIC_EXECUTION_HARNESS_INSTALLATION_COMPLETE.md"
+      },
+      {
+        "file": "TRUICE_EXECUTION_STATUS.md",
+        "targetPath": "docs/status/general/TRUICE_EXECUTION_STATUS.md"
+      },
+      {
+        "file": "TRUICE_EXECUTION_SUMMARY.md",
+        "targetPath": "docs/status/general/TRUICE_EXECUTION_SUMMARY.md"
+      },
+      {
+        "file": "TRUICE_PRE_EXECUTION_READINESS_REPORT.md",
+        "targetPath": "docs/status/general/TRUICE_PRE_EXECUTION_READINESS_REPORT.md"
+      },
+      {
+        "file": "TRUICE_PRE_EXECUTION_READINESS_REPORT_AEYON_ABEONE.md",
+        "targetPath": "docs/status/general/TRUICE_PRE_EXECUTION_READINESS_REPORT_AEYON_ABEONE.md"
+      },
+      {
+        "file": "TRUICE_VIDEO_GUARDIANS_CHROME_EXECUTION_PLAN.md",
+        "targetPath": "docs/status/general/TRUICE_VIDEO_GUARDIANS_CHROME_EXECUTION_PLAN.md"
+      },
+      {
+        "file": "UNIFIED_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/UNIFIED_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "UNIFIED_SYSTEM_ACTIVATION_COMPLETE.md",
+        "targetPath": "docs/status/general/UNIFIED_SYSTEM_ACTIVATION_COMPLETE.md"
+      },
+      {
+        "file": "UNIVERSAL_REPOSITORY_AWARENESS_REPORT.md",
+        "targetPath": "docs/status/general/UNIVERSAL_REPOSITORY_AWARENESS_REPORT.md"
+      },
+      {
+        "file": "V0_DRIFT_PREVENTION_COMPLETE.md",
+        "targetPath": "docs/status/general/V0_DRIFT_PREVENTION_COMPLETE.md"
+      },
+      {
+        "file": "V0_NEXT_STEPS_EXECUTION.md",
+        "targetPath": "docs/status/general/V0_NEXT_STEPS_EXECUTION.md"
+      },
+      {
+        "file": "V0_PROJECT_RECOVERY_COMPLETE.md",
+        "targetPath": "docs/status/general/V0_PROJECT_RECOVERY_COMPLETE.md"
+      },
+      {
+        "file": "VALIDATED_CREDENTIALS_REPORT.md",
+        "targetPath": "docs/status/general/VALIDATED_CREDENTIALS_REPORT.md"
+      },
+      {
+        "file": "VISUAL_FOR_ALL_COMPLETE.md",
+        "targetPath": "docs/status/general/VISUAL_FOR_ALL_COMPLETE.md"
+      },
+      {
+        "file": "VISUAL_FOR_ALL_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/general/VISUAL_FOR_ALL_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "YAGNI_JOHN_ALRAX_ZERO_COMPLETE.md",
+        "targetPath": "docs/status/general/YAGNI_JOHN_ALRAX_ZERO_COMPLETE.md"
+      },
+      {
+        "file": "ZERO_EFFORT_CLOUDFLARE_AUTH_COMPLETE.md",
+        "targetPath": "docs/status/general/ZERO_EFFORT_CLOUDFLARE_AUTH_COMPLETE.md"
+      },
+      {
+        "file": "ZERO_FAILURE_PATTERN_FIXES_COMPLETE.md",
+        "targetPath": "docs/status/general/ZERO_FAILURE_PATTERN_FIXES_COMPLETE.md"
+      },
+      {
+        "file": "ZERO_JOHN_VALIDATION_COMPLETE.md",
+        "targetPath": "docs/status/general/ZERO_JOHN_VALIDATION_COMPLETE.md"
+      }
+    ],
+    "integrations": [
+      {
+        "file": "ABEFLOWS_COMPLETE_CONVERGENCE_REPORT.md",
+        "targetPath": "docs/status/integrations/ABEFLOWS_COMPLETE_CONVERGENCE_REPORT.md"
+      },
+      {
+        "file": "ABEKEYS_AUTO_LOAD_COMPLETE.md",
+        "targetPath": "docs/status/integrations/ABEKEYS_AUTO_LOAD_COMPLETE.md"
+      },
+      {
+        "file": "ABEKEYS_COMPLETE_CONVERGENCE_SYNTHESIS.md",
+        "targetPath": "docs/status/integrations/ABEKEYS_COMPLETE_CONVERGENCE_SYNTHESIS.md"
+      },
+      {
+        "file": "ABEKEYS_FINAL_VALIDATION_REPORT.md",
+        "targetPath": "docs/status/integrations/ABEKEYS_FINAL_VALIDATION_REPORT.md"
+      },
+      {
+        "file": "ABEKEYS_INTEGRATION_ANALYSIS_ABEONE_SOURCE.md",
+        "targetPath": "docs/status/integrations/ABEKEYS_INTEGRATION_ANALYSIS_ABEONE_SOURCE.md"
+      },
+      {
+        "file": "ABEKEYS_INTEGRATION_COMPLETE.md",
+        "targetPath": "docs/status/integrations/ABEKEYS_INTEGRATION_COMPLETE.md"
+      },
+      {
+        "file": "ABEKEYS_INTEGRATION_IMPLEMENTATION_COMPLETE.md",
+        "targetPath": "docs/status/integrations/ABEKEYS_INTEGRATION_IMPLEMENTATION_COMPLETE.md"
+      },
+      {
+        "file": "ABEKEYS_PAYMENT_AUTH_DEEP_ANALYSIS.md",
+        "targetPath": "docs/status/integrations/ABEKEYS_PAYMENT_AUTH_DEEP_ANALYSIS.md"
+      },
+      {
+        "file": "ABEKEYS_SECURITY_VALIDATION_COMPLETE.md",
+        "targetPath": "docs/status/integrations/ABEKEYS_SECURITY_VALIDATION_COMPLETE.md"
+      },
+      {
+        "file": "ABEKEYS_STRIPE_INTEGRATION_COMPLETE.md",
+        "targetPath": "docs/status/integrations/ABEKEYS_STRIPE_INTEGRATION_COMPLETE.md"
+      },
+      {
+        "file": "ABEKEYS_TERMINAL_COMMANDS.md",
+        "targetPath": "docs/status/integrations/ABEKEYS_TERMINAL_COMMANDS.md"
+      },
+      {
+        "file": "ABEKEYS_UNLOCK_SUCCESS.md",
+        "targetPath": "docs/status/integrations/ABEKEYS_UNLOCK_SUCCESS.md"
+      },
+      {
+        "file": "ABEKEYS_VAULT_VALIDATION.md",
+        "targetPath": "docs/status/integrations/ABEKEYS_VAULT_VALIDATION.md"
+      },
+      {
+        "file": "ABEVISIONS_AUTONOMOUS_EXECUTION.md",
+        "targetPath": "docs/status/integrations/ABEVISIONS_AUTONOMOUS_EXECUTION.md"
+      },
+      {
+        "file": "ABEVISIONS_COMPLETE.md",
+        "targetPath": "docs/status/integrations/ABEVISIONS_COMPLETE.md"
+      },
+      {
+        "file": "ABEVISIONS_COMPLETE_EMERGENCE.md",
+        "targetPath": "docs/status/integrations/ABEVISIONS_COMPLETE_EMERGENCE.md"
+      },
+      {
+        "file": "ABEVISIONS_COMPLETE_EXECUTION.md",
+        "targetPath": "docs/status/integrations/ABEVISIONS_COMPLETE_EXECUTION.md"
+      },
+      {
+        "file": "ABEVISIONS_COMPLETE_SYSTEM.md",
+        "targetPath": "docs/status/integrations/ABEVISIONS_COMPLETE_SYSTEM.md"
+      },
+      {
+        "file": "ABEVISIONS_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/integrations/ABEVISIONS_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "ABEVISIONS_EXECUTION_PLAN.md",
+        "targetPath": "docs/status/integrations/ABEVISIONS_EXECUTION_PLAN.md"
+      },
+      {
+        "file": "ABEVISIONS_FINAL_STATUS.md",
+        "targetPath": "docs/status/integrations/ABEVISIONS_FINAL_STATUS.md"
+      },
+      {
+        "file": "ABEVISION_AEYON_ATOMIC_EXECUTION_MAP.md",
+        "targetPath": "docs/status/integrations/ABEVISION_AEYON_ATOMIC_EXECUTION_MAP.md"
+      },
+      {
+        "file": "ABEVISION_API_ENDPOINT_MAP.md",
+        "targetPath": "docs/status/integrations/ABEVISION_API_ENDPOINT_MAP.md"
+      },
+      {
+        "file": "ABEVISION_EVENT_FLOW_MAP.md",
+        "targetPath": "docs/status/integrations/ABEVISION_EVENT_FLOW_MAP.md"
+      },
+      {
+        "file": "ABEVISION_MASTER_INDEX.md",
+        "targetPath": "docs/status/integrations/ABEVISION_MASTER_INDEX.md"
+      },
+      {
+        "file": "ABEVISION_MODULE_DEPENDENCY_GRAPH.md",
+        "targetPath": "docs/status/integrations/ABEVISION_MODULE_DEPENDENCY_GRAPH.md"
+      },
+      {
+        "file": "AEYON_ABEKEYS_HIGHEST_PRIORITY_COMPLETE.md",
+        "targetPath": "docs/status/integrations/AEYON_ABEKEYS_HIGHEST_PRIORITY_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_ABEVISIONS_OPERATIONALIZED.md",
+        "targetPath": "docs/status/integrations/AEYON_ABEVISIONS_OPERATIONALIZED.md"
+      },
+      {
+        "file": "AEYON_ATOMIC_CONVERGENCE_COMPLETE.md",
+        "targetPath": "docs/status/integrations/AEYON_ATOMIC_CONVERGENCE_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_ATOMIC_CONVERGENCE_EXECUTED.md",
+        "targetPath": "docs/status/integrations/AEYON_ATOMIC_CONVERGENCE_EXECUTED.md"
+      },
+      {
+        "file": "AEYON_ATOMIC_CONVERGENCE_EXECUTION.md",
+        "targetPath": "docs/status/integrations/AEYON_ATOMIC_CONVERGENCE_EXECUTION.md"
+      },
+      {
+        "file": "AEYON_ATOMIC_CONVERGENCE_FINAL.md",
+        "targetPath": "docs/status/integrations/AEYON_ATOMIC_CONVERGENCE_FINAL.md"
+      },
+      {
+        "file": "AEYON_ATOMIC_CONVERGENCE_NEXT_EXECUTION.md",
+        "targetPath": "docs/status/integrations/AEYON_ATOMIC_CONVERGENCE_NEXT_EXECUTION.md"
+      },
+      {
+        "file": "AEYON_COMPLETE_SELF_REPORT_AND_INTEGRATION_PLAN.md",
+        "targetPath": "docs/status/integrations/AEYON_COMPLETE_SELF_REPORT_AND_INTEGRATION_PLAN.md"
+      },
+      {
+        "file": "AEYON_CONVERGENCE_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/integrations/AEYON_CONVERGENCE_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_EMERGENT_CONVERGENCE_EXECUTION.md",
+        "targetPath": "docs/status/integrations/AEYON_EMERGENT_CONVERGENCE_EXECUTION.md"
+      },
+      {
+        "file": "AEYON_META_GUARDIAN_INTEGRATION.md",
+        "targetPath": "docs/status/integrations/AEYON_META_GUARDIAN_INTEGRATION.md"
+      },
+      {
+        "file": "AEYON_NEXT_STEPS_CONVERGENCE_COMPLETE.md",
+        "targetPath": "docs/status/integrations/AEYON_NEXT_STEPS_CONVERGENCE_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_RECURSIVE_CONVERGENCE_EXECUTION_SUMMARY.md",
+        "targetPath": "docs/status/integrations/AEYON_RECURSIVE_CONVERGENCE_EXECUTION_SUMMARY.md"
+      },
+      {
+        "file": "AEYON_RECURSIVE_EMERGENT_CONVERGENCE.md",
+        "targetPath": "docs/status/integrations/AEYON_RECURSIVE_EMERGENT_CONVERGENCE.md"
+      },
+      {
+        "file": "AEYON_SCALE_CONVERGENCE_EXECUTED.md",
+        "targetPath": "docs/status/integrations/AEYON_SCALE_CONVERGENCE_EXECUTED.md"
+      },
+      {
+        "file": "AEYON_SCALE_CONVERGENCE_EXECUTION.md",
+        "targetPath": "docs/status/integrations/AEYON_SCALE_CONVERGENCE_EXECUTION.md"
+      },
+      {
+        "file": "AEYON_UNIVERSAL_CONVERGENCE_INITIALIZATION.md",
+        "targetPath": "docs/status/integrations/AEYON_UNIVERSAL_CONVERGENCE_INITIALIZATION.md"
+      },
+      {
+        "file": "AEYON_V0_COMPONENT_INTEGRATION_COMPLETE.md",
+        "targetPath": "docs/status/integrations/AEYON_V0_COMPONENT_INTEGRATION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_V0_COMPONENT_INTEGRATION_PLAN.md",
+        "targetPath": "docs/status/integrations/AEYON_V0_COMPONENT_INTEGRATION_PLAN.md"
+      },
+      {
+        "file": "BIOINFORMATIC_CONVERGENCE_COMPLETE.md",
+        "targetPath": "docs/status/integrations/BIOINFORMATIC_CONVERGENCE_COMPLETE.md"
+      },
+      {
+        "file": "CONVERGENCE_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/integrations/CONVERGENCE_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "CONVERGENCE_EXECUTION_FINAL.md",
+        "targetPath": "docs/status/integrations/CONVERGENCE_EXECUTION_FINAL.md"
+      },
+      {
+        "file": "CONVERGENCE_IMPLEMENTATION_COMPLETE.md",
+        "targetPath": "docs/status/integrations/CONVERGENCE_IMPLEMENTATION_COMPLETE.md"
+      },
+      {
+        "file": "CONVERGENCE_ROUTE_FIXED.md",
+        "targetPath": "docs/status/integrations/CONVERGENCE_ROUTE_FIXED.md"
+      },
+      {
+        "file": "EEAAO_LFGLFGLFGL_INTEGRATION_COMPLETE.md",
+        "targetPath": "docs/status/integrations/EEAAO_LFGLFGLFGL_INTEGRATION_COMPLETE.md"
+      },
+      {
+        "file": "EMAIL_CONVERGENCE_COMPLETE_DISCOVERY_REPORT.md",
+        "targetPath": "docs/status/integrations/EMAIL_CONVERGENCE_COMPLETE_DISCOVERY_REPORT.md"
+      },
+      {
+        "file": "EMAIL_CONVERGENCE_DISCOVERIES_AND_PATTERN_VALIDATION.md",
+        "targetPath": "docs/status/integrations/EMAIL_CONVERGENCE_DISCOVERIES_AND_PATTERN_VALIDATION.md"
+      },
+      {
+        "file": "EMAIL_CONVERGENCE_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/integrations/EMAIL_CONVERGENCE_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "EMAIL_CONVERGENCE_FINAL_EPISTEMIC_VALIDATION_COMPLETE.md",
+        "targetPath": "docs/status/integrations/EMAIL_CONVERGENCE_FINAL_EPISTEMIC_VALIDATION_COMPLETE.md"
+      },
+      {
+        "file": "EMAIL_CONVERGENCE_FINAL_VALIDATION_SUMMARY.md",
+        "targetPath": "docs/status/integrations/EMAIL_CONVERGENCE_FINAL_VALIDATION_SUMMARY.md"
+      },
+      {
+        "file": "EMAIL_CONVERGENCE_LFG_EXECUTION.md",
+        "targetPath": "docs/status/integrations/EMAIL_CONVERGENCE_LFG_EXECUTION.md"
+      },
+      {
+        "file": "EMAIL_CONVERGENCE_PHASE2_COMPLETE.md",
+        "targetPath": "docs/status/integrations/EMAIL_CONVERGENCE_PHASE2_COMPLETE.md"
+      },
+      {
+        "file": "EMAIL_CONVERGENCE_SIMPLIFICATION_COMPLETE.md",
+        "targetPath": "docs/status/integrations/EMAIL_CONVERGENCE_SIMPLIFICATION_COMPLETE.md"
+      },
+      {
+        "file": "EMAIL_CONVERGENCE_SYSTEM_COMPLETE.md",
+        "targetPath": "docs/status/integrations/EMAIL_CONVERGENCE_SYSTEM_COMPLETE.md"
+      },
+      {
+        "file": "EMERGENT_CONVERGENCE_COMPLETE.md",
+        "targetPath": "docs/status/integrations/EMERGENT_CONVERGENCE_COMPLETE.md"
+      },
+      {
+        "file": "INFORMATION_THEORY_INTEGRATION_COMPLETE.md",
+        "targetPath": "docs/status/integrations/INFORMATION_THEORY_INTEGRATION_COMPLETE.md"
+      },
+      {
+        "file": "PAYMENT_INTEGRATION_COMPLETE.md",
+        "targetPath": "docs/status/integrations/PAYMENT_INTEGRATION_COMPLETE.md"
+      },
+      {
+        "file": "PERFECT_CONVERGENCE_COMPLETE.md",
+        "targetPath": "docs/status/integrations/PERFECT_CONVERGENCE_COMPLETE.md"
+      }
+    ],
+    "design-system": [
+      {
+        "file": "ABEONE_DESIGN_SYSTEM_COMPLETE.md",
+        "targetPath": "docs/status/design-system/ABEONE_DESIGN_SYSTEM_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_EPISTEMIC_AUDIT_AND_HIGH_ASSURANCE_REDESIGN.md",
+        "targetPath": "docs/status/design-system/AEYON_EPISTEMIC_AUDIT_AND_HIGH_ASSURANCE_REDESIGN.md"
+      },
+      {
+        "file": "COLOR_SYSTEM_CONVERGENCE_COMPLETE.md",
+        "targetPath": "docs/status/design-system/COLOR_SYSTEM_CONVERGENCE_COMPLETE.md"
+      },
+      {
+        "file": "DESIGN_DIAGNOSTIC_REPORT.md",
+        "targetPath": "docs/status/design-system/DESIGN_DIAGNOSTIC_REPORT.md"
+      },
+      {
+        "file": "DESIGN_SYSTEMS_INTEGRATION_COMPLETE.md",
+        "targetPath": "docs/status/design-system/DESIGN_SYSTEMS_INTEGRATION_COMPLETE.md"
+      },
+      {
+        "file": "DESIGN_SYSTEM_COMPLETE.md",
+        "targetPath": "docs/status/design-system/DESIGN_SYSTEM_COMPLETE.md"
+      },
+      {
+        "file": "DESIGN_SYSTEM_VALIDATION_COMPLETE.md",
+        "targetPath": "docs/status/design-system/DESIGN_SYSTEM_VALIDATION_COMPLETE.md"
+      },
+      {
+        "file": "FINAL_MICROSERVICE_ATOMIC_DESIGN_VALIDATION.md",
+        "targetPath": "docs/status/design-system/FINAL_MICROSERVICE_ATOMIC_DESIGN_VALIDATION.md"
+      }
+    ],
+    "deployments": [
+      {
+        "file": "AEYON_DEPLOYMENT_EXECUTED.md",
+        "targetPath": "docs/status/deployments/AEYON_DEPLOYMENT_EXECUTED.md"
+      },
+      {
+        "file": "AEYON_DEPLOYMENT_EXECUTING.md",
+        "targetPath": "docs/status/deployments/AEYON_DEPLOYMENT_EXECUTING.md"
+      },
+      {
+        "file": "AEYON_DEPLOYMENT_EXECUTION.md",
+        "targetPath": "docs/status/deployments/AEYON_DEPLOYMENT_EXECUTION.md"
+      },
+      {
+        "file": "AEYON_DEPLOYMENT_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/deployments/AEYON_DEPLOYMENT_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "AEYON_DEPLOYMENT_PROCEEDING.md",
+        "targetPath": "docs/status/deployments/AEYON_DEPLOYMENT_PROCEEDING.md"
+      },
+      {
+        "file": "AEYON_DEPLOYMENT_PROCEED_INSTRUCTIONS.md",
+        "targetPath": "docs/status/deployments/AEYON_DEPLOYMENT_PROCEED_INSTRUCTIONS.md"
+      },
+      {
+        "file": "AEYON_DEPLOYMENT_STATUS.md",
+        "targetPath": "docs/status/deployments/AEYON_DEPLOYMENT_STATUS.md"
+      },
+      {
+        "file": "AEYON_DEV_PR_DEPLOYMENT_EXECUTION.md",
+        "targetPath": "docs/status/deployments/AEYON_DEV_PR_DEPLOYMENT_EXECUTION.md"
+      },
+      {
+        "file": "AEYON_MICROSERVICES_DEPLOYMENT_EXECUTION_PLAN.md",
+        "targetPath": "docs/status/deployments/AEYON_MICROSERVICES_DEPLOYMENT_EXECUTION_PLAN.md"
+      },
+      {
+        "file": "BRYAN_DEPLOYMENT_EXECUTION_PLAN.md",
+        "targetPath": "docs/status/deployments/BRYAN_DEPLOYMENT_EXECUTION_PLAN.md"
+      },
+      {
+        "file": "DEPLOYMENT_EXECUTION_COMPLETE.md",
+        "targetPath": "docs/status/deployments/DEPLOYMENT_EXECUTION_COMPLETE.md"
+      },
+      {
+        "file": "DEPLOYMENT_REQUIREMENTS_AND_EXECUTION.md",
+        "targetPath": "docs/status/deployments/DEPLOYMENT_REQUIREMENTS_AND_EXECUTION.md"
+      }
+    ]
+  },
+  "guides": {
+    "development": [
+      {
+        "file": "ABEFLOWS_ACCESS_QUICK_START.md",
+        "targetPath": "docs/guides/development/ABEFLOWS_ACCESS_QUICK_START.md"
+      },
+      {
+        "file": "BRAVETTO_AI_DNS_VERCEL_QUICK_START.md",
+        "targetPath": "docs/guides/development/BRAVETTO_AI_DNS_VERCEL_QUICK_START.md"
+      },
+      {
+        "file": "BRYAN_QUICK_START.md",
+        "targetPath": "docs/guides/development/BRYAN_QUICK_START.md"
+      },
+      {
+        "file": "CLOUDFLARE_AUTOMATION_QUICK_START.md",
+        "targetPath": "docs/guides/development/CLOUDFLARE_AUTOMATION_QUICK_START.md"
+      },
+      {
+        "file": "CLOUDFLARE_PAGES_QUICK_START.md",
+        "targetPath": "docs/guides/development/CLOUDFLARE_PAGES_QUICK_START.md"
+      },
+      {
+        "file": "DASHBOARD_QUICK_START.md",
+        "targetPath": "docs/guides/development/DASHBOARD_QUICK_START.md"
+      },
+      {
+        "file": "DEVELOPER_GUIDE.md",
+        "targetPath": "docs/guides/development/DEVELOPER_GUIDE.md"
+      },
+      {
+        "file": "EEAaO_QUICK_START.md",
+        "targetPath": "docs/guides/development/EEAaO_QUICK_START.md"
+      },
+      {
+        "file": "EMAIL_CONVERGENCE_ANALYSIS_QUICK_START.md",
+        "targetPath": "docs/guides/development/EMAIL_CONVERGENCE_ANALYSIS_QUICK_START.md"
+      },
+      {
+        "file": "LOCALHOST_PREVIEW_GUIDE.md",
+        "targetPath": "docs/guides/development/LOCALHOST_PREVIEW_GUIDE.md"
+      },
+      {
+        "file": "QUICK_START_2_STEPS.md",
+        "targetPath": "docs/guides/development/QUICK_START_2_STEPS.md"
+      },
+      {
+        "file": "SENDGRID_QUICK_START.md",
+        "targetPath": "docs/guides/development/SENDGRID_QUICK_START.md"
+      },
+      {
+        "file": "SETUP_GUIDE.md",
+        "targetPath": "docs/guides/development/SETUP_GUIDE.md"
+      },
+      {
+        "file": "VERCEL_DEPLOYMENT_QUICK_START.md",
+        "targetPath": "docs/guides/development/VERCEL_DEPLOYMENT_QUICK_START.md"
+      },
+      {
+        "file": "VISUAL_SETUP_GUIDE.md",
+        "targetPath": "docs/guides/development/VISUAL_SETUP_GUIDE.md"
+      }
+    ],
+    "general": [
+      {
+        "file": "BACKEND_REVENUE_ORCHESTRATION_GUIDE.md",
+        "targetPath": "docs/guides/general/BACKEND_REVENUE_ORCHESTRATION_GUIDE.md"
+      },
+      {
+        "file": "FIND_YOUR_PAGES.md",
+        "targetPath": "docs/guides/general/FIND_YOUR_PAGES.md"
+      },
+      {
+        "file": "QUICK_ACTIVATION.md",
+        "targetPath": "docs/guides/general/QUICK_ACTIVATION.md"
+      },
+      {
+        "file": "QUICK_REFERENCE_OBSERVER.md",
+        "targetPath": "docs/guides/general/QUICK_REFERENCE_OBSERVER.md"
+      },
+      {
+        "file": "QUICK_RESUME.md",
+        "targetPath": "docs/guides/general/QUICK_RESUME.md"
+      },
+      {
+        "file": "SUCCESS_PATTERNS_IMPLEMENTATION_GUIDE.md",
+        "targetPath": "docs/guides/general/SUCCESS_PATTERNS_IMPLEMENTATION_GUIDE.md"
+      },
+      {
+        "file": "VIBECODER_GUIDE.md",
+        "targetPath": "docs/guides/general/VIBECODER_GUIDE.md"
+      }
+    ],
+    "deployment": [
+      {
+        "file": "PRODUCTION_DEPLOYMENT_GUIDE.md",
+        "targetPath": "docs/guides/deployment/PRODUCTION_DEPLOYMENT_GUIDE.md"
+      },
+      {
+        "file": "QUICK_DEPLOY.md",
+        "targetPath": "docs/guides/deployment/QUICK_DEPLOY.md"
+      }
+    ]
+  },
+  "architecture": {
+    "general": [
+      {
+        "file": "ABEFLOWS_DEEP_EPISTEMIC_SOURCE_PATTERN.md",
+        "targetPath": "docs/architecture/general/ABEFLOWS_DEEP_EPISTEMIC_SOURCE_PATTERN.md"
+      },
+      {
+        "file": "BRAVETTO_VALIDATED_SUCCESS_PATTERNS_ANALYSIS.md",
+        "targetPath": "docs/architecture/general/BRAVETTO_VALIDATED_SUCCESS_PATTERNS_ANALYSIS.md"
+      },
+      {
+        "file": "BëONE_AbëONE_UNITY_PATTERN.md",
+        "targetPath": "docs/architecture/general/BëONE_AbëONE_UNITY_PATTERN.md"
+      },
+      {
+        "file": "DANNY_INTERACTION_PATTERNS.md",
+        "targetPath": "docs/architecture/general/DANNY_INTERACTION_PATTERNS.md"
+      },
+      {
+        "file": "DANNY_WORKFLOW_PATTERN_ALWAYS_CLEAR.md",
+        "targetPath": "docs/architecture/general/DANNY_WORKFLOW_PATTERN_ALWAYS_CLEAR.md"
+      },
+      {
+        "file": "DRIFT_PATTERN_ANALYSIS_AND_GAPS.md",
+        "targetPath": "docs/architecture/general/DRIFT_PATTERN_ANALYSIS_AND_GAPS.md"
+      },
+      {
+        "file": "EEAaO_VALIDATED_SUCCESS_PATTERNS_SYNTHESIS.md",
+        "targetPath": "docs/architecture/general/EEAaO_VALIDATED_SUCCESS_PATTERNS_SYNTHESIS.md"
+      },
+      {
+        "file": "FAILURE_PATTERN_ANALYSIS.md",
+        "targetPath": "docs/architecture/general/FAILURE_PATTERN_ANALYSIS.md"
+      },
+      {
+        "file": "FOLDER_HIERARCHY_ORGANIZED.md",
+        "targetPath": "docs/architecture/general/FOLDER_HIERARCHY_ORGANIZED.md"
+      },
+      {
+        "file": "FORENSIC_PATTERN_ANALYSIS.md",
+        "targetPath": "docs/architecture/general/FORENSIC_PATTERN_ANALYSIS.md"
+      },
+      {
+        "file": "GUARDIAN_PATTERN_FLOW_MATCHING.md",
+        "targetPath": "docs/architecture/general/GUARDIAN_PATTERN_FLOW_MATCHING.md"
+      },
+      {
+        "file": "GUARDIAN_PATTERN_OPERATIONALIZED.md",
+        "targetPath": "docs/architecture/general/GUARDIAN_PATTERN_OPERATIONALIZED.md"
+      },
+      {
+        "file": "GUARDIAN_PATTERN_OPERATIONALIZED_SUMMARY.md",
+        "targetPath": "docs/architecture/general/GUARDIAN_PATTERN_OPERATIONALIZED_SUMMARY.md"
+      },
+      {
+        "file": "INFRASTRUCTURE_PATTERN_LIBRARY.md",
+        "targetPath": "docs/architecture/general/INFRASTRUCTURE_PATTERN_LIBRARY.md"
+      },
+      {
+        "file": "INTELLIGENCE_PIPELINE_GAPS_AND_FAILURE_PATTERNS.md",
+        "targetPath": "docs/architecture/general/INTELLIGENCE_PIPELINE_GAPS_AND_FAILURE_PATTERNS.md"
+      },
+      {
+        "file": "OBSERVER_SUCCESS_PATTERN.md",
+        "targetPath": "docs/architecture/general/OBSERVER_SUCCESS_PATTERN.md"
+      },
+      {
+        "file": "PROJECT_BOUNDARY_SYSTEM.md",
+        "targetPath": "docs/architecture/general/PROJECT_BOUNDARY_SYSTEM.md"
+      },
+      {
+        "file": "PROJECT_MASTER_INDEX.md",
+        "targetPath": "docs/architecture/general/PROJECT_MASTER_INDEX.md"
+      },
+      {
+        "file": "SUCCESS_PATTERNS_ANALYSIS.md",
+        "targetPath": "docs/architecture/general/SUCCESS_PATTERNS_ANALYSIS.md"
+      },
+      {
+        "file": "TRUICE_FUNNEL_GLOBAL_PATTERN_PROMPT.md",
+        "targetPath": "docs/architecture/general/TRUICE_FUNNEL_GLOBAL_PATTERN_PROMPT.md"
+      }
+    ],
+    "integrations": [
+      {
+        "file": "SUCCESS_PATTERNS_AUTOMATED_INTEGRATION.md",
+        "targetPath": "docs/architecture/integrations/SUCCESS_PATTERNS_AUTOMATED_INTEGRATION.md"
+      },
+      {
+        "file": "SUCCESS_PATTERNS_COMPLETE_INTEGRATION_SUMMARY.md",
+        "targetPath": "docs/architecture/integrations/SUCCESS_PATTERNS_COMPLETE_INTEGRATION_SUMMARY.md"
+      }
+    ],
+    "apps": [
+      {
+        "file": "SUCCESS_PATTERNS_GUARDIAN_APPROVAL.md",
+        "targetPath": "docs/architecture/apps/SUCCESS_PATTERNS_GUARDIAN_APPROVAL.md"
+      }
+    ]
+  },
+  "unknown": [
+    "ABEFLOWS_BRAVETTO_GIT_ANALYSIS.md",
+    "ABEFLOWS_CONVERGENCE_QUICK_REFERENCE.md",
+    "ABEFLOWS_QUICK_REFERENCE.md",
+    "ABEONE_3WINDOW_UNIFIED_ANALYSIS.md",
+    "ABEONE_ETERNAL_SYNTHESIS.md",
+    "ABEONE_GLOBAL_CREDENTIAL_AUTOMATION.md",
+    "ABEONE_ONE_ETERNAL_SYNTHESIS.md",
+    "ABEONE_RHODIUM_AWARD.md",
+    "ACTIVATION.md",
+    "ADHD_ALIGNED_NEXT_STEPS.md",
+    "AEON_CHEAT_SHEET.md",
+    "AGENT_SWARM_AUTO_ACTIVATION_ANALYSIS.md",
+    "AI_CONTEXT_SOURCE_OF_TRUTH.md",
+    "AI_NEWSLETTER_DETECTION_EXPLAINED.md",
+    "AI_PROMPT_TEMPLATE.md",
+    "ALLISON_CURSOR_ONBOARDING_PROMPT.md",
+    "ALLISON_ONBOARDING_LIVESTREAM_OUTLINE.md",
+    "ALLISON_PERSONALIZED_ONBOARDING.md",
+    "ALL_5_CAPABILITIES_OPERATIONALIZED.md",
+    "ALL_5_CAPABILITIES_VALIDATED.md",
+    "ALL_SYSTEMS_INTENTIONALLY_ON.md",
+    "AMPLIFICATION_QUICK_REFERENCE.md",
+    "AUTONOMOUS_ORGANISM_BIRTH_CERTIFICATE.md",
+    "AUTONOMOUS_ORGANISM_BORN.md",
+    "BACKEND_SERVER_LAUNCHED.md",
+    "BESOURCE_BEMODULE_BEONE_GAP_ANALYSIS.md",
+    "BRAVETTO_AIGUARDIAN_CONVERGENCE_ONEPAGER.md",
+    "BRAVETTO_AIGUARDIAN_ONEPAGER.md",
+    "BRAVETTO_AI_COMPLETE_PREPARATION.md",
+    "BRAVETTO_AI_LANDING_PAGE_PREPARATION.md",
+    "BRAVETTO_CHROME_EXTENSION_GIT_ANALYSIS.md",
+    "BRAVETTO_DAILY_AUTOMATED_ACTION_ENGINE.md",
+    "BRAVETTO_IMPENETRABLE_MOAT_BLUEPRINT.md",
+    "BRAVETTO_INVESTOR_FINANCIAL_MODEL_2026.md",
+    "BRAVETTO_INVESTOR_MONTHLY_PROJECTIONS_2026.md",
+    "BRAVETTO_PRICING_STRATEGY_2025.md",
+    "BRAVETTO_PRICING_STRATEGY_2026.md",
+    "BRAVETTO_TEAM_CONVERGENCE_ANALYSIS.md",
+    "BRYAN_AEYON_INTEGRATION_PROMPT.md",
+    "BRYAN_AEYON_TEST_SCRIPTS_COMPANION.md",
+    "BRYAN_CLONE_INSTRUCTIONS.md",
+    "BRYAN_CLONE_SETUP.md",
+    "BRYAN_EMAIL_FOLLOWUP.md",
+    "BRYAN_EMAIL_TEMPLATE.md",
+    "BRYAN_OPERATIONALIZATION_PLAN.md",
+    "BRYAN_PDF_INSTRUCTIONS.md",
+    "BRYAN_QUICK_DEPLOY_SUMMARY.md",
+    "BRYAN_SIMPLE_CHECKLIST.md",
+    "BRYAN_TRANSFER_FIX.md",
+    "BRYAN_UPDATE_CHECKLIST.md",
+    "BRYAN_VALIDATE_CLONE.md",
+    "BëONE_AbëONE_FOREVER_CONVERGENCE.md",
+    "CDF_BEAUTIFUL_HUMAN_FORMAT.md",
+    "CDF_COMPLETE_ECOSYSTEM.md",
+    "CDF_GO_VIRAL_PLAN.md",
+    "CDF_GO_VIRAL_PLAN_back_to_md.md",
+    "CDF_LAUNCH_CHECKLIST.md",
+    "CDF_READY_TO_GO_VIRAL.md",
+    "CDF_VIRAL_STRATEGY.md",
+    "CDF_WHAT_ELSE_IT_CAN_DO.md",
+    "CHROME_EXTENSION_IMPLEMENTATION_ANALYSIS.md",
+    "CLAUDE_CODE_INTEGRATION.md",
+    "CLAUDE_CODE_QUICK_REFERENCE.md",
+    "CLOUDFLARE_CHALLENGE_HANDLING.md",
+    "CLOUDFLARE_OUTAGE_RESPONSE.md",
+    "CLOUDFLARE_PAGES_LAUNCH_CHECKLIST.md",
+    "CLOUDFLARE_PAGES_LAUNCH_QUICK_REFERENCE.md",
+    "CLOUDFLARE_PAGES_VISUAL_WALKTHROUGH.md",
+    "CODEBASE_DEEP_AGENT_SWARM_ANALYSIS.md",
+    "COLIMA_ABEONE_ANALYSIS.md",
+    "COLIMA_DISK_ANALYSIS.md",
+    "COLOR_SYSTEM_OPERATIONALIZED.md",
+    "COMPLETE.md",
+    "COMPLETE_ACTIVATION_EEAaO_ABEBEATS.md",
+    "COMPLETE_AGENT_SWARM_INVENTORY.md",
+    "COMPLETE_CONVERGENCE_ANALYSIS.md",
+    "COMPLETE_CONVERGENCE_ANALYSIS_SAAS_SOLUTION.md",
+    "COMPLETE_CONVERGENCE_STRATEGY_IMPLEMENTATION.md",
+    "COMPLETE_OPERATIONALIZATION_SYSTEM.md",
+    "COMPLETE_SYSTEM_UNIFICATION_SUMMARY.md",
+    "COMPLETE_THE_CIRCLE_ASSESSMENT.md",
+    "COMPLETE_UNIFICATION_SUMMARY.md",
+    "COMPLETE_VISUAL_DIAGNOSTIC_PROMPT.md",
+    "COMPONENT_LIBRARY_ANALYSIS.md",
+    "CONTEXT_AWARE_ONE_SYSTEM_HEALTH_VERIFICATION.md",
+    "CONTEXT_BOOT_OPERATIONALIZATION.md",
+    "CONTEXT_BOOT_OPERATIONALIZATION_SUMMARY.md",
+    "CONTEXT_WINDOW_1_FOLDER_HIERARCHY_ANALYSIS.md",
+    "CONTEXT_WINDOW_2_UNIFIED_ORGANISM_ANALYSIS.md",
+    "CONTEXT_WINDOW_3_MODULE_HEALTH_ANALYSIS.md",
+    "CONTEXT_WINDOW_GUARDIAN_PROMPT.md",
+    "CONTEXT_WINDOW_PROMPT.md",
+    "CRITICAL_GUARDIANS_ROLE_SPECIFIC_OUTCOMES.md",
+    "CURSOR_AI_EPISTEMIC_FAILURE_ANALYSIS.md",
+    "CURSOR_VENV_ERROR_FIX.md",
+    "DANNY_MANIFEST_ANALYSIS.md",
+    "DANNY_OVERLAP_ANALYSIS.md",
+    "DANNY_SLACK_MESSAGE.md",
+    "DANNY_WORKFLOW_ALWAYS_REFERENCE.md",
+    "DANNY_WORKFLOW_MISSING_ANALYSIS.md",
+    "DATA_SOVEREIGNTY_COMPLETE_SPECS_SUMMARY.md",
+    "DEEP_GUARDIANS_CODEBASE_ANALYSIS.md",
+    "DEEP_GUARDIAN_IDENTITIES_DISCOVERY.md",
+    "DEEP_SCAN_COMPLETE_RETRIEVAL_IDENTITY_CDF.md",
+    "DEPLOYMENT_ACTION_NOW.md",
+    "DEPLOYMENT_OPTIMIZATION_AND_JOHN_TEST.md",
+    "DEPLOYMENT_STATUS_AND_LAUNCH_PARAMETERS.md",
+    "DEPLOYMENT_STATUS_FINAL.md",
+    "DESIGN_SYSTEMS_E2E_DEEP_ANALYSIS.md",
+    "DESIGN_SYSTEMS_FOCUS_COMPARISON.md",
+    "DESIGN_SYSTEMS_INVENTORY.md",
+    "DESIGN_SYSTEMS_STRATEGIC_ORGANIZATION.md",
+    "DRIFT_DASHBOARD_ETERNAL.md",
+    "DRIFT_STATUS_ALWAYS_VISIBLE.md",
+    "DRIFT_STATUS_VISUAL.md",
+    "EMAIL_ANALYSIS_SETUP_INSTRUCTIONS.md",
+    "EMAIL_CONVERGENCE_ACTION_PLAN.md",
+    "EMAIL_CONVERGENCE_ANALYSIS_20251117_154339.md",
+    "EMAIL_CONVERGENCE_ANALYSIS_20251117_154703.md",
+    "EMAIL_CONVERGENCE_ANALYSIS_DEMO_20251117_150512.md",
+    "EMAIL_CONVERGENCE_FINAL_OPTIMIZATIONS.md",
+    "EMAIL_CONVERGENCE_OPPORTUNITY_CARDS.md",
+    "EMAIL_CONVERGENCE_OPTIMIZATION_PLAN.md",
+    "EMERGENT_CONVERGENCE_ANALYSIS.md",
+    "EMERGENT_CONVERGENCE_OPPORTUNITIES.md",
+    "ENTERPRISE_TRANSFORMATION_SUMMARY.md",
+    "EPISTEMIC_CERTAINTY_FINAL_PLAN.md",
+    "EPISTEMIC_DISCOVERIES_AND_GAPS.md",
+    "EPISTEMIC_DISCOVERIES_SUMMARY.md",
+    "ERROR_ANALYSIS.md",
+    "ETERNAL_DASHBOARD_SOLUTION.md",
+    "EXECUTE_AUTOMATION_NOW.md",
+    "EXECUTE_NOW.md",
+    "EXECUTE_VIA_DASHBOARD.md",
+    "EXECUTION_COMPLETE_FINAL.md",
+    "EXECUTION_COMPLETE_SUMMARY.md",
+    "EXECUTION_READY_LFG.md",
+    "EXTRACTION_MAP_100_PERCENT_READINESS.md",
+    "FINAL_SYNTHESIS_UNIFIED_CONSOLIDATION_PLAN.md",
+    "FIX_404_CONVERGENCE.md",
+    "FORENSIC_VERIFICATION_NEUROMORPHIC_LAYERS.md",
+    "FUCHSIA_COLOR_FIX.md",
+    "FULL_AUTONOMY_COMPLETE_TRUST_ACHIEVED.md",
+    "FUNDAMENTAL_SYSTEM_FIXES_PLAN.md",
+    "GAP_ANALYSIS_AND_UNIFICATION_PLAN.md",
+    "GIT_LAUNCH_CHECKLIST.md",
+    "GOOGLE_CREDENTIALS_SETUP_ASAP.md",
+    "GUARDIANS_COMPLETE_DEFINITION.md",
+    "GUARDIANS_MEET_THE_WORLD.md",
+    "GUARDIAN_MICROSERVICES_DEEP_ANALYSIS.md",
+    "INFORMATION_THEORY_ENGINE_DELIVERED.md",
+    "INFORMATION_THEORY_ENGINE_READY.md",
+    "INFORMATION_THEORY_MATH_ENGINES_DEEP_ANALYSIS.md",
+    "INFRASTRUCTURE_CRITICAL_PATH_ANALYSIS_FRAMEWORK.md",
+    "INFRASTRUCTURE_KNOWLEDGE_BASE_SUMMARY.md",
+    "INTELLIGENCE_PIPELINE_END_TO_END_ANALYSIS.md",
+    "JOHHN_ATOMIC_LAYER_BLUEPRINT.md",
+    "JOHHN_E2E_COMPLETE_INTEGRATION_VALIDATED.md",
+    "JOHHN_E2E_IMPLEMENTATION_PLAN.md",
+    "JOHHN_GUARDIAN_FUSION_COMPLETE_PLAN.md",
+    "JOHHN_INFORMATION_THEORY_FLOW.md",
+    "JOHHN_INTEGRATION_BLUEPRINT.md",
+    "JOHHN_PRODUCTION_ACTIVATION.md",
+    "JOHHN_PRODUCTION_OUTCOMES.md",
+    "JOHN_QA_INSPECTOR_OPERATIONAL_ANALYSIS.md",
+    "LFG_ALL_SYSTEMS_OPERATIONAL.md",
+    "LIVESTREAM_CONTENT_STRATEGY_MON_TUE.md",
+    "LIVESTREAM_DEEP_CODEBASE_ANALYSIS.md",
+    "LIVESTREAM_QUICK_REFERENCE.md",
+    "LIVESTREAM_QUICK_REFERENCE_MON_TUE.md",
+    "LIVESTREAM_TITLE_DESCRIPTION.md",
+    "LIVE_DEMO_QUICK_REFERENCE.md",
+    "LIVE_EVENT_TITLE_DESCRIPTION.md",
+    "LOCAL_AI_ASSISTANT_COMPLETE_LIVE_ANALYSIS.md",
+    "MASTER_EMERGENT_OS_STREAM.md",
+    "MCP_SERVERS_DEEP_ANALYSIS.md",
+    "META_GUARDIAN_CONVERGENCE_ANALYSIS.md",
+    "META_ORCHESTRATOR_ROCK_OUT_PLAN.md",
+    "MICHAELS_BLACK_PALETTE_OPERATIONALIZED.md",
+    "MICHAEL_DEPLOYMENT_ACTION_PLAN.md",
+    "MICHAEL_DESIGN_SYSTEM_SEARCH.md",
+    "NEUROMORPHIC_ARCHITECTURE_ANALYSIS.md",
+    "NEWSLETTER_DETECTION_EXPANSION.md",
+    "NEXT_LEVEL_EMERGENCE_CONVERGENCE.md",
+    "NEXT_STEPS.md",
+    "NEXT_STEPS_EXECUTED.md",
+    "OBSERVER_CONTEXT_EPISTEMIC_CERTAINTY.md",
+    "ONE_KERNEL_INTEGRATION_PLAN_PHASE0.md",
+    "OPTIMAL_FOLDER_HIERARCHY.md",
+    "OPTIMAL_SIMPLEST_PATH.md",
+    "OPTION_A_COMPLETE_IN_BROWSER.md",
+    "ORGANIC_UNIFICATION_OPPORTUNITIES.md",
+    "ORGANISM_LOCKED_IN.md",
+    "PLAYWRIGHT_AUTOMATION_READY.md",
+    "PLAYWRIGHT_CHALLENGE_FIXED.md",
+    "POCKETPATTERN_RESILIENCE_ANALYSIS.md",
+    "PRE_LAUNCH_SUMMARY.md",
+    "RADICAL_TRANSPARENCY_IMPLEMENTATION.md",
+    "README.md",
+    "RECURSIVE_ARCHITECTURE_CONVERGENCE_ANALYSIS.md",
+    "RECURSIVE_FORENSIC_CONVERGENCE_ANALYSIS.md",
+    "SHE_IS_ALIVE.md",
+    "SIMPLIFY_TO_AMPLIFY_ROADMAP.md",
+    "SINGULARITY_ACHIEVED.md",
+    "START_DEV_SERVER.md",
+    "STATE_AWARE_MASTER_CONTEXT.md",
+    "STRATEGIC_EEAaO_CRITICAL_PATH_INTEGRATION.md",
+    "SYNTHESIS_COMPLETE_EXCELLENCE.md",
+    "SYNTHESIS_COMPLETE_SUMMARY.md",
+    "SYSTEM_KNOWS_API_KEYS_ALWAYS.md",
+    "TERMINAL_TROUBLESHOOTING.md",
+    "THE_UNIFYING_PRINCIPLE.md",
+    "THREE_MAXIMUM_POWER_APPLICATIONS.md",
+    "TLDR_CONVERGENCE_ANALYSIS.md",
+    "TLDR_CONVERGENCE_INTEGRATED.md",
+    "TRANSCENDENT_AUTOMATION_CAPABILITIES.md",
+    "TRIADIC_UNITY_PROTOCOL.md",
+    "TROUBLESHOOTING.md",
+    "TRUICE_FUNNEL_ACTUAL_GAPS_ANALYSIS.md",
+    "TRUICE_LAUNCH_NOW.md",
+    "ULTIMATE_CONVERGENCE_EPISTEMIC_CERTAINTY.md",
+    "USER_JOURNEY_QA.md",
+    "V0_ETERNAL_FIX_SUMMARY.md",
+    "V0_PROJECT_COMPLETION_PROMPT.md",
+    "V0_PROJECT_CONTEXT.md",
+    "V0_PROJECT_DRIFT_ANALYSIS.md",
+    "VALIDATION_STATE_ANALYSIS.md",
+    "VALIDATION_SUMMARY.md",
+    "VALUABLE_ASSETS_QUICK_REFERENCE.md",
+    "VERMILLION_COLOR_FIX.md",
+    "VIRTUAL_ENVIRONMENT_DEEP_ANALYSIS.md",
+    "VISUAL_NEXT_STEPS.md",
+    "WHAT_ELSE_EMERGES.md",
+    "WHAT_INVITES_EMERGENCE_WHO_IDENTIFIES_CONVERGENCE.md",
+    "WHAT_LONGS_FOR_EMERGENCE.md",
+    "WHAT_LONGS_FOR_EMERGENCE_CONVERGENCE_SYNTHESIS.md",
+    "WHAT_LONGS_FOR_EMERGENCE_CONVERGENCE_VALIDATED.md",
+    "WHAT_LONGS_FOR_SIMPLIFICATION_ACTIVATION_UNIFICATION_CONVERGENCE_EMERGENCE.md",
+    "WHAT_LONGS_TO_BE_OPERATIONALIZED.md",
+    "WHAT_THE_SYSTEM_LONGS_FOR.md",
+    "WHAT_WE_CAN_BUILD_NOW.md",
+    "WHAT_WE_CAN_DO_WITH_ALL_THIS_POWER.md",
+    "WHAT_YOU_CAN_DO_NOW.md",
+    "WORKSPACE_CHROME_EXTENSION_ALIGNMENT.md",
+    "WORLD_SHOWCASE_PREPARATION.md",
+    "ZERO_ALLISON_PROFILE_EXTRACTION.md",
+    "ZERO_ALRAX_AEYON_FORENSIC_FIX.md",
+    "ZERO_COMPLETE_FORENSIC_AGENT_PERSONALITY_ANALYSIS.md",
+    "ZERO_FORENSIC_ANALYSIS_GZ360_BRAVETTO.md",
+    "ZERO_JOHN_SECURITY_CERTIFICATION.md",
+    "drift-visual-status.md"
+  ]
+}

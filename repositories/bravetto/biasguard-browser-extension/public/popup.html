@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BiasGuard.ai</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="logo">
+          <img src="icons/icon.png" alt="BiasGuard" class="logo-icon" width="24" height="24" />
+          <h1>BiasGuard</h1>
+        </div>
+        <div class="status-indicator" id="statusIndicator">
+          <span class="status-dot"></span>
+          <span class="status-text">Checking...</span>
+        </div>
+      </header>
+
+      <!-- Login Section -->
+      <section class="login-section" id="loginSection">
+        <h2>Welcome to BiasGuard</h2>
+        <p>Detect AI bias in real-time conversations</p>
+
+        <div class="login-actions">
+          <button class="btn btn-primary" id="loginBtn">
+            Login to BiasGuard
+          </button>
+          <p class="login-note">Sign in with your account</p>
+        </div>
+
+        <div class="divider">
+          <span>or</span>
+        </div>
+
+        <button class="btn btn-secondary" id="signupBtn">Create Account</button>
+
+        <div
+          id="loadingMessage"
+          style="
+            display: none;
+            text-align: center;
+            margin-top: 10px;
+            color: #666;
+          "
+        >
+          <p>Loading authentication...</p>
+        </div>
+      </section>
+
+      <!-- User Dashboard Section -->
+      <section
+        class="dashboard-section"
+        id="dashboardSection"
+        style="display: none"
+      >
+        <div class="user-info">
+          <div class="avatar"></div>
+          <div class="user-details">
+            <h3 id="userName"></h3>
+            <p id="userEmail"></p>
+          </div>
+        </div>
+
+        <div class="injection-control">
+          <div class="toggle-container">
+            <label class="toggle-switch">
+              <input type="checkbox" id="injectionToggle" />
+              <span class="toggle-slider"></span>
+            </label>
+            <span class="toggle-label">Enable BiasGuard on websites</span>
+          </div>
+          <!--        <p class="toggle-description">When enabled, BiasGuard will automatically inject bias detection into chat interfaces</p>-->
+        </div>
+
+        <div class="dashboard-actions">
+          <button class="btn btn-primary" id="manageAccountBtn">
+            Manage Account
+          </button>
+        </div>
+
+        <div class="plan-info-bottom">
+          <p class="plan-info" id="userPlan">Plan: Free</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Use local Clerk.js file (required for Chrome extension CSP compliance) -->
+    <script
+      async
+      data-clerk-publishable-key="REPLACE_ME"
+      src="clerk.js"
+      onerror="console.error('Failed to load Clerk.js')"
+    ></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

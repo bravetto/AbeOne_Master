@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codeguardians-gateway"
+version = "0.1.0"
+description = "A gold-standard project"
+authors = [
+    {name = "Unknown", email = "user@example.com"},
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "fastapi>=0.120.0",
+    "uvicorn>=0.38.0",
+    "sqlalchemy>=2.0.44",
+    "alembic>=1.17.0",
+    "pytest>=8.0.0",
+    "mypy>=1.14.0",
+    "black>=25.0.0",
+    "sphinx>=8.0.0",
+    "bandit>=1.8.0",
+    "prometheus-client>=0.23.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "black>=25.0.0",
+    "mypy>=1.14.0",
+    "flake8>=7.0.0",
+]
+ab-testing = [
+    "numpy>=1.24.0",
+    "scipy>=1.14.0",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+disallow_untyped_defs = true

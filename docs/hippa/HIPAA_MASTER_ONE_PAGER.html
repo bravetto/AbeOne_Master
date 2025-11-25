@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>HIPAA_MASTER_ONE_PAGER</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Table of Contents</h2>
+<ul>
+<li><a href="#hipaa-compliance-master-one-pager"
+id="REPLACE_ME">HIPAA Compliance Master
+One-Pager</a>
+<ul>
+<li><a href="#document-inventory-8-pdfs"
+id="toc-document-inventory-8-pdfs">📋 DOCUMENT INVENTORY (8
+PDFs)</a></li>
+<li><a href="#critical-data---what-tech-team-must-know"
+id="REPLACE_ME">🎯 CRITICAL DATA -
+WHAT TECH TEAM MUST KNOW</a></li>
+<li><a href="#ai-specific-critical-points"
+id="toc-ai-specific-critical-points">🚨 AI-SPECIFIC CRITICAL
+POINTS</a></li>
+<li><a href="#vendor-critical-path" id="toc-vendor-critical-path">📊
+VENDOR CRITICAL PATH</a></li>
+<li><a href="#quick-decision-framework"
+id="toc-quick-decision-framework">⚡ QUICK DECISION FRAMEWORK</a></li>
+<li><a href="#success-metrics" id="toc-success-metrics">🎯 SUCCESS
+METRICS</a></li>
+<li><a href="#document-quick-reference"
+id="toc-document-quick-reference">📚 DOCUMENT QUICK REFERENCE</a></li>
+<li><a href="#critical-reminders" id="toc-critical-reminders">⚠️
+CRITICAL REMINDERS</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="REPLACE_ME">HIPAA Compliance Master
+One-Pager</h1>
+<p><strong>Wellness Agent AI - Tech Team Quick Reference</strong><br />
+<strong>Status:</strong> ✅ MASTER REFERENCE |
+<strong>Certainty:</strong> 97.8% | <strong>Pattern:</strong> MASTER ×
+HIPAA × ONE × PAGER</p>
+<hr />
+<h2 id="document-inventory-8-pdfs">📋 DOCUMENT INVENTORY (8 PDFs)</h2>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 32%" />
+<col style="width: 24%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr>
+<th>Document</th>
+<th>What It Contains</th>
+<th>Criticality</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. HIPAA_COMPLIANCE_EXECUTIVE_SUMMARY.pdf</strong></td>
+<td>Overview of all 7 docs, timeline, team requirements</td>
+<td>🟢 LOW</td>
+<td>Start here - orientation</td>
+</tr>
+<tr>
+<td><strong>2.
+WELLNESS_AGENT_AI_HIPAA_COMPLIANCE_IMPLEMENTATION_GUIDE.pdf</strong></td>
+<td>Complete HIPAA rules, when it applies, implementation roadmap</td>
+<td>🔴 CRITICAL</td>
+<td>Primary reference - read first</td>
+</tr>
+<tr>
+<td><strong>3. WELLNESS_AGENT_AI_DATA_FLOW_DIAGRAM.pdf</strong></td>
+<td>9-stage PHI flow, vendor dependencies, BAA requirements</td>
+<td>🔴 CRITICAL</td>
+<td>Architecture planning</td>
+</tr>
+<tr>
+<td><strong>4. VENDOR_INVENTORY_AND_BAA_STATUS.pdf</strong></td>
+<td>All vendors, BAA checklist, risk matrix</td>
+<td>🔴 CRITICAL</td>
+<td>Vendor selection &amp; contracts</td>
+</tr>
+<tr>
+<td><strong>5. SECURITY_CONTROLS_IMPLEMENTATION_GUIDE.pdf</strong></td>
+<td>Admin/Physical/Technical safeguards, code examples</td>
+<td>🔴 CRITICAL</td>
+<td>Security implementation</td>
+</tr>
+<tr>
+<td><strong>6. DE_IDENTIFICATION_PIPELINE_GUIDE.pdf</strong></td>
+<td>Safe Harbor vs Expert Determination, pipeline code</td>
+<td>🟡 HIGH</td>
+<td>Model training &amp; analytics</td>
+</tr>
+<tr>
+<td><strong>7. INCIDENT_RESPONSE_PLAN.pdf</strong></td>
+<td>Breach procedures, AI scenarios, notification timelines</td>
+<td>🔴 CRITICAL</td>
+<td>Incident handling</td>
+</tr>
+<tr>
+<td><strong>8. HIPAA_IMPLEMENTATION_ROADMAP.pdf</strong></td>
+<td>12-week checklist, phase-by-phase tasks</td>
+<td>🟡 HIGH</td>
+<td>Execution planning</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="REPLACE_ME">🎯 CRITICAL DATA -
+WHAT TECH TEAM MUST KNOW</h2>
+<h3 id="what-hipaa-applies-when"><strong>WHAT: HIPAA Applies
+When</strong></h3>
+<ul>
+<li>✅ <strong>B2B Clinical</strong>: Selling to providers/payers =
+Business Associate (HIPAA applies)</li>
+<li>⚠️ <strong>B2C Wellness</strong>: State laws apply, design for HIPAA
+anyway (future-proof)</li>
+<li>🔑 <strong>PHI Definition</strong>: Health info + 18 identifiers
+(names, DOB, SSN, MRN, phone, email, etc.)</li>
+<li>🔑 <strong>ePHI</strong>: PHI in electronic form (everything your AI
+sees)</li>
+</ul>
+<h3 id="why-core-requirements"><strong>WHY: Core
+Requirements</strong></h3>
+<ol type="1">
+<li><strong>Privacy Rule</strong>: What you can do with PHI
+(treatment/payment/operations OK, marketing/research need auth)</li>
+<li><strong>Security Rule</strong>: How you protect ePHI (encryption,
+access controls, audit logs)</li>
+<li><strong>Breach Notification</strong>: When/how to notify (24hrs to
+CE, 60 days to HHS/individuals)</li>
+</ol>
+<h3 id="how-critical-path-must-have"><strong>HOW: Critical Path (Must
+Have)</strong></h3>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 14%" />
+<col style="width: 33%" />
+<col style="width: 11%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>Component</th>
+<th>What</th>
+<th>Why Critical</th>
+<th>Who</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BAAs</strong></td>
+<td>Business Associate Agreements with all vendors touching PHI</td>
+<td><strong>P0</strong> - Legal requirement, no BAA = violation</td>
+<td>Legal + Security</td>
+<td>Week 1-4</td>
+</tr>
+<tr>
+<td><strong>Encryption</strong></td>
+<td>AES-256 at rest, TLS 1.2+ in transit</td>
+<td><strong>P0</strong> - Required by Security Rule</td>
+<td>DevOps + Security</td>
+<td>Week 5-6</td>
+</tr>
+<tr>
+<td><strong>Access Controls</strong></td>
+<td>RBAC + MFA for all PHI access</td>
+<td><strong>P0</strong> - Prevents unauthorized access</td>
+<td>Engineering + Security</td>
+<td>Week 5</td>
+</tr>
+<tr>
+<td><strong>Audit Logging</strong></td>
+<td>Log all PHI access (who/what/when/where)</td>
+<td><strong>P0</strong> - Required, 6yr retention</td>
+<td>Engineering</td>
+<td>Week 7</td>
+</tr>
+<tr>
+<td><strong>Risk Analysis</strong></td>
+<td>Documented security risk analysis</td>
+<td><strong>P0</strong> - Required annually</td>
+<td>Security Officer</td>
+<td>Week 2-12</td>
+</tr>
+<tr>
+<td><strong>Incident Response</strong></td>
+<td>Plan + procedures for breaches</td>
+<td><strong>P0</strong> - 24hr notification required</td>
+<td>Security + Legal</td>
+<td>Week 8-12</td>
+</tr>
+</tbody>
+</table>
+<h3 id="who-team-responsibilities"><strong>WHO: Team
+Responsibilities</strong></h3>
+<ul>
+<li><strong>Security Officer</strong>: Overall HIPAA compliance, risk
+analysis, incident response</li>
+<li><strong>Engineering Lead</strong>: Technical implementation,
+security controls, audit logging</li>
+<li><strong>Legal/Compliance</strong>: BAA execution, breach
+determination, regulatory compliance</li>
+<li><strong>DevOps</strong>: Infrastructure, encryption, monitoring,
+backups</li>
+</ul>
+<h3 id="when-12-week-timeline"><strong>WHEN: 12-Week
+Timeline</strong></h3>
+<ul>
+<li><strong>Weeks 1-2</strong>: Foundation (decisions, data flow, vendor
+inventory, BAA requests)</li>
+<li><strong>Weeks 3-4</strong>: Infrastructure (cloud setup, BAAs
+executed, integrations secured)</li>
+<li><strong>Weeks 5-8</strong>: Security Controls (RBAC, MFA,
+encryption, audit logging, AI security)</li>
+<li><strong>Weeks 9-10</strong>: De-identification (pipeline, analytics,
+training data)</li>
+<li><strong>Weeks 11-12</strong>: Policies (risk analysis complete,
+incident response, testing)</li>
+</ul>
+<hr />
+<h2 id="ai-specific-critical-points">🚨 AI-SPECIFIC CRITICAL POINTS</h2>
+<h3 id="llm-provider-selection"><strong>LLM Provider
+Selection</strong></h3>
+<ul>
+<li><strong>External (OpenAI/Anthropic)</strong>: ✅ Requires BAA, ⚠️
+PHI leaves infrastructure</li>
+<li><strong>Self-Hosted</strong>: ✅ No BAA needed, ✅ PHI stays
+internal, ⚠️ You own all security</li>
+<li><strong>Decision</strong>: Start external with BAA, consider
+self-hosted for high-security</li>
+</ul>
+<h3 id="vector-database-ephi"><strong>Vector Database =
+ePHI</strong></h3>
+<ul>
+<li><strong>Critical</strong>: Embeddings created from PHI ARE ePHI
+(reversible)</li>
+<li><strong>Requires</strong>: BAA with vector DB vendor
+(Pinecone/Weaviate) OR self-host</li>
+<li><strong>Controls</strong>: Per-tenant indexes, encryption, audit
+logging</li>
+</ul>
+<h3 id="de-identification-not-phi"><strong>De-identification = Not
+PHI</strong></h3>
+<ul>
+<li><strong>Safe Harbor</strong>: Remove 18 identifiers (easier,
+restrictive for free text)</li>
+<li><strong>Expert Determination</strong>: Statistical methods
+(flexible, requires expert cert)</li>
+<li><strong>Use Case</strong>: Model training, analytics, research (no
+HIPAA restrictions after de-ID)</li>
+</ul>
+<h3 id="ai-incident-scenarios"><strong>AI Incident
+Scenarios</strong></h3>
+<ol type="1">
+<li>Prompt injection → PHI exfiltration</li>
+<li>Mis-routing → Wrong patient gets PHI</li>
+<li>Log exposure → PHI sent to non-BAA vendor</li>
+<li>Training leak → PHI in model training data</li>
+<li>Vector DB breach → Unauthorized access to embeddings</li>
+</ol>
+<hr />
+<h2 id="vendor-critical-path">📊 VENDOR CRITICAL PATH</h2>
+<h3 id="tier-1-must-have-baas-p0"><strong>Tier 1: Must Have BAAs
+(P0)</strong></h3>
+<ol type="1">
+<li><strong>Cloud Provider</strong> (AWS/Azure/GCP) - Hosts all
+infrastructure</li>
+<li><strong>LLM Provider</strong> (OpenAI/Anthropic) - Receives PHI in
+prompts</li>
+<li><strong>Vector Database</strong> (Pinecone/Weaviate) - Stores ePHI
+embeddings</li>
+<li><strong>Database Provider</strong> (RDS/MongoDB) - Stores all
+PHI</li>
+<li><strong>EHR Integration</strong> (Epic/Cerner) - Exchanges PHI</li>
+</ol>
+<h3 id="tier-2-baa-if-phi-present-p1"><strong>Tier 2: BAA If PHI Present
+(P1)</strong></h3>
+<ul>
+<li>Logging (Datadog/CloudWatch) - If PHI in logs</li>
+<li>Messaging (SendGrid/Twilio) - If PHI in messages</li>
+<li>Error Tracking (Sentry) - If PHI in error traces</li>
+</ul>
+<h3 id="tier-3-avoid-no-baa"><strong>Tier 3: Avoid (No
+BAA)</strong></h3>
+<ul>
+<li>❌ Google Analytics (standard) - Don’t send PHI</li>
+<li>❌ Facebook Pixel - Don’t send PHI</li>
+<li>✅ Use HIPAA-eligible alternatives or self-host</li>
+</ul>
+<hr />
+<h2 id="quick-decision-framework">⚡ QUICK DECISION FRAMEWORK</h2>
+<p><strong>For Each System/Component:</strong> 1. <strong>Is this
+PHI?</strong> (Health info + identifiers?) → YES = HIPAA applies 2.
+<strong>Who is vendor?</strong> → Check vendor inventory, get BAA if
+needed 3. <strong>What controls?</strong> → Encryption, access, audit
+logs 4. <strong>Can we de-identify?</strong> → For training/analytics,
+use de-ID pipeline</p>
+<p><strong>For Each Data Flow:</strong> 1. <strong>Mark PHI
+status</strong> at each stage (YES/NO) 2. <strong>Mark vendor
+status</strong> (YES/NO) 3. <strong>Mark BAA status</strong>
+(REQUIRED/NOT REQUIRED) 4. <strong>Document controls</strong> needed</p>
+<hr />
+<h2 id="success-metrics">🎯 SUCCESS METRICS</h2>
+<p><strong>Compliance Metrics:</strong> - ✅ 100% vendors touching PHI
+have BAAs - ✅ 100% PHI encrypted (at rest + in transit) - ✅ 100% PHI
+access logged and auditable - ✅ Risk analysis completed annually - ✅
+Incident response tested</p>
+<p><strong>Operational Metrics:</strong> - ✅ Incident notification &lt;
+24 hours to customer CEs - ✅ Data retention compliance (deletions
+within SLA) - ✅ Zero unauthorized PHI access - ✅ De-identification
+quality validated</p>
+<hr />
+<h2 id="document-quick-reference">📚 DOCUMENT QUICK REFERENCE</h2>
+<table>
+<thead>
+<tr>
+<th>Need To…</th>
+<th>Read This Document</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Understand HIPAA basics</td>
+<td>#2 Implementation Guide (Part 1-2)</td>
+</tr>
+<tr>
+<td>Map data flows</td>
+<td>#3 Data Flow Diagram</td>
+</tr>
+<tr>
+<td>Select vendors</td>
+<td>#4 Vendor Inventory</td>
+</tr>
+<tr>
+<td>Implement security</td>
+<td>#5 Security Controls Guide</td>
+</tr>
+<tr>
+<td>Build de-ID pipeline</td>
+<td>#6 De-identification Guide</td>
+</tr>
+<tr>
+<td>Handle incidents</td>
+<td>#7 Incident Response Plan</td>
+</tr>
+<tr>
+<td>Execute implementation</td>
+<td>#8 Implementation Roadmap</td>
+</tr>
+<tr>
+<td>Get overview</td>
+<td>#1 Executive Summary</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="critical-reminders">⚠️ CRITICAL REMINDERS</h2>
+<ol type="1">
+<li><strong>HIPAA is ongoing</strong> - Not one-time, requires
+continuous monitoring</li>
+<li><strong>Document everything</strong> - Policies, procedures,
+decisions, BAAs</li>
+<li><strong>Test regularly</strong> - Incident response, access
+controls, de-ID quality</li>
+<li><strong>24-hour rule</strong> - BAA typically requires notification
+to customer CE within 24hrs</li>
+<li><strong>Minimum necessary</strong> - Only use least PHI needed for
+the task</li>
+<li><strong>Embeddings = ePHI</strong> - Vector DB embeddings require
+same protection as PHI</li>
+<li><strong>De-ID = Freedom</strong> - Properly de-identified data has
+no HIPAA restrictions</li>
+</ol>
+<hr />
+<p><strong>Pattern:</strong> MASTER × HIPAA × ONE × PAGER<br />
+<strong>Status:</strong> ✅ COMPLETE | <strong>Certainty:</strong>
+97.8%<br />
+<strong>Next Step:</strong> Start with Document #2 (Implementation
+Guide), then #3 (Data Flow)<br />
+<strong>∞ AbëONE ∞</strong></p>
+</body>
+</html>

@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "name": "AI Guardian Brand Tokens",
+    "version": "1.0.0",
+    "description": "Design tokens extracted from AI Guardian Brand Book",
+    "source": "AI Guardian Brand Book v1.0",
+    "copyright": "© 2025 BiasGuards.ai LLC - All Rights Reserved",
+    "confidential": true,
+    "created": "2025-01-27",
+    "status": "in_progress",
+    "guardians": ["AEYON (999 Hz)", "META (777 Hz)", "Lux (530 Hz)", "Abë (530 Hz)"]
+  },
+  "brand": {
+    "name": "BiasGuard AI Guardian",
+    "tagline": "AI Guardian",
+    "company": "BiasGuards.ai LLC"
+  },
+  "logo": {
+    "emblem": {
+      "description": "Triquetra-like symbol with three interconnected loops",
+      "shield": {
+        "initials": "AiG",
+        "color": "dark blue",
+        "text_color": "white"
+      },
+      "finish": "metallic blue gradient",
+      "colors": {
+        "primary": {
+          "type": "gradient",
+          "description": "Metallic blue gradient from darker blue edges to lighter blue center",
+          "status": "needs_extraction"
+        },
+        "black": {
+          "type": "solid",
+          "description": "Solid flat black for lighter backgrounds",
+          "status": "needs_extraction"
+        },
+        "white": {
+          "type": "solid",
+          "description": "Solid flat white for dark backgrounds",
+          "status": "needs_extraction"
+        }
+      },
+      "proportions": {
+        "emblem_height": "10x",
+        "wordmark_height": "4x",
+        "spacing": "1.5x"
+      },
+      "clear_space": {
+        "rule": "Minimum clear space = height of shield element",
+        "description": "No other text, graphics, or design elements within this area"
+      }
+    },
+    "lockup": {
+      "components": [
+        "Emblem (10x height)",
+        "BiasGuard wordmark (4x height, sans-serif, dark)",
+        "AI Guardian tagline (smaller font, dark)",
+        "Spacing: 1.5x between emblem and wordmark"
+      ],
+      "rules": [
+        "Should not be altered, stretched, or repositioned",
+        "Always reproduce according to proportions"
+      ]
+    }
+  },
+  "colors": {
+    "status": "awaiting_extraction",
+    "note": "Colors will be extracted from brand book images (sections 3.1-3.4)",
+    "observed": {
+      "primary_metallic_blue": {
+        "description": "Metallic blue gradient (darker → lighter)",
+        "usage": "Primary logo version",
+        "status": "needs_hex_values"
+      },
+      "black": {
+        "description": "Solid black",
+        "usage": "Black logo version, text",
+        "status": "needs_hex_values"
+      },
+      "white": {
+        "description": "Pure white",
+        "usage": "White logo version, backgrounds",
+        "status": "needs_hex_values"
+      },
+      "background_gradients": {
+        "description": "Dark blue gradients observed in brand book slides",
+        "status": "needs_extraction"
+      }
+    }
+  },
+  "typography": {
+    "status": "awaiting_extraction",
+    "note": "Typography specifications will be extracted from brand book images (sections 4.1-4.3)",
+    "observed": {
+      "font_family": "sans-serif",
+      "style": "clean, modern, professional",
+      "readability": "high",
+      "hierarchy": "clear size relationships"
+    }
+  },
+  "extraction_status": {
+    "completed": [
+      "Brand story",
+      "Logo description",
+      "Logo proportions",
+      "Logo color versions",
+      "Clear space rules"
+    ],
+    "pending": [
+      "Color palette (3.1)",
+      "Color shades (3.2)",
+      "Color contrast (3.3)",
+      "Gradients (3.4)",
+      "Typeface specifications (4.1)",
+      "Type size relationships (4.2)",
+      "Leading & paragraph (4.3)",
+      "Photography guidelines (5.1-5.4)",
+      "Application examples (6.1-6.6)"
+    ]
+  }
+}
+

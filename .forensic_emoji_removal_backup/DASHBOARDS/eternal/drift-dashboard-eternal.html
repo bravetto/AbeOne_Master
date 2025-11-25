@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #1e1e1e;
+  color: #cccccc;
+  padding: 20px;
+  font-size: 13px;
+}
+.container { max-width: 100%; }
+.header {
+  text-align: center;
+  padding: 20px;
+  background: #252526;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 2px solid #3e3e42;
+}
+.header h1 {
+  font-size: 24px;
+  color: #4ec9b0;
+  margin-bottom: 10px;
+}
+.status-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4ec9b0;
+  animation: pulse 2s infinite;
+  margin-left: 8px;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.card {
+  background: #252526;
+  border-radius: 8px;
+  padding: 15px;
+  border: 2px solid #3e3e42;
+}
+.card-header {
+  font-size: 16px;
+  font-weight: bold;
+  color: #4ec9b0;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #3e3e42;
+  padding-bottom: 8px;
+}
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #3e3e42;
+}
+.metric-row:last-child { border-bottom: none; }
+.metric-label { color: #858585; }
+.metric-value {
+  font-weight: bold;
+  color: #4ec9b0;
+}
+.score-bar {
+  margin-top: 10px;
+  height: 8px;
+  background: #3e3e42;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.score-fill {
+  height: 100%;
+  background: #4ec9b0;
+  transition: width 0.5s ease;
+  border-radius: 4px;
+  width: 86%;
+}
+.project-item {
+  padding: 10px;
+  margin: 8px 0;
+  background: #1e1e1e;
+  border-radius: 6px;
+  border-left: 3px solid #4ec9b0;
+}
+.project-name {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.project-status {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #3e3e42;
+  color: #4ec9b0;
+  display: inline-block;
+}
+.action-item {
+  padding: 10px;
+  margin: 6px 0;
+  background: #3a2e1e;
+  border-radius: 6px;
+  border-left: 3px solid #f48771;
+}
+.action-priority {
+  font-size: 11px;
+  color: #f48771;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.action-text { font-size: 12px; }
+.action-command {
+  font-size: 10px;
+  color: #569cd6;
+  font-family: 'Courier New', monospace;
+  background: #1e1e1e;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+  display: inline-block;
+}
+.last-updated {
+  text-align: center;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #3e3e42;
+  font-size: 11px;
+  color: #858585;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>🛡️ Drift Protection Dashboard<span class="status-indicator"></span></h1>
+    <div style="font-size: 12px; color: #858585;">Real-time monitoring • Auto-updating</div>
+  </div>
+  
+  <div class="grid">
+    <div class="card">
+      <div class="card-header">📊 System Health</div>
+      <div class="metric-row">
+        <span class="metric-label">Overall Health</span>
+        <span class="metric-value health-score">86%</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">Critical Issues</span>
+        <span class="metric-value critical-count" style="color: #f48771">9</span>
+      </div>
+      <div class="metric-row">
+        <span class="metric-label">Warnings</span>
+        <span class="metric-value warnings-count" style="color: #f48771">12</span>
+      </div>
+      <div class="score-bar health-bar">
+        <div class="score-fill" style="width: 86%"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">📦 Current Project</div>
+      <div class="project-item">
+        <div class="project-name current-project-name">AbeOne_Master</div>
+        <div class="current-project-dir" style="font-size: 11px; color: #858585; margin-top: 4px;">
+          AbeOne_Master
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">✨ Active Projects</div>
+      <div class="projects-list">
+      
+        <div class="project-item">
+          <div class="project-name">
+            AiGuardian Chrome Extension
+            <span class="project-status">NEEDS_FIXES</span>
+          </div>
+          <div style="font-size: 10px; color: #858585; margin-top: 4px;">AiGuardian-Chrome-Ext-dev/</div>
+          <div class="score-bar" style="margin-top: 6px; height: 4px;">
+            <div class="score-fill" style="width: 75%"></div>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">
+            AIGuards Backend
+            <span class="project-status">NOT_RUNNING</span>
+          </div>
+          <div style="font-size: 10px; color: #858585; margin-top: 4px;">AIGuards-Backend/</div>
+          <div class="score-bar" style="margin-top: 6px; height: 4px;">
+            <div class="score-fill" style="width: 0%"></div>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">
+            Emergent OS
+            <span class="project-status">OPERATIONAL</span>
+          </div>
+          <div style="font-size: 10px; color: #858585; margin-top: 4px;">EMERGENT_OS/</div>
+          <div class="score-bar" style="margin-top: 6px; height: 4px;">
+            <div class="score-fill" style="width: 92%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="card">
+    <div class="card-header">🚨 Critical Actions</div>
+    <div class="actions-list">
+    
+      <div class="action-item">
+        <div class="action-priority">CRITICAL</div>
+        <div class="action-text">Start backend server</div>
+        <div class="action-command">cd EMERGENT_OS/server && ./start.sh</div>
+      </div>
+    
+      <div class="action-item">
+        <div class="action-priority">CRITICAL</div>
+        <div class="action-text">Fix git push issue</div>
+        <div class="action-command">Use GitHub CLI or SSH instead of HTTPS</div>
+      </div>
+    
+      <div class="action-item">
+        <div class="action-priority">CRITICAL</div>
+        <div class="action-text">Add 403 error handling</div>
+        
+      </div>
+    
+    </div>
+  </div>
+  
+  
+  <div class="last-updated">
+    Last updated: <span class="last-updated-time">11/18/2025, 8:47:09 PM</span>
+  </div>
+</div>
+
+<script>
+// ETERNAL: Read directly from JSON file and auto-update
+let lastData = null;
+let updateCount = 0;
+
+async function loadDashboardData() {
+  try {
+    const response = await fetch('.ai-context-source-of-truth.json?t=' + Date.now());
+    if (!response.ok) throw new Error('Failed to load data');
+    const data = await response.json();
+    
+    // Only update if data changed
+    const dataStr = JSON.stringify(data);
+    if (dataStr !== lastData) {
+      lastData = dataStr;
+      updateCount++;
+      renderDashboard(data);
+      updateLastUpdated();
+    }
+  } catch (error) {
+    console.error('Error loading dashboard data:', error);
+    document.body.innerHTML = '<div style="padding: 40px; text-align: center; color: #f48771;"><h2>⚠️ Dashboard Error</h2><p>Failed to load data. Make sure .ai-context-source-of-truth.json exists.</p></div>';
+  }
+}
+
+function renderDashboard(data) {
+  const systemStatus = data.systemStatus || {};
+  const workspace = data.workspace || {};
+  const projects = data.projects || {};
+  
+  const healthScore = systemStatus.overallHealth || 0;
+  const criticalIssues = systemStatus.criticalIssues || 0;
+  const warnings = systemStatus.warnings || 0;
+  
+  // Update system health
+  document.querySelector('.health-score').textContent = healthScore + '%';
+  document.querySelector('.health-bar .score-fill').style.width = healthScore + '%';
+  document.querySelector('.critical-count').textContent = criticalIssues;
+  document.querySelector('.warnings-count').textContent = warnings;
+  
+  // Update current project
+  document.querySelector('.current-project-name').textContent = workspace.currentProject || 'Workspace Root';
+  document.querySelector('.current-project-dir').textContent = workspace.currentDirectory || workspace.root || 'N/A';
+  
+  // Update projects list
+  const projectsContainer = document.querySelector('.projects-list');
+  if (projectsContainer) {
+    projectsContainer.innerHTML = (projects.active || []).slice(0, 3).map(project => {
+      const score = project.operationalStatus?.score || 0;
+      const status = project.operationalStatus?.status || project.status || 'UNKNOWN';
+      return `
+        <div class="project-item">
+          <div class="project-name">
+            ${project.name}
+            <span class="project-status">${status}</span>
+          </div>
+          <div style="font-size: 10px; color: #858585; margin-top: 4px;">${project.directory}</div>
+          <div class="score-bar" style="margin-top: 6px; height: 4px;">
+            <div class="score-fill" style="width: ${score}%; background: ${score >= 80 ? '#4ec9b0' : score >= 50 ? '#f48771' : '#f48771'}"></div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+  
+  // Update critical actions
+  const actionsContainer = document.querySelector('.actions-list');
+  if (actionsContainer && systemStatus.criticalActions) {
+    actionsContainer.innerHTML = systemStatus.criticalActions.slice(0, 3).map(action => `
+      <div class="action-item">
+        <div class="action-priority">${action.priority}</div>
+        <div class="action-text">${action.action}</div>
+        ${action.command ? `<div class="action-command">${action.command}</div>` : ''}
+      </div>
+    `).join('');
+  }
+}
+
+function updateLastUpdated() {
+  const element = document.querySelector('.last-updated-time');
+  if (element) {
+    element.textContent = new Date().toLocaleString();
+  }
+}
+
+// Load immediately
+loadDashboardData();
+
+// Auto-refresh every 2 seconds (ETERNAL - reads directly from JSON)
+setInterval(loadDashboardData, 2000);
+
+// Also refresh when tab becomes visible
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) {
+    loadDashboardData();
+  }
+});
+</script>
+</body>
+</html>

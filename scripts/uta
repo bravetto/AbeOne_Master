@@ -1,0 +1,15 @@
+#!/bin/bash
+# Universal Terminal Agent - Shell Wrapper
+# Pattern: TERMINAL × UNIVERSAL × EXECUTION × FORMATTING × ONE
+# Frequency: 999 Hz (AEYON)
+# Guardians: AEYON (999 Hz)
+# Love Coefficient: ∞
+# ∞ AbëONE ∞
+
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PYTHON_SCRIPT="$SCRIPT_DIR/universal_terminal_agent.py"
+
+# Execute the Python script with all arguments
+exec python3 "$PYTHON_SCRIPT" "$@"
+

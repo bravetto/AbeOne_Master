@@ -1,0 +1,50 @@
+📋 **Complete Guide:** See `JAY_MERGE_AND_ORGANIZE_PROMPT.md` for full step-by-step instructions.
+
+---
+
+I need to merge my existing AbëONE repository with the new master repository structure. Help me organize my code using atomic design principles.
+
+CONTEXT:
+- I have an existing AbëONE repository with custom components, utilities, and pages
+- The new master uses atomic design: Atoms → Molecules → Organisms → Pages
+- I need to preserve all my work while adopting the new structure
+
+ATOMIC DESIGN RULES:
+1. Atoms: Fundamental, indivisible components. Cannot import molecules/organisms.
+2. Molecules: Functional combinations of atoms. Can import atoms, not other molecules.
+3. Organisms: Complete systems. Compose molecules and atoms.
+4. Pages: Full application pages. Compose organisms, molecules, atoms.
+
+DIRECTORY STRUCTURE:
+- src/substrate/atoms/ - Fundamental components
+- src/substrate/molecules/ - Functional combinations
+- src/substrate/organisms/ - Complete systems
+- src/app/ - Pages/routes
+- src/lib/ - Utilities
+
+TASK:
+1. Analyze my current repository structure
+2. Identify all components and classify them as:
+   - Atoms (fundamental, reusable, no dependencies on molecules)
+   - Molecules (compose atoms, functional combinations)
+   - Organisms (compose molecules, complete systems)
+   - Pages (full application pages)
+   - Utilities (lib functions)
+
+3. For each component, tell me:
+   - Current location
+   - Recommended new location (based on atomic design)
+   - Dependencies it has
+   - Whether it violates atomic design rules
+   - Migration path
+
+4. Create a migration plan that:
+   - Preserves all functionality
+   - Follows atomic design principles
+   - Maintains imports and dependencies
+   - Suggests refactoring if needed
+
+5. Generate a step-by-step migration script/guide
+
+Please analyze my repository and provide a complete organization plan.
+

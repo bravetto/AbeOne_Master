@@ -22,6 +22,20 @@ out/
 .env.development.local
 .env.test.local
 .env.production.local
+.env.marketing
+marketing_config.py
+
+# AbëKEYs - Never commit credentials
+~/.abekeys/credentials/
+*.abekeys
+
+# AbëKEYs - Encryption Key (MUST NOT be in git)
+~/.abekeys/vault_key.key
+*.key
+
+# AbëKEYs - Encrypted Vault (CAN be in git if you want team sharing)
+# Uncomment the line below if you want encrypted vault in git:
+# abekeys_vault.encrypted.json
 
 # IDE
 .vscode/
@@ -67,3 +81,5 @@ ENV/
 
 *storybook.log
 storybook-static
+.env.marketing
+marketing_config.py

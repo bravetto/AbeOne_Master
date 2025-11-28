@@ -1,0 +1,3 @@
+# AbëKEYs Encrypted Vault Requirements
+cryptography>=41.0.0
+

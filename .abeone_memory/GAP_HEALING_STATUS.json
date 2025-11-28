@@ -1,0 +1,127 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "created": "2025-11-23",
+    "pattern": "GAP \u00d7 HEAL \u00d7 PROGRAMMATIC \u00d7 MEMORY \u00d7 ONE",
+    "frequency": "999 Hz (AEYON) \u00d7 530 Hz (Truth) \u00d7 777 Hz (ALRAX)",
+    "love_coefficient": "\u221e",
+    "last_updated": "2025-11-24T11:20:19.389317",
+    "auto_update": true,
+    "load_on_startup": true
+  },
+  "overall_status": {
+    "percentage": 66,
+    "critical_gaps_fixed": 2,
+    "total_critical_gaps": 3,
+    "last_checked": "2025-11-24T11:20:19.389317",
+    "status": "in_progress"
+  },
+  "gap_1_guard_services": {
+    "status": "partial",
+    "fixed_count": 3,
+    "total_count": 5,
+    "services": {
+      "tokenguard": {
+        "status": "fixed",
+        "has_abekeys": true,
+        "has_env_file": false,
+        "config_path": "orbital/AIGuards-Backend-orbital/guards/tokenguard/tokenguard/config.py",
+        "last_checked": "2025-11-24T11:20:19.386415"
+      },
+      "trust-guard": {
+        "status": "fixed",
+        "has_abekeys": true,
+        "has_env_file": false,
+        "config_path": "orbital/AIGuards-Backend-orbital/guards/trust-guard/trustguard/config.py",
+        "last_checked": "2025-11-24T11:20:19.386415"
+      },
+      "contextguard": {
+        "status": "fixed",
+        "has_abekeys": true,
+        "has_env_file": false,
+        "config_path": null,
+        "last_checked": "2025-11-24T11:20:19.386415"
+      },
+      "biasguard-backend": {
+        "status": "partial",
+        "has_abekeys": false,
+        "has_env_file": false,
+        "config_path": null,
+        "last_checked": "2025-11-24T11:20:19.386415"
+      },
+      "healthguard": {
+        "status": "partial",
+        "has_abekeys": false,
+        "has_env_file": false,
+        "config_path": null,
+        "last_checked": "2025-11-24T11:20:19.386415"
+      }
+    },
+    "shared_loader": {
+      "exists": true,
+      "path": "orbital/AIGuards-Backend-orbital/shared/abekeys_loader.py",
+      "last_checked": "2025-11-24T11:20:19.386415"
+    }
+  },
+  "gap_2_database_redis": {
+    "status": "fixed",
+    "found_count": 3,
+    "total_required": 3,
+    "credentials": {
+      "postgres": {
+        "exists": true,
+        "path": "~/.abekeys/credentials/postgres.json",
+        "size_bytes": 392,
+        "last_checked": "2025-11-24T11:20:19.389194"
+      },
+      "database": {
+        "exists": true,
+        "path": "~/.abekeys/credentials/database.json",
+        "size_bytes": 573,
+        "last_checked": "2025-11-24T11:20:19.389194"
+      },
+      "redis": {
+        "exists": true,
+        "path": "~/.abekeys/credentials/redis.json",
+        "size_bytes": 126,
+        "last_checked": "2025-11-24T11:20:19.389194"
+      }
+    }
+  },
+  "gap_3_config_env": {
+    "status": "fixed",
+    "has_env_file_references": false,
+    "config_path": "orbital/AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/app/core/config.py",
+    "last_checked": "2025-11-24T11:20:19.389228"
+  },
+  "commands_available": {
+    "check_gap_status": {
+      "script": "scripts/check_gap_status.py",
+      "purpose": "Check current gap healing status",
+      "exists": true
+    },
+    "heal_all_gaps": {
+      "script": "scripts/heal_all_gaps.py",
+      "purpose": "Heal all identified gaps",
+      "exists": true
+    },
+    "add_database_redis_credentials": {
+      "script": "scripts/add_database_redis_credentials.py",
+      "purpose": "Add database/Redis credentials to Ab\u00ebKEYs vault",
+      "exists": true
+    },
+    "read_abekeys": {
+      "script": "scripts/read_abekeys.py",
+      "purpose": "Read Ab\u00ebKEYs vault",
+      "exists": true
+    }
+  },
+  "workflow": {
+    "step_1": "python3 scripts/check_gap_status.py",
+    "step_2": "python3 scripts/add_database_redis_credentials.py (if needed)",
+    "step_3": "python3 scripts/heal_all_gaps.py",
+    "step_4": "python3 scripts/read_abekeys.py (verify credentials)",
+    "step_5": "python3 scripts/check_gap_status.py (final check)"
+  },
+  "history": []
+}

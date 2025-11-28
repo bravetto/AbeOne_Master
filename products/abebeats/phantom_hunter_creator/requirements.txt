@@ -1,0 +1,17 @@
+# PHANTOM HUNTER CREATOR EDITION - Dependencies
+
+# Web Framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+
+# Data Validation
+pydantic>=2.5.0
+pydantic[email]>=2.5.0
+
+# CORS
+python-cors>=1.0.0
+
+# Optional: Atomic Archistration (if available)
+# Install from EMERGENT_OS/triadic_execution_harness if needed
+

@@ -1,0 +1,15 @@
+{
+  "goodPatterns": [
+    "@types/react",
+    "@types/react-dom"
+  ],
+  "badPatterns": [
+    "Vue",
+    "Svelte",
+    "Angular"
+  ],
+  "eslintRules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}

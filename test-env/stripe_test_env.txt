@@ -1,0 +1,8 @@
+# Stripe Test Environment Variables
+# These are test keys for development/testing only
+# DO NOT use in production
+
+STRIPE_SECRET_KEY=REPLACE_ME
+STRIPE_PUBLISHABLE_KEY=REPLACE_ME
+STRIPE_WEBHOOK_SECRET=REPLACE_ME
+STRIPE_ENABLED=true

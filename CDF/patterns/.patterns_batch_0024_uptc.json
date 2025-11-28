@@ -1,0 +1,10 @@
+{
+  "resource_id": "pattern_cdf_patterns_batch_0024",
+  "resource_type": "pattern_cdf",
+  "file_path": "CDF/patterns/patterns_batch_0024.cdf",
+  "size_mb": 0.03314971923828125,
+  "access_pattern": "lazy_load",
+  "registered_at": "2025-11-24T21:45:31.259570",
+  "uptc_field": "patterns",
+  "translation_type": "pattern_access"
+}

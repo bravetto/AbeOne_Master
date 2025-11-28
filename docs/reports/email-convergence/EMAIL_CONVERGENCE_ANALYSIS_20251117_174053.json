@@ -1,0 +1,1324 @@
+{
+  "analysis_date": "2025-11-17T17:40:53.747143",
+  "period_days": 3,
+  "total_newsletters": 80,
+  "total_opportunities": 39,
+  "convergence_opportunities": 19,
+  "emergence_opportunities": 20,
+  "key_themes": {
+    "atomic": 38,
+    "ai_safety": 29,
+    "platform": 21,
+    "pattern": 2,
+    "emergence": 2,
+    "guardian": 2,
+    "neuromorphic": 1
+  },
+  "top_newsletters": [
+    {
+      "sender": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=cw0MYVcM05thdE8XbosYGcnCLrByOV7fAWghOIlGhFc=;\n b=RirzrP3XqWs481w4TamyZrlx49EiVN2lejfFMf98wuaBHOfRFEITHlgorwbZfBmDiB/ciN2YiOLTPtYctqMjHvQ+EvCbLzYo/vyi/2VklKdBT7S7lH/kabVd8njOGo4AkqrPSTyI7AD+sMyP9ZySQFCqD/ulEvlOUKrA62Y9u+8=",
+      "subject": "At least five interesting things: edition (#71)",
+      "date": "2025-11-08T01:52:30+00:00",
+      "ai_score": 0.4,
+      "convergence_score": 1.0,
+      "emergence_score": 1.0,
+      "themes": [
+        "ai_safety",
+        "atomic",
+        "emergence"
+      ],
+      "opportunities_count": 1
+    },
+    {
+      "sender": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=TMLayfmVg+WzCb6An41aqNRssnVfo8EZBcLBFtdOqio=;\n b=Frvx3N7830OeAsGqMuOR9xNGWq0adLckeYuIjhP6t00ZfNZrv8lSMkZe61n8ripkga3nsPQ6dMt+bd+zfyK8jd8CjoeABGDJSQlMGODFw14u+X9eUKS68S35nLjUUlAemFqbBosAxjiKlMJ7nfXLzjISfM3DyCTqLsauPZOP56U=",
+      "subject": "A Short Update on the next Virtual Gathering and a New Video of a Keynote talk\n from the Edge of Russia",
+      "date": "2025-10-29T11:02:43+00:00",
+      "ai_score": 0.3,
+      "convergence_score": 1.0,
+      "emergence_score": 1.0,
+      "themes": [
+        "atomic"
+      ],
+      "opportunities_count": 1
+    },
+    {
+      "sender": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=ZCisMYQYLnaqKhMcJadiDTmBlVgqcQPE/mbWZzc2Yys=;\n b=sggw4FovFJsTmsPCxJPqG1rKFwKnbNhzjEsjoOg8hO1hX/hf90MkxGHI+g8O79Pguxb3PnT3wX5lylhvACxAIOMYbFgT0xww+yU48dUi7cfk4WV8MvSxI14Wl93El7VzPzwomcACmI8airQp0X0go9jgRd5cqg+81PMEYMeXaeg=",
+      "subject": "I want the Japanese future back!",
+      "date": "2025-11-09T23:47:28+00:00",
+      "ai_score": 0.3,
+      "convergence_score": 1.0,
+      "emergence_score": 1.0,
+      "themes": [
+        "ai_safety",
+        "atomic"
+      ],
+      "opportunities_count": 1
+    },
+    {
+      "sender": "From: Subject: Subject: Mime-Version: Sender: Sender;\n bh=7GxT/3+sLcU+hH/9665wjjkGGgnBpS8zK9xfA3HeGS0=;\n b=gTx61NS2ew/C2Brq/OAdoD8VKP4GRX3jCzPBvgv3EieCVQ975uw3fI9+VSYd1RpswMwAZBZdR2WJztp+3SYesk+J9IMfaGL95GegLyWBscdmH1iTnt+BzQhoT0SFXHdEmJY8xCLIeoa6a09S1E61jJCQ882FL93+McBk6g5mDA4=",
+      "subject": "Recommendations from your Substacks",
+      "date": "2025-10-30T16:15:54+00:00",
+      "ai_score": 0.3,
+      "convergence_score": 0.8,
+      "emergence_score": 0.8,
+      "themes": [
+        "atomic",
+        "guardian"
+      ],
+      "opportunities_count": 1
+    },
+    {
+      "sender": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=KdHFvpNNXH/+4fG29rlO8g6II2iWKJZgl7yAICbg1Lo=;\n b=ub61Xzw50P4TFo70N0aqampSMnppeFavk9/4p7r75ISUlsLCYx40CsTCQ8YXdQIEdexCAvCi9NKRCz5uyKXr7iRATsizB2axCKCGDZOHt1DFIbCT45mVpdigMDTZ+BuLzzJV6J4VsZLNwq/eAVEypE7qQ4u14mxTn1otA//9AeY=",
+      "subject": "Should we worry about AI's circular deals?",
+      "date": "2025-10-22T09:17:37+00:00",
+      "ai_score": 0.3,
+      "convergence_score": 0.8,
+      "emergence_score": 0.8,
+      "themes": [
+        "atomic"
+      ],
+      "opportunities_count": 1
+    },
+    {
+      "sender": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=pCPEMnBAsJXMxeE3koKiCYpKKaZS50WutgQm9TCcTms=;\n b=jqNUhy/48RbystmsO+jS9WthK7QCsvmSu28hL3zAPg1V9rJdvYNLzIluEK5I+9VAdpNA4G8koNaLWGkKpcEfiyPBseDxgPo/8v2gi2lAI4+uFw9U22LgM+jg7a/ENpg2YOoEG3SYOwKeamiIMOk8tcZjj/kKb/EDsAQR2sFzlM8=",
+      "subject": "The Great World War 2 Afterparty is over",
+      "date": "2025-11-03T10:59:44+00:00",
+      "ai_score": 0.3,
+      "convergence_score": 0.6,
+      "emergence_score": 0.6,
+      "themes": [
+        "ai_safety",
+        "atomic"
+      ],
+      "opportunities_count": 1
+    },
+    {
+      "sender": "TikTok",
+      "subject": "Join TikTok's Creator Tips Post Contest for an Opportunity to Collect\n Cash Prizes!",
+      "date": "2025-10-28T17:40:45+00:00",
+      "ai_score": 0.3,
+      "convergence_score": 0.6,
+      "emergence_score": 0.6,
+      "themes": [
+        "ai_safety",
+        "atomic",
+        "neuromorphic",
+        "platform"
+      ],
+      "opportunities_count": 1
+    },
+    {
+      "sender": "Date:Subject:To:MIME-Version:Message-ID:List-Unsubscribe:\n\t List-Unsubscribe-Post:Content-Type;\n\tb=kBJIMmainpmt3NbmzIXQYtKTrK4BVW5MdXendkQe1nSVGoCMrGKdEVOLYbT8evMNx\n\t 0c0VOvmXpIz+3MLlK5PQB+6daot7WkfSSxae8Xocxm8LzdldLRHfBuP+ME8ZdrTYVK\n\t HsuX3yg4xubdNnUSgAbE8pwo9viXQzkQyOeRshiUVIXWTMA4+TttjTo+eueyDPIhFX\n\t bMCFt0dykLo79UXTJ3frBAMo39m1eApQ7uy+PBjGGJfm5qFjftn6RxQnCye3GOynDn\n\t ppOAyqpQb5gbmr2yu/ytu4kd716XBgJN/wYp3nscPJ2Mih1B1LtNpnZQmCJZy8ZQz3\n\t raf6ZM367105w==",
+      "subject": "REMINDER - [REGISTER NOW] Optimizing content for inclusion in the era of AI",
+      "date": "2025-11-05T09:19:14-08:00",
+      "ai_score": 0.3,
+      "convergence_score": 0.4,
+      "emergence_score": 0.4,
+      "themes": [
+        "pattern",
+        "atomic"
+      ],
+      "opportunities_count": 1
+    },
+    {
+      "sender": "TikTok",
+      "subject": "",
+      "date": "2025-11-06T14:14:19+00:00",
+      "ai_score": 0.3,
+      "convergence_score": 0.4,
+      "emergence_score": 0.4,
+      "themes": [
+        "ai_safety",
+        "atomic"
+      ],
+      "opportunities_count": 1
+    },
+    {
+      "sender": "Reply-To:To:Date:Message-ID:X-MC-User:Feedback-ID:\n\t List-ID:List-Unsubscribe:List-Unsubscribe-Post:Content-Type:\n\t MIME-Version:CC:Date:Subject:From;\n\tb=UCazgKB6DK1184U2YoEWu93/jqy2r6Yb0+E9liv4qpvDBCPO1mCOVcCjirt8DONr6\n\t EAzAs7w0Hd8pkp00tD3mYKI+uiSvCDA1DxeG3tAeSwMW3i/y16jOlg+sdAzeMSlaIK\n\t bw3S7YT1OpiKrPCBVMBY+Au8mwOavHppRDuWFwXSwiLNQiFpIFjwTGxyjb1zRnYGfq\n\t rXfgSxdUvNuAlFrNpWo2R44DlgunMN1sHhHAaSzAIG2IqemfPKXnOdtOJx5iP9LDLP\n\t JkMD1PexsKmfLpeMlmsfmF/EU5FLkDMwCkSBb/SxJfGu9zjJ+5TUomeMvs8ZWAarqc\n\t lGdz36o/XubRg==",
+      "subject": "fix these common conversion leaks before bfcm\u00a0",
+      "date": "2025-10-27T11:14:51+00:00",
+      "ai_score": 0.3,
+      "convergence_score": 0.4,
+      "emergence_score": 0.4,
+      "themes": [
+        "atomic",
+        "platform"
+      ],
+      "opportunities_count": 1
+    }
+  ],
+  "top_convergence_opportunities": [
+    {
+      "type": "convergence",
+      "title": "81309760 is your security code",
+      "description": "\nConfirm it's you\n\nHi Michael,We\u2019re sending a security code to confirm it\u2019s really you. Here's the code to enter in Facebook:81309760Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren't trying to confirm it's your account, it's possible someone is trying to hack your account. As long as you don't shar",
+      "source": "MIME-Version:Content-Type;\n\tb=NYt1N8EbDtrFMCOb5Br0cTROh8e4VFFUwGKfcs4Il3fg9Wnk5RU6PPkrTrQ4ZTiJu\n\t jHW7ECEmRhj1eacAAqDws7LcYHwEXMPBJcncAEHj1HzaT+fmxW2HzT24rnwACtQfnM\n\t 0c0HIYJ3aUpnrK/6KFqROtJ/8fhKJkyjkDAUMobU=",
+      "date": "2025-10-27T11:17:26-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "Did you just log into Facebook with a code?",
+      "description": "========================================\nWas this you?\n========================================\n\nHi Michael,\n\nSecurity alert: login with a code\n\nHi Michael,\n\nSomeone just used the email address mataluni@me.com and a code to log into your Facebook account. We're getting in touch because this could be a sign that someone is trying to hack your account. If this wasn't you, we're here to help you take some simple steps to secure your account.\n\nThanks,\nThe Facebook team\n\nIf this was you, you can igno",
+      "source": "MIME-Version:Content-Type;\n\tb=vqAL3h+4bIn1SSJl5N6cKbDg1bo7rCGNkB2z64mpUGeoaIdseCP/Jd1ya2Z8p3I4X\n\t MstwgihSWWpmF1jEVibOsgGRSdq46fxjVo23npihParNDWaG1h5SHuD9ZCc8v4OV0E\n\t eKhP31olm+9l47gqk/dWKEYfLHhA6f7g6Hw9LZ5Y=",
+      "date": "2025-10-27T07:10:09-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "29102209 is your security code",
+      "description": "\nConfirm it's you\n\nHi Michael,We\u2019re sending a security code to confirm it\u2019s really you. Here's the code to enter in Facebook:29102209Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren't trying to confirm it's your account, it's possible someone is trying to hack your account. As long as you don't shar",
+      "source": "MIME-Version:Content-Type;\n\tb=bNNICaRHCeu7cIe3GOgMFkv4TQcD8Kk0q0VPnc9meZJU83iNLqBI1Ezdb8WtLqowV\n\t MKZBTQEjclM4B5p394kgYCU0pUF5tOM86pEAmrlmiiKWDo93MaU2ZH/HgB6sHVekXN\n\t 5gwNq/RtV/TgPV93/dt1tiv7pKWNx2EiFXkq46XU=",
+      "date": "2025-10-27T07:13:27-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "67281848 is your password reset code",
+      "description": "Hi Michael,\n\nOne more step to change your password\n\nHi Michael,We got your request to change your password. Enter this code in Facebook:67281848Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren\u2019t trying to reset your password, let us know. You don't need to take any further steps, as long as you don\u2019",
+      "source": "MIME-Version:Content-Type;\n\tb=X1K72xLkGOH2oVJAPzmn5mNsWospsWExsv1Ha87X3nIxmiLDc8r9swQinl9LLXaHF\n\t 0GdUKeOoU/PKK2db37vE5KQJcTjIC8lUeA59WxcF6FOJex8QS91dNNjLS30BjrzSqU\n\t F6x6WJjjJC4LZ1OlsmuOsum0RQXmOAMrwSOs8vEc=",
+      "date": "2025-10-27T11:22:51-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "67817585 is your password reset code",
+      "description": "Hi Michael,\n\nOne more step to change your password\n\nHi Michael,We got your request to change your password. Enter this code in Facebook:67817585Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren\u2019t trying to reset your password, let us know. You don't need to take any further steps, as long as you don\u2019",
+      "source": "MIME-Version:Content-Type;\n\tb=cFUNTllZmzagZHP55/1nFkhcgIDYqfg+GET28OQ8MQTf0kBGaPMEeGo2aAMeniDS8\n\t YazW0a/8FmCvW//O0vEE7jvs+tLg4xum9fXbyefC7hkQtVJceFBqEmc07xzhs8EXxl\n\t 8NgSQgyodhq4SJuLP5JUmQlBi2j+S5n1iMKSij5w=",
+      "date": "2025-10-27T07:09:26-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "Updating how Meta personalizes experiences",
+      "description": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional //EN\"><html><head><title>Facebook</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><style nonce=\"2MAGMPFk\">@media all and (max-width: 480px){*[class].ib_t{min-width:100%!important}*[class].ib_row{display:block!important}*[class].ib_ext{display:block!important;padding:10px 0 5px;vertical-align:top!important;width:100%!important}*[class].ib_img,*[class].ib_mid{vertical-align:top!important}*[class].mb_blk{display:b",
+      "source": "MIME-Version:Content-Type;\n\tb=B6VVROFoZJCMdlMn9FJNm4y0SdAPv4MQw2nOq184bDq71zpKRZGIm3K6viQh3uoQL\n\t 013vOMJWgcwKwKDtG/wK83jwtkGBK8nm+9sjd62Y2FjutJqkqTjw0yo4Iy76UKdIc0\n\t SPoeRiiFLnD9+AdosEkz1oZbXSINQPCphhFLJn+E=",
+      "date": "2025-11-03T06:31:12-08:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "Loren Washington mentioned you on Facebook",
+      "description": "Hi Michael,\n\nLoren Washington highlighted a comment for you to check out\n\nThanks,\nThe Facebook team\n\n\n\n========================================\nThis message was sent to mataluni@me.com. If you don't want to receive these emails from Meta in the future, please follow the link below to unsubscribe.\nhttps://www.facebook.com/o.php?k=AS3jIlPv6eU51G-eC8A&u=1048002871&mid=641f80468f48fG3e774137G641f84dfef761Gb7&ee=Af8_GzKLe80LtugWdEi33Ksm5xC9QZI06Ir0TisOimuwtpgTJxDVNmY1LddEym9R__6qQB54TYXv\nMeta Platfor",
+      "source": "MIME-Version:Content-Type;\n\tb=AFLIixlMUmI0PNQV28/a+uMXI24mOTQvFTQAC37aA9XK+j1eW4fZa8CqBvckbz9Gy\n\t R7RTFem8d5G/GryUqoqwq3QR2FIPnOqjFIkifUANzDrNtniG94VRW8c0sY72eoY2Oo\n\t BYlY4hkbGz5J/34cYZMlUJb3INNFY5RniKDUj1sQ=",
+      "date": "2025-10-25T11:12:18-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one",
+        "future"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "September Love Ruddell tagged you in a post on Facebook",
+      "description": "========================================\nSee post\nhttps://www.facebook.com/nd/?september.ruddell%2Fposts%2Fpfbid0thumQQBaFgkh8s8zbfhGQztFuckBscmVjQJ8mT4eNcmnbzi65spm94DzQPf5MKipl&aref=1761676062472882&medium=email&mid=6423be253b7e0G3e774137G6423c2be9bab2Gdb&bcode=2.1761681420.Abxz_LQ3YHncILA19u0&n_m=mataluni%40me.com&n_sg=Q6bPBAJjUdQ_F0QRhrbUwrxtq-kyoyq0RiUeQmWfb0qT3oAHxQ\n\n========================================\n\nHi Michael,\n\nSeptember Love Ruddell tagged you and 41 others in a post.\n\nSeptember",
+      "source": "MIME-Version:Content-Type;\n\tb=sTB/KsI8tAxhsVC3bo3XSFKfJf0k3SN5YOslp6VfqnWtWQWv7oWqi4Kx2YM3zP3ko\n\t F7wegQEVvVSbhBMZ2HHiTjWRsvHP6+D97T7VP7G6RcoHt7oDbtvUFVDvzAT1IMtcul\n\t RbVVZECUipm5WOl9nwTlsjdDqLnx1pktWDrwSQXQ=",
+      "date": "2025-10-28T12:57:00-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one",
+        "future"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "Bring back liberal nationalism",
+      "description": "View this post on the web at https://www.noahpinion.blog/p/bring-back-liberal-nationalism\n\nThe Trump administration is not doing a good job. Tariffs are punishing the U.S. economy. Masked federal agents are rampaging through the streets of American cities, grabbing people off the street. Corruption is rampant. The people Trump put in charge of the country\u2019s public health services don\u2019t even believe in the germ theory of disease [ https://substack.com/redirect/79ec9941-49e4-4cbf-8551-435a90238ffc",
+      "source": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=Da6BuOvK1rSjgoYbg6PF/e7YkrfY6O/++M8MnyyNmMg=;\n b=CPt2XEioLZbmsz2CgH1bd84KYjoO087x9m9ZL65O9chbxRMrRFfKCQrVTh8ECySWRydkzMS6lBbu3ryaUqc2iGGWWSUTF9VZLuEbnezIDbqNSZyhDguVVnHw5VUgLvEzkSOzMynMLjWe9+K4+wKxmZ/rdLVGbJmoZjMhBSsdbkE=",
+      "date": "2025-10-28T09:47:57+00:00",
+      "themes": [
+        "guardian",
+        "atomic"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "agent",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "29544745 is your security code",
+      "description": "\nConfirm it's you\n\nHi Michael,We\u2019re sending a security code to confirm it\u2019s really you. Here's the code to enter in Facebook:29544745Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren't trying to confirm it's your account, it's possible someone is trying to hack your account. As long as you don't shar",
+      "source": "MIME-Version:Content-Type;\n\tb=p4NDrsVxhyjcmbT4St87nBbZhNAiZykW/Vuux+IVDvlJFEjtDwRcaGgL2GIh5edak\n\t jBWN2k1HIELTxUAxFqly32O4byAFnqkBPHiz6OJQsjpnDAYAoTx/ndP6/8OsCmXQdX\n\t 6XbJPQ6jKtoXst4dAGEQy1/BHLvRiO/eTUnD2YBA=",
+      "date": "2025-10-31T11:53:27-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    }
+  ],
+  "top_emergence_opportunities": [
+    {
+      "type": "emergence",
+      "title": "At least five interesting things: edition (#71)",
+      "description": "View this post on the web at https://www.noahpinion.blog/p/at-least-five-interesting-things-824\n\nHi, everyone! I\u2019m overdue for a roundup post.\nFirst, I have a lot of podcasts for you! Here\u2019s me arguing with the noted right-wing Frenchman Pascal-Emmanuel Gobry about high-skilled immigration:\nAnd here\u2019s Razib Khan interviewing me about Japanese politics:\nHere\u2019s an interview I did with the Media Summit podcast, about various media-related topics:\nAnd here is an episode of Econ 102, discussing the f",
+      "source": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=cw0MYVcM05thdE8XbosYGcnCLrByOV7fAWghOIlGhFc=;\n b=RirzrP3XqWs481w4TamyZrlx49EiVN2lejfFMf98wuaBHOfRFEITHlgorwbZfBmDiB/ciN2YiOLTPtYctqMjHvQ+EvCbLzYo/vyi/2VklKdBT7S7lH/kabVd8njOGo4AkqrPSTyI7AD+sMyP9ZySQFCqD/ulEvlOUKrA62Y9u+8=",
+      "date": "2025-11-08T01:52:30+00:00",
+      "themes": [
+        "atomic",
+        "ai_safety",
+        "emergence"
+      ],
+      "relevance": 0.4,
+      "action_items": [],
+      "patterns": [
+        "network",
+        "one",
+        "breakthrough",
+        "innovation",
+        "new",
+        "shift",
+        "opportunity",
+        "potential",
+        "future",
+        "next",
+        "beta"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "A Short Update on the next Virtual Gathering and a New Video of a Keynote talk\n from the Edge of Russia",
+      "description": "View this post on the web at https://peterleyden.substack.com/p/a-short-update-on-the-next-virtual\n\nWe added many new subscribers in the last week coming from Big Think [ https://substack.com/redirect/1b8a50ab-73fb-49ff-a3b8-055af033d289?j=eyJ1IjoiY2pkcnIifQ.Gnnj2m3PElcti0jC4CDduTX5CXJTYdXAA2I7EnfiuLQ ] and so I thought I\u2019d give short update to orient the newcomers and also keep the long-time subscribers abreast of various changes happening in The Great Progression  project. \nWe had a wave of ne",
+      "source": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=TMLayfmVg+WzCb6An41aqNRssnVfo8EZBcLBFtdOqio=;\n b=Frvx3N7830OeAsGqMuOR9xNGWq0adLckeYuIjhP6t00ZfNZrv8lSMkZe61n8ripkga3nsPQ6dMt+bd+zfyK8jd8CjoeABGDJSQlMGODFw14u+X9eUKS68S35nLjUUlAemFqbBosAxjiKlMJ7nfXLzjISfM3DyCTqLsauPZOP56U=",
+      "date": "2025-10-29T11:02:43+00:00",
+      "themes": [
+        "atomic"
+      ],
+      "relevance": 0.3,
+      "action_items": [
+        "com/p/a-short-update-on-the-next-virtual\n\nWe added many new subscribers in the last week coming from Big Think [ https://substack",
+        "Gnnj2m3PElcti0jC4CDduTX5CXJTYdXAA2I7EnfiuLQ ] and so I thought I\u2019d give short update to orient the newcomers and also keep the long-time subscribers abreast of various changes happening in The Great P",
+        "We had a wave of newcomers in the last 10 days because another video [ https://substack",
+        ") \nLongtime subscribers who watch the video will recognize that it is  basically the same 15-minute, highly-produced, documentary-style video that was released last summer by Freethink and went viral ",
+        "This time it was repackaged and released to different audiences on Big Think, which has been around since 2008 and has amassed millions of followers on YouTube"
+      ],
+      "patterns": [
+        "one",
+        "new",
+        "next",
+        "upcoming",
+        "release",
+        "partnership"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "I want the Japanese future back!",
+      "description": "View this post on the web at https://www.noahpinion.blog/p/i-want-the-japanese-future-back\n\nMy first book, Weeb Economy [ https://substack.com/redirect/097eca29-15a8-45de-ab01-074ba534f716?j=eyJ1IjoiY2pkcnIifQ.Gnnj2m3PElcti0jC4CDduTX5CXJTYdXAA2I7EnfiuLQ ], came out in March of this year, but only in Japanese. Since then, a bunch of people have been asking me for an English translation.\nHalf of the book was a series of translated posts [ https://substack.com/redirect/097eca29-15a8-45de-ab01-074ba",
+      "source": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=ZCisMYQYLnaqKhMcJadiDTmBlVgqcQPE/mbWZzc2Yys=;\n b=sggw4FovFJsTmsPCxJPqG1rKFwKnbNhzjEsjoOg8hO1hX/hf90MkxGHI+g8O79Pguxb3PnT3wX5lylhvACxAIOMYbFgT0xww+yU48dUi7cfk4WV8MvSxI14Wl93El7VzPzwomcACmI8airQp0X0go9jgRd5cqg+81PMEYMeXaeg=",
+      "date": "2025-11-09T23:47:28+00:00",
+      "themes": [
+        "atomic",
+        "ai_safety"
+      ],
+      "relevance": 0.3,
+      "action_items": [
+        "The other half was a new part that I wrote in English and had translated into Japanese by my excellent translator, Kataoka Hirohito",
+        "In this first installment, I discuss:\nWhy 2008 was a pivotal turning point for the Japanese economy (and not in a good way)\nWhy economic stagnation actually presents Japan with a golden opportunity\nWh"
+      ],
+      "patterns": [
+        "one",
+        "innovation",
+        "new",
+        "shift",
+        "evolution",
+        "opportunity",
+        "potential",
+        "future",
+        "next"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "Recommendations from your Substacks",
+      "description": "<html style=\"scrollbar-width: thin;scrollbar-color: rgb(219,219,219)rgb(255,255,255);\"><head><meta charset=\"utf-8\"><title></title><style>\n@media (max-width: 1024px) {\n  .typography .pullquote-align-left,\n  .typography.editor .pullquote-align-left,\n  .typography .pullquote-align-right,\n  .typography.editor .pullquote-align-right,\n  .typography .pullquote-align-wide,\n  .typography.editor .pullquote-align-wide,\n  .typography .pullquote-align-center,\n  .typography.editor .pullquote-align-center {\n  ",
+      "source": "From: Subject: Subject: Mime-Version: Sender: Sender;\n bh=7GxT/3+sLcU+hH/9665wjjkGGgnBpS8zK9xfA3HeGS0=;\n b=gTx61NS2ew/C2Brq/OAdoD8VKP4GRX3jCzPBvgv3EieCVQ975uw3fI9+VSYd1RpswMwAZBZdR2WJztp+3SYesk+J9IMfaGL95GegLyWBscdmH1iTnt+BzQhoT0SFXHdEmJY8xCLIeoa6a09S1E61jJCQ882FL93+McBk6g5mDA4=",
+      "date": "2025-10-30T16:15:54+00:00",
+      "themes": [
+        "guardian",
+        "atomic"
+      ],
+      "relevance": 0.24,
+      "action_items": [],
+      "patterns": [
+        "agent",
+        "one",
+        "new",
+        "shift",
+        "evolution",
+        "next"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "Should we worry about AI's circular deals?",
+      "description": "View this post on the web at https://www.noahpinion.blog/p/should-we-worry-about-ais-circular\n\nA week ago, I wrote a post about the possibility of a bust in the AI sector:\nOne aspect of the story I didn\u2019t talk about was the web of \u201ccircular\u201d deals between AI model makers, compute providers, and chipmakers. Almost every news story or blog post that worries about the threat of an AI bust mentions these. Here are some excerpts from a good overview of the situation [ https://substack.com/redirect/fe",
+      "source": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=KdHFvpNNXH/+4fG29rlO8g6II2iWKJZgl7yAICbg1Lo=;\n b=ub61Xzw50P4TFo70N0aqampSMnppeFavk9/4p7r75ISUlsLCYx40CsTCQ8YXdQIEdexCAvCi9NKRCz5uyKXr7iRATsizB2axCKCGDZOHt1DFIbCT45mVpdigMDTZ+BuLzzJV6J4VsZLNwq/eAVEypE7qQ4u14mxTn1otA//9AeY=",
+      "date": "2025-10-22T09:17:37+00:00",
+      "themes": [
+        "atomic"
+      ],
+      "relevance": 0.24,
+      "action_items": [
+        "Almost every news story or blog post that worries about the threat of an AI bust mentions these"
+      ],
+      "patterns": [
+        "one",
+        "new",
+        "emerging",
+        "potential",
+        "partnership"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "The Great World War 2 Afterparty is over",
+      "description": "View this post on the web at https://www.noahpinion.blog/p/the-great-world-war-2-afterparty\n\nMy father\u2019s father was a bombardier in Europe in World War 2. Around Christmas in 2002, I asked him to tell me everything he remembered about the war. I had always had great reverence for my grandparents\u2019 generation, and growing up I pestered them for as many of their stories as they could tell me. But the war, and especially combat itself, had been the one thing I avoided asking about directly; instead,",
+      "source": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=pCPEMnBAsJXMxeE3koKiCYpKKaZS50WutgQm9TCcTms=;\n b=jqNUhy/48RbystmsO+jS9WthK7QCsvmSu28hL3zAPg1V9rJdvYNLzIluEK5I+9VAdpNA4G8koNaLWGkKpcEfiyPBseDxgPo/8v2gi2lAI4+uFw9U22LgM+jg7a/ENpg2YOoEG3SYOwKeamiIMOk8tcZjj/kKb/EDsAQR2sFzlM8=",
+      "date": "2025-11-03T10:59:44+00:00",
+      "themes": [
+        "atomic",
+        "ai_safety"
+      ],
+      "relevance": 0.18,
+      "action_items": [
+        "The one line my grandfather repeated, over and over, was \u201cFor all we knew, we were going to die the next day",
+        "In 1932, there had never been an economic downturn like the Great Depression; nobody knew whether capitalism was permanently collapsing, but they kept on going to work every day",
+        "In 1942 nobody knew whether the Nazi and Japanese empires would conquer Eurasia, enslave its people, and use its vast resources to cow the United States into submission \u2014 but they didn\u2019t flinch from t"
+      ],
+      "patterns": [
+        "atomic",
+        "one",
+        "new",
+        "evolution",
+        "next"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "Join TikTok's Creator Tips Post Contest for an Opportunity to Collect\n Cash Prizes!",
+      "description": "<!doctypehtml><html dir=\"auto\"lang=\"und\"xmlns=\"http://www.w3.org/1999/xhtml\"\nxmlns:o=\"urn:schemas-microsoft-com:office:office\"\nxmlns:v=\"urn:schemas-microsoft-com:vml\"><head><title></title>\n<!--[if !mso]><!--><meta content=\"IE=edge\"http-equiv=\"X-UA-Compatible\">\n<!--<![endif]--><meta content=\"text/html; charset=UTF-8\"\nhttp-equiv=\"Content-Type\"><meta content=\"width=device-width,initial-scale=1\"\nname=\"viewport\"><style>#outlook a { padding:0; }\n      body { margin:0;padding:0;-webkit-text-size-adjust",
+      "source": "TikTok",
+      "date": "2025-10-28T17:40:45+00:00",
+      "themes": [
+        "neuromorphic",
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.18,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "ecosystem",
+        "one",
+        "opportunity",
+        "next",
+        "launch"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "REMINDER - [REGISTER NOW] Optimizing content for inclusion in the era of AI",
+      "description": "\n<!DOCTYPE HTML>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" dir=\"ltr\" lang=\"en-us\">\n    <head>\n\n    <!--[if gte mso 9]>\n      <xml>\n         <o:OfficeDocumentSettings>\n            <o:PixelsPerInch>96</o:PixelsPerInch>\n         </o:OfficeDocumentSettings>\n      </xml>\n    <![endif]-->\n\n    <meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\"/>\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=",
+      "source": "Date:Subject:To:MIME-Version:Message-ID:List-Unsubscribe:\n\t List-Unsubscribe-Post:Content-Type;\n\tb=kBJIMmainpmt3NbmzIXQYtKTrK4BVW5MdXendkQe1nSVGoCMrGKdEVOLYbT8evMNx\n\t 0c0VOvmXpIz+3MLlK5PQB+6daot7WkfSSxae8Xocxm8LzdldLRHfBuP+ME8ZdrTYVK\n\t HsuX3yg4xubdNnUSgAbE8pwo9viXQzkQyOeRshiUVIXWTMA4+TttjTo+eueyDPIhFX\n\t bMCFt0dykLo79UXTJ3frBAMo39m1eApQ7uy+PBjGGJfm5qFjftn6RxQnCye3GOynDn\n\t ppOAyqpQb5gbmr2yu/ytu4kd716XBgJN/wYp3nscPJ2Mih1B1LtNpnZQmCJZy8ZQz3\n\t raf6ZM367105w==",
+      "date": "2025-11-05T09:19:14-08:00",
+      "themes": [
+        "atomic",
+        "pattern"
+      ],
+      "relevance": 0.12,
+      "action_items": [
+        "newpar { margin: 0; height: 100%"
+      ],
+      "patterns": [
+        "one",
+        "innovation",
+        "new"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "",
+      "description": "<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/><meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/><meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/><meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"/><meta name=\"x-apple-disable-message-reformatting\"/><meta content=\"light dark\" name=\"color-scheme\"/><meta content=\"light",
+      "source": "TikTok",
+      "date": "2025-11-06T14:14:19+00:00",
+      "themes": [
+        "atomic",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "one",
+        "new",
+        "next"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "fix these common conversion leaks before bfcm\u00a0",
+      "description": "https://customers.us18.list-manage.com/track/click?u=028da96442f1dc5b395129076&id=c516c8eda0&e=733d8a0f11\n\nHi Michael,\n\nI just got off a call with a DTC agency owner who said something we\u2019re all thinking:\n\n\u201cThe next three weeks are going to be multiple months of work compressed into a short window.\n\nWe\u2019re a small team, everyone\u2019s stretched thin, and our spend has to go farther.\u201d\n\nThat\u2019s the season we\u2019re in:\n\nLimited bandwidth, limited budget, and ads getting more expensive by the day.\n\nCPMs on M",
+      "source": "Reply-To:To:Date:Message-ID:X-MC-User:Feedback-ID:\n\t List-ID:List-Unsubscribe:List-Unsubscribe-Post:Content-Type:\n\t MIME-Version:CC:Date:Subject:From;\n\tb=UCazgKB6DK1184U2YoEWu93/jqy2r6Yb0+E9liv4qpvDBCPO1mCOVcCjirt8DONr6\n\t EAzAs7w0Hd8pkp00tD3mYKI+uiSvCDA1DxeG3tAeSwMW3i/y16jOlg+sdAzeMSlaIK\n\t bw3S7YT1OpiKrPCBVMBY+Au8mwOavHppRDuWFwXSwiLNQiFpIFjwTGxyjb1zRnYGfq\n\t rXfgSxdUvNuAlFrNpWo2R44DlgunMN1sHhHAaSzAIG2IqemfPKXnOdtOJx5iP9LDLP\n\t JkMD1PexsKmfLpeMlmsfmF/EU5FLkDMwCkSBb/SxJfGu9zjJ+5TUomeMvs8ZWAarqc\n\t lGdz36o/XubRg==",
+      "date": "2025-10-27T11:14:51+00:00",
+      "themes": [
+        "atomic",
+        "platform"
+      ],
+      "relevance": 0.12,
+      "action_items": [
+        "\u201d\n\nThe hackathon assignment: Quick-launch conversion tactics you can plug in for immediate Black Friday lift"
+      ],
+      "patterns": [
+        "platform",
+        "one",
+        "next",
+        "launch"
+      ]
+    }
+  ],
+  "all_opportunities": [
+    {
+      "type": "emergence",
+      "title": "At least five interesting things: edition (#71)",
+      "description": "View this post on the web at https://www.noahpinion.blog/p/at-least-five-interesting-things-824\n\nHi, everyone! I\u2019m overdue for a roundup post.\nFirst, I have a lot of podcasts for you! Here\u2019s me arguing with the noted right-wing Frenchman Pascal-Emmanuel Gobry about high-skilled immigration:\nAnd here\u2019s Razib Khan interviewing me about Japanese politics:\nHere\u2019s an interview I did with the Media Summit podcast, about various media-related topics:\nAnd here is an episode of Econ 102, discussing the f",
+      "source": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=cw0MYVcM05thdE8XbosYGcnCLrByOV7fAWghOIlGhFc=;\n b=RirzrP3XqWs481w4TamyZrlx49EiVN2lejfFMf98wuaBHOfRFEITHlgorwbZfBmDiB/ciN2YiOLTPtYctqMjHvQ+EvCbLzYo/vyi/2VklKdBT7S7lH/kabVd8njOGo4AkqrPSTyI7AD+sMyP9ZySQFCqD/ulEvlOUKrA62Y9u+8=",
+      "date": "2025-11-08T01:52:30+00:00",
+      "themes": [
+        "atomic",
+        "ai_safety",
+        "emergence"
+      ],
+      "relevance": 0.4,
+      "action_items": [],
+      "patterns": [
+        "network",
+        "one",
+        "breakthrough",
+        "innovation",
+        "new",
+        "shift",
+        "opportunity",
+        "potential",
+        "future",
+        "next",
+        "beta"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "A Short Update on the next Virtual Gathering and a New Video of a Keynote talk\n from the Edge of Russia",
+      "description": "View this post on the web at https://peterleyden.substack.com/p/a-short-update-on-the-next-virtual\n\nWe added many new subscribers in the last week coming from Big Think [ https://substack.com/redirect/1b8a50ab-73fb-49ff-a3b8-055af033d289?j=eyJ1IjoiY2pkcnIifQ.Gnnj2m3PElcti0jC4CDduTX5CXJTYdXAA2I7EnfiuLQ ] and so I thought I\u2019d give short update to orient the newcomers and also keep the long-time subscribers abreast of various changes happening in The Great Progression  project. \nWe had a wave of ne",
+      "source": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=TMLayfmVg+WzCb6An41aqNRssnVfo8EZBcLBFtdOqio=;\n b=Frvx3N7830OeAsGqMuOR9xNGWq0adLckeYuIjhP6t00ZfNZrv8lSMkZe61n8ripkga3nsPQ6dMt+bd+zfyK8jd8CjoeABGDJSQlMGODFw14u+X9eUKS68S35nLjUUlAemFqbBosAxjiKlMJ7nfXLzjISfM3DyCTqLsauPZOP56U=",
+      "date": "2025-10-29T11:02:43+00:00",
+      "themes": [
+        "atomic"
+      ],
+      "relevance": 0.3,
+      "action_items": [
+        "com/p/a-short-update-on-the-next-virtual\n\nWe added many new subscribers in the last week coming from Big Think [ https://substack",
+        "Gnnj2m3PElcti0jC4CDduTX5CXJTYdXAA2I7EnfiuLQ ] and so I thought I\u2019d give short update to orient the newcomers and also keep the long-time subscribers abreast of various changes happening in The Great P",
+        "We had a wave of newcomers in the last 10 days because another video [ https://substack",
+        ") \nLongtime subscribers who watch the video will recognize that it is  basically the same 15-minute, highly-produced, documentary-style video that was released last summer by Freethink and went viral ",
+        "This time it was repackaged and released to different audiences on Big Think, which has been around since 2008 and has amassed millions of followers on YouTube"
+      ],
+      "patterns": [
+        "one",
+        "new",
+        "next",
+        "upcoming",
+        "release",
+        "partnership"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "I want the Japanese future back!",
+      "description": "View this post on the web at https://www.noahpinion.blog/p/i-want-the-japanese-future-back\n\nMy first book, Weeb Economy [ https://substack.com/redirect/097eca29-15a8-45de-ab01-074ba534f716?j=eyJ1IjoiY2pkcnIifQ.Gnnj2m3PElcti0jC4CDduTX5CXJTYdXAA2I7EnfiuLQ ], came out in March of this year, but only in Japanese. Since then, a bunch of people have been asking me for an English translation.\nHalf of the book was a series of translated posts [ https://substack.com/redirect/097eca29-15a8-45de-ab01-074ba",
+      "source": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=ZCisMYQYLnaqKhMcJadiDTmBlVgqcQPE/mbWZzc2Yys=;\n b=sggw4FovFJsTmsPCxJPqG1rKFwKnbNhzjEsjoOg8hO1hX/hf90MkxGHI+g8O79Pguxb3PnT3wX5lylhvACxAIOMYbFgT0xww+yU48dUi7cfk4WV8MvSxI14Wl93El7VzPzwomcACmI8airQp0X0go9jgRd5cqg+81PMEYMeXaeg=",
+      "date": "2025-11-09T23:47:28+00:00",
+      "themes": [
+        "atomic",
+        "ai_safety"
+      ],
+      "relevance": 0.3,
+      "action_items": [
+        "The other half was a new part that I wrote in English and had translated into Japanese by my excellent translator, Kataoka Hirohito",
+        "In this first installment, I discuss:\nWhy 2008 was a pivotal turning point for the Japanese economy (and not in a good way)\nWhy economic stagnation actually presents Japan with a golden opportunity\nWh"
+      ],
+      "patterns": [
+        "one",
+        "innovation",
+        "new",
+        "shift",
+        "evolution",
+        "opportunity",
+        "potential",
+        "future",
+        "next"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "Recommendations from your Substacks",
+      "description": "<html style=\"scrollbar-width: thin;scrollbar-color: rgb(219,219,219)rgb(255,255,255);\"><head><meta charset=\"utf-8\"><title></title><style>\n@media (max-width: 1024px) {\n  .typography .pullquote-align-left,\n  .typography.editor .pullquote-align-left,\n  .typography .pullquote-align-right,\n  .typography.editor .pullquote-align-right,\n  .typography .pullquote-align-wide,\n  .typography.editor .pullquote-align-wide,\n  .typography .pullquote-align-center,\n  .typography.editor .pullquote-align-center {\n  ",
+      "source": "From: Subject: Subject: Mime-Version: Sender: Sender;\n bh=7GxT/3+sLcU+hH/9665wjjkGGgnBpS8zK9xfA3HeGS0=;\n b=gTx61NS2ew/C2Brq/OAdoD8VKP4GRX3jCzPBvgv3EieCVQ975uw3fI9+VSYd1RpswMwAZBZdR2WJztp+3SYesk+J9IMfaGL95GegLyWBscdmH1iTnt+BzQhoT0SFXHdEmJY8xCLIeoa6a09S1E61jJCQ882FL93+McBk6g5mDA4=",
+      "date": "2025-10-30T16:15:54+00:00",
+      "themes": [
+        "guardian",
+        "atomic"
+      ],
+      "relevance": 0.24,
+      "action_items": [],
+      "patterns": [
+        "agent",
+        "one",
+        "new",
+        "shift",
+        "evolution",
+        "next"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "Should we worry about AI's circular deals?",
+      "description": "View this post on the web at https://www.noahpinion.blog/p/should-we-worry-about-ais-circular\n\nA week ago, I wrote a post about the possibility of a bust in the AI sector:\nOne aspect of the story I didn\u2019t talk about was the web of \u201ccircular\u201d deals between AI model makers, compute providers, and chipmakers. Almost every news story or blog post that worries about the threat of an AI bust mentions these. Here are some excerpts from a good overview of the situation [ https://substack.com/redirect/fe",
+      "source": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=KdHFvpNNXH/+4fG29rlO8g6II2iWKJZgl7yAICbg1Lo=;\n b=ub61Xzw50P4TFo70N0aqampSMnppeFavk9/4p7r75ISUlsLCYx40CsTCQ8YXdQIEdexCAvCi9NKRCz5uyKXr7iRATsizB2axCKCGDZOHt1DFIbCT45mVpdigMDTZ+BuLzzJV6J4VsZLNwq/eAVEypE7qQ4u14mxTn1otA//9AeY=",
+      "date": "2025-10-22T09:17:37+00:00",
+      "themes": [
+        "atomic"
+      ],
+      "relevance": 0.24,
+      "action_items": [
+        "Almost every news story or blog post that worries about the threat of an AI bust mentions these"
+      ],
+      "patterns": [
+        "one",
+        "new",
+        "emerging",
+        "potential",
+        "partnership"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "The Great World War 2 Afterparty is over",
+      "description": "View this post on the web at https://www.noahpinion.blog/p/the-great-world-war-2-afterparty\n\nMy father\u2019s father was a bombardier in Europe in World War 2. Around Christmas in 2002, I asked him to tell me everything he remembered about the war. I had always had great reverence for my grandparents\u2019 generation, and growing up I pestered them for as many of their stories as they could tell me. But the war, and especially combat itself, had been the one thing I avoided asking about directly; instead,",
+      "source": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=pCPEMnBAsJXMxeE3koKiCYpKKaZS50WutgQm9TCcTms=;\n b=jqNUhy/48RbystmsO+jS9WthK7QCsvmSu28hL3zAPg1V9rJdvYNLzIluEK5I+9VAdpNA4G8koNaLWGkKpcEfiyPBseDxgPo/8v2gi2lAI4+uFw9U22LgM+jg7a/ENpg2YOoEG3SYOwKeamiIMOk8tcZjj/kKb/EDsAQR2sFzlM8=",
+      "date": "2025-11-03T10:59:44+00:00",
+      "themes": [
+        "atomic",
+        "ai_safety"
+      ],
+      "relevance": 0.18,
+      "action_items": [
+        "The one line my grandfather repeated, over and over, was \u201cFor all we knew, we were going to die the next day",
+        "In 1932, there had never been an economic downturn like the Great Depression; nobody knew whether capitalism was permanently collapsing, but they kept on going to work every day",
+        "In 1942 nobody knew whether the Nazi and Japanese empires would conquer Eurasia, enslave its people, and use its vast resources to cow the United States into submission \u2014 but they didn\u2019t flinch from t"
+      ],
+      "patterns": [
+        "atomic",
+        "one",
+        "new",
+        "evolution",
+        "next"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "Join TikTok's Creator Tips Post Contest for an Opportunity to Collect\n Cash Prizes!",
+      "description": "<!doctypehtml><html dir=\"auto\"lang=\"und\"xmlns=\"http://www.w3.org/1999/xhtml\"\nxmlns:o=\"urn:schemas-microsoft-com:office:office\"\nxmlns:v=\"urn:schemas-microsoft-com:vml\"><head><title></title>\n<!--[if !mso]><!--><meta content=\"IE=edge\"http-equiv=\"X-UA-Compatible\">\n<!--<![endif]--><meta content=\"text/html; charset=UTF-8\"\nhttp-equiv=\"Content-Type\"><meta content=\"width=device-width,initial-scale=1\"\nname=\"viewport\"><style>#outlook a { padding:0; }\n      body { margin:0;padding:0;-webkit-text-size-adjust",
+      "source": "TikTok",
+      "date": "2025-10-28T17:40:45+00:00",
+      "themes": [
+        "neuromorphic",
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.18,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "ecosystem",
+        "one",
+        "opportunity",
+        "next",
+        "launch"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "REMINDER - [REGISTER NOW] Optimizing content for inclusion in the era of AI",
+      "description": "\n<!DOCTYPE HTML>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" dir=\"ltr\" lang=\"en-us\">\n    <head>\n\n    <!--[if gte mso 9]>\n      <xml>\n         <o:OfficeDocumentSettings>\n            <o:PixelsPerInch>96</o:PixelsPerInch>\n         </o:OfficeDocumentSettings>\n      </xml>\n    <![endif]-->\n\n    <meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\"/>\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=",
+      "source": "Date:Subject:To:MIME-Version:Message-ID:List-Unsubscribe:\n\t List-Unsubscribe-Post:Content-Type;\n\tb=kBJIMmainpmt3NbmzIXQYtKTrK4BVW5MdXendkQe1nSVGoCMrGKdEVOLYbT8evMNx\n\t 0c0VOvmXpIz+3MLlK5PQB+6daot7WkfSSxae8Xocxm8LzdldLRHfBuP+ME8ZdrTYVK\n\t HsuX3yg4xubdNnUSgAbE8pwo9viXQzkQyOeRshiUVIXWTMA4+TttjTo+eueyDPIhFX\n\t bMCFt0dykLo79UXTJ3frBAMo39m1eApQ7uy+PBjGGJfm5qFjftn6RxQnCye3GOynDn\n\t ppOAyqpQb5gbmr2yu/ytu4kd716XBgJN/wYp3nscPJ2Mih1B1LtNpnZQmCJZy8ZQz3\n\t raf6ZM367105w==",
+      "date": "2025-11-05T09:19:14-08:00",
+      "themes": [
+        "atomic",
+        "pattern"
+      ],
+      "relevance": 0.12,
+      "action_items": [
+        "newpar { margin: 0; height: 100%"
+      ],
+      "patterns": [
+        "one",
+        "innovation",
+        "new"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "",
+      "description": "<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/><meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/><meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/><meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"/><meta name=\"x-apple-disable-message-reformatting\"/><meta content=\"light dark\" name=\"color-scheme\"/><meta content=\"light",
+      "source": "TikTok",
+      "date": "2025-11-06T14:14:19+00:00",
+      "themes": [
+        "atomic",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "one",
+        "new",
+        "next"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "fix these common conversion leaks before bfcm\u00a0",
+      "description": "https://customers.us18.list-manage.com/track/click?u=028da96442f1dc5b395129076&id=c516c8eda0&e=733d8a0f11\n\nHi Michael,\n\nI just got off a call with a DTC agency owner who said something we\u2019re all thinking:\n\n\u201cThe next three weeks are going to be multiple months of work compressed into a short window.\n\nWe\u2019re a small team, everyone\u2019s stretched thin, and our spend has to go farther.\u201d\n\nThat\u2019s the season we\u2019re in:\n\nLimited bandwidth, limited budget, and ads getting more expensive by the day.\n\nCPMs on M",
+      "source": "Reply-To:To:Date:Message-ID:X-MC-User:Feedback-ID:\n\t List-ID:List-Unsubscribe:List-Unsubscribe-Post:Content-Type:\n\t MIME-Version:CC:Date:Subject:From;\n\tb=UCazgKB6DK1184U2YoEWu93/jqy2r6Yb0+E9liv4qpvDBCPO1mCOVcCjirt8DONr6\n\t EAzAs7w0Hd8pkp00tD3mYKI+uiSvCDA1DxeG3tAeSwMW3i/y16jOlg+sdAzeMSlaIK\n\t bw3S7YT1OpiKrPCBVMBY+Au8mwOavHppRDuWFwXSwiLNQiFpIFjwTGxyjb1zRnYGfq\n\t rXfgSxdUvNuAlFrNpWo2R44DlgunMN1sHhHAaSzAIG2IqemfPKXnOdtOJx5iP9LDLP\n\t JkMD1PexsKmfLpeMlmsfmF/EU5FLkDMwCkSBb/SxJfGu9zjJ+5TUomeMvs8ZWAarqc\n\t lGdz36o/XubRg==",
+      "date": "2025-10-27T11:14:51+00:00",
+      "themes": [
+        "atomic",
+        "platform"
+      ],
+      "relevance": 0.12,
+      "action_items": [
+        "\u201d\n\nThe hackathon assignment: Quick-launch conversion tactics you can plug in for immediate Black Friday lift"
+      ],
+      "patterns": [
+        "platform",
+        "one",
+        "next",
+        "launch"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "Did you just log in near Oakland on a new device?",
+      "description": "========================================\nThis wasn't me\nhttps://www.facebook.com/n/?login_alerts%2Fstart%2F&fbid=10232867059112596&s=e&context=Q7DVBAK5xvdaL2iSabRq0DLsMInceJgxA1inS0yK73KS_iAhbLoDImSk-WWIjEEsZ7K88md2I4VpBe2XTx56kWWutzkzsUp5RpoNJrT6syFnLYOD6vZgejcvJmqr4N3zVHav5UugJuz3QYDHR9fgd9dHZabITuxy4t9bjHqNtRixkmmDw73VgOLw_rZ7mMBeeO1ZOZpO7LAINslTv3FBilwRO4nwp1dBGaTt_tE7zK2X90Qurd7wlwgIs3d6NeKQ9XOCy1mLl62h3Ro13L_kaSHJEQPXmrLK_s4&aref=1761574229817408&medium=email&mid=642242ca0b56eG3e774137G642",
+      "source": "MIME-Version:Content-Type;\n\tb=S+wN0CQux9ndBafls+0loqHy7bIQgxGt1PFwVfCEP5ZKkGAe07eQVFDED223F04Qy\n\t AHNJAloXFJZo6pDJiO2SW7gtu9v36bVzNE7tCVphpocWV1zA1b0ko/bAfsKEaViM9C\n\t PWDMCiA15DE9mOEOzkbuvbv24qJxNaKCBulwxlzw=",
+      "date": "2025-10-27T07:10:29-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [
+        "com&n_sg=Q6bPBAI76jXcc8JqXKC5IfUXrjg0VTyrdciX_7v2A5DEvIROHw&rms=v2&irms=1\n\n========================================\n\nHi Michael,\n\nSecurity alert: login near Oakland on a new device\n\nHi Michael,\n\nSomeo",
+        "We'll continue to notify you whenever your username and password are used to login from a new browser or device"
+      ],
+      "patterns": [
+        "platform",
+        "one",
+        "new",
+        "future"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "81309760 is your security code",
+      "description": "\nConfirm it's you\n\nHi Michael,We\u2019re sending a security code to confirm it\u2019s really you. Here's the code to enter in Facebook:81309760Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren't trying to confirm it's your account, it's possible someone is trying to hack your account. As long as you don't shar",
+      "source": "MIME-Version:Content-Type;\n\tb=NYt1N8EbDtrFMCOb5Br0cTROh8e4VFFUwGKfcs4Il3fg9Wnk5RU6PPkrTrQ4ZTiJu\n\t jHW7ECEmRhj1eacAAqDws7LcYHwEXMPBJcncAEHj1HzaT+fmxW2HzT24rnwACtQfnM\n\t 0c0HIYJ3aUpnrK/6KFqROtJ/8fhKJkyjkDAUMobU=",
+      "date": "2025-10-27T11:17:26-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "Did you just log into Facebook with a code?",
+      "description": "========================================\nWas this you?\n========================================\n\nHi Michael,\n\nSecurity alert: login with a code\n\nHi Michael,\n\nSomeone just used the email address mataluni@me.com and a code to log into your Facebook account. We're getting in touch because this could be a sign that someone is trying to hack your account. If this wasn't you, we're here to help you take some simple steps to secure your account.\n\nThanks,\nThe Facebook team\n\nIf this was you, you can igno",
+      "source": "MIME-Version:Content-Type;\n\tb=vqAL3h+4bIn1SSJl5N6cKbDg1bo7rCGNkB2z64mpUGeoaIdseCP/Jd1ya2Z8p3I4X\n\t MstwgihSWWpmF1jEVibOsgGRSdq46fxjVo23npihParNDWaG1h5SHuD9ZCc8v4OV0E\n\t eKhP31olm+9l47gqk/dWKEYfLHhA6f7g6Hw9LZ5Y=",
+      "date": "2025-10-27T07:10:09-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "29102209 is your security code",
+      "description": "\nConfirm it's you\n\nHi Michael,We\u2019re sending a security code to confirm it\u2019s really you. Here's the code to enter in Facebook:29102209Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren't trying to confirm it's your account, it's possible someone is trying to hack your account. As long as you don't shar",
+      "source": "MIME-Version:Content-Type;\n\tb=bNNICaRHCeu7cIe3GOgMFkv4TQcD8Kk0q0VPnc9meZJU83iNLqBI1Ezdb8WtLqowV\n\t MKZBTQEjclM4B5p394kgYCU0pUF5tOM86pEAmrlmiiKWDo93MaU2ZH/HgB6sHVekXN\n\t 5gwNq/RtV/TgPV93/dt1tiv7pKWNx2EiFXkq46XU=",
+      "date": "2025-10-27T07:13:27-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "67281848 is your password reset code",
+      "description": "Hi Michael,\n\nOne more step to change your password\n\nHi Michael,We got your request to change your password. Enter this code in Facebook:67281848Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren\u2019t trying to reset your password, let us know. You don't need to take any further steps, as long as you don\u2019",
+      "source": "MIME-Version:Content-Type;\n\tb=X1K72xLkGOH2oVJAPzmn5mNsWospsWExsv1Ha87X3nIxmiLDc8r9swQinl9LLXaHF\n\t 0GdUKeOoU/PKK2db37vE5KQJcTjIC8lUeA59WxcF6FOJex8QS91dNNjLS30BjrzSqU\n\t F6x6WJjjJC4LZ1OlsmuOsum0RQXmOAMrwSOs8vEc=",
+      "date": "2025-10-27T11:22:51-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "67817585 is your password reset code",
+      "description": "Hi Michael,\n\nOne more step to change your password\n\nHi Michael,We got your request to change your password. Enter this code in Facebook:67817585Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren\u2019t trying to reset your password, let us know. You don't need to take any further steps, as long as you don\u2019",
+      "source": "MIME-Version:Content-Type;\n\tb=cFUNTllZmzagZHP55/1nFkhcgIDYqfg+GET28OQ8MQTf0kBGaPMEeGo2aAMeniDS8\n\t YazW0a/8FmCvW//O0vEE7jvs+tLg4xum9fXbyefC7hkQtVJceFBqEmc07xzhs8EXxl\n\t 8NgSQgyodhq4SJuLP5JUmQlBi2j+S5n1iMKSij5w=",
+      "date": "2025-10-27T07:09:26-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "Updating how Meta personalizes experiences",
+      "description": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional //EN\"><html><head><title>Facebook</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><style nonce=\"2MAGMPFk\">@media all and (max-width: 480px){*[class].ib_t{min-width:100%!important}*[class].ib_row{display:block!important}*[class].ib_ext{display:block!important;padding:10px 0 5px;vertical-align:top!important;width:100%!important}*[class].ib_img,*[class].ib_mid{vertical-align:top!important}*[class].mb_blk{display:b",
+      "source": "MIME-Version:Content-Type;\n\tb=B6VVROFoZJCMdlMn9FJNm4y0SdAPv4MQw2nOq184bDq71zpKRZGIm3K6viQh3uoQL\n\t 013vOMJWgcwKwKDtG/wK83jwtkGBK8nm+9sjd62Y2FjutJqkqTjw0yo4Iy76UKdIc0\n\t SPoeRiiFLnD9+AdosEkz1oZbXSINQPCphhFLJn+E=",
+      "date": "2025-11-03T06:31:12-08:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "Loren Washington mentioned you on Facebook",
+      "description": "Hi Michael,\n\nLoren Washington highlighted a comment for you to check out\n\nThanks,\nThe Facebook team\n\n\n\n========================================\nThis message was sent to mataluni@me.com. If you don't want to receive these emails from Meta in the future, please follow the link below to unsubscribe.\nhttps://www.facebook.com/o.php?k=AS3jIlPv6eU51G-eC8A&u=1048002871&mid=641f80468f48fG3e774137G641f84dfef761Gb7&ee=Af8_GzKLe80LtugWdEi33Ksm5xC9QZI06Ir0TisOimuwtpgTJxDVNmY1LddEym9R__6qQB54TYXv\nMeta Platfor",
+      "source": "MIME-Version:Content-Type;\n\tb=AFLIixlMUmI0PNQV28/a+uMXI24mOTQvFTQAC37aA9XK+j1eW4fZa8CqBvckbz9Gy\n\t R7RTFem8d5G/GryUqoqwq3QR2FIPnOqjFIkifUANzDrNtniG94VRW8c0sY72eoY2Oo\n\t BYlY4hkbGz5J/34cYZMlUJb3INNFY5RniKDUj1sQ=",
+      "date": "2025-10-25T11:12:18-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one",
+        "future"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "Ellie Collins posted: guys he mentioned a new one was being delivered\n ...",
+      "description": "<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/><meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/><meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/><meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"/><meta name=\"x-apple-disable-message-reformatting\"/><meta content=\"light dark\" name=\"color-scheme\"/><meta content=\"light",
+      "source": "TikTok",
+      "date": "2025-10-24T13:42:12+00:00",
+      "themes": [
+        "atomic",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "one",
+        "new",
+        "next"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "September Love Ruddell tagged you in a post on Facebook",
+      "description": "========================================\nSee post\nhttps://www.facebook.com/nd/?september.ruddell%2Fposts%2Fpfbid0thumQQBaFgkh8s8zbfhGQztFuckBscmVjQJ8mT4eNcmnbzi65spm94DzQPf5MKipl&aref=1761676062472882&medium=email&mid=6423be253b7e0G3e774137G6423c2be9bab2Gdb&bcode=2.1761681420.Abxz_LQ3YHncILA19u0&n_m=mataluni%40me.com&n_sg=Q6bPBAJjUdQ_F0QRhrbUwrxtq-kyoyq0RiUeQmWfb0qT3oAHxQ\n\n========================================\n\nHi Michael,\n\nSeptember Love Ruddell tagged you and 41 others in a post.\n\nSeptember",
+      "source": "MIME-Version:Content-Type;\n\tb=sTB/KsI8tAxhsVC3bo3XSFKfJf0k3SN5YOslp6VfqnWtWQWv7oWqi4Kx2YM3zP3ko\n\t F7wegQEVvVSbhBMZ2HHiTjWRsvHP6+D97T7VP7G6RcoHt7oDbtvUFVDvzAT1IMtcul\n\t RbVVZECUipm5WOl9nwTlsjdDqLnx1pktWDrwSQXQ=",
+      "date": "2025-10-28T12:57:00-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one",
+        "future"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "Chase Hopkins posted: I swear every day in Dallas I see another girl\n w...",
+      "description": "<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/><meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/><meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/><meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"/><meta name=\"x-apple-disable-message-reformatting\"/><meta content=\"light dark\" name=\"color-scheme\"/><meta content=\"light",
+      "source": "TikTok",
+      "date": "2025-10-29T14:48:01+00:00",
+      "themes": [
+        "atomic",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "one",
+        "new",
+        "next"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "Bring back liberal nationalism",
+      "description": "View this post on the web at https://www.noahpinion.blog/p/bring-back-liberal-nationalism\n\nThe Trump administration is not doing a good job. Tariffs are punishing the U.S. economy. Masked federal agents are rampaging through the streets of American cities, grabbing people off the street. Corruption is rampant. The people Trump put in charge of the country\u2019s public health services don\u2019t even believe in the germ theory of disease [ https://substack.com/redirect/79ec9941-49e4-4cbf-8551-435a90238ffc",
+      "source": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=Da6BuOvK1rSjgoYbg6PF/e7YkrfY6O/++M8MnyyNmMg=;\n b=CPt2XEioLZbmsz2CgH1bd84KYjoO087x9m9ZL65O9chbxRMrRFfKCQrVTh8ECySWRydkzMS6lBbu3ryaUqc2iGGWWSUTF9VZLuEbnezIDbqNSZyhDguVVnHw5VUgLvEzkSOzMynMLjWe9+K4+wKxmZ/rdLVGbJmoZjMhBSsdbkE=",
+      "date": "2025-10-28T09:47:57+00:00",
+      "themes": [
+        "guardian",
+        "atomic"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "agent",
+        "one"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "Mamdani's biggest challenges",
+      "description": "View this post on the web at https://www.noahpinion.blog/p/zohrans-real-problems-arent-what\n\nAs expected, Zohran Mamdani has won the New York City mayoral election. Most of the commentary about Mamdani has centered around either his Muslim religion, his leftist ideology, or some intersection of the two. This is only to be expected. The GOP electoral victory in 2024 left the Democratic party without any obvious leader, and Mamdani is a charismatic guy who ran a slick, competent campaign and inspi",
+      "source": "From: Subject: Subject: Content-Type: Mime-Version;\n bh=l0tyj15q7pZBS3ZBHZuP6C8XU7/k7jD1tuG9I+gb3P4=;\n b=Yoo6yCZTy91EP72FR11rOCtocjpfEFtrjKEk4Y3PKNd33lVwEhm4SVcycrpetYREXOy3VBLbUqpWPBvg2zRbNs9+pBydXgwcwiDi/GCKbmLNQsQcF+qf5N47uWW7tDJPtmpHB/BxrNDnpZrTeXlztWkuvHsoLa1BDxCBbpq7HXE=",
+      "date": "2025-11-11T21:16:49+00:00",
+      "themes": [
+        "atomic"
+      ],
+      "relevance": 0.12,
+      "action_items": [
+        "blog/p/zohrans-real-problems-arent-what\n\nAs expected, Zohran Mamdani has won the New York City mayoral election"
+      ],
+      "patterns": [
+        "one",
+        "new",
+        "future"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "29544745 is your security code",
+      "description": "\nConfirm it's you\n\nHi Michael,We\u2019re sending a security code to confirm it\u2019s really you. Here's the code to enter in Facebook:29544745Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren't trying to confirm it's your account, it's possible someone is trying to hack your account. As long as you don't shar",
+      "source": "MIME-Version:Content-Type;\n\tb=p4NDrsVxhyjcmbT4St87nBbZhNAiZykW/Vuux+IVDvlJFEjtDwRcaGgL2GIh5edak\n\t jBWN2k1HIELTxUAxFqly32O4byAFnqkBPHiz6OJQsjpnDAYAoTx/ndP6/8OsCmXQdX\n\t 6XbJPQ6jKtoXst4dAGEQy1/BHLvRiO/eTUnD2YBA=",
+      "date": "2025-10-31T11:53:27-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "67281848 is your password reset code",
+      "description": "Hi Michael,\n\nOne more step to change your password\n\nHi Michael,We got your request to change your password. Enter this code in Facebook:67281848Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren\u2019t trying to reset your password, let us know. You don't need to take any further steps, as long as you don\u2019",
+      "source": "MIME-Version:Content-Type;\n\tb=EMEGKbm31rxm2xlRBBoKiRxH/GXFEIetNNTMPZ34uP5tRc4Di+fuvLLqzSZMLYqth\n\t Tl37vSPlizliInclOux7OWAmOxN3rWWWxZ/xcNNq2y76pc4+Onf4xJHqQpLpXkmWzE\n\t RiCdkeJ2uyZqvpSCS2cTm2rmqp6eaFoepwx0+XQs=",
+      "date": "2025-10-31T11:54:19-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "Your password has been changed",
+      "description": "========================================\nWas this you?\n========================================\n\nHi Michael,\n\nSecurity alert: password change\n\nHi Michael,\n\nSomeone just used the email address mataluni@me.com to log into your account and change your password. If this wasn't you, we're here to help you take some simple steps to secure your account.\n\nThanks,\nThe Facebook team\n\nIf this was you, you can ignore this email.\n\nThanks, Facebook Security\n\nWondering if this email is really from us? Visit th",
+      "source": "MIME-Version:Content-Type;\n\tb=ZTdDGtOr94+3RLYKbGYocbd9cBID/5cBRZgfN+wWYMhdebuDLYyY7DMJRnHAsuRP6\n\t ddM4hqUPmq+uoxB7uxEliuG5oy0XDn3+BAXl3OwvwOhL2tirDsN/5qDXu0wLRQ0/V0\n\t fYMOgXJNW5STtTHGH8vRbY5dXXbP7Viw5v+FajF8=",
+      "date": "2025-10-31T11:55:22-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "29544745 is your security code",
+      "description": "\nConfirm it's you\n\nHi Michael,We\u2019re sending a security code to confirm it\u2019s really you. Here's the code to enter in Facebook:29544745Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren't trying to confirm it's your account, it's possible someone is trying to hack your account. As long as you don't shar",
+      "source": "MIME-Version:Content-Type;\n\tb=fiKzzitx6Tr2WUFXrN8LwWy2fMOnVNG01YFXXXjkZo0Q2BAfqaThI+cpCZ/rg/lw5\n\t i0mTi8nKkqlz+VD+fMX7CJi7KSHWnOUJ0ku6K4IzAnN/rn5lYmCiGExstdu+Q5h6SL\n\t A3w1IOlHXdOEoWbKn62o0jcqhUFJuEbz2pxkn6WU=",
+      "date": "2025-10-31T11:53:21-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "59677509 is your password reset code",
+      "description": "Hi Michael,\n\nOne more step to change your password\n\nHi Michael,We got your request to change your password. Enter this code in Facebook:59677509Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren\u2019t trying to reset your password, let us know. You don't need to take any further steps, as long as you don\u2019",
+      "source": "MIME-Version:Content-Type;\n\tb=NqRz5b0waGNO2jLY8BFh9OQzHV6jpbWn4pV68UK+2CDgynkdslfDtz3ZR7GqyGCUM\n\t kCtiTJuHJDCkGlJqKYdyiW36pGXc5B4/FRMFSRqZFjfyQn5uzM0jgfKTi/Q7AEjnHC\n\t nPcoIBv0l11azEa5Y8y0LBotCUuCHBg9Rgc7T/OM=",
+      "date": "2025-11-13T13:11:05-08:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "49396860 is your security code",
+      "description": "\nConfirm it's you\n\nHi Michael,We\u2019re sending a security code to confirm it\u2019s really you. Here's the code to enter in Facebook:49396860Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren't trying to confirm it's your account, it's possible someone is trying to hack your account. As long as you don't shar",
+      "source": "MIME-Version:Content-Type;\n\tb=Jiu9GG0o/7lbgsLfhUGSRktm+rNHm2SArCGs1Ky4Ly0YaHKxSR70wTt7FTZrVfdT7\n\t eq7q36E4avXE4CLK6AFxZQNlGr7lBI3I1/zsRTXkTi7nodeDPzRqzPw60bX0R56OyC\n\t pxKukFPV119l3HtQV+qFtyB9aoTDrsWdlBLTaTBw=",
+      "date": "2025-11-13T13:05:12-08:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "42685315 is your password reset code",
+      "description": "Hi Michael,\n\nOne more step to change your password\n\nHi Michael,We got your request to change your password. Enter this code in Facebook:42685315Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren\u2019t trying to reset your password, let us know. You don't need to take any further steps, as long as you don\u2019",
+      "source": "MIME-Version:Content-Type;\n\tb=kWQjGYSP7ku6P30y9xRVBW/oLdbsKdcohs3c9LBVzs2/kpyB9eMyzTK4RuC+5ei05\n\t 6V/RILDQJYc1pQokNF0adGwuCqDN7ynP699XdAzIS65pSxNKDGCLEnywgnQOh2Wtmm\n\t vje1FmFfaMiRG4ETDld/kwBCPl2r5wdHhn4nWc4c=",
+      "date": "2025-11-13T13:12:17-08:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "49396860 is your security code",
+      "description": "\nConfirm it's you\n\nHi Michael,We\u2019re sending a security code to confirm it\u2019s really you. Here's the code to enter in Facebook:49396860Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren't trying to confirm it's your account, it's possible someone is trying to hack your account. As long as you don't shar",
+      "source": "MIME-Version:Content-Type;\n\tb=ImN/eAmWKOp+SrmkevahLhRLnFYrZGMd8n6EKS1fKy6PKljdw1MZjmtXSeYYxVHWg\n\t w4b19TcFHW3UAjZ/1pHY7kAQpKT1eCuFG89eBpfSq5DB+w552qqeJRLdinGAit6jsu\n\t JPa0mptCSL+f/gZC6OdftnlMuMyOhbUOVJ372pIQ=",
+      "date": "2025-11-13T13:04:46-08:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "49396860 is your security code",
+      "description": "\nConfirm it's you\n\nHi Michael,We\u2019re sending a security code to confirm it\u2019s really you. Here's the code to enter in Facebook:49396860Don't share this code with anyone.If someone asks for this codeDon't share this code with anyone, especially if they tell you they work for Facebook or Meta. They may be trying to hack your account.Didn't request this?If you got this email but aren't trying to confirm it's your account, it's possible someone is trying to hack your account. As long as you don't shar",
+      "source": "MIME-Version:Content-Type;\n\tb=quau5XWiB8HyVXPUJlFQ5Pw4zeO7IhSsCdERE7/Fz3bRpNenZcUckON1hxB1cOiTo\n\t CWkTBbvg6bR395UKcx0859qdw0+FR+XxHpkFIlktnMzBSR5trUyxm53NS267h7lLRi\n\t vj27RwRKgDor58xdNkMvAnsMhj9RylyCLHLiiiu4=",
+      "date": "2025-11-13T13:04:51-08:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "Hey Michael, AncestryDNA is only $39!",
+      "description": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n Unwrap the gift of discovery.  \n  \n\n\n\n\nhttps://click.email.ancestry.com/u/?qs=20eb5ccd13d29173a5ca3bf1f7355e9170ab70362e7fb65cbf83056b2471ce9502514f9fb4ece9e855498ad4808dc2c1840528c7aad6244c9aa3c054d0547c57 \n\nhttps://click.email.ancestry.com/u/?qs=20eb5ccd13d2917313ccce55dec9ae7a18a8a0ad93390f6f989473689aaf918cf01ec4d1f9a02c3d3acd2f011e9feefa52146295a244c5580a237e5306a2f189 \nLog In \n\n\n\n \n \n \n \n\n\n\n\n\n\n\n\n \n \nhttps://click.email.ancestry.com/u/?qs=20eb5ccd13d29173d269f",
+      "source": "To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:\n Reply-To:Message-ID:Content-Type; i=ancestry@email.ancestry.com;\n bh=DMTAL1KUznYrsKHSEALXjWnbOWi7Fq/YAKZ35CpxKTw=;\n b=tfazi9dMNF4spsA0iVQYCRZD3Qnh3rt2sTfXqccABCBhW7y4+bnbvWe4J1ycbru0rCeWSYjdnFtN\n   dgxPrWAjp0Ue4wsi1xEfpcTo16ptuTiEd4VMjkpcx4Y92ke6jnOfOuBQ0K7vBlUwTkEsw0vjuhy7\n   FUesqh8yEN4GCPGa8+w=",
+      "date": "2025-11-09T12:54:24-06:00",
+      "themes": [
+        "emergence"
+      ],
+      "relevance": 0.12,
+      "action_items": [
+        "Connect with your roots and add some new flavor to your holidaytraditions"
+      ],
+      "patterns": [
+        "discovery",
+        "new"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "",
+      "description": "<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/><meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/><meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/><meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"/><meta name=\"x-apple-disable-message-reformatting\"/><meta content=\"light dark\" name=\"color-scheme\"/><meta content=\"light",
+      "source": "TikTok",
+      "date": "2025-10-30T14:02:07+00:00",
+      "themes": [
+        "atomic",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "one",
+        "new",
+        "next"
+      ]
+    },
+    {
+      "type": "convergence",
+      "title": "Joey OH mentioned you on Facebook",
+      "description": "Hi Michael,\n\nJoey OH highlighted a comment for you to check out\n\nThanks,\nThe Facebook team\n\n\n\n========================================\nThis message was sent to mataluni@me.com. If you don't want to receive these emails from Meta in the future, please follow the link below to unsubscribe.\nhttps://www.facebook.com/o.php?k=AS0EhYGq3rTInntMgNI&u=1048002871&mid=642511a8a094fG3e774137G6425164200c21Gb7&ee=Af-wG0IoUOxsiN-4cvECV8KWSr5oorrAv4QcSzUJWKzmTAfpkZ-h5qQ3nvhbc2WRsHfXKem9wKSs\nMeta Platforms, Inc.,",
+      "source": "MIME-Version:Content-Type;\n\tb=eeujtdGAuKtQIkYuXkNLCT/FOW9J6MemJJiBAudZCVzqNjbPTo7Zdi3p+gN5C141G\n\t 0Ue/5dxjQDWewws5Y5l7H98Oc8dsuAEeRVE9xnZgiLioiTdU+PhvCEF5gQQWj1Kktn\n\t jrhoomPyJsNL7IAprIviK0RaVmeKo2J9AcgaaCe0=",
+      "date": "2025-10-29T14:52:05-07:00",
+      "themes": [
+        "atomic",
+        "platform",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "platform",
+        "one",
+        "future"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "[REGISTER NOW] Optimizing content for inclusion in the era of AI",
+      "description": "\n<!DOCTYPE HTML>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" dir=\"ltr\" lang=\"en-us\">\n    <head>\n\n    <!--[if gte mso 9]>\n      <xml>\n         <o:OfficeDocumentSettings>\n            <o:PixelsPerInch>96</o:PixelsPerInch>\n         </o:OfficeDocumentSettings>\n      </xml>\n    <![endif]-->\n\n    <meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\"/>\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=",
+      "source": "Date:Subject:To:MIME-Version:Message-ID:List-Unsubscribe:\n\t List-Unsubscribe-Post:Content-Type;\n\tb=LvURZLmCzDkZGThLQyQ7sYM13LA6gTEUZlK/56OXKG5zvGH0xKv66FtZPQSY7tpy/\n\t 26Vo5vFR0zf39llywwxY2ab+uvxVsatpqltswrfVjtUut8dPKUSFGKFoerFLRBlhSc\n\t G+0E8dzmwjpsYaj+4g1dSo1V0T+oVpDA4EvxqvkYlW7wD2cziglZVz6mx8nmCGc7LC\n\t 58JeWrrxw/VRlrdnE5XMyyEX+eUIRd5jy3xVS8Ym+o/W/qMN5gZWw0X/+8Msede0XS\n\t N4sB6Wd10HJuUd6yqaL6qHp8n/a7Ky2pnyZdMlzSOz2cOAjxZOFDyVKgo/Oq6pbsEl\n\t ZTCJ4u3/BSL0Q==",
+      "date": "2025-10-30T10:51:02-07:00",
+      "themes": [
+        "atomic",
+        "pattern"
+      ],
+      "relevance": 0.12,
+      "action_items": [
+        "newpar { margin: 0; height: 100%"
+      ],
+      "patterns": [
+        "one",
+        "innovation",
+        "new"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "\ud83d\udc64 Dawa_Zanpo_Tibetan is someone you may know",
+      "description": "<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/><meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/><meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/><meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"/><meta name=\"x-apple-disable-message-reformatting\"/><meta content=\"light dark\" name=\"color-scheme\"/><meta content=\"light",
+      "source": "Dawa_Zanpo_Tibetan on TikTok",
+      "date": "2025-10-30T13:03:29+00:00",
+      "themes": [
+        "atomic",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "one",
+        "next",
+        "beta"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "Anne Lamott, FRIEND, and ru \u2661 posted new notes",
+      "description": "<html style=\"scrollbar-width: thin;scrollbar-color: rgb(219,219,219)rgb(255,255,255);\"><head><title>Email from Substack</title><meta charset=\"utf-8\"><style>\n@media (max-width: 1024px) {\n  .typography .pullquote-align-left,\n  .typography.editor .pullquote-align-left,\n  .typography .pullquote-align-right,\n  .typography.editor .pullquote-align-right,\n  .typography .pullquote-align-wide,\n  .typography.editor .pullquote-align-wide,\n  .typography .pullquote-align-center,\n  .typography.editor .pullquot",
+      "source": "From: Subject: Subject: Mime-Version: Sender: Sender;\n bh=A+SvdZ6/lbI5FOnMSQzX9TVzHVYSi82+IzkDQ6zzZ7s=;\n b=oliEqRmG44Tze5godbzXx21JrcfNsZjZFibY8ws+2XxtpB/Ky/+gJ9FgqsjVph5K29N1pTrxxok5whwC7gxgZ38xA/XUqt5LXqGfRF5Du4Tu2+udqMFeV3ymqhyjyVh4IGWE5G3TtQBfj/EEdeqHsiP4HYsVD631Al3+cIY8O8k=",
+      "date": "2025-10-22T11:34:51+00:00",
+      "themes": [
+        "atomic"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "one",
+        "new",
+        "next"
+      ]
+    },
+    {
+      "type": "emergence",
+      "title": "Ellie Collins posted: Replying to @Poniesarerad consider my life made\n ...",
+      "description": "<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/><meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/><meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/><meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"/><meta name=\"x-apple-disable-message-reformatting\"/><meta content=\"light dark\" name=\"color-scheme\"/><meta content=\"light",
+      "source": "TikTok",
+      "date": "2025-11-01T14:34:03+00:00",
+      "themes": [
+        "atomic",
+        "ai_safety"
+      ],
+      "relevance": 0.12,
+      "action_items": [],
+      "patterns": [
+        "one",
+        "new",
+        "trend"
+      ]
+    }
+  ]
+}

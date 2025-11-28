@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "created": "2025-11-23",
+    "load_on_startup": true,
+    "health_check_on_wake": true,
+    "source_of_truth": "orbitals/AIGuards-Backend-orbital/config/SERVICE_REGISTRY.json"
+  },
+  "services": {
+    "codeguardians_gateway": {"port": 8000, "entry": "main.py", "health": "/health/live"},
+    "tokenguard": {"port": 8001, "entry": "main.py", "health": "/health"},
+    "trust_guard": {"port": 8002, "entry": "main.py", "health": "/health"},
+    "contextguard": {"port": 8003, "entry": "main.py", "health": "/health"},
+    "biasguard_backend": {"port": 8004, "entry": "run_server.py", "health": "/health"},
+    "healthguard": {"port": 8005, "entry": "run_server.py", "health": "/health"},
+    "advanced_knock_backend": {"port": 8000, "entry": "main.py", "health": "/api/health"}
+  },
+  "summary": {
+    "total_services": 7,
+    "health_check_on_wake": true
+  }
+}

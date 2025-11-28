@@ -1,0 +1,8 @@
+{
+  ".abeone_memory/ABEONE_CORE_MEMORY.json": "95c86289e527b0fc0dbd5b1589d843636a36740e50f6cf2c5c6ce8031c65a26e",
+  ".ai-context-source-of-truth.json": "9d58c62ecb77552523a13a8233360886258e2c8795c4295529086ceaceb13c2a",
+  ".cursor/chat_hooks/boot_abeone.py": "74afd750318a52616915da1dbcd301dd4bb89bd715807ea5c9e6db8a074d567f",
+  ".cursor/chat_hooks/pre_chat.py": "f4647bfe15ce1e4189d352c95f1e92988a2b5e4fb90cb10fcb0fd06342ee0a8b",
+  "scripts/abeone-memory-loader.py": "5f410ab4410fd920ebef32e547b313d3096dd59920312f178da95b8939f41ec4",
+  "scripts/abeone-validator.py": "35bb7eb4467611b280ab143074e3d58abbf4bad099aa667709d2671dd2ea2e01"
+}

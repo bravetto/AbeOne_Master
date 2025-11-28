@@ -1,0 +1,424 @@
+---
+description: CI/CD workflows and automation for Trust Guard
+---
+
+# CI/CD Workflows and Automation
+
+## GitHub Actions Workflows
+
+### Main CI/CD Pipeline
+Create `.github/workflows/ci-cd.yml`:
+
+```yaml
+name: Trust Guard CI/CD
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+env:
+  AWS_REGION: us-east-1
+  ECR_REPOSITORY: trust-guard
+  ECS_SERVICE: trust-guard-service
+  ECS_CLUSTER: trust-guard-cluster
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9, 3.10, 3.11]
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest pytest-cov black isort mypy
+    
+    - name: Lint with flake8
+      run: |
+        pip install flake8
+        flake8 trustguard/ main.py --count --select=E9,F63,F7,F82 --show-source --statistics
+    
+    - name: Check code formatting with Black
+      run: black --check trustguard/ main.py
+    
+    - name: Check import sorting with isort
+      run: isort --check-only trustguard/ main.py
+    
+    - name: Type checking with mypy
+      run: mypy trustguard/ main.py --ignore-missing-imports
+    
+    - name: Run tests with pytest
+      run: |
+        pytest tests/ -v --cov=trustguard --cov-report=xml --cov-report=html
+    
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage.xml
+        flags: unittests
+        name: codecov-umbrella
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Run Trivy vulnerability scanner
+      uses: aquasecurity/trivy-action@master
+      with:
+        scan-type: 'fs'
+        scan-ref: '.'
+        format: 'sarif'
+        output: 'trivy-results.sarif'
+    
+    - name: Upload Trivy scan results to GitHub Security tab
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        sarif_file: 'trivy-results.sarif'
+
+  build-and-push:
+    needs: [test, security]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+    
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v2
+    
+    - name: Build, tag, and push image to Amazon ECR
+      id: build-image
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        IMAGE_TAG: ${{ github.sha }}
+      run: |
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:latest .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
+        echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
+
+  deploy-staging:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/dev'
+    environment: staging
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+    
+    - name: Deploy to staging
+      run: |
+        cd aws
+        ./deploy.sh staging
+    
+    - name: Run integration tests
+      run: |
+        python -m pytest tests/integration/ -v --url=https://staging-api.trust-guard.com
+
+  deploy-production:
+    needs: [build-and-push, deploy-staging]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    environment: production
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+    
+    - name: Deploy to production
+      run: |
+        cd aws
+        ./deploy.sh production
+    
+    - name: Verify deployment
+      run: |
+        curl -f https://api.trust-guard.com/health
+        python -m pytest tests/smoke/ -v --url=https://api.trust-guard.com
+    
+    - name: Notify deployment success
+      uses: 8398a7/action-slack@v3
+      with:
+        status: success
+        channel: '#deployments'
+        text: 'Trust Guard deployed successfully to production'
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+```
+
+### Performance Testing Workflow
+Create `.github/workflows/performance.yml`:
+
+```yaml
+name: Performance Testing
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Daily at 2 AM
+  workflow_dispatch:
+
+jobs:
+  performance-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install pytest pytest-benchmark locust
+    
+    - name: Run performance benchmarks
+      run: |
+        pytest tests/performance/ -v --benchmark-only --benchmark-save=performance
+    
+    - name: Run load tests
+      run: |
+        locust -f tests/performance/load_test.py --headless -u 100 -r 10 -t 60s --html=load_test_report.html
+    
+    - name: Upload performance results
+      uses: actions/upload-artifact@v3
+      with:
+        name: performance-results
+        path: |
+          .benchmarks/
+          load_test_report.html
+```
+
+### Security Scanning Workflow
+Create `.github/workflows/security.yml`:
+
+```yaml
+name: Security Scanning
+
+on:
+  schedule:
+    - cron: '0 0 * * 1'  # Weekly on Monday
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  dependency-scan:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install safety bandit
+    
+    - name: Run safety check
+      run: safety check --json --output safety-report.json
+    
+    - name: Run bandit security linter
+      run: bandit -r trustguard/ -f json -o bandit-report.json
+    
+    - name: Upload security reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: security-reports
+        path: |
+          safety-report.json
+          bandit-report.json
+
+  container-scan:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Build Docker image
+      run: docker build -t trust-guard:test .
+    
+    - name: Run Trivy vulnerability scanner
+      uses: aquasecurity/trivy-action@master
+      with:
+        image-ref: 'trust-guard:test'
+        format: 'sarif'
+        output: 'trivy-results.sarif'
+    
+    - name: Upload Trivy scan results
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        sarif_file: 'trivy-results.sarif'
+```
+
+## Pre-commit Configuration
+Create `.pre-commit-config.yaml`:
+
+```yaml
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: debug-statements
+
+  - repo: https://github.com/psf/black
+    rev: 22.3.0
+    hooks:
+      - id: black
+        language_version: python3.11
+
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.950
+    hooks:
+      - id: mypy
+        additional_dependencies: [types-all]
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 5.0.4
+    hooks:
+      - id: flake8
+        args: [--max-line-length=88, --extend-ignore=E203]
+
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.7.4
+    hooks:
+      - id: bandit
+        args: [-r, trustguard/, -f, json, -o, bandit-report.json]
+```
+
+## Deployment Scripts
+
+### Enhanced Deploy Script
+Update `aws/deploy.sh` with CI/CD integration:
+
+```bash
+#!/bin/bash
+set -e
+
+ENVIRONMENT=${1:-production}
+IMAGE_TAG=${2:-latest}
+
+echo "Deploying Trust Guard to $ENVIRONMENT with image tag $IMAGE_TAG"
+
+# Build and push Docker image
+if [ "$ENVIRONMENT" != "infrastructure" ]; then
+    echo "Building and pushing Docker image..."
+    docker build -t trust-guard:$IMAGE_TAG .
+    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_REGISTRY
+    docker tag trust-guard:$IMAGE_TAG $ECR_REGISTRY/trust-guard:$IMAGE_TAG
+    docker push $ECR_REGISTRY/trust-guard:$IMAGE_TAG
+fi
+
+# Deploy infrastructure
+if [ "$ENVIRONMENT" = "infrastructure" ] || [ "$ENVIRONMENT" = "production" ]; then
+    echo "Deploying CloudFormation stack..."
+    aws cloudformation deploy \
+        --template-file infrastructure.yml \
+        --stack-name trust-guard-$ENVIRONMENT \
+        --parameter-overrides \
+            EnvironmentName=$ENVIRONMENT \
+            ImageTag=$IMAGE_TAG \
+        --capabilities CAPABILITY_IAM
+fi
+
+# Update ECS service
+if [ "$ENVIRONMENT" != "infrastructure" ]; then
+    echo "Updating ECS service..."
+    aws ecs update-service \
+        --cluster trust-guard-$ENVIRONMENT \
+        --service trust-guard-service \
+        --force-new-deployment
+fi
+
+echo "Deployment completed successfully!"
+```
+
+## Environment Configuration
+
+### GitHub Secrets
+Required secrets for CI/CD:
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
+- `SLACK_WEBHOOK_URL` (optional)
+- `CODECOV_TOKEN` (optional)
+
+### Environment Variables
+Set in GitHub repository settings:
+- `ECR_REGISTRY`: AWS ECR registry URL
+- `AWS_REGION`: AWS region (us-east-1)
+
+## Monitoring and Alerting
+
+### Deployment Notifications
+- Slack notifications for deployment status
+- Email alerts for failed deployments
+- GitHub status checks for PR validation
+
+### Performance Monitoring
+- Daily performance benchmark runs
+- Load testing with Locust
+- Performance regression detection
+
+### Security Monitoring
+- Weekly security scans
+- Dependency vulnerability checks
+- Container security scanning
+- Code security analysis with Bandit

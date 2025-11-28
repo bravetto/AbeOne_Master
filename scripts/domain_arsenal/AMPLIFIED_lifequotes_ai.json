@@ -1,0 +1,265 @@
+{
+  "prime_domain": "lifequotes.ai",
+  "amplified_at": "2025-11-19T16:39:52.355113",
+  "layers": {
+    "layer_1_parallel": {
+      "sibling_domains": [
+        "insurancelife.ai",
+        "insurancegroup.ai",
+        "quoteinsurance.ai",
+        "iinsurance.ai"
+      ],
+      "variations": {
+        "insurancelife.ai": {
+          "funnel_variation": "Life insurance \u2192 Health insurance upsell \u2192 Senior insurance",
+          "cross_link_strategy": "Link to lifequotes.ai for authority",
+          "seo_angle": "Life insurance for seniors"
+        },
+        "insurancegroup.ai": {
+          "funnel_variation": "Group insurance \u2192 Individual insurance \u2192 Family plans",
+          "cross_link_strategy": "Link to lifequotes.ai for authority",
+          "seo_angle": "Group insurance plans"
+        },
+        "quoteinsurance.ai": {
+          "funnel_variation": "Quote comparison \u2192 Best match \u2192 Purchase",
+          "cross_link_strategy": "Link to lifequotes.ai for authority",
+          "seo_angle": "Insurance quote comparison"
+        },
+        "iinsurance.ai": {
+          "funnel_variation": "Insurance search \u2192 Quote tool \u2192 Comparison",
+          "cross_link_strategy": "Link to lifequotes.ai for authority",
+          "seo_angle": "Insurance search engine"
+        }
+      },
+      "deployment_order": [
+        "lifequotes.ai",
+        "insurancelife.ai",
+        "insurancegroup.ai",
+        "quoteinsurance.ai"
+      ],
+      "cross_link_map": {
+        "hub": "lifequotes.ai",
+        "spokes": [
+          "insurancelife.ai",
+          "insurancegroup.ai",
+          "quoteinsurance.ai",
+          "iinsurance.ai"
+        ],
+        "strategy": "All domains link to hub \u2192 Hub links to all domains \u2192 SEO boost"
+      }
+    },
+    "layer_2_spine": {
+      "spine_domain": "insurancehub.ai",
+      "spine_structure": {
+        "homepage": "Insurance comparison hub",
+        "life_insurance": "\u2192 lifequotes.ai",
+        "health_insurance": "\u2192 healthinsurance.ai",
+        "auto_insurance": "\u2192 autoinsurance.ai",
+        "home_insurance": "\u2192 homeinsurance.ai"
+      },
+      "authority_flow": "All sub-domains link to spine \u2192 Spine ranks \u2192 Authority flows back",
+      "seo_benefit": "Domain authority consolidation = Higher rankings"
+    },
+    "layer_3_revenue": {
+      "offer_1_upsell": {
+        "name": "Premium Insurance Comparison Tool",
+        "price": "$29/month",
+        "placement": "After free quote",
+        "conversion_target": "5%"
+      },
+      "offer_2_high_ticket": {
+        "name": "Insurance Strategy Consultation",
+        "price": "$497 one-time",
+        "placement": "Email sequence day 3",
+        "conversion_target": "1%"
+      },
+      "offer_3_recurring": {
+        "name": "Insurance Monitor Subscription",
+        "price": "$9.99/month",
+        "placement": "Post-purchase",
+        "conversion_target": "10%"
+      },
+      "affiliate_offers": [
+        "Policygenius (life insurance)",
+        "Lemonade (renters/home)",
+        "SelectQuote (senior life)",
+        "HealthMarkets (health insurance)"
+      ],
+      "revenue_multiplier": "3x-5x base revenue"
+    },
+    "layer_4_traffic": {
+      "stream_a_organic": {
+        "seo": {
+          "target_keywords": [
+            "life insurance quotes",
+            "best life insurance",
+            "life insurance comparison"
+          ],
+          "content_calendar": "3 posts/week",
+          "optimization": "Weekly"
+        },
+        "reddit": {
+          "subreddits": [
+            "r/insurance",
+            "r/personalfinance",
+            "r/financialplanning"
+          ],
+          "strategy": "Answer questions + Provide value + Link to tool",
+          "frequency": "Daily"
+        },
+        "quora": {
+          "topics": [
+            "Life Insurance",
+            "Insurance Quotes",
+            "Financial Planning"
+          ],
+          "strategy": "Answer questions + Link to comparison tool",
+          "frequency": "3x/week"
+        }
+      },
+      "stream_b_paid": {
+        "retargeting": {
+          "platform": "Facebook + Google",
+          "audience": "Website visitors",
+          "budget": "$50/day",
+          "angle_1": "Save money on insurance",
+          "angle_2": "Compare quotes in 2 minutes",
+          "angle_3": "Find the best coverage"
+        },
+        "cold_traffic": {
+          "platform": "Google Ads",
+          "keywords": [
+            "life insurance quotes",
+            "compare life insurance"
+          ],
+          "budget": "$100/day"
+        }
+      },
+      "stream_c_ai_social": {
+        "90_day_plan": {
+          "week_1_4": "Educational content (insurance basics)",
+          "week_5_8": "Comparison content (company reviews)",
+          "week_9_12": "Case studies (savings stories)",
+          "platforms": [
+            "Twitter/X",
+            "LinkedIn",
+            "TikTok"
+          ],
+          "frequency": "Daily posts",
+          "automation": "AI-generated + Scheduled"
+        }
+      }
+    },
+    "layer_5_automation": {
+      "loop_steps": {
+        "step_1_capture": {
+          "trigger": "Form submission",
+          "action": "Auto-save to CRM (ClickUp)",
+          "automation": "Zapier: Form \u2192 ClickUp"
+        },
+        "step_2_score": {
+          "trigger": "Lead in CRM",
+          "action": "Auto-score by intent (age + income + coverage)",
+          "automation": "ClickUp automation: Score field"
+        },
+        "step_3_route": {
+          "trigger": "Score >= 70",
+          "action": "Auto-route to affiliate partner API",
+          "automation": "Zapier: ClickUp \u2192 Affiliate API"
+        },
+        "step_4_followup": {
+          "trigger": "Score < 70",
+          "action": "Auto-email sequence (nurture)",
+          "automation": "Email automation: 7-day sequence"
+        },
+        "step_5_analytics": {
+          "trigger": "All actions",
+          "action": "Auto-track in analytics dashboard",
+          "automation": "API: All systems \u2192 Dashboard"
+        },
+        "step_6_expansion": {
+          "trigger": "High-value lead",
+          "action": "Auto-offer premium consultation",
+          "automation": "Email: Conditional offer"
+        }
+      },
+      "zero_touch": "All steps automated unless high-ticket ($497+)",
+      "human_intervention": "Only for $497+ consultations"
+    },
+    "layer_6_ecosystem": {
+      "REPLACE_ME": {
+        "flow": "Life insurance leads \u2192 Travel insurance offer",
+        "rationale": "People buying life insurance travel \u2192 Cross-sell travel insurance",
+        "funnel": "Email sequence: Day 14 \u2192 Travel insurance offer"
+      },
+      "REPLACE_ME": {
+        "flow": "Life insurance leads \u2192 Job board offer",
+        "rationale": "People buying insurance = employed \u2192 Job board audience",
+        "funnel": "Email sequence: Day 21 \u2192 Job board offer"
+      },
+      "cross_funnel_flows": {
+        "funnel_a_to_b": "Life insurance \u2192 Travel insurance \u2192 Job board",
+        "funnel_b_to_a": "Job board \u2192 Life insurance (benefits package)",
+        "shared_email_list": "All funnels share email list for cross-promotion"
+      },
+      "ecosystem_benefit": "2x-3x revenue per lead through cross-selling"
+    },
+    "layer_7_daily": {
+      "daily_actions": {
+        "action_1_morning": {
+          "time": "9:00 AM",
+          "action": "Auto-post to Reddit (insurance subreddits)",
+          "automation": "Reddit API + Scheduled posts"
+        },
+        "action_2_midday": {
+          "time": "12:00 PM",
+          "action": "Auto-post to Twitter/X (insurance tips)",
+          "automation": "Twitter API + Scheduled posts"
+        },
+        "action_3_afternoon": {
+          "time": "3:00 PM",
+          "action": "Auto-answer Quora questions",
+          "automation": "Quora API + AI-generated answers"
+        },
+        "action_4_evening": {
+          "time": "6:00 PM",
+          "action": "Auto-generate SEO content",
+          "automation": "AI content generator + Auto-publish"
+        },
+        "action_5_night": {
+          "time": "9:00 PM",
+          "action": "Auto-analyze performance + Optimize",
+          "automation": "Analytics API + Auto-optimization"
+        }
+      },
+      "weekly_actions": {
+        "monday": "Review + Optimize ads",
+        "wednesday": "Generate new content",
+        "friday": "Analyze conversions + Scale winners"
+      },
+      "integration": "Added to Daily Automated Action Engine"
+    }
+  },
+  "execution_plan": {
+    "phase_1_hour_1_2": {
+      "action": "Deploy lifequotes.ai + insurancelife.ai",
+      "output": "2 domains live"
+    },
+    "phase_2_hour_3_4": {
+      "action": "Set up cross-linking + Category spine",
+      "output": "SEO structure complete"
+    },
+    "phase_3_hour_5_6": {
+      "action": "Add 3 revenue offers + Affiliate integration",
+      "output": "Revenue streams active"
+    },
+    "phase_4_hour_7_8": {
+      "action": "Launch traffic triad + Automation loop",
+      "output": "Traffic + Automation running"
+    },
+    "phase_5_day_2_3": {
+      "action": "Connect ecosystem + Daily automation",
+      "output": "Full system operational"
+    }
+  }
+}

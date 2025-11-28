@@ -1,0 +1,157 @@
+[
+  {
+    "operation": "compress_large_files",
+    "success": true,
+    "before_size": 40943368,
+    "after_size": 2092192,
+    "reduction_percent": 94.89003444953526,
+    "items_processed": 6,
+    "items_optimized": 6,
+    "details": {
+      "files_compressed": 6,
+      "total_files": 6
+    },
+    "timestamp": "2025-11-24T21:50:16.981986"
+  },
+  {
+    "operation": "deduplicate_code_patterns",
+    "success": true,
+    "before_size": 0,
+    "after_size": 0,
+    "reduction_percent": 0.0,
+    "items_processed": 20076,
+    "items_optimized": 691,
+    "details": {
+      "duplicate_sets": 191,
+      "duplicate_files": 691,
+      "duplicates": {
+        "8081fa2f81eac5551963484e7bded4f0": [
+          ".forensic_emoji_removal_backup/FINAL_PR_ORCHESTRATION.py",
+          ".forensic_emoji_removal_backup/temp_repos/abeone-source/FINAL_PR_ORCHESTRATION.py",
+          ".forensic_emoji_removal_backup/temp_repos/abeone-source/Downloads/AIGuards-Backend-dev/FINAL_PR_ORCHESTRATION.py",
+          ".forensic_emoji_removal_backup/satellites/AbeONESourceSatellite/FINAL_PR_ORCHESTRATION.py",
+          ".forensic_emoji_removal_backup/satellites/AbeONESourceSatellite/Downloads/AIGuards-Backend-dev/FINAL_PR_ORCHESTRATION.py"
+        ],
+        "c01ed121f52f62876be8aba22ce8324c": [
+          ".forensic_emoji_removal_backup/aeyon_boot_integration.py",
+          ".forensic_emoji_removal_backup/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/aeyon_boot_integration.py",
+          ".forensic_emoji_removal_backup/temp_repos/abeone-source/aeyon_boot_integration.py",
+          ".forensic_emoji_removal_backup/temp_repos/abeone-source/Downloads/AIGuards-Backend-dev/aeyon_boot_integration.py",
+          ".forensic_emoji_removal_backup/satellites/AbeONESourceSatellite/aeyon_boot_integration.py"
+        ],
+        "721eec3a51ca1a66a38a2b75b9a1b6c7": [
+          ".forensic_emoji_removal_backup/local_ai_assistant_bridge.py",
+          ".forensic_emoji_removal_backup/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/local_ai_assistant_bridge.py",
+          ".forensic_emoji_removal_backup/temp_repos/abeone-source/local_ai_assistant_bridge.py",
+          ".forensic_emoji_removal_backup/temp_repos/abeone-source/Downloads/AIGuards-Backend-dev/local_ai_assistant_bridge.py",
+          ".forensic_emoji_removal_backup/satellites/AbeONESourceSatellite/local_ai_assistant_bridge.py"
+        ],
+        "23e8cc9feadb7bd3124aa8313c49edd4": [
+          ".forensic_emoji_removal_backup/consciousness_status.py",
+          ".forensic_emoji_removal_backup/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/consciousness_status.py",
+          ".forensic_emoji_removal_backup/temp_repos/abeone-source/consciousness_status.py",
+          ".forensic_emoji_removal_backup/temp_repos/abeone-source/Downloads/AIGuards-Backend-dev/consciousness_status.py",
+          ".forensic_emoji_removal_backup/satellites/AbeONESourceSatellite/consciousness_status.py"
+        ],
+        "d8c23c8de382eb0be26bc1daee4028ce": [
+          ".forensic_emoji_removal_backup/aeyon_boot_hardened.py",
+          ".forensic_emoji_removal_backup/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/aeyon_boot_hardened.py",
+          ".forensic_emoji_removal_backup/temp_repos/abeone-source/aeyon_boot_hardened.py",
+          ".forensic_emoji_removal_backup/temp_repos/abeone-source/Downloads/AIGuards-Backend-dev/aeyon_boot_hardened.py",
+          ".forensic_emoji_removal_backup/satellites/AbeONESourceSatellite/aeyon_boot_hardened.py"
+        ],
+        "2e51b029d24b39daff304505f5e926e6": [
+          ".forensic_emoji_removal_backup/aiguardian-repos/guardian-jimmy-service/service.py",
+          ".forensic_emoji_removal_backup/temp_repos/abeone-source/aiguardian-repos/guardian-jimmy-service/service.py",
+          ".forensic_emoji_removal_backup/temp_repos/abeone-source/Downloads/AIGuards-Backend-dev/aiguardian-repos/guardian-jimmy-service/service.py",
+          ".forensic_emoji_removal_backup/satellites/AbeONESourceSatellite/aiguardian-repos/guardian-jimmy-service/service.py",
+          ".forensic_emoji_removal_backup/satellites/AbeONESourceSatellite/Downloads/AIGuards-Backend-dev/aiguardian-repos/guardian-jimmy-service/service.py"
+        ],
+        "6f26deded1ffab45722dbcdabe02d420": [
+          ".forensic_emoji_removal_backup/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-five-service/service.py",
+          ".forensic_emoji_removal_backup/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-three-service/service.py",
+          ".forensic_emoji_removal_backup/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-seven-service/service.py",
+          ".forensic_emoji_removal_backup/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-one-service/service.py",
+          ".forensic_emoji_removal_backup/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-six-service/service.py"
+        ],
+        "459113d0289b30913d040a3beb721126": [
+          ".forensic_emoji_removal_backup/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-five-service/main.py",
+          ".forensic_emoji_removal_backup/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-three-service/main.py",
+          ".forensic_emoji_removal_backup/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-seven-service/main.py",
+          ".forensic_emoji_removal_backup/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-six-service/main.py",
+          ".forensic_emoji_removal_backup/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/aiguardian-repos/guardian-eight-service/main.py"
+        ],
+        "7d8fa5b9448ea19b8e5afa0b8087288f": [
+          ".forensic_emoji_removal_backup/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/demo_ab_testing.py",
+          ".forensic_emoji_removal_backup/codeguardians-gateway/codeguardians-gateway/demo_ab_testing.py",
+          ".forensic_emoji_removal_backup/temp_repos/abeone-source/codeguardians-gateway/codeguardians-gateway/demo_ab_testing.py",
+          ".forensic_emoji_removal_backup/temp_repos/abeone-source/Downloads/AIGuards-Backend-dev/codeguardians-gateway/codeguardians-gateway/demo_ab_testing.py",
+          ".forensic_emoji_removal_backup/satellites/AbeONESourceSatellite/codeguardians-gateway/codeguardians-gateway/demo_ab_testing.py"
+        ],
+        "d71a1fb29facacebcb244580c9970a4e": [
+          ".forensic_emoji_removal_backup/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/test_auth.py",
+          ".forensic_emoji_removal_backup/codeguardians-gateway/codeguardians-gateway/test_auth.py",
+          ".forensic_emoji_removal_backup/temp_repos/abeone-source/codeguardians-gateway/codeguardians-gateway/test_auth.py",
+          ".forensic_emoji_removal_backup/temp_repos/abeone-source/Downloads/AIGuards-Backend-dev/codeguardians-gateway/codeguardians-gateway/test_auth.py",
+          ".forensic_emoji_removal_backup/satellites/AbeONESourceSatellite/codeguardians-gateway/codeguardians-gateway/test_auth.py"
+        ]
+      }
+    },
+    "timestamp": "2025-11-24T21:50:19.112739"
+  },
+  {
+    "operation": "align_modules_and_flows",
+    "success": true,
+    "before_size": 0,
+    "after_size": 0,
+    "reduction_percent": 0.0,
+    "items_processed": 20,
+    "items_optimized": 14,
+    "details": {
+      "modules_aligned": 13,
+      "cdf_integration": 4,
+      "uptc_integration": 3,
+      "flows_aligned": 1
+    },
+    "timestamp": "2025-11-24T21:50:19.114388"
+  },
+  {
+    "operation": "index_all_data",
+    "success": true,
+    "before_size": 0,
+    "after_size": 0,
+    "reduction_percent": 0.0,
+    "items_processed": 2,
+    "items_optimized": 2,
+    "details": {
+      "indexes_created": 2
+    },
+    "timestamp": "2025-11-24T21:50:19.114702"
+  },
+  {
+    "operation": "create_self_healing_mechanisms",
+    "success": true,
+    "before_size": 0,
+    "after_size": 0,
+    "reduction_percent": 0.0,
+    "items_processed": 1,
+    "items_optimized": 1,
+    "details": {
+      "health_check_created": true
+    },
+    "timestamp": "2025-11-24T21:50:19.114965"
+  },
+  {
+    "operation": "synchronize_all_modules",
+    "success": true,
+    "before_size": 0,
+    "after_size": 0,
+    "reduction_percent": 0.0,
+    "items_processed": 13,
+    "items_optimized": 13,
+    "details": {
+      "modules_synced": 13
+    },
+    "timestamp": "2025-11-24T21:50:19.152210"
+  }
+]

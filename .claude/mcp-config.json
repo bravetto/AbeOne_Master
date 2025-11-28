@@ -1,0 +1,50 @@
+{
+  "mcpServers": {
+    "aws": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-aws"
+      ],
+      "env": {
+        "AWS_REGION": "us-east-1",
+        "AWS_PROFILE": "default"
+      },
+      "description": "AWS infrastructure management",
+      "enabled": true
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ],
+      "description": "Browser automation and testing",
+      "enabled": true
+    },
+    "context7": {
+      "transport": "http",
+      "url": "https://mcp.context7.com/mcp",
+      "description": "Documentation access and search",
+      "enabled": true
+    }
+  },
+  "project": {
+    "name": "AbeOne_Master",
+    "workspaces": {
+      "EMERGENT_OS": {
+        "type": "python",
+        "entrypoint": "EMERGENT_OS/server/main.py"
+      },
+      "AIGuards-Backend": {
+        "type": "python",
+        "mcpConfig": ".cursor/mcp-config.json"
+      },
+      "apps": {
+        "type": "node",
+        "entrypoint": "apps/web"
+      }
+    }
+  }
+}
+

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRYAN_SIMPLE_CHECKLIST</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #fff;
+        }
+        h1 {
+            color: #1f2937;
+            border-bottom: 3px solid #a855f7;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #374151;
+            margin-top: 30px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #4b5563;
+            margin-top: 25px;
+        }
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        code {
+            background: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #f9fafb;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            overflow-x: auto;
+        }
+        blockquote {
+            border-left: 4px solid #a855f7;
+            padding-left: 20px;
+            margin: 20px 0;
+            color: #6b7280;
+            font-style: italic;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: #f9fafb;
+            font-weight: 600;
+        }
+        .checklist {
+            background: #fef3c7;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #f59e0b;
+            margin: 20px 0;
+        }
+        .critical {
+            background: #fee2e2;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ef4444;
+            margin: 20px 0;
+        }
+        .important {
+            background: #fef3c7;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #f59e0b;
+            margin: 20px 0;
+        }
+        .optional {
+            background: #f0fdf4;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #22c55e;
+            margin: 20px 0;
+        }
+        @media print {
+            body {
+                padding: 20px;
+            }
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+<p><h1>📋 BRYAN - SIMPLE UPDATE CHECKLIST</p><p><strong>What You Need to Do:<strong> Replace placeholder content with real information</p><p><strong>Priority:<strong> 🔴 <strong>CRITICAL<strong> - Must complete before launch</p><p>---</p><p><h2>✅ QUICK CHECKLIST</p><p><h3>1. Webinar Details
+<ul>
+<li> <strong>Date:<strong> [Example: February 15, 2025]</li>
+<li> <strong>Time:<strong> [Example: 2:00 PM EST]</li>
+<li> <strong>Zoom Link:<strong> [Your actual Zoom meeting URL]</li>
+<li> <strong>Replay Link:<strong> [Where replay will be hosted]</li>
+</ul></p><p><strong>Where to Update:<strong> <code>apps/web/app/api/webinar/register/route.ts</code> (lines 30-37)</p><p>---</p><p><h3>2. Email Information
+<ul>
+<li> <strong>From Email:<strong> [Must be verified in SendGrid, e.g., noreply@aiguardian.ai]</li>
+<li> <strong>From Name:<strong> [How you want to appear, e.g., "Michael from AiGuardian"]</li>
+<li> <strong>Support Email:<strong> [Email people can contact for help]</li>
+<li> <strong>Your Signature:<strong> [Your name/title for emails]</li>
+</ul></p><p><strong>Where to Update:<strong> 
+<ul>
+<li><code>apps/web/app/api/webinar/register/route.ts</code> (line 114-115)</li>
+<li><code>apps/web/app/webinar/thank-you/page.tsx</code> (line ~164)</li>
+<li><code>.env.local</code> file</li>
+</ul></p><p>---</p><p><h3>3. Testimonials
+<strong>Choose ONE:<strong>
+<ul>
+<li> <strong>Option A:<strong> Provide 3+ real testimonials (with permission)</li>
+<li> <strong>Option B:<strong> Remove testimonial section</li>
+</ul></p><p><strong>Where to Update:<strong> <code>apps/web/app/webinar/aiguardian/page.tsx</code> (lines 184-234)</p><p><strong>If Option A, provide for each testimonial:<strong>
+<ul>
+<li>Name</li>
+<li>Role/Title</li>
+<li>Company</li>
+<li>GitHub username (for developers) OR Social handle (for creatives)</li>
+<li>Quote (what they said)</li>
+</ul></p><p>---</p><p><h3>4. Company Logos
+<strong>Choose ONE:<strong>
+<ul>
+<li> <strong>Option A:<strong> Provide real company logo files (with permission)</li>
+<li> <strong>Option B:<strong> Use real company names only (text)</li>
+<li> <strong>Option C:<strong> Remove company logo section</li>
+</ul></p><p><strong>Where to Update:<strong> <code>apps/web/app/webinar/aiguardian/page.tsx</code> (lines ~470-475)</p><p>---</p><p><h3>5. Social Proof Numbers
+<ul>
+<li> <strong>Starting Registration Count:<strong> [Real number or 0 if first webinar]</li>
+<li> <strong>Video Testimonial:<strong> [URL if you have one, or "Remove"]</li>
+</ul></p><p><strong>Where to Update:<strong> <code>apps/web/app/webinar/aiguardian/page.tsx</code> (line 26, ~517)</p><p>---</p><p><h3>6. Headline Numbers (Verify Accuracy)
+<ul>
+<li> <strong>"90% of failures"<strong> <li>Is this accurate? [ ] Yes [ ] No <li>Update to: ___</li>
+<li> <strong>"Stripe & Shopify"<strong> <li>Are these real customers? [ ] Yes [ ] No <li> Remove</li>
+<li> <strong>"10,000+ engineers"<strong> <li>Is this accurate? [ ] Yes [ ] No <li>Update to: ___</li>
+<li> <strong>"47 spots left"<strong> <li>Is this accurate? [ ] Yes [ ] No <li> Remove</li>
+</ul></p><p><strong>Where to Update:<strong> <code>apps/web/app/webinar/aiguardian/page.tsx</code> (lines 37-66)</p><p>---</p><p><h3>7. Application URL
+<ul>
+<li> <strong>Production Website URL:<strong> [Example: https://aiguardian.ai]</li>
+</ul></p><p><strong>Where to Update:<strong> <code>.env.local</code> file (set <code>NEXT_PUBLIC_APP_URL</code>)</p><p>---</p><p><h3>8. Unsubscribe Link
+<ul>
+<li> <strong>Unsubscribe Page URL:<strong> [Example: https://aiguardian.ai/unsubscribe]</li>
+<li> <strong>OR:<strong> Use SendGrid's built-in unsubscribe</li>
+</ul></p><p><strong>Where to Update:<strong> <code>apps/web/app/api/webinar/register/route.ts</code> (line ~262)</p><p>---</p><p><h2>📝 FILL THIS OUT AND SEND BACK</p><p><pre><code>
+WEBINAR DETAILS:
+Date: _________________________
+Time: _________________________
+Zoom Link: _________________________
+Replay Link: _________________________</p><p>EMAIL INFORMATION:
+From Email: _________________________
+From Name: _________________________
+Support Email: _________________________
+Signature: _________________________</p><p>TESTIMONIALS:
+[ ] Use real testimonials (provide below)
+[ ] Remove section</p><p>COMPANY LOGOS:
+[ ] Use real logos (provide files)
+[ ] Use real names only
+[ ] Remove section</p><p>SOCIAL PROOF:
+Starting Count: _________________________
+Video: [URL] or [Remove]</p><p>HEADLINE NUMBERS:
+"90%" - [ ] Accurate [ ] Update to: ___
+"Stripe/Shopify" - [ ] Real [ ] Remove
+"10,000+" - [ ] Accurate [ ] Update to: ___
+"47 spots" - [ ] Accurate [ ] Remove</p><p>APPLICATION URL:
+Production URL: _________________________</p><p>UNSUBSCRIBE:
+Unsubscribe URL: _________________________
+</code></pre></p><p>---</p><p><h2>🎯 PRIORITY ORDER</p><p><strong>Do These First (Before Launch):<strong>
+1. Webinar details (date, time, Zoom link)
+2. Email information (from email, from name, support email)
+3. Testimonials (real OR remove)
+4. Company logos (real OR remove)</p><p><strong>Do These Next (Week 1):<strong>
+5. Social proof numbers
+6. Headline accuracy
+7. Application URL
+8. Unsubscribe link</p><p>---</p><p><h2>📁 FILES TO EDIT</p><p>1. <strong><code>apps/web/app/api/webinar/register/route.ts</code><strong>
+<ul>
+   <li>Webinar details (lines 30-37)</li>
+   <li>Email sender info (lines 114-115)</li>
+   <li>Unsubscribe link (line ~262)</li>
+</ul></p><p>2. <strong><code>apps/web/app/webinar/aiguardian/page.tsx</code><strong>
+<ul>
+   <li>Testimonials (lines 184-234)</li>
+   <li>Company logos (lines ~470-475)</li>
+   <li>Social proof count (line 26)</li>
+   <li>Headlines (lines 37-66)</li>
+   <li>Video testimonial (lines ~517)</li>
+</ul></p><p>3. <strong><code>apps/web/app/webinar/thank-you/page.tsx</code><strong>
+<ul>
+   <li>Support email (line ~164)</li>
+</ul></p><p>4. <strong><code>.env.local</code><strong> (create this file)
+<ul>
+   <li><code>SENDGRID_FROM_EMAIL=your-email@domain.com</code></li>
+   <li><code>SENDGRID_FROM_NAME=Your Name</code></li>
+   <li><code>NEXT_PUBLIC_APP_URL=https://your-domain.com</code></li>
+</ul></p><p>---</p><p><h2>❓ QUESTIONS?</p><p><strong>If you're not sure about something:<strong>
+<ul>
+<li>Ask before making changes</li>
+<li>It's better to remove placeholder content than use fake information</li>
+<li>We can always add real content later</li>
+</ul></p><p>---</p><p><strong>Status:<strong> ⚠️ <strong>PENDING YOUR UPDATES<strong>  
+<strong>Deadline:<strong> Before launch  
+<strong>Questions?<strong> Ask AEYON</p><p></p>
+</body>
+</html>

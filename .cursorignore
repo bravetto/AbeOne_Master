@@ -1,0 +1,295 @@
+# Python Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Python Cache & Compiled
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.pyc
+*.pyo
+*.pyd
+
+# Python Distribution / Packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+**/venv/lib/
+
+**/.venv/lib/
+
+**/env/lib/
+
+**/ENV/lib/
+
+backend/**/lib/
+# Exception: Allow frontend lib directories (legitimate code, not venv)
+!orbitals/**/frontend/lib/
+!products/**/frontend/lib/
+!products/**/apps/**/lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# Kernel Submodules (when initialized)
+**/kernel/abeone/
+**/kernel/abeone/**/*
+
+# Build Artifacts
+*.o
+*.a
+*.lib
+*.dll
+*.exe
+*.dylib
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+*.bak
+*.cache
+
+# Documentation Build
+docs/_build/
+docs/.doctrees/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Docker
+.dockerignore
+
+# Kubernetes
+*.kubeconfig
+
+# CI/CD Artifacts
+.github/workflows/.cache/
+.circleci/
+.travis.yml
+.appveyor.yml
+
+# Multi-Orbit Workspace Specific
+# Archive directories
+_ARCHIVE/
+_archive/
+archive/
+
+# Extraction directories
+_extract_*/
+extract_*/
+
+# Temporary repos
+temp_repos/
+
+# Large binary files
+*.zip
+*.tar.gz
+*.crx
+*.pdf
+
+# Chrome Extension Build
+**/dist/
+**/build/
+
+# Git
+.git/
+.gitignore
+
+# Large data files (media assets - handled by TRUICE)
+# Video formats
+*.mp4
+*.avi
+*.mov
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.mkv
+*.flv
+*.webm
+*.aac
+*.ogg
+*.mpeg
+*.mpg
+*.m2v
+*.m4v
+*.3gp
+*.3g2
+*.asf
+*.wmv
+*.vob
+*.ts
+*.mts
+*.m2ts
+
+# Audio formats (large files)
+*.wav
+*.aiff
+*.aif
+*.au
+*.ra
+*.rm
+*.amr
+
+# Image formats (large files)
+*.psd
+*.raw
+*.cr2
+*.nef
+*.orf
+*.sr2
+*.dng
+*.tiff
+*.tif
+*.bmp
+
+# Archive formats
+*.zip
+*.tar.gz
+*.tar
+*.gz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.iso
+*.dmg
+*.pkg
+*.deb
+*.rpm
+
+# Binary executables
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+*.app
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.mdb
+*.accdb
+
+# Large data directories (performance optimization)
+**/data/output/**
+**/data/temp/**
+**/data/sync/**
+**/data/cache/**
+**/data/logs/**
+**/output/**
+**/temp/**
+**/cache/**
+**/logs/**
+**/build/**
+**/dist/**
+**/node_modules/**
+**/.venv/**
+**/venv/**
+**/env/**
+**/ENV/**
+**/kernel/abeone/**
+
+# Virtual environments (performance)
+**/.venv/
+**/venv/
+**/env/
+**/ENV/
+**/node_modules/
+
+# Kernel (protected)
+**/kernel/abeone/
+**/kernel/abeone/**/*
+
+# Temporary repos and archives
+temp_repos/
+**/archive/
+**/_archive/
+**/_ARCHIVE/

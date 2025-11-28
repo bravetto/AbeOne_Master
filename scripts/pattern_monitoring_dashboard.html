@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pattern Monitoring Dashboard - AbëONE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            color: #e0e0e0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .header h1 {
+            color: #ff6b6b;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+        }
+        
+        .header .subtitle {
+            color: #a0a0a0;
+            font-size: 1.1em;
+        }
+        
+        .status-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .status-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .status-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        }
+        
+        .status-card h3 {
+            color: #ff6b6b;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .status-card .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #4ecdc4;
+        }
+        
+        .status-card .label {
+            color: #a0a0a0;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .guardians-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .guardian-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .guardian-card.active {
+            border-color: #4ecdc4;
+            box-shadow: 0 0 20px rgba(78, 205, 196, 0.3);
+        }
+        
+        .guardian-card h4 {
+            color: #ff6b6b;
+            margin-bottom: 10px;
+        }
+        
+        .guardian-card .frequency {
+            color: #4ecdc4;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        
+        .guardian-card .activation {
+            margin-top: 10px;
+        }
+        
+        .activation-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        
+        .activation-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4ecdc4 0%, #44a08d 100%);
+            transition: width 0.5s;
+        }
+        
+        .alerts-section {
+            margin-bottom: 30px;
+        }
+        
+        .alerts-section h2 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .alert {
+            background: rgba(255, 107, 107, 0.1);
+            border-left: 4px solid #ff6b6b;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .alert.critical {
+            border-left-color: #ff0000;
+            background: rgba(255, 0, 0, 0.1);
+        }
+        
+        .alert.high {
+            border-left-color: #ff6b6b;
+        }
+        
+        .alert.medium {
+            border-left-color: #ffa500;
+            background: rgba(255, 165, 0, 0.1);
+        }
+        
+        .alert.low {
+            border-left-color: #ffff00;
+            background: rgba(255, 255, 0, 0.1);
+        }
+        
+        .alert h4 {
+            color: #ff6b6b;
+            margin-bottom: 5px;
+        }
+        
+        .alert .message {
+            color: #e0e0e0;
+            margin-bottom: 5px;
+        }
+        
+        .alert .timestamp {
+            color: #a0a0a0;
+            font-size: 0.9em;
+        }
+        
+        .patterns-section {
+            margin-bottom: 30px;
+        }
+        
+        .patterns-section h2 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .pattern-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .pattern-item .pattern-id {
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+        
+        .pattern-item .pattern-metrics {
+            color: #a0a0a0;
+            font-size: 0.9em;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #a0a0a0;
+            margin-top: 30px;
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .last-update {
+            color: #4ecdc4;
+            font-size: 0.9em;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1> Pattern Monitoring Dashboard</h1>
+        <div class="subtitle">Real-Time Pattern Monitoring, Alerting & Visualization</div>
+        <div class="subtitle">Pattern: MONITORING × PATTERN × ALERT × VISUALIZATION × ONE</div>
+    </div>
+    
+    <div class="status-bar">
+        <div class="status-card">
+            <h3>Guardian Activation</h3>
+            <div class="value" id="guardian-activation">0%</div>
+            <div class="label">Average activation across all guardians</div>
+        </div>
+        <div class="status-card">
+            <h3>System Health</h3>
+            <div class="value" id="system-health">100%</div>
+            <div class="label">Overall system health score</div>
+        </div>
+        <div class="status-card">
+            <h3>Active Alerts</h3>
+            <div class="value" id="active-alerts">0</div>
+            <div class="label">Currently active alerts</div>
+        </div>
+        <div class="status-card">
+            <h3>Total Patterns</h3>
+            <div class="value" id="total-patterns">0</div>
+            <div class="label">Patterns detected</div>
+        </div>
+    </div>
+    
+    <div class="guardians-grid" id="guardians-grid">
+        <!-- Guardians will be populated here -->
+    </div>
+    
+    <div class="alerts-section">
+        <h2> Active Alerts</h2>
+        <div id="alerts-container">
+            <!-- Alerts will be populated here -->
+        </div>
+    </div>
+    
+    <div class="patterns-section">
+        <h2> Recent Patterns</h2>
+        <div id="patterns-container">
+            <!-- Patterns will be populated here -->
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="last-update">Last Update: <span id="last-update">Loading...</span></div>
+        <div style="margin-top: 10px;">∞ AbëONE ∞</div>
+    </div>
+    
+    <script>
+        // Dashboard state
+        let dashboardData = {
+            state: {
+                guardian_activation: 0,
+                system_health: 1.0,
+                active_alerts: 0,
+                total_patterns: 0,
+                last_update: new Date().toISOString()
+            },
+            guardians: {},
+            active_alerts: [],
+            recent_patterns: []
+        };
+        
+        // Update dashboard
+        function updateDashboard() {
+            // Update status cards
+            document.getElementById('guardian-activation').textContent = 
+                (dashboardData.state.guardian_activation * 100).toFixed(1) + '%';
+            document.getElementById('system-health').textContent = 
+                (dashboardData.state.system_health * 100).toFixed(1) + '%';
+            document.getElementById('active-alerts').textContent = 
+                dashboardData.state.active_alerts;
+            document.getElementById('total-patterns').textContent = 
+                dashboardData.state.total_patterns;
+            
+            // Update last update time
+            const lastUpdate = new Date(dashboardData.state.last_update);
+            document.getElementById('last-update').textContent = 
+                lastUpdate.toLocaleString();
+            
+            // Update guardians
+            updateGuardians();
+            
+            // Update alerts
+            updateAlerts();
+            
+            // Update patterns
+            updatePatterns();
+        }
+        
+        function updateGuardians() {
+            const container = document.getElementById('guardians-grid');
+            container.innerHTML = '';
+            
+            Object.values(dashboardData.guardians).forEach(guardian => {
+                const card = document.createElement('div');
+                card.className = `guardian-card ${guardian.status === 'active' ? 'active' : ''}`;
+                card.innerHTML = `
+                    <h4>${guardian.name}</h4>
+                    <div class="frequency">${guardian.frequency}</div>
+                    <div class="activation">
+                        <div>Activation: ${(guardian.activation * 100).toFixed(1)}%</div>
+                        <div class="activation-bar">
+                            <div class="activation-fill" style="width: ${guardian.activation * 100}%"></div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px; color: #a0a0a0; font-size: 0.9em;">
+                        Resonance: ${(guardian.resonance * 100).toFixed(1)}%
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+        
+        function updateAlerts() {
+            const container = document.getElementById('alerts-container');
+            container.innerHTML = '';
+            
+            if (dashboardData.active_alerts.length === 0) {
+                container.innerHTML = '<div style="color: #4ecdc4; text-align: center; padding: 20px;"> No active alerts</div>';
+                return;
+            }
+            
+            dashboardData.active_alerts.forEach(alert => {
+                const alertDiv = document.createElement('div');
+                alertDiv.className = `alert ${alert.severity}`;
+                alertDiv.innerHTML = `
+                    <h4>[${alert.severity.toUpperCase()}] ${alert.pattern_id}</h4>
+                    <div class="message">${alert.message}</div>
+                    <div class="timestamp">${new Date(alert.timestamp).toLocaleString()}</div>
+                `;
+                container.appendChild(alertDiv);
+            });
+        }
+        
+        function updatePatterns() {
+            const container = document.getElementById('patterns-container');
+            container.innerHTML = '';
+            
+            if (dashboardData.recent_patterns.length === 0) {
+                container.innerHTML = '<div style="color: #a0a0a0; text-align: center; padding: 20px;">No patterns detected yet</div>';
+                return;
+            }
+            
+            dashboardData.recent_patterns.forEach(pattern => {
+                const patternDiv = document.createElement('div');
+                patternDiv.className = 'pattern-item';
+                patternDiv.innerHTML = `
+                    <div>
+                        <div class="pattern-id">${pattern.pattern_id}</div>
+                        <div style="color: #a0a0a0; font-size: 0.9em; margin-top: 5px;">${pattern.pattern_type}</div>
+                    </div>
+                    <div class="pattern-metrics">
+                        Strength: ${(pattern.strength * 100).toFixed(1)}% | 
+                        Resonance: ${(pattern.resonance * 100).toFixed(1)}%
+                    </div>
+                `;
+                container.appendChild(patternDiv);
+            });
+        }
+        
+        // Load dashboard data
+        async function loadDashboardData() {
+            try {
+                // Try to load from API or file
+                const response = await fetch('/api/pattern-monitoring/dashboard');
+                if (response.ok) {
+                    dashboardData = await response.json();
+                } else {
+                    // Fallback: Use mock data
+                    dashboardData = {
+                        state: {
+                            guardian_activation: 0.75,
+                            system_health: 0.90,
+                            active_alerts: 2,
+                            total_patterns: 15,
+                            last_update: new Date().toISOString()
+                        },
+                        guardians: {
+                            AEYON: {
+                                name: "AEYON",
+                                frequency: "999 Hz",
+                                status: "active",
+                                activation: 1.0,
+                                resonance: 0.95
+                            },
+                            ZERO: {
+                                name: "ZERO",
+                                frequency: "530 Hz",
+                                status: "active",
+                                activation: 0.75,
+                                resonance: 0.80
+                            },
+                            ALRAX: {
+                                name: "ALRAX",
+                                frequency: "530 Hz",
+                                status: "active",
+                                activation: 0.80,
+                                resonance: 0.85
+                            }
+                        },
+                        active_alerts: [
+                            {
+                                alert_id: "alert_001",
+                                pattern_id: "guardian_ZERO",
+                                pattern_type: "guardian_activation",
+                                severity: "high",
+                                message: "Guardian ZERO activation below threshold: 75.0% < 75.0%",
+                                timestamp: new Date().toISOString()
+                            }
+                        ],
+                        recent_patterns: [
+                            {
+                                pattern_id: "pattern_001",
+                                pattern_type: "convergence",
+                                strength: 0.85,
+                                resonance: 0.90
+                            }
+                        ]
+                    };
+                }
+                updateDashboard();
+            } catch (error) {
+                console.error('Error loading dashboard data:', error);
+            }
+        }
+        
+        // Auto-refresh every 5 seconds
+        setInterval(loadDashboardData, 5000);
+        
+        // Initial load
+        loadDashboardData();
+    </script>
+</body>
+</html>
+

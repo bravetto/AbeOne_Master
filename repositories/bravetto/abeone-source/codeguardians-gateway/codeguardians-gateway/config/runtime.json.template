@@ -1,0 +1,73 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2024-01-01T00:00:00Z",
+  "rate_limits": {
+    "enabled": true,
+    "requests_per_minute": 100,
+    "requests_per_hour": 1000,
+    "burst_limit": 20,
+    "window_size": 60,
+    "endpoint_limits": {
+      "POST:/api/v1/auth/login": {
+        "requests_per_minute": 10,
+        "window_size": 60
+      },
+      "POST:/api/v1/auth/register": {
+        "requests_per_minute": 5,
+        "window_size": 60
+      },
+      "POST:/api/v1/posts": {
+        "requests_per_minute": 30,
+        "window_size": 60
+      },
+      "GET:/api/v1/guards": {
+        "requests_per_minute": 200,
+        "window_size": 60
+      }
+    },
+    "user_limits": {
+      "premium_user": {
+        "requests_per_minute": 500,
+        "requests_per_hour": 5000,
+        "window_size": 60
+      },
+      "enterprise_user": {
+        "requests_per_minute": 1000,
+        "requests_per_hour": 10000,
+        "window_size": 60
+      }
+    },
+    "ip_limits": {
+      "trusted_ip": {
+        "requests_per_minute": 1000,
+        "window_size": 60
+      },
+      "blocked_ip": {
+        "requests_per_minute": 0,
+        "window_size": 60
+      }
+    }
+  },
+  "cache_ttl": 3600,
+  "cache_enabled": true,
+  "security_headers": {
+    "X-Frame-Options": "DENY",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Content-Security-Policy": "default-src 'self'"
+  },
+  "metrics_enabled": true,
+  "health_check_interval": 30,
+  "features": {
+    "rate_limiting": true,
+    "caching": true,
+    "metrics": true,
+    "health_checks": true,
+    "security_headers": true,
+    "dynamic_config": true,
+    "aws_integration": true,
+    "monitoring": true
+  }
+}

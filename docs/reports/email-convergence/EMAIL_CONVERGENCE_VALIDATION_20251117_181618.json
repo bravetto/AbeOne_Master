@@ -1,0 +1,45 @@
+{
+  "timestamp": "2025-11-17T18:16:18.435116",
+  "overall_status": "unknown",
+  "overall_certainty": 0.7999999999999999,
+  "results": [
+    {
+      "component": "Initialization",
+      "status": "validated",
+      "certainty": 1.0,
+      "evidence": "Cache directory exists; Main script exists; Found 436 Mail.app directories",
+      "details": {
+        "cache_dir": "/Users/michaelmataluni/.email_convergence_cache",
+        "script_exists": true,
+        "mail_dirs": 436
+      }
+    },
+    {
+      "component": "Activation",
+      "status": "inferred",
+      "certainty": 0.8,
+      "evidence": "Successfully read 0 emails; No emails found (may be expected); EmailAnalyzer initialized",
+      "details": {
+        "emails_read": 0
+      }
+    },
+    {
+      "component": "Automation",
+      "status": "validated",
+      "certainty": 1.0,
+      "evidence": "Cron job configured; Last run: 2025-11-17 17:43:11; Cache file exists",
+      "details": {
+        "last_run": "2025-11-17T17:43:11.142908"
+      }
+    },
+    {
+      "component": "Real-World Test",
+      "status": "inferred",
+      "certainty": 0.4,
+      "evidence": "Read 0 emails; No emails found (may be expected if incremental)",
+      "details": {
+        "emails": 0
+      }
+    }
+  ]
+}

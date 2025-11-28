@@ -1,0 +1,202 @@
+name: dependency-audit
+
+on:
+  pull_request:
+    branches: [dev, main]
+    types: [opened, reopened, synchronize]
+
+permissions:
+  contents: read
+  checks: write
+  pull-requests: read
+
+jobs:
+  audit:
+    runs-on: [arc-runner-set]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements*.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install pip-audit
+        run: pip install pip-audit
+
+      - name: Run dependency audit
+        id: pip_audit
+        run: |
+          echo "🔍 Running pip-audit..."
+          set +e
+
+          # Scan requirements.txt if it exists
+          if [ -f requirements.txt ]; then
+            echo "Found requirements.txt, scanning..."
+            pip-audit -r requirements.txt --desc --format=json -o pip-audit-report.json || true
+            pip-audit -r requirements.txt --desc -o pip-audit-report.txt || true
+
+            # Debug: show the JSON structure
+            echo "JSON report contents:"
+            cat pip-audit-report.json
+          else
+            echo "No requirements file found"
+            echo '{"dependencies": {}}' > pip-audit-report.json
+            echo "No requirements file found" > pip-audit-report.txt
+          fi
+
+          # Try different JSON parsing strategies
+          VULN_COUNT=0
+          if [ -f pip-audit-report.json ]; then
+            # Try parsing as array of vulnerabilities or dependencies object
+            VULN_COUNT=$(jq 'if type=="array" then length elif type=="object" and has("dependencies") then [.dependencies[] | select(.vulns != null) | .vulns[]] | length else 0 end' pip-audit-report.json 2>/dev/null || echo '0')
+          fi
+
+          echo "Vulnerability count: $VULN_COUNT"
+          echo "vuln_count=$VULN_COUNT" >> $GITHUB_OUTPUT
+
+          echo "::group::📊 Pip-Audit Summary"
+          if [ $VULN_COUNT -gt 0 ]; then
+            echo "::warning::Found $VULN_COUNT vulnerabilities in dependencies"
+            cat pip-audit-report.txt
+          else
+            echo "✅ No vulnerabilities found"
+          fi
+          echo "::endgroup::"
+
+          echo "## 🔍 Dependency Audit Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ $VULN_COUNT -gt 0 ]; then
+            echo "⚠️ **Found $VULN_COUNT vulnerabilities**" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "<details><summary>Click to see details</summary>" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            cat pip-audit-report.txt >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            echo "</details>" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ No vulnerabilities found" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Check for known vulnerabilities with safety
+        id: safety_check
+        run: |
+          echo "🔍 Running Safety check..."
+          set +e
+
+          pip install safety
+
+          # Scan requirements.txt if it exists
+          if [ -f requirements.txt ]; then
+            echo "Found requirements.txt, scanning with safety..."
+            safety check -r requirements.txt --json > safety-report.json || true
+            safety check -r requirements.txt > safety-report.txt || true
+
+            # Debug: show the JSON structure
+            echo "Safety JSON report contents:"
+            cat safety-report.json
+          else
+            echo "No requirements file found"
+            echo '[]' > safety-report.json
+            echo "No requirements file found" > safety-report.txt
+          fi
+
+          SAFETY_COUNT=$(jq 'if type=="array" then length elif type=="object" and has("vulnerabilities") then .vulnerabilities | length else 0 end' safety-report.json 2>/dev/null || echo '0')
+          echo "Safety vulnerability count: $SAFETY_COUNT"
+          echo "safety_count=$SAFETY_COUNT" >> $GITHUB_OUTPUT
+
+          echo "::group::📊 Safety Check Summary"
+          if [ $SAFETY_COUNT -gt 0 ]; then
+            echo "::warning::Found $SAFETY_COUNT known vulnerabilities"
+            cat safety-report.txt
+          else
+            echo "✅ No known vulnerabilities found"
+          fi
+          echo "::endgroup::"
+
+      - name: Upload reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pip-audit-reports
+          path: |
+            pip-audit-report.json
+            pip-audit-report.txt
+            safety-report.json
+            safety-report.txt
+          retention-days: 1
+
+      - name: Create custom check with warning indicator
+        if: always()
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const vulnCount = parseInt('${{ steps.pip_audit.outputs.vuln_count }}') || 0;
+            const safetyCount = parseInt('${{ steps.safety_check.outputs.safety_count }}') || 0;
+            const totalIssues = vulnCount + safetyCount;
+            const isMainBranch = context.payload.pull_request?.base?.ref === 'main';
+
+            // Read the detailed reports
+            const fs = require('fs');
+            let detailedText = '';
+
+            try {
+              if (fs.existsSync('pip-audit-report.txt')) {
+                const pipAuditReport = fs.readFileSync('pip-audit-report.txt', 'utf8');
+                if (vulnCount > 0) {
+                  detailedText += '## pip-audit Results\n\n```\n' + pipAuditReport + '\n```\n\n';
+                }
+              }
+
+              if (fs.existsSync('safety-report.txt')) {
+                const safetyReport = fs.readFileSync('safety-report.txt', 'utf8');
+                if (safetyCount > 0) {
+                  detailedText += '## Safety Results\n\n```\n' + safetyReport + '\n```\n\n';
+                }
+              }
+            } catch (error) {
+              console.log('Could not read report files:', error);
+            }
+
+            let conclusion, title, summary;
+
+            if (totalIssues === 0) {
+              conclusion = 'success';
+              title = '✅ No vulnerabilities found';
+              summary = '**All dependency checks passed successfully.**\n\nNo vulnerabilities detected in your dependencies.';
+            } else if (isMainBranch) {
+              conclusion = 'success';
+              title = `❌ Found ${totalIssues} vulnerabilities`;
+              summary = `**⚠️ Vulnerabilities found for main branch:** ${totalIssues}\n- pip-audit: ${vulnCount}\n- safety: ${safetyCount}\n\n❌ These should be addressed before merging.\n\n📋 Click "Details" below to see the full vulnerability report.`;
+            } else {
+              conclusion = 'success';
+              title = `⚠️ Found ${totalIssues} vulnerabilities (warnings)`;
+              summary = `**Vulnerabilities found:** ${totalIssues}\n- pip-audit: ${vulnCount}\n- safety: ${safetyCount}\n\n⚠️ These are warnings only for dev branch. Review and fix before merging to main.\n\n📋 Click "Details" below to see the full vulnerability report.`;
+            }
+
+            await github.rest.checks.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'dependency-audit',
+              head_sha: context.payload.pull_request.head.sha,
+              status: 'completed',
+              conclusion: conclusion,
+              output: {
+                title: title,
+                summary: summary,
+                text: detailedText.length > 65535 ? detailedText.substring(0, 65535) + '\n\n...(truncated)' : detailedText
+              }
+            });
+

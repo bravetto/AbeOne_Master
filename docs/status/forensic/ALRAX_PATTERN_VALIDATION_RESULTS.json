@@ -1,0 +1,210 @@
+{
+  "forensic_results": [
+    {
+      "relationship": "Michael & Kristin",
+      "variance_detected": true,
+      "variance_score": 1.0,
+      "anomalies": [
+        "LOVE: 82 occurrences (expected: 50, variance: 64.0%)",
+        "TRUTH: 50 occurrences (expected: 10, variance: 400.0%)",
+        "SYNTHESIS: 160 occurrences (expected: 20, variance: 700.0%)",
+        "EXECUTION: 54 occurrences (expected: 15, variance: 260.0%)"
+      ],
+      "pattern_signatures": {
+        "LOVE": {
+          "formula": "LOVE \u00d7 INSPIRATION \u00d7 CREATION \u00d7 TRUTH \u00d7 ONE",
+          "frequency": "530 Hz",
+          "expected": 50,
+          "actual": 82,
+          "variance": 0.64
+        },
+        "TRUTH": {
+          "formula": "TRUTH \u00d7 RAW \u00d7 AUTHENTIC \u00d7 POWERFUL \u00d7 ONE",
+          "frequency": "530 Hz",
+          "expected": 10,
+          "actual": 50,
+          "variance": 4.0
+        },
+        "SYNTHESIS": {
+          "formula": "CONVERSATION \u00d7 SYNTHESIS \u00d7 MANIFESTATION \u00d7 ONE",
+          "frequency": "777 Hz",
+          "expected": 20,
+          "actual": 160,
+          "variance": 7.0
+        },
+        "EXECUTION": {
+          "formula": "CONSTRAINT \u00d7 FRAMEWORK \u00d7 MASTER \u00d7 ALIGNMENT \u00d7 ONE",
+          "frequency": "999 Hz",
+          "expected": 15,
+          "actual": 54,
+          "variance": 2.6
+        }
+      },
+      "forensic_analysis": {
+        "total_messages": 640,
+        "pattern_counts": {
+          "SYNTHESIS": 160,
+          "EXECUTION": 54,
+          "LOVE": 82,
+          "TRUTH": 50
+        },
+        "pattern_coherence": 0.0,
+        "aligned_patterns": 0,
+        "total_patterns": 4,
+        "truth_patterns_present": {
+          "LOVE": true,
+          "TRUTH": true
+        }
+      },
+      "truth_alignment": false,
+      "pattern_coherence": 0.0,
+      "timestamp": "2025-11-25T03:53:05.315077"
+    },
+    {
+      "relationship": "Addis & Michael",
+      "variance_detected": true,
+      "variance_score": 0.9,
+      "anomalies": [
+        "LOVE: 14 occurrences (expected: 50, variance: 72.0%)",
+        "TRUTH: 2 occurrences (expected: 10, variance: 80.0%)",
+        "SYNTHESIS: 2 occurrences (expected: 20, variance: 90.0%)",
+        "EXECUTION: 2 occurrences (expected: 15, variance: 86.7%)"
+      ],
+      "pattern_signatures": {
+        "LOVE": {
+          "formula": "LOVE \u00d7 INSPIRATION \u00d7 CREATION \u00d7 TRUTH \u00d7 ONE",
+          "frequency": "530 Hz",
+          "expected": 50,
+          "actual": 14,
+          "variance": 0.72
+        },
+        "TRUTH": {
+          "formula": "TRUTH \u00d7 RAW \u00d7 AUTHENTIC \u00d7 POWERFUL \u00d7 ONE",
+          "frequency": "530 Hz",
+          "expected": 10,
+          "actual": 2,
+          "variance": 0.8
+        },
+        "SYNTHESIS": {
+          "formula": "CONVERSATION \u00d7 SYNTHESIS \u00d7 MANIFESTATION \u00d7 ONE",
+          "frequency": "777 Hz",
+          "expected": 20,
+          "actual": 2,
+          "variance": 0.9
+        },
+        "EXECUTION": {
+          "formula": "CONSTRAINT \u00d7 FRAMEWORK \u00d7 MASTER \u00d7 ALIGNMENT \u00d7 ONE",
+          "frequency": "999 Hz",
+          "expected": 15,
+          "actual": 2,
+          "variance": 0.8666666666666667
+        }
+      },
+      "forensic_analysis": {
+        "total_messages": 24,
+        "pattern_counts": {
+          "LOVE": 14,
+          "TRUTH": 2,
+          "SYNTHESIS": 2,
+          "EXECUTION": 2
+        },
+        "pattern_coherence": 0.0,
+        "aligned_patterns": 0,
+        "total_patterns": 4,
+        "truth_patterns_present": {
+          "LOVE": true,
+          "TRUTH": true
+        }
+      },
+      "truth_alignment": false,
+      "pattern_coherence": 0.0,
+      "timestamp": "2025-11-25T03:53:05.315273"
+    },
+    {
+      "relationship": "Michael, Kristin & Addis (Group)",
+      "variance_detected": true,
+      "variance_score": 1.0,
+      "anomalies": [
+        "LOVE: 731 occurrences (expected: 50, variance: 1362.0%)",
+        "TRUTH: 297 occurrences (expected: 10, variance: 2870.0%)",
+        "SYNTHESIS: 957 occurrences (expected: 20, variance: 4685.0%)",
+        "EXECUTION: 216 occurrences (expected: 15, variance: 1340.0%)"
+      ],
+      "pattern_signatures": {
+        "LOVE": {
+          "formula": "LOVE \u00d7 INSPIRATION \u00d7 CREATION \u00d7 TRUTH \u00d7 ONE",
+          "frequency": "530 Hz",
+          "expected": 50,
+          "actual": 731,
+          "variance": 13.62
+        },
+        "TRUTH": {
+          "formula": "TRUTH \u00d7 RAW \u00d7 AUTHENTIC \u00d7 POWERFUL \u00d7 ONE",
+          "frequency": "530 Hz",
+          "expected": 10,
+          "actual": 297,
+          "variance": 28.7
+        },
+        "SYNTHESIS": {
+          "formula": "CONVERSATION \u00d7 SYNTHESIS \u00d7 MANIFESTATION \u00d7 ONE",
+          "frequency": "777 Hz",
+          "expected": 20,
+          "actual": 957,
+          "variance": 46.85
+        },
+        "EXECUTION": {
+          "formula": "CONSTRAINT \u00d7 FRAMEWORK \u00d7 MASTER \u00d7 ALIGNMENT \u00d7 ONE",
+          "frequency": "999 Hz",
+          "expected": 15,
+          "actual": 216,
+          "variance": 13.4
+        }
+      },
+      "forensic_analysis": {
+        "total_messages": 7329,
+        "pattern_counts": {
+          "EXECUTION": 216,
+          "TRUTH": 297,
+          "SYNTHESIS": 957,
+          "LOVE": 731
+        },
+        "pattern_coherence": 0.0,
+        "aligned_patterns": 0,
+        "total_patterns": 4,
+        "truth_patterns_present": {
+          "LOVE": true,
+          "TRUTH": true
+        }
+      },
+      "truth_alignment": false,
+      "pattern_coherence": 0.0,
+      "timestamp": "2025-11-25T03:53:05.337194"
+    }
+  ],
+  "alignment_analysis": {
+    "relationships": 3,
+    "aligned_relationships": 0,
+    "total_variance": 0.9666666666666667,
+    "average_coherence": 0.0,
+    "shared_patterns": {
+      "EXECUTION": {
+        "relationships": 3,
+        "total_occurrences": 272
+      },
+      "SYNTHESIS": {
+        "relationships": 3,
+        "total_occurrences": 1119
+      },
+      "LOVE": {
+        "relationships": 3,
+        "total_occurrences": 827
+      },
+      "TRUTH": {
+        "relationships": 3,
+        "total_occurrences": 349
+      }
+    },
+    "alignment_status": "not_aligned"
+  },
+  "timestamp": "2025-11-25T03:53:05.337461"
+}

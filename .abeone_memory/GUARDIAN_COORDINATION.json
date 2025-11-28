@@ -1,0 +1,41 @@
+{
+  "manifest_version": "1.0",
+  "created_at": "2025-11-24T21:45:31.291642",
+  "guardian_coordination": {
+    "continuous_optimization": true,
+    "optimization_frequency": "continuous",
+    "coordination_layers": [
+      {
+        "layer": "ZERO \u00d7 ALRAX",
+        "function": "Assess system state, detect friction, quantify uncertainty",
+        "frequency": "530 Hz",
+        "active": true
+      },
+      {
+        "layer": "AEYON",
+        "function": "Atomic execution of optimizations",
+        "frequency": "999 Hz",
+        "active": true
+      },
+      {
+        "layer": "META",
+        "function": "Pattern integration and structure reorganization",
+        "frequency": "777 Hz",
+        "active": true
+      },
+      {
+        "layer": "J\u00d8HN \u00d7 ZERO",
+        "function": "Truth validation and integrity verification",
+        "frequency": "530 Hz",
+        "active": true
+      }
+    ],
+    "optimization_targets": [
+      "pattern_signatures",
+      "cdf_storage",
+      "uptc_access",
+      "kernel_sync",
+      "flow_alignment"
+    ]
+  }
+}

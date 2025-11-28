@@ -1,0 +1,137 @@
+{
+  "summary": {
+    "total_tests": 7,
+    "successful_tests": 0,
+    "failed_tests": 7,
+    "success_rate": 0.0,
+    "total_duration": 14.876137495040894,
+    "avg_duration": 2.125162499291556
+  },
+  "test_results": [
+    {
+      "test_name": "system_startup",
+      "success": false,
+      "duration": 2.7443764209747314,
+      "error_message": "All connection attempts failed",
+      "metrics": null
+    },
+    {
+      "test_name": "telemetry_setup",
+      "success": false,
+      "duration": 0.0005567073822021484,
+      "error_message": "No module named 'app'",
+      "metrics": null
+    },
+    {
+      "test_name": "guard_services",
+      "success": false,
+      "duration": 0.00031828880310058594,
+      "error_message": "No module named 'app'",
+      "metrics": null
+    },
+    {
+      "test_name": "api_endpoints",
+      "success": false,
+      "duration": 11.760449171066284,
+      "error_message": null,
+      "metrics": {
+        "total_endpoints": 5,
+        "successful_endpoints": 0,
+        "failed_endpoints": [
+          "/health (error: All connection attempts failed)",
+          "/api/v1/guards/health (error: All connection attempts failed)",
+          "/api/v1/guards/services (error: All connection attempts failed)",
+          "/docs (error: All connection attempts failed)",
+          "/openapi.json (error: All connection attempts failed)"
+        ]
+      }
+    },
+    {
+      "test_name": "llm_integration",
+      "success": false,
+      "duration": 0.00038170814514160156,
+      "error_message": "No module named 'tests'",
+      "metrics": null
+    },
+    {
+      "test_name": "documentation",
+      "success": false,
+      "duration": 0.27139854431152344,
+      "error_message": null,
+      "metrics": {
+        "total_issues": 153,
+        "high_severity": 21,
+        "medium_severity": 132,
+        "low_severity": 0,
+        "issue_types": {
+          "broken_file_link": 13,
+          "outdated_reference": 48,
+          "outdated_service_name": 7,
+          "missing_api_documentation": 82,
+          "file_read_error": 1,
+          "missing_documentation": 2
+        },
+        "api_endpoints_found": 92,
+        "service_names_found": 18,
+        "code_references_found": 62
+      }
+    },
+    {
+      "test_name": "docker_containers",
+      "success": false,
+      "duration": 0.09865665435791016,
+      "error_message": null,
+      "metrics": {
+        "total_containers": 2,
+        "service_containers": 0,
+        "container_names": []
+      }
+    }
+  ],
+  "test_groups": {
+    "system_startup": {
+      "total": 1,
+      "successful": 0,
+      "failed": 1
+    },
+    "telemetry_setup": {
+      "total": 1,
+      "successful": 0,
+      "failed": 1
+    },
+    "guard_services": {
+      "total": 1,
+      "successful": 0,
+      "failed": 1
+    },
+    "api_endpoints": {
+      "total": 1,
+      "successful": 0,
+      "failed": 1
+    },
+    "llm_integration": {
+      "total": 1,
+      "successful": 0,
+      "failed": 1
+    },
+    "documentation": {
+      "total": 1,
+      "successful": 0,
+      "failed": 1
+    },
+    "docker_containers": {
+      "total": 1,
+      "successful": 0,
+      "failed": 1
+    }
+  },
+  "recommendations": [
+    "Fix system startup issues - ensure the gateway is running",
+    "Configure OpenTelemetry properly - check Jaeger setup",
+    "Fix guard services initialization - check service configurations",
+    "Fix API endpoint issues - check routing and middleware",
+    "Fix LLM integration - ensure guard services are accessible",
+    "Fix documentation issues - run documentation audit and fix critical issues",
+    "Fix Docker container issues - ensure containers are running properly"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "extends": "./.svelte-kit/tsconfig.json",
+  "compilerOptions": {
+    // TypeScript strict mode for BiasGuards quality standards
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true,
+    "REPLACE_ME": true,
+    "noUncheckedIndexedAccess": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    // Module resolution
+    "moduleResolution": "bundler",
+    "module": "ESNext",
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+
+    // Advanced TypeScript features
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
+    "checkJs": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // JSON and asset imports
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "REPLACE_ME": true,
+
+    // Performance optimizations
+    "incremental": true,
+    "tsBuildInfoFile": ".svelte-kit/tsconfig.tsbuildinfo"
+  },
+  "include": [
+    "ambient.d.ts",
+    "./src/**/*.d.ts",
+    "./src/**/*.ts",
+    "./src/**/*.js",
+    "./src/**/*.svelte",
+    "./tests/**/*.ts",
+    "./tests/**/*.js",
+    "vite.config.ts",
+    "tailwind.config.ts",
+    "vitest.config.ts",
+    "playwright.config.ts"
+  ],
+  "exclude": [
+    "node_modules/**/*",
+    "./src/service-worker.js",
+    "./src/service-worker.ts",
+    ".svelte-kit/**/*",
+    "dist/**/*",
+    "build/**/*"
+  ]
+}

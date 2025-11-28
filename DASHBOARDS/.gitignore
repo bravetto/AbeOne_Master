@@ -1,0 +1,8 @@
+
+# Dashboard files are tracked
+!DASHBOARDS/**/*.html
+!DASHBOARDS/**/*.md
+!DASHBOARDS/**/*.json
+!DASHBOARDS/**/*.js
+# But not backup files
+.backups/

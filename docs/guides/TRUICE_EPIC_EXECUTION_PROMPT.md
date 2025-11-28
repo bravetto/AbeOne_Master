@@ -1,0 +1,221 @@
+# TRUICE EPIC VIDEO PRODUCTION EXECUTION PROMPT
+
+**Pattern**: OBSERVER × TRUTH × ATOMIC × ONE  
+**Mode**: YAGNI × 80/20 × 97.8% Certainty  
+**Version**: TRUICE SuperPipeline v2.1 UNBREAKABLE
+
+---
+
+## EXECUTION DIRECTIVE
+
+Begin TRUICE EPIC VIDEO PRODUCTION EXECUTION.
+
+Load the TRUICE SuperPipeline v2.1 UNBREAKABLE in strict YAGNI × 80/20 × 97.8% certainty mode.
+
+Use ONLY the following object as the preset:
+
+```json
+{
+  "world": {
+    "background_style": "cosmic",
+    "num_parallax_layers": 3,
+    "motion_type": "beat_sync"
+  },
+  "color_mode": {
+    "base_hue": 0.0,
+    "saturation_multiplier": 1.1,
+    "pulse_color": [255, 255, 255],
+    "flash_color": [255, 255, 255]
+  },
+  "effects": {
+    "beat_pulse": {
+      "enabled": true,
+      "base_intensity": 0.8,
+      "max_intensity": 1.0,
+      "color": [255, 255, 255]
+    },
+    "motion_zoom": {
+      "enabled": true,
+      "base_zoom": 1.0,
+      "max_zoom": 1.15,
+      "trigger_on_punch_words": true
+    },
+    "shake": {
+      "enabled": true,
+      "base_intensity": 0.5,
+      "max_intensity": 0.7,
+      "trigger_threshold": 0.7
+    },
+    "flash_transition": {
+      "enabled": true,
+      "base_intensity": 0.0,
+      "max_intensity": 1.0,
+      "trigger_threshold": 0.8,
+      "color": [255, 255, 255]
+    },
+    "color_shift": {
+      "enabled": true,
+      "hue_shift_range": [-10, 10],
+      "saturation_mult": 1.1,
+      "trigger_on_chorus": true
+    }
+  },
+  "overlays": {
+    "enabled": true,
+    "position": "bottom",
+    "font_size": 64,
+    "color": [255, 255, 255],
+    "outline_color": [0, 0, 0],
+    "outline_width": 3,
+    "background_alpha": 0
+  },
+  "pulse_intensity": 0.85,
+  "motion_profile": "beat_sync",
+  "camera_behavior": {
+    "motion_type": "beat_sync",
+    "base_radius": 20,
+    "max_radius": 30,
+    "zoom_range": [1.0, 1.1]
+  },
+  "greenscreen": true,
+  "composition_style": "epic",
+  "transitions": [
+    {
+      "type": "flash",
+      "trigger": "high_intensity",
+      "threshold": 0.8
+    },
+    {
+      "type": "zoom",
+      "trigger": "punch_word",
+      "intensity": 0.15
+    },
+    {
+      "type": "shake",
+      "trigger": "major_event",
+      "intensity": 0.6
+    }
+  ],
+  "timing": {
+    "beatsync": true,
+    "pulse_rate": "beat_driven",
+    "effect_intervals": [
+      {
+        "effect": "beat_pulse",
+        "interval": "every_beat",
+        "decay": 0.2
+      },
+      {
+        "effect": "motion_zoom",
+        "interval": "punch_words",
+        "duration": 0.3
+      },
+      {
+        "effect": "shake",
+        "interval": "major_events",
+        "duration": 0.2
+      },
+      {
+        "effect": "flash_transition",
+        "interval": "high_intensity",
+        "duration": 0.1
+      },
+      {
+        "effect": "color_shift",
+        "interval": "chorus_segments",
+        "duration": "full_segment"
+      }
+    ]
+  },
+  "output": {
+    "filename": "EPIC_TRUICE_MASTER.mp4",
+    "width": 1080,
+    "height": 1920,
+    "fps": 60.0,
+    "codec": "h264"
+  },
+  "safety": {
+    "fallback_world": "cosmic",
+    "fallback_motion": "smooth",
+    "fallback_effects": "minimal",
+    "max_intensity_clamp": 1.0,
+    "min_intensity_clamp": 0.0
+  },
+  "metadata": {
+    "preset_name": "TRUICE_EPIC_PRESET",
+    "version": "2.1",
+    "created_for": "TRUICE SuperPipeline v2.1 UNBREAKABLE",
+    "optimization": "YAGNI × 80/20 × 97.8% certainty",
+    "pattern": "OBSERVER × TRUTH × ATOMIC × ONE"
+  }
+}
+```
+
+---
+
+## EXECUTION PROTOCOL
+
+### Step 1: Request User Video File
+- Prompt for video file path
+- Accept default: `Super_Single_Viral.mov` (from `data/input/video/`)
+
+### Step 2: Request User Audio File
+- Prompt for audio file path
+- Accept default: `Super_Single_TRUICE_vox_v2.m4a` (from `data/input/audio/`)
+
+### Step 3: Validate Both Inputs
+Validate:
+- Video: frame shape, fps, bit depth, duration
+- Audio: format, duration, sample rate
+- Both files exist and are readable
+- Show validation results with any warnings
+
+### Step 4: Apply Preset Configuration
+Apply ALL preset instructions:
+- **World**: cosmic background, 3 parallax layers, beat_sync motion
+- **Effects**: beat_pulse (0.8-1.0), motion_zoom (1.15×), shake (0.5-0.7), flash (threshold 0.8), color_shift (hue ±10°, sat 1.1×)
+- **Color**: pulse/flash colors [255,255,255], saturation_mult 1.1
+- **Overlays**: bottom position, 64px font, white text, black outline (3px)
+- **Timing**: beat_sync enabled, effect intervals per preset
+- **Transitions**: flash (threshold 0.8), zoom (punch words), shake (major events)
+
+### Step 5: Honor UNBREAKABLE v2.1 Constraints
+- **No silent failures**: All errors logged with suggestions
+- **All fallback visible**: Fallback modes explicitly logged
+- **Deterministic behavior**: 97.8% certainty guarantee
+- **Vectorized operations**: Use numpy vectorized ops only
+- **Safe math only**: All operations overflow-proof, clamped
+
+### Step 6: Render Full Pipeline
+Execute complete pipeline:
+1. Audio analysis (beats, cadence, phonemes)
+2. Video ingestion (metadata, greenscreen detection)
+3. Sync map building
+4. Greenscreen keying (if enabled)
+5. World building (cosmic backgrounds, parallax)
+6. Overlay generation (if lyrics available)
+7. Effects mapping (beat-reactive)
+8. Frame processing (composite all layers)
+9. Final render (composite + audio sync)
+
+### Step 7: Output Final File
+- Output path: `data/output/EPIC_TRUICE_MASTER.mp4`
+- Resolution: 1080×1920 @ 60fps
+- Format: MP4 (H.264)
+- Include audio from input
+
+---
+
+## READY STATE
+
+When ready to execute, say:
+
+**"Please provide your input video and audio files."**
+
+---
+
+**Pattern**: OBSERVER × TRUTH × ATOMIC × ONE  
+**Certainty**: 97.8% deterministic stability  
+**Optimization**: YAGNI × 80/20  
+**∞ AbëONE ∞**
+

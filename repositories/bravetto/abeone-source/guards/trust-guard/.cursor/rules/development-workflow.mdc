@@ -1,0 +1,305 @@
+---
+description: Development workflow and best practices for Trust Guard
+---
+
+# Development Workflow and Best Practices
+
+## Development Environment Setup
+
+### Prerequisites
+- Python 3.8+ (recommended: Python 3.11)
+- Docker and Docker Compose
+- AWS CLI (for deployment)
+- Git with proper configuration
+
+### Local Setup
+```bash
+# Clone repository
+git clone <repository-url>
+cd trust-guard
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Install development dependencies
+pip install pytest pytest-cov black isort mypy
+
+# Run initial setup
+python -m uvicorn main:app --reload
+```
+
+## Git Workflow
+
+### Branch Strategy
+- **main**: Production-ready code
+- **dev**: Development integration branch
+- **feature/***: Feature development branches
+- **hotfix/***: Critical bug fixes
+
+### Commit Guidelines
+Use conventional commit format:
+```
+type(scope): description
+
+[optional body]
+
+[optional footer]
+```
+
+Types:
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation changes
+- `style`: Code style changes
+- `refactor`: Code refactoring
+- `test`: Test additions/changes
+- `chore`: Build/tooling changes
+
+Examples:
+```
+feat(detection): add new hallucination detection algorithm
+fix(api): resolve rate limiting edge case
+docs(readme): update deployment instructions
+test(validation): add KL divergence test cases
+```
+
+### Pull Request Process
+1. **Create Feature Branch**: `git checkout -b feature/new-pattern-detector`
+2. **Develop with Tests**: Write code with comprehensive tests
+3. **Code Review**: Request review from team members
+4. **CI/CD Validation**: Ensure all tests pass
+5. **Merge to Dev**: Merge to dev branch first
+6. **Integration Testing**: Test in dev environment
+7. **Merge to Main**: Deploy to production
+
+## Code Quality Standards
+
+### Pre-commit Hooks
+Set up pre-commit hooks for code quality:
+```yaml
+# .pre-commit-config.yaml
+repos:
+  - repo: https://github.com/psf/black
+    rev: 22.3.0
+    hooks:
+      - id: black
+        language_version: python3.11
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.950
+    hooks:
+      - id: mypy
+        additional_dependencies: [types-all]
+```
+
+### Code Formatting
+```bash
+# Format code with Black
+black trustguard/ main.py
+
+# Sort imports with isort
+isort trustguard/ main.py
+
+# Type checking with mypy
+mypy trustguard/ main.py
+```
+
+### Linting
+```bash
+# Run linting
+flake8 trustguard/ main.py
+pylint trustguard/ main.py
+```
+
+## Testing Workflow
+
+### Test-Driven Development
+1. **Write Tests First**: Define expected behavior
+2. **Run Tests**: Ensure they fail initially
+3. **Implement Code**: Write minimal code to pass tests
+4. **Refactor**: Improve code while keeping tests green
+5. **Repeat**: Continue for each feature
+
+### Test Execution
+```bash
+# Run all tests
+python -m pytest tests/ -v
+
+# Run with coverage
+python -m pytest tests/ --cov=trustguard --cov-report=html
+
+# Run specific test categories
+python -m pytest tests/unit/ -v
+python -m pytest tests/integration/ -v
+python -m pytest tests/patterns/ -v
+
+# Run performance tests
+python -m pytest tests/performance/ -v -m performance
+```
+
+### Continuous Testing
+- **Local**: Run tests before each commit
+- **CI/CD**: Automated testing on pull requests
+- **Nightly**: Full test suite with performance benchmarks
+- **Pre-deployment**: Integration tests in staging environment
+
+## API Development Workflow
+
+### Endpoint Development
+1. **Define Models**: Create Pydantic request/response models
+2. **Write Tests**: Create comprehensive test cases
+3. **Implement Endpoint**: Write FastAPI endpoint
+4. **Add Documentation**: Include OpenAPI documentation
+5. **Test Integration**: Verify with real client requests
+
+### API Documentation
+- Use comprehensive docstrings for all endpoints
+- Include request/response examples
+- Document error conditions and status codes
+- Maintain OpenAPI specification accuracy
+
+### API Versioning
+- Use URL versioning: `/v1/`, `/v2/`
+- Maintain backward compatibility
+- Deprecate old versions with proper notice
+- Document migration paths
+
+## Pattern Detection Development
+
+### Adding New Patterns
+1. **Research Pattern**: Define detection criteria
+2. **Create Detector Class**: Implement detection logic
+3. **Write Tests**: Create accuracy test cases
+4. **Integrate**: Add to main detection engine
+5. **Validate**: Test with real-world examples
+
+### Pattern Validation
+- Test with known positive/negative examples
+- Measure detection accuracy and false positive rates
+- Validate performance impact
+- Document detection criteria and limitations
+
+## Performance Optimization
+
+### Profiling
+```bash
+# Profile application performance
+python -m cProfile -o profile.stats main.py
+
+# Analyze memory usage
+python -m memory_profiler main.py
+
+# Monitor API performance
+python -m pytest tests/performance/ -v --benchmark-only
+```
+
+### Optimization Guidelines
+- Profile before optimizing
+- Focus on bottlenecks identified by profiling
+- Maintain code readability
+- Document performance improvements
+- Test performance regressions
+
+## Documentation Workflow
+
+### Code Documentation
+- Use Google-style docstrings
+- Include type hints for all functions
+- Document complex algorithms and patterns
+- Maintain inline comments for business logic
+
+### API Documentation
+- Keep OpenAPI specification updated
+- Include comprehensive examples
+- Document error conditions
+- Provide client SDK examples
+
+### Architecture Documentation
+- Update architecture diagrams
+- Document design decisions
+- Maintain deployment guides
+- Keep troubleshooting guides current
+
+## Security Workflow
+
+### Security Reviews
+- Code review for security vulnerabilities
+- Dependency vulnerability scanning
+- Penetration testing for API endpoints
+- Security audit of infrastructure
+
+### Security Best Practices
+- Never commit secrets or API keys
+- Use environment variables for configuration
+- Implement proper input validation
+- Follow OWASP security guidelines
+- Regular security dependency updates
+
+## Deployment Workflow
+
+### Environment Promotion
+1. **Development**: Local development and testing
+2. **Staging**: Integration testing environment
+3. **Production**: Live production environment
+
+### Deployment Process
+```bash
+# Deploy to staging
+cd aws && ./deploy.sh staging
+
+# Run integration tests
+python -m pytest tests/integration/ -v
+
+# Deploy to production
+cd aws && ./deploy.sh production
+
+# Verify deployment
+curl https://api.trust-guard.com/health
+```
+
+### Rollback Procedures
+- Maintain previous image versions in ECR
+- Document rollback procedures
+- Test rollback process regularly
+- Monitor deployment health metrics
+
+## Monitoring and Debugging
+
+### Development Monitoring
+- Use structured logging for debugging
+- Implement health check endpoints
+- Monitor performance metrics
+- Set up error tracking and alerting
+
+### Production Monitoring
+- CloudWatch integration for metrics
+- Prometheus metrics for detailed monitoring
+- Log aggregation and analysis
+- Performance alerting and dashboards
+
+## Team Collaboration
+
+### Code Review Guidelines
+- Review for correctness, performance, and maintainability
+- Check test coverage and quality
+- Verify documentation updates
+- Ensure security best practices
+
+### Knowledge Sharing
+- Document architectural decisions
+- Share performance optimization techniques
+- Maintain troubleshooting guides
+- Conduct regular team knowledge sessions
+
+### Communication
+- Use clear commit messages and PR descriptions
+- Document breaking changes
+- Communicate deployment schedules
+- Share performance metrics and insights

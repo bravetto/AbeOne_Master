@@ -1,0 +1,347 @@
+{
+  "timestamp": "2025-10-13T01:41:53.973872",
+  "test_results": {
+    "unit_tests": {
+      "suites": {
+        "tests/unit/test_comprehensive_core.py": {
+          "passed": 0,
+          "failed": 0,
+          "skipped": 0,
+          "return_code": 0,
+          "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.8, pytest-8.4.2, pluggy-1.6.0\nrootdir: C:\\Users\\jimmy\\.cursor\\trust-guard\nconfigfile: pyproject.toml\nplugins: anyio-4.11.0, asyncio-1.2.0, cov-7.0.0, json-report-1.5.0, metadata-3.1.1\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 61 items\n\ntests\\unit\\test_comprehensive_core.py .................................. [ 55%]\n...........................                                              [100%]\n\n============================== warnings summary ===============================\n..\\..\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11\n  C:\\Users\\jimmy\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11: DeprecationWarning: pythonjsonlogger.jsonlogger has been moved to pythonjsonlogger.json\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: /tmp/pytest_report.json\n======================== 61 passed, 1 warning in 1.14s ========================\n",
+          "stderr": ""
+        },
+        "tests/unit/test_comprehensive_validation.py": {
+          "passed": 0,
+          "failed": 0,
+          "skipped": 0,
+          "return_code": 0,
+          "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.8, pytest-8.4.2, pluggy-1.6.0\nrootdir: C:\\Users\\jimmy\\.cursor\\trust-guard\nconfigfile: pyproject.toml\nplugins: anyio-4.11.0, asyncio-1.2.0, cov-7.0.0, json-report-1.5.0, metadata-3.1.1\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 41 items\n\ntests\\unit\\test_comprehensive_validation.py ............................ [ 68%]\n.............                                                            [100%]\n\n============================== warnings summary ===============================\n..\\..\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11\n  C:\\Users\\jimmy\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11: DeprecationWarning: pythonjsonlogger.jsonlogger has been moved to pythonjsonlogger.json\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: /tmp/pytest_report.json\n======================== 41 passed, 1 warning in 0.81s ========================\n",
+          "stderr": ""
+        },
+        "tests/unit/test_comprehensive_constitutional.py": {
+          "passed": 0,
+          "failed": 0,
+          "skipped": 0,
+          "return_code": 0,
+          "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.8, pytest-8.4.2, pluggy-1.6.0\nrootdir: C:\\Users\\jimmy\\.cursor\\trust-guard\nconfigfile: pyproject.toml\nplugins: anyio-4.11.0, asyncio-1.2.0, cov-7.0.0, json-report-1.5.0, metadata-3.1.1\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 39 items\n\ntests\\unit\\test_comprehensive_constitutional.py ........................ [ 61%]\n...............                                                          [100%]\n\n============================== warnings summary ===============================\n..\\..\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11\n  C:\\Users\\jimmy\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11: DeprecationWarning: pythonjsonlogger.jsonlogger has been moved to pythonjsonlogger.json\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: /tmp/pytest_report.json\n======================== 39 passed, 1 warning in 0.79s ========================\n",
+          "stderr": ""
+        },
+        "tests/unit/test_comprehensive_metrics.py": {
+          "passed": 0,
+          "failed": 0,
+          "skipped": 0,
+          "return_code": 0,
+          "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.8, pytest-8.4.2, pluggy-1.6.0\nrootdir: C:\\Users\\jimmy\\.cursor\\trust-guard\nconfigfile: pyproject.toml\nplugins: anyio-4.11.0, asyncio-1.2.0, cov-7.0.0, json-report-1.5.0, metadata-3.1.1\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 43 items\n\ntests\\unit\\test_comprehensive_metrics.py ............................... [ 72%]\n............                                                             [100%]\n\n============================== warnings summary ===============================\n..\\..\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11\n  C:\\Users\\jimmy\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11: DeprecationWarning: pythonjsonlogger.jsonlogger has been moved to pythonjsonlogger.json\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: /tmp/pytest_report.json\n======================== 43 passed, 1 warning in 0.82s ========================\n",
+          "stderr": ""
+        },
+        "tests/unit/test_comprehensive_logging.py": {
+          "passed": 0,
+          "failed": 0,
+          "skipped": 0,
+          "return_code": 0,
+          "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.8, pytest-8.4.2, pluggy-1.6.0\nrootdir: C:\\Users\\jimmy\\.cursor\\trust-guard\nconfigfile: pyproject.toml\nplugins: anyio-4.11.0, asyncio-1.2.0, cov-7.0.0, json-report-1.5.0, metadata-3.1.1\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 36 items\n\ntests\\unit\\test_comprehensive_logging.py ............................... [ 86%]\n.....                                                                    [100%]\n\n============================== warnings summary ===============================\n..\\..\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11\n  C:\\Users\\jimmy\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11: DeprecationWarning: pythonjsonlogger.jsonlogger has been moved to pythonjsonlogger.json\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: /tmp/pytest_report.json\n======================== 36 passed, 1 warning in 0.84s ========================\n",
+          "stderr": ""
+        },
+        "tests/unit/test_comprehensive_error_handling.py": {
+          "passed": 0,
+          "failed": 0,
+          "skipped": 0,
+          "return_code": 0,
+          "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.8, pytest-8.4.2, pluggy-1.6.0\nrootdir: C:\\Users\\jimmy\\.cursor\\trust-guard\nconfigfile: pyproject.toml\nplugins: anyio-4.11.0, asyncio-1.2.0, cov-7.0.0, json-report-1.5.0, metadata-3.1.1\nasyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 31 items\n\ntests\\unit\\test_comprehensive_error_handling.py ........................ [ 77%]\n.......                                                                  [100%]\n\n============================== warnings summary ===============================\n..\\..\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11\n  C:\\Users\\jimmy\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pythonjsonlogger\\jsonlogger.py:11: DeprecationWarning: pythonjsonlogger.jsonlogger has been moved to pythonjsonlogger.json\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: /tmp/pytest_report.json\n======================== 31 passed, 1 warning in 2.91s ========================\n",
+          "stderr": ""
+        }
+      },
+      "summary": {
+        "total_passed": 0,
+        "total_failed": 0,
+        "total_skipped": 0,
+        "total_tests": 0,
+        "success_rate": 0
+      }
+    },
+    "integration_tests": {
+      "health_endpoint": {
+        "status": "PASS",
+        "status_code": 200,
+        "response_time_ms": 2187.8869999999997,
+        "response_data": {
+          "status": "healthy",
+          "version": "1.0.0",
+          "components": {
+            "detector": true,
+            "validator": true,
+            "constitutional": true,
+            "metrics": true
+          },
+          "metrics": {
+            "uptime_seconds": 55.1218204498291,
+            "cpu_usage": 69.4,
+            "memory_mb": 5243.046875,
+            "patterns_detected_today": 0,
+            "average_risk_score": 0.0
+          },
+          "system_memory": {
+            "used_mb": 5243.05,
+            "available_mb": 738.33,
+            "percentage": 87.7
+          }
+        }
+      },
+      "liveness_probe": {
+        "status": "PASS",
+        "status_code": 200,
+        "response_time_ms": 2083.478
+      },
+      "readiness_probe": {
+        "status": "PASS",
+        "status_code": 200,
+        "response_time_ms": 2050.9900000000002
+      },
+      "detailed_health": {
+        "status": "PASS",
+        "status_code": 200,
+        "response_time_ms": 2029.2669999999998,
+        "response_data": {
+          "status": "healthy",
+          "timestamp": "2025-10-13T05:42:22.088552+00:00",
+          "uptime_seconds": 59.42996597290039,
+          "check_duration_ms": 1.4889240264892578,
+          "components": [
+            {
+              "name": "system_resources",
+              "status": "healthy",
+              "message": "Resources within normal limits",
+              "details": {
+                "memory_usage_percent": 89.3,
+                "disk_usage_percent": 47.0,
+                "cpu_usage_percent": 29.8,
+                "memory_available_gb": 0.6242408752441406,
+                "disk_free_gb": 109.39509582519531
+              },
+              "timestamp": "2025-10-13T05:42:22.088420+00:00"
+            },
+            {
+              "name": "detector",
+              "status": "healthy",
+              "message": "Detector operational",
+              "details": {},
+              "timestamp": "2025-10-13T05:42:22.088441+00:00"
+            },
+            {
+              "name": "validator",
+              "status": "healthy",
+              "message": "Validator operational",
+              "details": {},
+              "timestamp": "2025-10-13T05:42:22.088451+00:00"
+            },
+            {
+              "name": "constitutional",
+              "status": "healthy",
+              "message": "Constitutional system operational",
+              "details": {},
+              "timestamp": "2025-10-13T05:42:22.088464+00:00"
+            },
+            {
+              "name": "metrics",
+              "status": "healthy",
+              "message": "Metrics system operational",
+              "details": {},
+              "timestamp": "2025-10-13T05:42:22.088477+00:00"
+            },
+            {
+              "name": "authentication",
+              "status": "healthy",
+              "message": "Authentication system operational",
+              "details": {},
+              "timestamp": "2025-10-13T05:42:22.088507+00:00"
+            },
+            {
+              "name": "database",
+              "status": "healthy",
+              "message": "No database dependencies",
+              "details": {},
+              "timestamp": "2025-10-13T05:42:22.088517+00:00"
+            },
+            {
+              "name": "external_dependencies",
+              "status": "healthy",
+              "message": "No external dependencies",
+              "details": {},
+              "timestamp": "2025-10-13T05:42:22.088521+00:00"
+            }
+          ],
+          "summary": {
+            "total_components": 8,
+            "healthy": 8,
+            "degraded": 0,
+            "unhealthy": 0,
+            "unknown": 0
+          },
+          "service_info": {
+            "name": "trust-guard",
+            "version": "1.0.0",
+            "environment": "production"
+          },
+          "kubernetes": {
+            "liveness_probe": "/health/live",
+            "readiness_probe": "/health/ready",
+            "startup_probe": "/health"
+          }
+        }
+      },
+      "metrics_endpoint": {
+        "status": "PASS",
+        "status_code": 200,
+        "response_time_ms": 2058.578,
+        "content_type": "text/plain; version=1.0.0; charset=utf-8"
+      },
+      "detect_endpoint": {
+        "status": "PASS",
+        "status_code": 401,
+        "response_time_ms": 2030.6250000000002
+      }
+    }
+  },
+  "health_checks": {
+    "basic_health": {
+      "status": "PASS",
+      "overall_status": "healthy",
+      "uptime_seconds": 0,
+      "components": {
+        "detector": true,
+        "validator": true,
+        "constitutional": true,
+        "metrics": true
+      }
+    },
+    "detailed_health": {
+      "status": "PASS",
+      "overall_status": "degraded",
+      "summary": {
+        "total_components": 8,
+        "healthy": 7,
+        "degraded": 1,
+        "unhealthy": 0,
+        "unknown": 0
+      },
+      "components": [
+        {
+          "name": "system_resources",
+          "status": "degraded",
+          "message": "High resource usage detected",
+          "details": {
+            "memory_usage_percent": 91.6,
+            "disk_usage_percent": 47.0,
+            "cpu_usage_percent": 21.3,
+            "memory_available_gb": 0.4899559020996094,
+            "disk_free_gb": 109.39486312866211
+          },
+          "timestamp": "2025-10-13T05:42:30.409288+00:00"
+        },
+        {
+          "name": "detector",
+          "status": "healthy",
+          "message": "Detector operational",
+          "details": {},
+          "timestamp": "2025-10-13T05:42:30.409308+00:00"
+        },
+        {
+          "name": "validator",
+          "status": "healthy",
+          "message": "Validator operational",
+          "details": {},
+          "timestamp": "2025-10-13T05:42:30.409316+00:00"
+        },
+        {
+          "name": "constitutional",
+          "status": "healthy",
+          "message": "Constitutional system operational",
+          "details": {},
+          "timestamp": "2025-10-13T05:42:30.409321+00:00"
+        },
+        {
+          "name": "metrics",
+          "status": "healthy",
+          "message": "Metrics system operational",
+          "details": {},
+          "timestamp": "2025-10-13T05:42:30.409326+00:00"
+        },
+        {
+          "name": "authentication",
+          "status": "healthy",
+          "message": "Authentication system operational",
+          "details": {},
+          "timestamp": "2025-10-13T05:42:30.409342+00:00"
+        },
+        {
+          "name": "database",
+          "status": "healthy",
+          "message": "No database dependencies",
+          "details": {},
+          "timestamp": "2025-10-13T05:42:30.409349+00:00"
+        },
+        {
+          "name": "external_dependencies",
+          "status": "healthy",
+          "message": "No external dependencies",
+          "details": {},
+          "timestamp": "2025-10-13T05:42:30.409351+00:00"
+        }
+      ]
+    },
+    "tracer_health": {
+      "status": "FAIL",
+      "status_code": 401
+    }
+  },
+  "log_analysis": {
+    "log_sources": [],
+    "error_patterns": [],
+    "performance_metrics": [],
+    "security_events": []
+  },
+  "performance_metrics": {
+    "/health": {
+      "status": "PASS",
+      "response_time_ms": 2166.5611267089844,
+      "status_code": 200,
+      "content_length": 340
+    },
+    "/health/live": {
+      "status": "PASS",
+      "response_time_ms": 2033.738613128662,
+      "status_code": 200,
+      "content_length": 18
+    },
+    "/health/ready": {
+      "status": "PASS",
+      "response_time_ms": 2050.482988357544,
+      "status_code": 200,
+      "content_length": 18
+    },
+    "/metrics": {
+      "status": "PASS",
+      "response_time_ms": 2052.9122352600098,
+      "status_code": 200,
+      "content_length": 13843
+    },
+    "load_test": {
+      "status": "PASS",
+      "total_requests": 10,
+      "successful_requests": 10,
+      "failed_requests": 0,
+      "total_time_seconds": 21.519468545913696,
+      "requests_per_second": 0.4646954909069484
+    }
+  },
+  "summary": {
+    "overall_status": "PASS",
+    "total_tests": 6,
+    "passed_tests": 6,
+    "failed_tests": 0,
+    "success_rate": 100.0,
+    "health_status": "DEGRADED",
+    "performance_status": "GOOD"
+  }
+}

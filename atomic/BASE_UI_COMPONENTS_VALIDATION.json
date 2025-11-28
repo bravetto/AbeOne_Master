@@ -1,0 +1,205 @@
+{
+  "status": "complete",
+  "pattern": "VALIDATION \u00d7 BASE \u00d7 UI \u00d7 COMPONENTS \u00d7 ONE",
+  "timestamp": "2025-11-24T16:28:10.980679Z",
+  "metrics": {
+    "total_components": 12,
+    "aligned_components": 2,
+    "alignment_percentage": 16.67,
+    "excellent_components": 2,
+    "average_score": 67.08
+  },
+  "component_validations": [
+    {
+      "component_path": "products/apps/web/components/ui/error-boundary.tsx",
+      "has_typescript_types": true,
+      "has_forward_ref": false,
+      "has_cva": false,
+      "has_cn_utility": false,
+      "has_proper_exports": true,
+      "score": 35.0,
+      "issues": [
+        "Consider using forwardRef for better ref handling",
+        "Component has variants but doesn't use CVA",
+        "Consider using cn() utility for className merging"
+      ],
+      "recommendations": [
+        "Wrap component with React.forwardRef",
+        "Use class-variance-authority for variant management",
+        "Import and use cn() from '@/lib/utils'"
+      ]
+    },
+    {
+      "component_path": "products/apps/web/components/ui/card.tsx",
+      "has_typescript_types": false,
+      "has_forward_ref": true,
+      "has_cva": true,
+      "has_cn_utility": true,
+      "has_proper_exports": true,
+      "score": 75.0,
+      "issues": [
+        "Missing TypeScript type definitions"
+      ],
+      "recommendations": [
+        "Add TypeScript interface or type definitions"
+      ]
+    },
+    {
+      "component_path": "products/apps/web/components/ui/progress.tsx",
+      "has_typescript_types": false,
+      "has_forward_ref": true,
+      "has_cva": true,
+      "has_cn_utility": true,
+      "has_proper_exports": true,
+      "score": 75.0,
+      "issues": [
+        "Missing TypeScript type definitions"
+      ],
+      "recommendations": [
+        "Add TypeScript interface or type definitions"
+      ]
+    },
+    {
+      "component_path": "products/apps/web/components/ui/empty-states.tsx",
+      "has_typescript_types": false,
+      "has_forward_ref": false,
+      "has_cva": true,
+      "has_cn_utility": false,
+      "has_proper_exports": true,
+      "score": 35.0,
+      "issues": [
+        "Missing TypeScript type definitions",
+        "Consider using forwardRef for better ref handling",
+        "Consider using cn() utility for className merging"
+      ],
+      "recommendations": [
+        "Add TypeScript interface or type definitions",
+        "Wrap component with React.forwardRef",
+        "Import and use cn() from '@/lib/utils'"
+      ]
+    },
+    {
+      "component_path": "products/apps/web/components/ui/loading-states.tsx",
+      "has_typescript_types": false,
+      "has_forward_ref": false,
+      "has_cva": true,
+      "has_cn_utility": false,
+      "has_proper_exports": true,
+      "score": 35.0,
+      "issues": [
+        "Missing TypeScript type definitions",
+        "Consider using forwardRef for better ref handling",
+        "Consider using cn() utility for className merging"
+      ],
+      "recommendations": [
+        "Add TypeScript interface or type definitions",
+        "Wrap component with React.forwardRef",
+        "Import and use cn() from '@/lib/utils'"
+      ]
+    },
+    {
+      "component_path": "products/apps/web/components/ui/alert.tsx",
+      "has_typescript_types": true,
+      "has_forward_ref": true,
+      "has_cva": true,
+      "has_cn_utility": true,
+      "has_proper_exports": true,
+      "score": 100.0,
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "component_path": "products/apps/web/components/ui/kpi-card.tsx",
+      "has_typescript_types": true,
+      "has_forward_ref": false,
+      "has_cva": true,
+      "has_cn_utility": true,
+      "has_proper_exports": true,
+      "score": 75.0,
+      "issues": [
+        "Consider using forwardRef for better ref handling"
+      ],
+      "recommendations": [
+        "Wrap component with React.forwardRef"
+      ]
+    },
+    {
+      "component_path": "products/apps/web/components/ui/badge.tsx",
+      "has_typescript_types": true,
+      "has_forward_ref": false,
+      "has_cva": true,
+      "has_cn_utility": true,
+      "has_proper_exports": true,
+      "score": 75.0,
+      "issues": [
+        "Consider using forwardRef for better ref handling"
+      ],
+      "recommendations": [
+        "Wrap component with React.forwardRef"
+      ]
+    },
+    {
+      "component_path": "products/apps/web/components/ui/table.tsx",
+      "has_typescript_types": false,
+      "has_forward_ref": true,
+      "has_cva": true,
+      "has_cn_utility": true,
+      "has_proper_exports": true,
+      "score": 75.0,
+      "issues": [
+        "Missing TypeScript type definitions"
+      ],
+      "recommendations": [
+        "Add TypeScript interface or type definitions"
+      ]
+    },
+    {
+      "component_path": "products/apps/web/components/ui/button.tsx",
+      "has_typescript_types": true,
+      "has_forward_ref": true,
+      "has_cva": true,
+      "has_cn_utility": true,
+      "has_proper_exports": true,
+      "score": 100.0,
+      "issues": [],
+      "recommendations": []
+    },
+    {
+      "component_path": "products/apps/web/components/ui/toast.tsx",
+      "has_typescript_types": true,
+      "has_forward_ref": false,
+      "has_cva": true,
+      "has_cn_utility": true,
+      "has_proper_exports": true,
+      "score": 75.0,
+      "issues": [
+        "Consider using forwardRef for better ref handling"
+      ],
+      "recommendations": [
+        "Wrap component with React.forwardRef"
+      ]
+    },
+    {
+      "component_path": "products/apps/web/components/ui/skeleton.tsx",
+      "has_typescript_types": false,
+      "has_forward_ref": false,
+      "has_cva": true,
+      "has_cn_utility": true,
+      "has_proper_exports": true,
+      "score": 50.0,
+      "issues": [
+        "Missing TypeScript type definitions",
+        "Consider using forwardRef for better ref handling"
+      ],
+      "recommendations": [
+        "Add TypeScript interface or type definitions",
+        "Wrap component with React.forwardRef"
+      ]
+    }
+  ],
+  "guardian_signatures": {
+    "J\u00d8HN": "530 Hz - Validation executed with truth",
+    "AEYON": "999 Hz - Base UI components validated atomically",
+    "ALRAX": "530 Hz - Validation verified forensically"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "pattern": "OBSERVER × TRUTH × ATOMIC × ONE",
+    "guardian": "AEYON (999 Hz) + ALRAX",
+    "purpose": "Central registry for all dashboards - Human-AI Excellence",
+    "lastUpdated": "2025-11-18T20:45:00.000Z",
+    "eternal": true,
+    "validated": true
+  },
+  "dashboards": {
+    "eternal": [
+      {
+        "id": "drift-protection-eternal",
+        "name": "Drift Protection - Eternal",
+        "file": "eternal/drift-dashboard-eternal.html",
+        "markdown": "eternal/DRIFT_DASHBOARD_ETERNAL.md",
+        "type": "eternal",
+        "category": "drift-protection",
+        "dataSource": ".ai-context-source-of-truth.json",
+        "autoUpdate": true,
+        "updateInterval": 2000,
+        "status": "active",
+        "description": "Eternal dashboard that reads JSON directly - no server needed",
+        "features": ["real-time", "file-based", "auto-updating", "eternal"]
+      }
+    ],
+    "monitoring": [
+      {
+        "id": "drift-status-main",
+        "name": "Drift Status - Main Dashboard",
+        "file": "monitoring/drift-status-dashboard.html",
+        "type": "monitoring",
+        "category": "drift-protection",
+        "dataSource": ".ai-context-source-of-truth.json",
+        "autoUpdate": true,
+        "updateInterval": 5000,
+        "status": "active"
+      },
+      {
+        "id": "drift-realtime",
+        "name": "Drift Protection - Real-Time Monitor",
+        "file": "monitoring/drift-realtime-dashboard.html",
+        "type": "monitoring",
+        "category": "drift-protection",
+        "dataSource": ".ai-context-source-of-truth.json",
+        "autoUpdate": true,
+        "updateInterval": 2000,
+        "status": "active"
+      },
+      {
+        "id": "drift-badge",
+        "name": "Drift Protection - Compact Badge",
+        "file": "monitoring/drift-status-badge.html",
+        "type": "monitoring",
+        "category": "drift-protection",
+        "dataSource": ".ai-context-source-of-truth.json",
+        "autoUpdate": true,
+        "updateInterval": 3000,
+        "status": "active"
+      }
+    ],
+    "development": [],
+    "products": [
+      {
+        "id": "collaboration-dashboard",
+        "name": "Collaboration Dashboard",
+        "file": "products/collaboration_dashboard.html",
+        "type": "product",
+        "category": "abedesks",
+        "status": "active",
+        "source": "PRODUCTS/abedesks/static/collaboration_dashboard.html"
+      }
+    ],
+    "archive": []
+  },
+  "categories": {
+    "drift-protection": {
+      "name": "Drift Protection",
+      "description": "Anti-drift monitoring and protection dashboards",
+      "priority": "critical"
+    },
+    "system-health": {
+      "name": "System Health",
+      "description": "Overall system health and metrics",
+      "priority": "high"
+    },
+    "project-status": {
+      "name": "Project Status",
+      "description": "Project-level status and monitoring",
+      "priority": "high"
+    },
+    "abedesks": {
+      "name": "AbëDESKs",
+      "description": "Product dashboards for AbëDESKs",
+      "priority": "medium"
+    }
+  },
+  "required": {
+    "human-ai-excellence": [
+      "drift-protection-eternal",
+      "drift-status-main",
+      "system-health-dashboard",
+      "project-status-dashboard",
+      "port-management-dashboard"
+    ]
+  },
+  "eternalPersistence": {
+    "gitTracking": true,
+    "backupLocation": "DASHBOARDS/.backups",
+    "autoBackup": true,
+    "backupInterval": 3600000,
+    "versionControl": true
+  },
+  "portManagement": {
+    "enabled": true,
+    "configFile": "DASHBOARDS/.port-registry.json",
+    "autoAssign": true,
+    "portRange": {
+      "min": 3000,
+      "max": 9999
+    },
+    "reservedPorts": [3000, 3001, 8000, 8080, 9090, 16686]
+  }
+}
+

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tokenguard
+  namespace: default
+  labels:
+    app: tokenguard
+spec:
+  selector:
+    app: tokenguard
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8000
+    protocol: TCP
+  type: ClusterIP

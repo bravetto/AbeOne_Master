@@ -1,0 +1,62 @@
+{
+  "name": "contextguard-cli",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "BiasGuard Context Engineering CLI - Recursive AI validation for any codebase",
+  "main": "dist/index.js",
+  "bin": {
+    "contextguard": "dist/cli.js",
+    "biasguard": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/cli.js",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest",
+    "prepublishOnly": "npm run build",
+    "biasguard:scan": "contextguard scan",
+    "biasguard:validate": "contextguard validate"
+  },
+  "keywords": [
+    "bias-detection",
+    "context-engineering",
+    "framework-validation",
+    "recursive-intelligence",
+    "jahmere-webb",
+    "justice-tech",
+    "cli",
+    "developer-tools"
+  ],
+  "author": "BiasGuards.AI - JAHmere Webb Freedom Mission",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/biasguards/contextguard-cli"
+  },
+  "homepage": "https://deploy-hmhhe1b1f-bravetto.vercel.app",
+  "dependencies": {
+    "commander": "^12.0.0",
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.15",
+    "glob": "^10.3.10",
+    "fs-extra": "^11.2.0",
+    "ora": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.7",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.1",
+    "vitest": "^1.3.1",
+    "contextguard-cli": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ]
+}

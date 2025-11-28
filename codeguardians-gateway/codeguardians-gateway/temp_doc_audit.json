@@ -1,0 +1,2553 @@
+{
+  "summary": {
+    "total_issues": 209,
+    "high_severity": 22,
+    "medium_severity": 187,
+    "low_severity": 0,
+    "issue_types": {
+      "broken_file_link": 13,
+      "outdated_reference": 103,
+      "outdated_service_name": 8,
+      "missing_api_documentation": 82,
+      "file_read_error": 1,
+      "missing_documentation": 2
+    },
+    "api_endpoints_found": 92,
+    "service_names_found": 18,
+    "code_references_found": 124
+  },
+  "issues": [
+    {
+      "file": "QUICKSTART.md",
+      "line": 60,
+      "type": "broken_file_link",
+      "severity": "high",
+      "description": "Broken file link: ./API_DOCUMENTATION.md",
+      "suggested_fix": "Fix the file path or create the missing file"
+    },
+    {
+      "file": "QUICKSTART.md",
+      "line": 61,
+      "type": "broken_file_link",
+      "severity": "high",
+      "description": "Broken file link: ./VSCODE_INTEGRATION.md",
+      "suggested_fix": "Fix the file path or create the missing file"
+    },
+    {
+      "file": "QUICKSTART.md",
+      "line": 62,
+      "type": "broken_file_link",
+      "severity": "high",
+      "description": "Broken file link: ./CHROME_INTEGRATION.md",
+      "suggested_fix": "Fix the file path or create the missing file"
+    },
+    {
+      "file": "QUICKSTART.md",
+      "line": 63,
+      "type": "broken_file_link",
+      "severity": "high",
+      "description": "Broken file link: ./DOCKER_DEPLOYMENT.md",
+      "suggested_fix": "Fix the file path or create the missing file"
+    },
+    {
+      "file": "README.md",
+      "line": 127,
+      "type": "broken_file_link",
+      "severity": "high",
+      "description": "Broken file link: ./ENDPOINT_REFERENCE.md",
+      "suggested_fix": "Fix the file path or create the missing file"
+    },
+    {
+      "file": "README.md",
+      "line": 135,
+      "type": "broken_file_link",
+      "severity": "high",
+      "description": "Broken file link: ./FRONTEND_BACKEND_INTEGRATION.md",
+      "suggested_fix": "Fix the file path or create the missing file"
+    },
+    {
+      "file": "TEST_IMPLEMENTATION_SUMMARY.md",
+      "line": 125,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "TEST_IMPLEMENTATION_SUMMARY.md",
+      "line": 0,
+      "type": "outdated_service_name",
+      "severity": "high",
+      "description": "References to old service 'securityguard' found",
+      "suggested_fix": "Update references to current service names"
+    },
+    {
+      "file": "docs\\AWS_DEPLOYMENT_ARCHITECTURE.md",
+      "line": 28,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "docs\\AWS_DEPLOYMENT_ARCHITECTURE.md",
+      "line": 72,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "docs\\AWS_DEPLOYMENT_ARCHITECTURE.md",
+      "line": 292,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "docs\\AWS_DEPLOYMENT_ARCHITECTURE.md",
+      "line": 0,
+      "type": "outdated_service_name",
+      "severity": "high",
+      "description": "References to old service 'securityguard' found",
+      "suggested_fix": "Update references to current service names"
+    },
+    {
+      "file": "docs\\QUICK_REFERENCE.md",
+      "line": 295,
+      "type": "broken_file_link",
+      "severity": "high",
+      "description": "Broken file link: ../../USER_GUIDE.md",
+      "suggested_fix": "Fix the file path or create the missing file"
+    },
+    {
+      "file": "docs\\QUICK_REFERENCE.md",
+      "line": 296,
+      "type": "broken_file_link",
+      "severity": "high",
+      "description": "Broken file link: ../../DEV_HANDOFF.md",
+      "suggested_fix": "Fix the file path or create the missing file"
+    },
+    {
+      "file": "docs\\QUICK_REFERENCE.md",
+      "line": 297,
+      "type": "broken_file_link",
+      "severity": "high",
+      "description": "Broken file link: ../../DEVOPS_GUIDE.md",
+      "suggested_fix": "Fix the file path or create the missing file"
+    },
+    {
+      "file": "docs\\README.md",
+      "line": 13,
+      "type": "broken_file_link",
+      "severity": "high",
+      "description": "Broken file link: ../../DEVOPS_GUIDE.md",
+      "suggested_fix": "Fix the file path or create the missing file"
+    },
+    {
+      "file": "docs\\README.md",
+      "line": 59,
+      "type": "broken_file_link",
+      "severity": "high",
+      "description": "Broken file link: ../../USER_GUIDE.md",
+      "suggested_fix": "Fix the file path or create the missing file"
+    },
+    {
+      "file": "docs\\README.md",
+      "line": 60,
+      "type": "broken_file_link",
+      "severity": "high",
+      "description": "Broken file link: ../../DEV_HANDOFF.md",
+      "suggested_fix": "Fix the file path or create the missing file"
+    },
+    {
+      "file": "docs\\README.md",
+      "line": 61,
+      "type": "broken_file_link",
+      "severity": "high",
+      "description": "Broken file link: ../../DEVOPS_GUIDE.md",
+      "suggested_fix": "Fix the file path or create the missing file"
+    },
+    {
+      "file": "docs\\README.md",
+      "line": 54,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "docs\\README.md",
+      "line": 0,
+      "type": "outdated_service_name",
+      "severity": "high",
+      "description": "References to old service 'securityguard' found",
+      "suggested_fix": "Update references to current service names"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 43,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 93,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 98,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 175,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 175,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: Port numbers may be outdated",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 203,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 207,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 0,
+      "type": "outdated_service_name",
+      "severity": "high",
+      "description": "References to old service 'securityguard' found",
+      "suggested_fix": "Update references to current service names"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 29,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 94,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 221,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 400,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/scan' not documented",
+      "suggested_fix": "Add documentation for endpoint '/scan'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/tokenguard/optimize' not documented",
+      "suggested_fix": "Add documentation for endpoint '/tokenguard/optimize'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/{post_id}/unpublish' not documented",
+      "suggested_fix": "Add documentation for endpoint '/{post_id}/unpublish'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/biasguard/detect' not documented",
+      "suggested_fix": "Add documentation for endpoint '/biasguard/detect'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/download/{file_id}' not documented",
+      "suggested_fix": "Add documentation for endpoint '/download/{file_id}'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/health/refresh' not documented",
+      "suggested_fix": "Add documentation for endpoint '/health/refresh'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/tiers' not documented",
+      "suggested_fix": "Add documentation for endpoint '/tiers'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/logout' not documented",
+      "suggested_fix": "Add documentation for endpoint '/logout'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/gdpr/delete' not documented",
+      "suggested_fix": "Add documentation for endpoint '/gdpr/delete'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/config' not documented",
+      "suggested_fix": "Add documentation for endpoint '/config'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/subscription' not documented",
+      "suggested_fix": "Add documentation for endpoint '/subscription'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/checkout' not documented",
+      "suggested_fix": "Add documentation for endpoint '/checkout'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/discovery/services' not documented",
+      "suggested_fix": "Add documentation for endpoint '/discovery/services'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/audit-logs' not documented",
+      "suggested_fix": "Add documentation for endpoint '/audit-logs'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/tokenguard' not documented",
+      "suggested_fix": "Add documentation for endpoint '/tokenguard'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/members' not documented",
+      "suggested_fix": "Add documentation for endpoint '/members'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/history' not documented",
+      "suggested_fix": "Add documentation for endpoint '/history'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/{user_id}/activate' not documented",
+      "suggested_fix": "Add documentation for endpoint '/{user_id}/activate'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/api/v1/analyze' not documented",
+      "suggested_fix": "Add documentation for endpoint '/api/v1/analyze'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/contextguard/analyze' not documented",
+      "suggested_fix": "Add documentation for endpoint '/contextguard/analyze'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/webhook/stripe' not documented",
+      "suggested_fix": "Add documentation for endpoint '/webhook/stripe'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/members/invite' not documented",
+      "suggested_fix": "Add documentation for endpoint '/members/invite'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/{post_id}' not documented",
+      "suggested_fix": "Add documentation for endpoint '/{post_id}'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/privacy-policy' not documented",
+      "suggested_fix": "Add documentation for endpoint '/privacy-policy'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/biasguard' not documented",
+      "suggested_fix": "Add documentation for endpoint '/biasguard'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/services/restart' not documented",
+      "suggested_fix": "Add documentation for endpoint '/services/restart'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/api/v1/internal-testing/token' not documented",
+      "suggested_fix": "Add documentation for endpoint '/api/v1/internal-testing/token'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/{user_id}' not documented",
+      "suggested_fix": "Add documentation for endpoint '/{user_id}'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/direct' not documented",
+      "suggested_fix": "Add documentation for endpoint '/direct'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/health/configuration' not documented",
+      "suggested_fix": "Add documentation for endpoint '/health/configuration'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/trustguard/validate' not documented",
+      "suggested_fix": "Add documentation for endpoint '/trustguard/validate'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/gdpr/export' not documented",
+      "suggested_fix": "Add documentation for endpoint '/gdpr/export'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/discovery/services/{service_name}' not documented",
+      "suggested_fix": "Add documentation for endpoint '/discovery/services/{service_name}'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/performance/dashboard' not documented",
+      "suggested_fix": "Add documentation for endpoint '/performance/dashboard'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/usage' not documented",
+      "suggested_fix": "Add documentation for endpoint '/usage'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/guards/{guard_name}/metrics' not documented",
+      "suggested_fix": "Add documentation for endpoint '/guards/{guard_name}/metrics'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/current' not documented",
+      "suggested_fix": "Add documentation for endpoint '/current'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/metadata/{file_id}' not documented",
+      "suggested_fix": "Add documentation for endpoint '/metadata/{file_id}'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/prices/{product_id}' not documented",
+      "suggested_fix": "Add documentation for endpoint '/prices/{product_id}'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/data-retention/cleanup' not documented",
+      "suggested_fix": "Add documentation for endpoint '/data-retention/cleanup'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/discovery/register' not documented",
+      "suggested_fix": "Add documentation for endpoint '/discovery/register'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/subscriptions/{customer_id}' not documented",
+      "suggested_fix": "Add documentation for endpoint '/subscriptions/{customer_id}'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/status' not documented",
+      "suggested_fix": "Add documentation for endpoint '/status'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/accept-tos' not documented",
+      "suggested_fix": "Add documentation for endpoint '/accept-tos'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/clerk/users/email/{email}' not documented",
+      "suggested_fix": "Add documentation for endpoint '/clerk/users/email/{email}'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/api/v1/scan' not documented",
+      "suggested_fix": "Add documentation for endpoint '/api/v1/scan'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/setup' not documented",
+      "suggested_fix": "Add documentation for endpoint '/setup'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/reactivate' not documented",
+      "suggested_fix": "Add documentation for endpoint '/reactivate'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/stripe' not documented",
+      "suggested_fix": "Add documentation for endpoint '/stripe'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/terms-of-service' not documented",
+      "suggested_fix": "Add documentation for endpoint '/terms-of-service'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/health/circuit-breakers' not documented",
+      "suggested_fix": "Add documentation for endpoint '/health/circuit-breakers'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/benefits/detailed' not documented",
+      "suggested_fix": "Add documentation for endpoint '/benefits/detailed'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/health/comprehensive' not documented",
+      "suggested_fix": "Add documentation for endpoint '/health/comprehensive'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/refresh' not documented",
+      "suggested_fix": "Add documentation for endpoint '/refresh'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/invoices/{customer_id}' not documented",
+      "suggested_fix": "Add documentation for endpoint '/invoices/{customer_id}'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/clerk/users/{clerk_user_id}' not documented",
+      "suggested_fix": "Add documentation for endpoint '/clerk/users/{clerk_user_id}'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/password-reset/confirm' not documented",
+      "suggested_fix": "Add documentation for endpoint '/password-reset/confirm'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/list' not documented",
+      "suggested_fix": "Add documentation for endpoint '/list'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/contextguard' not documented",
+      "suggested_fix": "Add documentation for endpoint '/contextguard'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/health/{service_name}' not documented",
+      "suggested_fix": "Add documentation for endpoint '/health/{service_name}'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/trustguard' not documented",
+      "suggested_fix": "Add documentation for endpoint '/trustguard'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/compliance-status' not documented",
+      "suggested_fix": "Add documentation for endpoint '/compliance-status'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/benefits/overview' not documented",
+      "suggested_fix": "Add documentation for endpoint '/benefits/overview'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/discovery/refresh' not documented",
+      "suggested_fix": "Add documentation for endpoint '/discovery/refresh'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/healthguard/monitor' not documented",
+      "suggested_fix": "Add documentation for endpoint '/healthguard/monitor'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/members/{member_id}' not documented",
+      "suggested_fix": "Add documentation for endpoint '/members/{member_id}'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/presigned' not documented",
+      "suggested_fix": "Add documentation for endpoint '/presigned'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/products' not documented",
+      "suggested_fix": "Add documentation for endpoint '/products'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/cancel' not documented",
+      "suggested_fix": "Add documentation for endpoint '/cancel'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/{post_id}/publish' not documented",
+      "suggested_fix": "Add documentation for endpoint '/{post_id}/publish'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/{user_id}/deactivate' not documented",
+      "suggested_fix": "Add documentation for endpoint '/{user_id}/deactivate'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/slug/{slug}' not documented",
+      "suggested_fix": "Add documentation for endpoint '/slug/{slug}'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/download/{file_id}/url' not documented",
+      "suggested_fix": "Add documentation for endpoint '/download/{file_id}/url'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/{file_id}' not documented",
+      "suggested_fix": "Add documentation for endpoint '/{file_id}'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/healthguard' not documented",
+      "suggested_fix": "Add documentation for endpoint '/healthguard'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/verify-email' not documented",
+      "suggested_fix": "Add documentation for endpoint '/verify-email'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/customers/{email}' not documented",
+      "suggested_fix": "Add documentation for endpoint '/customers/{email}'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/analyze' not documented",
+      "suggested_fix": "Add documentation for endpoint '/analyze'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/clerk' not documented",
+      "suggested_fix": "Add documentation for endpoint '/clerk'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/password-reset' not documented",
+      "suggested_fix": "Add documentation for endpoint '/password-reset'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/detect' not documented",
+      "suggested_fix": "Add documentation for endpoint '/detect'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "missing_api_documentation",
+      "severity": "medium",
+      "description": "API endpoint '/cookie-policy' not documented",
+      "suggested_fix": "Add documentation for endpoint '/cookie-policy'"
+    },
+    {
+      "file": "docs\\api\\README.md",
+      "line": 0,
+      "type": "outdated_service_name",
+      "severity": "high",
+      "description": "References to old service 'securityguard' found",
+      "suggested_fix": "Update references to current service names"
+    },
+    {
+      "file": "docs\\guard-services\\README.md",
+      "line": 15,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "docs\\guard-services\\README.md",
+      "line": 228,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "docs\\guard-services\\README.md",
+      "line": 232,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "docs\\guard-services\\README.md",
+      "line": 243,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "docs\\guard-services\\README.md",
+      "line": 342,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "docs\\guard-services\\README.md",
+      "line": 368,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "docs\\guard-services\\README.md",
+      "line": 0,
+      "type": "outdated_service_name",
+      "severity": "high",
+      "description": "References to old service 'securityguard' found",
+      "suggested_fix": "Update references to current service names"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 80,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 88,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 96,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 104,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 112,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 120,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 152,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 160,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 200,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 208,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 216,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 224,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 232,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 240,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 256,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 264,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 272,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 280,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 288,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 296,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 776,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 784,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 792,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 800,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 808,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 832,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 0,
+      "type": "outdated_service_name",
+      "severity": "high",
+      "description": "References to old service 'securityguard' found",
+      "suggested_fix": "Update references to current service names"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 73,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 81,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 89,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 97,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 105,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 113,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 177,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 185,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 193,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 201,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 209,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 217,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 233,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 241,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 249,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 257,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 265,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 273,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 281,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 945,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 953,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 961,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 969,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 977,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 985,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 993,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1001,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1009,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1017,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1025,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1033,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1041,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1049,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1057,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1065,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1073,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1081,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1089,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1097,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1105,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1113,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1121,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1129,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1137,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1145,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1153,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1161,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1169,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1177,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1185,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1193,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1201,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1209,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1217,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1356,
+      "type": "outdated_reference",
+      "severity": "medium",
+      "description": "Potentially outdated reference: SecurityGuard has been removed",
+      "suggested_fix": "Update the reference to current implementation"
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 0,
+      "type": "outdated_service_name",
+      "severity": "high",
+      "description": "References to old service 'securityguard' found",
+      "suggested_fix": "Update references to current service names"
+    },
+    {
+      "file": "test_request.json",
+      "line": 0,
+      "type": "file_read_error",
+      "severity": "high",
+      "description": "Could not read file: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte",
+      "suggested_fix": ""
+    },
+    {
+      "file": "app\\main.py",
+      "line": 0,
+      "type": "missing_documentation",
+      "severity": "medium",
+      "description": "Module app/main.py lacks documentation",
+      "suggested_fix": "Create documentation for app/main.py"
+    },
+    {
+      "file": "app\\core\\guard_orchestrator.py",
+      "line": 0,
+      "type": "missing_documentation",
+      "severity": "medium",
+      "description": "Module app/core/guard_orchestrator.py lacks documentation",
+      "suggested_fix": "Create documentation for app/core/guard_orchestrator.py"
+    }
+  ],
+  "api_endpoints": [
+    "/scan",
+    "/tokenguard/optimize",
+    "/{post_id}/unpublish",
+    "/biasguard/detect",
+    "/download/{file_id}",
+    "/health/refresh",
+    "/login",
+    "/tiers",
+    "/logout",
+    "/gdpr/delete",
+    "/config",
+    "/subscription",
+    "/checkout",
+    "/discovery/services",
+    "/audit-logs",
+    "/tokenguard",
+    "/services",
+    "/members",
+    "/history",
+    "/{user_id}/activate",
+    "/api/v1/analyze",
+    "/contextguard/analyze",
+    "/webhook/stripe",
+    "/members/invite",
+    "/{post_id}",
+    "/privacy-policy",
+    "/biasguard",
+    "/health/ready",
+    "/services/restart",
+    "/api/v1/internal-testing/token",
+    "/{user_id}",
+    "/health",
+    "/direct",
+    "/health/configuration",
+    "/",
+    "/trustguard/validate",
+    "/gdpr/export",
+    "/discovery/services/{service_name}",
+    "/performance/dashboard",
+    "/usage",
+    "/guards/{guard_name}/metrics",
+    "/current",
+    "/metrics",
+    "/metadata/{file_id}",
+    "/prices/{product_id}",
+    "/data-retention/cleanup",
+    "/discovery/register",
+    "/subscriptions/{customer_id}",
+    "/status",
+    "/accept-tos",
+    "/clerk/users/email/{email}",
+    "/api/v1/scan",
+    "/setup",
+    "/reactivate",
+    "/stripe",
+    "/terms-of-service",
+    "/health/circuit-breakers",
+    "/register",
+    "/benefits/detailed",
+    "/health/comprehensive",
+    "/refresh",
+    "/invoices/{customer_id}",
+    "/clerk/users/{clerk_user_id}",
+    "/health/live",
+    "/password-reset/confirm",
+    "/list",
+    "/contextguard",
+    "/health/{service_name}",
+    "/trustguard",
+    "/compliance-status",
+    "/benefits/overview",
+    "/discovery/refresh",
+    "/healthguard/monitor",
+    "/members/{member_id}",
+    "/presigned",
+    "/products",
+    "/cancel",
+    "/process",
+    "/{post_id}/publish",
+    "/{user_id}/deactivate",
+    "/slug/{slug}",
+    "/download/{file_id}/url",
+    "/{file_id}",
+    "/healthguard",
+    "/me",
+    "/verify-email",
+    "/customers/{email}",
+    "/analyze",
+    "/clerk",
+    "/password-reset",
+    "/detect",
+    "/cookie-policy"
+  ],
+  "service_names": [
+    "healthguard",
+    "biasguard",
+    "bias_guard",
+    "securityguard",
+    "contextguard",
+    "by_guard",
+    "token_guard",
+    "integrated_contextguard",
+    "integrated_healthguard",
+    "integrated_biasguard",
+    "trust_guard",
+    "trustguard",
+    "integrated_trustguard",
+    "integrated_tokenguard",
+    "context_guard",
+    "tokenguard",
+    "security_guard",
+    "health_guard"
+  ],
+  "code_references": [
+    {
+      "file": "INTERNAL_TESTING_SETUP.md",
+      "line": 51,
+      "reference": "internal-testing@yourcompany.com",
+      "context": "- Email: `internal-testing@yourcompany.com`"
+    },
+    {
+      "file": "INTERNAL_TESTING_SETUP.md",
+      "line": 169,
+      "reference": "${this.apiUrl}/api/v1/guards/process",
+      "context": "const response = await fetch(`${this.apiUrl}/api/v1/guards/process`, {"
+    },
+    {
+      "file": "INTERNAL_TESTING_SETUP.md",
+      "line": 173,
+      "reference": "Bearer ${this.jwtToken}",
+      "context": "'Authorization': `Bearer ${this.jwtToken}`"
+    },
+    {
+      "file": "INTERNAL_TESTING_SETUP.md",
+      "line": 183,
+      "reference": "API Error: ${response.status}",
+      "context": "throw new Error(`API Error: ${response.status}`);"
+    },
+    {
+      "file": "INTERNAL_TESTING_SETUP.md",
+      "line": 218,
+      "reference": "${this.apiUrl}/api/v1/guards/process",
+      "context": "const response = await fetch(`${this.apiUrl}/api/v1/guards/process`, {"
+    },
+    {
+      "file": "INTERNAL_TESTING_SETUP.md",
+      "line": 222,
+      "reference": "Bearer ${this.jwtToken}",
+      "context": "'Authorization': `Bearer ${this.jwtToken}`"
+    },
+    {
+      "file": "INTERNAL_TESTING_SETUP.md",
+      "line": 232,
+      "reference": "API Error: ${response.status}",
+      "context": "throw new Error(`API Error: ${response.status}`);"
+    },
+    {
+      "file": "SECRETS_TEMPLATE.md",
+      "line": 137,
+      "reference": ".env",
+      "context": "- Copy the local development configuration to your `.env` file"
+    },
+    {
+      "file": "SECRETS_TEMPLATE.md",
+      "line": 142,
+      "reference": ".env",
+      "context": "- Copy the internal testing configuration to your `.env` file"
+    },
+    {
+      "file": "SECRETS_TEMPLATE.md",
+      "line": 150,
+      "reference": "./scripts/setup_aws_secrets.sh",
+      "context": "- Use the setup script: `./scripts/setup_aws_secrets.sh`"
+    },
+    {
+      "file": "TEST_IMPLEMENTATION_SUMMARY.md",
+      "line": 67,
+      "reference": "tests/utils.py",
+      "context": "1. **Shared Utilities** (`tests/utils.py`) \u2705"
+    },
+    {
+      "file": "TEST_IMPLEMENTATION_SUMMARY.md",
+      "line": 74,
+      "reference": "tests/conftest.py",
+      "context": "2. **Enhanced Fixtures** (`tests/conftest.py`) \u2705"
+    },
+    {
+      "file": "TEST_IMPLEMENTATION_SUMMARY.md",
+      "line": 83,
+      "reference": "tests/README.md",
+      "context": "1. **Test README** (`tests/README.md`) \u2705"
+    },
+    {
+      "file": "TEST_IMPLEMENTATION_SUMMARY.md",
+      "line": 89,
+      "reference": "DEVELOPER_GUIDE.md",
+      "context": "2. **Developer Guide** (`DEVELOPER_GUIDE.md`) \u2705"
+    },
+    {
+      "file": "TEST_IMPLEMENTATION_SUMMARY.md",
+      "line": 102,
+      "reference": "run_tests.py",
+      "context": "2. **Test Runner** (`run_tests.py`) \u2705"
+    },
+    {
+      "file": "TEST_IMPLEMENTATION_SUMMARY.md",
+      "line": 182,
+      "reference": "python run_tests.py",
+      "context": "2. **Run Tests**: Use `python run_tests.py` or `pytest -m smoke`"
+    },
+    {
+      "file": "docs\\CENTRALIZED_STORAGE.md",
+      "line": 423,
+      "reference": "scripts/migrate_healthguard_to_postgres.py",
+      "context": "- `scripts/migrate_healthguard_to_postgres.py`"
+    },
+    {
+      "file": "docs\\CENTRALIZED_STORAGE.md",
+      "line": 424,
+      "reference": "scripts/migrate_sessions_to_redis.py",
+      "context": "- `scripts/migrate_sessions_to_redis.py`"
+    },
+    {
+      "file": "docs\\CENTRALIZED_STORAGE.md",
+      "line": 425,
+      "reference": "scripts/migrate_config_to_redis.py",
+      "context": "- `scripts/migrate_config_to_redis.py`"
+    },
+    {
+      "file": "docs\\CENTRALIZED_STORAGE.md",
+      "line": 426,
+      "reference": "scripts/validate_centralized_storage.py",
+      "context": "- `scripts/validate_centralized_storage.py`"
+    },
+    {
+      "file": "docs\\QUICK_REFERENCE.md",
+      "line": 147,
+      "reference": "guard_orchestrator.py",
+      "context": "- **Root Cause:** Endpoints dictionary in `guard_orchestrator.py` was outdated"
+    },
+    {
+      "file": "docs\\S3_FILE_STORAGE.md",
+      "line": 35,
+      "reference": ".env",
+      "context": "Add these environment variables to your `.env` file:"
+    },
+    {
+      "file": "docs\\TESTING_AWS_SECRETS.md",
+      "line": 129,
+      "reference": "tests/test_aws_secrets.py",
+      "context": "Create a test file `tests/test_aws_secrets.py`:"
+    },
+    {
+      "file": "docs\\TESTING_AWS_SECRETS.md",
+      "line": 211,
+      "reference": "tests/test_config_aws_integration.py",
+      "context": "Create `tests/test_config_aws_integration.py`:"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 181,
+      "reference": "tests/utils.py",
+      "context": "The `tests/utils.py` module provides:"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 217,
+      "reference": "@pytest.mark.smoke",
+      "context": "- `@pytest.mark.smoke`: Quick validation tests"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 218,
+      "reference": "@pytest.mark.unit",
+      "context": "- `@pytest.mark.unit`: Component-level tests"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 219,
+      "reference": "@pytest.mark.integration",
+      "context": "- `@pytest.mark.integration`: Integration tests"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 220,
+      "reference": "@pytest.mark.edge_case",
+      "context": "- `@pytest.mark.edge_case`: Edge case tests"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 221,
+      "reference": "@pytest.mark.guard_metrics",
+      "context": "- `@pytest.mark.guard_metrics`: Metrics validation tests"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 222,
+      "reference": "@pytest.mark.slow",
+      "context": "- `@pytest.mark.slow`: Tests taking > 1 second"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 238,
+      "reference": "tests/utils.py",
+      "context": "- Check service URLs in `tests/utils.py`"
+    },
+    {
+      "file": "tests\\README.md",
+      "line": 253,
+      "reference": "conftest.py",
+      "context": "- Check database configuration in `conftest.py`"
+    },
+    {
+      "file": "docs\\architecture\\README.md",
+      "line": 68,
+      "reference": "app/main.py",
+      "context": "- `app/main.py` - FastAPI application entry point"
+    },
+    {
+      "file": "docs\\architecture\\README.md",
+      "line": 69,
+      "reference": "app/api/v1/guards.py",
+      "context": "- `app/api/v1/guards.py` - Unified guard API endpoint"
+    },
+    {
+      "file": "docs\\architecture\\README.md",
+      "line": 70,
+      "reference": "app/core/guard_orchestrator.py",
+      "context": "- `app/core/guard_orchestrator.py` - Service routing logic"
+    },
+    {
+      "file": "docs\\architecture\\README.md",
+      "line": 82,
+      "reference": "app/core/guard_orchestrator.py",
+      "context": "- `app/core/guard_orchestrator.py` - Main orchestration logic"
+    },
+    {
+      "file": "docs\\architecture\\README.md",
+      "line": 83,
+      "reference": "app/core/health_monitor.py",
+      "context": "- `app/core/health_monitor.py` - Service health monitoring"
+    },
+    {
+      "file": "docs\\architecture\\README.md",
+      "line": 84,
+      "reference": "app/core/circuit_breaker.py",
+      "context": "- `app/core/circuit_breaker.py` - Fault tolerance implementation"
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 941,
+      "reference": "tests/utils.py",
+      "context": "\"context\": \"1. **Shared Utilities** (`tests/utils.py`) \\u2705\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 947,
+      "reference": "tests/conftest.py",
+      "context": "\"context\": \"2. **Enhanced Fixtures** (`tests/conftest.py`) \\u2705\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 953,
+      "reference": "tests/README.md",
+      "context": "\"context\": \"1. **Test README** (`tests/README.md`) \\u2705\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 959,
+      "reference": "DEVELOPER_GUIDE.md",
+      "context": "\"context\": \"2. **Developer Guide** (`DEVELOPER_GUIDE.md`) \\u2705\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 965,
+      "reference": "run_tests.py",
+      "context": "\"context\": \"2. **Test Runner** (`run_tests.py`) \\u2705\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 971,
+      "reference": "python run_tests.py",
+      "context": "\"context\": \"2. **Run Tests**: Use `python run_tests.py` or `pytest -m smoke`\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 977,
+      "reference": "tests/test_aws_secrets.py",
+      "context": "\"context\": \"Create a test file `tests/test_aws_secrets.py`:\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 983,
+      "reference": "tests/test_config_aws_integration.py",
+      "context": "\"context\": \"Create `tests/test_config_aws_integration.py`:\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 989,
+      "reference": "tests/utils.py",
+      "context": "\"context\": \"The `tests/utils.py` module provides:\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 995,
+      "reference": "@pytest.mark.smoke",
+      "context": "\"context\": \"- `@pytest.mark.smoke`: Quick validation tests\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 1001,
+      "reference": "@pytest.mark.unit",
+      "context": "\"context\": \"- `@pytest.mark.unit`: Component-level tests\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 1007,
+      "reference": "@pytest.mark.integration",
+      "context": "\"context\": \"- `@pytest.mark.integration`: Integration tests\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 1013,
+      "reference": "@pytest.mark.edge_case",
+      "context": "\"context\": \"- `@pytest.mark.edge_case`: Edge case tests\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 1019,
+      "reference": "@pytest.mark.guard_metrics",
+      "context": "\"context\": \"- `@pytest.mark.guard_metrics`: Metrics validation tests\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 1025,
+      "reference": "@pytest.mark.slow",
+      "context": "\"context\": \"- `@pytest.mark.slow`: Tests taking > 1 second\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 1031,
+      "reference": "tests/utils.py",
+      "context": "\"context\": \"- Check service URLs in `tests/utils.py`\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 1037,
+      "reference": "conftest.py",
+      "context": "\"context\": \"- Check database configuration in `conftest.py`\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 1043,
+      "reference": "app/main.py",
+      "context": "\"context\": \"- `app/main.py` - FastAPI application entry point\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 1049,
+      "reference": "app/api/v1/guards.py",
+      "context": "\"context\": \"- `app/api/v1/guards.py` - Unified guard API endpoint\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 1055,
+      "reference": "app/core/guard_orchestrator.py",
+      "context": "\"context\": \"- `app/core/guard_orchestrator.py` - Service routing logic\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 1061,
+      "reference": "app/core/guard_orchestrator.py",
+      "context": "\"context\": \"- `app/core/guard_orchestrator.py` - Main orchestration logic\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 1067,
+      "reference": "app/core/health_monitor.py",
+      "context": "\"context\": \"- `app/core/health_monitor.py` - Service health monitoring\""
+    },
+    {
+      "file": "documentation_audit.json",
+      "line": 1073,
+      "reference": "app/core/circuit_breaker.py",
+      "context": "\"context\": \"- `app/core/circuit_breaker.py` - Fault tolerance implementation\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1364,
+      "reference": "internal-testing@yourcompany.com",
+      "context": "\"context\": \"- Email: `internal-testing@yourcompany.com`\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1370,
+      "reference": "${this.apiUrl}/api/v1/guards/process",
+      "context": "\"context\": \"const response = await fetch(`${this.apiUrl}/api/v1/guards/process`, {\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1376,
+      "reference": "Bearer ${this.jwtToken}",
+      "context": "\"context\": \"'Authorization': `Bearer ${this.jwtToken}`\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1382,
+      "reference": "API Error: ${response.status}",
+      "context": "\"context\": \"throw new Error(`API Error: ${response.status}`);\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1388,
+      "reference": "${this.apiUrl}/api/v1/guards/process",
+      "context": "\"context\": \"const response = await fetch(`${this.apiUrl}/api/v1/guards/process`, {\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1394,
+      "reference": "Bearer ${this.jwtToken}",
+      "context": "\"context\": \"'Authorization': `Bearer ${this.jwtToken}`\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1400,
+      "reference": "API Error: ${response.status}",
+      "context": "\"context\": \"throw new Error(`API Error: ${response.status}`);\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1406,
+      "reference": ".env",
+      "context": "\"context\": \"- Copy the local development configuration to your `.env` file\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1412,
+      "reference": ".env",
+      "context": "\"context\": \"- Copy the internal testing configuration to your `.env` file\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1418,
+      "reference": "./scripts/setup_aws_secrets.sh",
+      "context": "\"context\": \"- Use the setup script: `./scripts/setup_aws_secrets.sh`\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1424,
+      "reference": "tests/utils.py",
+      "context": "\"context\": \"1. **Shared Utilities** (`tests/utils.py`) \\u2705\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1430,
+      "reference": "tests/conftest.py",
+      "context": "\"context\": \"2. **Enhanced Fixtures** (`tests/conftest.py`) \\u2705\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1436,
+      "reference": "tests/README.md",
+      "context": "\"context\": \"1. **Test README** (`tests/README.md`) \\u2705\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1442,
+      "reference": "DEVELOPER_GUIDE.md",
+      "context": "\"context\": \"2. **Developer Guide** (`DEVELOPER_GUIDE.md`) \\u2705\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1448,
+      "reference": "run_tests.py",
+      "context": "\"context\": \"2. **Test Runner** (`run_tests.py`) \\u2705\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1454,
+      "reference": "python run_tests.py",
+      "context": "\"context\": \"2. **Run Tests**: Use `python run_tests.py` or `pytest -m smoke`\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1460,
+      "reference": "scripts/migrate_healthguard_to_postgres.py",
+      "context": "\"context\": \"- `scripts/migrate_healthguard_to_postgres.py`\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1466,
+      "reference": "scripts/migrate_sessions_to_redis.py",
+      "context": "\"context\": \"- `scripts/migrate_sessions_to_redis.py`\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1472,
+      "reference": "scripts/migrate_config_to_redis.py",
+      "context": "\"context\": \"- `scripts/migrate_config_to_redis.py`\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1478,
+      "reference": "scripts/validate_centralized_storage.py",
+      "context": "\"context\": \"- `scripts/validate_centralized_storage.py`\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1484,
+      "reference": "guard_orchestrator.py",
+      "context": "\"context\": \"- **Root Cause:** Endpoints dictionary in `guard_orchestrator.py` was outdated\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1490,
+      "reference": ".env",
+      "context": "\"context\": \"Add these environment variables to your `.env` file:\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1496,
+      "reference": "tests/test_aws_secrets.py",
+      "context": "\"context\": \"Create a test file `tests/test_aws_secrets.py`:\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1502,
+      "reference": "tests/test_config_aws_integration.py",
+      "context": "\"context\": \"Create `tests/test_config_aws_integration.py`:\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1508,
+      "reference": "tests/utils.py",
+      "context": "\"context\": \"The `tests/utils.py` module provides:\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1514,
+      "reference": "@pytest.mark.smoke",
+      "context": "\"context\": \"- `@pytest.mark.smoke`: Quick validation tests\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1520,
+      "reference": "@pytest.mark.unit",
+      "context": "\"context\": \"- `@pytest.mark.unit`: Component-level tests\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1526,
+      "reference": "@pytest.mark.integration",
+      "context": "\"context\": \"- `@pytest.mark.integration`: Integration tests\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1532,
+      "reference": "@pytest.mark.edge_case",
+      "context": "\"context\": \"- `@pytest.mark.edge_case`: Edge case tests\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1538,
+      "reference": "@pytest.mark.guard_metrics",
+      "context": "\"context\": \"- `@pytest.mark.guard_metrics`: Metrics validation tests\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1544,
+      "reference": "@pytest.mark.slow",
+      "context": "\"context\": \"- `@pytest.mark.slow`: Tests taking > 1 second\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1550,
+      "reference": "tests/utils.py",
+      "context": "\"context\": \"- Check service URLs in `tests/utils.py`\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1556,
+      "reference": "conftest.py",
+      "context": "\"context\": \"- Check database configuration in `conftest.py`\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1562,
+      "reference": "app/main.py",
+      "context": "\"context\": \"- `app/main.py` - FastAPI application entry point\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1568,
+      "reference": "app/api/v1/guards.py",
+      "context": "\"context\": \"- `app/api/v1/guards.py` - Unified guard API endpoint\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1574,
+      "reference": "app/core/guard_orchestrator.py",
+      "context": "\"context\": \"- `app/core/guard_orchestrator.py` - Service routing logic\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1580,
+      "reference": "app/core/guard_orchestrator.py",
+      "context": "\"context\": \"- `app/core/guard_orchestrator.py` - Main orchestration logic\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1586,
+      "reference": "app/core/health_monitor.py",
+      "context": "\"context\": \"- `app/core/health_monitor.py` - Service health monitoring\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1592,
+      "reference": "app/core/circuit_breaker.py",
+      "context": "\"context\": \"- `app/core/circuit_breaker.py` - Fault tolerance implementation\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1598,
+      "reference": "tests/utils.py",
+      "context": "\"context\": \"\\\"context\\\": \\\"1. **Shared Utilities** (`tests/utils.py`) \\\\u2705\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1604,
+      "reference": "tests/conftest.py",
+      "context": "\"context\": \"\\\"context\\\": \\\"2. **Enhanced Fixtures** (`tests/conftest.py`) \\\\u2705\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1610,
+      "reference": "tests/README.md",
+      "context": "\"context\": \"\\\"context\\\": \\\"1. **Test README** (`tests/README.md`) \\\\u2705\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1616,
+      "reference": "DEVELOPER_GUIDE.md",
+      "context": "\"context\": \"\\\"context\\\": \\\"2. **Developer Guide** (`DEVELOPER_GUIDE.md`) \\\\u2705\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1622,
+      "reference": "run_tests.py",
+      "context": "\"context\": \"\\\"context\\\": \\\"2. **Test Runner** (`run_tests.py`) \\\\u2705\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1628,
+      "reference": "python run_tests.py",
+      "context": "\"context\": \"\\\"context\\\": \\\"2. **Run Tests**: Use `python run_tests.py` or `pytest -m smoke`\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1634,
+      "reference": "tests/test_aws_secrets.py",
+      "context": "\"context\": \"\\\"context\\\": \\\"Create a test file `tests/test_aws_secrets.py`:\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1640,
+      "reference": "tests/test_config_aws_integration.py",
+      "context": "\"context\": \"\\\"context\\\": \\\"Create `tests/test_config_aws_integration.py`:\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1646,
+      "reference": "tests/utils.py",
+      "context": "\"context\": \"\\\"context\\\": \\\"The `tests/utils.py` module provides:\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1652,
+      "reference": "@pytest.mark.smoke",
+      "context": "\"context\": \"\\\"context\\\": \\\"- `@pytest.mark.smoke`: Quick validation tests\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1658,
+      "reference": "@pytest.mark.unit",
+      "context": "\"context\": \"\\\"context\\\": \\\"- `@pytest.mark.unit`: Component-level tests\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1664,
+      "reference": "@pytest.mark.integration",
+      "context": "\"context\": \"\\\"context\\\": \\\"- `@pytest.mark.integration`: Integration tests\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1670,
+      "reference": "@pytest.mark.edge_case",
+      "context": "\"context\": \"\\\"context\\\": \\\"- `@pytest.mark.edge_case`: Edge case tests\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1676,
+      "reference": "@pytest.mark.guard_metrics",
+      "context": "\"context\": \"\\\"context\\\": \\\"- `@pytest.mark.guard_metrics`: Metrics validation tests\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1682,
+      "reference": "@pytest.mark.slow",
+      "context": "\"context\": \"\\\"context\\\": \\\"- `@pytest.mark.slow`: Tests taking > 1 second\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1688,
+      "reference": "tests/utils.py",
+      "context": "\"context\": \"\\\"context\\\": \\\"- Check service URLs in `tests/utils.py`\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1694,
+      "reference": "conftest.py",
+      "context": "\"context\": \"\\\"context\\\": \\\"- Check database configuration in `conftest.py`\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1700,
+      "reference": "app/main.py",
+      "context": "\"context\": \"\\\"context\\\": \\\"- `app/main.py` - FastAPI application entry point\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1706,
+      "reference": "app/api/v1/guards.py",
+      "context": "\"context\": \"\\\"context\\\": \\\"- `app/api/v1/guards.py` - Unified guard API endpoint\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1712,
+      "reference": "app/core/guard_orchestrator.py",
+      "context": "\"context\": \"\\\"context\\\": \\\"- `app/core/guard_orchestrator.py` - Service routing logic\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1718,
+      "reference": "app/core/guard_orchestrator.py",
+      "context": "\"context\": \"\\\"context\\\": \\\"- `app/core/guard_orchestrator.py` - Main orchestration logic\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1724,
+      "reference": "app/core/health_monitor.py",
+      "context": "\"context\": \"\\\"context\\\": \\\"- `app/core/health_monitor.py` - Service health monitoring\\\"\""
+    },
+    {
+      "file": "temp_doc_audit.json",
+      "line": 1730,
+      "reference": "app/core/circuit_breaker.py",
+      "context": "\"context\": \"\\\"context\\\": \\\"- `app/core/circuit_breaker.py` - Fault tolerance implementation\\\"\""
+    }
+  ]
+}

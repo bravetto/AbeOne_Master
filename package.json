@@ -1,0 +1,25 @@
+{
+  "name": "abeone-master",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AbëONE Master - Unified Design System & Platform",
+  "scripts": {
+    "design:generate": "node design-system/generators/generate-unified-tailwind.js && node design-system/generators/generate-css-vars.js",
+    "design:validate": "node design-system/scripts/validate-colors.js",
+    "design:validate-all": "node design-system/scripts/validate-design-systems.js",
+    "design:prevent-drift": "node design-system/scripts/prevent-drift.js",
+    "design:operationalize": "bash design-system/scripts/operationalize.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abeone/abeone-master"
+  },
+  "keywords": [
+    "design-system",
+    "abeone",
+    "color-system"
+  ],
+  "author": "AbëONE Team",
+  "license": "MIT"
+}
+

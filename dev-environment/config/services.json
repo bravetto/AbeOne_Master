@@ -1,0 +1,30 @@
+{
+  "nextjs": {
+    "enabled": true,
+    "command": "cd {project_root}/AIGuards-Backend && pnpm dev",
+    "port": 3000,
+    "health_check": true,
+    "auto_restart": true,
+    "restart_delay": 5,
+    "environment": {}
+  },
+  "python_api": {
+    "enabled": true,
+    "command": "cd {project_root}/AIGuards-Backend-orbital && python3 -m uvicorn main:app --host 0.0.0.0 --port 8000",
+    "port": 8000,
+    "health_check": true,
+    "auto_restart": true,
+    "restart_delay": 5,
+    "environment": {}
+  },
+  "dashboard": {
+    "enabled": true,
+    "command": "cd {project_root}/dev-environment && python3 scripts/dashboard.py",
+    "port": 9000,
+    "health_check": true,
+    "auto_restart": true,
+    "restart_delay": 5,
+    "environment": {}
+  }
+}
+

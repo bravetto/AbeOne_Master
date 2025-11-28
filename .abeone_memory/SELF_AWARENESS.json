@@ -1,0 +1,30 @@
+{
+  "manifest_version": "1.0",
+  "created_at": "2025-11-24T21:45:31.327105",
+  "self_awareness": {
+    "system_state_tracking": true,
+    "pattern_detection": true,
+    "friction_detection": true,
+    "optimization_detection": true,
+    "healing_capabilities": [
+      "automatic_optimization",
+      "pattern_deduplication",
+      "flow_alignment",
+      "kernel_sync"
+    ]
+  },
+  "self_healing": {
+    "enabled": true,
+    "healing_triggers": [
+      "friction_detected",
+      "redundancy_detected",
+      "misalignment_detected"
+    ],
+    "healing_actions": [
+      "optimize_patterns",
+      "align_flows",
+      "sync_kernel",
+      "register_uptc"
+    ]
+  }
+}

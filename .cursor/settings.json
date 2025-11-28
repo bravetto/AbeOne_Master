@@ -1,0 +1,38 @@
+{
+  "python.analysis.exclude": [
+    "**/.venv",
+    "**/venv",
+    "**/env",
+    "**/__pycache__",
+    "**/node_modules",
+    "**/.pytest_cache",
+    "**/dist",
+    "**/build"
+  ],
+  "python.analysis.ignore": [
+    ".venv",
+    ".venv/**",
+    "venv",
+    "venv/**"
+  ],
+  "files.exclude": {
+    "**/.venv": true,
+    "**/venv": true,
+    "**/__pycache__": true,
+    "**/.pytest_cache": true
+  },
+  "files.watcherExclude": {
+    "**/.venv/**": true,
+    "**/venv/**": true,
+    "**/__pycache__/**": true,
+    "**/.pytest_cache/**": true
+  },
+  "search.exclude": {
+    "**/.venv": true,
+    "**/venv": true,
+    "**/__pycache__": true
+  },
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticMode": "workspace"
+}
+

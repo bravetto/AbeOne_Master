@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: healthguard-config
+  namespace: default
+data:
+  HEALTHGUARD_HOST: "0.0.0.0"
+  HEALTHGUARD_PORT: "8000"
+  HEALTHGUARD_LOG_LEVEL: "INFO"
+  HEALTHGUARD_LOG_FORMAT: "json"
+  HEALTHGUARD_ENABLE_METRICS: "true"
+  HEALTHGUARD_RATE_LIMIT_REQUESTS: "100"
+  ENVIRONMENT: "production"
+

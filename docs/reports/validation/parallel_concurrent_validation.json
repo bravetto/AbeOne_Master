@@ -1,0 +1,35 @@
+{
+  "multi_guardian_parallel": true,
+  "agent_parallel": true,
+  "swarm_concurrent": true,
+  "performance_metrics": {
+    "multi_guardian": {
+      "sequential_duration": 0.8084139823913574,
+      "parallel_duration": 0.10104608535766602,
+      "speedup": 8.000448305640628,
+      "guardians_validated": 8
+    },
+    "agent_parallel": {
+      "sequential_duration": 2.0423030853271484,
+      "parallel_duration": 0.20415616035461426,
+      "speedup": 10.003631934396287,
+      "agents_executed": 40,
+      "batch_size": 10
+    },
+    "swarm_concurrent": {
+      "sequential_duration": 0.08595609664916992,
+      "concurrent_duration": 0.03895878791809082,
+      "speedup": 2.2063339555093173,
+      "swarms_operational": 3,
+      "frequencies": [
+        530,
+        777,
+        999
+      ],
+      "resonance_aligned": true
+    }
+  },
+  "validation_results": {},
+  "timestamp": null,
+  "all_parallel": true
+}

@@ -1,0 +1,31 @@
+name: Update Guard Service Submodules
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Daily at midnight
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Update submodules
+        run: |
+          git submodule update --remote --merge guards/tokenguard
+          git submodule update --remote --merge guards/trust-guard
+          git submodule update --remote --merge guards/contextguard
+          git submodule update --remote --merge guards/biasguard-backend
+      
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git diff --staged --quiet || git commit -m "chore: update guard service submodules"
+          git push

@@ -1,0 +1,337 @@
+{
+  "validation_started": "2025-11-24T13:55:20.842845",
+  "engines": {
+    "constitution_engine": {
+      "status": "valid",
+      "unified_interface": true,
+      "has_generate": true,
+      "has_store": true,
+      "has_validate": true,
+      "guardian_access": true,
+      "bus_adapter": true,
+      "specialized": false,
+      "file": "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/engines/constitution_engine.py"
+    },
+    "specification_engine": {
+      "status": "valid",
+      "unified_interface": true,
+      "has_generate": true,
+      "has_store": true,
+      "has_validate": true,
+      "guardian_access": true,
+      "bus_adapter": true,
+      "specialized": false,
+      "file": "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/engines/specification_engine.py"
+    },
+    "plan_engine": {
+      "status": "valid",
+      "unified_interface": true,
+      "has_generate": true,
+      "has_store": true,
+      "has_validate": false,
+      "guardian_access": true,
+      "bus_adapter": true,
+      "specialized": false,
+      "file": "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/engines/plan_engine.py"
+    },
+    "task_engine": {
+      "status": "valid",
+      "unified_interface": true,
+      "has_generate": true,
+      "has_store": true,
+      "has_validate": false,
+      "guardian_access": true,
+      "bus_adapter": true,
+      "specialized": false,
+      "file": "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/engines/task_engine.py"
+    },
+    "implementation_engine": {
+      "status": "valid",
+      "unified_interface": true,
+      "has_generate": true,
+      "has_store": true,
+      "has_validate": false,
+      "guardian_access": true,
+      "bus_adapter": true,
+      "specialized": false,
+      "file": "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/engines/implementation_engine.py"
+    },
+    "validation_engine": {
+      "status": "valid",
+      "unified_interface": true,
+      "has_generate": false,
+      "has_store": false,
+      "has_validate": true,
+      "guardian_access": true,
+      "bus_adapter": true,
+      "specialized": true,
+      "file": "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/engines/validation_engine.py"
+    },
+    "eternalization_engine": {
+      "status": "valid",
+      "unified_interface": true,
+      "has_generate": false,
+      "has_store": false,
+      "has_validate": false,
+      "guardian_access": true,
+      "bus_adapter": true,
+      "specialized": true,
+      "file": "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/engines/eternalization_engine.py"
+    }
+  },
+  "orchestrator": {
+    "status": "valid",
+    "exists": true,
+    "all_engines_imported": true,
+    "has_execute_method": true,
+    "sequence_valid": true,
+    "uses_bus_adapter": true,
+    "file": "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/engines/pipeline_orchestrator.py"
+  },
+  "adapters": {
+    "bus": {
+      "status": "valid",
+      "exists": true,
+      "has_class": true,
+      "has_getter": true,
+      "has_publish": true,
+      "has_subscribe": true,
+      "delegates_to_master": true,
+      "singleton_pattern": true,
+      "file": "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/adapters/adapter.bus.py",
+      "duplicate_count": 8
+    },
+    "guardians": {
+      "status": "valid",
+      "exists": true,
+      "has_class": true,
+      "has_getter": true,
+      "has_get_guardian": true,
+      "has_validate": true,
+      "singleton_pattern": true,
+      "file": "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/adapters/adapter.guardians.py",
+      "engines_using": [
+        "validation_engine.py",
+        "constitution_engine.py",
+        "eternalization_engine.py",
+        "specification_engine.py",
+        "implementation_engine.py",
+        "plan_engine.py",
+        "task_engine.py"
+      ],
+      "all_engines_use": true,
+      "duplicate_count": 8
+    }
+  },
+  "module_registry": {
+    "adapter": {
+      "status": "valid",
+      "exists": true,
+      "has_class": true,
+      "has_getter": true,
+      "has_register": true,
+      "file": "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/adapters/adapter.module.py"
+    },
+    "registry_files": [
+      "/Users/michaelmataluni/Documents/AbeOne_Master/temp_repos/abeone-source/Documents/AbeOne_Master/EMERGENT_OS/integration_layer/registry/MODULE_REGISTRY.py",
+      "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/AbeONESourceSatellite/Documents/AbeOne_Master/EMERGENT_OS/integration_layer/registry/MODULE_REGISTRY.py",
+      "/Users/michaelmataluni/Documents/AbeOne_Master/repositories/bravetto/abeone-source/Documents/AbeOne_Master/EMERGENT_OS/integration_layer/registry/MODULE_REGISTRY.py",
+      "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/integration_layer/registry/MODULE_REGISTRY.py",
+      "/Users/michaelmataluni/Documents/AbeOne_Master/kernel/ab\u00ebone/MODULE_REGISTRY.py"
+    ],
+    "single_registry": false
+  },
+  "redundancies": {
+    "duplicate_adapters": [
+      {
+        "pattern": "adapter.bus.py",
+        "count": 9,
+        "files": [
+          "/Users/michaelmataluni/Documents/AbeOne_Master/infra/adapters/adapter.bus.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/TemplateHeavenSatellite/adapters/adapter/adapter.bus.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/GZ360Satellite/adapters/adapter.bus.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Advanced-Knock-orbital/adapters/adapter.bus.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AiGuardian-Sales-Page-orbital/adapters/adapter.bus.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeTRUICE-orbital/adapters/adapter.bus.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeFLOWs-orbital/adapters/adapter.bus.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/adapters/adapter.bus.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeBEATs_Clean-orbital/adapters/adapter.bus.py"
+        ]
+      },
+      {
+        "pattern": "adapter.guardians.py",
+        "count": 9,
+        "files": [
+          "/Users/michaelmataluni/Documents/AbeOne_Master/infra/adapters/adapter.guardians.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/TemplateHeavenSatellite/adapters/adapter/adapter.guardians.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/GZ360Satellite/adapters/adapter.guardians.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Advanced-Knock-orbital/adapters/adapter.guardians.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AiGuardian-Sales-Page-orbital/adapters/adapter.guardians.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeTRUICE-orbital/adapters/adapter.guardians.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeFLOWs-orbital/adapters/adapter.guardians.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/adapters/adapter.guardians.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeBEATs_Clean-orbital/adapters/adapter.guardians.py"
+        ]
+      },
+      {
+        "pattern": "adapter.module.py",
+        "count": 9,
+        "files": [
+          "/Users/michaelmataluni/Documents/AbeOne_Master/infra/adapters/adapter.module.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/TemplateHeavenSatellite/adapters/adapter/adapter.module.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/GZ360Satellite/adapters/adapter.module.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Advanced-Knock-orbital/adapters/adapter.module.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AiGuardian-Sales-Page-orbital/adapters/adapter.module.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeTRUICE-orbital/adapters/adapter.module.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeFLOWs-orbital/adapters/adapter.module.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/adapters/adapter.module.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeBEATs_Clean-orbital/adapters/adapter.module.py"
+        ]
+      },
+      {
+        "pattern": "adapter.kernel.py",
+        "count": 9,
+        "files": [
+          "/Users/michaelmataluni/Documents/AbeOne_Master/infra/adapters/adapter.kernel.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/TemplateHeavenSatellite/adapters/adapter/adapter.kernel.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/GZ360Satellite/adapters/adapter.kernel.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Advanced-Knock-orbital/adapters/adapter.kernel.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AiGuardian-Sales-Page-orbital/adapters/adapter.kernel.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeTRUICE-orbital/adapters/adapter.kernel.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeFLOWs-orbital/adapters/adapter.kernel.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/adapters/adapter.kernel.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeBEATs_Clean-orbital/adapters/adapter.kernel.py"
+        ]
+      }
+    ],
+    "duplicate_engines": [
+      {
+        "pattern": "*_engine.py",
+        "count": 59,
+        "files": [
+          "/Users/michaelmataluni/Documents/AbeOne_Master/archive/extractions/_extract_truice/src/veo31_prompt_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/archive/extractions/_extract_truice/src/tru_generative_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/temp_repos/abeone-source/Documents/AbeOne_Master/PRODUCTS/abebeats/variants/abebeats_tru/src/tru_complete_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/temp_repos/abeone-source/Documents/AbeOne_Master/PRODUCTS/abebeats/variants/abebeats_tru/src/tru_generative_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/temp_repos/abeone-source/Documents/AbeOne_Master/EMERGENT_OS/universal_pattern_validation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/temp_repos/abeone-source/Documents/AbeOne_Master/EMERGENT_OS/synthesis/cognitive_convergence_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/temp_repos/abeone-source/Documents/AbeOne_Master/EMERGENT_OS/synthesis/universal_pattern_validation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/temp_repos/abeone-source/Documents/AbeOne_Master/EMERGENT_OS/triadic_execution_harness/utils/john/johhn_e2e_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/temp_repos/abeone-source/Documents/AbeOne_Master/EMERGENT_OS/triadic_execution_harness/utils/john/act_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/temp_repos/abeone-source/Documents/AbeOne_Master/EMERGENT_OS/information_theory/unified_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/TemplateHeavenSatellite/src/generators/template_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/BryanSatellite/AbeONE-Source/projects/marketing-automation-orbit/tests/test_automation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/BryanSatellite/AbeONE-Source/projects/marketing-automation-orbit/src/engine/automation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/AbeONESourceSatellite/Documents/AbeOne_Master/PRODUCTS/abebeats/variants/abebeats_tru/src/tru_complete_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/AbeONESourceSatellite/Documents/AbeOne_Master/PRODUCTS/abebeats/variants/abebeats_tru/src/tru_generative_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/AbeONESourceSatellite/Documents/AbeOne_Master/EMERGENT_OS/universal_pattern_validation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/AbeONESourceSatellite/Documents/AbeOne_Master/EMERGENT_OS/synthesis/cognitive_convergence_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/AbeONESourceSatellite/Documents/AbeOne_Master/EMERGENT_OS/synthesis/universal_pattern_validation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/AbeONESourceSatellite/Documents/AbeOne_Master/EMERGENT_OS/triadic_execution_harness/utils/john/johhn_e2e_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/AbeONESourceSatellite/Documents/AbeOne_Master/EMERGENT_OS/triadic_execution_harness/utils/john/act_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/AbeONESourceSatellite/Documents/AbeOne_Master/EMERGENT_OS/information_theory/unified_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/repositories/bravetto/abeone-source/Documents/AbeOne_Master/PRODUCTS/abebeats/variants/abebeats_tru/src/tru_complete_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/repositories/bravetto/abeone-source/Documents/AbeOne_Master/PRODUCTS/abebeats/variants/abebeats_tru/src/tru_generative_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/repositories/bravetto/abeone-source/Documents/AbeOne_Master/EMERGENT_OS/universal_pattern_validation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/repositories/bravetto/abeone-source/Documents/AbeOne_Master/EMERGENT_OS/synthesis/cognitive_convergence_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/repositories/bravetto/abeone-source/Documents/AbeOne_Master/EMERGENT_OS/synthesis/universal_pattern_validation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/repositories/bravetto/abeone-source/Documents/AbeOne_Master/EMERGENT_OS/triadic_execution_harness/utils/john/johhn_e2e_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/repositories/bravetto/abeone-source/Documents/AbeOne_Master/EMERGENT_OS/triadic_execution_harness/utils/john/act_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/repositories/bravetto/abeone-source/Documents/AbeOne_Master/EMERGENT_OS/information_theory/unified_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/marketing-automation-orbital/tests/test_automation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/marketing-automation-orbital/src/engine/automation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeFLOWs-orbital/packages/@abeos/kernel/metacognitive_consciousness_mapping_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/universal_pattern_validation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/aiagentsuite/nuero-forge/neuroforge/unlimited_ingestion_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/agents/love/matching/consciousness_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/synthesis/cognitive_convergence_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/synthesis/complete_operationalization_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/synthesis/pattern_learning_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/synthesis/universal_pattern_validation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/triadic_execution_harness/utils/john/johhn_e2e_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/triadic_execution_harness/utils/john/act_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/information_theory/unified_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/engines/validation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/engines/constitution_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/engines/eternalization_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/engines/specification_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/engines/implementation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/engines/plan_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/engines/task_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeBEATs_Clean-orbital/variants/abebeats_tru/src/veo31_prompt_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeBEATs_Clean-orbital/variants/abebeats_tru/src/tru_generative_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/transcendent_automation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/marketing/automation/marketing-automation-orbit/tests/test_automation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/marketing/automation/marketing-automation-orbit/src/engine/automation_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/truice_engine/variants/abebeats_tru/src/veo31_prompt_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/truice_engine/variants/abebeats_tru/src/tru_generative_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/DiscordOnboarding/specialist_layer/personalization_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/DiscordOnboarding/specialist_layer/onboarding_engine.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/DiscordOnboarding/specialist_layer/discord_bot_engine.py"
+        ]
+      },
+      {
+        "pattern": "*_orchestrator.py",
+        "count": 46,
+        "files": [
+          "/Users/michaelmataluni/Documents/AbeOne_Master/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/app/core/guard_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/archive/legacy/AIGuards-Backend-deprecated-2025-01-27/codeguardians-gateway/codeguardians-gateway/tests/unit/test_guard_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/archive/extractions/_extract_truice/src/tru_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/archive/extractions/_extract_truice/src/tru_self_healing_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/temp_repos/abeone-source/codeguardians-gateway/codeguardians-gateway/app/core/guard_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/temp_repos/abeone-source/codeguardians-gateway/codeguardians-gateway/tests/unit/test_guard_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/temp_repos/abeone-source/Documents/AbeOne_Master/EMERGENT_OS/synthesis/complete_convergence_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/temp_repos/abeone-source/Downloads/AIGuards-Backend-dev/codeguardians-gateway/codeguardians-gateway/app/core/guard_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/temp_repos/abeone-source/Downloads/AIGuards-Backend-dev/codeguardians-gateway/codeguardians-gateway/tests/unit/test_guard_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/AbeONESourceSatellite/codeguardians-gateway/codeguardians-gateway/app/core/guard_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/AbeONESourceSatellite/codeguardians-gateway/codeguardians-gateway/tests/unit/test_guard_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/AbeONESourceSatellite/Documents/AbeOne_Master/EMERGENT_OS/synthesis/complete_convergence_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/AbeONESourceSatellite/Downloads/AIGuards-Backend-dev/codeguardians-gateway/codeguardians-gateway/app/core/guard_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/satellites/AbeONESourceSatellite/Downloads/AIGuards-Backend-dev/codeguardians-gateway/codeguardians-gateway/tests/unit/test_guard_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/repositories/bravetto/abeone-source/codeguardians-gateway/codeguardians-gateway/app/core/guard_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/repositories/bravetto/abeone-source/codeguardians-gateway/codeguardians-gateway/tests/unit/test_guard_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/repositories/bravetto/abeone-source/Documents/AbeOne_Master/EMERGENT_OS/synthesis/complete_convergence_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/repositories/bravetto/abeone-source/Downloads/AIGuards-Backend-dev/codeguardians-gateway/codeguardians-gateway/app/core/guard_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/repositories/bravetto/abeone-source/Downloads/AIGuards-Backend-dev/codeguardians-gateway/codeguardians-gateway/tests/unit/test_guard_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeFLOWs-orbital/packages/@abeproducts/abebeats/Ab\u00ebBEATs/abebeats/orchestration/abeats_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeFLOWs-orbital/packages/@abeos/kernel/architectural_enforcement_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeFLOWs-orbital/packages/@abeos/kernel/emoji_cleanup_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeFLOWs-orbital/packages/@abeos/kernel/test_codebase_structure_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeFLOWs-orbital/packages/@abeos/kernel/codebase_structure_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/aiagentsuite/nuero-forge/neuroforge/intelligence_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/aiagentsuite/nuero-forge/tests/test_intelligence_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/aiagentsuite/src/aiagentsuite/servicemesh/mcp_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/synthesis/unified_flow_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/synthesis/unified_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/synthesis/event_driven_workflow_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/synthesis/unified_execution_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/synthesis/complete_convergence_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/synthesis/eeaao_lfglfglfgl_integrated_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/synthesis/full_monty_guardian_swarm_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/uptc/tests/test_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/EMERGENT_OS-orbital/self_healing_fabric/orchestration/healing_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/app/core/guard_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AIGuards-Backend-orbital/codeguardians-gateway/codeguardians-gateway/tests/unit/test_guard_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/Spec-Kit-orbital/engines/pipeline_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeBEATs_Clean-orbital/variants/abebeats_tru/src/tru_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/orbital/AbeBEATs_Clean-orbital/variants/abebeats_tru/src/tru_self_healing_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/unified_validation_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/webinar/master_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/scripts/hard_drive_healing/orchestration/disk_healing_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/truice_engine/variants/abebeats_tru/src/tru_orchestrator.py",
+          "/Users/michaelmataluni/Documents/AbeOne_Master/truice_engine/variants/abebeats_tru/src/tru_self_healing_orchestrator.py"
+        ]
+      }
+    ],
+    "duplicate_utilities": [],
+    "unused_imports": []
+  },
+  "drift": {
+    "interface_violations": [],
+    "pattern_deviations": [],
+    "missing_unified_calls": []
+  },
+  "convergence_score": 0.9500000000000001,
+  "success": true,
+  "validation_completed": "2025-11-24T13:56:45.372346"
+}

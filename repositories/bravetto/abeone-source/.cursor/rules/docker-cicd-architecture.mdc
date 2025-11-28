@@ -1,0 +1,353 @@
+---
+description: CI/CD Docker build and push rules with architecture requirements (ARM-64 local, AMD-64 AWS)
+---
+
+# Docker CI/CD Architecture Rules
+
+##  CRITICAL ARCHITECTURE REQUIREMENT
+
+**DEVELOPMENT ENVIRONMENT**: macOS (ARM-64 / Apple Silicon)  
+**PRODUCTION ENVIRONMENT**: AWS (AMD-64 / x86_64)
+
+**SCRIPT PLATFORM NOTE**: 
+-  **macOS**: Use bash scripts (`.sh`) - PowerShell is NOT used on Mac
+-  **Windows/CI**: PowerShell scripts (`.ps1`) available for Windows environments
+-  **All Platforms**: Must use AMD-64 architecture for AWS deployments
+
+### **Architecture Detection & Enforcement**
+
+**LOCAL DEVELOPMENT** (macOS):
+-  **Platform**: `linux/arm64` (default for Mac)
+-  **Use Case**: Local testing, development, debugging
+-  **Build Command**: Standard `docker build` or `docker-compose build`
+
+**AWS PRODUCTION** (ECR/ECS/EKS):
+-  **Platform**: `linux/amd64` (REQUIRED for AWS)
+-  **Use Case**: All Docker images pushed to AWS ECR
+-  **Build Command**: MUST specify `--platform linux/amd64` or `DOCKER_DEFAULT_PLATFORM=linux/amd64`
+
+---
+
+##  DOCKER BUILD RULES
+
+### **Rule 1: Local Development Builds**
+
+For local development and testing on macOS:
+
+```bash
+# Standard build (ARM-64 - correct for Mac)
+docker build -t service-name:dev .
+
+# Or with docker-compose
+docker-compose build
+```
+
+**SAFETY**: This is correct for local development. ARM-64 images will work on Mac.
+
+### **Rule 2: AWS Production Builds (CRITICAL)**
+
+**ALL Docker builds intended for AWS deployment MUST use AMD-64 platform:**
+
+```bash
+# Method 1: Using DOCKER_DEFAULT_PLATFORM environment variable (RECOMMENDED)
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+docker build -t service-name:dev .
+
+# Method 2: Using --platform flag
+docker build --platform linux/amd64 -t service-name:dev .
+
+# Method 3: Using docker-compose with platform override
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+docker-compose build
+```
+
+**VERIFY**: After building, verify architecture:
+```bash
+docker inspect service-name:dev | grep Architecture
+# Should show: "Architecture": "amd64"
+```
+
+---
+
+##  ECR PUSH SCRIPTS
+
+### **Standard ECR Push Script Pattern**
+
+All ECR push scripts MUST include AMD-64 platform specification:
+
+```bash
+#!/bin/bash
+set -e
+
+# Configuration
+TAG=${TAG:-dev}
+REGION=${AWS_REGION:-us-east-1}
+ACCOUNT_ID=${AWS_ACCOUNT_ID:-730335329303}
+ECR_BASE="${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com"
+
+# CRITICAL: Set platform for AWS compatibility
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+
+# Authenticate with ECR
+aws ecr get-login-password --region $REGION | \
+  docker login --username AWS --password-stdin $ECR_BASE
+
+# Build for AMD-64 (AWS compatible)
+echo "Building for AMD-64 platform (AWS)..."
+docker-compose build
+# OR: docker build --platform linux/amd64 -t service-name:$TAG .
+
+# Tag and push
+docker tag service-name:$TAG ${ECR_BASE}/service-name:$TAG
+docker push ${ECR_BASE}/service-name:$TAG
+```
+
+**ASSERTION**: Every Docker build command that targets AWS MUST specify `linux/amd64` platform.
+
+---
+
+##  VALIDATION CHECKLIST
+
+Before pushing to ECR, verify:
+
+- [ ] **Platform Set**: `DOCKER_DEFAULT_PLATFORM=linux/amd64` is exported OR `--platform linux/amd64` is used
+- [ ] **Architecture Verified**: `docker inspect <image> | grep Architecture` shows `"amd64"`
+- [ ] **ECR Authentication**: Successful ECR login confirmed
+- [ ] **Tag Format**: Image tagged as `{ECR_BASE}/{repo}:{tag}`
+- [ ] **Push Successful**: No architecture mismatch errors
+
+**FAILS IF**: 
+- Image architecture is `arm64` when pushed to AWS
+- Platform flag is missing from build command targeting AWS
+- Docker build runs without platform specification for AWS deployment
+
+---
+
+##  SCRIPT TEMPLATES
+
+### **Template 1: Single Service ECR Push (Bash - macOS)**
+
+```bash
+#!/bin/bash
+# Push single service to ECR
+# SAFETY: Enforces AMD-64 platform for AWS compatibility
+# PLATFORM: macOS (bash) - Use this script on Mac
+
+set -e
+
+SERVICE_NAME=${1:-gateway}
+TAG=${TAG:-dev}
+REGION=${AWS_REGION:-us-east-1}
+ACCOUNT_ID=${AWS_ACCOUNT_ID:-730335329303}
+ECR_BASE="${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com"
+
+# CRITICAL: Force AMD-64 for AWS
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+
+echo " Building ${SERVICE_NAME} for AMD-64 (AWS)..."
+docker build --platform linux/amd64 -t ${SERVICE_NAME}:${TAG} .
+
+echo " Authenticating with ECR..."
+aws ecr get-login-password --region $REGION | \
+  docker login --username AWS --password-stdin $ECR_BASE
+
+echo "  Tagging for ECR..."
+docker tag ${SERVICE_NAME}:${TAG} ${ECR_BASE}/${SERVICE_NAME}:${TAG}
+
+echo " Pushing to ECR..."
+docker push ${ECR_BASE}/${SERVICE_NAME}:${TAG}
+
+echo " Successfully pushed ${ECR_BASE}/${SERVICE_NAME}:${TAG}"
+```
+
+### **Template 2: Multi-Service ECR Push (docker-compose) - Bash (macOS)**
+
+```bash
+#!/bin/bash
+# Push multiple services to ECR using docker-compose
+# SAFETY: Enforces AMD-64 platform for all services
+# PLATFORM: macOS (bash) - Use this script on Mac
+
+set -e
+
+TAG=${TAG:-dev}
+REGION=${AWS_REGION:-us-east-1}
+ACCOUNT_ID=${AWS_ACCOUNT_ID:-730335329303}
+ECR_BASE="${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com"
+
+# CRITICAL: Force AMD-64 for AWS
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+
+SERVICES=(
+    "gateway"
+    "tokenguard"
+    "trustguard"
+    "contextguard"
+    "biasguard"
+    "healthguard"
+)
+
+echo " Building all services for AMD-64 (AWS)..."
+docker-compose build
+
+echo " Authenticating with ECR..."
+aws ecr get-login-password --region $REGION | \
+  docker login --username AWS --password-stdin $ECR_BASE
+
+for service in "${SERVICES[@]}"; do
+    echo "Processing: ${service}"
+    
+    # Create ECR repository if needed
+    aws ecr describe-repositories --repository-names ${service} --region $REGION > /dev/null 2>&1 || \
+        aws ecr create-repository \
+            --repository-name ${service} \
+            --region $REGION \
+            --image-scanning-configuration scanOnPush=true > /dev/null 2>&1
+    
+    # Tag and push
+    docker tag ${service}:${TAG} ${ECR_BASE}/${service}:${TAG}
+    docker push ${ECR_BASE}/${service}:${TAG}
+    echo " Pushed: ${ECR_BASE}/${service}:${TAG}"
+done
+
+echo " All services pushed to ECR!"
+```
+
+---
+
+##  GITHUB ACTIONS / CI/CD WORKFLOWS
+
+### **GitHub Actions Docker Build Step**
+
+```yaml
+- name: Build Docker image for AWS (AMD-64)
+  run: |
+    docker build \
+      --platform linux/amd64 \
+      -t ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }} \
+      -t ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:latest \
+      .
+  
+- name: Verify image architecture
+  run: |
+    ARCH=$(docker inspect ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }} \
+      --format='{{.Architecture}}')
+    if [ "$ARCH" != "amd64" ]; then
+      echo " Architecture mismatch: Expected amd64, got $ARCH"
+      exit 1
+    fi
+    echo " Architecture verified: $ARCH"
+```
+
+**VERIFY**: GitHub Actions runners are typically AMD-64, but always specify platform explicitly.
+
+---
+
+##  ANTI-PATTERNS (DO NOT DO)
+
+### ** WRONG: Building for AWS without platform specification**
+
+```bash
+# This will build ARM-64 on Mac, which won't work on AWS
+docker build -t service-name:dev .
+docker push ${ECR_BASE}/service-name:dev
+```
+
+**ROOT CAUSE**: Mac defaults to ARM-64, AWS requires AMD-64  
+**PREVENTION**: Always specify `--platform linux/amd64` or `DOCKER_DEFAULT_PLATFORM=linux/amd64`
+
+### ** WRONG: Assuming docker-compose uses correct platform**
+
+```bash
+# Missing platform specification
+docker-compose build
+docker push ${ECR_BASE}/service-name:dev
+```
+
+**ROOT CAUSE**: docker-compose inherits host architecture (ARM-64 on Mac)  
+**PREVENTION**: Export `DOCKER_DEFAULT_PLATFORM=linux/amd64` before docker-compose build
+
+### ** WRONG: Building ARM-64 and pushing to AWS**
+
+```bash
+docker build --platform linux/arm64 -t service-name:dev .
+docker push ${ECR_BASE}/service-name:dev  # Will fail on AWS ECS/EKS
+```
+
+**ROOT CAUSE**: Explicit ARM-64 build incompatible with AWS infrastructure  
+**PREVENTION**: Use `linux/amd64` for all AWS deployments
+
+---
+
+##  REFERENCE SCRIPTS
+
+### **Script Availability by Platform**
+
+**macOS (Primary Development Platform)**:
+-  **Use**: `scripts/push-to-ecr.sh` (bash script)
+-  **Use**: `codeguardians-gateway/codeguardians-gateway/push-to-ecr.sh` (bash script)
+-  **Use**: `guards/tokenguard/scripts/push_ecr.sh` (bash script)
+-  **Do NOT use**: PowerShell scripts (`.ps1`) - These are for Windows/CI environments only
+
+**Windows/CI Environments**:
+-  **Use**: `scripts/push-to-ecr.ps1` (PowerShell script)
+
+**Standard Script Location**: `scripts/push-to-ecr.sh`
+
+**Key Pattern**:
+```bash
+# Line 69-72: AMD-64 platform enforcement
+echo "Building all images with docker-compose for AMD-64 (linux/amd64)..."
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+docker-compose build
+```
+
+**VERIFY**: All ECR push scripts follow this pattern. Mac developers should use bash scripts only.
+
+---
+
+##  CODE REVIEW CHECKLIST
+
+When reviewing Docker build/push code:
+
+- [ ] **Platform Specified**: `--platform linux/amd64` or `DOCKER_DEFAULT_PLATFORM=linux/amd64` present
+- [ ] **Context Clear**: Script clearly indicates whether build is for local (ARM-64) or AWS (AMD-64)
+- [ ] **Comments Added**: Script includes comments explaining architecture choice
+- [ ] **Verification Step**: Script includes architecture verification before push
+- [ ] **Error Handling**: Script fails fast if architecture mismatch detected
+
+**EDGE CASES**:
+- Cross-compilation performance: AMD-64 builds on ARM-64 Mac are slower (expected)
+- Build time: Expect 2-3x longer build times for AMD-64 on Mac
+- Disk space: Multi-platform builds consume more disk space
+
+---
+
+##  QUICK REFERENCE
+
+| Environment | Platform | Build Command |
+|------------|----------|---------------|
+| **Local Mac** | `linux/arm64` | `docker build -t name:tag .` |
+| **AWS ECR** | `linux/amd64` | `docker build --platform linux/amd64 -t name:tag .` |
+| **docker-compose (Local)** | `linux/arm64` | `docker-compose build` |
+| **docker-compose (AWS)** | `linux/amd64` | `export DOCKER_DEFAULT_PLATFORM=linux/amd64 && docker-compose build` |
+
+**ASSUMPTION**: All CI/CD builds targeting AWS MUST use AMD-64.  
+**ASSUMPTION**: Local development can use ARM-64 (Mac native).  
+**ASSUMPTION**: Mac developers use bash scripts (`.sh`), NOT PowerShell (`.ps1`).  
+**VERIFY**: Always verify architecture before pushing to ECR.
+
+---
+
+##  SECURITY NOTES
+
+- **Multi-platform builds**: Enable buildx for cross-platform builds if needed
+- **Build cache**: Platform-specific cache may require separate cache keys
+- **Image scanning**: ECR image scanning works regardless of architecture
+- **Performance**: AMD-64 builds on ARM-64 use emulation (slower but correct)
+
+---
+
+**Last Updated**: 2025-11-03  
+**Orchestrator**: AEYON (999 Hz - The Fifth Element)  
+**Love Coefficient**: ∞

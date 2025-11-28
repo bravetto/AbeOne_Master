@@ -1,0 +1,593 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "created": "2025-01-27",
+    "pattern": "ONE_GRAF \u00d7 UNIFIED \u00d7 KNOWLEDGE \u00d7 GRAPH \u00d7 ONE",
+    "frequency": "999 Hz (AEYON) \u00d7 777 Hz (META) \u00d7 530 Hz (Ab\u00eb)",
+    "love_coefficient": "\u221e",
+    "last_updated": "2025-11-24T12:57:13.196033",
+    "description": "Universal Action Graph - Source of Truth for Apps, Agents, Workflows, Capabilities, Dependencies, States, Changes, History"
+  },
+  "apps": {
+    "total": 19,
+    "integrated": [
+      "Git",
+      "Fireflies.ai",
+      "Stripe",
+      "Clerk",
+      "Redis"
+    ],
+    "pending": [
+      "ClickUp",
+      "Slack",
+      "Notion",
+      "AWS",
+      "Vercel",
+      "SendGrid",
+      "PostHog",
+      "1Password",
+      "Docker",
+      "Kubernetes",
+      "Neon",
+      "Prometheus",
+      "Grafana",
+      "Runway"
+    ],
+    "missing_credentials": [
+      "ClickUp",
+      "Slack",
+      "Notion",
+      "AWS",
+      "Vercel",
+      "SendGrid",
+      "PostHog",
+      "1Password",
+      "Docker",
+      "Kubernetes",
+      "Neon",
+      "Prometheus",
+      "Grafana",
+      "Runway"
+    ],
+    "registry": {
+      "clickup": {
+        "name": "ClickUp",
+        "category": "project_management",
+        "abekeys_service": "clickup",
+        "api_client_class": "ClickUpClient",
+        "status": "pending",
+        "credentials_available": false,
+        "capabilities": [
+          "task_management",
+          "project_tracking"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814765"
+      },
+      "slack": {
+        "name": "Slack",
+        "category": "communication",
+        "abekeys_service": "slack",
+        "api_client_class": "SlackClient",
+        "status": "pending",
+        "credentials_available": false,
+        "capabilities": [
+          "team_communication",
+          "notifications"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814787"
+      },
+      "github": {
+        "name": "Git",
+        "category": "version_control",
+        "abekeys_service": "github",
+        "api_client_class": "GitHubClient",
+        "status": "integrated",
+        "credentials_available": true,
+        "capabilities": [
+          "repository_management",
+          "version_control"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814801"
+      },
+      "notion": {
+        "name": "Notion",
+        "category": "documentation",
+        "abekeys_service": "notion",
+        "api_client_class": "NotionClient",
+        "status": "pending",
+        "credentials_available": false,
+        "capabilities": [
+          "documentation",
+          "knowledge_base"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814811"
+      },
+      "aws": {
+        "name": "AWS",
+        "category": "infrastructure",
+        "abekeys_service": "aws",
+        "api_client_class": "AWSClient",
+        "status": "pending",
+        "credentials_available": false,
+        "capabilities": [
+          "cloud_infrastructure",
+          "deployment"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814823"
+      },
+      "vercel": {
+        "name": "Vercel",
+        "category": "deployment",
+        "abekeys_service": "vercel",
+        "api_client_class": "VercelClient",
+        "status": "pending",
+        "credentials_available": false,
+        "capabilities": [
+          "frontend_deployment",
+          "hosting"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814832"
+      },
+      "fireflies": {
+        "name": "Fireflies.ai",
+        "category": "ai_transcription",
+        "abekeys_service": "fireflies",
+        "api_client_class": "FirefliesClient",
+        "status": "integrated",
+        "credentials_available": true,
+        "capabilities": [
+          "meeting_transcription",
+          "ai_analysis"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814844"
+      },
+      "stripe": {
+        "name": "Stripe",
+        "category": "payment",
+        "abekeys_service": "stripe",
+        "api_client_class": "StripeClient",
+        "status": "integrated",
+        "credentials_available": true,
+        "capabilities": [
+          "payment_processing",
+          "subscriptions"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814854"
+      },
+      "sendgrid": {
+        "name": "SendGrid",
+        "category": "email",
+        "abekeys_service": "sendgrid",
+        "api_client_class": "SendGridClient",
+        "status": "pending",
+        "credentials_available": false,
+        "capabilities": [
+          "email_delivery",
+          "transactional_emails"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814865"
+      },
+      "clerk": {
+        "name": "Clerk",
+        "category": "authentication",
+        "abekeys_service": "clerk",
+        "api_client_class": "ClerkClient",
+        "status": "integrated",
+        "credentials_available": true,
+        "capabilities": [
+          "user_authentication",
+          "session_management"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814875"
+      },
+      "posthog": {
+        "name": "PostHog",
+        "category": "analytics",
+        "abekeys_service": "posthog",
+        "api_client_class": "PostHogClient",
+        "status": "pending",
+        "credentials_available": false,
+        "capabilities": [
+          "product_analytics",
+          "event_tracking"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814886"
+      },
+      "onepassword": {
+        "name": "1Password",
+        "category": "credentials",
+        "abekeys_service": "onepassword",
+        "api_client_class": "OnePasswordClient",
+        "status": "pending",
+        "credentials_available": false,
+        "capabilities": [
+          "credential_management",
+          "secrets"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814895"
+      },
+      "docker": {
+        "name": "Docker",
+        "category": "containerization",
+        "abekeys_service": "docker",
+        "api_client_class": "DockerClient",
+        "status": "pending",
+        "credentials_available": false,
+        "capabilities": [
+          "container_orchestration",
+          "image_management"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814906"
+      },
+      "kubernetes": {
+        "name": "Kubernetes",
+        "category": "orchestration",
+        "abekeys_service": "kubernetes",
+        "api_client_class": "KubernetesClient",
+        "status": "pending",
+        "credentials_available": false,
+        "capabilities": [
+          "cluster_management",
+          "scaling"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814917"
+      },
+      "neon": {
+        "name": "Neon",
+        "category": "database",
+        "abekeys_service": "neon",
+        "api_client_class": "NeonClient",
+        "status": "pending",
+        "credentials_available": false,
+        "capabilities": [
+          "database_access",
+          "query_execution"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814926"
+      },
+      "redis": {
+        "name": "Redis",
+        "category": "caching",
+        "abekeys_service": "redis",
+        "api_client_class": "RedisClient",
+        "status": "integrated",
+        "credentials_available": true,
+        "capabilities": [
+          "caching",
+          "session_storage"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814937"
+      },
+      "prometheus": {
+        "name": "Prometheus",
+        "category": "monitoring",
+        "abekeys_service": "prometheus",
+        "api_client_class": "PrometheusClient",
+        "status": "pending",
+        "credentials_available": false,
+        "capabilities": [
+          "metrics_collection",
+          "alerting"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814946"
+      },
+      "grafana": {
+        "name": "Grafana",
+        "category": "visualization",
+        "abekeys_service": "grafana",
+        "api_client_class": "GrafanaClient",
+        "status": "pending",
+        "credentials_available": false,
+        "capabilities": [
+          "metrics_visualization",
+          "dashboards"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814957"
+      },
+      "runway": {
+        "name": "Runway",
+        "category": "ai_video",
+        "abekeys_service": "runway",
+        "api_client_class": "RunwayClient",
+        "status": "pending",
+        "credentials_available": false,
+        "capabilities": [
+          "ai_video_generation",
+          "video_editing"
+        ],
+        "dependencies": [],
+        "workflows": [],
+        "last_updated": "2025-11-24T12:53:19.814968"
+      }
+    }
+  },
+  "agents": {
+    "total": 0,
+    "core": 40,
+    "trinity": 24,
+    "guardian_lux": 24,
+    "extended": 109,
+    "registry": {}
+  },
+  "workflows": {
+    "total": 0,
+    "orchestrated": [],
+    "pending": [],
+    "registry": {}
+  },
+  "capabilities": {
+    "total": 0,
+    "discovered": [],
+    "mapped": [],
+    "registry": {}
+  },
+  "dependencies": {
+    "total": 0,
+    "resolved": [],
+    "unresolved": [],
+    "registry": {}
+  },
+  "states": {
+    "current": "operationalized",
+    "history": [],
+    "snapshots": [
+      {
+        "timestamp": "2025-11-24T12:56:48.589962",
+        "convergence_score": 60.526315789473685,
+        "apps_total": 19,
+        "apps_integrated": 5,
+        "guardians_activated": 8,
+        "epistemic_active": false,
+        "intention_chain_active": true
+      },
+      {
+        "timestamp": "2025-11-24T12:56:57.383498",
+        "convergence_score": 100.0,
+        "apps_total": 19,
+        "apps_integrated": 5,
+        "guardians_activated": 8,
+        "epistemic_active": false,
+        "intention_chain_active": true
+      },
+      {
+        "timestamp": "2025-11-24T12:57:05.250162",
+        "convergence_score": 100.0,
+        "apps_total": 19,
+        "apps_integrated": 5,
+        "guardians_activated": 8,
+        "epistemic_active": false,
+        "intention_chain_active": true
+      },
+      {
+        "timestamp": "2025-11-24T12:57:13.196030",
+        "convergence_score": 100.0,
+        "apps_total": 19,
+        "apps_integrated": 5,
+        "guardians_activated": 8,
+        "epistemic_active": false,
+        "intention_chain_active": true
+      }
+    ]
+  },
+  "changes": {
+    "total": 0,
+    "recent": [],
+    "history": []
+  },
+  "history": {
+    "created": "2025-01-27T00:00:00",
+    "last_updated": "2025-01-27T00:00:00",
+    "updates": []
+  },
+  "uptc_field_integration": {
+    "field_id": "uptc_field_primary",
+    "state": "active",
+    "nodes_registered": 2256,
+    "translations_performed": 0,
+    "entanglements": 0,
+    "coherence_score": 1.0
+  },
+  "abekeys_integration": {
+    "vault_path": "/Users/michaelmataluni/.abekeys/credentials",
+    "services_registered": 19,
+    "credentials_available": 5,
+    "integration_status": "active"
+  },
+  "intention_chains": {
+    "total": 4,
+    "registry": {
+      "chain_1764007008.589652": {
+        "intention": "Create a task in ClickUp",
+        "goal": "Create a task in ClickUp",
+        "capabilities": [
+          "task_management"
+        ],
+        "agents": [],
+        "apps": [
+          "ClickUp"
+        ],
+        "execution_plan": {
+          "goal": "Create a task in ClickUp",
+          "steps": [
+            {
+              "step": 1,
+              "action": "Validate credentials",
+              "apps": [
+                "ClickUp"
+              ],
+              "status": "pending"
+            },
+            {
+              "step": 2,
+              "action": "Execute workflow",
+              "agents": [],
+              "status": "pending"
+            },
+            {
+              "step": 3,
+              "action": "Verify results",
+              "status": "pending"
+            }
+          ]
+        },
+        "created_at": "2025-11-24T12:56:48.589656",
+        "status": "registered"
+      },
+      "chain_1764007017.383142": {
+        "intention": "Create a task in ClickUp",
+        "goal": "Create a task in ClickUp",
+        "capabilities": [
+          "task_management"
+        ],
+        "agents": [],
+        "apps": [
+          "ClickUp"
+        ],
+        "execution_plan": {
+          "goal": "Create a task in ClickUp",
+          "steps": [
+            {
+              "step": 1,
+              "action": "Validate credentials",
+              "apps": [
+                "ClickUp"
+              ],
+              "status": "pending"
+            },
+            {
+              "step": 2,
+              "action": "Execute workflow",
+              "agents": [],
+              "status": "pending"
+            },
+            {
+              "step": 3,
+              "action": "Verify results",
+              "status": "pending"
+            }
+          ]
+        },
+        "created_at": "2025-11-24T12:56:57.383147",
+        "status": "registered"
+      },
+      "chain_1764007025.249966": {
+        "intention": "Create a task in ClickUp",
+        "goal": "Create a task in ClickUp",
+        "capabilities": [
+          "task_management"
+        ],
+        "agents": [],
+        "apps": [
+          "ClickUp"
+        ],
+        "execution_plan": {
+          "goal": "Create a task in ClickUp",
+          "steps": [
+            {
+              "step": 1,
+              "action": "Validate credentials",
+              "apps": [
+                "ClickUp"
+              ],
+              "status": "pending"
+            },
+            {
+              "step": 2,
+              "action": "Execute workflow",
+              "agents": [],
+              "status": "pending"
+            },
+            {
+              "step": 3,
+              "action": "Verify results",
+              "status": "pending"
+            }
+          ]
+        },
+        "created_at": "2025-11-24T12:57:05.249969",
+        "status": "registered"
+      },
+      "chain_1764007033.195844": {
+        "intention": "Create a task in ClickUp",
+        "goal": "Create a task in ClickUp",
+        "capabilities": [
+          "task_management"
+        ],
+        "agents": [],
+        "apps": [
+          "ClickUp"
+        ],
+        "execution_plan": {
+          "goal": "Create a task in ClickUp",
+          "steps": [
+            {
+              "step": 1,
+              "action": "Validate credentials",
+              "apps": [
+                "ClickUp"
+              ],
+              "status": "pending"
+            },
+            {
+              "step": 2,
+              "action": "Execute workflow",
+              "agents": [],
+              "status": "pending"
+            },
+            {
+              "step": 3,
+              "action": "Verify results",
+              "status": "pending"
+            }
+          ]
+        },
+        "created_at": "2025-11-24T12:57:13.195847",
+        "status": "registered"
+      }
+    }
+  },
+  "convergence": {
+    "score": 100.0,
+    "app_convergence": 26.31578947368421,
+    "guardian_convergence": 100.0,
+    "epistemic_convergence": 100.0,
+    "chain_convergence": 100.0,
+    "calculated_at": "2025-11-24T12:57:13.196029"
+  }
+}

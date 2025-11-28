@@ -1,0 +1,48 @@
+{
+  "timestamp": "2025-11-03T03:39:16.661989",
+  "containers": {
+    "codeguardians-gateway": {
+      "name": "codeguardians-gateway",
+      "dockerfile_exists": false,
+      "build_success": false,
+      "startup_success": false
+    },
+    "tokenguard": {
+      "name": "tokenguard",
+      "dockerfile_exists": false,
+      "build_success": false,
+      "startup_success": false
+    },
+    "trustguard": {
+      "name": "trustguard",
+      "dockerfile_exists": false,
+      "build_success": false,
+      "startup_success": false
+    },
+    "contextguard": {
+      "name": "contextguard",
+      "dockerfile_exists": false,
+      "build_success": false,
+      "startup_success": false
+    },
+    "biasguard": {
+      "name": "biasguard",
+      "dockerfile_exists": false,
+      "build_success": false,
+      "startup_success": false
+    },
+    "healthguard": {
+      "name": "healthguard",
+      "dockerfile_exists": false,
+      "build_success": false,
+      "startup_success": false
+    }
+  },
+  "docker_compose": {},
+  "summary": {
+    "total_containers": 6,
+    "passed": 0,
+    "failed": 6,
+    "pass_rate": "0.0%"
+  }
+}

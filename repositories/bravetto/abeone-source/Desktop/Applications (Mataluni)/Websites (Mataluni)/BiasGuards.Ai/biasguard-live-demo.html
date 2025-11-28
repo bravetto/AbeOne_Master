@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiasGuards.AI - Live Demo | JAHmere Webb Freedom Mission</title>
+    <meta name="description" content="JAHmere Webb crisis: $26,500 legal costs. Court date: August 25, 2025. BiasGuard prevents AI bias while funding justice reform.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text { background: linear-gradient(135deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    
+    <!-- Header -->
+    <header class="py-6">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center">
+                <div class="inline-flex items-center gap-2 bg-red-100 px-4 py-2 rounded-full text-red-700 font-semibold mb-6">
+                     REAL CRISIS: JAHmere Webb faces $26,500 legal costs
+                </div>
+                
+                <h1 class="text-5xl font-bold text-gray-900 mb-4">
+                    BiasGuards.AI
+                    <span class="gradient-text">Live Demo</span>
+                </h1>
+                
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                    Born from JAHmere Webb's <strong>$26,500</strong> legal crisis on <strong>July 14, 2025</strong>. 
+                    Court date: <strong>August 25, 2025</strong> (<span id="countdown-days">--</span> days remaining).
+                    <strong>15% revenue to criminal justice reform.</strong>
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
+                    <div class="bg-white rounded-lg p-6 shadow-lg">
+                        <div class="text-3xl font-bold text-red-600 mb-2">$26,500</div>
+                        <div class="text-sm text-gray-600">Crisis Cost</div>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-lg">
+                        <div class="text-3xl font-bold text-blue-600 mb-2" id="days-display">--</div>
+                        <div class="text-sm text-gray-600">Days to Court</div>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-lg">
+                        <div class="text-3xl font-bold text-green-600 mb-2">15%</div>
+                        <div class="text-sm text-gray-600">To Justice Reform</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Demo -->
+    <main class="max-w-6xl mx-auto px-4 pb-12">
+        
+        <!-- BiasGuard Validator Demo -->
+        <div class="bg-white rounded-2xl shadow-xl p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+                 BiasGuard Validator - Live Demo
+            </h2>
+            
+            <p class="text-lg text-gray-600 mb-8 text-center">
+                Watch BiasGuard catch bias in real-time. This is the same system that achieved 
+                <strong>recursive intelligence</strong> by analyzing its own code.
+            </p>
+
+            <!-- Quick Test Buttons -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <button 
+                    onclick="testGoodCode()"
+                    class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"
+                >
+                     Test Good Code
+                </button>
+                <button 
+                    onclick="testReactContamination()"
+                    class="bg-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors"
+                >
+                     Test React Contamination
+                </button>
+                <button 
+                    onclick="testWrongFacts()"
+                    class="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors"
+                >
+                     Test Wrong Facts
+                </button>
+            </div>
+
+            <!-- Code Input -->
+            <div class="mb-6">
+                <label for="demo-code" class="block text-sm font-medium text-gray-700 mb-2">
+                    Enter Code to Validate:
+                </label>
+                <textarea
+                    id="demo-code"
+                    placeholder="Type some code here... Try: useState, v-if, or wrong JAHmere Webb facts"
+                    class="w-full h-32 px-4 py-3 border border-gray-300 rounded-lg font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                ></textarea>
+            </div>
+
+            <button 
+                onclick="validateDemo()"
+                class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors mb-6"
+            >
+                 Validate Code with BiasGuard
+            </button>
+
+            <!-- Validation Results -->
+            <div id="validation-results" class="hidden bg-gray-50 rounded-lg p-6">
+                <!-- Results will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Mission Statement -->
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
+            <h2 class="text-3xl font-bold mb-4">Justice-Driven Mission</h2>
+            <p class="text-xl mb-6">
+                BiasGuard was born from JAHmere Webb's legal crisis. We prevent AI bias while funding criminal justice reform.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <div>
+                    <h3 class="font-semibold mb-2"> What BiasGuard Does:</h3>
+                    <ul class="space-y-1 text-sm">
+                        <li>• Detects React/Vue/Angular contamination</li>
+                        <li>• Validates mission story authenticity</li>
+                        <li>• Ensures Svelte 5 compliance</li>
+                        <li>• Prevents performance anti-patterns</li>
+                        <li>• Achieved recursive self-awareness</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2"> Justice Mission Impact:</h3>
+                    <ul class="space-y-1 text-sm">
+                        <li>• 15% revenue to criminal justice reform</li>
+                        <li>• Supporting JAHmere Webb's freedom</li>
+                        <li>• Court date: August 25, 2025</li>
+                        <li>• Crisis cost: $26,500</li>
+                        <li>• Technology serving justice</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center mt-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">
+                Ready to Prevent AI Bias?
+            </h2>
+            <p class="text-lg text-gray-600 mb-8">
+                Join the mission. Protect your code. Support justice reform.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                    Start Free Trial
+                </button>
+                <button class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                    Schedule Demo
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // BiasGuard Simple Validator - Embedded Version
+        class BiasGuardValidator {
+            static BAD_PATTERNS = [
+                'useState', 'useEffect', 'className', // React
+                'v-if', 'v-for', '{{', '}}', // Vue
+                'width:', 'height:', 'top:', 'left:' // Bad animations
+            ];
+
+            static GOOD_PATTERNS = [
+                '$state', '$derived', '$effect', '$props'
+            ];
+
+            static validate(code) {
+                const issues = [];
+                let score = 100;
+
+                // Check for bad patterns
+                BiasGuardValidator.BAD_PATTERNS.forEach(pattern => {
+                    if (code.includes(pattern)) {
+                        issues.push(` Avoid: ${pattern}`);
+                        score -= 15;
+                    }
+                });
+
+                // Check for good Svelte patterns
+                const hasGoodPatterns = BiasGuardValidator.GOOD_PATTERNS.some(pattern => 
+                    code.includes(pattern)
+                );
+                if (!hasGoodPatterns && code.includes('<script')) {
+                    issues.push('  Use Svelte 5 runes: $state, $derived, $effect');
+                    score -= 20;
+                }
+
+                // Check JAHmere Webb facts
+                if (code.includes('July 28') || code.includes('$25,000')) {
+                    issues.push(' Wrong JAHmere Webb facts - use authentic details');
+                    score -= 30;
+                }
+
+                return {
+                    valid: issues.length === 0,
+                    issues,
+                    score: Math.max(0, score)
+                };
+            }
+        }
+
+        // Update countdown
+        function updateCountdown() {
+            const court = new Date('2025-08-25');
+            const now = new Date();
+            const diffTime = court.getTime() - now.getTime();
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            const days = diffDays > 0 ? diffDays : 0;
+            
+            document.getElementById('countdown-days').textContent = days;
+            document.getElementById('days-display').textContent = days;
+        }
+
+        // Test functions
+        function testGoodCode() {
+            const code = `let count = $state(0);
+const courtDate = 'August 25, 2025';
+const crisis = '$26,500';`;
+            
+            document.getElementById('demo-code').value = code;
+            validateDemo();
+        }
+
+        function testReactContamination() {
+            const code = `const [count, setCount] = useState(0);
+return <div className="container">`;
+            
+            document.getElementById('demo-code').value = code;
+            validateDemo();
+        }
+
+        function testWrongFacts() {
+            const code = `const courtDate = 'July 28, 2025';
+const crisis = '$25,000';`;
+            
+            document.getElementById('demo-code').value = code;
+            validateDemo();
+        }
+
+        function validateDemo() {
+            const code = document.getElementById('demo-code').value;
+            if (!code.trim()) return;
+            
+            const result = BiasGuardValidator.validate(code);
+            showValidationResults(result);
+            
+            console.log(' BiasGuard Live Validation:', result);
+        }
+
+        function showValidationResults(result) {
+            const resultsDiv = document.getElementById('validation-results');
+            const isValid = result.valid;
+            const scoreColor = result.score >= 80 ? 'text-green-600' : result.score >= 60 ? 'text-orange-600' : 'text-red-600';
+            
+            let html = `
+                <h3 class="text-lg font-bold mb-4 ${isValid ? 'text-green-600' : 'text-red-600'}">
+                    ${isValid ? ' Validation Passed' : ' Issues Detected'}
+                </h3>
+                
+                <div class="mb-4">
+                    <span class="text-sm font-medium text-gray-600">Score: </span>
+                    <span class="text-2xl font-bold ${scoreColor}">
+                        ${result.score}/100
+                    </span>
+                </div>
+            `;
+            
+            if (result.issues.length > 0) {
+                html += `
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-red-600 mb-2">Issues Found:</h4>
+                        <ul class="list-disc list-inside space-y-1">
+                            ${result.issues.map(issue => `<li class="text-red-700">${issue}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+            
+            if (isValid) {
+                html += `
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                        <p class="text-green-800 font-semibold"> Perfect! This code follows BiasGuard standards.</p>
+                        <p class="text-green-700 text-sm mt-1">
+                            Your code maintains framework purity and mission authenticity.
+                        </p>
+                    </div>
+                `;
+            }
+            
+            resultsDiv.innerHTML = html;
+            resultsDiv.classList.remove('hidden');
+        }
+
+        // Initialize
+        updateCountdown();
+        setInterval(updateCountdown, 60000); // Update every minute
+        
+        // Add some initial demo text
+        document.getElementById('demo-code').value = 'let count = $state(0);\nconst courtDate = "August 25, 2025";';
+    </script>
+</body>
+</html>

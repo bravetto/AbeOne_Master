@@ -1,0 +1,219 @@
+{
+  "index_version": "1.0",
+  "created_at": "2025-11-24T21:45:31.255918",
+  "total_patterns": 3839,
+  "total_batches": 39,
+  "cdf_files": [
+    "CDF/patterns/patterns_batch_0001.cdf",
+    "CDF/patterns/patterns_batch_0002.cdf",
+    "CDF/patterns/patterns_batch_0003.cdf",
+    "CDF/patterns/patterns_batch_0004.cdf",
+    "CDF/patterns/patterns_batch_0005.cdf",
+    "CDF/patterns/patterns_batch_0006.cdf",
+    "CDF/patterns/patterns_batch_0007.cdf",
+    "CDF/patterns/patterns_batch_0008.cdf",
+    "CDF/patterns/patterns_batch_0009.cdf",
+    "CDF/patterns/patterns_batch_0010.cdf",
+    "CDF/patterns/patterns_batch_0011.cdf",
+    "CDF/patterns/patterns_batch_0012.cdf",
+    "CDF/patterns/patterns_batch_0013.cdf",
+    "CDF/patterns/patterns_batch_0014.cdf",
+    "CDF/patterns/patterns_batch_0015.cdf",
+    "CDF/patterns/patterns_batch_0016.cdf",
+    "CDF/patterns/patterns_batch_0017.cdf",
+    "CDF/patterns/patterns_batch_0018.cdf",
+    "CDF/patterns/patterns_batch_0019.cdf",
+    "CDF/patterns/patterns_batch_0020.cdf",
+    "CDF/patterns/patterns_batch_0021.cdf",
+    "CDF/patterns/patterns_batch_0022.cdf",
+    "CDF/patterns/patterns_batch_0023.cdf",
+    "CDF/patterns/patterns_batch_0024.cdf",
+    "CDF/patterns/patterns_batch_0025.cdf",
+    "CDF/patterns/patterns_batch_0026.cdf",
+    "CDF/patterns/patterns_batch_0027.cdf",
+    "CDF/patterns/patterns_batch_0028.cdf",
+    "CDF/patterns/patterns_batch_0029.cdf",
+    "CDF/patterns/patterns_batch_0030.cdf",
+    "CDF/patterns/patterns_batch_0031.cdf",
+    "CDF/patterns/patterns_batch_0032.cdf",
+    "CDF/patterns/patterns_batch_0033.cdf",
+    "CDF/patterns/patterns_batch_0034.cdf",
+    "CDF/patterns/patterns_batch_0035.cdf",
+    "CDF/patterns/patterns_batch_0036.cdf",
+    "CDF/patterns/patterns_batch_0037.cdf",
+    "CDF/patterns/patterns_batch_0038.cdf",
+    "CDF/patterns/patterns_batch_0039.cdf"
+  ],
+  "index_entries": [
+    {
+      "cdf_id": "REPLACE_ME",
+      "path": "/Users/michaelmataluni/Documents/AbeOne_Master/CDF/patterns/patterns_batch_0001.cdf",
+      "metadata": {
+        "batch_number": "1",
+        "total_batches": "39",
+        "patterns_in_batch": "100",
+        "created": "2025-11-24T21:45:31.155840"
+      },
+      "genius_index": {
+        "technical": 0.2,
+        "creative": 0.0,
+        "strategic": 0.1
+      },
+      "patterns": [],
+      "indexed_at": "2025-11-24T21:45:31.158122"
+    },
+    {
+      "cdf_id": "REPLACE_ME",
+      "path": "/Users/michaelmataluni/Documents/AbeOne_Master/CDF/patterns/patterns_batch_0002.cdf",
+      "metadata": {
+        "batch_number": "2",
+        "total_batches": "39",
+        "patterns_in_batch": "100",
+        "created": "2025-11-24T21:45:31.158128"
+      },
+      "genius_index": {
+        "technical": 0.3,
+        "creative": 0.1,
+        "strategic": 0.3
+      },
+      "patterns": [],
+      "indexed_at": "2025-11-24T21:45:31.160238"
+    },
+    {
+      "cdf_id": "REPLACE_ME",
+      "path": "/Users/michaelmataluni/Documents/AbeOne_Master/CDF/patterns/patterns_batch_0003.cdf",
+      "metadata": {
+        "batch_number": "3",
+        "total_batches": "39",
+        "patterns_in_batch": "100",
+        "created": "2025-11-24T21:45:31.160243"
+      },
+      "genius_index": {
+        "technical": 0.4,
+        "creative": 0.3,
+        "strategic": 0.3
+      },
+      "patterns": [],
+      "indexed_at": "2025-11-24T21:45:31.162395"
+    },
+    {
+      "cdf_id": "REPLACE_ME",
+      "path": "/Users/michaelmataluni/Documents/AbeOne_Master/CDF/patterns/patterns_batch_0004.cdf",
+      "metadata": {
+        "batch_number": "4",
+        "total_batches": "39",
+        "patterns_in_batch": "100",
+        "created": "2025-11-24T21:45:31.162400"
+      },
+      "genius_index": {
+        "technical": 0.5,
+        "creative": 0.2,
+        "strategic": 0.2
+      },
+      "patterns": [],
+      "indexed_at": "2025-11-24T21:45:31.164637"
+    },
+    {
+      "cdf_id": "REPLACE_ME",
+      "path": "/Users/michaelmataluni/Documents/AbeOne_Master/CDF/patterns/patterns_batch_0005.cdf",
+      "metadata": {
+        "batch_number": "5",
+        "total_batches": "39",
+        "patterns_in_batch": "100",
+        "created": "2025-11-24T21:45:31.164642"
+      },
+      "genius_index": {
+        "technical": 0.5,
+        "creative": 0.3,
+        "strategic": 0.2
+      },
+      "patterns": [],
+      "indexed_at": "2025-11-24T21:45:31.166916"
+    },
+    {
+      "cdf_id": "REPLACE_ME",
+      "path": "/Users/michaelmataluni/Documents/AbeOne_Master/CDF/patterns/patterns_batch_0006.cdf",
+      "metadata": {
+        "batch_number": "6",
+        "total_batches": "39",
+        "patterns_in_batch": "100",
+        "created": "2025-11-24T21:45:31.166920"
+      },
+      "genius_index": {
+        "technical": 0.3,
+        "creative": 0.1,
+        "strategic": 0.2
+      },
+      "patterns": [],
+      "indexed_at": "2025-11-24T21:45:31.169389"
+    },
+    {
+      "cdf_id": "REPLACE_ME",
+      "path": "/Users/michaelmataluni/Documents/AbeOne_Master/CDF/patterns/patterns_batch_0007.cdf",
+      "metadata": {
+        "batch_number": "7",
+        "total_batches": "39",
+        "patterns_in_batch": "100",
+        "created": "2025-11-24T21:45:31.169410"
+      },
+      "genius_index": {
+        "technical": 0.7,
+        "creative": 0.0,
+        "strategic": 0.2
+      },
+      "patterns": [],
+      "indexed_at": "2025-11-24T21:45:31.172219"
+    },
+    {
+      "cdf_id": "REPLACE_ME",
+      "path": "/Users/michaelmataluni/Documents/AbeOne_Master/CDF/patterns/patterns_batch_0008.cdf",
+      "metadata": {
+        "batch_number": "8",
+        "total_batches": "39",
+        "patterns_in_batch": "100",
+        "created": "2025-11-24T21:45:31.172226"
+      },
+      "genius_index": {
+        "technical": 0.3,
+        "creative": 0.3,
+        "strategic": 0.1
+      },
+      "patterns": [],
+      "indexed_at": "2025-11-24T21:45:31.174569"
+    },
+    {
+      "cdf_id": "REPLACE_ME",
+      "path": "/Users/michaelmataluni/Documents/AbeOne_Master/CDF/patterns/patterns_batch_0009.cdf",
+      "metadata": {
+        "batch_number": "9",
+        "total_batches": "39",
+        "patterns_in_batch": "100",
+        "created": "2025-11-24T21:45:31.174574"
+      },
+      "genius_index": {
+        "technical": 0.7,
+        "creative": 0.5,
+        "strategic": 0.2
+      },
+      "patterns": [],
+      "indexed_at": "2025-11-24T21:45:31.176909"
+    },
+    {
+      "cdf_id": "REPLACE_ME",
+      "path": "/Users/michaelmataluni/Documents/AbeOne_Master/CDF/patterns/patterns_batch_0010.cdf",
+      "metadata": {
+        "batch_number": "10",
+        "total_batches": "39",
+        "patterns_in_batch": "100",
+        "created": "2025-11-24T21:45:31.176913"
+      },
+      "genius_index": {
+        "technical": 0.5,
+        "creative": 0.2,
+        "strategic": 0.3
+      },
+      "patterns": [],
+      "indexed_at": "2025-11-24T21:45:31.179098"
+    }
+  ]
+}

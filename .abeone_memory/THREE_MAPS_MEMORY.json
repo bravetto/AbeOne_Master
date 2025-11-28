@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "created": "2025-11-23",
+    "load_on_startup": true
+  },
+  "eternal_map": {
+    "location": "docs/maps/ETERNAL_MAP.json"
+  },
+  "static_map": {
+    "location": "orbitals/AIGuards-Backend-orbital/STATIC_MAP.md"
+  },
+  "live_map": {
+    "location": "orbitals/AIGuards-Backend-orbital/LIVE_MAP.md"
+  },
+  "summary": {
+    "all_maps_available": true
+  }
+}

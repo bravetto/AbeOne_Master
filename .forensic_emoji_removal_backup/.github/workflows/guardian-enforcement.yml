@@ -1,0 +1,48 @@
+name: Guardian Single Source of Truth Enforcement
+
+on:
+  pull_request:
+    paths:
+      - 'EMERGENT_OS/synthesis/guardian_swarm_unification.py'
+      - 'EMERGENT_OS/uptc/integrations/cdf_adapter.py'
+      - 'THE_ONE_SOURCE_OF_TRUTH_GUARDIANS_AGENTS.md'
+      - '**/guardian*.py'
+      - '**/GUARDIAN*.md'
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  enforce-guardian-consistency:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Enforce Guardian Single Source of Truth
+        run: |
+          echo "================================================================================"
+          echo "🔥 GUARDIAN ENFORCEMENT - CI/CD CHECK"
+          echo "================================================================================"
+          echo ""
+          python3 scripts/enforce_guardian_single_source_of_truth.py --strict --approve || {
+            echo ""
+            echo "🚨🚨🚨 BUILD FAILED 🚨🚨🚨"
+            echo ""
+            echo "CRITICAL: Guardian inconsistencies detected in CI/CD pipeline."
+            echo "This build cannot proceed until inconsistencies are fixed."
+            echo ""
+            echo "ACTION REQUIRED:"
+            echo "  1. Fix inconsistencies in Guardian files"
+            echo "  2. Run: python3 scripts/enforce_guardian_single_source_of_truth.py --strict"
+            echo "  3. Commit fixes and push again"
+            echo ""
+            exit 1
+          }
+          echo ""
+          echo "✅ Guardian enforcement passed - build can proceed"

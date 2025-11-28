@@ -1,0 +1,883 @@
+{
+  "forensic_results": [
+    {
+      "check_name": "Extraction Methodology Validation",
+      "passed": true,
+      "confidence": 1.0,
+      "risk_level": 0.0,
+      "anomalies": [],
+      "evidence": {
+        "database_accessible": true,
+        "parser_available": true,
+        "parser_functions": [
+          "parse_message_text",
+          "REPLACE_ME"
+        ],
+        "query_structure": {
+          "text_field_included": true,
+          "attributed_body_included": true,
+          "both_fields_handled": true,
+          "fallback_logic": true
+        },
+        "extraction_tests": [
+          {
+            "test": "text",
+            "expected": "Hello world",
+            "actual": "Hello world",
+            "passed": true
+          },
+          {
+            "test": "attributed_body",
+            "expected": "Hello world",
+            "actual": "Hello world",
+            "passed": true
+          },
+          {
+            "test": "both",
+            "expected": "Hello",
+            "actual": "Hello",
+            "passed": true
+          },
+          {
+            "test": "neither",
+            "expected": null,
+            "actual": null,
+            "passed": true
+          }
+        ]
+      },
+      "truth_alignment": true,
+      "variance_detected": false,
+      "variance_score": 0.0
+    },
+    {
+      "check_name": "Data Integrity Validation",
+      "passed": false,
+      "confidence": 0.3333333333333333,
+      "risk_level": 0.4,
+      "anomalies": [
+        "kristin: 100.0% discrepancy (DB: 320, Exported: 640)",
+        "addis: 98.0% discrepancy (DB: 1215, Exported: 24)"
+      ],
+      "evidence": {
+        "database_counts": {
+          "kristin": 320,
+          "addis": 1215
+        },
+        "exported_counts": {
+          "kristin": 640,
+          "addis": 24
+        },
+        "structure_checks": {
+          "has_date": 224,
+          "has_sender": 224,
+          "has_text": 224,
+          "missing_fields": 0
+        }
+      },
+      "truth_alignment": false,
+      "variance_detected": true,
+      "variance_score": 0.2
+    },
+    {
+      "check_name": "Pattern Truth Alignment",
+      "passed": true,
+      "confidence": 0.5,
+      "risk_level": 0.5,
+      "anomalies": [],
+      "evidence": {
+        "total_patterns": 10,
+        "alignment_report_available": true,
+        "alignment_rate": 0.5,
+        "aligned_count": 5,
+        "frequency_resonance": {
+          "530": 405,
+          "777": 135,
+          "999": 114
+        },
+        "truth_patterns": [
+          "LOVE",
+          "TRUTH"
+        ]
+      },
+      "truth_alignment": true,
+      "variance_detected": false,
+      "variance_score": 0.0
+    },
+    {
+      "check_name": "Message Organization Validation",
+      "passed": false,
+      "confidence": 0.6,
+      "risk_level": 0.3,
+      "anomalies": [
+        "Low ratio of Michael's messages: 0.0%",
+        "Detected 158 date ordering issues"
+      ],
+      "evidence": {
+        "sender_counts": {
+          "+18127865928": 2832,
+          "+14044090338": 2518,
+          "+14044883529": 1265,
+          "+17708997322": 664,
+          "nfmataluni@gmail.com": 2,
+          "Addis": 72,
+          "Kristin": 320,
+          "mataluni1148@gmail.com": 320
+        },
+        "date_ranges": {
+          "+18127865928": {
+            "first": "2016-10-16 14:03:00",
+            "last": "2025-11-21 18:22:25"
+          },
+          "+14044090338": {
+            "first": "2021-01-14 18:50:22",
+            "last": "2024-09-04 16:45:01"
+          },
+          "+14044883529": {
+            "first": "2021-01-14 18:50:31",
+            "last": "2024-09-04 16:37:08"
+          },
+          "+17708997322": {
+            "first": "2021-01-16 09:19:58",
+            "last": "2024-08-31 16:13:19"
+          },
+          "nfmataluni@gmail.com": {
+            "first": "2021-09-05 01:44:46",
+            "last": "2021-09-05 01:47:47"
+          },
+          "Addis": {
+            "first": "2025-11-22 05:21:32",
+            "last": "2025-11-22 07:30:22"
+          },
+          "Kristin": {
+            "first": "2016-10-16 18:52:27",
+            "last": "2020-11-03 15:04:56"
+          },
+          "mataluni1148@gmail.com": {
+            "first": "2016-10-16 18:52:27",
+            "last": "2020-11-03 15:04:56"
+          }
+        },
+        "ordering_issues": 158,
+        "michael_ratio": 0.0
+      },
+      "truth_alignment": false,
+      "variance_detected": true,
+      "variance_score": 0.2
+    }
+  ],
+  "coherence_checks": [
+    {
+      "conversation_id": "michael_kristin_addis_group",
+      "total_messages": 7329,
+      "coherent_sequences": 0,
+      "incoherent_sequences": 1,
+      "coherence_score": 0.4197598253275109,
+      "gaps_detected": [
+        {
+          "index": 3,
+          "gap_hours": 195.74694444444444,
+          "prev_date": "2016-10-21 12:09:27",
+          "current_date": "2016-10-29 15:54:16"
+        },
+        {
+          "index": 27,
+          "gap_hours": 428.1744444444444,
+          "prev_date": "2016-11-08 20:32:53",
+          "current_date": "2016-11-26 16:43:21"
+        },
+        {
+          "index": 61,
+          "gap_hours": 414.505,
+          "prev_date": "2016-12-04 13:40:15",
+          "current_date": "2016-12-21 20:10:33"
+        },
+        {
+          "index": 81,
+          "gap_hours": 215.2888888888889,
+          "prev_date": "2017-01-03 22:01:10",
+          "current_date": "2017-01-12 21:18:30"
+        },
+        {
+          "index": 82,
+          "gap_hours": 190.35805555555555,
+          "prev_date": "2017-01-12 21:18:30",
+          "current_date": "2017-01-20 19:39:59"
+        },
+        {
+          "index": 118,
+          "gap_hours": 399.0047222222222,
+          "prev_date": "2017-01-27 20:41:39",
+          "current_date": "2017-02-13 11:41:56"
+        },
+        {
+          "index": 124,
+          "gap_hours": 188.38472222222222,
+          "prev_date": "2017-02-18 13:09:11",
+          "current_date": "2017-02-26 09:32:16"
+        },
+        {
+          "index": 126,
+          "gap_hours": 197.23638888888888,
+          "prev_date": "2017-02-28 12:00:56",
+          "current_date": "2017-03-08 17:15:07"
+        },
+        {
+          "index": 127,
+          "gap_hours": 192.55166666666668,
+          "prev_date": "2017-03-08 17:15:07",
+          "current_date": "2017-03-16 17:48:13"
+        },
+        {
+          "index": 174,
+          "gap_hours": 236.3675,
+          "prev_date": "2017-03-22 16:42:25",
+          "current_date": "2017-04-01 13:04:28"
+        },
+        {
+          "index": 177,
+          "gap_hours": 236.18027777777777,
+          "prev_date": "2017-04-01 17:11:52",
+          "current_date": "2017-04-11 13:22:41"
+        },
+        {
+          "index": 185,
+          "gap_hours": 180.88916666666665,
+          "prev_date": "2017-04-15 21:30:29",
+          "current_date": "2017-04-23 10:23:50"
+        },
+        {
+          "index": 213,
+          "gap_hours": 191.36416666666668,
+          "prev_date": "2017-05-11 20:20:28",
+          "current_date": "2017-05-19 19:42:19"
+        },
+        {
+          "index": 242,
+          "gap_hours": 294.3288888888889,
+          "prev_date": "2017-06-11 14:26:04",
+          "current_date": "2017-06-23 20:45:48"
+        },
+        {
+          "index": 243,
+          "gap_hours": 227.78027777777777,
+          "prev_date": "2017-06-23 20:45:48",
+          "current_date": "2017-07-03 08:32:37"
+        },
+        {
+          "index": 251,
+          "gap_hours": 2284.115,
+          "prev_date": "2017-07-03 11:40:04",
+          "current_date": "2017-10-06 15:46:58"
+        },
+        {
+          "index": 298,
+          "gap_hours": 211.5611111111111,
+          "prev_date": "2017-11-01 18:35:50",
+          "current_date": "2017-11-10 14:09:30"
+        },
+        {
+          "index": 330,
+          "gap_hours": 218.89527777777778,
+          "prev_date": "2017-11-27 17:32:25",
+          "current_date": "2017-12-06 20:26:08"
+        },
+        {
+          "index": 542,
+          "gap_hours": 358.0825,
+          "prev_date": "2018-04-17 18:30:13",
+          "current_date": "2018-05-02 16:35:10"
+        },
+        {
+          "index": 661,
+          "gap_hours": 289.88166666666666,
+          "prev_date": "2018-06-09 20:04:19",
+          "current_date": "2018-06-21 21:57:13"
+        },
+        {
+          "index": 806,
+          "gap_hours": 241.22972222222222,
+          "prev_date": "2018-08-26 18:43:49",
+          "current_date": "2018-09-05 19:57:36"
+        },
+        {
+          "index": 969,
+          "gap_hours": 177.79305555555555,
+          "prev_date": "2018-11-13 13:47:13",
+          "current_date": "2018-11-20 23:34:48"
+        },
+        {
+          "index": 977,
+          "gap_hours": 255.655,
+          "prev_date": "2018-11-21 00:26:48",
+          "current_date": "2018-12-01 16:06:06"
+        },
+        {
+          "index": 990,
+          "gap_hours": 709.7536111111111,
+          "prev_date": "2018-12-02 23:43:28",
+          "current_date": "2019-01-01 13:28:41"
+        },
+        {
+          "index": 999,
+          "gap_hours": 191.46972222222223,
+          "prev_date": "2019-01-06 13:54:50",
+          "current_date": "2019-01-14 13:23:01"
+        },
+        {
+          "index": 1000,
+          "gap_hours": 221.15805555555556,
+          "prev_date": "2019-01-14 13:23:01",
+          "current_date": "2019-01-23 18:32:30"
+        },
+        {
+          "index": 1233,
+          "gap_hours": 223.99194444444444,
+          "prev_date": "2019-03-24 11:05:57",
+          "current_date": "2019-04-02 19:05:28"
+        },
+        {
+          "index": 1253,
+          "gap_hours": 189.80555555555554,
+          "prev_date": "2019-04-11 17:18:09",
+          "current_date": "2019-04-19 15:06:29"
+        },
+        {
+          "index": 1288,
+          "gap_hours": 187.62777777777777,
+          "prev_date": "2019-05-13 21:18:38",
+          "current_date": "2019-05-21 16:56:18"
+        },
+        {
+          "index": 1318,
+          "gap_hours": 169.96916666666667,
+          "prev_date": "2019-06-05 12:27:06",
+          "current_date": "2019-06-12 14:25:15"
+        },
+        {
+          "index": 1321,
+          "gap_hours": 215.95194444444445,
+          "prev_date": "2019-06-12 14:28:38",
+          "current_date": "2019-06-21 14:25:45"
+        },
+        {
+          "index": 1505,
+          "gap_hours": 269.09277777777777,
+          "prev_date": "2019-10-22 09:55:27",
+          "current_date": "2019-11-02 15:01:01"
+        },
+        {
+          "index": 1515,
+          "gap_hours": 186.75694444444446,
+          "prev_date": "2019-11-13 15:37:43",
+          "current_date": "2019-11-21 10:23:08"
+        },
+        {
+          "index": 1527,
+          "gap_hours": 222.9525,
+          "prev_date": "2019-12-09 14:17:59",
+          "current_date": "2019-12-18 21:15:08"
+        },
+        {
+          "index": 1535,
+          "gap_hours": 284.01694444444445,
+          "prev_date": "2019-12-23 16:39:14",
+          "current_date": "2020-01-04 12:40:15"
+        },
+        {
+          "index": 1556,
+          "gap_hours": 181.46583333333334,
+          "prev_date": "2020-02-01 22:32:27",
+          "current_date": "2020-02-09 12:00:24"
+        },
+        {
+          "index": 1559,
+          "gap_hours": 174.32222222222222,
+          "prev_date": "2020-02-09 12:21:28",
+          "current_date": "2020-02-16 18:40:48"
+        },
+        {
+          "index": 1633,
+          "gap_hours": 170.68555555555557,
+          "prev_date": "2020-03-13 18:34:16",
+          "current_date": "2020-03-20 21:15:24"
+        },
+        {
+          "index": 1650,
+          "gap_hours": 305.21194444444444,
+          "prev_date": "2020-04-16 22:16:42",
+          "current_date": "2020-04-29 15:29:25"
+        },
+        {
+          "index": 1651,
+          "gap_hours": 915.9566666666667,
+          "prev_date": "2020-04-29 15:29:25",
+          "current_date": "2020-06-06 19:26:49"
+        },
+        {
+          "index": 1667,
+          "gap_hours": 243.22666666666666,
+          "prev_date": "2020-06-15 12:27:10",
+          "current_date": "2020-06-25 15:40:46"
+        },
+        {
+          "index": 1669,
+          "gap_hours": 266.1072222222222,
+          "prev_date": "2020-06-25 15:40:50",
+          "current_date": "2020-07-06 17:47:16"
+        },
+        {
+          "index": 1670,
+          "gap_hours": 191.1027777777778,
+          "prev_date": "2020-07-06 17:47:16",
+          "current_date": "2020-07-14 16:53:26"
+        },
+        {
+          "index": 1673,
+          "gap_hours": 290.6061111111111,
+          "prev_date": "2020-07-16 13:58:14",
+          "current_date": "2020-07-28 16:34:36"
+        },
+        {
+          "index": 1677,
+          "gap_hours": 171.92194444444445,
+          "prev_date": "2020-08-01 21:01:29",
+          "current_date": "2020-08-09 00:56:48"
+        },
+        {
+          "index": 1678,
+          "gap_hours": 400.2113888888889,
+          "prev_date": "2020-08-09 00:56:48",
+          "current_date": "2020-08-25 17:09:29"
+        },
+        {
+          "index": 1685,
+          "gap_hours": 357.3636111111111,
+          "prev_date": "2020-09-02 15:26:34",
+          "current_date": "2020-09-17 12:48:23"
+        },
+        {
+          "index": 1686,
+          "gap_hours": 346.30861111111113,
+          "prev_date": "2020-09-17 12:48:23",
+          "current_date": "2020-10-01 23:06:54"
+        },
+        {
+          "index": 1778,
+          "gap_hours": 2041.793888888889,
+          "prev_date": "2020-10-21 17:02:44",
+          "current_date": "2021-01-14 18:50:22"
+        },
+        {
+          "index": 3173,
+          "gap_hours": 214.33333333333334,
+          "prev_date": "2021-06-20 22:45:56",
+          "current_date": "2021-06-29 21:05:56"
+        },
+        {
+          "index": 3387,
+          "gap_hours": 278.34166666666664,
+          "prev_date": "2021-09-05 01:52:26",
+          "current_date": "2021-09-16 16:12:56"
+        },
+        {
+          "index": 3511,
+          "gap_hours": 219.3388888888889,
+          "prev_date": "2021-10-13 11:12:54",
+          "current_date": "2021-10-22 14:33:14"
+        },
+        {
+          "index": 3526,
+          "gap_hours": 186.59055555555557,
+          "prev_date": "2021-10-26 23:59:13",
+          "current_date": "2021-11-03 18:34:39"
+        },
+        {
+          "index": 3533,
+          "gap_hours": 233.1125,
+          "prev_date": "2021-11-03 20:50:50",
+          "current_date": "2021-11-13 13:57:35"
+        },
+        {
+          "index": 3885,
+          "gap_hours": 196.10111111111112,
+          "prev_date": "2022-02-11 16:43:30",
+          "current_date": "2022-02-19 20:49:34"
+        },
+        {
+          "index": 3903,
+          "gap_hours": 220.19861111111112,
+          "prev_date": "2022-03-02 17:01:15",
+          "current_date": "2022-03-11 21:13:10"
+        },
+        {
+          "index": 3908,
+          "gap_hours": 369.9794444444444,
+          "prev_date": "2022-03-12 00:15:14",
+          "current_date": "2022-03-27 10:14:00"
+        },
+        {
+          "index": 3961,
+          "gap_hours": 185.23222222222222,
+          "prev_date": "2022-04-27 19:05:10",
+          "current_date": "2022-05-05 12:19:06"
+        },
+        {
+          "index": 4452,
+          "gap_hours": 185.0861111111111,
+          "prev_date": "2022-09-18 20:13:50",
+          "current_date": "2022-09-26 13:19:00"
+        },
+        {
+          "index": 4834,
+          "gap_hours": 276.1788888888889,
+          "prev_date": "2023-01-01 22:38:04",
+          "current_date": "2023-01-13 10:48:48"
+        },
+        {
+          "index": 4947,
+          "gap_hours": 170.71166666666667,
+          "prev_date": "2023-02-02 15:48:56",
+          "current_date": "2023-02-09 18:31:38"
+        },
+        {
+          "index": 4985,
+          "gap_hours": 294.545,
+          "prev_date": "2023-02-14 16:32:12",
+          "current_date": "2023-02-26 23:04:54"
+        },
+        {
+          "index": 5002,
+          "gap_hours": 256.93111111111114,
+          "prev_date": "2023-03-05 00:06:05",
+          "current_date": "2023-03-15 17:01:57"
+        },
+        {
+          "index": 5012,
+          "gap_hours": 171.67805555555555,
+          "prev_date": "2023-03-20 14:20:58",
+          "current_date": "2023-03-27 18:01:39"
+        },
+        {
+          "index": 5051,
+          "gap_hours": 277.76666666666665,
+          "prev_date": "2023-03-27 21:36:58",
+          "current_date": "2023-04-08 11:22:58"
+        },
+        {
+          "index": 5082,
+          "gap_hours": 189.38777777777779,
+          "prev_date": "2023-04-12 17:56:51",
+          "current_date": "2023-04-20 15:20:07"
+        },
+        {
+          "index": 5084,
+          "gap_hours": 331.9433333333333,
+          "prev_date": "2023-04-20 15:21:16",
+          "current_date": "2023-05-04 11:17:52"
+        },
+        {
+          "index": 5154,
+          "gap_hours": 215.69194444444443,
+          "prev_date": "2023-05-25 20:48:11",
+          "current_date": "2023-06-03 20:29:42"
+        },
+        {
+          "index": 5181,
+          "gap_hours": 289.9952777777778,
+          "prev_date": "2023-06-20 15:03:10",
+          "current_date": "2023-07-02 17:02:53"
+        },
+        {
+          "index": 5522,
+          "gap_hours": 191.0125,
+          "prev_date": "2023-09-23 10:32:06",
+          "current_date": "2023-10-01 09:32:51"
+        },
+        {
+          "index": 5525,
+          "gap_hours": 185.41833333333332,
+          "prev_date": "2023-10-03 18:07:35",
+          "current_date": "2023-10-11 11:32:41"
+        },
+        {
+          "index": 5652,
+          "gap_hours": 339.2597222222222,
+          "prev_date": "2023-11-27 13:14:10",
+          "current_date": "2023-12-11 16:29:45"
+        },
+        {
+          "index": 5838,
+          "gap_hours": 170.1863888888889,
+          "prev_date": "2024-02-01 20:40:22",
+          "current_date": "2024-02-08 22:51:33"
+        },
+        {
+          "index": 5915,
+          "gap_hours": 307.99805555555554,
+          "prev_date": "2024-03-05 15:13:37",
+          "current_date": "2024-03-18 11:13:30"
+        },
+        {
+          "index": 6213,
+          "gap_hours": 214.59833333333333,
+          "prev_date": "2024-06-06 21:58:00",
+          "current_date": "2024-06-15 20:33:54"
+        },
+        {
+          "index": 7267,
+          "gap_hours": 2093.9366666666665,
+          "prev_date": "2024-09-04 16:45:01",
+          "current_date": "2024-11-30 22:41:13"
+        },
+        {
+          "index": 7269,
+          "gap_hours": 763.0261111111112,
+          "prev_date": "2024-11-30 22:41:13",
+          "current_date": "2025-01-01 17:42:47"
+        },
+        {
+          "index": 7275,
+          "gap_hours": 7776.649166666667,
+          "prev_date": "2025-01-01 17:43:16",
+          "current_date": "2025-11-21 18:22:13"
+        }
+      ],
+      "anomalies": [
+        "Low coherence score: 0.42",
+        "Detected 78 temporal gaps"
+      ]
+    },
+    {
+      "conversation_id": "michael_kristin_all",
+      "total_messages": 640,
+      "coherent_sequences": 1,
+      "incoherent_sequences": 0,
+      "coherence_score": 0.8,
+      "gaps_detected": [
+        {
+          "index": 138,
+          "gap_hours": 217.49194444444444,
+          "prev_date": "2016-11-27 19:10:14",
+          "current_date": "2016-12-06 20:39:45"
+        },
+        {
+          "index": 144,
+          "gap_hours": 259.6816666666667,
+          "prev_date": "2016-12-06 20:48:35",
+          "current_date": "2016-12-17 16:29:29"
+        },
+        {
+          "index": 164,
+          "gap_hours": 790.7383333333333,
+          "prev_date": "2016-12-21 09:57:32",
+          "current_date": "2017-01-23 08:41:50"
+        },
+        {
+          "index": 166,
+          "gap_hours": 314.645,
+          "prev_date": "2017-01-23 08:41:50",
+          "current_date": "2017-02-05 11:20:32"
+        },
+        {
+          "index": 184,
+          "gap_hours": 211.58194444444445,
+          "prev_date": "2017-02-13 12:52:57",
+          "current_date": "2017-02-22 08:27:52"
+        },
+        {
+          "index": 188,
+          "gap_hours": 231.95194444444445,
+          "prev_date": "2017-02-27 16:44:31",
+          "current_date": "2017-03-09 08:41:38"
+        },
+        {
+          "index": 204,
+          "gap_hours": 406.5752777777778,
+          "prev_date": "2017-03-11 14:33:05",
+          "current_date": "2017-03-28 13:07:36"
+        },
+        {
+          "index": 296,
+          "gap_hours": 881.5947222222222,
+          "prev_date": "2017-04-18 16:43:15",
+          "current_date": "2017-05-25 10:18:56"
+        },
+        {
+          "index": 328,
+          "gap_hours": 3168.3744444444446,
+          "prev_date": "2017-06-14 07:59:35",
+          "current_date": "2017-10-24 08:22:03"
+        },
+        {
+          "index": 330,
+          "gap_hours": 256.56888888888886,
+          "prev_date": "2017-10-24 08:22:03",
+          "current_date": "2017-11-04 00:56:11"
+        },
+        {
+          "index": 342,
+          "gap_hours": 218.28305555555556,
+          "prev_date": "2017-11-04 14:46:42",
+          "current_date": "2017-11-13 17:03:41"
+        },
+        {
+          "index": 344,
+          "gap_hours": 285.71222222222224,
+          "prev_date": "2017-11-13 17:03:41",
+          "current_date": "2017-11-25 14:46:25"
+        },
+        {
+          "index": 356,
+          "gap_hours": 685.5316666666666,
+          "prev_date": "2017-12-04 08:21:11",
+          "current_date": "2018-01-01 21:53:05"
+        },
+        {
+          "index": 366,
+          "gap_hours": 1009.0,
+          "prev_date": "2018-01-02 08:35:44",
+          "current_date": "2018-02-13 09:35:44"
+        },
+        {
+          "index": 370,
+          "gap_hours": 189.9675,
+          "prev_date": "2018-02-13 17:04:58",
+          "current_date": "2018-02-21 15:03:01"
+        },
+        {
+          "index": 372,
+          "gap_hours": 377.3302777777778,
+          "prev_date": "2018-02-21 15:03:01",
+          "current_date": "2018-03-09 08:22:50"
+        },
+        {
+          "index": 404,
+          "gap_hours": 191.55138888888888,
+          "prev_date": "2018-03-25 08:20:54",
+          "current_date": "2018-04-02 07:53:59"
+        },
+        {
+          "index": 440,
+          "gap_hours": 192.69222222222223,
+          "prev_date": "2018-04-10 13:58:35",
+          "current_date": "2018-04-18 14:40:07"
+        },
+        {
+          "index": 466,
+          "gap_hours": 208.53583333333333,
+          "prev_date": "2018-05-03 18:14:04",
+          "current_date": "2018-05-12 10:46:13"
+        },
+        {
+          "index": 472,
+          "gap_hours": 419.90472222222223,
+          "prev_date": "2018-05-17 19:14:18",
+          "current_date": "2018-06-04 07:08:35"
+        },
+        {
+          "index": 474,
+          "gap_hours": 1398.1405555555555,
+          "prev_date": "2018-06-04 07:08:35",
+          "current_date": "2018-08-01 13:17:01"
+        },
+        {
+          "index": 518,
+          "gap_hours": 1029.3777777777777,
+          "prev_date": "2018-08-21 14:11:57",
+          "current_date": "2018-10-03 11:34:37"
+        },
+        {
+          "index": 522,
+          "gap_hours": 172.7861111111111,
+          "prev_date": "2018-10-03 12:26:53",
+          "current_date": "2018-10-10 17:14:03"
+        },
+        {
+          "index": 546,
+          "gap_hours": 960.7269444444445,
+          "prev_date": "2018-10-15 09:03:33",
+          "current_date": "2018-11-24 09:47:10"
+        },
+        {
+          "index": 564,
+          "gap_hours": 553.7363888888889,
+          "prev_date": "2018-11-25 13:28:52",
+          "current_date": "2018-12-18 15:13:03"
+        },
+        {
+          "index": 586,
+          "gap_hours": 337.2055555555556,
+          "prev_date": "2018-12-25 10:54:18",
+          "current_date": "2019-01-08 12:06:38"
+        },
+        {
+          "index": 598,
+          "gap_hours": 226.82861111111112,
+          "prev_date": "2019-01-08 22:16:30",
+          "current_date": "2019-01-18 09:06:13"
+        },
+        {
+          "index": 602,
+          "gap_hours": 180.09694444444443,
+          "prev_date": "2019-01-18 09:47:06",
+          "current_date": "2019-01-25 21:52:55"
+        },
+        {
+          "index": 610,
+          "gap_hours": 168.60833333333332,
+          "prev_date": "2019-01-26 07:53:09",
+          "current_date": "2019-02-02 08:29:39"
+        },
+        {
+          "index": 620,
+          "gap_hours": 1726.578888888889,
+          "prev_date": "2019-02-02 20:41:16",
+          "current_date": "2019-04-15 19:16:00"
+        },
+        {
+          "index": 624,
+          "gap_hours": 641.6325,
+          "prev_date": "2019-04-15 19:17:15",
+          "current_date": "2019-05-12 12:55:12"
+        },
+        {
+          "index": 628,
+          "gap_hours": 1172.1908333333333,
+          "prev_date": "2019-05-12 14:18:36",
+          "current_date": "2019-06-30 10:30:03"
+        },
+        {
+          "index": 632,
+          "gap_hours": 11659.218888888889,
+          "prev_date": "2019-07-06 18:59:36",
+          "current_date": "2020-11-03 14:12:44"
+        }
+      ],
+      "anomalies": [
+        "Detected 33 temporal gaps"
+      ]
+    },
+    {
+      "conversation_id": "michael_addis_all",
+      "total_messages": 24,
+      "coherent_sequences": 0,
+      "incoherent_sequences": 1,
+      "coherence_score": 0.4,
+      "gaps_detected": [],
+      "anomalies": [
+        "Low coherence score: 0.40"
+      ]
+    }
+  ],
+  "summary": {
+    "total_checks": 4,
+    "passed_checks": 2,
+    "failed_checks": 2,
+    "average_confidence": 0.6083333333333333,
+    "average_risk_level": 0.3,
+    "total_anomalies": 4,
+    "total_variance_score": 0.4,
+    "overall_status": "ISSUES_DETECTED"
+  }
+}

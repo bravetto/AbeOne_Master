@@ -1,0 +1,753 @@
+{
+  "timestamp": "2025-11-25T13:09:40.713382",
+  "system_hierarchy": {
+    "workspace_root": "/Users/michaelmataluni/Documents/AbeOne_Master",
+    "structure": {},
+    "orbitals": [
+      {
+        "name": "Helm-Validation-orbital",
+        "path": "orbital/Helm-Validation-orbital",
+        "files": 5,
+        "directories": 3
+      },
+      {
+        "name": "AiGuardian-Chrome-Ext-orbital",
+        "path": "orbital/AiGuardian-Chrome-Ext-orbital",
+        "files": 480,
+        "directories": 57
+      },
+      {
+        "name": "Advanced-Knock-orbital",
+        "path": "orbital/Advanced-Knock-orbital",
+        "files": 24709,
+        "directories": 2073
+      },
+      {
+        "name": "High-Roller-orbital",
+        "path": "orbital/High-Roller-orbital",
+        "files": 122,
+        "directories": 31
+      },
+      {
+        "name": "AiGuardian-Sales-Page-orbital",
+        "path": "orbital/AiGuardian-Sales-Page-orbital",
+        "files": 33840,
+        "directories": 3857
+      },
+      {
+        "name": "marketing-automation-orbital",
+        "path": "orbital/marketing-automation-orbital",
+        "files": 54,
+        "directories": 13
+      },
+      {
+        "name": "AbeTRUICE-orbital",
+        "path": "orbital/AbeTRUICE-orbital",
+        "files": 220,
+        "directories": 33
+      },
+      {
+        "name": "Terraform-Validation-orbital",
+        "path": "orbital/Terraform-Validation-orbital",
+        "files": 5,
+        "directories": 3
+      },
+      {
+        "name": "AbeFLOWs-orbital",
+        "path": "orbital/AbeFLOWs-orbital",
+        "files": 2693,
+        "directories": 88
+      },
+      {
+        "name": "EMERGENT_OS-orbital",
+        "path": "orbital/EMERGENT_OS-orbital",
+        "files": 997,
+        "directories": 188
+      },
+      {
+        "name": "AIGuards-Backend-orbital",
+        "path": "orbital/AIGuards-Backend-orbital",
+        "files": 1520,
+        "directories": 299
+      },
+      {
+        "name": "Spec-Kit-orbital",
+        "path": "orbital/Spec-Kit-orbital",
+        "files": 121,
+        "directories": 22
+      },
+      {
+        "name": "AbeBEATs_Clean-orbital",
+        "path": "orbital/AbeBEATs_Clean-orbital",
+        "files": 246,
+        "directories": 48
+      },
+      {
+        "name": "REPLACE_ME",
+        "path": "orbital/Ben-FastAPI-Architecture-orbital",
+        "files": 5,
+        "directories": 3
+      }
+    ],
+    "satellites": [
+      {
+        "name": "ElementsSatellite",
+        "path": "satellites/ElementsSatellite",
+        "files": 1,
+        "directories": 0
+      },
+      {
+        "name": "WorkflowsSatellite",
+        "path": "satellites/WorkflowsSatellite",
+        "files": 50,
+        "directories": 14
+      },
+      {
+        "name": "TemplateHeavenSatellite",
+        "path": "satellites/TemplateHeavenSatellite",
+        "files": 55,
+        "directories": 29
+      },
+      {
+        "name": "BryanSatellite",
+        "path": "satellites/BryanSatellite",
+        "files": 9048,
+        "directories": 821
+      },
+      {
+        "name": "AbeONESourceSatellite",
+        "path": "satellites/AbeONESourceSatellite",
+        "files": 41694,
+        "directories": 4310
+      },
+      {
+        "name": "GZ360Satellite",
+        "path": "satellites/GZ360Satellite",
+        "files": 43,
+        "directories": 15
+      },
+      {
+        "name": "WebIDESatellite",
+        "path": "satellites/WebIDESatellite",
+        "files": 138,
+        "directories": 47
+      },
+      {
+        "name": "Ab\u00ebKEYsSatellite",
+        "path": "satellites/Ab\u00ebKEYsSatellite",
+        "files": 10,
+        "directories": 10
+      }
+    ],
+    "products": [
+      {
+        "name": "abebeats",
+        "path": "products/abebeats",
+        "files": 74,
+        "directories": 24
+      },
+      {
+        "name": "abeloves",
+        "path": "products/abeloves",
+        "files": 21,
+        "directories": 8
+      },
+      {
+        "name": "abedesks",
+        "path": "products/abedesks",
+        "files": 27,
+        "directories": 4
+      },
+      {
+        "name": "abecodes",
+        "path": "products/abecodes",
+        "files": 5,
+        "directories": 3
+      },
+      {
+        "name": "abeflows",
+        "path": "products/abeflows",
+        "files": 10,
+        "directories": 4
+      },
+      {
+        "name": "apps",
+        "path": "products/apps",
+        "files": 43759,
+        "directories": 3854
+      }
+    ],
+    "scripts": {
+      "path": "scripts",
+      "files": 273,
+      "shell_scripts": 158,
+      "total": 533
+    },
+    "docs": {
+      "path": "docs",
+      "markdown_files": 1634,
+      "directories": 66,
+      "total": 1729
+    },
+    "total_files": 305720,
+    "total_directories": 30655
+  },
+  "flow_analysis": {
+    "user_flow": {
+      "documented": true,
+      "path": "docs/architecture/general/GUARDIAN_PATTERN_FLOW_MATCHING.md"
+    },
+    "ai_flow": {
+      "guardians": {
+        "AEYON": "999 Hz - Atomic Execution",
+        "ALRAX": "530 Hz - Forensic Variance",
+        "J\u00d8HN": "530 Hz - Certification",
+        "META": "777 Hz - Pattern Integrity",
+        "YAGNI": "530 Hz - Simplification",
+        "ZERO": "530 Hz - Risk Bounding",
+        "Ab\u00eb": "530 Hz - Coherence",
+        "Lux": "530 Hz - Illumination",
+        "Poly": "530 Hz - Expression"
+      }
+    },
+    "system_flow": {
+      "orbital_hierarchy": {
+        "galaxy": "AbeOne_Master",
+        "planets": "orbitals",
+        "moons": "satellites",
+        "products": "products"
+      }
+    },
+    "data_flow": {},
+    "pattern_signatures": {
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "convergence_points": []
+  },
+  "pattern_analysis": {
+    "user_flow": {
+      "documented": true,
+      "path": "docs/architecture/general/GUARDIAN_PATTERN_FLOW_MATCHING.md"
+    },
+    "ai_flow": {
+      "guardians": {
+        "AEYON": "999 Hz - Atomic Execution",
+        "ALRAX": "530 Hz - Forensic Variance",
+        "J\u00d8HN": "530 Hz - Certification",
+        "META": "777 Hz - Pattern Integrity",
+        "YAGNI": "530 Hz - Simplification",
+        "ZERO": "530 Hz - Risk Bounding",
+        "Ab\u00eb": "530 Hz - Coherence",
+        "Lux": "530 Hz - Illumination",
+        "Poly": "530 Hz - Expression"
+      }
+    },
+    "system_flow": {
+      "orbital_hierarchy": {
+        "galaxy": "AbeOne_Master",
+        "planets": "orbitals",
+        "moons": "satellites",
+        "products": "products"
+      }
+    },
+    "data_flow": {},
+    "pattern_signatures": {
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "convergence_points": []
+  },
+  "path_health": {
+    "total_paths_checked": 1902,
+    "valid_paths": 1902,
+    "invalid_paths": 0,
+    "broken_imports": [],
+    "missing_files": [],
+    "path_issues": [
+      {
+        "pattern": "EMERGENT_OS/",
+        "severity": "medium",
+        "recommendation": "Update to orbital structure: orbitals/EMERGENT_OS-orbital/"
+      },
+      {
+        "pattern": "../EMERGENT_OS/",
+        "severity": "medium",
+        "recommendation": "Update to orbital structure: orbitals/EMERGENT_OS-orbital/"
+      }
+    ]
+  },
+  "epistemic_validation": {
+    "certainty_score": 1.0,
+    "truth_alignment": true,
+    "pattern_coherence": 0.85,
+    "validation_checks": {
+      "pattern_signatures": true,
+      "guardian_docs": true,
+      "orbital_docs": true
+    },
+    "domains_validated": [
+      "guardian_system",
+      "orbital_system"
+    ]
+  },
+  "data_flow": {
+    "entry_points": [
+      {
+        "type": "user_input",
+        "location": "products/apps/web/"
+      },
+      {
+        "type": "api_request",
+        "location": "AIGuards-Backend-orbital/"
+      },
+      {
+        "type": "webhook",
+        "location": "AIGuards-Backend-orbital/"
+      },
+      {
+        "type": "command",
+        "location": "scripts/"
+      }
+    ],
+    "processing_nodes": [
+      {
+        "name": "Guard Orchestrator",
+        "location": "AIGuards-Backend-orbital/"
+      },
+      {
+        "name": "Event Bus",
+        "location": "EMERGENT_OS-orbital/"
+      },
+      {
+        "name": "Module Registry",
+        "location": "EMERGENT_OS-orbital/"
+      },
+      {
+        "name": "Guardian Swarm",
+        "location": "EMERGENT_OS-orbital/"
+      }
+    ],
+    "storage_nodes": [
+      {
+        "name": "Memory System",
+        "location": ".abeone_memory/"
+      },
+      {
+        "name": "State Storage",
+        "location": "orbital/EMERGENT_OS-orbital/state/"
+      },
+      {
+        "name": "Database",
+        "location": "AIGuards-Backend-orbital/"
+      }
+    ],
+    "output_nodes": [
+      {
+        "name": "Web Interface",
+        "location": "products/apps/web/"
+      },
+      {
+        "name": "API Response",
+        "location": "AIGuards-Backend-orbital/"
+      },
+      {
+        "name": "Documentation",
+        "location": "docs/"
+      }
+    ],
+    "flow_paths": [
+      {
+        "name": "User Request Flow",
+        "path": [
+          "user_input",
+          "Guard Orchestrator",
+          "Event Bus",
+          "Guardian Swarm",
+          "API Response"
+        ]
+      },
+      {
+        "name": "Webhook Flow",
+        "path": [
+          "webhook",
+          "Guard Orchestrator",
+          "Event Bus",
+          "Storage",
+          "Output"
+        ]
+      }
+    ]
+  },
+  "user_journey": {
+    "stages": [
+      {
+        "stage": "Awareness",
+        "description": "User discovers system"
+      },
+      {
+        "stage": "Consideration",
+        "description": "User evaluates system"
+      },
+      {
+        "stage": "Conversion",
+        "description": "User adopts system"
+      },
+      {
+        "stage": "Retention",
+        "description": "User continues using system"
+      }
+    ],
+    "touchpoints": [
+      {
+        "stage": "Awareness",
+        "touchpoint": "Landing Page",
+        "location": "AiGuardian-Sales-Page-orbital/"
+      },
+      {
+        "stage": "Awareness",
+        "touchpoint": "Chrome Extension",
+        "location": "AiGuardian-Chrome-Ext-orbital/"
+      },
+      {
+        "stage": "Consideration",
+        "touchpoint": "Web Interface",
+        "location": "products/apps/web/"
+      },
+      {
+        "stage": "Conversion",
+        "touchpoint": "API Access",
+        "location": "AIGuards-Backend-orbital/"
+      },
+      {
+        "stage": "Retention",
+        "touchpoint": "Dashboard",
+        "location": "products/apps/web/"
+      }
+    ],
+    "conversion_points": [
+      {
+        "point": "Registration",
+        "rate": "20-30%"
+      },
+      {
+        "point": "First API Call",
+        "rate": "40-50%"
+      },
+      {
+        "point": "Subscription",
+        "rate": "5-10%"
+      }
+    ],
+    "drop_off_risks": []
+  },
+  "conversion_paths": {
+    "funnels": [
+      {
+        "name": "Webinar Funnel",
+        "status": "operational"
+      },
+      {
+        "name": "Lead Magnet Funnel",
+        "status": "operational"
+      },
+      {
+        "name": "Product Funnel",
+        "status": "operational"
+      },
+      {
+        "name": "Email Automation Funnel",
+        "status": "operational"
+      }
+    ],
+    "conversion_points": [
+      {
+        "point": "Landing Page \u2192 Registration",
+        "rate": "20-30%"
+      },
+      {
+        "point": "Registration \u2192 Email Open",
+        "rate": "60-70%"
+      },
+      {
+        "point": "Email Open \u2192 Attendance",
+        "rate": "40-50%"
+      },
+      {
+        "point": "Attendance \u2192 Watch Time",
+        "rate": "60-70%"
+      },
+      {
+        "point": "Watch Time \u2192 Lead Magnet",
+        "rate": "80-90%"
+      },
+      {
+        "point": "Email Sequence \u2192 Upsell",
+        "rate": "5-10%"
+      }
+    ],
+    "optimization_opportunities": [
+      {
+        "opportunity": "Headline optimization",
+        "impact": "high"
+      },
+      {
+        "opportunity": "Form optimization",
+        "impact": "medium"
+      },
+      {
+        "opportunity": "Email subject optimization",
+        "impact": "medium"
+      },
+      {
+        "opportunity": "Content quality improvement",
+        "impact": "high"
+      }
+    ]
+  },
+  "systems_integration": {
+    "integrated_systems": [
+      {
+        "system": "EMERGENT_OS",
+        "type": "core_os",
+        "status": "active"
+      },
+      {
+        "system": "AIGuards-Backend",
+        "type": "backend",
+        "status": "active"
+      },
+      {
+        "system": "Chrome Extension",
+        "type": "frontend",
+        "status": "active"
+      },
+      {
+        "system": "Sales Page",
+        "type": "marketing",
+        "status": "active"
+      },
+      {
+        "system": "Guardian System",
+        "type": "validation",
+        "status": "active"
+      }
+    ],
+    "integration_points": [
+      {
+        "point": "Event Bus",
+        "systems": [
+          "EMERGENT_OS",
+          "AIGuards-Backend"
+        ]
+      },
+      {
+        "point": "Module Registry",
+        "systems": [
+          "EMERGENT_OS",
+          "All Orbitals"
+        ]
+      },
+      {
+        "point": "Guardian Swarm",
+        "systems": [
+          "All Systems"
+        ]
+      },
+      {
+        "point": "API Gateway",
+        "systems": [
+          "AIGuards-Backend",
+          "Frontend"
+        ]
+      }
+    ],
+    "integration_patterns": [
+      {
+        "pattern": "Orbital-Spec",
+        "description": "Standard orbital structure"
+      },
+      {
+        "pattern": "Guardian Validation",
+        "description": "J\u00d8HN certification at every step"
+      },
+      {
+        "pattern": "Event-Driven",
+        "description": "Event bus for communication"
+      },
+      {
+        "pattern": "Microservices",
+        "description": "Independent service deployment"
+      }
+    ],
+    "dependencies": []
+  },
+  "convergence_maps": {
+    "convergence_points": [
+      {
+        "point": "Unified Funnel Architecture",
+        "status": "converged"
+      },
+      {
+        "point": "Orbital System",
+        "status": "converged"
+      },
+      {
+        "point": "Guardian System",
+        "status": "converged"
+      },
+      {
+        "point": "Pattern Integrity",
+        "status": "converged"
+      }
+    ],
+    "convergence_paths": [
+      {
+        "path": "Fragmented Funnels \u2192 Unified Funnel",
+        "status": "complete"
+      },
+      {
+        "path": "Legacy Structure \u2192 Orbital Structure",
+        "status": "complete"
+      },
+      {
+        "path": "Manual Validation \u2192 Automated Certification",
+        "status": "complete"
+      }
+    ],
+    "convergence_status": {
+      "overall": "85%",
+      "funnel_convergence": "99%",
+      "orbital_convergence": "95%",
+      "pattern_convergence": "90%"
+    },
+    "drift_analysis": {
+      "drift_detected": false,
+      "drift_score": 0.05,
+      "drift_areas": []
+    }
+  },
+  "prime_ideal_state": {
+    "alignment_percentage": 6.67,
+    "aligned_components": 2,
+    "total_components": 30,
+    "gaps": [],
+    "recommendations": [
+      "Continue convergence toward ideal state",
+      "Address remaining gaps"
+    ]
+  },
+  "findings": [
+    {
+      "component": "System Hierarchy",
+      "status": "complete",
+      "severity": "info",
+      "finding": "Analyzed 14 orbitals",
+      "evidence": [],
+      "recommendations": [],
+      "validated": true,
+      "timestamp": "2025-11-25T13:09:56.371994"
+    },
+    {
+      "component": "Flow Analysis",
+      "status": "complete",
+      "severity": "info",
+      "finding": "Flow patterns analyzed",
+      "evidence": [],
+      "recommendations": [],
+      "validated": true,
+      "timestamp": "2025-11-25T13:09:56.372293"
+    },
+    {
+      "component": "Pattern Analysis",
+      "status": "complete",
+      "severity": "info",
+      "finding": "Pattern signatures analyzed",
+      "evidence": [],
+      "recommendations": [],
+      "validated": true,
+      "timestamp": "2025-11-25T13:09:56.372375"
+    },
+    {
+      "component": "Path Health",
+      "status": "complete",
+      "severity": "info",
+      "finding": "Checked 1902 paths",
+      "evidence": [],
+      "recommendations": [],
+      "validated": true,
+      "timestamp": "2025-11-25T13:09:56.438519"
+    },
+    {
+      "component": "Epistemic Validation",
+      "status": "complete",
+      "severity": "info",
+      "finding": "Certainty score: 100.00%",
+      "evidence": [],
+      "recommendations": [],
+      "validated": true,
+      "timestamp": "2025-11-25T13:09:56.438600"
+    },
+    {
+      "component": "Data Flow",
+      "status": "complete",
+      "severity": "info",
+      "finding": "Data flow mapped",
+      "evidence": [],
+      "recommendations": [],
+      "validated": true,
+      "timestamp": "2025-11-25T13:09:56.438613"
+    },
+    {
+      "component": "User Journey",
+      "status": "complete",
+      "severity": "info",
+      "finding": "User journey mapped",
+      "evidence": [],
+      "recommendations": [],
+      "validated": true,
+      "timestamp": "2025-11-25T13:09:56.438622"
+    },
+    {
+      "component": "Conversion Paths",
+      "status": "complete",
+      "severity": "info",
+      "finding": "Conversion paths analyzed",
+      "evidence": [],
+      "recommendations": [],
+      "validated": true,
+      "timestamp": "2025-11-25T13:09:56.438653"
+    },
+    {
+      "component": "Systems Integration",
+      "status": "complete",
+      "severity": "info",
+      "finding": "Systems integration mapped",
+      "evidence": [],
+      "recommendations": [],
+      "validated": true,
+      "timestamp": "2025-11-25T13:09:56.438661"
+    },
+    {
+      "component": "Convergence Maps",
+      "status": "complete",
+      "severity": "info",
+      "finding": "Convergence maps created",
+      "evidence": [],
+      "recommendations": [],
+      "validated": true,
+      "timestamp": "2025-11-25T13:09:56.438746"
+    },
+    {
+      "component": "Prime Ideal State",
+      "status": "complete",
+      "severity": "info",
+      "finding": "Alignment: 6.67%",
+      "evidence": [],
+      "recommendations": [],
+      "validated": true,
+      "timestamp": "2025-11-25T13:09:56.439157"
+    }
+  ],
+  "variance_score": 0.0,
+  "coherence_score": 0.0,
+  "validation_status": "complete"
+}

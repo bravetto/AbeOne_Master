@@ -1,0 +1,37 @@
+EMAIL ATTACHMENTS GUIDE
+=======================
+
+Send this email with the following PDFs attached:
+
+REQUIRED ATTACHMENTS (Send to everyone):
+1. TRISH_PAIN_POINT_QUESTIONS.pdf
+   - For Trish to use during December meetings
+   - Contains 10 questions organized by category
+   - Simple conversation guide
+
+2. LARRY_DATA_REQUEST.pdf
+   - For Larry to export Spiceworks data
+   - Contains email template and instructions
+   - Clear format requirements
+
+OPTIONAL ATTACHMENTS (Can include if helpful):
+3. DATA_COLLECTION_SUMMARY.pdf
+   - Overview of what we need from each person
+   - Explains why we need both types of data
+   - Good reference document
+
+4. JAY_FORTE_GAME_PLAN.pdf
+   - One-page quick reference
+   - Shows the big picture
+   - Good for Ryan/leadership overview
+
+EMAIL RECIPIENTS:
+- To: trish@northshore.com, larry@northshore.com, ryan@northshore.com
+- CC: (your email)
+- Subject: Follow-Up from Our Meeting - Next Steps
+
+EMAIL BODY:
+- Use EMAIL_TO_NORTH_SHORE.txt as the body
+- Copy/paste the text
+- Attach the PDFs listed above
+

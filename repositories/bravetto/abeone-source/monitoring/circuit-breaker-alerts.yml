@@ -1,0 +1,97 @@
+# Prometheus Alert Rules for Circuit Breaker Monitoring
+# SAFETY: Alerts on circuit breaker state changes and recovery metrics
+# VERIFY: Alerts configured for all services
+
+groups:
+  - name: circuit_breaker_alerts
+    interval: 30s
+    rules:
+      # Circuit Breaker Open Alert
+      - alert: CircuitBreakerOpen
+        expr: orchestrator_circuit_breaker_state{state="OPEN"} == 1
+        for: 1m
+        labels:
+          severity: critical
+          component: circuit_breaker
+        annotations:
+          summary: "Circuit breaker is OPEN for {{ $labels.service_name }}"
+          description: "Circuit breaker has been OPEN for {{ $labels.service_name }} for more than 1 minute. Service is unavailable."
+          runbook_url: "https://docs.aiguardian.ai/runbooks/circuit-breaker-open"
+
+      # Circuit Breaker High Failure Count
+      - alert: CircuitBreakerHighFailureCount
+        expr: orchestrator_circuit_breaker_failure_count > 3
+        for: 2m
+        labels:
+          severity: warning
+          component: circuit_breaker
+        annotations:
+          summary: "High failure count for {{ $labels.service_name }}"
+          description: "Circuit breaker failure count is {{ $value }} for {{ $labels.service_name }}. Service may be degraded."
+          runbook_url: "https://docs.aiguardian.ai/runbooks/circuit-breaker-failures"
+
+      # Circuit Breaker Recovery Time Alert
+      - alert: CircuitBreakerSlowRecovery
+        expr: |
+          (time() - orchestrator_circuit_breaker_last_failure_timestamp) > 300
+          and orchestrator_circuit_breaker_state{state="OPEN"} == 1
+        for: 5m
+        labels:
+          severity: warning
+          component: circuit_breaker
+        annotations:
+          summary: "Slow circuit breaker recovery for {{ $labels.service_name }}"
+          description: "Circuit breaker has been OPEN for {{ $labels.service_name }} for more than 5 minutes. Recovery may be slow."
+          runbook_url: "https://docs.aiguardian.ai/runbooks/circuit-breaker-recovery"
+
+      # Multiple Circuit Breakers Open
+      - alert: MultipleCircuitBreakersOpen
+        expr: count(orchestrator_circuit_breaker_state{state="OPEN"} == 1) > 2
+        for: 3m
+        labels:
+          severity: critical
+          component: circuit_breaker
+        annotations:
+          summary: "Multiple circuit breakers are OPEN"
+          description: "{{ $value }} circuit breakers are OPEN. System may be experiencing cascading failures."
+          runbook_url: "https://docs.aiguardian.ai/runbooks/cascading-failures"
+
+      # Circuit Breaker Half-Open State Alert
+      - alert: CircuitBreakerHalfOpen
+        expr: orchestrator_circuit_breaker_state{state="HALF_OPEN"} == 1
+        for: 2m
+        labels:
+          severity: info
+          component: circuit_breaker
+        annotations:
+          summary: "Circuit breaker is HALF_OPEN for {{ $labels.service_name }}"
+          description: "Circuit breaker is testing recovery for {{ $labels.service_name }}. Monitoring recovery attempts."
+          runbook_url: "https://docs.aiguardian.ai/runbooks/circuit-breaker-half-open"
+
+  - name: service_health_alerts
+    interval: 30s
+    rules:
+      # Service Unhealthy Alert
+      - alert: ServiceUnhealthy
+        expr: orchestrator_service_health_status{status="unhealthy"} == 1
+        for: 2m
+        labels:
+          severity: warning
+          component: service_health
+        annotations:
+          summary: "Service {{ $labels.service_name }} is unhealthy"
+          description: "Service {{ $labels.service_name }} has been unhealthy for more than 2 minutes."
+          runbook_url: "https://docs.aiguardian.ai/runbooks/service-health"
+
+      # Service High Response Time
+      - alert: ServiceHighResponseTime
+        expr: orchestrator_service_response_time_seconds > 5
+        for: 3m
+        labels:
+          severity: warning
+          component: service_health
+        annotations:
+          summary: "High response time for {{ $labels.service_name }}"
+          description: "Service {{ $labels.service_name }} has response time of {{ $value }}s, exceeding 5s threshold."
+          runbook_url: "https://docs.aiguardian.ai/runbooks/service-performance"
+

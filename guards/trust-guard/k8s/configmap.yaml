@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: trustguard-config
+  namespace: default
+data:
+  TRUSTGUARD_HOST: "0.0.0.0"
+  TRUSTGUARD_PORT: "8000"
+  TRUSTGUARD_LOG_LEVEL: "INFO"
+  TRUSTGUARD_LOG_FORMAT: "json"
+  TRUSTGUARD_ENABLE_METRICS: "true"
+  TRUSTGUARD_RATE_LIMIT_REQUESTS: "100"
+  ENVIRONMENT: "production"
+

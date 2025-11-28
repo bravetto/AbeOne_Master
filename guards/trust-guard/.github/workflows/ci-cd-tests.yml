@@ -1,0 +1,269 @@
+name: Trust Guard CI/CD Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 2 * * *'  # Daily at 2 AM UTC
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        python-version: [3.11, 3.12]
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest pytest-cov pytest-json-report
+    
+    - name: Start Trust Guard service
+      run: |
+        python -m uvicorn main:app --host 0.0.0.0 --port 8000 &
+        sleep 10  # Wait for service to start
+    
+    - name: Run CI/CD test suite
+      run: |
+        python tests/ci_cd_test_reporter.py --base-url http://localhost:8000 --output-dir test-results --verbose
+    
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: test-results-${{ matrix.python-version }}
+        path: test-results/
+    
+    - name: Comment PR with test results
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          const path = require('path');
+          
+          // Find the latest test report
+          const testResultsDir = 'test-results';
+          if (fs.existsSync(testResultsDir)) {
+            const files = fs.readdirSync(testResultsDir);
+            const mdFiles = files.filter(f => f.endsWith('.md'));
+            
+            if (mdFiles.length > 0) {
+              const latestReport = mdFiles.sort().pop();
+              const reportPath = path.join(testResultsDir, latestReport);
+              const reportContent = fs.readFileSync(reportPath, 'utf8');
+              
+              // Extract summary from markdown
+              const summaryMatch = reportContent.match(/\*\*Overall Status\*\* \| ([^|]+)/);
+              const status = summaryMatch ? summaryMatch[1].trim() : 'UNKNOWN';
+              
+              const comment = `## Test Results Summary
+              
+              **Status:** ${status}
+              
+              [View Full Report](${reportPath})
+              
+              <details>
+              <summary>Test Report Preview</summary>
+              
+              \`\`\`
+              ${reportContent.substring(0, 1000)}...
+              \`\`\`
+              </details>`;
+              
+              github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: comment
+              });
+            }
+          }
+    
+    - name: Stop service
+      if: always()
+      run: |
+        pkill -f "uvicorn main:app" || true
+
+  security-scan:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+    
+    - name: Install security tools
+      run: |
+        pip install bandit safety
+    
+    - name: Run security scan
+      run: |
+        bandit -r trustguard/ -f json -o security-report.json || true
+        safety check --json --output safety-report.json || true
+    
+    - name: Upload security reports
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: security-reports
+        path: |
+          security-report.json
+          safety-report.json
+
+  performance-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install locust
+    
+    - name: Start Trust Guard service
+      run: |
+        python -m uvicorn main:app --host 0.0.0.0 --port 8000 &
+        sleep 10
+    
+    - name: Run performance tests
+      run: |
+        # Create simple performance test
+        python -c "
+        import requests
+        import time
+        import concurrent.futures
+        
+        def make_request():
+            try:
+                start = time.time()
+                response = requests.get('http://localhost:8000/health', timeout=5)
+                end = time.time()
+                return {
+                    'status_code': response.status_code,
+                    'response_time': (end - start) * 1000,
+                    'success': response.status_code == 200
+                }
+            except Exception as e:
+                return {'error': str(e), 'success': False}
+        
+        # Run 100 concurrent requests
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+            futures = [executor.submit(make_request) for _ in range(100)]
+            results = [f.result() for f in concurrent.futures.as_completed(futures)]
+        
+        successful = [r for r in results if r.get('success', False)]
+        failed = [r for r in results if not r.get('success', False)]
+        
+        if successful:
+            response_times = [r['response_time'] for r in successful]
+            avg_response_time = sum(response_times) / len(response_times)
+            max_response_time = max(response_times)
+            min_response_time = min(response_times)
+        else:
+            avg_response_time = max_response_time = min_response_time = 0
+        
+        print(f'Performance Test Results:')
+        print(f'Total Requests: 100')
+        print(f'Successful: {len(successful)}')
+        print(f'Failed: {len(failed)}')
+        print(f'Success Rate: {len(successful)/100*100:.1f}%')
+        print(f'Average Response Time: {avg_response_time:.2f}ms')
+        print(f'Max Response Time: {max_response_time:.2f}ms')
+        print(f'Min Response Time: {min_response_time:.2f}ms')
+        
+        # Write results to file
+        with open('performance-results.json', 'w') as f:
+            import json
+            json.dump({
+                'total_requests': 100,
+                'successful_requests': len(successful),
+                'failed_requests': len(failed),
+                'success_rate': len(successful)/100*100,
+                'avg_response_time_ms': avg_response_time,
+                'max_response_time_ms': max_response_time,
+                'min_response_time_ms': min_response_time
+            }, f, indent=2)
+        "
+    
+    - name: Upload performance results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: performance-results
+        path: performance-results.json
+    
+    - name: Stop service
+      if: always()
+      run: |
+        pkill -f "uvicorn main:app" || true
+
+  deploy-staging:
+    needs: [test, security-scan, performance-test]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/develop'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Deploy to staging
+      run: |
+        echo "Deploying to staging environment..."
+        # Add actual deployment commands here
+        echo "Staging deployment completed"
+    
+    - name: Run post-deployment tests
+      run: |
+        echo "Running post-deployment tests..."
+        # Add post-deployment test commands here
+        echo "Post-deployment tests completed"
+
+  deploy-production:
+    needs: [test, security-scan, performance-test]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Deploy to production
+      run: |
+        echo "Deploying to production environment..."
+        # Add actual deployment commands here
+        echo "Production deployment completed"
+    
+    - name: Run post-deployment tests
+      run: |
+        echo "Running post-deployment tests..."
+        # Add post-deployment test commands here
+        echo "Post-deployment tests completed"

@@ -1,0 +1,83 @@
+{
+  "name": "abellm-vscode",
+  "displayName": "AbëLLM - Your Own AI Assistant",
+  "description": "Replace Cursor.ai with your own AbëLLM system - Event Bus Architecture",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Machine Learning",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "abellm.chat",
+        "title": "AbëLLM: Open Chat",
+        "icon": "$(comment-discussion)"
+      },
+      {
+        "command": "abellm.refactor",
+        "title": "AbëLLM: Refactor Code",
+        "icon": "$(symbol-method)"
+      },
+      {
+        "command": "abellm.explain",
+        "title": "AbëLLM: Explain Code",
+        "icon": "$(info)"
+      }
+    ],
+    "configuration": {
+      "title": "AbëLLM",
+      "properties": {
+        "abellm.lspServer": {
+          "type": "string",
+          "default": "ws://localhost:3000",
+          "description": "LSP Server WebSocket URL"
+        },
+        "abellm.mcpServer": {
+          "type": "string",
+          "default": "http://localhost:3001",
+          "description": "MCP Server HTTP URL"
+        },
+        "abellm.restApi": {
+          "type": "string",
+          "default": "http://localhost:8000",
+          "description": "REST API HTTP URL"
+        },
+        "abellm.enableCompletions": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable code completions"
+        },
+        "abellm.enableChat": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable chat interface"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "^18.0.0",
+    "@types/ws": "^8.5.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "ws": "^8.14.0"
+  }
+}
+

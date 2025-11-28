@@ -1,0 +1,26 @@
+[Unit]
+Description=THE ONE SYSTEM Self-Healing Monitor
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=user
+Group=user
+WorkingDirectory=/home/user/AbeOne_Master/dev-environment
+ExecStart=/usr/bin/python3 /home/user/AbeOne_Master/dev-environment/scripts/healer.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Environment
+Environment="PYTHONUNBUFFERED=1"
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+

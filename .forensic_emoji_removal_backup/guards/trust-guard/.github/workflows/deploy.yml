@@ -1,0 +1,167 @@
+name: Deploy Trust Guard to AWS
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - '**'
+      - '!docs/**'
+      - '!.github/**'
+      - '!README.md'
+      - '!LICENSE'
+  pull_request:
+    branches: [ main, master ]
+    types: [closed]
+    paths:
+      - '**'
+      - '!docs/**'
+      - '!README.md'
+      - '!LICENSE'
+
+env:
+  AWS_REGION: us-east-1
+  ENVIRONMENT: ${{ github.ref == 'refs/heads/main' && 'prod' || 'staging' }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run tests
+      run: |
+        python run_tests.py --all
+
+    - name: Run validation
+      run: |
+        python validate.py
+
+  build-and-deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Build Docker image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        push: false
+        tags: trust-guard:latest
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+    - name: Get AWS account ID
+      id: aws-account
+      run: |
+        echo "account_id=$(aws sts get-caller-identity --query Account --output text)" >> $GITHUB_OUTPUT
+
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v2
+
+    - name: Create ECR repository (if needed)
+      run: |
+        aws ecr describe-repositories --repository-names ${{ env.ENVIRONMENT }}-trust-guard --region ${{ env.AWS_REGION }} || \
+        aws ecr create-repository --repository-name ${{ env.ENVIRONMENT }}-trust-guard --region ${{ env.AWS_REGION }} --image-scanning-configuration scanOnPush=true
+
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        push: true
+        tags: ${{ steps.login-ecr.outputs.registry }}/${{ env.ENVIRONMENT }}-trust-guard:latest
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+    - name: Get VPC information
+      id: vpc-info
+      run: |
+        VPC_ID=$(aws ec2 describe-vpcs --filters "Name=isDefault,Values=true" --query "Vpcs[0].VpcId" --output text 2>/dev/null)
+        if [ -z "$VPC_ID" ] || [ "$VPC_ID" == "None" ]; then
+          echo "No default VPC found"
+          exit 1
+        fi
+
+        SUBNET_IDS=$(aws ec2 describe-subnets \
+          --filters "Name=vpc-id,Values=$VPC_ID" "Name=state,Values=available" \
+          --query "Subnets[*].SubnetId" --output text | tr '\n' ',' | sed 's/,$//')
+
+        echo "vpc_id=$VPC_ID" >> $GITHUB_OUTPUT
+        echo "subnet_ids=$SUBNET_IDS" >> $GITHUB_OUTPUT
+
+    - name: Deploy infrastructure with CloudFormation
+      uses: aws-actions/aws-cloudformation-github-deploy@v1
+      with:
+        name: ${{ env.ENVIRONMENT }}-trust-guard
+        template: aws/infrastructure.yml
+        parameter-overrides: >
+          EnvironmentName=${{ env.ENVIRONMENT }},
+          VpcId=${{ steps.vpc-info.outputs.vpc_id }},
+          SubnetIds="${{ steps.vpc-info.outputs.subnet_ids }}"
+        capabilities: CAPABILITY_IAM
+        no-fail-on-empty-changeset: true
+
+    - name: Wait for service to be stable
+      run: |
+        # Wait for ECS service to stablize
+        aws ecs wait services-stable \
+          --cluster ${{ env.ENVIRONMENT }}-trust-guard \
+          --services ${{ env.ENVIRONMENT }}-trust-guard-service \
+          --region ${{ env.AWS_REGION }}
+
+    - name: Get ALB DNS name
+      id: alb-dns
+      run: |
+        ALB_DNS=$(aws cloudformation describe-stacks \
+          --stack-name ${{ env.ENVIRONMENT }}-trust-guard \
+          --query "Stacks[0].Outputs[?OutputKey=='LoadBalancerDNS'].OutputValue" \
+          --output text \
+          --region ${{ env.AWS_REGION }})
+        echo "alb_dns=$ALB_DNS" >> $GITHUB_OUTPUT
+
+    - name: Health check
+      run: |
+        echo "Performing health check on: ${{ steps.alb-dns.outputs.alb_dns }}"
+        timeout 300 bash -c 'until curl -f http://${{ steps.alb-dns.outputs.alb_dns }}/health; do sleep 10; done'
+
+    - name: Notify deployment success
+      if: success()
+      run: |
+        echo "🎉 Deployment successful!"
+        echo "Service URLs:"
+        echo "  Health Check: http://${{ steps.alb-dns.outputs.alb_dns }}/health"
+        echo "  API Documentation: http://${{ steps.alb-dns.outputs.alb_dns }}/docs"
+
+    - name: Notify deployment failure
+      if: failure()
+      run: |
+        echo "❌ Deployment failed!"
+        echo "Check AWS console for more details:"
+        echo "  ECS Cluster: ${{ env.ENVIRONMENT }}-trust-guard"
+        echo "  CloudWatch Logs: /ecs/${{ env.ENVIRONMENT }}/trust-guard"

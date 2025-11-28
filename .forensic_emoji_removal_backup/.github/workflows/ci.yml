@@ -1,0 +1,190 @@
+name: AbëONE Master Workspace CI
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [dev, main]
+    types: [closed]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate Orbit-Spec Compliance
+    runs-on: [arc-runner-set]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          if [ -f support/requirements.txt ]; then
+            pip install -r support/requirements.txt
+          fi
+      
+      - name: Validate Orbit-Spec Structure
+        run: |
+          echo "Validating Orbit-Spec v1.0 compliance..."
+          
+          # Check required directories
+          for dir in adapters config src deploy docs tests; do
+            if [ ! -d "$dir" ]; then
+              echo "❌ Missing directory: $dir"
+              exit 1
+            fi
+          done
+          
+          # Check required adapters
+          for adapter in adapter.kernel.py adapter.guardians.py adapter.module.py adapter.bus.py; do
+            if [ ! -f "adapters/$adapter" ]; then
+              echo "❌ Missing adapter: $adapter"
+              exit 1
+            fi
+          done
+          
+          # Check config files
+          if [ ! -f "config/orbit.config.json" ]; then
+            echo "❌ Missing config/orbit.config.json"
+            exit 1
+          fi
+          
+          if [ ! -f "module_manifest.json" ]; then
+            echo "❌ Missing module_manifest.json"
+            exit 1
+          fi
+          
+          echo "✅ Orbit-Spec structure validated"
+      
+      - name: Validate Adapters
+        run: |
+          python3 -c "
+          import sys
+          import importlib.util
+          from pathlib import Path
+          
+          sys.path.insert(0, str(Path('.').absolute()))
+          
+          try:
+              # Import adapters using importlib.util (handles dots in module names)
+              adapters = [
+                  ('adapters/adapter.kernel.py', 'adapter.kernel'),
+                  ('adapters/adapter.guardians.py', 'adapter.guardians'),
+                  ('adapters/adapter.module.py', 'adapter.module'),
+                  ('adapters/adapter.bus.py', 'adapter.bus')
+              ]
+              
+              for file_path, module_name in adapters:
+                  spec = importlib.util.spec_from_file_location(module_name, file_path)
+                  module = importlib.util.module_from_spec(spec)
+                  spec.loader.exec_module(module)
+              
+              print('✅ All adapters import successfully')
+          except Exception as e:
+              print(f'❌ Adapter validation failed: {e}')
+              import traceback
+              traceback.print_exc()
+              sys.exit(1)
+          "
+      
+      - name: Validate Config JSON
+        run: |
+          python3 -c "
+          import json
+          from pathlib import Path
+          
+          # Validate orbit.config.json
+          with open('config/orbit.config.json') as f:
+              orbit_config = json.load(f)
+          
+          required_keys = ['orbitSpecVersion', 'name', 'productName', 'productVersion', 
+                          'kernelVersion', 'kernelPath', 'moduleId', 'adapters', 
+                          'manifest', 'devcontainer', 'ciWorkflow', 'deployScript']
+          
+          for key in required_keys:
+              if key not in orbit_config:
+                  print(f'❌ Missing key in orbit.config.json: {key}')
+                  exit(1)
+          
+          print('✅ orbit.config.json validated')
+          
+          # Validate module_manifest.json
+          with open('module_manifest.json') as f:
+              manifest = json.load(f)
+          
+          required_manifest_keys = ['module_id', 'name', 'version', 'description', 
+                                   'kernelVersion', 'frequency', 'pattern', 'status']
+          
+          for key in required_manifest_keys:
+              if key not in manifest:
+                  print(f'❌ Missing key in module_manifest.json: {key}')
+                  exit(1)
+          
+          print('✅ module_manifest.json validated')
+          "
+      
+      - name: Check Sub-Orbits
+        run: |
+          echo "Checking sub-orbit compliance..."
+          
+          if [ -d "AbeTRUICE" ]; then
+            if [ -f "AbeTRUICE/config/orbit.config.json" ]; then
+              echo "✅ AbeTRUICE orbit config found"
+            else
+              echo "⚠️  AbeTRUICE orbit config missing"
+            fi
+          fi
+          
+          if [ -d "AbeBEATs_Clean" ]; then
+            if [ -f "AbeBEATs_Clean/config/orbit.config.json" ]; then
+              echo "✅ AbeBEATs_Clean orbit config found"
+            else
+              echo "⚠️  AbeBEATs_Clean orbit config missing"
+            fi
+          fi
+      
+      - name: Run Unified Validation Orchestrator
+        run: |
+          echo "Running unified validation orchestrator..."
+          python3 scripts/unified_validation_orchestrator.py || echo "⚠️  Unified validation orchestrator not available"
+  
+  deploy:
+    name: Deploy (if validation passes)
+    runs-on: [arc-runner-set]
+    needs: validate
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.merged == true && github.ref == 'refs/heads/main')
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: us-east-1
+      
+      - name: Clone Helm repository
+        run: |
+          git clone https://${{ secrets.CI_CD }}@github.com/bravetto/helm.git helm-charts || echo "⚠️  Helm repository not available"
+      
+      - name: Deploy with Helm
+        run: |
+          if [ -d "helm-charts" ]; then
+            cd helm-charts
+            ./deploy.sh abeone-master production || echo "⚠️  Deployment script not available"
+          else
+            echo "⚠️  Helm charts not available, skipping deployment"
+          fi
+

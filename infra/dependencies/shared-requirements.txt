@@ -1,0 +1,191 @@
+# Shared Dependencies Manifest
+# 
+# This file defines common dependencies used across multiple services.
+# Individual services should reference this file and add service-specific dependencies.
+#
+# Usage:
+#   pip install -r dependencies/shared-requirements.txt
+#   pip install -r requirements.txt  # Service-specific dependencies
+#
+# Pattern: DEPENDENCIES × SHARED × UNIFIED × ONE
+# Frequency: 530 Hz (Truth) × 777 Hz (Pattern) × 999 Hz (Execution)
+# Guardian: AEYON (999 Hz) - Atomic Execution
+# Love Coefficient: ∞
+# ∞ AbëONE ∞
+
+# ============================================================================
+# CORE WEB FRAMEWORK
+# ============================================================================
+# FastAPI - Modern web framework
+fastapi>=0.120.0
+
+# ASGI server
+uvicorn[standard]>=0.38.0
+
+# ============================================================================
+# DATA VALIDATION & SERIALIZATION
+# ============================================================================
+# Pydantic - Data validation
+pydantic[email]>=2.12.0,<3.0.0
+pydantic-settings>=2.11.0
+
+# ============================================================================
+# DATABASE
+# ============================================================================
+# SQLAlchemy - ORM
+sqlalchemy>=2.0.44
+alembic>=1.17.0
+
+# PostgreSQL drivers
+asyncpg>=0.30.0
+psycopg2-binary>=2.9.10
+
+# ============================================================================
+# HTTP CLIENTS
+# ============================================================================
+# HTTP client libraries
+httpx>=0.28.0
+requests>=2.31.0
+
+# ============================================================================
+# AUTHENTICATION & SECURITY
+# ============================================================================
+# JWT handling
+python-jose[cryptography]>=3.4.0
+PyJWT>=2.10.0
+
+# Password hashing
+passlib[bcrypt]>=1.7.4
+
+# ============================================================================
+# CONFIGURATION & ENVIRONMENT
+# ============================================================================
+# Environment variables
+python-dotenv>=1.2.0
+
+# ============================================================================
+# LOGGING & OBSERVABILITY
+# ============================================================================
+# Structured logging
+structlog>=25.0.0
+python-json-logger>=2.0.7
+
+# Prometheus metrics
+prometheus-client>=0.23.0
+prometheus-fastapi-instrumentator>=7.0.0
+
+# OpenTelemetry (distributed tracing)
+opentelemetry-api>=1.30.0
+opentelemetry-sdk>=1.30.0
+opentelemetry-instrumentation-fastapi>=0.51b0
+opentelemetry-instrumentation-httpx>=0.51b0
+opentelemetry-instrumentation-redis>=0.51b0
+opentelemetry-instrumentation-sqlalchemy>=0.51b0
+opentelemetry-exporter-otlp>=1.30.0
+
+# ============================================================================
+# CACHING & MESSAGING
+# ============================================================================
+# Redis client
+redis>=7.0.0
+
+# ============================================================================
+# FILE HANDLING
+# ============================================================================
+# Async file operations
+aiofiles>=24.0.0
+
+# File uploads
+python-multipart>=0.0.20
+
+# ============================================================================
+# UTILITIES
+# ============================================================================
+# YAML parsing
+pyyaml>=6.0.3
+
+# Rich terminal output
+rich>=14.2.0
+
+# System utilities
+psutil>=7.0.0
+
+# File watching
+watchdog>=6.0.0
+
+# Async HTTP
+aiohttp>=3.11.0
+
+# ============================================================================
+# PAYMENT PROCESSING
+# ============================================================================
+# Stripe integration
+stripe>=13.0.0
+
+# Webhooks
+svix>=1.4.0
+
+# ============================================================================
+# AWS SERVICES
+# ============================================================================
+# AWS SDK
+boto3>=1.40.0
+botocore>=1.40.0
+
+# ============================================================================
+# TESTING
+# ============================================================================
+# Testing framework
+pytest>=8.0.0
+pytest-asyncio>=0.25.0
+
+# Test data generation
+faker>=28.0.0
+
+# ============================================================================
+# CODE QUALITY
+# ============================================================================
+# Type checking
+mypy>=1.14.0
+
+# Code formatting
+black>=25.0.0
+
+# Linting
+flake8>=7.0.0
+
+# Security scanning
+bandit>=1.8.0
+
+# ============================================================================
+# DOCUMENTATION
+# ============================================================================
+# Documentation generation
+sphinx>=8.0.0
+
+# ============================================================================
+# AI/ML (if needed)
+# ============================================================================
+# OpenAI API (if needed)
+# openai>=1.60.0
+
+# NumPy (if needed)
+# numpy>=1.24.0
+
+# ============================================================================
+# DOCKER & DEPLOYMENT
+# ============================================================================
+# Docker client
+docker>=7.1.0
+
+# Rate limiting
+slowapi>=0.1.9
+
+# ============================================================================
+# NOTES
+# ============================================================================
+# - All versions use >= to allow patch updates
+# - Major versions are locked where breaking changes are expected
+# - Service-specific dependencies should be in individual requirements.txt files
+# - Run `python scripts/validate-dependencies.py` to check for conflicts
+

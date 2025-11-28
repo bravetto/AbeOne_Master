@@ -1,0 +1,278 @@
+{
+  "timestamp": "2025-11-03T03:41:44.892467",
+  "total_tests": 11,
+  "passed": 10,
+  "failed": 1,
+  "success_rate": 90.9090909090909,
+  "total_duration": 38.48876905441284,
+  "results": [
+    {
+      "name": "Gateway Health",
+      "success": true,
+      "duration": 0.7922472953796387,
+      "error": null,
+      "details": {
+        "checks": {
+          "database": "healthy",
+          "orchestrator": "healthy"
+        }
+      }
+    },
+    {
+      "name": "Service Discovery",
+      "success": true,
+      "duration": 0.6590847969055176,
+      "error": null,
+      "details": {
+        "services_count": 5,
+        "services": {
+          "tokenguard": {
+            "name": "TokenGuard",
+            "service_type": "tokenguard",
+            "base_url": "http://tokenguard:8000",
+            "enabled": true,
+            "priority": 1,
+            "tags": [
+              "token",
+              "optimization",
+              "cost"
+            ],
+            "status": "healthy",
+            "last_check": "2025-11-03T08:38:53.085233"
+          },
+          "trustguard": {
+            "name": "TrustGuard",
+            "service_type": "trustguard",
+            "base_url": "http://trustguard:8000",
+            "enabled": true,
+            "priority": 1,
+            "tags": [
+              "trust",
+              "reliability",
+              "validation"
+            ],
+            "status": "healthy",
+            "last_check": "2025-11-03T08:38:53.084706"
+          },
+          "contextguard": {
+            "name": "ContextGuard",
+            "service_type": "contextguard",
+            "base_url": "http://contextguard:8000",
+            "enabled": true,
+            "priority": 1,
+            "tags": [
+              "context",
+              "memory",
+              "workflow"
+            ],
+            "status": "healthy",
+            "last_check": "2025-11-03T08:38:53.085062"
+          },
+          "biasguard": {
+            "name": "BiasGuard",
+            "service_type": "biasguard",
+            "base_url": "http://biasguard:8000",
+            "enabled": true,
+            "priority": 1,
+            "tags": [
+              "bias",
+              "detection",
+              "mitigation"
+            ],
+            "status": "healthy",
+            "last_check": "2025-11-03T08:38:53.085376"
+          },
+          "healthguard": {
+            "name": "HealthGuard",
+            "service_type": "healthguard",
+            "base_url": "http://healthguard:8000",
+            "enabled": true,
+            "priority": 1,
+            "tags": [
+              "health",
+              "monitoring",
+              "diagnostics"
+            ],
+            "status": "healthy",
+            "last_check": "2025-11-03T08:38:53.085512"
+          }
+        }
+      }
+    },
+    {
+      "name": "tokenguard Processing",
+      "success": true,
+      "duration": 0.7064805030822754,
+      "error": null,
+      "details": {
+        "processing_time": 0.018402,
+        "found_fields": [],
+        "response_keys": [
+          "text_length",
+          "confidence_score",
+          "decision",
+          "recommendation",
+          "processing_time_ms",
+          "web_compatible",
+          "ui_components",
+          "user_feedback"
+        ]
+      }
+    },
+    {
+      "name": "trustguard Processing",
+      "success": true,
+      "duration": 0.7888782024383545,
+      "error": null,
+      "details": {
+        "processing_time": 0.013998,
+        "found_fields": [
+          "risk_level"
+        ],
+        "response_keys": [
+          "overall_score",
+          "pattern_detections",
+          "risk_level",
+          "recommendations",
+          "evidence",
+          "processing_time",
+          "web_compatible",
+          "ui_components",
+          "user_feedback"
+        ]
+      }
+    },
+    {
+      "name": "contextguard Processing",
+      "success": true,
+      "duration": 0.8854782581329346,
+      "error": null,
+      "details": {
+        "processing_time": 0.007138,
+        "found_fields": [],
+        "response_keys": [
+          "drift_detected",
+          "confidence",
+          "severity",
+          "metrics",
+          "recommendations",
+          "web_compatible",
+          "ui_components",
+          "user_feedback"
+        ]
+      }
+    },
+    {
+      "name": "biasguard Processing",
+      "success": true,
+      "duration": 0.7662174701690674,
+      "error": null,
+      "details": {
+        "processing_time": 0.00013,
+        "found_fields": [
+          "bias_detected",
+          "bias_score",
+          "mitigation_suggestions"
+        ],
+        "response_keys": [
+          "bias_detected",
+          "bias_score",
+          "bias_types",
+          "bias_details",
+          "mitigation_suggestions",
+          "fairness_score",
+          "confidence",
+          "processing_time",
+          "service_used",
+          "web_compatible",
+          "ui_components",
+          "user_feedback"
+        ]
+      }
+    },
+    {
+      "name": "healthguard Processing",
+      "success": true,
+      "duration": 0.7625501155853271,
+      "error": null,
+      "details": {
+        "processing_time": 0.027069,
+        "found_fields": [],
+        "response_keys": [
+          "results",
+          "count",
+          "web_compatible",
+          "ui_components",
+          "user_feedback"
+        ]
+      }
+    },
+    {
+      "name": "Analytics: /api/v1/analytics/benefits/overview",
+      "success": true,
+      "duration": 0.02942967414855957,
+      "error": null,
+      "details": {
+        "response_keys": [
+          "total_requests",
+          "cost_savings_usd",
+          "tokens_saved",
+          "violations_blocked",
+          "productivity_increase_percent",
+          "risk_reduction_percent",
+          "uptime_percent",
+          "last_updated",
+          "guards_active",
+          "data_source"
+        ]
+      }
+    },
+    {
+      "name": "Analytics: /api/v1/analytics/benefits/detailed",
+      "success": true,
+      "duration": 0.03366875648498535,
+      "error": null,
+      "details": {
+        "response_keys": [
+          "cost_optimization",
+          "risk_mitigation",
+          "productivity",
+          "operational",
+          "by_guard",
+          "last_updated",
+          "data_source"
+        ]
+      }
+    },
+    {
+      "name": "Analytics: /api/v1/analytics/performance/dashboard",
+      "success": true,
+      "duration": 0.00392603874206543,
+      "error": null,
+      "details": {
+        "response_keys": [
+          "system_health",
+          "performance_metrics",
+          "guard_performance",
+          "business_impact",
+          "alerts",
+          "recommendations",
+          "last_updated"
+        ]
+      }
+    },
+    {
+      "name": "Performance Test",
+      "success": false,
+      "duration": 30.584454774856567,
+      "error": "1/10 requests succeeded",
+      "details": {
+        "total_requests": 10,
+        "successful_requests": 1,
+        "total_time": 30.584454774856567,
+        "avg_response_time": 3.0584454774856566,
+        "requests_per_second": 0.32696348761531574
+      }
+    }
+  ]
+}

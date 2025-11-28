@@ -1,0 +1,65 @@
+{
+  "mcpServers": {
+    "aws": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-aws"
+      ],
+      "env": {
+        "AWS_REGION": "us-east-1",
+        "AWS_PROFILE": "default"
+      },
+      "description": "AWS MCP Server for AIGuards Backend infrastructure management",
+      "enabled": true,
+      "capabilities": {
+        "resources": [
+          "ecs-clusters",
+          "ecs-services",
+          "ecs-tasks",
+          "ecr-repositories",
+          "secrets-manager",
+          "rds-instances",
+          "elasticache-clusters",
+          "cloudwatch-logs",
+          "load-balancers"
+        ]
+      }
+    }
+  },
+  "project": {
+    "name": "AIGuards-Backend",
+    "aws": {
+      "services": {
+        "ecs": {
+          "cluster": "codeguardians-gateway-cluster",
+          "services": [
+            "codeguardians-gateway-service"
+          ]
+        },
+        "ecr": {
+          "repositories": [
+            "codeguardians-gateway",
+            "tokenguard",
+            "trustguard",
+            "contextguard",
+            "biasguard",
+            "healthguard"
+          ]
+        },
+        "secretsManager": {
+          "secrets": [
+            "codeguardians-gateway/production"
+          ]
+        },
+        "cloudwatch": {
+          "logGroups": [
+            "/ecs/codeguardians-gateway"
+          ]
+        }
+      }
+    }
+  }
+}
+
+

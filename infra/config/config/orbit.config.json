@@ -1,0 +1,20 @@
+{
+  "orbitSpecVersion": "1.0.0",
+  "name": "AbeOne_Master",
+  "productName": "AbëONE Multi-Orbit Workspace",
+  "productVersion": "1.0.0",
+  "kernelVersion": "v0.9.0-stable",
+  "kernelPath": "abëone",
+  "moduleId": "abeone_master",
+  "adapters": {
+    "kernel": "adapters/adapter.kernel.py",
+    "guardians": "adapters/adapter.guardians.py",
+    "module": "adapters/adapter.module.py",
+    "bus": "adapters/adapter.bus.py"
+  },
+  "manifest": "module_manifest.json",
+  "devcontainer": ".devcontainer/devcontainer.json",
+  "ciWorkflow": ".github/workflows/ci.yml",
+  "deployScript": "deploy/commands.sh"
+}
+

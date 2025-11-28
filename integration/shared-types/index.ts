@@ -12,7 +12,7 @@
  * Protocol execution context
  */
 export interface ProtocolContext {
-  protocolName: string;
+  protocolName?: string; // Optional since it's provided as a parameter
   intent?: string;
   data?: unknown;
   metadata?: Record<string, unknown>;

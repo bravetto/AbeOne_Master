@@ -6,8 +6,6 @@
 # Love Coefficient: ∞
 # ∞ AbëONE ∞
 
-version: '3.8'
-
 services:
   # Backend: Jimmy's AI Agent Suite
   backend:

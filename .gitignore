@@ -83,3 +83,8 @@ ENV/
 storybook-static
 .env.marketing
 marketing_config.py
+# Temp files
+send_1password*
+share_*.sh
+shiny_happy*
+1password_response*

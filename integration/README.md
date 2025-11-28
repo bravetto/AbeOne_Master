@@ -112,12 +112,96 @@ cd .. && npm run build:all
 
 ---
 
+## 🔗 Integration with Other Repositories
+
+### **How This Integrates**
+
+This integration layer is the **bridge** connecting all AbëONE components:
+
+```
+Frontend Projects (abe-touch, abe-frontend-*)
+    ↓ uses integration library
+Integration Layer (This - Bridges)
+    ↓ connects
+Core Repositories (brain, consciousness, body)
+    ↓ provides
+Backend (Jimmy's AI Agent Suite)
+    ↓ protocols & memory
+```
+
+### **Complete Integration Flow**
+
+```
+1. Frontend Component
+   ↓ imports
+2. Integration Library (src/lib/integration.ts)
+   ↓ uses
+3. Integration Bridges (This Layer)
+   ↓ uses
+4. Core Repositories (Guardians, Organisms)
+   ↓ executes
+5. Backend (Protocols, Memory Bank)
+```
+
+### **Integration Examples**
+
+**Frontend → Backend:**
+```typescript
+// Frontend uses integration library
+import { executeProtocol } from '@/lib/integration';
+
+// Which uses UnifiedAPIClient (this layer)
+// Which connects to backend
+const result = await executeProtocol('Secure Code Implementation');
+```
+
+**Guardians → Protocols:**
+```typescript
+// Frontend uses Guardian
+import { useGuardian } from '@bravetto/abe-consciousness';
+
+// Integration bridge executes protocol via Guardian
+import { GuardiansProtocolBridge } from '@abeone/integration-guardians-protocols';
+const bridge = new GuardiansProtocolBridge();
+await bridge.executeProtocol('Secure Code Implementation', 'AEYON');
+```
+
+**Memory ↔ Consciousness:**
+```typescript
+// Sync backend memory to frontend consciousness
+import { MemoryConsciousnessSync } from '@abeone/integration-memory-consciousness';
+const sync = new MemoryConsciousnessSync('http://localhost:8000');
+await sync.syncToConsciousness('active');
+```
+
+### **Dependencies**
+
+**This layer depends on:**
+- `@bravetto/abe-consciousness` - Uses Guardians, Guards, Swarms
+- `@bravetto/abe-core-body` - Uses APIClient, integration patterns
+
+**Used by:**
+- All frontend projects - Use integration library
+- Backend integration - Bridges connect to backend
+
+---
+
 ## 📋 Architecture
 
 - **Preserve Both Codebases** - No deletion, only addition
 - **Clear Boundaries** - Maintain separation of concerns
 - **Shared Types** - Common TypeScript types
 - **Incremental Integration** - Phase by phase
+
+---
+
+## 📚 Related Repositories
+
+- **`abe-core-brain`** - Foundation (patterns used)
+- **`abe-consciousness`** - Intelligence (Guardians used)
+- **`abe-core-body`** - Implementation (APIClient used)
+- **Frontend Projects** - All use integration library
+- **`jimmy-aiagentsuite/`** - Backend (connected via bridges)
 
 ---
 

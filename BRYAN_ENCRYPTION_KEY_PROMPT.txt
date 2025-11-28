@@ -1,0 +1,43 @@
+I need to receive and set up the encryption keys for the AbëKEYs system to access marketing automation credentials (SendGrid, Google Ads, Stripe).
+
+**CONTEXT:**
+- The encrypted vault `abekeys_vault.encrypted.json` is already in the repository
+- I need to receive the encryption key from the team lead to decrypt it
+- Once decrypted, I can access credentials via: `python3 scripts/abekeys/abekeys_encrypted.py get sendgrid`
+
+**WHAT I NEED FROM TEAM LEAD:**
+The encryption key file (`vault_key.key` or if they're using a different system: `hmac_key.key` and `kdf_salt.key`)
+
+**SETUP STEPS:**
+
+1. **Receive the encryption key securely** (from team lead via SSH, Age encryption, or password-protected zip)
+
+2. **Save the key to the correct location:**
+   ```bash
+   mkdir -p ~/.abekeys
+   cp received_key.key ~/.abekeys/vault_key.key
+   chmod 600 ~/.abekeys/vault_key.key
+   ```
+
+3. **Verify the encrypted vault exists:**
+   ```bash
+   ls -la abekeys_vault.encrypted.json
+   ```
+
+4. **Test decryption:**
+   ```bash
+   python3 scripts/abekeys/abekeys_encrypted.py get sendgrid
+   python3 scripts/abekeys/abekeys_encrypted.py get google_ads
+   python3 scripts/abekeys/abekeys_encrypted.py get stripe
+   ```
+
+**ALTERNATIVE: Use automated script:**
+```bash
+./scripts/abekeys/receive_key_secure.sh
+```
+
+**IF TEAM LEAD USES DIFFERENT FORMAT:**
+- If they send `hmac_key.key` and `kdf_salt.key` instead of `vault_key.key`, help me understand which encryption method they're using and how to set it up correctly.
+
+Please guide me through receiving the encryption key securely, saving it correctly, and verifying I can decrypt and access all three credentials (sendgrid, google_ads, stripe).
+

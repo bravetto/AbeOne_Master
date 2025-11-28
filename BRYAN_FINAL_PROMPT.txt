@@ -1,0 +1,48 @@
+I need to receive and set up the encryption key for the AbëKEYs system to access marketing automation credentials (SendGrid, Google Ads, Stripe).
+
+**CONTEXT:**
+- The encrypted vault `abekeys_vault.encrypted.json` is already in the repository (contains encrypted sendgrid, google_ads, stripe)
+- The system uses Fernet encryption with a single `vault_key.key` file
+- I need to receive `vault_key.key` from the team lead to decrypt the vault
+- Once set up, I can access credentials via: `python3 scripts/abekeys/abekeys_encrypted.py get sendgrid`
+
+**WHAT I NEED FROM TEAM LEAD:**
+- `vault_key.key` - The Fernet encryption key (single file, ~44 characters base64-encoded)
+
+**SETUP STEPS:**
+
+1. **Receive the encryption key securely** (from team lead via SSH, Age encryption, or password-protected zip)
+
+2. **Save the key to the correct location:**
+   ```bash
+   mkdir -p ~/.abekeys
+   cp received_key.key ~/.abekeys/vault_key.key
+   chmod 600 ~/.abekeys/vault_key.key
+   ```
+
+3. **Verify the encrypted vault exists:**
+   ```bash
+   ls -la abekeys_vault.encrypted.json
+   ```
+
+4. **Test decryption:**
+   ```bash
+   python3 scripts/abekeys/abekeys_encrypted.py get sendgrid
+   python3 scripts/abekeys/abekeys_encrypted.py get google_ads
+   python3 scripts/abekeys/abekeys_encrypted.py get stripe
+   ```
+
+**ALTERNATIVE: Use automated script:**
+```bash
+./scripts/abekeys/receive_key_secure.sh
+```
+
+**VERIFICATION:**
+Once I receive the key and save it, help me:
+1. Verify the key file exists at `~/.abekeys/vault_key.key` with permissions 600
+2. Test decrypting the vault
+3. Verify I can access all three credentials (sendgrid, google_ads, stripe)
+4. Confirm the credentials are valid and ready to use
+
+Please guide me through receiving the encryption key securely, saving it correctly, and verifying I can decrypt and access all three credentials.
+

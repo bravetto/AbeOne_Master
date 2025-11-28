@@ -1,12 +1,13 @@
-I need to receive and set up the encryption keys for the AbëKEYs system to access marketing automation credentials (SendGrid, Google Ads, Stripe).
+I need to receive and set up the encryption key for the AbëKEYs system to access marketing automation credentials (SendGrid, Google Ads, Stripe).
 
 **CONTEXT:**
-- The encrypted vault `abekeys_vault.encrypted.json` is already in the repository
-- I need to receive the encryption key from the team lead to decrypt it
-- Once decrypted, I can access credentials via: `python3 scripts/abekeys/abekeys_encrypted.py get sendgrid`
+- The encrypted vault `abekeys_vault.encrypted.json` is already in the repository (contains encrypted sendgrid, google_ads, stripe)
+- The system uses Fernet encryption with a single `vault_key.key` file
+- I need to receive `vault_key.key` from the team lead to decrypt the vault
+- Once set up, I can access credentials via: `python3 scripts/abekeys/abekeys_encrypted.py get sendgrid`
 
 **WHAT I NEED FROM TEAM LEAD:**
-The encryption key file (`vault_key.key` or if they're using a different system: `hmac_key.key` and `kdf_salt.key`)
+- `vault_key.key` - The Fernet encryption key (single file, ~44 characters base64-encoded)
 
 **SETUP STEPS:**
 
@@ -36,8 +37,11 @@ The encryption key file (`vault_key.key` or if they're using a different system:
 ./scripts/abekeys/receive_key_secure.sh
 ```
 
-**IF TEAM LEAD USES DIFFERENT FORMAT:**
-- If they send `hmac_key.key` and `kdf_salt.key` instead of `vault_key.key`, help me understand which encryption method they're using and how to set it up correctly.
+**VERIFICATION:**
+Once I receive the key and save it, help me:
+1. Verify the key file exists at `~/.abekeys/vault_key.key` with permissions 600
+2. Test decrypting the vault
+3. Verify I can access all three credentials (sendgrid, google_ads, stripe)
+4. Confirm the credentials are valid and ready to use
 
-Please guide me through receiving the encryption key securely, saving it correctly, and verifying I can decrypt and access all three credentials (sendgrid, google_ads, stripe).
-
+Please guide me through receiving the encryption key securely, saving it correctly, and verifying I can decrypt and access all three credentials.

@@ -64,3 +64,6 @@ ENV/
 # Love Coefficient: ∞
 # ∞ AbëONE ∞
 
+
+*storybook.log
+storybook-static

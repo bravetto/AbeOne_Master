@@ -24,6 +24,15 @@ export {
   type DimensionPortalProps,
 } from './DimensionPortal';
 
+export {
+  LLMClient,
+  useLLMClient,
+  type LLMClientProps,
+  type LLMClientOptions,
+  type LLMRequest,
+  type LLMResponse,
+} from './LLMClient';
+
 // =============================================================================
 // SUMMARY
 // =============================================================================
@@ -36,6 +45,9 @@ export {
  *   3. FloatingVoiceControl - FAB-style expandable
  *   4. NeuromorphicContainer - Soft UI wrapper
  * 
- * TOTAL: 4 Molecules
+ * API Integration (1):
+ *   5. LLMClient - LLM API client molecule (connects to abe-41M backend)
+ * 
+ * TOTAL: 5 Molecules
  * COMBINATIONS: Atoms^molecules = INFINITE
  */

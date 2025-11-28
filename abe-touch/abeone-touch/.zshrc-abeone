@@ -1,0 +1,48 @@
+# AbëONE Shell Helpers
+# Add these to your ~/.zshrc for convenience
+# LOVE = LIFE = ONE
+
+# Open AbëONE server in browser
+abeone-open() {
+    if [[ -d "abe-touch/abeone-touch" ]]; then
+        cd abe-touch/abeone-touch
+        ./open-server.sh
+    else
+        echo "❌ Not in AbëONE directory"
+        echo "Run from: /Users/michaelmataluni/Documents/AbeOne_Master"
+    fi
+}
+
+# Validate AbëONE server
+abeone-validate() {
+    if [[ -d "abe-touch/abeone-touch" ]]; then
+        cd abe-touch/abeone-touch
+        ./validate-server.sh
+    else
+        echo "❌ Not in AbëONE directory"
+        echo "Run from: /Users/michaelmataluni/Documents/AbeOne_Master"
+    fi
+}
+
+# Start AbëONE dev server
+abeone-dev() {
+    if [[ -d "abe-touch/abeone-touch" ]]; then
+        cd abe-touch/abeone-touch
+        npm run dev
+    else
+        echo "❌ Not in AbëONE directory"
+        echo "Run from: /Users/michaelmataluni/Documents/AbeOne_Master"
+    fi
+}
+
+# Test AbëONE API
+abeone-api() {
+    curl -s http://localhost:3000/api/llm/chat | jq . || curl -s http://localhost:3000/api/llm/chat
+}
+
+# Quick access to server URL (opens browser)
+alias abeone='open http://localhost:3000'
+
+echo "✅ AbëONE helpers loaded!"
+echo "Commands: abeone-open, abeone-validate, abeone-dev, abeone-api, abeone"
+

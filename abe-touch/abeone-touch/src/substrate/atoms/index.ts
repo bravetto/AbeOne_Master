@@ -83,7 +83,35 @@ export {
   getVoiceByName,
   getVoiceByLang,
   type SpeechSynthesisProps,
+  type UseSpeechSynthesisOptions,
 } from './SpeechSynthesis';
+
+export {
+  useSpeechRecognition,
+  isSpeechRecognitionAvailable,
+  type UseSpeechRecognitionOptions,
+  type SpeechRecognitionError,
+} from './SpeechRecognition';
+
+export {
+  useConversationContext,
+  type UseConversationContextOptions,
+  type ConversationMessage,
+} from './ConversationContext';
+
+export {
+  usePermissionHandler,
+  type UsePermissionHandlerOptions,
+  type PermissionType,
+  type PermissionState,
+} from './PermissionHandler';
+
+export {
+  ErrorRecovery,
+  useErrorRecovery,
+  type ErrorRecoveryProps,
+  type UseErrorRecoveryOptions,
+} from './ErrorRecovery';
 
 // =============================================================================
 // SUMMARY
@@ -107,9 +135,15 @@ export {
  *   9. EventListener - Listen to events atomically
  *   10. EventBridge - Bridge events between systems
  * 
- * Speech (1):
+ * Speech (2):
  *   11. SpeechSynthesis - Text-to-speech using Web Speech API
+ *   12. SpeechRecognition - Speech-to-text using Web Speech Recognition API
  * 
- * TOTAL: 11 Atoms
- * COMBINATIONS: 11^n = INFINITE
+ * Context & UX (3):
+ *   13. ConversationContext - Conversation history and context management
+ *   14. PermissionHandler - Browser permission handling
+ *   15. ErrorRecovery - Error recovery UI and retry logic
+ * 
+ * TOTAL: 15 Atoms
+ * COMBINATIONS: 15^n = INFINITE
  */

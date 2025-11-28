@@ -165,11 +165,30 @@ export default function HomePage() {
             <VoiceControlHub 
               size="lg"
               showLabel
+              enableLLM={true}
+              mockMode={true}
+              showInterimResults={true}
+              llmEndpoint="/api/llm/chat"
+              recognitionLang="en-US"
+              speechOptions={{
+                rate: 1.0,
+                pitch: 1.0,
+                volume: 1.0,
+                lang: 'en-US',
+              }}
               onListenStart={() => console.log('🎤 Waking up...')}
               onListenEnd={() => console.log('🎤 Going back to sleep...')}
               onTranscript={(text) => console.log('📝 Transcript:', text)}
               onCancel={() => console.log('❌ Cancelled')}
             />
+          </div>
+          
+          {/* Mock Mode Indicator */}
+          <div className="mb-8 text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/20 border border-yellow-500/30">
+              <span className="text-yellow-500 text-sm font-medium">🧪 MOCK MODE ACTIVE</span>
+              <span className="text-xs text-[var(--abe-text-muted)]">Testing without backend</span>
+            </div>
           </div>
           
           {/* ===== DIMENSION PORTAL ===== */}

@@ -27,10 +27,15 @@ import {
   NeuromorphicButton,
   StatusLED,
   VoiceWaveform,
+  useSpeechRecognition,
+  useSpeechSynthesis,
+  usePermissionHandler,
+  ErrorRecovery,
   type LEDColor,
   type LEDState,
   type WaveformState,
 } from '@/substrate/atoms';
+import { useLLMClient } from './LLMClient';
 
 // =============================================================================
 // TYPES
@@ -66,6 +71,23 @@ export interface VoiceControlHubProps {
   disabled?: boolean;
   /** Custom class name */
   className?: string;
+  /** Enable LLM integration (speech → LLM → speech) */
+  enableLLM?: boolean;
+  /** LLM API endpoint */
+  llmEndpoint?: string;
+  /** Speech recognition language */
+  recognitionLang?: string;
+  /** Speech synthesis options */
+  speechOptions?: {
+    rate?: number;
+    pitch?: number;
+    volume?: number;
+    lang?: string;
+  };
+  /** Show interim recognition results */
+  showInterimResults?: boolean;
+  /** Enable mock mode (for testing without backend) */
+  mockMode?: boolean;
 }
 
 // =============================================================================
@@ -233,13 +255,167 @@ export const VoiceControlHub: React.FC<VoiceControlHubProps> = ({
   labels = {},
   disabled = false,
   className,
+  enableLLM = false,
+  llmEndpoint = '/api/llm/chat',
+  recognitionLang = 'en-US',
+  speechOptions = {
+    rate: 1.0,
+    pitch: 1.0,
+    volume: 1.0,
+    lang: 'en-US',
+  },
+  showInterimResults = true,
+  mockMode = false,
 }) => {
   const [internalStatus, setInternalStatus] = React.useState<AgentStatus>('sleeping');
+  const [interimTranscript, setInterimTranscript] = React.useState<string>('');
+  const [llmError, setLlmError] = React.useState<Error | null>(null);
+  const conversationContextRef = React.useRef<{ role: 'user' | 'assistant'; content: string }[]>([]);
   const status = externalStatus ?? internalStatus;
   
   const config = statusConfigs[status];
   const sizeConfig = sizeConfigs[size];
   const label = labels[status] ?? config.label;
+  
+  // Permission handler for microphone
+  const { state: micPermission, requestPermission: requestMicPermission } = usePermissionHandler({
+    permission: 'microphone',
+    onPermissionChange: (state) => {
+      if (state === 'denied') {
+        dispatchAbeEvent('status-change', { status: 'error' });
+      }
+    },
+  });
+
+  // Mock response generator (for testing without backend)
+  const generateMockResponse = React.useCallback((message: string): string => {
+    const responses = [
+      `I heard you say: "${message}". This is a mock response while we wait for the backend.`,
+      `Mock response: I understand you said "${message}". The real backend will be connected soon!`,
+      `[MOCK] You said: "${message}". This is a placeholder response.`,
+    ];
+    return responses[Math.floor(Math.random() * responses.length)];
+  }, []);
+
+  // LLM integration hooks (only if enabled)
+  const { sendMessage, abort: abortLLM, isLoading: isLLMLoading } = useLLMClient({
+    endpoint: llmEndpoint,
+    onRequestStart: () => {
+      dispatchAbeEvent('status-change', { status: 'thinking' });
+      setLlmError(null);
+    },
+    onRequestComplete: (response) => {
+      // Validate response
+      if (!response || !response.response || typeof response.response !== 'string') {
+        console.error('Invalid LLM response format');
+        dispatchAbeEvent('status-change', { status: 'error' });
+        return;
+      }
+      
+      // Store assistant response in conversation context
+      conversationContextRef.current.push({ 
+        role: 'assistant', 
+        content: response.response 
+      });
+      
+      // Trim context to last 20 messages (10 user + 10 assistant)
+      if (conversationContextRef.current.length > 20) {
+        conversationContextRef.current = conversationContextRef.current.slice(-20);
+      }
+      
+      dispatchAbeEvent('status-change', { status: 'speaking' });
+      // Auto-speak LLM response
+      if (enableLLM && speak) {
+        speak(response.response);
+      }
+    },
+    onError: (error) => {
+      console.error('LLM error:', error);
+      setLlmError(error);
+      dispatchAbeEvent('status-change', { status: 'error' });
+    },
+  });
+
+  // Speech recognition hook (only if LLM enabled)
+  const { start: startRecognition, stop: stopRecognition, isAvailable: recognitionAvailable } = useSpeechRecognition({
+    lang: recognitionLang,
+    continuous: false,
+    interimResults: true,
+    onTranscript: (text, isFinal) => {
+      if (isFinal) {
+        // Stop recognition after final transcript
+        stopRecognition();
+        setInterimTranscript('');
+        
+        // Validate transcript
+        const trimmedText = text.trim();
+        if (!trimmedText || trimmedText.length < 1) {
+          console.warn('Empty transcript received');
+          dispatchAbeEvent('status-change', { status: 'sleeping' });
+          return;
+        }
+        
+        // Sanitize transcript (basic cleaning)
+        const sanitizedText = trimmedText
+          .replace(/\s+/g, ' ')  // Multiple spaces to single
+          .replace(/[^\w\s.,!?;:'"()-]/g, '')  // Remove special chars
+          .substring(0, 1000);  // Max length
+        
+        if (enableLLM) {
+          if (mockMode) {
+            // Mock mode: generate fake response
+            const mockResponse = generateMockResponse(sanitizedText);
+            setTimeout(() => {
+              dispatchAbeEvent('status-change', { status: 'speaking' });
+              if (speak) {
+                speak(mockResponse);
+              }
+            }, 500);
+          } else {
+            // Real mode: send to LLM with conversation context
+            conversationContextRef.current.push({ role: 'user', content: sanitizedText });
+            
+            // Get conversation context (last 10 messages)
+            const context = conversationContextRef.current
+              .slice(-10)
+              .map((msg: { role: 'user' | 'assistant'; content: string }) => 
+                `${msg.role === 'user' ? 'User' : 'Assistant'}: ${msg.content}`
+              );
+            
+            sendMessage({ 
+              message: sanitizedText,
+              context: context,
+            });
+          }
+        }
+        onTranscript?.(sanitizedText);
+      } else {
+        // Interim result
+        if (showInterimResults) {
+          setInterimTranscript(text);
+        }
+      }
+    },
+    onError: (error) => {
+      console.error('Speech recognition error:', error);
+      if (error.error === 'not-allowed' || error.error === 'permission-denied') {
+        // Microphone permission denied
+        requestMicPermission();
+      }
+      dispatchAbeEvent('status-change', { status: 'error' });
+    },
+  });
+
+  // Speech synthesis hook (always available for LLM responses)
+  const { speak } = useSpeechSynthesis({
+    rate: speechOptions.rate,
+    pitch: speechOptions.pitch,
+    volume: speechOptions.volume,
+    lang: speechOptions.lang,
+    onEnd: () => {
+      dispatchAbeEvent('status-change', { status: 'sleeping' });
+    },
+  });
   
   // Event-driven status management
   useEventDriven<{ status: AgentStatus }>('status-change', (event) => {
@@ -255,8 +431,18 @@ export const VoiceControlHub: React.FC<VoiceControlHubProps> = ({
     if (externalStatus !== undefined) {
       if (status === 'sleeping') {
         dispatchAbeEvent('status-change', { status: 'listening' });
+        if (enableLLM && recognitionAvailable) {
+          startRecognition();
+        }
         onListenStart?.();
       } else {
+        // Cancel/stop flow
+        if (enableLLM && recognitionAvailable) {
+          stopRecognition();
+        }
+        if (enableLLM) {
+          abortLLM(); // Abort any pending LLM request
+        }
         dispatchAbeEvent('status-change', { status: 'sleeping' });
         onListenEnd?.();
         onCancel?.();
@@ -268,24 +454,34 @@ export const VoiceControlHub: React.FC<VoiceControlHubProps> = ({
     if (status === 'sleeping') {
       // Dispatch listening event
       dispatchAbeEvent('status-change', { status: 'listening' });
-      onListenStart?.();
       
-      // Dispatch thinking event after 3s
-      setTimeout(() => {
-        dispatchAbeEvent('status-change', { status: 'thinking' });
-      }, 3000);
-      
-      // Dispatch speaking event after 5s
-      setTimeout(() => {
-        dispatchAbeEvent('status-change', { status: 'speaking' });
-      }, 5000);
-      
-      // Dispatch sleeping event after 8s
-      setTimeout(() => {
-        dispatchAbeEvent('status-change', { status: 'sleeping' });
-        onTranscript?.('Simulated transcript from voice input');
-      }, 8000);
+      if (enableLLM && recognitionAvailable) {
+        // Real speech recognition → LLM → speech synthesis flow
+        startRecognition();
+      } else {
+        // Simulated flow (backward compatible)
+        onListenStart?.();
+        
+        // Dispatch thinking event after 3s
+        setTimeout(() => {
+          dispatchAbeEvent('status-change', { status: 'thinking' });
+        }, 3000);
+        
+        // Dispatch speaking event after 5s
+        setTimeout(() => {
+          dispatchAbeEvent('status-change', { status: 'speaking' });
+        }, 5000);
+        
+        // Dispatch sleeping event after 8s
+        setTimeout(() => {
+          dispatchAbeEvent('status-change', { status: 'sleeping' });
+          onTranscript?.('Simulated transcript from voice input');
+        }, 8000);
+      }
     } else {
+      if (enableLLM && recognitionAvailable) {
+        stopRecognition();
+      }
       dispatchAbeEvent('status-change', { status: 'sleeping' });
       onCancel?.();
     }
@@ -335,6 +531,71 @@ export const VoiceControlHub: React.FC<VoiceControlHubProps> = ({
           {Icons[config.icon]}
         </div>
       </NeuromorphicButton>
+      
+      {/* === INTERIM TRANSCRIPT (if showing) === */}
+      {showInterimResults && interimTranscript && status === 'listening' && (
+        <div className={cn(
+          'text-xs text-[var(--abe-text-muted)] italic max-w-md text-center',
+          sizeConfig.text
+        )}>
+          "{interimTranscript}"
+        </div>
+      )}
+      
+      {/* === LOADING INDICATOR (if LLM loading) === */}
+      {isLLMLoading && status === 'thinking' && (
+        <div className="flex items-center gap-2 text-[var(--abe-accent)]">
+          <div className="h-4 w-4 border-2 border-[var(--abe-accent)] border-t-transparent rounded-full animate-spin" />
+          <span className={cn('text-xs', sizeConfig.text)}>Processing...</span>
+        </div>
+      )}
+      
+      {/* === ERROR RECOVERY === */}
+      {llmError && status === 'error' && (
+        <ErrorRecovery
+          error={llmError}
+          onRetry={() => {
+            setLlmError(null);
+            // Retry last message if we have it
+            // (Would need to store last message for full retry)
+          }}
+          onDismiss={() => {
+            setLlmError(null);
+            dispatchAbeEvent('status-change', { status: 'sleeping' });
+          }}
+          size={size}
+        />
+      )}
+      
+      {/* === PERMISSION STATE UI === */}
+      {micPermission === 'denied' && (
+        <div className="flex flex-col items-center gap-2 p-3 rounded-xl bg-[var(--abe-error)]/10 border border-[var(--abe-error)]/20 max-w-md">
+          <div className="flex items-center gap-2 text-[var(--abe-error)]">
+            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" x2="12" y1="8" y2="12"/>
+              <line x1="12" x2="12.01" y1="16" y2="16"/>
+            </svg>
+            <span className="text-xs font-medium">Microphone Permission Denied</span>
+          </div>
+          <p className="text-xs text-[var(--abe-text-secondary)] text-center">
+            Please enable microphone access in your browser settings to use voice features.
+          </p>
+          <NeuromorphicButton
+            variant="raised"
+            size="sm"
+            onClick={requestMicPermission}
+          >
+            Request Permission
+          </NeuromorphicButton>
+        </div>
+      )}
+      
+      {micPermission === 'prompt' && status === 'sleeping' && (
+        <div className="text-xs text-[var(--abe-text-muted)] text-center max-w-md">
+          Microphone permission will be requested when you start speaking.
+        </div>
+      )}
       
       {/* === THE STATUS LABEL === */}
       {showLabel && (
@@ -449,6 +710,8 @@ export const FloatingVoiceControl: React.FC<FloatingVoiceControlProps> = ({
     >
       <button
         onClick={onExpandToggle}
+        aria-label="Close voice control"
+        title="Close voice control"
         className="absolute top-2 right-2 p-1 text-[var(--abe-text-muted)] hover:text-[var(--abe-text-primary)] transition-colors"
       >
         <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

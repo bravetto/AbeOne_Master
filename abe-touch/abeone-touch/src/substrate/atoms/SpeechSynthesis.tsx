@@ -48,17 +48,20 @@ export interface SpeechSynthesisProps {
 // SPEECH SYNTHESIS HOOK
 // =============================================================================
 
-export function useSpeechSynthesis(options: {
+export interface UseSpeechSynthesisOptions {
   text?: string;
   voice?: string | number;
   rate?: number;
   pitch?: number;
   volume?: number;
   lang?: string;
+  autoSpeak?: boolean;
   onStart?: () => void;
   onEnd?: () => void;
   onError?: (error: Error) => void;
-} = {}) {
+}
+
+export function useSpeechSynthesis(options: UseSpeechSynthesisOptions = {}) {
   const {
     text,
     voice,
@@ -66,12 +69,12 @@ export function useSpeechSynthesis(options: {
     pitch = 1,
     volume = 1,
     lang = 'en-US',
+    autoSpeak = true,
     onStart,
     onEnd,
     onError,
   } = options;
 
-  const utteranceRef = React.useRef<SpeechSynthesisUtterance | null>(null);
   const isSpeakingRef = React.useRef(false);
 
   const speak = React.useCallback((speechText: string) => {
@@ -123,7 +126,6 @@ export function useSpeechSynthesis(options: {
       dispatchAbeEvent('status-change', { status: 'error' });
     };
 
-    utteranceRef.current = utterance;
     window.speechSynthesis.speak(utterance);
   }, [rate, pitch, volume, lang, voice, onStart, onEnd, onError]);
 
@@ -134,35 +136,16 @@ export function useSpeechSynthesis(options: {
     }
   }, []);
 
-  const pause = React.useCallback(() => {
-    if ('speechSynthesis' in window && isSpeakingRef.current) {
-      window.speechSynthesis.pause();
-    }
-  }, []);
-
-  const resume = React.useCallback(() => {
-    if ('speechSynthesis' in window && isSpeakingRef.current) {
-      window.speechSynthesis.resume();
-    }
-  }, []);
-
-  const isSpeaking = React.useCallback(() => {
-    return isSpeakingRef.current;
-  }, []);
-
   // Auto-speak when text changes
   React.useEffect(() => {
-    if (text && options.autoSpeak !== false) {
+    if (text && autoSpeak !== false) {
       speak(text);
     }
-  }, [text, speak, options.autoSpeak]);
+  }, [text, speak, autoSpeak]);
 
   return {
     speak,
     stop,
-    pause,
-    resume,
-    isSpeaking,
   };
 }
 
@@ -185,15 +168,16 @@ export const SpeechSynthesis: React.FC<SpeechSynthesisProps> = ({
   children,
 }) => {
   const { speak, stop } = useSpeechSynthesis({
+    text,
     voice,
     rate,
     pitch,
     volume,
     lang,
+    autoSpeak,
     onStart,
     onEnd,
     onError,
-    autoSpeak: false, // We'll handle it manually
   });
 
   // Listen for speech events
@@ -204,18 +188,9 @@ export const SpeechSynthesis: React.FC<SpeechSynthesisProps> = ({
         stop();
       } else if (event.detail.text) {
         speak(event.detail.text);
-      } else if (text) {
-        speak(text);
       }
     }
   );
-
-  // Auto-speak when text changes
-  React.useEffect(() => {
-    if (text && autoSpeak) {
-      speak(text);
-    }
-  }, [text, autoSpeak, speak]);
 
   return <>{children}</>;
 };

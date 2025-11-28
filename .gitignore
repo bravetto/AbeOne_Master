@@ -88,3 +88,13 @@ send_1password*
 share_*.sh
 shiny_happy*
 1password_response*
+
+# Large directories - move to separate repos
+# These should be in separate git repositories
+abe-touch/
+abeone_app/
+docs/
+design-system/
+products/
+integration/
+marketing/

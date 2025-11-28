@@ -1,0 +1,22 @@
+{
+  "name": "@abeone/integration-guardians-protocols",
+  "version": "1.0.0",
+  "description": "Guardians ↔ Protocols Bridge for AbëONE",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@bravetto/abe-consciousness": "file:../../abe-consciousness"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "peerDependencies": {
+    "react": "^18.3.0"
+  }
+}
+

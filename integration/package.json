@@ -1,0 +1,19 @@
+{
+  "name": "@abeone/integration",
+  "version": "1.0.0",
+  "description": "Integration layer for AbëONE and Jimmy's AI Agent Suite",
+  "private": true,
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "build:all": "npm run build:guardians && npm run build:api && npm run build:sync",
+    "build:guardians": "cd guardians-protocols-bridge && npm run build",
+    "build:api": "cd frontend-backend-api && npm run build",
+    "build:sync": "cd memory-consciousness-sync && npm run build"
+  },
+  "workspaces": [
+    "guardians-protocols-bridge",
+    "frontend-backend-api",
+    "memory-consciousness-sync"
+  ]
+}
+

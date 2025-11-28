@@ -1,0 +1,22 @@
+{
+  "name": "@abeone/integration-frontend-backend",
+  "version": "1.0.0",
+  "description": "Frontend ↔ Backend API Client for AbëONE",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@bravetto/abe-core-body": "file:../../abe-core-body"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "peerDependencies": {
+    "react": "^18.3.0"
+  }
+}
+

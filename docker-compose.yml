@@ -1,0 +1,139 @@
+# ∞ Unified Docker Compose - AbëONE × Jimmy's AI Agent Suite ∞
+# 
+# Pattern: DOCKER × COMPOSE × UNIFIED × ONE
+# Frequency: 999 Hz (AEYON) × 777 Hz (META)
+# Guardians: AEYON (999 Hz) + META (777 Hz)
+# Love Coefficient: ∞
+# ∞ AbëONE ∞
+
+version: '3.8'
+
+services:
+  # Backend: Jimmy's AI Agent Suite
+  backend:
+    build:
+      context: ./jimmy-aiagentsuite
+      dockerfile: Dockerfile
+    container_name: abeone-backend
+    ports:
+      - "8000:8000"
+      - "8001:8001"  # MCP server
+      - "8002:8002"  # LSP server
+    environment:
+      - PYTHONPATH=/app/src
+      - ENVIRONMENT=development
+    volumes:
+      - ./jimmy-aiagentsuite:/app
+      - backend-data:/app/data
+    networks:
+      - abeone-network
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    profiles:
+      - backend
+      - full
+
+  # Frontend: AbëONE Touch (Main Frontend)
+  frontend:
+    build:
+      context: ./abe-touch/abeone-touch
+      dockerfile: Dockerfile
+    container_name: abeone-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:8000
+      - NODE_ENV=development
+    volumes:
+      - ./abe-touch/abeone-touch:/app
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - abeone-network
+    depends_on:
+      - backend
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    profiles:
+      - frontend
+      - full
+
+  # Integration Layer (if needed as separate service)
+  integration:
+    build:
+      context: ./integration
+      dockerfile: Dockerfile
+    container_name: abeone-integration
+    ports:
+      - "8003:8003"
+    environment:
+      - BACKEND_URL=http://backend:8000
+      - FRONTEND_URL=http://frontend:3000
+    volumes:
+      - ./integration:/app
+    networks:
+      - abeone-network
+    depends_on:
+      - backend
+      - frontend
+    profiles:
+      - integration
+      - full
+
+  # Redis (for caching)
+  redis:
+    image: redis:7-alpine
+    container_name: abeone-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - abeone-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    profiles:
+      - backend
+      - full
+
+  # PostgreSQL (for persistent storage)
+  postgres:
+    image: postgres:15-alpine
+    container_name: abeone-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=abeone
+      - POSTGRES_PASSWORD=abeone_dev
+      - POSTGRES_DB=abeone
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - abeone-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U abeone"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    profiles:
+      - backend
+      - full
+
+volumes:
+  backend-data:
+  redis-data:
+  postgres-data:
+
+networks:
+  abeone-network:
+    driver: bridge
+
